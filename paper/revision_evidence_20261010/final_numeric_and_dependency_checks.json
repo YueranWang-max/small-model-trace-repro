@@ -1,0 +1,271 @@
+{
+  "complete_current_studies": true,
+  "scope": "Explicit current numeric clauses and TeX dependency graph; historical studies have separate audits",
+  "checks": [
+    {
+      "claim": "budget F1 and EM",
+      "clause": "mean F1 was 1.0000, EM 1.0000",
+      "matched": true
+    },
+    {
+      "claim": "budget normal-valid count",
+      "clause": "60/60 responses were normal-valid",
+      "matched": true
+    },
+    {
+      "claim": "budget length terminations",
+      "clause": "0 length-terminated outputs",
+      "matched": true
+    },
+    {
+      "claim": "budget paired F1 change",
+      "clause": "30.33 percentage points",
+      "matched": true
+    },
+    {
+      "claim": "budget descriptive interval",
+      "clause": "[13.33,46.67]",
+      "matched": true
+    },
+    {
+      "claim": "budget deployment tokens",
+      "clause": "8,763.78",
+      "matched": true
+    },
+    {
+      "claim": "budget new research tokens",
+      "clause": "525,827 model tokens",
+      "matched": true
+    },
+    {
+      "claim": "budget request wall",
+      "clause": "5,912.53 seconds",
+      "matched": true
+    },
+    {
+      "claim": "context prefix scores",
+      "clause": "prefix F1/EM were 0.9750/0.8000",
+      "matched": true
+    },
+    {
+      "claim": "context append scores",
+      "clause": "append 0.8984/0.6000",
+      "matched": true
+    },
+    {
+      "claim": "context fresh scores",
+      "clause": "fresh direct reading 0.9583/0.4000",
+      "matched": true
+    },
+    {
+      "claim": "context source cost",
+      "clause": "190,884 tokens",
+      "matched": true
+    },
+    {
+      "claim": "context new usage",
+      "clause": "2,343,997 model tokens",
+      "matched": true
+    },
+    {
+      "claim": "context request wall",
+      "clause": "12,135.52 seconds",
+      "matched": true
+    },
+    {
+      "claim": "paired table 1.7B pre",
+      "clause": "1.7B prefix & 0.7715 & 0.3333 & 60/60 & 34,901",
+      "matched": true
+    },
+    {
+      "claim": "paired table 1.7B post",
+      "clause": "1.7B append & 0.7351 & 0.3833 & 60/60 & 34,622",
+      "matched": true
+    },
+    {
+      "claim": "paired table 1.7B direct",
+      "clause": "1.7B direct & 0.6915 & 0.3333 & 59/60 & 4,093",
+      "matched": true
+    },
+    {
+      "claim": "paired table 4B pre",
+      "clause": "4B prefix & 1.0000 & 1.0000 & 60/60 & 51,751",
+      "matched": true
+    },
+    {
+      "claim": "paired table 4B post",
+      "clause": "4B append & 1.0000 & 1.0000 & 60/60 & 51,612",
+      "matched": true
+    },
+    {
+      "claim": "paired table 4B direct",
+      "clause": "4B direct & 0.6967 & 0.6833 & 42/60 & 8,231",
+      "matched": true
+    },
+    {
+      "claim": "budget table 8192",
+      "clause": "8192 & 0.6967 & 0.6833 & 42/60 & 8,231",
+      "matched": true
+    },
+    {
+      "claim": "budget table 28672",
+      "clause": "28672 & 1.0000 & 1.0000 & 60/60 & 8,764",
+      "matched": true
+    },
+    {
+      "claim": "context table prefix",
+      "clause": "prefix & 0.9750 & 0.8000 & 5/5 & 350,021",
+      "matched": true
+    },
+    {
+      "claim": "context table append",
+      "clause": "append & 0.8984 & 0.6000 & 5/5 & 344,816",
+      "matched": true
+    },
+    {
+      "claim": "context table fresh",
+      "clause": "fresh & 0.9583 & 0.4000 & 5/5 & 36,498",
+      "matched": true
+    },
+    {
+      "claim": "context table question_first",
+      "clause": "question first & 0.7220 & 0.0000 & 5/5 & 39,719",
+      "matched": true
+    },
+    {
+      "claim": "context table re2",
+      "clause": "re2 & 0.7692 & 0.6000 & 4/5 & 50,578",
+      "matched": true
+    }
+  ],
+  "inputs": [
+    {
+      "path": "evidence_verification_20261006\\summary.json",
+      "sha256": "f1eb5f98df79342b1024d14461213b76e83852afb0a5050684eb7b4c2a54b481"
+    },
+    {
+      "path": "evidence_paired4b_20261006\\summary.json",
+      "sha256": "4694f1745d9e779eae9ee9200812a6417511f9a14b2461cdec0c799653ec8dda"
+    },
+    {
+      "path": "evidence_output_budget_control_20261006\\summary.json",
+      "sha256": "10a06f12fcdbe7f36cb92204a2f8ebd9c08127a68e3dd96a67f1326873d4cf74"
+    },
+    {
+      "path": "evidence_context_recovery_20261006\\summary.json",
+      "sha256": "082f3737df08c329a2c56a873fd7aa5e06ffa2a36ab289cf63777fbb5df16054"
+    },
+    {
+      "path": "final_numeric_tables_20261006\\paired.tex",
+      "sha256": "1ebd5548ec5eb00ff378ab1d74bebd8ff0a772ff4729773eef9604ac2d7507ec"
+    },
+    {
+      "path": "final_numeric_tables_20261006\\budget.tex",
+      "sha256": "3af908486b4160204a0f084742c0e240f0e9980cdc30fcb03b561564549d853d"
+    },
+    {
+      "path": "final_numeric_tables_20261006\\context.tex",
+      "sha256": "7f98a55751dad07732188f0595623780e284792c8e9a6dbfcb0d426b24ad6e5a"
+    }
+  ],
+  "tex_files": [
+    "main.tex",
+    "migration_primary_body.tex",
+    "final_numeric_tables_20261006\\paired.tex",
+    "final_numeric_tables_20261006\\budget.tex",
+    "final_numeric_tables_20261006\\context.tex",
+    "migration_gate_map.tex",
+    "reproduction_evidence_map.tex",
+    "early_state_detail.tex"
+  ],
+  "figure_pdfs": [
+    {
+      "path": "figures\\official_graph_confirmatory_20261006.pdf",
+      "sha256": "71b561705bb25a0d423cd69205172d155495430380a0b7731476e53ac4e15787"
+    },
+    {
+      "path": "figures\\paired_models_20261006.pdf",
+      "sha256": "e781760683ffe7fba6045df4e91c9a831164ac77c72bdccc9fd6ae1322a88c5f"
+    },
+    {
+      "path": "figures\\output_budget_20261006.pdf",
+      "sha256": "25d1df416e18a34efa2c86510edbbff4676f4697f2c81dca14ad5648e8f5ce79"
+    },
+    {
+      "path": "figures\\source_qualification_figure.pdf",
+      "sha256": "35e2f1923e6ddf98a2daf24d348d66104fd7fc551a9124be9526f8dd178c99c4"
+    },
+    {
+      "path": "figures\\interrupted_study_figure.pdf",
+      "sha256": "59c2ec9e85b5b44c422cd253a2ee014af62fa2139cd96085619d25fbd618d2e2"
+    },
+    {
+      "path": "figures\\user_benefit_20261009\\user_benefit.pdf",
+      "sha256": "1ae8dfadfaf69f5558e058c4464395fbf37fe7356d96c40cc0cf423231f7914c"
+    },
+    {
+      "path": "figures\\trace_benefit_confirmation_20261010\\confirmation.pdf",
+      "sha256": "4d7baf6f05313e8411854aa93f62a6ab651342ed5aed114b083a6ce2b83f1410"
+    },
+    {
+      "path": "figures\\partial_state_display.pdf",
+      "sha256": "efbeeddf0964551329923e4146d2d1e55bd08d608b5c003c3dc455c0111aa189"
+    },
+    {
+      "path": "figures\\interrupted_indexed_figure.pdf",
+      "sha256": "944c3d3557a6de3b8482378af87e346e53e1276148f9c4f1f4e00da457bce573"
+    },
+    {
+      "path": "figures\\official_graph_identity_recode.pdf",
+      "sha256": "8ad034390785570e3c91aaf177d29baaf3d76758f88dc0de567427d434f6119f"
+    },
+    {
+      "path": "figures\\official_graph_reasoning_mode.pdf",
+      "sha256": "df6e6f3bd7726f972aafa8503eb19099f5fe2e8a598c6a96ebd1440a4bd82daa"
+    }
+  ],
+  "citation_keys": [
+    "openai2025graphwalks",
+    "qwen2026qwen35card",
+    "tang2026trace",
+    "xu2024rereading",
+    "yang2025qwen3"
+  ],
+  "reference_count": 21,
+  "label_count": 35,
+  "missing_references": [],
+  "source_hashes": [
+    {
+      "path": "main.tex",
+      "sha256": "1b3068f887b5cd0a6e7ce298f14a4db033882800b2ccf3e75dbc275076618d0c"
+    },
+    {
+      "path": "migration_primary_body.tex",
+      "sha256": "403dc762e72ee9549070a7718473992c88bd4142d63b01f262752d8e70648e7c"
+    },
+    {
+      "path": "final_numeric_tables_20261006\\paired.tex",
+      "sha256": "1ebd5548ec5eb00ff378ab1d74bebd8ff0a772ff4729773eef9604ac2d7507ec"
+    },
+    {
+      "path": "final_numeric_tables_20261006\\budget.tex",
+      "sha256": "3af908486b4160204a0f084742c0e240f0e9980cdc30fcb03b561564549d853d"
+    },
+    {
+      "path": "final_numeric_tables_20261006\\context.tex",
+      "sha256": "7f98a55751dad07732188f0595623780e284792c8e9a6dbfcb0d426b24ad6e5a"
+    },
+    {
+      "path": "migration_gate_map.tex",
+      "sha256": "c20f05931841f359adc8d5ff89f5ac21326a038f9f6308e8f145209aa61d4d61"
+    },
+    {
+      "path": "reproduction_evidence_map.tex",
+      "sha256": "66cd939a555df19d1f1f901514cfcb24ccd5958ca41a6fa81b65e944193737a0"
+    },
+    {
+      "path": "early_state_detail.tex",
+      "sha256": "863d0707c7cec20ba9a18f71638a61de0b49804023bcb3780b08b2f85be3d6e7"
+    }
+  ]
+}

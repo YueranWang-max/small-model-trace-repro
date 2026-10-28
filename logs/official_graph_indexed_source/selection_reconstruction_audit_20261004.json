@@ -1,0 +1,173 @@
+{
+  "selection_reconstruction_passed": true,
+  "prior_response_audit_preserved": true,
+  "inference_calls": 0,
+  "primary_complete": false,
+  "selected_rows": [
+    14,
+    414,
+    111,
+    461,
+    15,
+    415,
+    112,
+    462
+  ],
+  "initial_excluded_prompt_heads": 50,
+  "prior_canonical_graphs": 50,
+  "selected_graphs_unique_and_excluded": true,
+  "groups": [
+    {
+      "length_bin": [
+        2000,
+        3500
+      ],
+      "type": "parents",
+      "selected_rows": [
+        14,
+        15
+      ]
+    },
+    {
+      "length_bin": [
+        2000,
+        3500
+      ],
+      "type": "bfs",
+      "selected_rows": [
+        414,
+        415
+      ]
+    },
+    {
+      "length_bin": [
+        7000,
+        9000
+      ],
+      "type": "parents",
+      "selected_rows": [
+        111,
+        112
+      ]
+    },
+    {
+      "length_bin": [
+        7000,
+        9000
+      ],
+      "type": "bfs",
+      "selected_rows": [
+        461,
+        462
+      ]
+    }
+  ],
+  "history": [
+    {
+      "path": "logs\\official_graph_native_probe\\frozen.json",
+      "sha256": "7b1c6b9004a07979e9512b3bcb3d0faa94b48c58d603cebea3341f67ca63ae67",
+      "selected_rows": [
+        0,
+        400,
+        100,
+        450
+      ]
+    },
+    {
+      "path": "logs\\official_graph_budget_extension\\frozen.json",
+      "sha256": "64ed7eb78161929f63e4c8eca9de7883b22cad0a39f390a95ee5756eae539b4d",
+      "selected_rows": [
+        1,
+        401
+      ]
+    },
+    {
+      "path": "logs\\official_graph_order_replication\\frozen.json",
+      "sha256": "3a449bc5925e0c20f91f0519f15e014c47517cc82b02affd67fce02e9703a704",
+      "selected_rows": [
+        2,
+        402,
+        3,
+        403,
+        4,
+        404,
+        5,
+        405
+      ]
+    },
+    {
+      "path": "logs\\official_graph_long_boundary\\frozen.json",
+      "sha256": "178020f2ebf0fc37de2a2efb3add1152d3a5d95eca986ca1cf22cd90097ff929",
+      "selected_rows": [
+        101,
+        451,
+        102,
+        452
+      ]
+    },
+    {
+      "path": "logs\\official_graph_sampling_control\\frozen.json",
+      "sha256": "a5ab92cc6da2ee4cf9f3e933f84b3a371d03c8cddf4e7bf720071f76946d7004",
+      "selected_rows": [
+        103,
+        453,
+        104,
+        454
+      ]
+    },
+    {
+      "path": "logs\\official_graph_five_trace\\frozen.json",
+      "sha256": "65554673c560b292a2aec8fdf1cbfb89dad6a2259f88ac13e4766e7148a4b7dd",
+      "selected_rows": [
+        6,
+        406,
+        7,
+        407
+      ]
+    },
+    {
+      "path": "logs\\official_graph_identity_recode\\frozen.json",
+      "sha256": "74d9118a1163a13aa7c6d613f256684ad88e026169f296bb08b8d0283e0822fe",
+      "selected_rows": [
+        8,
+        408,
+        105,
+        455,
+        9,
+        409,
+        106,
+        456
+      ]
+    },
+    {
+      "path": "logs\\official_graph_reasoning_mode\\frozen.json",
+      "sha256": "0519746b7262a90ecbfed0dd6e6bc931360e330ccf0d10355811f37ee911c894",
+      "selected_rows": [
+        10,
+        410,
+        107,
+        457,
+        11,
+        411,
+        108,
+        458,
+        12,
+        412,
+        109,
+        459,
+        13,
+        413,
+        110,
+        460
+      ]
+    }
+  ],
+  "input_sha256": {
+    "frozen.json": "ba5527d26e80a4ee140a561e714ac004d07ed3ef6b898c83dfb263fcc5365fe1",
+    "interrupted_independent_audit.json": "5060ec6270d2afd17f6f503e02fd615acac7d6d72310e7bab2d2088c7943a032",
+    "graphwalks_128k_and_shorter.parquet": "54036036c91d8e04bb2a5fcd9e36f8e2a852cacece5dfc2b1ee40e3a6182b516"
+  },
+  "limits": [
+    "Separate selection audit completes the pending selection requirement; it does not recover calls095/096 or establish pretraining non-overlap."
+  ]
+}

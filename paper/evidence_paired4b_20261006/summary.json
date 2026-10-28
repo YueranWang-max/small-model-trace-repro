@@ -1,0 +1,97 @@
+{
+  "complete": true,
+  "qualified_returned_records": 240,
+  "planned": 240,
+  "graph_units_complete": 12,
+  "scope": "Consistency of independently rescored local raw responses, not external attestation",
+  "research_tokens_known": 3740754,
+  "research_observed_wall_seconds": 15435.863532199786,
+  "frozen_sha256": "93e86220334537bde1d06a9fe3cebc95f0408427f1743753aaa816853fcc83d6",
+  "full_payload_sampling_and_token_count_checks": "passed for every returned record; no source/scorer imports",
+  "empty_gold_graphs": 2,
+  "always_empty_baseline": 0.16666666666666666,
+  "source_valid_count": 0,
+  "arms": [
+    {
+      "arm": "pre",
+      "f1": 1.0,
+      "em": 1.0,
+      "valid_count": 60,
+      "mean_deployment_tokens": 51751.216666666674
+    },
+    {
+      "arm": "post",
+      "f1": 1.0,
+      "em": 1.0,
+      "valid_count": 60,
+      "mean_deployment_tokens": 51611.63333333333
+    },
+    {
+      "arm": "direct",
+      "f1": 0.6966666666666667,
+      "em": 0.6833333333333332,
+      "valid_count": 42,
+      "mean_deployment_tokens": 8231.05
+    }
+  ],
+  "contrasts": [
+    {
+      "contrast": "pre-post",
+      "mean_difference": 0.0,
+      "lower": 0.0,
+      "upper": 0.0,
+      "stratum_means": {
+        "parents": 0.0,
+        "bfs": 0.0
+      }
+    },
+    {
+      "contrast": "pre-direct",
+      "mean_difference": 0.30333333333333334,
+      "lower": 0.13666666666666666,
+      "upper": 0.4666666666666666,
+      "stratum_means": {
+        "parents": 0.006666666666666672,
+        "bfs": 0.6
+      }
+    }
+  ],
+  "strata": [
+    {
+      "problem_type": "parents",
+      "arm": "pre",
+      "f1": 1.0,
+      "em": 1.0
+    },
+    {
+      "problem_type": "parents",
+      "arm": "post",
+      "f1": 1.0,
+      "em": 1.0
+    },
+    {
+      "problem_type": "parents",
+      "arm": "direct",
+      "f1": 0.9933333333333333,
+      "em": 0.9666666666666667
+    },
+    {
+      "problem_type": "bfs",
+      "arm": "pre",
+      "f1": 1.0,
+      "em": 1.0
+    },
+    {
+      "problem_type": "bfs",
+      "arm": "post",
+      "f1": 1.0,
+      "em": 1.0
+    },
+    {
+      "problem_type": "bfs",
+      "arm": "direct",
+      "f1": 0.4000000000000001,
+      "em": 0.4000000000000001
+    }
+  ]
+}

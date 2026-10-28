@@ -1,0 +1,9 @@
+{
+  "initial_audit_passed": false,
+  "initial_failure": "transformed graph equivalence assertion",
+  "cause": "Imported historical graph audit accepted only lowercase/hash labels, so uppercase compact edges were not parsed.",
+  "repair": "Only the new identity auditor uses a case-inclusive edge parser and an independent queue/distance graph algorithm.",
+  "frozen_runner_or_protocol_changed": false,
+  "model_reruns": 0,
+  "scores_replaced": false
+}

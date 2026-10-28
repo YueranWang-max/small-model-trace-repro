@@ -1,0 +1,34 @@
+{
+  "inputs": [
+    {
+      "path": "evidence_verification_20261006\\summary.json",
+      "sha256": "f1eb5f98df79342b1024d14461213b76e83852afb0a5050684eb7b4c2a54b481"
+    },
+    {
+      "path": "evidence_paired4b_20261006\\summary.json",
+      "sha256": "4694f1745d9e779eae9ee9200812a6417511f9a14b2461cdec0c799653ec8dda"
+    },
+    {
+      "path": "evidence_output_budget_control_20261006\\summary.json",
+      "sha256": "10a06f12fcdbe7f36cb92204a2f8ebd9c08127a68e3dd96a67f1326873d4cf74"
+    },
+    {
+      "path": "evidence_context_recovery_20261006\\summary.json",
+      "sha256": "082f3737df08c329a2c56a873fd7aa5e06ffa2a36ab289cf63777fbb5df16054"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "budget.tex",
+      "sha256": "3af908486b4160204a0f084742c0e240f0e9980cdc30fcb03b561564549d853d"
+    },
+    {
+      "path": "context.tex",
+      "sha256": "7f98a55751dad07732188f0595623780e284792c8e9a6dbfcb0d426b24ad6e5a"
+    },
+    {
+      "path": "paired.tex",
+      "sha256": "1ebd5548ec5eb00ff378ab1d74bebd8ff0a772ff4729773eef9604ac2d7507ec"
+    }
+  ]
+}

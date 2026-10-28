@@ -1,0 +1,182 @@
+{
+  "independent_graphs": 8,
+  "planned_source_calls": 16,
+  "groups": [
+    {
+      "length_bin": [
+        2000,
+        3500
+      ],
+      "kind": "parents",
+      "row_indices": [
+        20,
+        21
+      ],
+      "independent_graphs": 2,
+      "planned_source_calls": 4,
+      "known_source_outcomes": 4,
+      "normal_parse": 4,
+      "f1_bounds": [
+        1.0,
+        1.0
+      ],
+      "em_bounds": [
+        1.0,
+        1.0
+      ],
+      "known_tokens": 32191,
+      "unknown_attempted_usage": 0,
+      "known_client_seconds": 412.40799999998853,
+      "client_seconds_complete": true
+    },
+    {
+      "length_bin": [
+        2000,
+        3500
+      ],
+      "kind": "bfs",
+      "row_indices": [
+        420,
+        421
+      ],
+      "independent_graphs": 2,
+      "planned_source_calls": 4,
+      "known_source_outcomes": 4,
+      "normal_parse": 4,
+      "f1_bounds": [
+        1.0,
+        1.0
+      ],
+      "em_bounds": [
+        1.0,
+        1.0
+      ],
+      "known_tokens": 46490,
+      "unknown_attempted_usage": 0,
+      "known_client_seconds": 666.7809999999954,
+      "client_seconds_complete": true
+    },
+    {
+      "length_bin": [
+        14000,
+        16000
+      ],
+      "kind": "parents",
+      "row_indices": [
+        154,
+        155
+      ],
+      "independent_graphs": 2,
+      "planned_source_calls": 4,
+      "known_source_outcomes": 4,
+      "normal_parse": 4,
+      "f1_bounds": [
+        1.0,
+        1.0
+      ],
+      "em_bounds": [
+        1.0,
+        1.0
+      ],
+      "known_tokens": 81801,
+      "unknown_attempted_usage": 0,
+      "known_client_seconds": 624.5319999999992,
+      "client_seconds_complete": true
+    },
+    {
+      "length_bin": [
+        14000,
+        16000
+      ],
+      "kind": "bfs",
+      "row_indices": [
+        504,
+        505
+      ],
+      "independent_graphs": 2,
+      "planned_source_calls": 4,
+      "known_source_outcomes": 4,
+      "normal_parse": 4,
+      "f1_bounds": [
+        0.7142857142857143,
+        0.7142857142857143
+      ],
+      "em_bounds": [
+        0.5,
+        0.5
+      ],
+      "known_tokens": 132097,
+      "unknown_attempted_usage": 0,
+      "known_client_seconds": 1614.1859999999942,
+      "client_seconds_complete": true
+    }
+  ],
+  "primary_bounds": {
+    "f1": [
+      0.9285714285714286,
+      0.9285714285714286
+    ],
+    "em": [
+      0.875,
+      0.875
+    ]
+  },
+  "normal_parse": 16,
+  "frozen_source_gate_passed": true,
+  "known_research_tokens": 292696,
+  "calibration_tokens": 117,
+  "unknown_attempted_usage_calls": 0,
+  "preparation_seconds": 2.1719999999986612,
+  "known_scored_tokens": 292579,
+  "known_scored_client_seconds": 3317.9069999999774,
+  "client_seconds_complete": true,
+  "always_empty_f1_em": 0.125,
+  "source_gate_is_necessary_for_trace_test": false,
+  "trace_reuse_tested": false,
+  "important_progress_established": false,
+  "limitations": [
+    "Two source repeats per graph are not independent graph cases.",
+    "Model family, training, tokenizer, profile and output cap differ from previous model bridges.",
+    "Longer cases also contain larger graphs; this is not a pure context-length intervention.",
+    "Source accuracy does not establish trace-reuse benefit or end-to-end deployment savings.",
+    "The frozen source gate retains its original verdict, independent of permission to study traces."
+  ],
+  "server_duration_totals": {
+    "scored_source": {
+      "total_duration_seconds": {
+        "known_seconds": 3317.1627483,
+        "complete": true
+      },
+      "load_duration_seconds": {
+        "known_seconds": 0.9412794,
+        "complete": true
+      },
+      "prompt_eval_duration_seconds": {
+        "known_seconds": 17.105083,
+        "complete": true
+      },
+      "eval_duration_seconds": {
+        "known_seconds": 3289.347389,
+        "complete": true
+      }
+    },
+    "input_calibration": {
+      "total_duration_seconds": {
+        "known_seconds": 6.2330673,
+        "complete": true
+      },
+      "load_duration_seconds": {
+        "known_seconds": 6.0929216,
+        "complete": true
+      },
+      "prompt_eval_duration_seconds": {
+        "known_seconds": 0.128655,
+        "complete": true
+      },
+      "eval_duration_seconds": {
+        "known_seconds": 1e-06,
+        "complete": true
+      }
+    }
+  }
+}

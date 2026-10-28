@@ -1,0 +1,14 @@
+{
+  "captured_utc": "2026-10-04T06:13:50.223895+00:00",
+  "source_bytes_as_read_sha256": "5a6772fb3553e3f0567559d0a387de55f2cb3619c688244cd05845b777d6e274",
+  "diagnostic_source_sha256": "09db6ba14540a51de8d4981098daff3b3862dd51dcaad08c0b3bfa3a48ac49e3",
+  "selected_backend_lines": [
+    "llama_context: flash_attn            = auto",
+    "llama_kv_cache:      CUDA0 KV buffer size =  2048.00 MiB",
+    "resolve_fused_ops: Flash Attention enabled",
+    "warmup: flash attention is enabled"
+  ],
+  "inference_calls": 0,
+  "answer_scores_read": false,
+  "scope": "Startup backend logs; environment boolean is not the effective Flash Attention setting."
+}

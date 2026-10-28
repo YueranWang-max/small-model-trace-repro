@@ -1,0 +1,239 @@
+{
+  "complete": true,
+  "qualified_records": 26,
+  "unknown": [],
+  "case_row_index": 506,
+  "context": 196608,
+  "capacity_preflight": [
+    {
+      "context": 131072,
+      "prefix_input": 144677,
+      "reserve": 32768,
+      "fit": false
+    },
+    {
+      "context": 163840,
+      "prefix_input": 144677,
+      "reserve": 32768,
+      "fit": false
+    },
+    {
+      "context": 196608,
+      "prefix_input": 144677,
+      "reserve": 32768,
+      "fit": true
+    },
+    {
+      "context": 262144,
+      "prefix_input": 144677,
+      "reserve": 32768,
+      "fit": true
+    }
+  ],
+  "source_preparation_tokens": 190884,
+  "new_research_tokens_known": 2343997,
+  "usage_records": [
+    {
+      "key": "full_input_probe",
+      "input_tokens": 144677,
+      "output_tokens": 1,
+      "qualified": true
+    },
+    {
+      "key": "r0_re2",
+      "input_tokens": 22423,
+      "output_tokens": 21434,
+      "qualified": true
+    },
+    {
+      "key": "r0_question_first",
+      "input_tokens": 11410,
+      "output_tokens": 27024,
+      "qualified": true
+    },
+    {
+      "key": "r0_append",
+      "input_tokens": 144677,
+      "output_tokens": 12034,
+      "qualified": true
+    },
+    {
+      "key": "r0_fresh",
+      "input_tokens": 11246,
+      "output_tokens": 25955,
+      "qualified": true
+    },
+    {
+      "key": "r0_prefix",
+      "input_tokens": 144677,
+      "output_tokens": 13009,
+      "qualified": true
+    },
+    {
+      "key": "r1_append",
+      "input_tokens": 144677,
+      "output_tokens": 13124,
+      "qualified": true
+    },
+    {
+      "key": "r1_re2",
+      "input_tokens": 22423,
+      "output_tokens": 31459,
+      "qualified": true
+    },
+    {
+      "key": "r1_question_first",
+      "input_tokens": 11410,
+      "output_tokens": 32104,
+      "qualified": true
+    },
+    {
+      "key": "r1_fresh",
+      "input_tokens": 11246,
+      "output_tokens": 32377,
+      "qualified": true
+    },
+    {
+      "key": "r1_prefix",
+      "input_tokens": 144677,
+      "output_tokens": 20067,
+      "qualified": true
+    },
+    {
+      "key": "r2_prefix",
+      "input_tokens": 144677,
+      "output_tokens": 12586,
+      "qualified": true
+    },
+    {
+      "key": "r2_append",
+      "input_tokens": 144677,
+      "output_tokens": 8936,
+      "qualified": true
+    },
+    {
+      "key": "r2_re2",
+      "input_tokens": 22423,
+      "output_tokens": 23988,
+      "qualified": true
+    },
+    {
+      "key": "r2_question_first",
+      "input_tokens": 11410,
+      "output_tokens": 32015,
+      "qualified": true
+    },
+    {
+      "key": "r2_fresh",
+      "input_tokens": 11246,
+      "output_tokens": 19959,
+      "qualified": true
+    },
+    {
+      "key": "r3_fresh",
+      "input_tokens": 11246,
+      "output_tokens": 27238,
+      "qualified": true
+    },
+    {
+      "key": "r3_prefix",
+      "input_tokens": 144677,
+      "output_tokens": 11269,
+      "qualified": true
+    },
+    {
+      "key": "r3_question_first",
+      "input_tokens": 11410,
+      "output_tokens": 25152,
+      "qualified": true
+    },
+    {
+      "key": "r3_re2",
+      "input_tokens": 22423,
+      "output_tokens": 32768,
+      "qualified": true
+    },
+    {
+      "key": "r3_append",
+      "input_tokens": 144677,
+      "output_tokens": 6900,
+      "qualified": true
+    },
+    {
+      "key": "r4_append",
+      "input_tokens": 144677,
+      "output_tokens": 5280,
+      "qualified": true
+    },
+    {
+      "key": "r4_prefix",
+      "input_tokens": 144677,
+      "output_tokens": 15367,
+      "qualified": true
+    },
+    {
+      "key": "r4_question_first",
+      "input_tokens": 11410,
+      "output_tokens": 25252,
+      "qualified": true
+    },
+    {
+      "key": "r4_fresh",
+      "input_tokens": 11246,
+      "output_tokens": 20731,
+      "qualified": true
+    },
+    {
+      "key": "r4_re2",
+      "input_tokens": 22423,
+      "output_tokens": 31126,
+      "qualified": true
+    }
+  ],
+  "unknown_attempted_usage": [],
+  "observed_request_wall_seconds": 12135.516168400063,
+  "scope": "One deliberately selected prior overflow case; no population accuracy inference",
+  "planned_payload_order_and_tokenization_checks": "all 26 passed independently before scoring",
+  "arms": [
+    {
+      "arm": "prefix",
+      "f1": 0.975,
+      "em": 0.8,
+      "valid_count": 5,
+      "mean_reader_tokens": 159136.6,
+      "deployment_tokens": 350020.6
+    },
+    {
+      "arm": "append",
+      "f1": 0.8984040127678978,
+      "em": 0.6,
+      "valid_count": 5,
+      "mean_reader_tokens": 153931.8,
+      "deployment_tokens": 344815.8
+    },
+    {
+      "arm": "fresh",
+      "f1": 0.9583207642031171,
+      "em": 0.4,
+      "valid_count": 5,
+      "mean_reader_tokens": 36498.0,
+      "deployment_tokens": 36498.0
+    },
+    {
+      "arm": "question_first",
+      "f1": 0.7219833679833679,
+      "em": 0.0,
+      "valid_count": 5,
+      "mean_reader_tokens": 39719.4,
+      "deployment_tokens": 39719.4
+    },
+    {
+      "arm": "re2",
+      "f1": 0.7692307692307693,
+      "em": 0.6,
+      "valid_count": 4,
+      "mean_reader_tokens": 50578.0,
+      "deployment_tokens": 50578.0
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "figure_count": 9,
+  "all_r_exports": true,
+  "scope": "Every current embedded figure PDF matches its R release; data auditing and metadata inspection are separate",
+  "figures": [
+    {
+      "embedded_pdf": "paper\\figures\\official_graph_confirmatory_20261006.pdf",
+      "r_release_pdf": "paper\\figures\\r_typography_20261006\\official_graph_confirmatory_20261006.pdf",
+      "sha256": "71b561705bb25a0d423cd69205172d155495430380a0b7731476e53ac4e15787",
+      "byte_identical": true
+    },
+    {
+      "embedded_pdf": "paper\\figures\\source_qualification_figure.pdf",
+      "r_release_pdf": "paper\\figures\\r_typography_20261006\\source_qualification_figure.pdf",
+      "sha256": "35e2f1923e6ddf98a2daf24d348d66104fd7fc551a9124be9526f8dd178c99c4",
+      "byte_identical": true
+    },
+    {
+      "embedded_pdf": "paper\\figures\\interrupted_study_figure.pdf",
+      "r_release_pdf": "paper\\figures\\r_typography_20261006\\interrupted_study_figure.pdf",
+      "sha256": "59c2ec9e85b5b44c422cd253a2ee014af62fa2139cd96085619d25fbd618d2e2",
+      "byte_identical": true
+    },
+    {
+      "embedded_pdf": "paper\\figures\\partial_state_display.pdf",
+      "r_release_pdf": "paper\\figures\\r_typography_20261006\\partial_state_display.pdf",
+      "sha256": "efbeeddf0964551329923e4146d2d1e55bd08d608b5c003c3dc455c0111aa189",
+      "byte_identical": true
+    },
+    {
+      "embedded_pdf": "paper\\figures\\interrupted_indexed_figure.pdf",
+      "r_release_pdf": "paper\\figures\\r_typography_20261006\\interrupted_indexed_figure.pdf",
+      "sha256": "944c3d3557a6de3b8482378af87e346e53e1276148f9c4f1f4e00da457bce573",
+      "byte_identical": true
+    },
+    {
+      "embedded_pdf": "paper\\figures\\official_graph_identity_recode.pdf",
+      "r_release_pdf": "paper\\figures\\r_typography_20261006\\official_graph_identity_recode.pdf",
+      "sha256": "8ad034390785570e3c91aaf177d29baaf3d76758f88dc0de567427d434f6119f",
+      "byte_identical": true
+    },
+    {
+      "embedded_pdf": "paper\\figures\\official_graph_reasoning_mode.pdf",
+      "r_release_pdf": "paper\\figures\\r_typography_20261006\\official_graph_reasoning_mode.pdf",
+      "sha256": "df6e6f3bd7726f972aafa8503eb19099f5fe2e8a598c6a96ebd1440a4bd82daa",
+      "byte_identical": true
+    },
+    {
+      "embedded_pdf": "paper\\figures\\paired_models_20261006.pdf",
+      "r_release_pdf": "paper\\figures\\r_paired_models_20261006\\paired_models_20261006.pdf",
+      "sha256": "e781760683ffe7fba6045df4e91c9a831164ac77c72bdccc9fd6ae1322a88c5f",
+      "byte_identical": true
+    },
+    {
+      "embedded_pdf": "paper\\figures\\output_budget_20261006.pdf",
+      "r_release_pdf": "paper\\figures\\r_output_budget_20261006\\output_budget_20261006.pdf",
+      "sha256": "25d1df416e18a34efa2c86510edbbff4676f4697f2c81dca14ad5648e8f5ce79",
+      "byte_identical": true
+    }
+  ]
+}

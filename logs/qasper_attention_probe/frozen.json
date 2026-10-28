@@ -1,0 +1,34 @@
+{
+  "paper_id": "1805.02400",
+  "paragraphs": [
+    {
+      "id": 3,
+      "heading": "Introduction",
+      "text": "We demonstrate that NMT-Fake* reviews constitute a new category of fake reviews that cannot be detected by classifiers trained only using previously known categories of fake reviews BIBREF0 , BIBREF3 , BIBREF4 . Therefore, NMT-Fake* reviews may go undetected in existing online review sites. To meet this challenge, we develop an effective classifier that detects NMT-Fake* reviews effectively (97% F-score). Our main contributions are:"
+    },
+    {
+      "id": 4,
+      "heading": "Background",
+      "text": "Fake reviews User-generated content BIBREF5 is an integral part of the contemporary user experience on the web. Sites like tripadvisor.com, yelp.com and Google Play use user-written reviews to provide rich information that helps other users choose where to spend money and time. User reviews are used for rating services or products, and for providing qualitative opinions. User reviews and ratings may be used to rank services in recommendations. Ratings have an affect on the outwards appearance. Already 8 years ago, researchers estimated that a one-star rating increase affects the business revenue by 5 – 9% on yelp.com BIBREF6 ."
+    }
+  ],
+  "questions": [
+    "Which dataset do they use a starting point in generating fake reviews?",
+    "Do they use a pretrained NMT model to help generating reviews?"
+  ],
+  "model_path": "C:\\Users\\dragoncat\\.cache\\huggingface\\hub\\models--Qwen--Qwen2.5-0.5B-Instruct\\snapshots\\7ae557604adf67be50417f59c2c2f167def9a775",
+  "checkpoint_hashes": {
+    "config.json": "18e18afcaccafade98daf13a54092927904649e1dd4eba8299ab717d5d94ff45",
+    "model.safetensors": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+  },
+  "hashes": {
+    "data\\qasper_official\\qasper-train-v0.3.json": "9458bfe76074a8fa8d1685af02bcc73537aa6d338ad20591dfaff1946bc88bf4",
+    "protocol_qasper_attention_probe_20261002.md": "721f5af022e01caf49684b0d7d1c093869b5671082be150c290113543b9b2b9a",
+    "probe_qasper_attention.py": "9a7f434f1da678b6616a787f41411c51524f0128a323094b4678d579ac92f0d6",
+    "run_qasper_paragraph_elements.py": "15561afc11ae1266d6120dab1300e0b33d96edf6cdade95241841782ad1d8b5e",
+    "build_qasper_relation_ledger.py": "eb3b5bdfbc8aa7af222383d8e8109bc005aaecd6c1468e3871021147ca86126b",
+    "logs\\qasper_fingerprint\\split.json": "be6b0e12d007aac3c3beb3f2706ff19feee88391db3483aef1f302feea974e32"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "python": "3.12.9",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.3.5",
+    "pyarrow": "24.0.0",
+    "tokenizers": "0.22.2",
+    "jinja2": "3.1.6",
+    "PyMuPDF": "1.24.14"
+  },
+  "purpose": "Evidence audit and PDF/text metadata, not graphics rendering",
+  "graphics_backend": "R 4.6.1, svglite 2.2.2 and Cairo; separate R_sessionInfo.txt archived"
+}

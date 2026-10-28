@@ -1,0 +1,61 @@
+{
+  "dataset_sha256": "2ae7ee62a65b1c4225791c70de80c2aad4e8998cf1fd4f09a53103db4f21af93",
+  "selection": "Qasper dev ranks 131-134, all four questions",
+  "model": "qwen3.5:4b",
+  "arms": [
+    "reread",
+    "trace_pre",
+    "trace_post",
+    "quote_pre"
+  ],
+  "papers": [
+    {
+      "paper_id": "2002.01207",
+      "title": "Arabic Diacritic Recovery Using a Feature-Rich biLSTM Model",
+      "source_sha256": "23588058211802b76b5a19c0aa2a43d1cff1c8d86da65ff712016327a9b1e152",
+      "source_chars": 36941,
+      "question_ids": [
+        "2740e3d7d33173664c1c5ab292c7ec75ff6e0802",
+        "db72a78a7102b5f0e75a4d9e1a06a3c2e7aabb21",
+        "48bd71477d5f89333fa7ce5c4556e4d950fb16ed",
+        "76ed74788e3eb3321e646c48ae8bf6cdfe46dca1"
+      ]
+    },
+    {
+      "paper_id": "2002.01984",
+      "title": "UNCC Biomedical Semantic Question Answering Systems. BioASQ: Task-7B, Phase-B",
+      "source_sha256": "e37a8d11e7d61dea334ad11bcbc41169c48c7d2c9afc53f7e577e2d3555d7e1f",
+      "source_chars": 67689,
+      "question_ids": [
+        "ff338921e34c15baf1eae0074938bf79ee65fdd2",
+        "e807d347742b2799bc347c0eff19b4c270449fee",
+        "31b92c03d5b9be96abcc1d588d10651703aff716",
+        "9ec1f88ceec84a10dc070ba70e90a792fba8ce71"
+      ]
+    },
+    {
+      "paper_id": "2002.12612",
+      "title": "A multi-layer approach to disinformation detection on Twitter",
+      "source_sha256": "99a345c98b5c9dee86324e044d2b7383d9d17b47dcbdb0aaeb43ba8707e6cd95",
+      "source_chars": 41685,
+      "question_ids": [
+        "dd20d93166c14f1e57644cd7fa7b5e5738025cd0",
+        "dc2a2c177cd5df6da5d03e6e74262bf424850ec9",
+        "ae90c5567746fe25af2fcea0cc5f355751e05c71",
+        "d7644c674887ca9708eb12107acd964ae53b216d"
+      ]
+    },
+    {
+      "paper_id": "2003.03106",
+      "title": "Sensitive Data Detection and Classification in Spanish Clinical Text: Experiments with BERT",
+      "source_sha256": "2052094ed9d3a084849356f1cb14dc8df1674baba2aeec88213591df95353f39",
+      "source_chars": 41457,
+      "question_ids": [
+        "66c96c297c2cffdf5013bab5e95b59101cb38655",
+        "6b53e1f46ae4ba9b75117fc6e593abded89366be",
+        "c0bee6539eb6956a7347daa9d2419b367bd02064",
+        "3de0487276bb5961586acc6e9f82934ef8cb668c"
+      ]
+    }
+  ]
+}

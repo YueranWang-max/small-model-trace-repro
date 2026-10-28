@@ -1,0 +1,12 @@
+{
+  "pages": 21,
+  "sha256": "d4e26ba9b0a4e2a79960ded953ed2e529b15acebd5abb01ac8c159b980124d76",
+  "r_figures": 9,
+  "local_compile": true,
+  "status": "Intermediate budget-complete/context-pending proof; final source/package rebuild still required",
+  "remaining_notices": [
+    "Fontconfig default configuration",
+    "TeX PDF image-reading 1.7 versus internal 1.5"
+  ],
+  "arxiv_server_compile": false
+}

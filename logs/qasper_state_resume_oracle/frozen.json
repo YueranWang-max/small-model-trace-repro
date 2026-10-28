@@ -1,0 +1,237 @@
+{
+  "pilot_frozen_sha256": "85e1882c817a2d14db855a500078d535ed155abe8117e6606c85b90e59d87ed4",
+  "protocol_sha256": "8caba2f82c35907bd5fb7f896b499cd8eff64de4ab6151e18f9a5c0d85554f70",
+  "script_sha256": "1ca99cc6843673f2f7a514d86924484dc3a911dd6ed3c7a898a4d098801eb2e0",
+  "cases": [
+    {
+      "paper_id": "1807.00868",
+      "id": "d20d6c8ecd7cb0126479305d27deb0c8b642b09f",
+      "paragraph_ids": [
+        40
+      ],
+      "no_mapped_evidence_fallback": false
+    },
+    {
+      "paper_id": "1807.00868",
+      "id": "11e6b79f1f48ddc6c580c4d0a3cb9bcb42decb17",
+      "paragraph_ids": [
+        22
+      ],
+      "no_mapped_evidence_fallback": false
+    },
+    {
+      "paper_id": "1602.07618",
+      "id": "03fb4b31742820df58504575c562bee672e016be",
+      "paragraph_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72
+      ],
+      "no_mapped_evidence_fallback": true
+    },
+    {
+      "paper_id": "1602.07618",
+      "id": "691cba5713c76a6870e35bc248ce1d29c0550bc7",
+      "paragraph_ids": [
+        54
+      ],
+      "no_mapped_evidence_fallback": false
+    },
+    {
+      "paper_id": "1909.00252",
+      "id": "89e1e0dc5d15a05f8740f471e1cb3ddd296b8942",
+      "paragraph_ids": [
+        21
+      ],
+      "no_mapped_evidence_fallback": false
+    },
+    {
+      "paper_id": "1909.00252",
+      "id": "2815bac42db32d8f988b380fed997af31601f129",
+      "paragraph_ids": [
+        20,
+        22,
+        23
+      ],
+      "no_mapped_evidence_fallback": false
+    },
+    {
+      "paper_id": "1910.04269",
+      "id": "dc1fe3359faa2d7daa891c1df33df85558bc461b",
+      "paragraph_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58
+      ],
+      "no_mapped_evidence_fallback": true
+    },
+    {
+      "paper_id": "1910.04269",
+      "id": "922f1b740f8b13fdc8371e2a275269a44c86195e",
+      "paragraph_ids": [
+        12
+      ],
+      "no_mapped_evidence_fallback": false
+    },
+    {
+      "paper_id": "1910.14443",
+      "id": "ad6415f4351c44ffae237524696a3f76f383bfd5",
+      "paragraph_ids": [
+        1,
+        14
+      ],
+      "no_mapped_evidence_fallback": false
+    },
+    {
+      "paper_id": "1910.14443",
+      "id": "e097c2ec6021b1c1195b953bf3e930374b74d8eb",
+      "paragraph_ids": [
+        5
+      ],
+      "no_mapped_evidence_fallback": false
+    },
+    {
+      "paper_id": "1908.06151",
+      "id": "f9c5799091e7e35a8133eee4d95004e1b35aea00",
+      "paragraph_ids": [
+        22,
+        33
+      ],
+      "no_mapped_evidence_fallback": false
+    },
+    {
+      "paper_id": "1908.06151",
+      "id": "04012650a45d56c0013cf45fd9792f43916eaf83",
+      "paragraph_ids": [
+        33
+      ],
+      "no_mapped_evidence_fallback": false
+    }
+  ]
+}

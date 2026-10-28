@@ -1,0 +1,103 @@
+{
+  "dataset_sha256": "2ae7ee62a65b1c4225791c70de80c2aad4e8998cf1fd4f09a53103db4f21af93",
+  "selection": "first eight rank>=147 papers with three questions and 10000<=joined paragraph chars<=40000",
+  "model": "qwen3.5:4b",
+  "arms": [
+    "reread",
+    "question_pre",
+    "answer_pre",
+    "trace_pre",
+    "trace_post",
+    "quote_pre"
+  ],
+  "papers": [
+    {
+      "paper_id": "1703.04001",
+      "title": "Language Use Matters: Analysis of the Linguistic Structure of Question Texts Can Characterize Answerability in Quora",
+      "source_sha256": "3b79910df9b4191de91c9a1dd258fd308f8ae967c8cda61f13f99ebab100ada3",
+      "source_chars": 13194,
+      "question_ids": [
+        "4e1a67f8dc68b55a5ce18e6cd385ae9ab90d891f",
+        "6c96e910bd98c9fd58ba2050f99b9c9bac69840a",
+        "9af3142630b350c93875441e1e1767312df76d17"
+      ]
+    },
+    {
+      "paper_id": "1703.07090",
+      "title": "Deep LSTM for Large Vocabulary Continuous Speech Recognition",
+      "source_sha256": "46c92c57aa15c6b4b69c237ff3e8f1f16d270f52da69cb07dd5477e73c4781a4",
+      "source_chars": 33100,
+      "question_ids": [
+        "8060a773f6a136944f7b59758d08cc6f2a59693b",
+        "1bb7eb5c3d029d95d1abf9f2892c1ec7b6eef306",
+        "c0af8b7bf52dc15e0b33704822c4a34077e09cd1"
+      ]
+    },
+    {
+      "paper_id": "1707.03569",
+      "title": "Multitask Learning for Fine-Grained Twitter Sentiment Analysis",
+      "source_sha256": "13dc740571ba004ba41ea8a4bb9d92f7644cef4c4be0db8f1fbf01c85d01563d",
+      "source_chars": 21471,
+      "question_ids": [
+        "37edc25e39515ffc2d92115d2fcd9e6ceb18898b",
+        "e431661f17347607c3d3d9764928385a8f3d9650",
+        "876700622bd6811d903e65314ac75971bbe23dcc"
+      ]
+    },
+    {
+      "paper_id": "1708.06185",
+      "title": "Seernet at EmoInt-2017: Tweet Emotion Intensity Estimator",
+      "source_sha256": "6563ba3ed975561f81073d0c4a5981d4e05184c0dcc185c35036833c7c3963ab",
+      "source_chars": 14304,
+      "question_ids": [
+        "e48e750743aef36529fbea4328b8253dbe928b4d",
+        "c08aab979dcdc8f4fe8ec1337c3c8290ab13414e",
+        "8756b7b9ff5e87e4efdf6c2f73a0512f05b5ae3f"
+      ]
+    },
+    {
+      "paper_id": "1709.07814",
+      "title": "Attention-based Wav2Text with Feature Transfer Learning",
+      "source_sha256": "5db54ef03f9f7e5d4d9ac50755c929a5b7dbd65f5d5ac2fe39ba144102019c59",
+      "source_chars": 21831,
+      "question_ids": [
+        "1b23c4535a6c10eb70bbc95313c465e4a547db5e",
+        "0a75a52450ed866df3a304077769e1725a995bb7",
+        "fd0a3e9c210163a55d3ed791e95ae3875184b8f8"
+      ]
+    },
+    {
+      "paper_id": "1710.03348",
+      "title": "What does Attention in Neural Machine Translation Pay Attention to?",
+      "source_sha256": "53e7a5e1dd413fff2137aa96a4d1b2a603a5874925588fd5dba7aec62ea8b83f",
+      "source_chars": 28030,
+      "question_ids": [
+        "beac555c4aea76c88f19db7cc901fa638765c250",
+        "91e326fde8b0a538bc34d419541b5990d8aae14b",
+        "044f922604b4b3f42ae381419fd5cd5624fa0637"
+      ]
+    },
+    {
+      "paper_id": "1801.10293",
+      "title": "Paraphrase-Supervised Models of Compositionality",
+      "source_sha256": "a64b821a7e58fdb3f0b9617aa98222711d4a2aa724ab0981e9ca9f0c90129eb5",
+      "source_chars": 32112,
+      "question_ids": [
+        "22b740cc3c8598247ee102279f96575bdb10d53f",
+        "74b4779de437c697fe702e51f23e2b0538b0f631",
+        "435570723b37ee1f5898c1a34ef86a0b2e8701bb"
+      ]
+    },
+    {
+      "paper_id": "1802.08636",
+      "title": "Ranking Sentences for Extractive Summarization with Reinforcement Learning",
+      "source_sha256": "bdc43c9fbbe39d0e8b0c19f7cbe71dac5a34b3de71889eecb0c1da4a5eb47f0d",
+      "source_chars": 22648,
+      "question_ids": [
+        "f03112b868b658c954db62fc64430bebbaa7d9e0",
+        "5152b78f5dfee26f1b13f221c1405ffa9b9ba3a4",
+        "a6d3e57de796172c236e33a6ceb4cca793dc2315"
+      ]
+    }
+  ]
+}

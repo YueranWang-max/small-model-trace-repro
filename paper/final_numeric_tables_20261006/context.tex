@@ -1,0 +1,16 @@
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+Reader & F1 & EM & Normal-valid & Tokens/answer\\
+\midrule
+prefix & 0.9750 & 0.8000 & 5/5 & 350,021\\
+append & 0.8984 & 0.6000 & 5/5 & 344,816\\
+fresh & 0.9583 & 0.4000 & 5/5 & 36,498\\
+question first & 0.7220 & 0.0000 & 5/5 & 39,719\\
+re2 & 0.7692 & 0.6000 & 4/5 & 50,578\\
+\bottomrule
+\end{tabular}
+\caption{One previously selected overflow case, evaluated at a configured 196608-token context with the original trace bundle. Five repeats per condition describe this case only; no population interval is inferred. Prefix and append include the complete original source preparation cost.}
+\label{tab:context-final}
+\end{table}

@@ -1,0 +1,29 @@
+{
+  "tex_files": [
+    "paper\\main.tex",
+    "paper\\migration_primary_body.tex",
+    "paper\\migration_gate_map.tex",
+    "paper\\reproduction_evidence_map.tex",
+    "paper\\early_state_detail.tex"
+  ],
+  "figures": [
+    "figures/interrupted_indexed_figure.pdf",
+    "figures/official_graph_identity_recode.pdf",
+    "figures/official_graph_reasoning_mode.pdf",
+    "figures/official_graph_confirmatory_20261006.pdf",
+    "figures/source_qualification_figure.pdf",
+    "figures/interrupted_study_figure.pdf",
+    "figures/partial_state_display.pdf"
+  ],
+  "missing_figures": [],
+  "duplicate_labels": [],
+  "unresolved_source_references": [],
+  "citation_keys": [
+    "openai2025graphwalks",
+    "qwen2026qwen35card",
+    "tang2026trace",
+    "yang2025qwen3"
+  ],
+  "missing_bibliography_entries": [],
+  "stage": "After narrative reordering; future results not inserted"
+}

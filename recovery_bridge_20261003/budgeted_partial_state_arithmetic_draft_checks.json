@@ -1,0 +1,96 @@
+{
+  "status": "passed_fixed_integer_arithmetic_and_invalid_input_checks_only",
+  "source_sha256": "0af3940e48a0e4c9d02246965d268d7674e08fce9418ee0b4373faa6ff70aea5",
+  "model_calls": 0,
+  "actual_experiment_results_read": false,
+  "future_protocol_frozen": false,
+  "cases": [
+    {
+      "name": "direct",
+      "decision": {
+        "send_reader": true,
+        "reason": "within_common_allowance_and_context",
+        "total_allowance": 44014,
+        "prior_usage": 0,
+        "intended_reader_input": 11246,
+        "reader_output_cap": 32768,
+        "planned_total_upper_bound": 44014,
+        "context_reserve": 44078
+      }
+    },
+    {
+      "name": "hypothetical_short_state",
+      "decision": {
+        "send_reader": true,
+        "reason": "within_common_allowance_and_context",
+        "total_allowance": 44014,
+        "prior_usage": 12270,
+        "intended_reader_input": 12500,
+        "reader_output_cap": 19244,
+        "planned_total_upper_bound": 44014,
+        "context_reserve": 31808
+      }
+    },
+    {
+      "name": "exhausted",
+      "decision": {
+        "send_reader": false,
+        "reason": "no_positive_reader_output_allowance",
+        "total_allowance": 44014,
+        "prior_usage": 44014,
+        "intended_reader_input": 11246,
+        "reader_output_cap": 0,
+        "planned_total_upper_bound": null,
+        "context_reserve": null
+      }
+    },
+    {
+      "name": "unknown_source",
+      "decision": {
+        "send_reader": false,
+        "reason": "unknown_or_unqualified_prior_usage",
+        "total_allowance": 44014,
+        "prior_usage": null,
+        "intended_reader_input": 11246,
+        "reader_output_cap": 0,
+        "planned_total_upper_bound": null,
+        "context_reserve": null
+      }
+    },
+    {
+      "name": "context_decline",
+      "decision": {
+        "send_reader": false,
+        "reason": "context_reserve_exceeds_limit",
+        "total_allowance": 44014,
+        "prior_usage": 0,
+        "intended_reader_input": 11246,
+        "reader_output_cap": 0,
+        "planned_total_upper_bound": null,
+        "context_reserve": 44078
+      }
+    }
+  ],
+  "rejected_invalid_inputs": [
+    {
+      "name": "string_false",
+      "error": "usage qualification must be a boolean"
+    },
+    {
+      "name": "integer_flag",
+      "error": "usage qualification must be a boolean"
+    },
+    {
+      "name": "negative_input",
+      "error": "incurred input tokens must be a nonnegative integer"
+    },
+    {
+      "name": "boolean_token_count",
+      "error": "incurred input tokens must be a nonnegative integer"
+    },
+    {
+      "name": "fractional_output",
+      "error": "incurred output tokens must be a nonnegative integer"
+    }
+  ]
+}

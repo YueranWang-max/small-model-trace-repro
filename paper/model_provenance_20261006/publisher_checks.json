@@ -1,0 +1,34 @@
+{
+  "checked_utc": "2026-10-06T04:28:56.394463+00:00",
+  "checks": [
+    {
+      "model_tag": "qwen3:1.7b",
+      "url": "https://registry.ollama.ai/v2/library/qwen3/manifests/1.7b",
+      "http_status": 200,
+      "publisher_manifest_sha256": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+      "frozen_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+      "matches_frozen": true
+    },
+    {
+      "model_tag": "qwen3:4b",
+      "url": "https://registry.ollama.ai/v2/library/qwen3/manifests/4b",
+      "http_status": 200,
+      "publisher_manifest_sha256": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+      "frozen_digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+      "matches_frozen": true
+    },
+    {
+      "model_tag": "qwen3.5:4b",
+      "url": "https://registry.ollama.ai/v2/library/qwen3.5/manifests/4b",
+      "http_status": 200,
+      "publisher_manifest_sha256": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "frozen_digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+      "matches_frozen": false
+    }
+  ],
+  "old_qwen35_digest_fetch": {
+    "url": "https://registry.ollama.ai/v2/library/qwen3.5/manifests/sha256:2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+    "status": 404,
+    "interpretation": "This endpoint did not retrieve the frozen old manifest. It does not determine the original publication or execution authenticity."
+  }
+}

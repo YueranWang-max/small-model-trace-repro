@@ -1,0 +1,218 @@
+{
+  "complete": true,
+  "planned_model_calls": 264,
+  "known_model_calls": 264,
+  "unknown_keys": [],
+  "independent_graph_units": 24,
+  "new_runtime_version": {
+    "version": "0.40.0"
+  },
+  "source_round_trips_verified": 24,
+  "all_known_payloads_and_raw_scores_independently_verified": true,
+  "research_tokens_known": 1219784,
+  "research_request_wall_seconds_known": 5051.051391800008,
+  "scope": "New questions on a public graph benchmark; no cross-domain guarantee, external execution attestation, or energy/money inference.",
+  "execution_amendments": [],
+  "arms": [
+    {
+      "arm": "original",
+      "calls": 48,
+      "graph_units": 24,
+      "f1": 0.3175920302178042,
+      "em": 0.041666666666666664,
+      "mean_deployment_tokens": 6640.666666666667,
+      "mean_deployment_wall_seconds": 28.605620256249967,
+      "valid_count": 43,
+      "length_terminated": 5,
+      "observed_resident_vram_bytes": [
+        5104184851
+      ]
+    },
+    {
+      "arm": "original_long",
+      "calls": 48,
+      "graph_units": 24,
+      "f1": 0.36684636026741285,
+      "em": 0.08333333333333333,
+      "mean_deployment_tokens": 7149.875,
+      "mean_deployment_wall_seconds": 33.807538256250155,
+      "valid_count": 45,
+      "length_terminated": 3,
+      "observed_resident_vram_bytes": [
+        5104184851
+      ]
+    },
+    {
+      "arm": "compact",
+      "calls": 48,
+      "graph_units": 24,
+      "f1": 0.6541558893677702,
+      "em": 0.22916666666666666,
+      "mean_deployment_tokens": 3823.25,
+      "mean_deployment_wall_seconds": 19.54218162916669,
+      "valid_count": 42,
+      "length_terminated": 6,
+      "observed_resident_vram_bytes": [
+        5104184851
+      ]
+    },
+    {
+      "arm": "prefix",
+      "calls": 48,
+      "graph_units": 24,
+      "f1": 0.7702893202070834,
+      "em": 0.375,
+      "mean_deployment_tokens": 5344.458333333333,
+      "mean_deployment_wall_seconds": 16.45731594374996,
+      "valid_count": 47,
+      "length_terminated": 1,
+      "observed_resident_vram_bytes": [
+        5104184851
+      ]
+    },
+    {
+      "arm": "append",
+      "calls": 48,
+      "graph_units": 24,
+      "f1": 0.7129962690817955,
+      "em": 0.3333333333333333,
+      "mean_deployment_tokens": 5345.666666666667,
+      "mean_deployment_wall_seconds": 16.600904743749823,
+      "valid_count": 46,
+      "length_terminated": 2,
+      "observed_resident_vram_bytes": [
+        5104184851
+      ]
+    }
+  ],
+  "contrasts": [
+    {
+      "contrast": "prefix-compact",
+      "primary": true,
+      "f1_difference": 0.1161334308393132,
+      "descriptive_interval": [
+        0.043747168536013355,
+        0.19136877658912274
+      ],
+      "two_sided_paired_sign_flip_p": 0.006239937600623993,
+      "full_token_ratio": 1.3978835632860351,
+      "full_token_ratio_interval": [
+        1.1696928011899406,
+        1.6670597362860042
+      ],
+      "full_wall_ratio": 0.8421432292486438,
+      "full_wall_ratio_interval": [
+        0.6304733861366191,
+        1.1185662720416676
+      ],
+      "secondary_joint_quality_token_gate": false
+    },
+    {
+      "contrast": "prefix-append",
+      "primary": false,
+      "f1_difference": 0.05729305112528796,
+      "descriptive_interval": [
+        -0.03210414174641149,
+        0.1705127075501253
+      ],
+      "two_sided_paired_sign_flip_p": 0.36591634083659164,
+      "full_token_ratio": 0.9997739602169983,
+      "full_token_ratio_interval": [
+        0.9419888095561563,
+        1.060974335004529
+      ],
+      "full_wall_ratio": 0.9913505437073289,
+      "full_wall_ratio_interval": [
+        0.8682083119309979,
+        1.1401518568853108
+      ],
+      "secondary_joint_quality_token_gate": false
+    },
+    {
+      "contrast": "prefix-original",
+      "primary": false,
+      "f1_difference": 0.45269728998927916,
+      "descriptive_interval": [
+        0.33198684744531787,
+        0.5656268793600691
+      ],
+      "two_sided_paired_sign_flip_p": 9.99990000099999e-06,
+      "full_token_ratio": 0.8048074992470637,
+      "full_token_ratio_interval": [
+        0.72441304872414,
+        0.8958651535315465
+      ],
+      "full_wall_ratio": 0.5753175703349499,
+      "full_wall_ratio_interval": [
+        0.46197278685632237,
+        0.7222036099328804
+      ],
+      "secondary_joint_quality_token_gate": true
+    },
+    {
+      "contrast": "prefix-original_long",
+      "primary": false,
+      "f1_difference": 0.40344295993967044,
+      "descriptive_interval": [
+        0.2931227337477338,
+        0.5087443437258404
+      ],
+      "two_sided_paired_sign_flip_p": 1.999980000199998e-05,
+      "full_token_ratio": 0.7474897579794519,
+      "full_token_ratio_interval": [
+        0.6350583180631824,
+        0.8773221410514481
+      ],
+      "full_wall_ratio": 0.486794271118141,
+      "full_wall_ratio_interval": [
+        0.35418114473039986,
+        0.6888506980695143
+      ],
+      "secondary_joint_quality_token_gate": true
+    },
+    {
+      "contrast": "append-compact",
+      "primary": false,
+      "f1_difference": 0.05884037971402523,
+      "descriptive_interval": [
+        -0.05996302241682465,
+        0.16954480768915697
+      ],
+      "two_sided_paired_sign_flip_p": 0.35847641523584767,
+      "full_token_ratio": 1.3981996120229299,
+      "full_token_ratio_interval": [
+        1.1724047057347469,
+        1.6780329970244705
+      ],
+      "full_wall_ratio": 0.8494908633421452,
+      "full_wall_ratio_interval": [
+        0.633802989787942,
+        1.153442713708215
+      ],
+      "secondary_joint_quality_token_gate": false
+    },
+    {
+      "contrast": "compact-original",
+      "primary": false,
+      "f1_difference": 0.33656385914996595,
+      "descriptive_interval": [
+        0.19322560097872113,
+        0.47589666626104793
+      ],
+      "two_sided_paired_sign_flip_p": 0.00026999730002699973,
+      "full_token_ratio": 0.5757328581467724,
+      "full_token_ratio_interval": [
+        0.46642677076931793,
+        0.7110057116134344
+      ],
+      "full_wall_ratio": 0.6831588147401547,
+      "full_wall_ratio_interval": [
+        0.4882476945016854,
+        0.9539657064405107
+      ],
+      "secondary_joint_quality_token_gate": true
+    }
+  ],
+  "primary_accuracy_benefit_supported": true,
+  "inference_limits": "24 graph units, two seeds averaged within unit; primary fixed before responses; descriptive intervals and sign-flip exchangeability assumption; secondary comparisons unadjusted for multiplicity; complete source preparation charged to each reused answer; no energy or monetary cost claim."
+}

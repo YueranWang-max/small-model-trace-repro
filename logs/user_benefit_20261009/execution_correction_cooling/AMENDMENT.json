@@ -1,0 +1,10 @@
+{
+  "scope": "Execution-only thermal correction; no change to selection, seeds, model, prompts, source/read budgets, scoring or planned sample.",
+  "reason": "Implement the existing protocol below76C cooldown after82C trigger. Original loop resumed below82C.",
+  "recorded_calls_before_change": 18,
+  "old_runner_sha256": "f742fae0b38cdf76efe6042d530562ec4c6caccd8b99e3cf08f08de8553ebfed",
+  "new_runner_sha256": "1c599d10bb4e0ad0139cd26a4ce2faef62e12bb88572ef923ca192e5580e8de6",
+  "old_runner_snapshot": "execution_correction_cooling/run_user_benefit_20261009.py",
+  "old_frozen_snapshot": "execution_correction_cooling/frozen_before.json",
+  "updated_unix": 1791552394.0554512
+}

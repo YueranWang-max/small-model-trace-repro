@@ -1,0 +1,91 @@
+{
+  "request": {
+    "model": "qwen3:1.7b",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You solve directed-graph algorithm problems. Use only the graph and operation in the user message. Return exactly one visible line in this format: Final Answer: [node1, node2]. Use [] for the empty set. Do not include any text before or after that line."
+      },
+      {
+        "role": "user",
+        "content": "Below are selected reasoning traces or trace tail windows from independent first attempts on the same graph problem. They may contain mistakes. Use them only as scratchpad hints, and verify against the graph.\n<first_run_reasoning_traces>\n[Trace 1] Okay, let's see. The user wants me to find the parents of node V in the given graph. So first, I need to recall what a parent is in this context. Parents are nodes that have a direct edge pointing to V. So I need to look through all the edges in the graph and check which nodes have an edge pointing to V.\n\nLooking at the edges provided, let me go through each edge one by one. The graph is pretty dense, so I need to be careful. Let's start from the beginning.\n\nFirst, there's CH -> DD, CH -> EF, CH -> T. None of these point to V. Then DW -> BR, DW -> AO, DW -> CE. Still nothing. ET -> EF, ET -> FG, ET -> DU. No V here. EA -> BP, EA -> DM, EA -> BW. Nope. DK -> BU, DK -> EM, DK -> BG. Not V. CV -> G, CV -> CL, CV -> CC. Still nothing. BN -> AJ, BN -> CX, BN -> V. Oh, here's one. BN -> V. So that's one parent.\n\nThen BU -> L, BU -> EX, BU -> CW. No V. DG -> DF, DG -> BL, DG -> FP. Not V. AL -> CV, AL -> AI, AL -> Y. No. BP -> BR, BP -> FW, BP -> EV. Wait, BP -> EV. So BP is a parent of EV, but not V. AE -> FF, AE -> FS, AE -> DP. No. DC -> FK, DC -> BO, DC -> DU. No. AN -> BK, AN -> A, AN -> BC. No. AF -> M, AF -> EV, AF -> EP. AF -> EV, but not V. BI -> S, BI -> AT, BI -> AL. No. EN -> BA, EN -> CE, EN -> CR. No. BF -> CW, BF -> DT, BF -> CM. No. BC -> ER, BC -> DC, BC -> AR. No. ES -> GA, ES -> AV, ES -> BO. No. DN -> FM, DN -> BF, DN -> BH. No. J -> CH, J -> BU, J -> Z. No. CR -> FH, CR -> FB, CR -> AW. No. BS -> AM, BS -> BR, BS -> DG. No. D -> CS, D -> C, D -> BV. No. AU -> Q, AU -> FA, AU -> DX. No. FS -> CN, FS -> EE, FS -> CR. No. P -> FH, P -> DN, P -> CI. No. EZ -> BK, EZ -> BH, EZ -> EZ. No. CA -> FX, CA -> AZ, CA -> GA. No. FA -> AP, FA -> CD, FA -> FN. No. AG -> AA, AG -> CO, AG -> X. No. DA -> BU, DA -> A, DA -> FX. No. G -> Y, G -> BP, G -> GD. No. Z -> AQ, Z -> FU, Z -> AD. No. CM -> FT, CM -> BT, CM -> FC. No. CO -> N, CO -> AB, CO -> AK. No. T -> ED, T -> AM, T -> GE. No. AK -> DC, AK -> FG, AK -> EL. No. GD -> AT, GD -> DS, GD -> GB. No. I -> FF, I -> AE, I -> AF. No. FK -> BS, FK -> EO, FK -> AO. No. AH -> FS, AH -> DI, AH -> BH. No. EG -> BB, EG -> K, EG -> BW. No. DJ -> DN, DJ -> DF, DJ -> FU. No. EC -> AQ, EC -> FF, EC -> U. No. FL -> L, FL -> BC, FL -> CR. No. BY -> EX, BY -> AY, BY -> FS. No. AQ -> FS, AQ -> S, AQ -> EK. No. DX -> EZ, DX -> AF, DX -> AC. No. F -> C, F -> ES, F -> AA. No. AX -> ER, AX -> I, AX -> DK. No. FP -> CM, FP -> BH, FP -> CD. No. CX -> CB, CX -> EB, CX -> AR. No. FD -> FH, FD -> FX, FD -> AX. No. AA -> Y, AA -> DH, AA -> DA. No. BV -> K, BV -> FE, BV -> K. No. EL -> FG, EL -> EB, EL -> CM. No. CE -> BR, CE -> EW, CE -> FA. No. BX -> FD, BX -> BV, BX -> EX. No. CT -> A, CT -> DN, CT -> CM. No. CP -> M,\n</first_run_reasoning_traces>\n\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\nCH -> DD\nCH -> EF\nCH -> T\nDW -> BR\nDW -> AO\nDW -> CE\nET -> EF\nET -> FG\nET -> DU\nEA -> BP\nEA -> DM\nEA -> BW\nDK -> BU\nDK -> EM\nDK -> BG\nCV -> G\nCV -> CL\nCV -> CC\nBN -> AJ\nBN -> CX\nBN -> V\nBU -> L\nBU -> EX\nBU -> CW\nDG -> DF\nDG -> BL\nDG -> FP\nAL -> CV\nAL -> AI\nAL -> Y\nBP -> BR\nBP -> FW\nBP -> EV\nAE -> FF\nAE -> FS\nAE -> DP\nDC -> FK\nDC -> BO\nDC -> DU\nAN -> BK\nAN -> A\nAN -> BC\nAF -> M\nAF -> EV\nAF -> EP\nBI -> S\nBI -> AT\nBI -> AL\nEN -> BA\nEN -> CE\nEN -> CR\nBF -> CW\nBF -> DT\nBF -> CM\nBC -> ER\nBC -> DC\nBC -> AR\nES -> GA\nES -> AV\nES -> BO\nDN -> FM\nDN -> BF\nDN -> BH\nJ -> CH\nJ -> BU\nJ -> Z\nCR -> FH\nCR -> FB\nCR -> AW\nBS -> AM\nBS -> BR\nBS -> DG\nD -> CS\nD -> C\nD -> BV\nAU -> Q\nAU -> FA\nAU -> DX\nFS -> CN\nFS -> EE\nFS -> CR\nP -> FH\nP -> DN\nP -> CI\nEZ -> BK\nEZ -> BH\nEZ -> EZ\nCA -> FX\nCA -> AZ\nCA -> GA\nFA -> AP\nFA -> CD\nFA -> FN\nAG -> AA\nAG -> CO\nAG -> X\nDA -> BU\nDA -> A\nDA -> FX\nG -> Y\nG -> BP\nG -> GD\nZ -> AQ\nZ -> FU\nZ -> AD\nCM -> FT\nCM -> BT\nCM -> FC\nCO -> N\nCO -> AB\nCO -> AK\nT -> ED\nT -> AM\nT -> GE\nAK -> DC\nAK -> FG\nAK -> EL\nGD -> AT\nGD -> DS\nGD -> GB\nI -> FF\nI -> AE\nI -> AF\nFK -> BS\nFK -> EO\nFK -> AO\nAH -> FS\nAH -> DI\nAH -> BH\nEG -> BB\nEG -> K\nEG -> BW\nDJ -> DN\nDJ -> DF\nDJ -> FU\nEC -> AQ\nEC -> FF\nEC -> U\nFL -> L\nFL -> BC\nFL -> CR\nBY -> EX\nBY -> AY\nBY -> FS\nAQ -> FS\nAQ -> S\nAQ -> EK\nDX -> EZ\nDX -> AF\nDX -> AC\nF -> C\nF -> ES\nF -> AA\nAX -> ER\nAX -> I\nAX -> DK\nFP -> CM\nFP -> BH\nFP -> CD\nCX -> CB\nCX -> EB\nCX -> AR\nFD -> FH\nFD -> FX\nFD -> AX\nAA -> Y\nAA -> DH\nAA -> DA\nBV -> K\nBV -> FE\nBV -> K\nEL -> FG\nEL -> EB\nEL -> CM\nCE -> BR\nCE -> EW\nCE -> FA\nBX -> FD\nBX -> BV\nBX -> EX\nCT -> A\nCT -> DN\nCT -> CM\nCP -> M\nCP -> DY\nCP -> CV\nCU -> EP\nCU -> DP\nCU -> W\nAS -> EC\nAS -> DI\nAS -> EO\nEW -> B\nEW -> B\nEW -> AP\nBG -> Q\nBG -> AO\nBG -> BY\nCG -> CF\nCG -> CC\nCG -> DF\nBJ -> T\nBJ -> DM\nBJ -> DM\nBK -> BS\nBK -> BB\nBK -> AJ\nA -> CE\nA -> CC\nA -> DO\nCF -> DJ\nCF -> CS\nCF -> C\nFC -> BV\nFC -> DL\nFC -> BR\nEO -> EE\nEO -> EW\nEO -> J\nCD -> FR\nCD -> BH\nCD -> X\nE -> CN\nE -> CI\nE -> DS\nCN -> FW\nCN -> AY\nCN -> AB\nU -> DI\nU -> A\nU -> EK\nEV -> AW\nEV -> EF\nEV -> AV\nX -> CI\nX -> EG\nX -> Y\nBH -> CP\nBH -> N\nBH -> DA\nC -> DR\nC -> CV\nC -> DW\nDB -> N\nDB -> BX\nDB -> AT\nM -> AT\nM -> DB\nM -> AU\nV -> S\nV -> ET\nV -> AO\nBL -> FA\nBL -> A\nBL -> EN\nBD -> FS\nBD -> BL\nBD -> AM\nAO -> BP\nAO -> CL\nAO -> EZ\nDP -> AD\nDP -> DU\nDP -> FB\nEP -> BO\nEP -> P\nEP -> BB\nDY -> CR\nDY -> G\nDY -> AY\nED -> AZ\nED -> DI\nED -> GA\nDD -> AH\nDD -> CP\nDD -> EG\nDL -> EP\nDL -> CV\nDL -> EZ\nBE -> DX\nBE -> EA\nBE -> W\nGB -> ES\nGB -> EC\nGB -> BS\nAC -> FG\nAC -> AB\nAC -> P\nFR -> CL\nFR -> V\nFR -> FK\nK -> BP\nK -> P\nK -> L\nEF -> CC\nEF -> AB\nEF -> W\nDM -> BC\nDM -> BN\nDM -> FE\nB -> B\nB -> BI\nB -> CO\nFN -> FU\nFN -> C\nFN -> EE\nFG -> DG\nFG -> F\nFG -> DL\nFX -> AI\nFX -> Y\nFX -> P\nAJ -> FS\nAJ -> FF\nAJ -> AF\nBO -> Q\nBO -> S\nBO -> FT\nDT -> DM\nDT -> CE\nDT -> CA\nDU -> BA\nDU -> FI\nDU -> V\nGC -> G\nGC -> BF\nGC -> E\nFI -> CU\nFI -> AS\nFI -> AP\nFH -> FC\nFH -> B\nFH -> E\nEM -> CX\nEM -> AG\nEM -> GA\nBT -> BU\nBT -> O\nBT -> AL\nFB -> EA\nFB -> DK\nFB -> FY\nO -> CC\nO -> CU\nO -> FL\nFY -> BK\nFY -> CC\nFY -> CM\nEU -> AE\nEU -> EO\nEU -> DF\nBW -> FS\nBW -> AK\nBW -> CU\nAZ -> CV\nAZ -> DP\nAZ -> AM\nDR -> FP\nDR -> AW\nDR -> FN\nDS -> H\nDS -> AG\nDS -> EG\nL -> DX\nL -> EA\nL -> C\nAT -> FC\nAT -> CW\nAT -> CL\nAR -> BB\nAR -> AN\nAR -> AB\nY -> I\nY -> AZ\nY -> DU\nFM -> BR\nFM -> ET\nFM -> FX\nCC -> EH\nCC -> FN\nCC -> BI\nAB -> AQ\nAB -> BY\nAB -> AZ\nGA -> AS\nGA -> EN\nGA -> GE\nEB -> AX\nEB -> CK\nEB -> CH\nFW -> K\nFW -> DX\nFW -> FA\nCB -> CG\nCB -> GE\nCB -> CA\nCS -> BY\nCS -> Y\nCS -> FI\nS -> CB\nS -> BC\nS -> EP\nFF -> X\nFF -> AY\nFF -> DY\nDO -> BC\nDO -> CH\nDO -> AL\nAP -> R\nAP -> EB\nAP -> EE\nR -> CU\nR -> CA\nR -> FO\nQ -> Y\nQ -> EO\nQ -> CD\nEQ -> DN\nEQ -> GE\nEQ -> BR\nW -> AA\nW -> L\nW -> DP\nAW -> EM\nAW -> AL\nAW -> BF\nAM -> J\nAM -> FL\nAM -> CF\nCW -> BB\nCW -> L\nCW -> GA\nBA -> BN\nBA -> DE\nBA -> EC\nFE -> BL\nFE -> DB\nFE -> CY\nCL -> AQ\nCL -> X\nCL -> AW\nAV -> BB\nAV -> D\nAV -> AZ\nCK -> DW\nCK -> AS\nCK -> ET\nAY -> FN\nAY -> E\nAY -> R\nN -> DK\nN -> FG\nN -> AC\nH -> BM\nH -> CL\nH -> AB\nEI -> AH\nEI -> AL\nEI -> BP\nER -> P\nER -> C\nER -> FI\nFT -> N\nFT -> FO\nFT -> CX\nFU -> DE\nFU -> CN\nFU -> FM\nAD -> CA\nAD -> CU\nAD -> EE\nGE -> DH\nGE -> K\nGE -> BC\nEX -> CL\nEX -> CF\nEX -> FD\nCI -> ES\nCI -> EL\nCI -> CG\nAI -> T\nAI -> GB\nAI -> GE\nFO -> A\nFO -> BK\nFO -> EG\nEK -> CX\nEK -> O\nEK -> AO\nEE -> F\nEE -> AK\nEE -> R\nEH -> DV\nEH -> BK\nEH -> EG\nDE -> G\nDE -> BE\nDE -> CX\nBM -> F\nBM -> FH\nBM -> AY\nDI -> CP\nDI -> DD\nDI -> DY\nDF -> AB\nDF -> DG\nDF -> EF\nBB -> FR\nBB -> EC\nBB -> AM\nCY -> BC\nCY -> EQ\nCY -> CV\nBR -> FD\nBR -> U\nBR -> FT\nDV -> DB\nDV -> AB\nDV -> CO\nDH -> G\nDH -> FI\nDH -> BO\n\n\nOperation:\nFind the parents of node V.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n\nReturn exactly one line in this format: Final Answer: [node1, node2]. Use [] for the empty set."
+      }
+    ],
+    "stream": false,
+    "think": true,
+    "keep_alive": "10m",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 3072,
+      "seed": 2026100911,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0
+    }
+  },
+  "request_sha256": "5b19d1c4e6b2b24e165fdb3c2b5f6b9b64b8af112e20eb791884458d4e8ddb44",
+  "expected_input_tokens": 3654,
+  "completion": "returned",
+  "transmission": "attempting_once",
+  "gpu_before": {
+    "memory_mib": 2471,
+    "utilization_percent": 0,
+    "temperature_c": 66
+  },
+  "result": {
+    "raw": {
+      "model": "qwen3:1.7b",
+      "created_at": "2026-10-09T15:30:10.2052106Z",
+      "message": {
+        "role": "assistant",
+        "content": "Final Answer: [BN, DU]",
+        "thinking": "Okay, let's see. The user wants to find the parents of node V in the given graph. Parents are nodes that have a direct edge pointing to V. So I need to go through all the edges and check which ones end at V.\n\nLooking at the edges provided, let me scan through them. The edges are pretty dense, so I need to be careful. Let me check each edge one by one.\n\nFirst, there's CH -> DD, CH -> EF, CH -> T. None of these point to V. Then DW -> BR, DW -> AO, DW -> CE. Still nothing. ET -> EF, ET -> FG, ET -> DU. No V here. EA -> BP, EA -> DM, EA -> BW. Nope. DK -> BU, DK -> EM, DK -> BG. Not V. CV -> G, CV -> CL, CV -> CC. No. BN -> AJ, BN -> CX, BN -> V. Oh, here's one. BN -> V. So BN is a parent of V.\n\nThen BU -> L, BU -> EX, BU -> CW. No V. DG -> DF, DG -> BL, DG -> FP. Not V. AL -> CV, AL -> AI, AL -> Y. No. BP -> BR, BP -> FW, BP -> EV. BP -> EV, but not V. AE -> FF, AE -> FS, AE -> DP. No. DC -> FK, DC -> BO, DC -> DU. No. AN -> BK, AN -> A, AN -> BC. No. AF -> M, AF -> EV, AF -> EP. AF -> EV, but not V. BI -> S, BI -> AT, BI -> AL. No. EN -> BA, EN -> CE, EN -> CR. No. BF -> CW, BF -> DT, BF -> CM. No. BC -> ER, BC -> DC, BC -> AR. No. ES -> GA, ES -> AV, ES -> BO. No. DN -> FM, DN -> BF, DN -> BH. No. J -> CH, J -> BU, J -> Z. No. CR -> FH, CR -> FB, CR -> AW. No. BS -> AM, BS -> BR, BS -> DG. No. D -> CS, D -> C, D -> BV. No. AU -> Q, AU -> FA, AU -> DX. No. FS -> CN, FS -> EE, FS -> CR. No. P -> FH, P -> DN, P -> CI. No. EZ -> BK, EZ -> BH, EZ -> EZ. No. CA -> FX, CA -> AZ, CA -> GA. No. FA -> AP, FA -> CD, FA -> FN. No. AG -> AA, AG -> CO, AG -> X. No. DA -> BU, DA -> A, DA -> FX. No. G -> Y, G -> BP, G -> GD. No. Z -> AQ, Z -> FU, Z -> AD. No. CM -> FT, CM -> BT, CM -> FC. No. CO -> N, CO -> AB, CO -> AK. No. T -> ED, T -> AM, T -> GE. No. AK -> DC, AK -> FG, AK -> EL. No. GD -> AT, GD -> DS, GD -> GB. No. I -> FF, I -> AE, I -> AF. No. FK -> BS, FK -> EO, FK -> AO. No. AH -> FS, AH -> DI, AH -> BH. No. EG -> BB, EG -> K, EG -> BW. No. DJ -> DN, DJ -> DF, DJ -> FU. No. EC -> AQ, EC -> FF, EC -> U. No. FL -> L, FL -> BC, FL -> CR. No. BY -> EX, BY -> AY, BY -> FS. No. AQ -> FS, AQ -> S, AQ -> EK. No. DX -> EZ, DX -> AF, DX -> AC. No. F -> C, F -> ES, F -> AA. No. AX -> ER, AX -> I, AX -> DK. No. FP -> CM, FP -> BH, FP -> CD. No. CX -> CB, CX -> EB, CX -> AR. No. FD -> FH, FD -> FX, FD -> AX. No. AA -> Y, AA -> DH, AA -> DA. No. BV -> K, BV -> FE, BV -> K. No. EL -> FG, EL -> EB, EL -> CM. No. CE -> BR, CE -> EW, CE -> FA. No. BX -> FD, BX -> BV, BX -> EX. No. CT -> A, CT -> DN, CT -> CM. No. CP -> M, CP -> DY, CP -> CV. No. CU -> EP, CU -> DP, CU -> W. No. AS -> EC, AS -> DI, AS -> EO. No. EW -> B, EW -> B, EW -> AP. No. BG -> Q, BG -> AO, BG -> BY. No. CG -> CF, CG -> CC, CG -> DF. No. BJ -> T, BJ -> DM, BJ -> DM. No. BK -> BS, BK -> BB, BK -> AJ. No. A -> CE, A -> CC, A -> DO. No. CF -> DJ, CF -> CS, CF -> C. No. FC -> BV, FC -> DL, FC -> BR. No. EO -> EE, EO -> EW, EO -> J. No. CD -> FR, CD -> BH, CD -> X. No. E -> CN, E -> CI, E -> DS. No. CN -> FW, CN -> AY, CN -> AB. No. U -> DI, U -> A, U -> EK. No. EV -> AW, EV -> EF, EV -> AV. No. X -> CI, X -> EG, X -> Y. No. BH -> CP, BH -> N, BH -> DA. No. C -> DR, C -> CV, C -> DW. No. DB -> N, DB -> BX, DB -> AT. No. M -> AT, M -> DB, M -> AU. No. V -> S, V -> ET, V -> AO. No. BL -> FA, BL -> A, BL -> EN. No. BD -> FS, BD -> BL, BD -> AM. No. AO -> BP, AO -> CL, AO -> EZ. No. DP -> AD, DP -> DU, DP -> FB. No. EP -> BO, EP -> P, EP -> BB. No. DY -> CR, DY -> G, DY -> AY. No. ED -> AZ, ED -> DI, ED -> GA. No. DD -> AH, DD -> CP, DD -> EG. No. DL -> EP, DL -> CV, DL -> EZ. No. BE -> DX, BE -> EA, BE -> W. No. GB -> ES, GB -> EC, GB -> BS. No. AC -> FG, AC -> AB, AC -> P. No. FR -> CL, FR -> V, FR -> FK. No. K -> BP, K -> P, K -> L. No. EF -> CC, EF -> AB, EF -> W. No. DM -> BC, DM -> BN, DM -> FE. No. B -> B, B -> BI, B -> CO. No. FN -> FU, FN -> C, FN -> EE. No. FG -> DG, FG -> F, FG -> DL. No. FX -> AI, FX -> Y, FX -> P. No. AJ -> FS, AJ -> FF, AJ -> AF. No. BO -> Q, BO -> S, BO -> FT. No. DT -> DM, DT -> CE, DT -> CA. No. DU -> BA, DU -> FI, DU -> V. Oh, here's another one. DU -> V. So DU is another parent of V.\n\nSo the parents are BN and DU. Let me double-check to make sure I didn't miss any. Looking back through the edges, BN -> V and DU -> V. Are there any others? Let me check again. The edge BN -> V and DU -> V. Any others? Let me scan once more. The only ones are those two. So the parents are BN and DU. Therefore, the answer should be [BN, DU].\n"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 13354607500,
+      "load_duration": 45113000,
+      "prompt_eval_count": 3654,
+      "prompt_eval_cached_count": 62,
+      "prompt_eval_duration": 501564000,
+      "eval_count": 1766,
+      "eval_duration": 12471995000
+    },
+    "wall_sec": 13.377061400000002,
+    "runtime_ps": {
+      "models": [
+        {
+          "name": "qwen3:1.7b",
+          "model": "qwen3:1.7b",
+          "size": 2235280915,
+          "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "2.0B",
+            "quantization_level": "Q4_K_M"
+          },
+          "expires_at": "2026-10-09T23:40:10.2055655+08:00",
+          "size_vram": 2235280915,
+          "context_length": 8192,
+          "runner": "llamacpp"
+        }
+      ]
+    },
+    "gpu_after": {
+      "memory_mib": 2471,
+      "utilization_percent": 95,
+      "temperature_c": 70
+    },
+    "raw_response_sha256": "7fa36f328bf621246df603ff07b559eefabdeb454a8759ca5c58d01dde2824a5",
+    "expected_input_tokens": 3654,
+    "qualified": true,
+    "error": null
+  }
+}

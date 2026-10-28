@@ -1,0 +1,5 @@
+{
+  "reason": "Duplicate slash/backslash dependency keys prevented pre-inference resume assertion; no model request transmitted",
+  "original_freeze_sha256": "2656620c7238e7c273840789e0dff0efb2847a47e14b1bcebc2b9c59ce5f5b57",
+  "repair": "Canonical forward-slash dependency key; new freeze before inference"
+}

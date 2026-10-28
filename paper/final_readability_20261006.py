@@ -1,0 +1,23 @@
+from pathlib import Path
+import re,json
+P=Path(__file__).resolve().parent
+m=P/'main.tex';s=m.read_text(encoding='utf-8')
+abstract='''Does placing prior reasoning before the original text help a locally served small model answer more accurately? We test Zou and Tang's Trace as State method on official graph questions, retaining the complete source and comparing the same traces before and after it. Two matched twelve-question studies completed 240 calls per model. Qwen3-1.7B prefix F1 was 0.7715 versus 0.7351 for append, with a descriptive placement interval including zero. Qwen3-4B scored 1.0000 in both placements. Its direct F1 was 0.6967, with eighteen of sixty answers output-truncated; a sequential diagnostic with a larger output allowance achieved direct F1 1.0000. Charging all trace preparation, prefix used 5.91 times the tokens of this new direct condition at the same observed accuracy ceiling. A larger context also enabled one previously declined case, while separate trials exposed answer-format sensitivity. The tested configurations therefore did not establish a placement-specific advantage. Output allowance, context fit and scoring rules must be controlled before attributing local performance differences to trace placement. These findings are configuration-specific boundaries, not a universal verdict on the original method.'''
+s=re.sub(r'(?<=\\begin\{abstract\}).*?(?=\\end\{abstract\})','\n'+abstract+'\n',s,flags=re.S)
+m.write_text(s,encoding='utf-8')
+b=P/'migration_primary_body.tex';s=b.read_text(encoding='utf-8')
+intro=r'''\section{Introduction}
+Can a small model answer more accurately when it reads earlier reasoning before rereading the original text? Zou and Tang's Trace as State method tests this idea by placing prior reasoning before the unchanged source \citep{tang2026trace}. Their matched control places the same reasoning after the source, with the question last in both conditions. Their frontier-model experiments found an advantage for the first ordering.
+
+It is unclear whether that advantage transfers to small models running on local hardware. Additional reasoning may help, but it also needs space in the context window. A model may run out of output tokens before reaching an answer. These constraints can make a local comparison measure execution limits rather than the benefit of ordering the reasoning first.
+
+We reproduce the placement comparison on official GraphWalks questions with local Qwen models. The same twelve questions are tested with two model packages; each uses five source traces and five reader repeats. We retain the complete graph and archive requests and responses. Separate diagnostics examine output allowance, configured context and answer-format rules. Model size, task length and serving limits differ from the original study, so we test local transfer rather than reproduce its frontier-scale scores.
+
+Our main finding is that these local tests did not establish a placement-specific advantage. The 1.7B comparison remained uncertain, while both 4B trace placements reached the score ceiling. A later direct-reading run with a larger output allowance reached the same ceiling. The contribution is therefore a reproduction and boundary study: it identifies what must be controlled before an apparent local benefit can be attributed to trace placement. Innovation beyond the original method is not required for this objective.
+
+'''
+s=intro+s[s.index(r'\section{Methods}'):]
+b.write_text(s,encoding='utf-8')
+meta=P/'SUBMISSION_METADATA_20261006.md';t=meta.read_text(encoding='utf-8');t=t.split('Abstract (plain text):')[0]+'Abstract (plain text):\n\n'+abstract+'\n';meta.write_text(t,encoding='utf-8')
+(P/'revision_evidence_20261006/readability_changes.json').write_text(json.dumps({'scope':'Clarity-only restructuring; experimental records and primary scores unchanged','main_message':'Local tests did not establish a placement-specific advantage; output, context and scoring boundaries affect its evaluation','structure':'Practical question -> original intervention -> local gap -> matched tests -> observations and limits','abstract_whitespace_words':len(abstract.split()),'teacher_requirements':['Small-model reproduction and boundaries; breakthrough optional','One-sentence reader takeaway','R-only figures','Honest raw-response evidence','Review then revise'],'experience_post_use':'Funnel introduction, quantitative abstract, reproducible methods, focused results, bounded discussion, short conclusion; heuristics not universal journal rules'},indent=2),encoding='utf-8')
+print('Abstract and four-paragraph introduction rewritten around the explicit replication question and bounded finding.')

@@ -1,0 +1,105 @@
+{
+  "failed_auditor_sha256": "bc79907fb18fea5112447b38de15e623a9ea8a11debf35d375fda1b9163f300f",
+  "failed_check": "Auditor incorrectly assumed prompt_chars equals len(prompt)",
+  "rows": [
+    {
+      "row_index": 16,
+      "catalogue_prompt_chars": 2663,
+      "actual_source_characters": 2734,
+      "delta": 71
+    },
+    {
+      "row_index": 17,
+      "catalogue_prompt_chars": 2638,
+      "actual_source_characters": 2709,
+      "delta": 71
+    },
+    {
+      "row_index": 18,
+      "catalogue_prompt_chars": 2663,
+      "actual_source_characters": 2734,
+      "delta": 71
+    },
+    {
+      "row_index": 19,
+      "catalogue_prompt_chars": 2663,
+      "actual_source_characters": 2734,
+      "delta": 71
+    },
+    {
+      "row_index": 416,
+      "catalogue_prompt_chars": 2650,
+      "actual_source_characters": 2788,
+      "delta": 138
+    },
+    {
+      "row_index": 417,
+      "catalogue_prompt_chars": 2675,
+      "actual_source_characters": 2813,
+      "delta": 138
+    },
+    {
+      "row_index": 418,
+      "catalogue_prompt_chars": 2650,
+      "actual_source_characters": 2788,
+      "delta": 138
+    },
+    {
+      "row_index": 419,
+      "catalogue_prompt_chars": 2675,
+      "actual_source_characters": 2813,
+      "delta": 138
+    },
+    {
+      "row_index": 150,
+      "catalogue_prompt_chars": 14538,
+      "actual_source_characters": 14609,
+      "delta": 71
+    },
+    {
+      "row_index": 151,
+      "catalogue_prompt_chars": 14638,
+      "actual_source_characters": 14709,
+      "delta": 71
+    },
+    {
+      "row_index": 152,
+      "catalogue_prompt_chars": 14638,
+      "actual_source_characters": 14709,
+      "delta": 71
+    },
+    {
+      "row_index": 153,
+      "catalogue_prompt_chars": 14638,
+      "actual_source_characters": 14709,
+      "delta": 71
+    },
+    {
+      "row_index": 500,
+      "catalogue_prompt_chars": 14651,
+      "actual_source_characters": 14789,
+      "delta": 138
+    },
+    {
+      "row_index": 501,
+      "catalogue_prompt_chars": 14650,
+      "actual_source_characters": 14788,
+      "delta": 138
+    },
+    {
+      "row_index": 502,
+      "catalogue_prompt_chars": 14650,
+      "actual_source_characters": 14788,
+      "delta": 138
+    },
+    {
+      "row_index": 503,
+      "catalogue_prompt_chars": 14650,
+      "actual_source_characters": 14788,
+      "delta": 138
+    }
+  ],
+  "frozen_selection_uses": "Official catalogue prompt_chars field",
+  "explanation_of_catalogue_difference_verified": false,
+  "data_or_responses_changed": false
+}

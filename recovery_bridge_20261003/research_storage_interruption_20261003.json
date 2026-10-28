@@ -1,0 +1,28 @@
+{
+  "project": "D:\\project\\tangjie\\trace_as_state_repro",
+  "status": "Project directory became inaccessible during indexed-source experiment; cause not yet established.",
+  "completed_stages": {
+    "long_sampling_five_trace": {"saved_calls": 128, "known_tokens": 1434227, "stage_audit": "logs/official_graph_state_stage_audit_20261003.json"},
+    "identity_recode": {"saved_calls": 48, "known_tokens": 287979, "independent_audit_passed": true, "followup_gate": false},
+    "reasoning_mode": {"saved_calls": 64, "known_tokens": 338653, "independent_audit_passed": true, "off_gate": false, "route_gate": false}
+  },
+  "interrupted_stage": {
+    "name": "official_graph_indexed_source",
+    "planned_calls": 96,
+    "last_printed_saved_ordinal": 94,
+    "failed_ledger_path": "logs/official_graph_indexed_source/attempt_095.json",
+    "failure_location": "run_official_graph_reasoning_mode.py:29 saving returned-result ledger after API completion",
+    "attempt_095": "The client reached completion-persistence after its single HTTP attempt. A successful response versus HTTP/transport error cannot be established from the surviving traceback; raw result and token usage are unknown until any surviving ledger is checked.",
+    "attempt_096": "Not reached by this process.",
+    "native_session": 55933,
+    "native_exit_code": 1,
+    "audit_not_run": true,
+    "no_retries_or_score_replacements": true
+  },
+  "next_prepared_protocol": "protocol_official_graph_model_bridge_20261003.md",
+  "model_bridge_runner_write_failed": true,
+  "goal": "Continue autonomous research, verify current results and seek independently reproducible important progress; no confirmation requested for routine work.",
+  "main_manuscript_updated": false,
+  "historical_unknown_attempts_before_current_interruption": 1,
+  "restore_plan": "First recover access and read frozen/results/attempt ledgers. Do not overwrite interrupted files or rerun a frozen runner. Record absent/unknown primary cells; any recovery is a separate logged diagnostic. Complete independent scoring and figures only after inference has stopped. Then metadata-qualify local Qwen3 1.7B/8B model bridge."
+}

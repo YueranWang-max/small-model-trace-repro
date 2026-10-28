@@ -1,0 +1,6 @@
+{
+  "data\\qasper_official\\qasper-train-v0.3.json": "9458bfe76074a8fa8d1685af02bcc73537aa6d338ad20591dfaff1946bc88bf4",
+  "logs\\qasper_fingerprint\\split.json": "be6b0e12d007aac3c3beb3f2706ff19feee88391db3483aef1f302feea974e32",
+  "run_qasper_paired_relations.py": "32f1dde9c551fe598146a07c0bae3c8bb642f2aeb0f01059cb4adaae54e61319",
+  "protocol_qasper_paired_relations_20261002.md": "bd4ddcdbb970813a6d19b0479348b9d14b6c77410dc72fe10a48c3af55e61a37"
+}

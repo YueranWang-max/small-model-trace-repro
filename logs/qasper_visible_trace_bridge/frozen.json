@@ -1,0 +1,81 @@
+{
+  "dataset_sha256": "2ae7ee62a65b1c4225791c70de80c2aad4e8998cf1fd4f09a53103db4f21af93",
+  "selection": "Qasper dev ranks 135-140, all questions",
+  "model": "qwen3.5:4b",
+  "arms": [
+    "reread",
+    "trace_pre",
+    "trace_post",
+    "quote_pre"
+  ],
+  "papers": [
+    {
+      "paper_id": "2003.04642",
+      "title": "A Framework for Evaluation of Machine Reading Comprehension Gold Standards",
+      "source_sha256": "28dbeb25d95613a6e8e233a65e670741d987a5a199de7a5ee959342fd22d35a1",
+      "source_chars": 42457,
+      "question_ids": [
+        "5c88d601e8fca96bffebfa9ef22331ecf31c6d75",
+        "71bd5db79635d48a0730163a9f2e8ef19a86cd66",
+        "9ecde59ffab3c57ec54591c3c7826a9188b2b270",
+        "005cca3c8ab6c3a166e315547a2259020f318ffb"
+      ]
+    },
+    {
+      "paper_id": "2003.11645",
+      "title": "Word2Vec: Optimal Hyper-Parameters and Their Impact on NLP Downstream Tasks",
+      "source_sha256": "e34e4a80b967c51c6c0fa3c76bcace235f08c2cbb8ce297cd18ec59db400ab4d",
+      "source_chars": 18642,
+      "question_ids": [
+        "27275fe9f6a9004639f9ac33c3a5767fea388a98",
+        "ef3567ce7301b28e34377e7b62c4ec9b496f00bf",
+        "7595260c5747aede0b32b7414e13899869209506",
+        "c2d1387e08cf25cb6b1f482178cca58030e85b70"
+      ]
+    },
+    {
+      "paper_id": "1604.08504",
+      "title": "Detecting\"Smart\"Spammers On Social Network: A Topic Model Approach",
+      "source_sha256": "407b75ee794a91c1c289e02b10a2265f340e6889063aeb267c262c5b9a3b4e2e",
+      "source_chars": 19231,
+      "question_ids": [
+        "dac087e1328e65ca08f66d8b5307d6624bf3943f",
+        "a1645d0ba50e4c29f0feb806521093e7b1459081",
+        "3cd185b7adc835e1c4449eff81222f5fc15c8500"
+      ]
+    },
+    {
+      "paper_id": "1609.00559",
+      "title": "Improving Correlation with Human Judgments by Integrating Semantic Similarity with Second--Order Vectors",
+      "source_sha256": "3ad42d9d01b0bb61f32c15b39ba91292b3bbe6c05d25ed97f66307904b6fe229",
+      "source_chars": 37211,
+      "question_ids": [
+        "88e62ea7a4d1d2921624b8480b5c6b50cfa5ad42",
+        "4dcf67b5e7bd1422e7e70c657f6eacccd8de06d3",
+        "8b3d3953454c88bde88181897a7a2c0c8dd87e23"
+      ]
+    },
+    {
+      "paper_id": "1610.00956",
+      "title": "Embracing data abundance: BookTest Dataset for Reading Comprehension",
+      "source_sha256": "189eae6432abfec2f627d5dedb16c2480eaa890b2baea2858f017006a374a352",
+      "source_chars": 34245,
+      "question_ids": [
+        "09c86ef78e567033b725fc56b85c5d2602c1a7c3",
+        "d67c01d9b689c052045f3de1b0918bab18c3f174",
+        "e5bc73974c79d96eee2b688e578a9de1d0eb38fd"
+      ]
+    },
+    {
+      "paper_id": "1610.07809",
+      "title": "How Document Pre-processing affects Keyphrase Extraction Performance",
+      "source_sha256": "521fdc924af53ff63b264ce13d2728df283b497c72b99d04bb9a2f9bad306b63",
+      "source_chars": 15377,
+      "question_ids": [
+        "06eb9f2320451df83e27362c22eb02f4a426a018",
+        "e54257585cc75564341eb02bdc63ff8111992f82",
+        "2a3e36c220e7b47c1b652511a4fdd7238a74a68f"
+      ]
+    }
+  ]
+}

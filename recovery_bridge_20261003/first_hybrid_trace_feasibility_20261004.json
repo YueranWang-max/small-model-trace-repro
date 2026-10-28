@@ -1,0 +1,76 @@
+{
+  "status": "single_case_deployment_feasibility_observation_not_accuracy_analysis",
+  "row_index": 506,
+  "frozen_context_limit": 131072,
+  "frozen_output_cap": 32768,
+  "frozen_context_margin": 64,
+  "input_only_excess": 13605,
+  "reserve_excess": 46437,
+  "source_ordinals": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "bundle_sha256": "41ccbbbe9c0e0937e92ad5464df3f3512d3a5481ce15fcc0fcbba525fff3a72f",
+  "clips": [
+    {
+      "source_index": 1,
+      "full_characters": 40116,
+      "retained_characters_before_strip": 40116,
+      "clipped": false
+    },
+    {
+      "source_index": 2,
+      "full_characters": 34511,
+      "retained_characters_before_strip": 34511,
+      "clipped": false
+    },
+    {
+      "source_index": 3,
+      "full_characters": 37679,
+      "retained_characters_before_strip": 37679,
+      "clipped": false
+    },
+    {
+      "source_index": 4,
+      "full_characters": 36275,
+      "retained_characters_before_strip": 36275,
+      "clipped": false
+    },
+    {
+      "source_index": 5,
+      "full_characters": 41308,
+      "retained_characters_before_strip": 41308,
+      "clipped": false
+    }
+  ],
+  "trace_pair_fits": false,
+  "records": [
+    {
+      "ordinal": 10,
+      "arm": "prefix",
+      "completion": "budget_declined",
+      "transmission": "not_sent",
+      "reason": "joint_trace_pair_or_individual_input_plus_output_reserve_exceeds_frozen_context",
+      "expected_prompt_tokens": 144677,
+      "input_plus_output_reserve": 177509,
+      "request_sha256": "ebf6c618e98688d132d77587aca1864d73ba54b5ad6d87ae7a33614cf5edc84a",
+      "record_sha256": "78bebc9cd003e506fee086f2ee4e41d26cec54f97abdb9d354ffdda6cfa639b8"
+    },
+    {
+      "ordinal": 11,
+      "arm": "append",
+      "completion": "budget_declined",
+      "transmission": "not_sent",
+      "reason": "joint_trace_pair_or_individual_input_plus_output_reserve_exceeds_frozen_context",
+      "expected_prompt_tokens": 144677,
+      "input_plus_output_reserve": 177509,
+      "request_sha256": "3976f6645f60d14ad5871e621e5d4c404aee390e8d948aa3cb4b0fcd8a2c6b8f",
+      "record_sha256": "c5af92fc8514c2cf99e951cbbe69b8f558883ebb7b5c1438ce70aac65ee284f6"
+    }
+  ],
+  "answers_inspected": false,
+  "full_study_terminal": false
+}

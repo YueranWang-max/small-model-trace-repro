@@ -1,0 +1,194 @@
+{
+  "passed": true,
+  "numeric_and_scope_checks": [
+    {
+      "claim": "original table",
+      "literal": "Original direct & 0.3176 & 0.0417 & 6,640.67 & 43 & 5"
+    },
+    {
+      "claim": "original_long table",
+      "literal": "Original direct, 16K output & 0.3668 & 0.0833 & 7,149.88 & 45 & 3"
+    },
+    {
+      "claim": "compact table",
+      "literal": "Compact direct & 0.6542 & 0.2292 & 3,823.25 & 42 & 6"
+    },
+    {
+      "claim": "prefix table",
+      "literal": "Compact trace prefix & 0.7703 & 0.3750 & 5,344.46 & 47 & 1"
+    },
+    {
+      "claim": "append table",
+      "literal": "Compact trace append & 0.7130 & 0.3333 & 5,345.67 & 46 & 2"
+    },
+    {
+      "claim": "primary scores",
+      "literal": "0.6542"
+    },
+    {
+      "claim": "primary scores",
+      "literal": "0.7703"
+    },
+    {
+      "claim": "primary change/interval",
+      "literal": "0.1161"
+    },
+    {
+      "claim": "primary change/interval",
+      "literal": "0.0437"
+    },
+    {
+      "claim": "primary change/interval",
+      "literal": "0.1914"
+    },
+    {
+      "claim": "primary two-sided p",
+      "literal": "p=0.00624"
+    },
+    {
+      "claim": "primary token increase",
+      "literal": "39.8\\%"
+    },
+    {
+      "claim": "primary scores",
+      "literal": "0.6542"
+    },
+    {
+      "claim": "primary scores",
+      "literal": "0.7703"
+    },
+    {
+      "claim": "primary change/interval",
+      "literal": "0.1161"
+    },
+    {
+      "claim": "primary change/interval",
+      "literal": "0.0437"
+    },
+    {
+      "claim": "primary change/interval",
+      "literal": "0.1914"
+    },
+    {
+      "claim": "primary two-sided p",
+      "literal": "p=0.00624"
+    },
+    {
+      "claim": "primary token increase",
+      "literal": "39.8\\%"
+    },
+    {
+      "claim": "prefix-compact difference",
+      "literal": "0.1161"
+    },
+    {
+      "claim": "prefix-compact interval",
+      "literal": "[0.0437,0.1914]"
+    },
+    {
+      "claim": "prefix-compact token ratio",
+      "literal": "1.398"
+    },
+    {
+      "claim": "prefix-compact token interval",
+      "literal": "[1.170,1.667]"
+    },
+    {
+      "claim": "prefix-append difference",
+      "literal": "0.0573"
+    },
+    {
+      "claim": "prefix-append interval",
+      "literal": "[-0.0321,0.1705]"
+    },
+    {
+      "claim": "prefix-original difference",
+      "literal": "0.4527"
+    },
+    {
+      "claim": "prefix-original interval",
+      "literal": "[0.3320,0.5656]"
+    },
+    {
+      "claim": "prefix-original token ratio",
+      "literal": "0.805"
+    },
+    {
+      "claim": "prefix-original token interval",
+      "literal": "[0.724,0.896]"
+    },
+    {
+      "claim": "prefix-original_long difference",
+      "literal": "0.4034"
+    },
+    {
+      "claim": "prefix-original_long interval",
+      "literal": "[0.2931,0.5087]"
+    },
+    {
+      "claim": "prefix-original_long token ratio",
+      "literal": "0.747"
+    },
+    {
+      "claim": "prefix-original_long token interval",
+      "literal": "[0.635,0.877]"
+    },
+    {
+      "claim": "append-compact difference",
+      "literal": "0.0588"
+    },
+    {
+      "claim": "append-compact interval",
+      "literal": "[-0.0600,0.1695]"
+    },
+    {
+      "claim": "compact-original difference",
+      "literal": "0.3366"
+    },
+    {
+      "claim": "compact-original interval",
+      "literal": "[0.1932,0.4759]"
+    },
+    {
+      "claim": "compact-original token ratio",
+      "literal": "0.576"
+    },
+    {
+      "claim": "compact-original token interval",
+      "literal": "[0.466,0.711]"
+    },
+    {
+      "claim": "wall interval",
+      "literal": "[0.630,1.119]"
+    },
+    {
+      "claim": "negative capacity",
+      "literal": "no nonempty gold graph was answered exactly in both compact-direct repeats"
+    },
+    {
+      "claim": "exploratory difference",
+      "literal": "0.1534"
+    },
+    {
+      "claim": "exploratory interval",
+      "literal": "[0.0394,0.2769]"
+    },
+    {
+      "claim": "multiplicity",
+      "literal": "secondary and unadjusted for multiplicity"
+    },
+    {
+      "claim": "no cost isolation",
+      "literal": "combined improvement cannot be assigned entirely to traces"
+    }
+  ],
+  "historical_result_block_byte_preserved": true,
+  "historical_figures_preserved": 9,
+  "historical_tables_preserved": 7,
+  "display_formulae_and_bibliography_preserved": true,
+  "evidence_sha256": {
+    "evidence_user_benefit_20261009/summary.json": "ac750505ee4576e1f50e4a6ea6b7eaf83408010f8effc06e3abab6e6739fb4b9",
+    "evidence_trace_benefit_confirmation_20261010/summary.json": "c887a9a8c82b91836e54eff07d7b1516eb399de4cfe8706f49a88a283464c25a"
+  },
+  "scope": "Exact claim strings and archived object preservation, not external execution attestation or comprehensive semantic equivalence."
+}

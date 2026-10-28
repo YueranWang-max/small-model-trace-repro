@@ -1,0 +1,3 @@
+# Paired-model R figure verification
+
+Both source studies independently audited complete (240 calls each). Ten input files copied without modification. R-only SVG/PDF/600-dpi PNG exported and promoted to the manuscript figure path. Final-width text 5.58–6.98 pt, Arial TrueType embedded, editable SVG text, no outside-page text boxes; R PNG visually inspected. Standalone redraw in a fresh R process using copied inputs produced a byte-identical SVG on the same host. This checks data/render portability, not external experimental replication. Zero-width 4B placement interval reflects the observed score ceiling, not population equivalence.

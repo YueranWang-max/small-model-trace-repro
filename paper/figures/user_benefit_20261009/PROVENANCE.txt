@@ -1,0 +1,4 @@
+R source: paper/plot_user_benefit_20261009.R
+Input: independent audit plot_arms.csv
+Bars are descriptive graph means, not population-equivalence evidence.
+Capacity packages differ in context and output settings. Prefix includes complete one-trace preparation.

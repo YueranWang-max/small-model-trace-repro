@@ -1,0 +1,14 @@
+{
+  "all_checks_passed": true,
+  "inference_calls": 0,
+  "fixture_render_checks": 448,
+  "complete_original_reconstruction": true,
+  "randomized_schedule_reconstructed": true,
+  "prepared_sha256": "255dbfc563f37cb4c0d2ff6c39c44198120c219fbac3d94080cbcd807abe7fc5",
+  "runner_sha256": "7f81a12f0073a5f28cf11572581e48c6b9f3647c377f8ad59eeb0721a71a9c2f",
+  "preflight_source_sha256": "540f2ecc80f78e8dcb8eb75321ffba52bfdf0ff7131442ba7b9261aea510d47a",
+  "limitations": [
+    "Actual generated states and input counts require postresponse independent audit.",
+    "Runtime calibration still pending; no performance evidence."
+  ]
+}

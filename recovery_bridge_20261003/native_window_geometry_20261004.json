@@ -1,0 +1,50 @@
+{
+  "scope": "Architecture-based position/cache arithmetic, not backend or quality qualification.",
+  "config_path": "D:\\project\\tangjie\\trace_as_state_repro\\recovery_bridge_20261003\\hybrid_candidate_qualification_20261004\\config.json",
+  "config_sha256": "ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670",
+  "full_attention_layers": 8,
+  "kv_heads": 4,
+  "head_dim": 256,
+  "f16_kv_bytes_per_token_geometry": 32768,
+  "windows": [
+    {
+      "context": 65536,
+      "full_attention_f16_kv_bytes_geometry": 2147483648,
+      "f16_gib": 2.0,
+      "q8_approx_gib_from_documented_half_ratio": 1.0
+    },
+    {
+      "context": 131072,
+      "full_attention_f16_kv_bytes_geometry": 4294967296,
+      "f16_gib": 4.0,
+      "q8_approx_gib_from_documented_half_ratio": 2.0
+    },
+    {
+      "context": 262144,
+      "full_attention_f16_kv_bytes_geometry": 8589934592,
+      "f16_gib": 8.0,
+      "q8_approx_gib_from_documented_half_ratio": 4.0
+    }
+  ],
+  "archived_bundle_position_geometry": {
+    "origin": "Previously audited first-graph row506 input; diagnostic only, not a new independent case.",
+    "saved_trace_reader_input": 144677,
+    "margin": 64,
+    "configured_old_reserve": 32768,
+    "old_required_positions": 177509,
+    "native_window_margin_with_old_reserve": 84635,
+    "hypothetical_larger_reserve": 81920,
+    "required_positions_with_larger_reserve": 226661,
+    "native_window_margin_with_larger_reserve": 35483
+  },
+  "inference_calls": 0,
+  "runtime_modified": false,
+  "source_sha256": "b953dfd841cfee87fca71ad53a27e6c5706f6f07a61611082e9a64d60bfbf46e",
+  "limits": [
+    "Full-attention KV geometry excludes recurrent state, weights, temporary workspaces, saved prompt caches, padding and allocator overhead.",
+    "Documented q8 approximate half-memory ratio omits quantization metadata/padding and does not prove actual backend allocation.",
+    "Nominal position fit is not VRAM fit, full GPU residency, successful long-input inference or preserved quality.",
+    "Increasing direct output allowance changes the cost bound; the previous fixed-cap single-prediction theorem is not universal.",
+    "Current frozen trial context, cache and output allowances are unchanged."
+  ]
+}

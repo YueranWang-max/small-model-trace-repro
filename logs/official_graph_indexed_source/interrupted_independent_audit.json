@@ -1,0 +1,323 @@
+{
+  "partial_audit_passed": true,
+  "primary_complete": false,
+  "saved_calls": 94,
+  "planned_calls": 96,
+  "qualified_saved_calls": 94,
+  "attempt_095_outcome_and_usage": "unknown",
+  "attempt_096": "not_reached",
+  "missing_cells": [
+    [
+      462,
+      "original_off",
+      1
+    ],
+    [
+      462,
+      "compact_on",
+      1
+    ]
+  ],
+  "summary": [
+    {
+      "arm": "original_on",
+      "planned_responses": 16,
+      "known_responses": 16,
+      "missing_cells": 0,
+      "normal_parse": 14,
+      "length_stops": 2,
+      "unknown_node_responses": 0,
+      "known_token_lower_bound": 107475,
+      "f1_available_mean": 0.4484126984126984,
+      "f1_missingness_bounds": [
+        0.4484126984126984,
+        0.4484126984126984
+      ],
+      "em_available_mean": 0.125,
+      "em_missingness_bounds": [
+        0.125,
+        0.125
+      ]
+    },
+    {
+      "arm": "original_off",
+      "planned_responses": 16,
+      "known_responses": 15,
+      "missing_cells": 1,
+      "normal_parse": 15,
+      "length_stops": 0,
+      "unknown_node_responses": 0,
+      "known_token_lower_bound": 53844,
+      "f1_available_mean": 0.3028571428571428,
+      "f1_missingness_bounds": [
+        0.2839285714285714,
+        0.3464285714285714
+      ],
+      "em_available_mean": 0.0,
+      "em_missingness_bounds": [
+        0.0,
+        0.0625
+      ]
+    },
+    {
+      "arm": "compact_on",
+      "planned_responses": 16,
+      "known_responses": 15,
+      "missing_cells": 1,
+      "normal_parse": 15,
+      "length_stops": 0,
+      "unknown_node_responses": 0,
+      "known_token_lower_bound": 51247,
+      "f1_available_mean": 0.5977777777777777,
+      "f1_missingness_bounds": [
+        0.5604166666666667,
+        0.6229166666666667
+      ],
+      "em_available_mean": 0.4666666666666667,
+      "em_missingness_bounds": [
+        0.4375,
+        0.5
+      ]
+    },
+    {
+      "arm": "compact_off",
+      "planned_responses": 16,
+      "known_responses": 16,
+      "missing_cells": 0,
+      "normal_parse": 14,
+      "length_stops": 2,
+      "unknown_node_responses": 0,
+      "known_token_lower_bound": 36047,
+      "f1_available_mean": 0.25795454545454544,
+      "f1_missingness_bounds": [
+        0.25795454545454544,
+        0.25795454545454544
+      ],
+      "em_available_mean": 0.0,
+      "em_missingness_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "arm": "indexed_on",
+      "planned_responses": 16,
+      "known_responses": 16,
+      "missing_cells": 0,
+      "normal_parse": 16,
+      "length_stops": 0,
+      "unknown_node_responses": 0,
+      "known_token_lower_bound": 52847,
+      "f1_available_mean": 0.40773809523809523,
+      "f1_missingness_bounds": [
+        0.40773809523809523,
+        0.40773809523809523
+      ],
+      "em_available_mean": 0.3125,
+      "em_missingness_bounds": [
+        0.3125,
+        0.3125
+      ]
+    },
+    {
+      "arm": "indexed_off",
+      "planned_responses": 16,
+      "known_responses": 16,
+      "missing_cells": 0,
+      "normal_parse": 16,
+      "length_stops": 0,
+      "unknown_node_responses": 2,
+      "known_token_lower_bound": 23032,
+      "f1_available_mean": 0.44497180451127816,
+      "f1_missingness_bounds": [
+        0.44497180451127816,
+        0.44497180451127816
+      ],
+      "em_available_mean": 0.125,
+      "em_missingness_bounds": [
+        0.125,
+        0.125
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "row_index": 14,
+      "type": "parents",
+      "length_bin": [
+        2000,
+        3500
+      ],
+      "gold_size": 4
+    },
+    {
+      "row_index": 414,
+      "type": "bfs",
+      "length_bin": [
+        2000,
+        3500
+      ],
+      "gold_size": 3
+    },
+    {
+      "row_index": 111,
+      "type": "parents",
+      "length_bin": [
+        7000,
+        9000
+      ],
+      "gold_size": 1
+    },
+    {
+      "row_index": 461,
+      "type": "bfs",
+      "length_bin": [
+        7000,
+        9000
+      ],
+      "gold_size": 1
+    },
+    {
+      "row_index": 15,
+      "type": "parents",
+      "length_bin": [
+        2000,
+        3500
+      ],
+      "gold_size": 5
+    },
+    {
+      "row_index": 415,
+      "type": "bfs",
+      "length_bin": [
+        2000,
+        3500
+      ],
+      "gold_size": 3
+    },
+    {
+      "row_index": 112,
+      "type": "parents",
+      "length_bin": [
+        7000,
+        9000
+      ],
+      "gold_size": 2
+    },
+    {
+      "row_index": 462,
+      "type": "bfs",
+      "length_bin": [
+        7000,
+        9000
+      ],
+      "gold_size": 1
+    }
+  ],
+  "known_token_lower_bound": 324492,
+  "robust_quality_gate_failures": [
+    "Cannot meet F1 +.10 over original_on even under favorable missing outcomes"
+  ],
+  "followup_gate": false,
+  "main_manuscript_updated": false,
+  "selection_reconstruction_pending": true,
+  "assets": {
+    "logs\\official_graph_indexed_source\\frozen.json": "ba5527d26e80a4ee140a561e714ac004d07ed3ef6b898c83dfb263fcc5365fe1",
+    "logs\\official_graph_indexed_source\\results.json": "4b95c7ac7241c1ff4a74720729bfd1206267480ff065ebec9f083fbb373770b0",
+    "logs\\official_graph_indexed_source\\attempt_001.json": "36df400e82f4c17007c46bff7387853c3b8d12204dfb9827d5fab1274088f20a",
+    "logs\\official_graph_indexed_source\\attempt_002.json": "ce77068180e1adbec06708bbe220fd6e7c9d8612db57db0996314f449199cade",
+    "logs\\official_graph_indexed_source\\attempt_003.json": "bf07eadb2ddfd725621207d3874426673b4c8af971b158af19408d6ba908420b",
+    "logs\\official_graph_indexed_source\\attempt_004.json": "8eef55cf9298ddff6a24935a91d03e10efe86f40992472475b22f80c1cdda708",
+    "logs\\official_graph_indexed_source\\attempt_005.json": "4400febe975c19a2369c24d90771c11e3ef440277d8b4ac1f77a9f1d9beaf0aa",
+    "logs\\official_graph_indexed_source\\attempt_006.json": "f39943e3d074c39b31d455eaddcd3e5d2aedfe5b27f477c39c80fd2801ee138a",
+    "logs\\official_graph_indexed_source\\attempt_007.json": "b6f0b821eed5d809baaabcdabe8bac08c71b6318e7e70063b540a072e4d08a2a",
+    "logs\\official_graph_indexed_source\\attempt_008.json": "927e7419051fc7ad30c29cd6291fd6168976a397f882e80f9145704f783fcfea",
+    "logs\\official_graph_indexed_source\\attempt_009.json": "1d72fcada6047be08c85468c8cf8231517c82d9429c1ba108cd54d90dea36952",
+    "logs\\official_graph_indexed_source\\attempt_010.json": "fca1e4f7300593f7acd09c14dff85817e79a9a927bc892e7971268761ae18609",
+    "logs\\official_graph_indexed_source\\attempt_011.json": "3c7a72ea840a9dfecf2cf6d9ed1ce812300dcfc84dc62560d10c85185759a22f",
+    "logs\\official_graph_indexed_source\\attempt_012.json": "e0d1676bd37bff04a39cb970dca6d9c1eaf448726f28dc854315fc9d9eb05411",
+    "logs\\official_graph_indexed_source\\attempt_013.json": "b3af9c543529cb6412c6db27735aace8b8e6f8d46545dc1c19bc219fbfc61215",
+    "logs\\official_graph_indexed_source\\attempt_014.json": "6662c0e0181480a9101e6cdb8ef957bbfa3c24b5c9342a900cf252672a88764c",
+    "logs\\official_graph_indexed_source\\attempt_015.json": "ef72066aefefc243c2e971d5e2f9502eca357685cf78055a89a477b6acf65bdf",
+    "logs\\official_graph_indexed_source\\attempt_016.json": "7db3dc4bca0b8164704ab3e9bb9e48e0cb145099ced181c6f10580f2b91f2b0c",
+    "logs\\official_graph_indexed_source\\attempt_017.json": "e4d9f259e41026f060d9f6dd8de40aedffee94ea7c304c632d29303dcb91f26f",
+    "logs\\official_graph_indexed_source\\attempt_018.json": "bcc15d36a1b014b2938b6681d3f2055cc8333a6a8e3d4b75e7ee3564c84dce4f",
+    "logs\\official_graph_indexed_source\\attempt_019.json": "0bd499eafd0cd445d4d77137f11de0b54d7e9acba678d91aeacdf272472168dd",
+    "logs\\official_graph_indexed_source\\attempt_020.json": "dd5d78b7c3699b0f9e2b6357a8c79819785a76cc83467183c434e6bf82d013db",
+    "logs\\official_graph_indexed_source\\attempt_021.json": "f0f432cb6ca5f4b1a2bf5f2267877889fb7951fec101099b6652cf79df324579",
+    "logs\\official_graph_indexed_source\\attempt_022.json": "85e1296f73c95feb4b430fecd312ddd7c8381d3dfec911cc5cdba461cf754f17",
+    "logs\\official_graph_indexed_source\\attempt_023.json": "93549c48357d724722d6519e4522d9548e801e6ea8b2d082265abae2821473de",
+    "logs\\official_graph_indexed_source\\attempt_024.json": "d1196c97a0c9df56df42b007aa993729dd10a0650145b11987abdc0a19c29fac",
+    "logs\\official_graph_indexed_source\\attempt_025.json": "766bf2973cb0f1f214caea6444633d2baf9f0d2512aa696bfaf973eb6f4cb762",
+    "logs\\official_graph_indexed_source\\attempt_026.json": "486b89847599a5c97a395b5edd29ac09e2fa3512e0890838c00f450765325469",
+    "logs\\official_graph_indexed_source\\attempt_027.json": "dc35ccdb51a69235545fb4cb73f319d6026011ca7ecf07a552550820b1febe4c",
+    "logs\\official_graph_indexed_source\\attempt_028.json": "dd6f1ef5cbaeca9546253a80933d949f85e95239e13d9015b040d2f3ab2d8d7f",
+    "logs\\official_graph_indexed_source\\attempt_029.json": "0e24ca7e95989e153387ba58ec81a03728cf68adad939498daa370f64e3e7972",
+    "logs\\official_graph_indexed_source\\attempt_030.json": "4c7d50c5b834a61dcf34e75856118a8afd9c458e0f0dc6a38ccad02a96a8c7c8",
+    "logs\\official_graph_indexed_source\\attempt_031.json": "e3f9538f367b09eabee65d104553b7a9767c2d9aa0368d96d764e644b6ba16d4",
+    "logs\\official_graph_indexed_source\\attempt_032.json": "dd030d4e361e8153beccc8bcc2da2665fb010be9f2f6d2dfe169c16413259754",
+    "logs\\official_graph_indexed_source\\attempt_033.json": "7b0976b410d3d6947bb9b0aea7c1bab36f348689130e7ba97fedcd89848a85da",
+    "logs\\official_graph_indexed_source\\attempt_034.json": "693ad0cec973dbf85194a8398dad0ed159cc22b5aefd03ecf48617f11f7c034d",
+    "logs\\official_graph_indexed_source\\attempt_035.json": "d261189dc13077cb2db8a3cfe66947e3b9da15a97f4acf90773630f98207a9d5",
+    "logs\\official_graph_indexed_source\\attempt_036.json": "addd1d398d5e993851424d4216551a3d70d367587509c82f823046fbebdd06ed",
+    "logs\\official_graph_indexed_source\\attempt_037.json": "51b65413e6bb81ad0ba59fd03816967be83c454ede1a2d5fdae17b83ea66d4ff",
+    "logs\\official_graph_indexed_source\\attempt_038.json": "124883f624615a2866a10c675d98852680cfedf8931d8b18f67a8918455f67c6",
+    "logs\\official_graph_indexed_source\\attempt_039.json": "2b8a56865f6fa700caf6a6e2f66abcc36085a4a084f3b73a3db1475b26aafd2e",
+    "logs\\official_graph_indexed_source\\attempt_040.json": "f327fdd4e0741090bc6cd128c3385983346c4336467910aa9d5b845239da9e8c",
+    "logs\\official_graph_indexed_source\\attempt_041.json": "ddfaea27b603924f429b8fdd73467538ab01bb0bc6d7451ef9363834836fc475",
+    "logs\\official_graph_indexed_source\\attempt_042.json": "bb918fc86e5985700402355174fa28b545eabe29989f6d80c93a4a3ec9172b17",
+    "logs\\official_graph_indexed_source\\attempt_043.json": "2e6fe06802da208fd42c50dd410b4996bc40d78b7a8e5ad8ded59249eeacd64a",
+    "logs\\official_graph_indexed_source\\attempt_044.json": "a3588ff0e702b42b29ca3f964a62355ad5aea8cff66c7f414fa5c51c048109c3",
+    "logs\\official_graph_indexed_source\\attempt_045.json": "38d50772ba0c9240e31df118d91f5638f22ea236391c01d702c8b19c929edafb",
+    "logs\\official_graph_indexed_source\\attempt_046.json": "c09dc0fc14cc1656009d84ac181d1adcc52794dede13049b3b7268f8c9ace087",
+    "logs\\official_graph_indexed_source\\attempt_047.json": "8ee4e28c3ef17eed257c6d1d86e617ed1a6a9baab24771b819ff8b5d9f53f371",
+    "logs\\official_graph_indexed_source\\attempt_048.json": "bd92e7895eb844fc0b363bca5a08f575555922c97b45df349534a7615fa709b6",
+    "logs\\official_graph_indexed_source\\attempt_049.json": "a3e35c33041ab6c6554a1551a194166f133acad3693f50f121a353841a646bb8",
+    "logs\\official_graph_indexed_source\\attempt_050.json": "baa1b90e7189f888741457f97850349018a46f6c474308ce70aacf98ddfdf7d5",
+    "logs\\official_graph_indexed_source\\attempt_051.json": "1129617b1b9d15093990ed1a5746eddbc56e09167f6e3c072a9b922fe6fc1353",
+    "logs\\official_graph_indexed_source\\attempt_052.json": "ec417eab0dfd47d6db1b7249fb8bb49b70be266398dea695bcc2166c251f5bfe",
+    "logs\\official_graph_indexed_source\\attempt_053.json": "54b2b038ab4782304809a48f7dae26e5a5ed4117f5f61e99b30cfcf8f567d27e",
+    "logs\\official_graph_indexed_source\\attempt_054.json": "c3f13b692aae36d4fdeb94c1b7eae31f6234c513e5220b50175f226b88928c7a",
+    "logs\\official_graph_indexed_source\\attempt_055.json": "0871d439df8132c839047378e83964140f65a859467aebe9fe1c21f8b3630f01",
+    "logs\\official_graph_indexed_source\\attempt_056.json": "71cf953bc153365268577aa844acbccbf60cdd1c8090267c6d95bb13e381a298",
+    "logs\\official_graph_indexed_source\\attempt_057.json": "ae582c509dd9f47053ec32634ea61789097cff975455066998c60a3f8e03df2c",
+    "logs\\official_graph_indexed_source\\attempt_058.json": "81d40a5022adcab30e53440974b7b54532816001dcece3e3cea67558c25c58bf",
+    "logs\\official_graph_indexed_source\\attempt_059.json": "db8b5c8f5b01a1c214a44b2f494a8f18d03672f92b2f012e164e6aa44b428de3",
+    "logs\\official_graph_indexed_source\\attempt_060.json": "fb07f0149747c9091a11bb76962e162316e18fa11e9b146aedce3471357ab107",
+    "logs\\official_graph_indexed_source\\attempt_061.json": "84dbeff76c6e698416e5e6b6cb844795342ca3ab9dfa375c2985be11a5e390b1",
+    "logs\\official_graph_indexed_source\\attempt_062.json": "f710811b05a108f9923c5549b1edf04018ba6a5e8684b3fbb2ef4568b4fd77ae",
+    "logs\\official_graph_indexed_source\\attempt_063.json": "6742137c87b39a6fc96a67efed364f7edcef1f5b0672f9838af5f239a954b954",
+    "logs\\official_graph_indexed_source\\attempt_064.json": "0bfa125efcb98d1b9a1fd3beea0cd8c64006f6752a06094f39cd3a6c8d88d92f",
+    "logs\\official_graph_indexed_source\\attempt_065.json": "d3651e796c971d809903abc99de2ca8992320761134a8c5e92ebc1abbc24e50c",
+    "logs\\official_graph_indexed_source\\attempt_066.json": "328decb1910af182b652ab945ee1f59de06f433961a0d93d4f2b99abca9a695c",
+    "logs\\official_graph_indexed_source\\attempt_067.json": "1f9e304268830556461411757200aad44a6f06e8c4539d54c492b6b5aadb0b90",
+    "logs\\official_graph_indexed_source\\attempt_068.json": "87c87872631e15955a41d38b1485456c4c1abe5051c932280e9d264af24b0f34",
+    "logs\\official_graph_indexed_source\\attempt_069.json": "b44780a2eb9beef9a9e6c20c8ffd493348b92c53fe47ab439f31d9d15322a849",
+    "logs\\official_graph_indexed_source\\attempt_070.json": "fe62b9da12e86d285bdfc72134015288404ed927cc7605922bc9fd8a86c0f03a",
+    "logs\\official_graph_indexed_source\\attempt_071.json": "90bd61151abffa6c5402b7a0ffc3d1840287050d29dd6428b46c376f78e70713",
+    "logs\\official_graph_indexed_source\\attempt_072.json": "d3a764df1fc4a3512303b842066b6a2b41f357491af5851298e3bde11012b4d8",
+    "logs\\official_graph_indexed_source\\attempt_073.json": "efe4b04fad48f925e666c4bf9b2344ac76b40219935cd19abc1dc0d8ee25cd36",
+    "logs\\official_graph_indexed_source\\attempt_074.json": "48e943f5831f8292416eb2386696f803982a311535432bb9550b956ab5bbf040",
+    "logs\\official_graph_indexed_source\\attempt_075.json": "1e4c78f437775a058061d4319b5e582b5f9898b0013d949bb35516db9ff5b778",
+    "logs\\official_graph_indexed_source\\attempt_076.json": "31c25639cc7b3d0dbeab775c9117f86d1e8adf28a1d530c44e4e672bae4602c0",
+    "logs\\official_graph_indexed_source\\attempt_077.json": "b04eb10daaccd0caaaf3f3fd55a83628bce579f5d6d71953d2548c7a81b41335",
+    "logs\\official_graph_indexed_source\\attempt_078.json": "984e24935c4270f301377b8dceaf7cfde94a2ba3d29fb92972713393e7f1c671",
+    "logs\\official_graph_indexed_source\\attempt_079.json": "e72a7098a643e2911166998c5e8392d90263bd8ee131e248e0ec6b77959e0a57",
+    "logs\\official_graph_indexed_source\\attempt_080.json": "d47fdce631439412797ce061989a92d5eb22ea1fcad6660c81fc783386122d77",
+    "logs\\official_graph_indexed_source\\attempt_081.json": "4881b2d45f1dd644845b19f54187507f363a2afddae8e120c5f15da146c4622e",
+    "logs\\official_graph_indexed_source\\attempt_082.json": "99d0ec08ff1096b121f6d4cc9d15020066514323944a051bea564ee0e84be71f",
+    "logs\\official_graph_indexed_source\\attempt_083.json": "0d9aa31de05312254062f68072227f4e0922906e40830d6f28e6d71b33ea4749",
+    "logs\\official_graph_indexed_source\\attempt_084.json": "9f31901200589bacb405e20b94a084328201e9ea8f15978c55181c23bed5e4b5",
+    "logs\\official_graph_indexed_source\\attempt_085.json": "da741a2ae031db7ccc38907aabbc95484eb42e135b2245aa23337577e908ad88",
+    "logs\\official_graph_indexed_source\\attempt_086.json": "ca9372c3e2b29ddb578c0c1b7644ca4c4c4d71afa2d56be96a65a152a888b6f3",
+    "logs\\official_graph_indexed_source\\attempt_087.json": "5c53f53eb484c8247352fed77fd883f7528623e049dc4cadc61cc93e6e08af8b",
+    "logs\\official_graph_indexed_source\\attempt_088.json": "d5292636901be8b50f78412cf60a97243b5285cb17cc7cc9273080a8c9784c24",
+    "logs\\official_graph_indexed_source\\attempt_089.json": "a8cb12e8f4211b9e82285afcb7fa54da28b4f03231f4d59ce8c11c095c97d9f7",
+    "logs\\official_graph_indexed_source\\attempt_090.json": "5a0bc0209ff18c58c4415b710fee25d4776f4568b0f92b12b930339b4bd19032",
+    "logs\\official_graph_indexed_source\\attempt_091.json": "fe85f8116bac0803562f47195b327b1e75fa757c63ac472b9fb3215c2a8d0bb6",
+    "logs\\official_graph_indexed_source\\attempt_092.json": "c872ddc03c2b93f806c8fc6431e3f12d3a1101eb61eb0d877f60d88075733b15",
+    "logs\\official_graph_indexed_source\\attempt_093.json": "4a4088a476f3ebf1ce4c48d539c37f6d21dddb6cae2c5bf3a0e56c0cc1a6e1c3",
+    "logs\\official_graph_indexed_source\\attempt_094.json": "c77c3306aadb5bd01654f1e645f6cff70acdb3c08c709c2a7192c45dfb006ff5",
+    "logs\\official_graph_indexed_source\\attempt_095.json": "4eceeaebd5dd53bc3409c24b17abe717d6eaa30155e0b75ccad707a68a0d2792"
+  }
+}

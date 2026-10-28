@@ -1,0 +1,50 @@
+{
+  "checks": {
+    "all_official_token_ids_match_local": true,
+    "vocabulary_count_matches": false,
+    "all_merges_match": true
+  },
+  "all_tokenizer_checks_pass": false,
+  "tokenizer_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+  "official_token_count": 248070,
+  "runtime_version": "0.35.1",
+  "model_inventory_entries": [
+    {
+      "name": "qwen3.5:4b",
+      "model": "qwen3.5:4b",
+      "modified_at": "2026-06-12T00:18:43.5076114+08:00",
+      "size": 3389983735,
+      "digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "4.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 2560
+      },
+      "capabilities": [
+        "completion",
+        "vision",
+        "tools",
+        "thinking"
+      ]
+    }
+  ],
+  "runtime_renderer_source": {
+    "url": "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/model/renderers/qwen35.go",
+    "sha256": "69bca99b53a3db8d599bb9ec8eadf65ce9a72868566a89bfac44d31fe3b565e0",
+    "retrieved": true
+  },
+  "inference_calls": 0,
+  "actual_rendered_prompt_count_verified": false,
+  "limitations": [
+    "Vocabulary/merges equality is not a verification of active chat rendering.",
+    "Runtime source tag is an implementation reference, not a binary reproducible-build attestation.",
+    "Model input/output qualification is still required before scored experiments."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "created_unix": 1791570356.4248278,
+  "stage": "results_integrated_locally_compiled_reviewed",
+  "sha256": {
+    "protocol_trace_benefit_confirmation_20261010.md": "ad9484a55d3942e338baa464941fe96d4cd9a0b696e65e5c005976eda15cf60a",
+    "run_trace_benefit_confirmation_20261010.py": "ac8d765c8ae8581b12dde97d570b018bd05688f5f418c05ef27d6db6ced54e26",
+    "paper/audit_trace_benefit_confirmation_20261010.py": "8c73ae1f41dd593cb598429722650bdfbf675d4ce2bbe9833f6f407f810463c0",
+    "paper/write_trace_benefit_report_20261010.py": "e1d0791f4afb3c44b450c4dd02e2b4911c6f4eb9fac0b8d6f0a59f0bcfd4b5c8",
+    "paper/plot_trace_benefit_confirmation_20261010.R": "84fd745249d5ee621a047e8ab60e92c93276ec1f8c1854a42953e399db12aa7d",
+    "logs/trace_benefit_confirmation_20261010/frozen.json": "40bd6554a13faabef9dacf53a8088c3641beef4b81ef93ca06db8bbb3c95bce2",
+    "paper/evidence_trace_benefit_confirmation_20261010/summary.json": "c887a9a8c82b91836e54eff07d7b1516eb399de4cfe8706f49a88a283464c25a",
+    "paper/TRACE_BENEFIT_CONFIRMATION_RESULTS_20261010.md": "82b1154ef5e3140add623ae2443f071fa276fb2416da2dbd3748087c874b108c",
+    "paper/figures/trace_benefit_confirmation_20261010/confirmation.pdf": "4d7baf6f05313e8411854aa93f62a6ab651342ed5aed114b083a6ce2b83f1410"
+  },
+  "updated_unix": 1791571798.9835887,
+  "manuscript_sha256": "1b3068f887b5cd0a6e7ce298f14a4db033882800b2ccf3e75dbc275076618d0c",
+  "body_sha256": "403dc762e72ee9549070a7718473992c88bd4142d63b01f262752d8e70648e7c",
+  "pdf_sha256": "0a7beaa886f5a91406e8e27c7d8f51b1fd0331be11c42294cfa53db010713224"
+}

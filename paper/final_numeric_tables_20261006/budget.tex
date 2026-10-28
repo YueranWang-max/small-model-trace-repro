@@ -1,0 +1,13 @@
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+Output cap & F1 & EM & Normal-valid & Tokens/answer\\
+\midrule
+8192 & 0.6967 & 0.6833 & 42/60 & 8,231\\
+28672 & 1.0000 & 1.0000 & 60/60 & 8,764\\
+\bottomrule
+\end{tabular}
+\caption{Sequential Qwen3-4B diagnostic on the same known questions and seeds. The larger cap equals the five-source pipeline maximum generated-token allowance, not its total logical-token or compute budget. Original 8192-cap responses remain unchanged.}
+\label{tab:budget-final}
+\end{table}

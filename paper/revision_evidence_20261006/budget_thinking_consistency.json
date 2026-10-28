@@ -1,0 +1,152 @@
+{
+  "scope": "Descriptive post hoc text consistency check, not an outcome filter or causal identification",
+  "previously_length_terminated": 18,
+  "trailing_trim_matches": 0,
+  "both_end_trim_matches": 0,
+  "records": [
+    {
+      "key": "g00_directlong_0",
+      "old_ledger_sha256": "c355a82dbe9f7fdf525c2acf72fdd39bf893f4db92afcdb64e1446cb58b8e5db",
+      "new_response_sha256": "4f181a9635bab12c192809f4a703168c9feb0f5bf6dff36774460cd0f319ef93",
+      "matching_initial_characters": 32,
+      "trailing_trim_prefix_match": false,
+      "both_end_trim_prefix_match": false
+    },
+    {
+      "key": "g00_directlong_1",
+      "old_ledger_sha256": "67681061aa7b79175e99b2b8f6c01f50e00335be1cc31c9e9dab27df3e0a2f75",
+      "new_response_sha256": "f489cee7e0dfe7b24868fbe1e91e8a8c0d48e62178a211786210f05ac37b867e",
+      "matching_initial_characters": 177,
+      "trailing_trim_prefix_match": false,
+      "both_end_trim_prefix_match": false
+    },
+    {
+      "key": "g00_directlong_2",
+      "old_ledger_sha256": "763303e2efc5aa58bf537b5cc35d39175afec78a50a333ab5843e015d41d8a4d",
+      "new_response_sha256": "fd9767c52cdd2d711905b43d5cefec46498aedcd231f4d7056e0d6a9627d6a69",
+      "matching_initial_characters": 74,
+      "trailing_trim_prefix_match": false,
+      "both_end_trim_prefix_match": false
+    },
+    {
+      "key": "g00_directlong_3",
+      "old_ledger_sha256": "6dd86f7591c46544481a66657f6541e597c85b0f91b442906851e4cd1cc8b694",
+      "new_response_sha256": "c7c7f59efadb83c0514760cef22170ff0882ceb0e7a843a5d214970c770810c0",
+      "matching_initial_characters": 256,
+      "trailing_trim_prefix_match": false,
+      "both_end_trim_prefix_match": false
+    },
+    {
+      "key": "g00_directlong_4",
+      "old_ledger_sha256": "88d19590a0c67dfd6d9b5ef549b4b15ff2b28e25688796bd924b8b24fdd31c1d",
+      "new_response_sha256": "1bb3914144216421662bf716b1353302f57153061e89a3ba132451554a935cc1",
+      "matching_initial_characters": 155,
+      "trailing_trim_prefix_match": false,
+      "both_end_trim_prefix_match": false
+    },
+    {
+      "key": "g06_directlong_0",
+      "old_ledger_sha256": "cbf1cc8831424e03545ee563c2f3b4ce85d9e5725b9f765159258119591ff320",
+      "new_response_sha256": "42894abf1f3794a20f48849b77375b195b3477bae2d7d436a78aad958b882442",
+      "matching_initial_characters": 148,
+      "trailing_trim_prefix_match": false,
+      "both_end_trim_prefix_match": false
+    },
+    {
+      "key": "g06_directlong_1",
+      "old_ledger_sha256": "205ea2b4d242f000aedca7ae446f02fe897c824ac20f645f033e29f4df6b7969",
+      "new_response_sha256": "6027c8aa65b8020e36fb33a43ff9353dc6e8f1c7d4f22679d20f3c328ab781b5",
+      "matching_initial_characters": 58,
+      "trailing_trim_prefix_match": false,
+      "both_end_trim_prefix_match": false
+    },
+    {
+      "key": "g06_directlong_2",
+      "old_ledger_sha256": "fbbdba5200324964ffbaeb4f7b8e86229450b9d162861912039a278b6d8f0339",
+      "new_response_sha256": "9327123afd8feabdc0c5596c1e24e30bd20b93eb489e279099e2836dd7cb859e",
+      "matching_initial_characters": 692,
+      "trailing_trim_prefix_match": false,
+      "both_end_trim_prefix_match": false
+    },
+    {
+      "key": "g06_directlong_4",
+      "old_ledger_sha256": "dc48912b6633819b0c13aec6d14066b919fb26b5bbbb4ad0582d4c120c2fb0b9",
+      "new_response_sha256": "5ca3d3dcf4f5d62ab2b3391296609970bf86eeed22b609d8ac9c5a4f9dc100f9",
+      "matching_initial_characters": 420,
+      "trailing_trim_prefix_match": false,
+      "both_end_trim_prefix_match": false
+    },
+    {
+      "key": "g07_directlong_0",
+      "old_ledger_sha256": "eae04b00db77eb4631365501c4900e7a707d62f2fce3647507202b752d022b71",
+      "new_response_sha256": "3e17a241ac2240ceb6ad7370d436c9dadd30ee8166da086dbd635b62db433045",
+      "matching_initial_characters": 361,
+      "trailing_trim_prefix_match": false,
+      "both_end_trim_prefix_match": false
+    },
+    {
+      "key": "g07_directlong_2",
+      "old_ledger_sha256": "b544c166bfa748636a509f75a7aaea1091a530e35e7c1e0d310e3874feb0958b",
+      "new_response_sha256": "e4ea30a088c79e6f66770ab59c30ee6053aada057b2b4e42d996365c4f096a9f",
+      "matching_initial_characters": 263,
+      "trailing_trim_prefix_match": false,
+      "both_end_trim_prefix_match": false
+    },
+    {
+      "key": "g07_directlong_3",
+      "old_ledger_sha256": "a134a2e0f7ba59ad4ede33a8217674d235f5d8a17e9e65550222d1690fe4dc51",
+      "new_response_sha256": "aca768a99de82b1f8761e4707b028a2d798024c9687c3180e80a039767fbf1b6",
+      "matching_initial_characters": 485,
+      "trailing_trim_prefix_match": false,
+      "both_end_trim_prefix_match": false
+    },
+    {
+      "key": "g07_directlong_4",
+      "old_ledger_sha256": "54fdf7dd68683c51cf7d1be68144696da94334c160e0c7db7bd753a83eb66e5a",
+      "new_response_sha256": "60297aae692c51d54576e617e23fcbc33e5a9f0e84836b8e9d181b759439b0c3",
+      "matching_initial_characters": 648,
+      "trailing_trim_prefix_match": false,
+      "both_end_trim_prefix_match": false
+    },
+    {
+      "key": "g11_directlong_0",
+      "old_ledger_sha256": "a8a960dc6af27fe251702363e1d54d5549a97d9df119ce3264c9d701f88dc0f3",
+      "new_response_sha256": "1afc246bc8e10f912bd6aee7910d118fc8c359610ab92f72daa2df6baead1a25",
+      "matching_initial_characters": 453,
+      "trailing_trim_prefix_match": false,
+      "both_end_trim_prefix_match": false
+    },
+    {
+      "key": "g11_directlong_1",
+      "old_ledger_sha256": "b9db79a91ae47252e606706dbc5902c70d026ef633572282bf480aca532c252b",
+      "new_response_sha256": "900890c39009b24a5e5b9e3cf5d5c1a818ae44c7df76e64f8e9edccef2f5e1b7",
+      "matching_initial_characters": 37,
+      "trailing_trim_prefix_match": false,
+      "both_end_trim_prefix_match": false
+    },
+    {
+      "key": "g11_directlong_2",
+      "old_ledger_sha256": "1ce30675e1b92e3d6b5b0d7e5483da4c593055b97fed5121399e0b8141023ec1",
+      "new_response_sha256": "0078f252423d9608fd62b0a62e5e0b0f295721f52bac4190f5bd13793c14401b",
+      "matching_initial_characters": 74,
+      "trailing_trim_prefix_match": false,
+      "both_end_trim_prefix_match": false
+    },
+    {
+      "key": "g11_directlong_3",
+      "old_ledger_sha256": "51610ef698078a1c118faf3afebf3280456e5bb1a60001746843f9a2cca0b4d3",
+      "new_response_sha256": "ac51928ed2ad5abf9c902cd39c1cbea3ad3e75e9387d979a2bfe56c59fe87dd0",
+      "matching_initial_characters": 74,
+      "trailing_trim_prefix_match": false,
+      "both_end_trim_prefix_match": false
+    },
+    {
+      "key": "g11_directlong_4",
+      "old_ledger_sha256": "775fae0833c10fe6da455fd53c63c73e732320e73fccf545178007bf6d17eb0f",
+      "new_response_sha256": "309f35efb7b9fb67d23c1f080d5377aaa347ca017fc0d45504b6309a27703cff",
+      "matching_initial_characters": 91,
+      "trailing_trim_prefix_match": false,
+      "both_end_trim_prefix_match": false
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+[
+  {
+    "figure": "interrupted_indexed_figure",
+    "new_sha256": "944c3d3557a6de3b8482378af87e346e53e1276148f9c4f1f4e00da457bce573",
+    "old_path": "paper\\figures\\r_redesign_20261005\\interrupted_indexed_figure.pdf",
+    "unchanged_csv_inputs": true,
+    "new": {
+      "sha256": "944c3d3557a6de3b8482378af87e346e53e1276148f9c4f1f4e00da457bce573",
+      "min_final_font_pt": 5.250000052981906,
+      "font_types": [
+        "TrueType"
+      ]
+    },
+    "old": {
+      "sha256": "a607bd1bb75e1179465f0671e275f0ae391c458019f547dec774be54411c8cc0",
+      "min_final_font_pt": 4.333333333333333,
+      "font_types": [
+        "Type1"
+      ]
+    }
+  },
+  {
+    "figure": "interrupted_study_figure",
+    "new_sha256": "59c2ec9e85b5b44c422cd253a2ee014af62fa2139cd96085619d25fbd618d2e2",
+    "old_path": "paper\\figures\\r_redesign_20261005\\interrupted_study_figure.pdf",
+    "unchanged_csv_inputs": true,
+    "new": {
+      "sha256": "59c2ec9e85b5b44c422cd253a2ee014af62fa2139cd96085619d25fbd618d2e2",
+      "min_final_font_pt": 5.2500001907348635,
+      "font_types": [
+        "TrueType"
+      ]
+    },
+    "old": {
+      "sha256": "bc3a56afe2474a7d68f0ce4a623b0e9ec4815c9a683e9f6d9f946883cbf2deed",
+      "min_final_font_pt": 3.9000000000000004,
+      "font_types": [
+        "Type1"
+      ]
+    }
+  },
+  {
+    "figure": "official_graph_confirmatory_20261006",
+    "new_sha256": "71b561705bb25a0d423cd69205172d155495430380a0b7731476e53ac4e15787",
+    "old_path": "paper\\figures\\r_confirmatory_20261006\\official_graph_confirmatory_20261006.pdf",
+    "unchanged_csv_inputs": true,
+    "new": {
+      "sha256": "71b561705bb25a0d423cd69205172d155495430380a0b7731476e53ac4e15787",
+      "min_final_font_pt": 5.249999739907005,
+      "font_types": [
+        "TrueType"
+      ]
+    },
+    "old": {
+      "sha256": "1171af3b7aff1fda341ae63a0e5d2fb33859afd419fcacef600fee6289f4f49b",
+      "min_final_font_pt": 3.545454545454546,
+      "font_types": [
+        "Type1"
+      ]
+    }
+  },
+  {
+    "figure": "official_graph_identity_recode",
+    "new_sha256": "8ad034390785570e3c91aaf177d29baaf3d76758f88dc0de567427d434f6119f",
+    "old_path": "paper\\figures\\r_redesign_20261005\\official_graph_identity_recode.pdf",
+    "unchanged_csv_inputs": true,
+    "new": {
+      "sha256": "8ad034390785570e3c91aaf177d29baaf3d76758f88dc0de567427d434f6119f",
+      "min_final_font_pt": 5.2500001907348635,
+      "font_types": [
+        "TrueType"
+      ]
+    },
+    "old": {
+      "sha256": "d7a5fb94cf4e32af7f0c37c09d45f85398d430019268efbb062481c2e2028eb4",
+      "min_final_font_pt": 3.9000000000000004,
+      "font_types": [
+        "Type1"
+      ]
+    }
+  },
+  {
+    "figure": "official_graph_reasoning_mode",
+    "new_sha256": "df6e6f3bd7726f972aafa8503eb19099f5fe2e8a598c6a96ebd1440a4bd82daa",
+    "old_path": "paper\\figures\\r_redesign_20261005\\official_graph_reasoning_mode.pdf",
+    "unchanged_csv_inputs": true,
+    "new": {
+      "sha256": "df6e6f3bd7726f972aafa8503eb19099f5fe2e8a598c6a96ebd1440a4bd82daa",
+      "min_final_font_pt": 5.256953375228982,
+      "font_types": [
+        "TrueType"
+      ]
+    },
+    "old": {
+      "sha256": "c4918c6181d928cbc14b648b7e48407b486383c044d754b99cae6b4e6dad1716",
+      "min_final_font_pt": 5.4238410596026485,
+      "font_types": [
+        "Type1"
+      ]
+    }
+  },
+  {
+    "figure": "partial_state_display",
+    "new_sha256": "efbeeddf0964551329923e4146d2d1e55bd08d608b5c003c3dc455c0111aa189",
+    "old_path": "paper\\figures\\r_redesign_20261005\\partial_state_display.pdf",
+    "unchanged_csv_inputs": true,
+    "new": {
+      "sha256": "efbeeddf0964551329923e4146d2d1e55bd08d608b5c003c3dc455c0111aa189",
+      "min_final_font_pt": 5.254975901960761,
+      "font_types": [
+        "TrueType"
+      ]
+    },
+    "old": {
+      "sha256": "849c991b218ac3f11bceec42cc57b516f2ff69649d9f0a2b2608f14c4e09145c",
+      "min_final_font_pt": 4.436018957345971,
+      "font_types": [
+        "Type1"
+      ]
+    }
+  },
+  {
+    "figure": "source_qualification_figure",
+    "new_sha256": "35e2f1923e6ddf98a2daf24d348d66104fd7fc551a9124be9526f8dd178c99c4",
+    "old_path": "paper\\figures\\r_redesign_20261005\\source_qualification_figure.pdf",
+    "unchanged_csv_inputs": true,
+    "new": {
+      "sha256": "35e2f1923e6ddf98a2daf24d348d66104fd7fc551a9124be9526f8dd178c99c4",
+      "min_final_font_pt": 5.256953552574512,
+      "font_types": [
+        "TrueType"
+      ]
+    },
+    "old": {
+      "sha256": "5495fb5328cf6ce1e2ea032cde35d4bf9b117a0d36fa6015031263681c9bf879",
+      "min_final_font_pt": 4.277086092715232,
+      "font_types": [
+        "Type1"
+      ]
+    }
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "manuscript": {
+    "files": [
+      {
+        "path": "main.tex",
+        "sha256": "819a8d9dc3828c32fb85c405ad49902d2ef93d2717433f52af66a2d84882a4fb"
+      },
+      {
+        "path": "migration_primary_body.tex",
+        "sha256": "75e5829065f9f1ae9709560b16698a69f3a16119066f9b3ce2acfab29b3152f4"
+      },
+      {
+        "path": "migration_gate_map.tex",
+        "sha256": "c20f05931841f359adc8d5ff89f5ac21326a038f9f6308e8f145209aa61d4d61"
+      },
+      {
+        "path": "historical_exploration_summary.tex",
+        "sha256": "79fa33743b64e15ac430c6b185843d4ce1bd82de4490ebc7c2066e44aaee5788"
+      },
+      {
+        "path": "references.bib",
+        "sha256": "0d957f3e64fc992926dc9c56de1d49b81fdce6dc52ce17c1e0fc44bec9303d27"
+      },
+      {
+        "path": "figures/interrupted_indexed_figure.pdf",
+        "sha256": "a607bd1bb75e1179465f0671e275f0ae391c458019f547dec774be54411c8cc0"
+      },
+      {
+        "path": "figures/interrupted_study_figure.pdf",
+        "sha256": "bc3a56afe2474a7d68f0ce4a623b0e9ec4815c9a683e9f6d9f946883cbf2deed"
+      },
+      {
+        "path": "figures/official_graph_identity_recode.pdf",
+        "sha256": "d7a5fb94cf4e32af7f0c37c09d45f85398d430019268efbb062481c2e2028eb4"
+      },
+      {
+        "path": "figures/official_graph_reasoning_mode.pdf",
+        "sha256": "c4918c6181d928cbc14b648b7e48407b486383c044d754b99cae6b4e6dad1716"
+      },
+      {
+        "path": "figures/partial_state_display.pdf",
+        "sha256": "849c991b218ac3f11bceec42cc57b516f2ff69649d9f0a2b2608f14c4e09145c"
+      },
+      {
+        "path": "figures/source_qualification_figure.pdf",
+        "sha256": "5495fb5328cf6ce1e2ea032cde35d4bf9b117a0d36fa6015031263681c9bf879"
+      },
+      {
+        "path": "reproduction_evidence_map.tex",
+        "sha256": "6017eb7ed16b9529e71ada3c6958b9ebcdf3edda1e2a5e49047a721a7041a2b1"
+      }
+    ],
+    "bundle": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\arxiv_submission_20261005",
+    "status": "Evidence recomputed and replication-focused manuscript revised; human author verification pending",
+    "independent_compile": "exit0, no TeX/BibTeX errors; nonfatal Fontconfig notice",
+    "pdf_pages": 18,
+    "author_verification": "pending human response",
+    "arxiv_server_compile": "not tested",
+    "zip_sha256": "011109bef14397c7abd7937c9f14cc9ad98959a8425f174b286b100ea304aa1f",
+    "figures": "six substantively redesigned base-R vector figures",
+    "pdf_sha256": "9aa3ca0cb764dc1c2402915877d54c05ee605d69d9b907d0df0d574bdb73217e"
+  },
+  "audit_sha256": "0700712841835b879a04eb71f5789ee3ed92a20f7f7876d53365562866805e97",
+  "verification_script_sha256": "59ecb582acb817e1f405f6d3eb328117bf0b6c90ad3eddcb6522dadd1539a026"
+}

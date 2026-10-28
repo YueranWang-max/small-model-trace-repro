@@ -1,0 +1,101 @@
+{
+  "dataset_sha256": "2ae7ee62a65b1c4225791c70de80c2aad4e8998cf1fd4f09a53103db4f21af93",
+  "selection": "Qasper dev ranks 163-170, all three questions per paper",
+  "model": "qwen3.5:4b",
+  "arms": [
+    "reread",
+    "question_first",
+    "instruction_first",
+    "combined"
+  ],
+  "papers": [
+    {
+      "paper_id": "1811.00383",
+      "title": "Addressing word-order Divergence in Multilingual Neural Machine Translation for extremely Low Resource Languages",
+      "source_sha256": "5f4ccc2f6a8a1b08a6223ff85d31d0afabb89bcbfda528fe949794f13343b0e2",
+      "source_chars": 19072,
+      "question_ids": [
+        "a313e98994fc039a82aa2447c411dda92c65a470",
+        "37861be6aecd9242c4fdccdfcd06e48f3f1f8f81",
+        "7e62a53823aba08bc26b2812db016f5ce6159565"
+      ]
+    },
+    {
+      "paper_id": "1903.07406",
+      "title": "Automatic Classification of Pathology Reports using TF-IDF Features",
+      "source_sha256": "6c7679fbbb4d709e633598fb25993d062f97728ef9a11312a4eac1bc66ae76fa",
+      "source_chars": 18949,
+      "question_ids": [
+        "312e9cc11b9036a6324bdcb64eca6814053ffa17",
+        "1c0ba6958da09411deded4a14dfea5be55687619",
+        "1eef2d2c296fdd10b08bf7b4ff7792cccf177d3b"
+      ]
+    },
+    {
+      "paper_id": "1904.09535",
+      "title": "NeuronBlocks: Building Your NLP DNN Models Like Playing Lego",
+      "source_sha256": "f55067328bd1ad45c65843dbc47520e4b80f1228bf117686cf3745064ed4685d",
+      "source_chars": 15616,
+      "question_ids": [
+        "b1cf5739467ba90059add58d11b73d075a11ec86",
+        "2ea4347f1992b0b3958c4844681ff0fe4d0dd1dd",
+        "4f253dfced6a749bf57a1b4984dc962ce9550184"
+      ]
+    },
+    {
+      "paper_id": "1904.10503",
+      "title": "Fine-Grained Named Entity Recognition using ELMo and Wikidata",
+      "source_sha256": "67c9a1f3d4267e395f0b5a12c1c24787a8512a901c4291a3d8997bf537be1e1e",
+      "source_chars": 18739,
+      "question_ids": [
+        "5a65ad10ff954d0f27bb3ccd9027e3d8f7f6bb76",
+        "729694a9fe1e05d329b7a4078a596fe606bc5a95",
+        "1c997c268c68149ae6fb43d83ffcd53f0e7fe57e"
+      ]
+    },
+    {
+      "paper_id": "1906.01081",
+      "title": "Handling Divergent Reference Texts when Evaluating Table-to-Text Generation",
+      "source_sha256": "d79d08e4ed62872ff2b7afd4d2b72e82a2a5efd5472d5c91698192b8d873b244",
+      "source_chars": 29943,
+      "question_ids": [
+        "28067da818e3f61f8b5152c0d42a531bf0f987d4",
+        "bf3b27a4f4be1f9ae31319877fd0c75c03126fd5",
+        "ffa7f91d6406da11ddf415ef094aaf28f3c3872d"
+      ]
+    },
+    {
+      "paper_id": "1906.08593",
+      "title": "Conflict as an Inverse of Attention in Sequence Relationship",
+      "source_sha256": "b01432fdc0a81eec4b925203ef9f042c0e7d6839f8787868baffbe861aea1abd",
+      "source_chars": 21769,
+      "question_ids": [
+        "6236762b5631d9e395f81e1ebccc4bf3ab9b24ac",
+        "31d695ba855d821d3e5cdb7bea638c7dbb7c87c7",
+        "b14217978ad9c3c9b6b1ce393b1b5c6e7f49ecab"
+      ]
+    },
+    {
+      "paper_id": "1907.06292",
+      "title": "TWEETQA: A Social Media Focused Question Answering Dataset",
+      "source_sha256": "2009a3ca307f914967f5e2833fd950be0d1d2bfc93b572b0f53bf34de0b017cb",
+      "source_chars": 29262,
+      "question_ids": [
+        "53dfcd5d7d2a81855ec1728f0d8e6e24c5638f1e",
+        "869feb7f47606105005efdb6bea1c549824baea0",
+        "c497e8701060583d91bb64b9f9202d40047effc4"
+      ]
+    },
+    {
+      "paper_id": "1908.07195",
+      "title": "ARAML: A Stable Adversarial Training Framework for Text Generation",
+      "source_sha256": "804f1fb1920c0718ab1bcd9f74002e7196f267a3023884948df626785c63a177",
+      "source_chars": 33379,
+      "question_ids": [
+        "43eecc576348411b0634611c81589f618cd4fddf",
+        "79f9468e011670993fd162543d1a4b3dd811ac5d",
+        "c262d3d1c5a8b6fef6b594d5eee86bc2b09e3baf"
+      ]
+    }
+  ]
+}

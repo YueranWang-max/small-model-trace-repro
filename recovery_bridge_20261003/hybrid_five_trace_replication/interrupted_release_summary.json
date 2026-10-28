@@ -1,0 +1,30 @@
+{
+  "status": "terminal_interrupted_audited",
+  "planned_graphs": 16,
+  "graphs_with_source_bundle": 1,
+  "planned_scored_slots": 480,
+  "coverage": {
+    "qualified_response": 14,
+    "budget_declined": 8,
+    "unqualified_response": 1,
+    "not_reached": 457
+  },
+  "known_scored_tokens": 595768,
+  "calibration_tokens": 117,
+  "known_research_tokens": 595885,
+  "source_bundle_tokens": 190884,
+  "known_formal_client_seconds": 7777.206000000006,
+  "known_formal_client_seconds_is_partial_research_workflow_not_full_deployment_comparison": true,
+  "all_planned_usage_known": false,
+  "unknown_attempted_usage_calls": 0,
+  "source_normal_stop_calls": 5,
+  "accuracy_candidate": false,
+  "cost_candidate": false,
+  "important_progress_established": false,
+  "source_sha256": {
+    "frozen.json": "c62070ad840162ed4a0a8391c6a189fe3696ff79d9c5f4faabbbb5a26e0ab8ab",
+    "completion.json": "a38452d6f6f9f8d30b12892ac79d8ffcfd844633541ac0b5d817a66cdd51db9d",
+    "independent_audit.json": "60eb94ecdd47e9d6ff651dbb8dc46f34ae46aa86a463f25c1e90303fb6f3db22",
+    "analysis.json": "3ed06b514b36f5f8a2607d44889f3126c06beb13a91a380b308610322917d4f3"
+  }
+}

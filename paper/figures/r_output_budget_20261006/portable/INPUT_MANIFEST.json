@@ -1,0 +1,32 @@
+[
+  {
+    "path": "inputs/paper/evidence_paired4b_20261006/audited_calls.csv",
+    "sha256": "afcd5ea2c621114767824aa3c76b1633cdeb4193d69e9ada92417d67d9c17c88",
+    "original_byte_identical": true
+  },
+  {
+    "path": "inputs/paper/evidence_paired4b_20261006/arm_summary.csv",
+    "sha256": "162d37ca8ec1cb874675cc2b5640f4ff0d225149b192a5fb978d314c18a1e7fe",
+    "original_byte_identical": true
+  },
+  {
+    "path": "inputs/paper/evidence_paired4b_20261006/summary.json",
+    "sha256": "4694f1745d9e779eae9ee9200812a6417511f9a14b2461cdec0c799653ec8dda",
+    "original_byte_identical": true
+  },
+  {
+    "path": "inputs/paper/evidence_output_budget_control_20261006/audited_calls.csv",
+    "sha256": "0b3b4dd77330e5ab1af3462d979b05f6b1f1416c84493e0d690c5b8f7fa08687",
+    "original_byte_identical": true
+  },
+  {
+    "path": "inputs/paper/evidence_output_budget_control_20261006/graph_summary.csv",
+    "sha256": "916db50d184be92af3d3211fa25cf9a7008d5110aa164581907ac6534d7488d6",
+    "original_byte_identical": true
+  },
+  {
+    "path": "inputs/paper/evidence_output_budget_control_20261006/summary.json",
+    "sha256": "10a06f12fcdbe7f36cb92204a2f8ebd9c08127a68e3dd96a67f1326873d4cf74",
+    "original_byte_identical": true
+  }
+]

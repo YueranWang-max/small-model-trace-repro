@@ -1,0 +1,27 @@
+{
+  "syntax_checks": [
+    {
+      "file": "run_hybrid_five_trace_replication.py",
+      "syntax_valid": true,
+      "sha256": "213adba8e94d6d26bf10f3f5dc097d83d84c0de3e7b36e83b27b27007a9179dd"
+    },
+    {
+      "file": "audit_hybrid_five_trace_replication.py",
+      "syntax_valid": true,
+      "sha256": "98de4248537cda569f5afa27daaaf8efb38952b7990ede8dc2f0d613bca0cff3"
+    },
+    {
+      "file": "analyze_hybrid_five_trace_replication.py",
+      "syntax_valid": true,
+      "sha256": "83954df1993ca6b0c42b7550582a966f697e29ec333baa52552c72f158713194"
+    },
+    {
+      "file": "analyze_hybrid_source_qualification.py",
+      "syntax_valid": true,
+      "sha256": "3f3f05a2c233d25f3e1bed3645caf560e863266971430bc70bf63e7d8a3662b2"
+    }
+  ],
+  "prospective_spec_json_valid": true,
+  "native_inference_launched": false,
+  "dependency_rendering_runtime_qualification_pending": true
+}

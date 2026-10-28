@@ -1,0 +1,22 @@
+{
+  "final_width_inches": 6.5,
+  "native_width_inches": 9,
+  "minimum_final_text_points": 5.583999660280016,
+  "maximum_final_text_points": 6.979999489254421,
+  "outside_page_text": [],
+  "fonts": [
+    {
+      "name": "WXRLML+ArialMT",
+      "type": "TrueType",
+      "embedded_bytes": 35292
+    },
+    {
+      "name": "KQOSFX+Arial-BoldMT",
+      "type": "TrueType",
+      "embedded_bytes": 16048
+    }
+  ],
+  "svg_text_nodes": 43,
+  "rendering_backend": "R cairo_pdf / svglite / Cairo PNG",
+  "python_scope": "Text/font/XML metadata inspection only"
+}

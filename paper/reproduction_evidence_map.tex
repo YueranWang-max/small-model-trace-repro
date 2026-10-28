@@ -1,0 +1,42 @@
+\section{Mapping the Original Method to the Local Studies}
+\label{app:reproduction-map}
+Table~\ref{tab:reproduction-map} specifies the scope of the reproduction against Zou and Tang \citep{tang2026trace}. It distinguishes a reproduced intervention from reproduction of an effect size.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{.20\linewidth}>{\raggedright\arraybackslash}p{.34\linewidth}>{\raggedright\arraybackslash}p{.36\linewidth}}
+\toprule
+Component & Original study & Local studies\\
+\midrule
+Placement & Same $T$ in $[T,x,q]$ and $[x,T,q]$; question last & Retained in paired trace comparisons\\
+Source context & Complete original context remains & Complete graph retained; source-free development separate\\
+Source traces & Five exposed reasoning traces; separate visible answers excluded & Five native thinking traces in short and long trials; one capped early trace in the adaptation\\
+Serialization & Fixed warning, delimiters and trace order; first 50,000 characters per reused trace & Original serializer retained for five-trace studies; separate disclosed wrapper for early state\\
+Reader repeats & Five per problem & Five in five-trace studies; two in the early-state adaptation\\
+Models and data & Three frontier models; GraphWalks 256K, MRCRv2 and NUB-1M & Local Qwen variants; selected shorter official graph questions only\\
+Generation limits & No custom client-side maximum requested; effective provider defaults not established & Explicit local context and output caps, recorded for every request\\
+Prompt controls & Question first and Re2 alongside placement controls & Short pilot: direct and placement; native long trial and early state add question first and Re2\\
+Outcome handling & Task-specific scoring and failure rules & Frozen local visible-answer rules, with missing responses and qualification failures distinguished\\
+\bottomrule
+\end{tabular}
+\caption{Retained design components and explicit adaptations. The local studies do not reproduce the original models, input lengths, data coverage or provider generation budgets.}
+\label{tab:reproduction-map}
+\end{table}
+
+\paragraph{Evidence checks.} A separate verification program recomputed all 750 archived graph answers from directed edges. It also checked ten official-data study archives containing 590 saved call ledgers. Those ledgers included calibration, budget declines and request-only records, not 590 valid answers. Returned visible answers were rescored according to their study-specific frozen rules. Request hashes, frozen dependencies, model snapshots, graph identities, recorded usage and selected graph bootstrap intervals were checked against the archives.
+
+The verification reproduced the reported short-trace F1 differences, source-qualification scores and matched early-state parsing sensitivity. It also retained the returned but unqualified long-trial response and the bridge's interrupted request and client error. No missing answer was generated, no prior call was replayed, and no primary score was replaced. The verification script and per-record SHA-256 manifest are preserved with the release materials.
+
+\paragraph{Evidence boundary.} These checks establish consistency between the preserved inputs, outputs and reported analyses. They do not recover absent historical responses or prove continuous exclusive hardware use. In particular, the model bridge retains intended requests reconstructed from frozen code, rather than separately captured complete transmitted payloads. Its provenance is weaker than that of the later request ledgers. A separate prospective twelve-graph replication additionally preserves all 240 raw response bodies and complete request records; its selection, allocation and scores were independently checked. It does not recover or validate missing older responses. Old synthetic and document scores were not promoted to official-data evidence.
+
+
+\paragraph{Historical selection lineage.} The earlier model bridge is retained locally to document the workflow and reconstruct graph-exclusion lists. Its intended requests were reconstructed from frozen code, rather than independently captured as complete transmitted payloads. Its quantitative scores are therefore excluded from this manuscript's empirical claims. This preserves selection provenance without relying on weaker historical observations to support the completed placement comparisons.
+
+\section{Initial Short-Graph Study}
+\label{app:initial-short-study}
+The completed Qwen3-1.7B reproduction comprised four new official graphs and eighty calls. Each graph supplied five source traces and five paired repeats of each reader condition. All requests met interface qualification, although five sources and one direct reader reached their output limits.
+
+Trace prefix achieved mean F1 0.7751, compared with 0.7064 for trace append and 0.6187 for direct reading. The prefix-minus-append difference was 6.87 percentage points, with a descriptive interval of $[-1.92,14.33]$ points. The prefix-minus-direct difference was 15.64 points, with an interval of $[-0.39,31.67]$ points. Both intervals included zero. Exact match was 0.15 for prefix and direct reading, and 0.05 for append. Thus the F1 point estimates favored prefix placement, but this small study did not establish a reliable placement advantage.
+
+Charging all five source calls gave prefix approximately $8.07$ times the tokens of direct reading. These costs quantified resource requirements separately from the placement comparison. The unequal source and reader caps also prevented a same-budget first-pass versus second-pass interpretation.
+

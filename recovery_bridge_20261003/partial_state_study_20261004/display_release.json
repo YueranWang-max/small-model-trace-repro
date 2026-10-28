@@ -1,0 +1,21 @@
+{
+  "scope": "Display export only: frozen audit/analysis supply all scores and inference.",
+  "primary_complete": false,
+  "promising_candidate_gate": false,
+  "known_reader_slots": 129,
+  "planned_reader_slots": 224,
+  "inputs": {
+    "completion.json": "a7acb11343cb06372dddfdc385a3ebe0b16ff6d965c4092b67a35817f3d416ea",
+    "independent_audit.json": "9371581f5e6a846fbec0152530fb608d6577e659b8d8c6cb7e499c40f90d9dee",
+    "analysis.json": "0183b8be61d6f81d68b7818158078c3a2bc1fa4801cef6641855bc6fa7016109",
+    "frozen.json": "225e24d5f226df3e6c3fbe63e249ba0ef51ab0a5ec233df978539ab2eccd1cbb"
+  },
+  "csv_outputs": {
+    "display_arm_summary.csv": "486cb1e4e9e822d6c1cae28d4fd3d21f9856305ea073705fa2237a03e8348d8c",
+    "display_comparisons.csv": "4423d46f4a0449f518de61bd49dc0a7d42e5021ad25a819ae58b26a8e9ac3c74"
+  },
+  "exporter_sha256": "7404074040bc15aa7a34e0b97cc31160e6bf73b165a5a1ccfc4feca57cd4abec",
+  "cost_denominator": "Sum of charged deployment tokens divided by 32 planned predictions per arm; incomplete costs remain lower bounds.",
+  "quality_bounds": "Identification bounds from unknown outcomes, never confidence intervals.",
+  "comparison_intervals": "Only supplied by complete frozen analysis; descriptive graph bootstrap, not simultaneous."
+}

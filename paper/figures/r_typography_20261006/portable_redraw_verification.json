@@ -1,0 +1,37 @@
+[
+  {
+    "figure": "interrupted_indexed_figure",
+    "standalone_svg_identical": true,
+    "same_inputs": true
+  },
+  {
+    "figure": "interrupted_study_figure",
+    "standalone_svg_identical": true,
+    "same_inputs": true
+  },
+  {
+    "figure": "official_graph_confirmatory_20261006",
+    "standalone_svg_identical": true,
+    "same_inputs": true
+  },
+  {
+    "figure": "official_graph_identity_recode",
+    "standalone_svg_identical": true,
+    "same_inputs": true
+  },
+  {
+    "figure": "official_graph_reasoning_mode",
+    "standalone_svg_identical": true,
+    "same_inputs": true
+  },
+  {
+    "figure": "partial_state_display",
+    "standalone_svg_identical": true,
+    "same_inputs": true
+  },
+  {
+    "figure": "source_qualification_figure",
+    "standalone_svg_identical": true,
+    "same_inputs": true
+  }
+]

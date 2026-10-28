@@ -1,0 +1,168 @@
+{
+  "complete": true,
+  "planned_model_calls": 168,
+  "known_model_calls": 168,
+  "unknown_keys": [],
+  "independent_graph_units": 24,
+  "new_runtime_version": {
+    "version": "0.40.0"
+  },
+  "source_round_trips_verified": 24,
+  "all_known_payloads_and_raw_scores_independently_verified": true,
+  "research_tokens_known": 1061652,
+  "research_request_wall_seconds_known": 3792.680207500046,
+  "scope": "New questions on a public graph benchmark; no cross-domain guarantee, external execution attestation, or energy/money inference.",
+  "execution_amendments": [
+    {
+      "scope": "Execution-only thermal correction; no change to selection, seeds, model, prompts, source/read budgets, scoring or planned sample.",
+      "reason": "Implement the existing protocol below76C cooldown after82C trigger. Original loop resumed below82C.",
+      "recorded_calls_before_change": 18,
+      "old_runner_sha256": "f742fae0b38cdf76efe6042d530562ec4c6caccd8b99e3cf08f08de8553ebfed",
+      "new_runner_sha256": "1c599d10bb4e0ad0139cd26a4ce2faef62e12bb88572ef923ca192e5580e8de6",
+      "old_runner_snapshot": "execution_correction_cooling/run_user_benefit_20261009.py",
+      "old_frozen_snapshot": "execution_correction_cooling/frozen_before.json",
+      "updated_unix": 1791552394.0554512
+    }
+  ],
+  "arms": [
+    {
+      "stratum": "capacity",
+      "arm": "original",
+      "calls": 24,
+      "graph_units": 12,
+      "f1": 0.010177052079256715,
+      "em": 0.0,
+      "mean_deployment_tokens": 16521.666666666668,
+      "mean_deployment_wall_seconds": 60.810205795834044,
+      "valid_count": 14,
+      "length_terminated": 10,
+      "observed_resident_vram_bytes": [
+        5104184851
+      ]
+    },
+    {
+      "stratum": "capacity",
+      "arm": "compact",
+      "calls": 24,
+      "graph_units": 12,
+      "f1": 0.08333333333333333,
+      "em": 0.08333333333333333,
+      "mean_deployment_tokens": 5905.791666666667,
+      "mean_deployment_wall_seconds": 25.428439299996853,
+      "valid_count": 9,
+      "length_terminated": 15,
+      "observed_resident_vram_bytes": [
+        2235280915
+      ]
+    },
+    {
+      "stratum": "capacity",
+      "arm": "prefix",
+      "calls": 24,
+      "graph_units": 12,
+      "f1": 0.18973973973973976,
+      "em": 0.041666666666666664,
+      "mean_deployment_tokens": 9632.625,
+      "mean_deployment_wall_seconds": 28.5931097375046,
+      "valid_count": 12,
+      "length_terminated": 12,
+      "observed_resident_vram_bytes": [
+        2235280915
+      ]
+    },
+    {
+      "stratum": "short",
+      "arm": "original",
+      "calls": 24,
+      "graph_units": 12,
+      "f1": 0.4908100001850002,
+      "em": 0.20833333333333334,
+      "mean_deployment_tokens": 6582.041666666667,
+      "mean_deployment_wall_seconds": 24.990955470833416,
+      "valid_count": 21,
+      "length_terminated": 3,
+      "observed_resident_vram_bytes": [
+        5104184851
+      ]
+    },
+    {
+      "stratum": "short",
+      "arm": "compact",
+      "calls": 24,
+      "graph_units": 12,
+      "f1": 0.6661426536426536,
+      "em": 0.2916666666666667,
+      "mean_deployment_tokens": 2911.0,
+      "mean_deployment_wall_seconds": 11.413445558333214,
+      "valid_count": 24,
+      "length_terminated": 0,
+      "observed_resident_vram_bytes": [
+        5104184851
+      ]
+    },
+    {
+      "stratum": "short",
+      "arm": "prefix",
+      "calls": 24,
+      "graph_units": 12,
+      "f1": 0.8195181291793197,
+      "em": 0.5416666666666666,
+      "mean_deployment_tokens": 5449.166666666667,
+      "mean_deployment_wall_seconds": 15.142898504166624,
+      "valid_count": 24,
+      "length_terminated": 0,
+      "observed_resident_vram_bytes": [
+        5104184851
+      ]
+    }
+  ],
+  "contrasts": [
+    {
+      "stratum": "capacity",
+      "contrast": "compact-original",
+      "f1_difference": 0.07315628125407661,
+      "descriptive_interval": [
+        -0.017148975953385225,
+        0.1987179487179487
+      ],
+      "scope": "Graph-level descriptive stratified bootstrap; secondary prefix contrast exploratory."
+    },
+    {
+      "stratum": "capacity",
+      "contrast": "prefix-compact",
+      "f1_difference": 0.10640640640640642,
+      "descriptive_interval": [
+        -0.06861111111111101,
+        0.2868118118118118
+      ],
+      "scope": "Graph-level descriptive stratified bootstrap; secondary prefix contrast exploratory."
+    },
+    {
+      "stratum": "short",
+      "contrast": "compact-original",
+      "f1_difference": 0.17533265345765345,
+      "descriptive_interval": [
+        -0.0840987692862693,
+        0.39300702306952306
+      ],
+      "scope": "Graph-level descriptive stratified bootstrap; secondary prefix contrast exploratory."
+    },
+    {
+      "stratum": "short",
+      "contrast": "prefix-compact",
+      "f1_difference": 0.15337547553666597,
+      "descriptive_interval": [
+        0.0394434475972851,
+        0.27690410545249255
+      ],
+      "scope": "Graph-level descriptive stratified bootstrap; secondary prefix contrast exploratory."
+    }
+  ],
+  "capacity_8k": {
+    "original_complete_inputs_admissible": 0,
+    "compact_complete_inputs_admissible": 12,
+    "nonempty_graphs_exact_both_seeds": [],
+    "bounded_observed_capacity_benefit": false,
+    "inference": "Original8K is a nonexecuted feasibility reference, not a scored zero-answer arm."
+  }
+}

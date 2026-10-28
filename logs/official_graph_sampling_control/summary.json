@@ -1,0 +1,85 @@
+{
+  "summary": [
+    {
+      "regime": "greedy",
+      "graphs": 4,
+      "repeats_per_graph": 2,
+      "responses": 8,
+      "f1": 0.0,
+      "em": 0.0,
+      "valid": 8,
+      "length": 0,
+      "errors": 0,
+      "known_tokens": 58189,
+      "qualified": 8,
+      "unknown_usage": 0
+    },
+    {
+      "regime": "recommended",
+      "graphs": 4,
+      "repeats_per_graph": 2,
+      "responses": 8,
+      "f1": 0.3,
+      "em": 0.25,
+      "valid": 8,
+      "length": 0,
+      "errors": 0,
+      "known_tokens": 64037,
+      "qualified": 8,
+      "unknown_usage": 0
+    }
+  ],
+  "case_table": [
+    {
+      "row_index": 103,
+      "type": "parents",
+      "gold_size": 0,
+      "greedy_f1": 0.0,
+      "greedy_em": 0.0,
+      "greedy_valid": 2,
+      "recommended_f1": 0.5,
+      "recommended_em": 0.5,
+      "recommended_valid": 2
+    },
+    {
+      "row_index": 453,
+      "type": "bfs",
+      "gold_size": 1,
+      "greedy_f1": 0.0,
+      "greedy_em": 0.0,
+      "greedy_valid": 2,
+      "recommended_f1": 0.0,
+      "recommended_em": 0.0,
+      "recommended_valid": 2
+    },
+    {
+      "row_index": 104,
+      "type": "parents",
+      "gold_size": 1,
+      "greedy_f1": 0.0,
+      "greedy_em": 0.0,
+      "greedy_valid": 2,
+      "recommended_f1": 0.5,
+      "recommended_em": 0.5,
+      "recommended_valid": 2
+    },
+    {
+      "row_index": 454,
+      "type": "bfs",
+      "gold_size": 2,
+      "greedy_f1": 0.0,
+      "greedy_em": 0.0,
+      "greedy_valid": 2,
+      "recommended_f1": 0.2,
+      "recommended_em": 0.0,
+      "recommended_valid": 2
+    }
+  ],
+  "qualified": 16,
+  "candidate_gate": false,
+  "always_empty_baseline_f1_em": 0.25,
+  "graph_unit_not_repeat_unit": true,
+  "not_temperature_only_ablation": true,
+  "raw_history_preserved": true,
+  "unknown_usage_calls": 0
+}

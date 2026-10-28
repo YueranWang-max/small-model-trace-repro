@@ -1,0 +1,168 @@
+{
+  "pages": 19,
+  "font_count": 32,
+  "unembedded": [],
+  "fonts": [
+    {
+      "name": "IHAIZV+LMRoman12-Bold-Identity-H",
+      "type": "Type0",
+      "embedded_bytes": 6769
+    },
+    {
+      "name": "BZIVMZ+LMRoman12-Regular-Identity-H",
+      "type": "Type0",
+      "embedded_bytes": 3376
+    },
+    {
+      "name": "IXFAWU+LMRoman9-Bold-Identity-H",
+      "type": "Type0",
+      "embedded_bytes": 1306
+    },
+    {
+      "name": "TQTHRL+LMRoman9-Regular-Identity-H",
+      "type": "Type0",
+      "embedded_bytes": 9228
+    },
+    {
+      "name": "YEUUOC+LMRoman10-Regular-Identity-H",
+      "type": "Type0",
+      "embedded_bytes": 10783
+    },
+    {
+      "name": "AKHCZK+LMRoman10-Italic-Identity-H",
+      "type": "Type0",
+      "embedded_bytes": 5157
+    },
+    {
+      "name": "DDIEWW+CMMI10",
+      "type": "Type1",
+      "embedded_bytes": 2920
+    },
+    {
+      "name": "FKPJSN+CMR10",
+      "type": "Type1",
+      "embedded_bytes": 2298
+    },
+    {
+      "name": "VDVGTR+LMRoman10-Bold-Identity-H",
+      "type": "Type0",
+      "embedded_bytes": 5766
+    },
+    {
+      "name": "CAFSZL+LMMono10-Regular-Identity-H",
+      "type": "Type0",
+      "embedded_bytes": 7439
+    },
+    {
+      "name": "PVTTLK+CMR7",
+      "type": "Type1",
+      "embedded_bytes": 347
+    },
+    {
+      "name": "JAGKKY+CMEX10",
+      "type": "Type1",
+      "embedded_bytes": 706
+    },
+    {
+      "name": "NOMARO+MSBM10",
+      "type": "Type1",
+      "embedded_bytes": 450
+    },
+    {
+      "name": "KPXLOM+CMSY10",
+      "type": "Type1",
+      "embedded_bytes": 943
+    },
+    {
+      "name": "UTACNV+CMBX10",
+      "type": "Type1",
+      "embedded_bytes": 357
+    },
+    {
+      "name": "DNMCYV+ArialMT",
+      "type": "TrueType",
+      "embedded_bytes": 34312
+    },
+    {
+      "name": "ULTDRS+Arial-BoldMT",
+      "type": "TrueType",
+      "embedded_bytes": 15856
+    },
+    {
+      "name": "ADJOQA+ArialMT",
+      "type": "TrueType",
+      "embedded_bytes": 27528
+    },
+    {
+      "name": "FSYOBR+Arial-BoldMT",
+      "type": "TrueType",
+      "embedded_bytes": 16568
+    },
+    {
+      "name": "HNGTHT+ArialMT",
+      "type": "TrueType",
+      "embedded_bytes": 38328
+    },
+    {
+      "name": "PBZYAA+Arial-BoldMT",
+      "type": "TrueType",
+      "embedded_bytes": 17120
+    },
+    {
+      "name": "FZDNHS+CMMI9",
+      "type": "Type1",
+      "embedded_bytes": 929
+    },
+    {
+      "name": "DZGKAF+CMR9",
+      "type": "Type1",
+      "embedded_bytes": 339
+    },
+    {
+      "name": "EEVRZX+ArialMT",
+      "type": "TrueType",
+      "embedded_bytes": 32972
+    },
+    {
+      "name": "COBRHD+Arial-BoldMT",
+      "type": "TrueType",
+      "embedded_bytes": 17104
+    },
+    {
+      "name": "GJMHKB+CMSY6",
+      "type": "Type1",
+      "embedded_bytes": 495
+    },
+    {
+      "name": "PNOKMZ+ArialMT",
+      "type": "TrueType",
+      "embedded_bytes": 24676
+    },
+    {
+      "name": "BUYFPC+Arial-BoldMT",
+      "type": "TrueType",
+      "embedded_bytes": 16436
+    },
+    {
+      "name": "JNFSNJ+ArialMT",
+      "type": "TrueType",
+      "embedded_bytes": 29736
+    },
+    {
+      "name": "ARMDVT+Arial-BoldMT",
+      "type": "TrueType",
+      "embedded_bytes": 16016
+    },
+    {
+      "name": "ITICJF+ArialMT",
+      "type": "TrueType",
+      "embedded_bytes": 37776
+    },
+    {
+      "name": "UVLKKK+Arial-BoldMT",
+      "type": "TrueType",
+      "embedded_bytes": 16904
+    }
+  ],
+  "scope": "Current intermediate external PDF; metadata inspection only, no Python rendering"
+}

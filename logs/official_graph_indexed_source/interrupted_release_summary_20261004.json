@@ -1,0 +1,19 @@
+{
+  "status": "interrupted_response_and_selection_audits_passed",
+  "primary_complete": false,
+  "saved_calls": 94,
+  "planned_calls": 96,
+  "selection_reconstruction_complete": true,
+  "unknown_attempted_usage_calls": 1,
+  "not_reached_calls": 1,
+  "known_token_lower_bound": 324492,
+  "followup_gate": false,
+  "graph_units": 8,
+  "preprocessing_seconds": 1.1883521003182977,
+  "compact_dictionary_bytes": 36612,
+  "audit_inputs": {
+    "frozen.json": "ba5527d26e80a4ee140a561e714ac004d07ed3ef6b898c83dfb263fcc5365fe1",
+    "interrupted_independent_audit.json": "5060ec6270d2afd17f6f503e02fd615acac7d6d72310e7bab2d2088c7943a032",
+    "selection_reconstruction_audit_20261004.json": "67b576c5c8c288c3bda7fa7e5abb41c5572eda659225809338724cb9b6ecb00e"
+  }
+}

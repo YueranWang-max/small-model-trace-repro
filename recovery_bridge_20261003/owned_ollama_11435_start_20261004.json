@@ -1,0 +1,12 @@
+{
+  "process_id": 51316,
+  "binary": "C:\\Users\\dragoncat\\AppData\\Local\\Programs\\Ollama\\ollama.exe",
+  "started_at": "2026-10-04T13:33:27.1642225+08:00",
+  "endpoint": "http://127.0.0.1:11435",
+  "max_loaded_models": 1,
+  "num_parallel": 1,
+  "keep_alive": "30m",
+  "stdout": "D:\\project\\tangjie\\trace_as_state_repro\\recovery_bridge_20261003\\owned_ollama_11435_stdout_20261004.log",
+  "stderr": "D:\\project\\tangjie\\trace_as_state_repro\\recovery_bridge_20261003\\owned_ollama_11435_stderr_20261004.log",
+  "scope": "Private API service only; hardware is not exclusively reserved."
+}

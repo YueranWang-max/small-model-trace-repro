@@ -1,0 +1,14 @@
+{
+  "scope": "Clarity-only restructuring; experimental records and primary scores unchanged",
+  "main_message": "Local tests did not establish a placement-specific advantage; output, context and scoring boundaries affect its evaluation",
+  "structure": "Practical question -> original intervention -> local gap -> matched tests -> observations and limits",
+  "abstract_whitespace_words": 174,
+  "teacher_requirements": [
+    "Small-model reproduction and boundaries; breakthrough optional",
+    "One-sentence reader takeaway",
+    "R-only figures",
+    "Honest raw-response evidence",
+    "Review then revise"
+  ],
+  "experience_post_use": "Funnel introduction, quantitative abstract, reproducible methods, focused results, bounded discussion, short conclusion; heuristics not universal journal rules"
+}

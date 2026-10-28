@@ -1,0 +1,61 @@
+{
+  "scope": "Earliest retrievable repository manuscript; comparison of evidence and presentation, not increased solver accuracy or external attestation",
+  "baseline_commit": "0bcd1297823f811753f3f31da2630bbfaa39db37",
+  "baseline_sha256": "c62f1b4ae129d769de85de3e904cb8dee97c5c27f0bd1b094b5ef6a29b228aeb",
+  "current_main_sha256": "85b6be88f8ff4991d9a01b7f76c5c62ca19ead8a8c0ba440861c95211021f8f6",
+  "current_body_sha256": "4f4e585dd9a28a762d8b763f4c047729042c36476474383753d10fa0587f3b6d",
+  "removed_broad_claims": [
+    {
+      "phrase": "two orders of magnitude",
+      "in_baseline": true,
+      "in_current_primary": false
+    },
+    {
+      "phrase": "calls remain constant",
+      "in_baseline": true,
+      "in_current_primary": false
+    },
+    {
+      "phrase": "emergent ability",
+      "in_baseline": true,
+      "in_current_primary": false
+    },
+    {
+      "phrase": "never helps",
+      "in_baseline": true,
+      "in_current_primary": false
+    },
+    {
+      "phrase": "421 calls",
+      "in_baseline": true,
+      "in_current_primary": false
+    },
+    {
+      "phrase": "0.99",
+      "in_baseline": true,
+      "in_current_primary": true,
+      "legacy_contexts_absent": true,
+      "numeric_token_alone_is_not_a_claim_check": true
+    }
+  ],
+  "new_completed_current_calls": 566,
+  "paired_model_calls": 480,
+  "budget_diagnostic_calls": 60,
+  "context_diagnostic_calls": 26,
+  "primary_distinct_labelled_graphs": 12,
+  "same_graphs_used_for_both_models": true,
+  "context_diagnostic_population": "One deliberately selected prior-overflow case",
+  "official_gold_checks": 750,
+  "historical_ledgers_checked": 590,
+  "historical_missing_responses": "Excluded from empirical claims, never recreated as historical observations",
+  "r_figure_count": 9,
+  "figure_proofs": [
+    "figures/r_typography_20261006/VERIFICATION.md",
+    "figures/r_paired_models_20261006/VERIFICATION.md",
+    "figures/r_output_budget_20261006/VERIFICATION.md"
+  ],
+  "arxiv_author_status": "Archived author block confirmed correct by human and restored; not independent identity verification",
+  "baseline_abstract_whitespace_tokens": 464,
+  "current_abstract_whitespace_tokens": 174,
+  "abstract_count_method": "Whitespace tokens in abstract TeX source, not typeset word count"
+}

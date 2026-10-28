@@ -1,0 +1,33 @@
+{
+  "same_host_fresh_directory": true,
+  "platform": "Windows 11",
+  "history_audit": "passed; 750 graph labels and 590 ledgers",
+  "completed_1p7b_audit": "passed; all 240 calls including full payload and execution sequence",
+  "matching_outputs": [
+    {
+      "path": "paper/evidence_verification_20261005/primary_reverification.json",
+      "original_sha256": "0700712841835b879a04eb71f5789ee3ed92a20f7f7876d53365562866805e97",
+      "staged_sha256": "0700712841835b879a04eb71f5789ee3ed92a20f7f7876d53365562866805e97",
+      "byte_identical": true
+    },
+    {
+      "path": "paper/evidence_verification_20261006/summary.json",
+      "original_sha256": "f1eb5f98df79342b1024d14461213b76e83852afb0a5050684eb7b4c2a54b481",
+      "staged_sha256": "f1eb5f98df79342b1024d14461213b76e83852afb0a5050684eb7b4c2a54b481",
+      "byte_identical": true
+    },
+    {
+      "path": "paper/evidence_verification_20261006/arm_summary.csv",
+      "original_sha256": "cefc70cd37a8ccb23202bdbc452f70b299131ef25e7392b774e216d4935e3d5b",
+      "staged_sha256": "cefc70cd37a8ccb23202bdbc452f70b299131ef25e7392b774e216d4935e3d5b",
+      "byte_identical": true
+    },
+    {
+      "path": "paper/evidence_verification_20261006/contrasts.csv",
+      "original_sha256": "3ef3e5c5101cba74c8d38fd4ca059c5fa78165de7a6e763b9829b00b407dc4e4",
+      "staged_sha256": "3ef3e5c5101cba74c8d38fd4ca059c5fa78165de7a6e763b9829b00b407dc4e4",
+      "byte_identical": true
+    }
+  ],
+  "scope": "CPU-only archived-data verification at a different checkout root; not fresh GPU inference, external replication, or completion of active studies"
+}

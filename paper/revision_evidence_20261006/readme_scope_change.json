@@ -1,0 +1,6 @@
+{
+  "old_sha256": "206ad45cbc68713db19a8d14bb4cd9305f7c23c84511162a87c3cb46b9b10db1",
+  "snapshot_sha256": "206ad45cbc68713db19a8d14bb4cd9305f7c23c84511162a87c3cb46b9b10db1",
+  "new_sha256": "0bf6f8349e2d4a0e5d5c0326293ec0ad2c5b7bc109efe5c5067f0c5bc6933ed3",
+  "scope": "Remove unverified authorship and stale claims from current README; original preserved; frozen runtime dependencies unaffected"
+}

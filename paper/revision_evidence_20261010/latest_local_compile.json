@@ -1,0 +1,306 @@
+{
+  "source": "submission_candidate_20261010_confirmed/main.pdf",
+  "sha256": "0a7beaa886f5a91406e8e27c7d8f51b1fd0331be11c42294cfa53db010713224",
+  "pages": 28,
+  "header": "PDF-1.7",
+  "unresolved_reference_markers": false,
+  "embedded_fonts": [
+    {
+      "name": "IHAIZV+LMRoman12-Bold-Identity-H",
+      "extension": "cid",
+      "type": "Type0",
+      "embedded_bytes": 7245
+    },
+    {
+      "name": "BZIVMZ+LMRoman12-Regular-Identity-H",
+      "extension": "cid",
+      "type": "Type0",
+      "embedded_bytes": 2544
+    },
+    {
+      "name": "IXFAWU+LMRoman8-Regular-Identity-H",
+      "extension": "cid",
+      "type": "Type0",
+      "embedded_bytes": 4350
+    },
+    {
+      "name": "TQTHRL+LMRoman9-Bold-Identity-H",
+      "extension": "cid",
+      "type": "Type0",
+      "embedded_bytes": 1306
+    },
+    {
+      "name": "YEUUOC+LMRoman9-Regular-Identity-H",
+      "extension": "cid",
+      "type": "Type0",
+      "embedded_bytes": 9417
+    },
+    {
+      "name": "JAGKKY+CMR9",
+      "extension": "cff",
+      "type": "Type1",
+      "embedded_bytes": 1398
+    },
+    {
+      "name": "NOMARO+CMMI9",
+      "extension": "cff",
+      "type": "Type1",
+      "embedded_bytes": 1172
+    },
+    {
+      "name": "AKHCZK+LMRoman10-Regular-Identity-H",
+      "extension": "cid",
+      "type": "Type0",
+      "embedded_bytes": 10783
+    },
+    {
+      "name": "VDVGTR+LMRoman6-Regular-Identity-H",
+      "extension": "cid",
+      "type": "Type0",
+      "embedded_bytes": 656
+    },
+    {
+      "name": "CAFSZL+LMMono8-Regular-Identity-H",
+      "extension": "cid",
+      "type": "Type0",
+      "embedded_bytes": 2448
+    },
+    {
+      "name": "KPXLOM+CMMI10",
+      "extension": "cff",
+      "type": "Type1",
+      "embedded_bytes": 2920
+    },
+    {
+      "name": "UTACNV+CMR10",
+      "extension": "cff",
+      "type": "Type1",
+      "embedded_bytes": 3505
+    },
+    {
+      "name": "DDIEWW+LMRoman10-Bold-Identity-H",
+      "extension": "cid",
+      "type": "Type0",
+      "embedded_bytes": 5766
+    },
+    {
+      "name": "FKPJSN+LMMono10-Regular-Identity-H",
+      "extension": "cid",
+      "type": "Type0",
+      "embedded_bytes": 7439
+    },
+    {
+      "name": "FZDNHS+CMSY10",
+      "extension": "cff",
+      "type": "Type1",
+      "embedded_bytes": 1209
+    },
+    {
+      "name": "DZGKAF+CMR7",
+      "extension": "cff",
+      "type": "Type1",
+      "embedded_bytes": 347
+    },
+    {
+      "name": "GJMHKB+CMEX10",
+      "extension": "cff",
+      "type": "Type1",
+      "embedded_bytes": 706
+    },
+    {
+      "name": "NITCSQ+MSBM10",
+      "extension": "cff",
+      "type": "Type1",
+      "embedded_bytes": 450
+    },
+    {
+      "name": "UBBQTN+CMBX10",
+      "extension": "cff",
+      "type": "Type1",
+      "embedded_bytes": 357
+    },
+    {
+      "name": "LPOGEQ+CMSY7",
+      "extension": "cff",
+      "type": "Type1",
+      "embedded_bytes": 365
+    },
+    {
+      "name": "DNMCYV+ArialMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 34312
+    },
+    {
+      "name": "ULTDRS+Arial-BoldMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 15856
+    },
+    {
+      "name": "EBKEFU+ArialMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 35532
+    },
+    {
+      "name": "EVLCFP+Arial-BoldMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 17772
+    },
+    {
+      "name": "WXRLML+ArialMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 35292
+    },
+    {
+      "name": "KQOSFX+Arial-BoldMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 16048
+    },
+    {
+      "name": "ADJOQA+ArialMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 27528
+    },
+    {
+      "name": "FSYOBR+Arial-BoldMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 16568
+    },
+    {
+      "name": "HNGTHT+ArialMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 38328
+    },
+    {
+      "name": "PBZYAA+Arial-BoldMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 17120
+    },
+    {
+      "name": "LXAAVA+ArialMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 30192
+    },
+    {
+      "name": "ZQWSZO+Arial-BoldMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 15800
+    },
+    {
+      "name": "SLGBUS+ArialMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 33336
+    },
+    {
+      "name": "NJWFRX+Arial-BoldMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 17452
+    },
+    {
+      "name": "PVTTLK+LMRoman10-Italic-Identity-H",
+      "extension": "cid",
+      "type": "Type0",
+      "embedded_bytes": 6120
+    },
+    {
+      "name": "EEVRZX+ArialMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 32972
+    },
+    {
+      "name": "COBRHD+Arial-BoldMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 17104
+    },
+    {
+      "name": "GQYLQL+CMSY6",
+      "extension": "cff",
+      "type": "Type1",
+      "embedded_bytes": 495
+    },
+    {
+      "name": "PNOKMZ+ArialMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 24676
+    },
+    {
+      "name": "BUYFPC+Arial-BoldMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 16436
+    },
+    {
+      "name": "JNFSNJ+ArialMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 29736
+    },
+    {
+      "name": "ARMDVT+Arial-BoldMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 16016
+    },
+    {
+      "name": "ITICJF+ArialMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 37776
+    },
+    {
+      "name": "UVLKKK+Arial-BoldMT",
+      "extension": "ttf",
+      "type": "TrueType",
+      "embedded_bytes": 16904
+    }
+  ],
+  "all_fonts_embedded": true,
+  "scope": "Local external Tectonic output, no arXiv server compile; PDF image-reading and Fontconfig notices may remain",
+  "author_placeholder": false,
+  "raster_images_by_page": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ]
+}

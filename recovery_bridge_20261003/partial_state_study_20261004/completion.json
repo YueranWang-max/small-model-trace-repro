@@ -1,0 +1,9 @@
+{
+  "primary_complete": false,
+  "reason": "externally_observed_process_termination_without_runner_completion",
+  "last_saved_ordinal": 150,
+  "last_complete_record_ordinal": 149,
+  "actual_workflow_seconds": null,
+  "observed_at": "2026-10-05T00:21:56.019882+08:00",
+  "recovery_provenance": "Post-interruption read-only process inventory shows no run_partial_state_20261004.py process; prior exec handle unavailable. Attempt150 has request metadata but no returned raw response. Exact termination time and cause unknown. No requests replayed; frozen code unchanged."
+}

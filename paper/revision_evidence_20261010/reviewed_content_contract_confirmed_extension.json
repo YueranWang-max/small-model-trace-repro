@@ -1,0 +1,1247 @@
+{
+  "basis": "Reviewed current TeX baseline; not an independent gold manuscript or proof of complete semantic equivalence",
+  "document_class": "\\documentclass[10pt]{article}",
+  "packages": [
+    "geometry",
+    "amsmath,amssymb",
+    "booktabs",
+    "array",
+    "graphicx",
+    "natbib",
+    "hyperref",
+    "microtype",
+    "xcolor",
+    "xspace"
+  ],
+  "source_hashes": [
+    {
+      "path": "main.tex",
+      "sha256": "1b3068f887b5cd0a6e7ce298f14a4db033882800b2ccf3e75dbc275076618d0c"
+    },
+    {
+      "path": "migration_primary_body.tex",
+      "sha256": "e999f0f28da19ce7858638f00322a9246d5376e3521f117ccf13770569e1de93"
+    },
+    {
+      "path": "final_numeric_tables_20261006\\paired.tex",
+      "sha256": "1ebd5548ec5eb00ff378ab1d74bebd8ff0a772ff4729773eef9604ac2d7507ec"
+    },
+    {
+      "path": "final_numeric_tables_20261006\\budget.tex",
+      "sha256": "3af908486b4160204a0f084742c0e240f0e9980cdc30fcb03b561564549d853d"
+    },
+    {
+      "path": "final_numeric_tables_20261006\\context.tex",
+      "sha256": "7f98a55751dad07732188f0595623780e284792c8e9a6dbfcb0d426b24ad6e5a"
+    },
+    {
+      "path": "migration_gate_map.tex",
+      "sha256": "c20f05931841f359adc8d5ff89f5ac21326a038f9f6308e8f145209aa61d4d61"
+    },
+    {
+      "path": "reproduction_evidence_map.tex",
+      "sha256": "66cd939a555df19d1f1f901514cfcb24ccd5958ca41a6fa81b65e944193737a0"
+    },
+    {
+      "path": "early_state_detail.tex",
+      "sha256": "863d0707c7cec20ba9a18f71638a61de0b49804023bcb3780b08b2f85be3d6e7"
+    }
+  ],
+  "sections": [
+    {
+      "source": "main.tex",
+      "title": "Use of Generative AI Tools",
+      "present_in_pdf": true
+    },
+    {
+      "source": "main.tex",
+      "title": "Reproducibility",
+      "present_in_pdf": true
+    },
+    {
+      "source": "main.tex",
+      "title": "Native Source Qualification",
+      "present_in_pdf": true
+    },
+    {
+      "source": "main.tex",
+      "title": "Interrupted Native Five-Trace Trial",
+      "present_in_pdf": true
+    },
+    {
+      "source": "main.tex",
+      "title": "Interrupted Indexed-Source Comparison",
+      "present_in_pdf": true
+    },
+    {
+      "source": "main.tex",
+      "title": "Representation and Thinking-Mode Controls",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "title": "Introduction",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "title": "Methods",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "title": "Reproduction scope and experimental conditions",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "title": "Scoring, qualification and missing outcomes",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "title": "Statistical analysis and resource accounting",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "title": "Complete compact inputs and single-trace confirmation",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "title": "Results",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "title": "Prospective replication left the placement advantage uncertain",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "title": "The second model reached a ceiling in both trace placements",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "title": "A larger output allowance was tested on the same questions",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "title": "Native source qualification succeeded on the selected graphs",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "title": "Five native traces exceeded the configured reader context",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "title": "A larger configured context enabled the retained-case diagnostic",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "title": "Answer-format sensitivity limited the early-state comparison",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "title": "Additional controls identified separate sources of variation",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "title": "Compact inputs and a short trace improved accuracy on independent new graphs",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "title": "The accuracy benefit incurred a cost relative to compact direct reading",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "title": "Discussion",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "title": "Limitations",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "title": "Conclusion",
+      "present_in_pdf": true
+    },
+    {
+      "source": "migration_gate_map.tex",
+      "title": "Study-Specific Advance Gates",
+      "present_in_pdf": true
+    },
+    {
+      "source": "reproduction_evidence_map.tex",
+      "title": "Mapping the Original Method to the Local Studies",
+      "present_in_pdf": true
+    },
+    {
+      "source": "reproduction_evidence_map.tex",
+      "title": "Initial Short-Graph Study",
+      "present_in_pdf": true
+    },
+    {
+      "source": "early_state_detail.tex",
+      "title": "Incomplete Early-State Adaptation and Answer-Format Sensitivity",
+      "present_in_pdf": true
+    }
+  ],
+  "figures": [
+    {
+      "source": "migration_primary_body.tex",
+      "label": "fig:prospective-replication",
+      "number": "1",
+      "pdf_page": 6,
+      "caption_sha256": "224c1116c217cbf467d6f267182c1c898406de1889c601db204fa1792a48db13",
+      "caption_anchor_present": true,
+      "asset": "figures/official_graph_confirmatory_20261006.pdf",
+      "asset_sha256": "71b561705bb25a0d423cd69205172d155495430380a0b7731476e53ac4e15787",
+      "vector_form_xref": 72,
+      "vector_form_bytes": 9540,
+      "source_graphic_text_lines_checked": 18
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "label": "fig:paired-models",
+      "number": "2",
+      "pdf_page": 8,
+      "caption_sha256": "91c5356caef09fc3593dd9364738bfd7f0f5aa4e2e2fd5a908fbee9014d8d09a",
+      "caption_anchor_present": true,
+      "asset": "figures/paired_models_20261006.pdf",
+      "asset_sha256": "e781760683ffe7fba6045df4e91c9a831164ac77c72bdccc9fd6ae1322a88c5f",
+      "vector_form_xref": 93,
+      "vector_form_bytes": 8581,
+      "source_graphic_text_lines_checked": 25
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "label": "fig:output-budget",
+      "number": "3",
+      "pdf_page": 9,
+      "caption_sha256": "1a414b79fc0e265174691d41383d34795e0f1913ac59b0c2cc2d81c7782c9d03",
+      "caption_anchor_present": true,
+      "asset": "figures/output_budget_20261006.pdf",
+      "asset_sha256": "25d1df416e18a34efa2c86510edbbff4676f4697f2c81dca14ad5648e8f5ce79",
+      "vector_form_xref": 109,
+      "vector_form_bytes": 6882,
+      "source_graphic_text_lines_checked": 16
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "label": "fig:hybrid-source",
+      "number": "4",
+      "pdf_page": 10,
+      "caption_sha256": "6258d0f57523a81485682c31e1a2421d574678e20815f8be9630d4a563981f79",
+      "caption_anchor_present": true,
+      "asset": "figures/source_qualification_figure.pdf",
+      "asset_sha256": "35e2f1923e6ddf98a2daf24d348d66104fd7fc551a9124be9526f8dd178c99c4",
+      "vector_form_xref": 127,
+      "vector_form_bytes": 7922,
+      "source_graphic_text_lines_checked": 34
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "label": "fig:hybrid-interrupted",
+      "number": "5",
+      "pdf_page": 10,
+      "caption_sha256": "cc624189f88e5c91bae2c782576b5278695536c90c5278b307ec00376b543dca",
+      "caption_anchor_present": true,
+      "asset": "figures/interrupted_study_figure.pdf",
+      "asset_sha256": "59c2ec9e85b5b44c422cd253a2ee014af62fa2139cd96085619d25fbd618d2e2",
+      "vector_form_xref": 140,
+      "vector_form_bytes": 5723,
+      "source_graphic_text_lines_checked": 27
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "label": "fig:benefit-discovery",
+      "number": "6",
+      "pdf_page": 12,
+      "caption_sha256": "66beefa7c8565d1ce71720bd037f7dde5493c889f2102a9e50a188c23c7c7cd9",
+      "caption_anchor_present": true,
+      "asset": "figures/user_benefit_20261009/user_benefit.pdf",
+      "asset_sha256": "1ae8dfadfaf69f5558e058c4464395fbf37fe7356d96c40cc0cf423231f7914c",
+      "vector_form_xref": 164,
+      "vector_form_bytes": 4030,
+      "source_graphic_text_lines_checked": 27
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "label": "fig:benefit-confirmation",
+      "number": "7",
+      "pdf_page": 14,
+      "caption_sha256": "12dccacbebcc7c826621208c77d2c86c3b45d64aabaf992db129b3d034fdad0b",
+      "caption_anchor_present": true,
+      "asset": "figures/trace_benefit_confirmation_20261010/confirmation.pdf",
+      "asset_sha256": "60dd536218913607f25d42a7252a00a12589620f33155a21a0baa545d7e47bd5",
+      "vector_form_xref": 185,
+      "vector_form_bytes": 4609,
+      "source_graphic_text_lines_checked": 23
+    },
+    {
+      "source": "early_state_detail.tex",
+      "label": "fig:early-state-interrupted",
+      "number": "8",
+      "pdf_page": 21,
+      "caption_sha256": "1e6bd3de0e5130e8027ec9c9ce32d55c8c8600c7c8aef4fab90846477f7f7225",
+      "caption_anchor_present": true,
+      "asset": "figures/partial_state_display.pdf",
+      "asset_sha256": "efbeeddf0964551329923e4146d2d1e55bd08d608b5c003c3dc455c0111aa189",
+      "vector_form_xref": 230,
+      "vector_form_bytes": 7278,
+      "source_graphic_text_lines_checked": 19
+    },
+    {
+      "source": "main.tex",
+      "label": "fig:indexed-interrupted",
+      "number": "9",
+      "pdf_page": 27,
+      "caption_sha256": "174214056824584fcd681a2216b277c860e1860188b9295c33345abde3fdd9c2",
+      "caption_anchor_present": true,
+      "asset": "figures/interrupted_indexed_figure.pdf",
+      "asset_sha256": "944c3d3557a6de3b8482378af87e346e53e1276148f9c4f1f4e00da457bce573",
+      "vector_form_xref": 266,
+      "vector_form_bytes": 8604,
+      "source_graphic_text_lines_checked": 19
+    },
+    {
+      "source": "main.tex",
+      "label": "fig:identity-controls",
+      "number": "10",
+      "pdf_page": 28,
+      "caption_sha256": "fa961293dee8acfc95baa821cec13be4f8f6c62580cc6fcb419e5a251e542314",
+      "caption_anchor_present": true,
+      "asset": "figures/official_graph_identity_recode.pdf",
+      "asset_sha256": "8ad034390785570e3c91aaf177d29baaf3d76758f88dc0de567427d434f6119f",
+      "vector_form_xref": 282,
+      "vector_form_bytes": 4949,
+      "source_graphic_text_lines_checked": 17
+    },
+    {
+      "source": "main.tex",
+      "label": "fig:thinking-controls",
+      "number": "11",
+      "pdf_page": 28,
+      "caption_sha256": "f68057e354e91d8d64c42c3da42ab5f7ca15b645ea3728628b5fb8dc15c74535",
+      "caption_anchor_present": true,
+      "asset": "figures/official_graph_reasoning_mode.pdf",
+      "asset_sha256": "df6e6f3bd7726f972aafa8503eb19099f5fe2e8a598c6a96ebd1440a4bd82daa",
+      "vector_form_xref": 295,
+      "vector_form_bytes": 5305,
+      "source_graphic_text_lines_checked": 18
+    }
+  ],
+  "tables": [
+    {
+      "source": "migration_primary_body.tex",
+      "label": "tab:local-configurations",
+      "number": "1",
+      "pdf_page": 2,
+      "caption_sha256": "d606dcf0740c6a8caf8bae36de0489a8a67893997be38c4b7ea7ec445c93aa00",
+      "caption_anchor_present": true,
+      "tabular_sha256": "0ab99e3226f4ff078c80cac25a2a34a910bf9d20caa9f0969511eb150ba452bd",
+      "rows_checked": 7,
+      "cells": [
+        [
+          "Initial and prospective short studies",
+          "Qwen3-1.7B",
+          "32,768",
+          "4,096 / 8,192"
+        ],
+        [
+          "Same-question paired follow-up",
+          "Qwen3-4B",
+          "32,768",
+          "4,096 / 8,192"
+        ],
+        [
+          "Output-budget diagnostic",
+          "Qwen3-4B",
+          "32,768",
+          "--- / 28,672"
+        ],
+        [
+          "Native source qualification",
+          "Qwen3.5-4B",
+          "65,536",
+          "32,768 / ---"
+        ],
+        [
+          "Native long five-trace trial",
+          "Qwen3.5-4B",
+          "131,072",
+          "32,768 / 32,768"
+        ],
+        [
+          "Retained-case context diagnostic",
+          "Qwen3.5-4B",
+          "196,608",
+          "retained / 32,768"
+        ],
+        [
+          "Early-state adaptation",
+          "Qwen3.5-4B",
+          "65,536",
+          "1,024 / budget-derived"
+        ]
+      ]
+    },
+    {
+      "source": "final_numeric_tables_20261006\\paired.tex",
+      "label": "tab:paired-final",
+      "number": "2",
+      "pdf_page": 6,
+      "caption_sha256": "a4aee097858678a1acc8ef3176a089290ebe5772549cbc3bf26e8e97a35aa0d3",
+      "caption_anchor_present": true,
+      "tabular_sha256": "a9905feae643791a325b781f933e0aef7725b04447601ae13dfd7970d0c19b65",
+      "rows_checked": 6,
+      "cells": [
+        [
+          "1.7B prefix",
+          "0.7715",
+          "0.3333",
+          "60/60",
+          "34,901"
+        ],
+        [
+          "1.7B append",
+          "0.7351",
+          "0.3833",
+          "60/60",
+          "34,622"
+        ],
+        [
+          "1.7B direct",
+          "0.6915",
+          "0.3333",
+          "59/60",
+          "4,093"
+        ],
+        [
+          "4B prefix",
+          "1.0000",
+          "1.0000",
+          "60/60",
+          "51,751"
+        ],
+        [
+          "4B append",
+          "1.0000",
+          "1.0000",
+          "60/60",
+          "51,612"
+        ],
+        [
+          "4B direct",
+          "0.6967",
+          "0.6833",
+          "42/60",
+          "8,231"
+        ]
+      ]
+    },
+    {
+      "source": "final_numeric_tables_20261006\\budget.tex",
+      "label": "tab:budget-final",
+      "number": "3",
+      "pdf_page": 7,
+      "caption_sha256": "7b25bbafa4006cd8a32b33d93e29e58b802e8aab8d13d0fba9d93cefab9dbd52",
+      "caption_anchor_present": true,
+      "tabular_sha256": "5285f76e0af6f12fd63394e60a8efdafed76b7a3f2dc4bc3ab90c8c96181565d",
+      "rows_checked": 2,
+      "cells": [
+        [
+          "8192",
+          "0.6967",
+          "0.6833",
+          "42/60",
+          "8,231"
+        ],
+        [
+          "28672",
+          "1.0000",
+          "1.0000",
+          "60/60",
+          "8,764"
+        ]
+      ]
+    },
+    {
+      "source": "final_numeric_tables_20261006\\context.tex",
+      "label": "tab:context-final",
+      "number": "4",
+      "pdf_page": 11,
+      "caption_sha256": "578e3685fc39c0936d3ce86ea1927ef7d36b68aaafa7ea43d09be943513b004a",
+      "caption_anchor_present": true,
+      "tabular_sha256": "e3a1e65af492ef9e169431078f68cd4b33855ea35d38e3f1cac7beb461eaa09c",
+      "rows_checked": 5,
+      "cells": [
+        [
+          "prefix",
+          "0.9750",
+          "0.8000",
+          "5/5",
+          "350,021"
+        ],
+        [
+          "append",
+          "0.8984",
+          "0.6000",
+          "5/5",
+          "344,816"
+        ],
+        [
+          "fresh",
+          "0.9583",
+          "0.4000",
+          "5/5",
+          "36,498"
+        ],
+        [
+          "question first",
+          "0.7220",
+          "0.0000",
+          "5/5",
+          "39,719"
+        ],
+        [
+          "re2",
+          "0.7692",
+          "0.6000",
+          "4/5",
+          "50,578"
+        ]
+      ]
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "label": "tab:confirmation-benefit",
+      "number": "5",
+      "pdf_page": 13,
+      "caption_sha256": "bf386a711253d4aca99e6424dfa34e913ae619b4fda2bd756828d4883d79ab78",
+      "caption_anchor_present": true,
+      "tabular_sha256": "f55a1d4292b2d2fd40f9dbe3b2c149e726733ea2ecf29f8da7ad46518c955c68",
+      "rows_checked": 5,
+      "cells": [
+        [
+          "Original direct",
+          "0.3176",
+          "0.0417",
+          "6,640.67",
+          "43",
+          "5"
+        ],
+        [
+          "Original direct, 16K output",
+          "0.3668",
+          "0.0833",
+          "7,149.88",
+          "45",
+          "3"
+        ],
+        [
+          "Compact direct",
+          "0.6542",
+          "0.2292",
+          "3,823.25",
+          "42",
+          "6"
+        ],
+        [
+          "Compact trace prefix",
+          "0.7703",
+          "0.3750",
+          "5,344.46",
+          "47",
+          "1"
+        ],
+        [
+          "Compact trace append",
+          "0.7130",
+          "0.3333",
+          "5,345.67",
+          "46",
+          "2"
+        ]
+      ]
+    },
+    {
+      "source": "reproduction_evidence_map.tex",
+      "label": "tab:reproduction-map",
+      "number": "6",
+      "pdf_page": 19,
+      "caption_sha256": "4a1259513b3f29c0575d015d799d0826e35421c90caaec8d159a2b199000f390",
+      "caption_anchor_present": true,
+      "tabular_sha256": "a4e654211f9cc2121883543d661445272b8df61cf108becaf583c1d9875dbf36",
+      "rows_checked": 9,
+      "cells": [
+        [
+          "Placement",
+          "Same T in [T,x,q] and [x,T,q]; question last",
+          "Retained in paired trace comparisons"
+        ],
+        [
+          "Source context",
+          "Complete original context remains",
+          "Complete graph retained; source-free development separate"
+        ],
+        [
+          "Source traces",
+          "Five exposed reasoning traces; separate visible answers excluded",
+          "Five native thinking traces in short and long trials; one capped early trace in the adaptation"
+        ],
+        [
+          "Serialization",
+          "Fixed warning, delimiters and trace order; first 50,000 characters per reused trace",
+          "Original serializer retained for five-trace studies; separate disclosed wrapper for early state"
+        ],
+        [
+          "Reader repeats",
+          "Five per problem",
+          "Five in five-trace studies; two in the early-state adaptation"
+        ],
+        [
+          "Models and data",
+          "Three frontier models; GraphWalks 256K, MRCRv2 and NUB-1M",
+          "Local Qwen variants; selected shorter official graph questions only"
+        ],
+        [
+          "Generation limits",
+          "No custom client-side maximum requested; effective provider defaults not established",
+          "Explicit local context and output caps, recorded for every request"
+        ],
+        [
+          "Prompt controls",
+          "Question first and Re2 alongside placement controls",
+          "Short pilot: direct and placement; native long trial and early state add question first and Re2"
+        ],
+        [
+          "Outcome handling",
+          "Task-specific scoring and failure rules",
+          "Frozen local visible-answer rules, with missing responses and qualification failures distinguished"
+        ]
+      ]
+    },
+    {
+      "source": "main.tex",
+      "label": "tab:hybrid-source",
+      "number": "7",
+      "pdf_page": 23,
+      "caption_sha256": "e76faf2a5da05c696297856128ae639a722a1e01ef3dce6a7ac15ebffa11b585",
+      "caption_anchor_present": true,
+      "tabular_sha256": "bcb1e4658d51e46e8d0c80e153d8cdee794a7a33cc52488db9c8d6f028cf2915",
+      "rows_checked": 5,
+      "cells": [
+        [
+          "Short parents",
+          "2/4",
+          "100.00",
+          "100.00",
+          "4/4"
+        ],
+        [
+          "Short BFS",
+          "2/4",
+          "100.00",
+          "100.00",
+          "4/4"
+        ],
+        [
+          "Long parents",
+          "2/4",
+          "100.00",
+          "100.00",
+          "4/4"
+        ],
+        [
+          "Long BFS",
+          "2/4",
+          "71.43",
+          "50.00",
+          "4/4"
+        ],
+        [
+          "All planned tasks",
+          "8/16",
+          "92.86",
+          "87.50",
+          "16/16"
+        ]
+      ]
+    },
+    {
+      "source": "main.tex",
+      "label": "tab:indexed-interrupted",
+      "number": "8",
+      "pdf_page": 26,
+      "caption_sha256": "be5de7cb03739417129ae981698f888b1cdf0b7ba414fda3a694c1dfba318180",
+      "caption_anchor_present": true,
+      "tabular_sha256": "5c4af859b568b3137e2f0a7d2b27a759ca0fff4c076390c67399662ccf9fe976",
+      "rows_checked": 6,
+      "cells": [
+        [
+          "Original / on",
+          "16",
+          "44.84",
+          "12.50",
+          "107,475"
+        ],
+        [
+          "Original / off",
+          "15",
+          "28.39--34.64",
+          "0--6.25",
+          "53,844^*"
+        ],
+        [
+          "Compact / on",
+          "15",
+          "56.04--62.29",
+          "43.75--50.00",
+          "51,247^*"
+        ],
+        [
+          "Compact / off",
+          "16",
+          "25.80",
+          "0",
+          "36,047"
+        ],
+        [
+          "Indexed / on",
+          "16",
+          "40.77",
+          "31.25",
+          "52,847"
+        ],
+        [
+          "Indexed / off",
+          "16",
+          "44.50",
+          "12.50",
+          "23,032"
+        ]
+      ]
+    }
+  ],
+  "display_math": [
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "f1d0009fe7a5759cd3632ae95ad7db584e5081c4695b12b5f4c5845c76c875c1",
+      "tex": "\\[\n F_1(P,G)=\\begin{cases}\n 1,&P=G=\\varnothing,\\\\\n \\displaystyle\\frac{2|P\\cap G|}{|P|+|G|},&\\text{otherwise},\n \\end{cases}\n \\qquad \\mathrm{EM}(P,G)=\\mathbf{1}\\{P=G\\}.\n\\]"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "272211f238ecafe69c563df099b429fd5aef16b9184c6f645cfa6e2a8f1f9d10",
+      "tex": "\\[\n I>C/4\\quad\\Longrightarrow\\quad 5I>I+C.\n\\]"
+    }
+  ],
+  "inline_math": [
+    {
+      "source": "main.tex",
+      "sha256": "51c8b4ef36fae6d1124dfb4b2bfd4da5757028494cd65aee9bb6f769a958ec46",
+      "tex": "$[0.0437,0.1914]$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "35d9cdeec01ac850ddbda8b8322e7f3d811057aa016e6147ab6d2203d973e0c0",
+      "tex": "$p=0.00624$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "93ba4e82ee6ac01c0a05b3e7b3cd13b57326cf1ce36d54a91c1b393979746d00",
+      "tex": "$[2000,3500)$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "3b06002227e4f5788299b9479985cd3e4e2793944921a1a4d4681ab6364b54a2",
+      "tex": "$[14000,16000)$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "3a1c2b5ecd336707964e9d57248fdddd0d0fe9371cd5485dcd1f05a994b79adf",
+      "tex": "$6/7$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "4a1f941b3c6f426ec08de78c17e2f80f07a8b789701ba6b25126da00fab1231c",
+      "tex": "$I$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "2a6f81ee63754c7772494d0f9901d5bdfb837dc7cd3bc5eff66467bd08dee26f",
+      "tex": "$C$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "4a3df97442865139514fa3f35e296b020f8d075f1d0f36bd027000fb4113a462",
+      "tex": "$I+C$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "7bfd884c2afa85ece9a1e573cd5017dae519effd167908aac9998adc88bf2a90",
+      "tex": "$5I$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "317763cfff0d7d92f02b985beae01d26ca710d783accb1ce45524986e440b84f",
+      "tex": "$I>C/4$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "4a1401b39db0ff93673ae0d9b00aff6b35c9effb53cbc99f73743fb4b71c0280",
+      "tex": "$C=32{,}768$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "c4f313c6a0c88e228c108ab894956e20e203343c98c7d41ae86cf8a4e31548f7",
+      "tex": "$[0.0344,0.9969]$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "ab110a0b15bbfb8686299f2ccfa505f2c567b2d49cd9809c3c65078edf702de8",
+      "tex": "$[0.0342,0.9967]$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "7fa6971bf584d8c4469cdbce076fd2eb0bf1a87f3d239c79a29abcecc0e2e71f",
+      "tex": "$[0.0360,0.9985]$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "697608742fd6c0a35f4d10f2b019085c92f38967d8246bd39a50e498482bcccd",
+      "tex": "$[0,0.95]$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "bb1f268f1359ad6bd2f5e6cc5064323a37e95319f23762c020ed394517081c8f",
+      "tex": "$^{*}$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "bb1f268f1359ad6bd2f5e6cc5064323a37e95319f23762c020ed394517081c8f",
+      "tex": "$^{*}$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "3b4b5abd40a88678a682a1397269495e3cf3e2b29a674da97dfaa53a1eca5276",
+      "tex": "$+0.1523$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "9ea44aafce8bcba9c47e8d17e30ac80e34332c01c0e11df53830a04e0d692af5",
+      "tex": "$[-0.2115,0.4098]$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "265686d3c6c0c4d7db7534cd99e7679239545682ca5a0ee1f718e75171734ff5",
+      "tex": "$+0.2662$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "ba839fcc6c28842e7f8e9acdddb12bb5d7cd4ed5e53a7f687dc7c9d523d21102",
+      "tex": "$[0.0109,0.4699]$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "61eccddb30fa0741c1e9a988a1ffeeaa7df73ae8a416477762eda4d024dd630c",
+      "tex": "$[-35.19,-10.10]$"
+    },
+    {
+      "source": "main.tex",
+      "sha256": "02b3e895b5f4b571b9b1ed217316a8f9f4019e556f2f907c07f773392e960992",
+      "tex": "$[-13.34,-0.61]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "22bf003d6cac79e1d917cacdab9539c5d59468c02c22d29c08df00834ee4bbe6",
+      "tex": "$x$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "2d71baee65a33d7bf4a8aff45e1eaa40b228c18e97befd6644a813e6a04047fc",
+      "tex": "$q$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "cd15d3a571b67c26cfa4d135c0beb323c631d85844625699d123761440301d5d",
+      "tex": "$T$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "a5eeb1aa9f9fe5d662de1657e76cb975bff7f484cbe7be88b038669d7512a4ed",
+      "tex": "$[T,x,q]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "66416153b28afb2dfcc5bc5e9c1d3dcd26a7e2e2e2f6f306a6195d0fb26a8c11",
+      "tex": "$[x,T,q]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "cd15d3a571b67c26cfa4d135c0beb323c631d85844625699d123761440301d5d",
+      "tex": "$T$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "75512ddea8e11e52c32f0fe82f3ae30542e190afa688e2681519f0dda88181e3",
+      "tex": "$[x,q]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "b97794236bbe89a71571881b961d81b923afde0c80145fe5cbcd0c62f3c96e86",
+      "tex": "$[q,x,q]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "936b66b5b67f2058e94fd6b7a17529ead5a2dd344ba947954365cedc6f4156f9",
+      "tex": "$[x,q,x,q]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "75512ddea8e11e52c32f0fe82f3ae30542e190afa688e2681519f0dda88181e3",
+      "tex": "$[x,q]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "ea6649a9e145c333693e04f2dfe6435ea3f67511edf186c7d4e9dc63058f446e",
+      "tex": "$p$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "2725b2d0fc640cb2728a1834f8c41d47e601a7313494a3c35628268f485f3a5f",
+      "tex": "$k$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "ea6649a9e145c333693e04f2dfe6435ea3f67511edf186c7d4e9dc63058f446e",
+      "tex": "$p$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "2725b2d0fc640cb2728a1834f8c41d47e601a7313494a3c35628268f485f3a5f",
+      "tex": "$k$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "93ba4e82ee6ac01c0a05b3e7b3cd13b57326cf1ce36d54a91c1b393979746d00",
+      "tex": "$[2000,3500)$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "ea6649a9e145c333693e04f2dfe6435ea3f67511edf186c7d4e9dc63058f446e",
+      "tex": "$p$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "2725b2d0fc640cb2728a1834f8c41d47e601a7313494a3c35628268f485f3a5f",
+      "tex": "$k$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "ea6649a9e145c333693e04f2dfe6435ea3f67511edf186c7d4e9dc63058f446e",
+      "tex": "$p$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "62e17fd7aac29ef537588b00e4ec93419079e730f4190e27fe2f67ef2311f256",
+      "tex": "$5\\times4096+8192$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "83e05657563b28cf0b63748e1c794cad196c106a2c5499d9fa561d9a35e7f865",
+      "tex": "$P$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "9f999f3336057a30ba88cfc952c6c77e5103882f11c7bdf1bbe13b4cba803242",
+      "tex": "$G$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "bd228e284d802c4f6a57811c2a795c77bb5c8baa067dd8eee2a67366df6df63e",
+      "tex": "$N$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "cc09daba676fcefcfb20c1e9e42db1b746b5953e04532813493b40fb4841c60e",
+      "tex": "$m$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "a60509b464bf79e31d2f6b3c34ffa243efe1e49927535ef77991225d0b5dc87d",
+      "tex": "$[\\sum F_1/N,(\\sum F_1+m)/N]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "7a32a25f69be12813f9f8b4289814de3a8c8674ff95a9411c499f7275f813bfd",
+      "tex": "$[3500,6500)$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "ea6649a9e145c333693e04f2dfe6435ea3f67511edf186c7d4e9dc63058f446e",
+      "tex": "$p$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "2725b2d0fc640cb2728a1834f8c41d47e601a7313494a3c35628268f485f3a5f",
+      "tex": "$k$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "ea6649a9e145c333693e04f2dfe6435ea3f67511edf186c7d4e9dc63058f446e",
+      "tex": "$p$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "8ef7f97f5689c2a5e1b768b68a97c906d5499adcb1fa117c5651c0f81ea14cf7",
+      "tex": "$82\\,^{\\circ}\\mathrm{C}$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "1a0a5cb798eaac1af2bec139e0ad42c78572843e76da75895c190f2e8d79eebe",
+      "tex": "$76\\,^{\\circ}\\mathrm{C}$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "ab9538a1c9ff70d2f11a493b15bf13e49c641802c2ad3fecbf722bfbc4ad9717",
+      "tex": "$p\\leq0.05$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "c2532ee0cf464df5f2bd72406540896ef44feedf3794abd62602a664445e4d05",
+      "tex": "$[-0.65,8.33]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "de87de7600aa271dcabf07425498884545919262413b1bee7bd47118092955b2",
+      "tex": "$[-3.00,17.98]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "12d0ad452c9d89574ee78106a3f95030044b499b815f2a99f8f572877df1593d",
+      "tex": "$+20.79$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "42e7b8bd2a763e2a126ac07fc23619ff8e31bd3f4ce692f6cc606865f21f2cb7",
+      "tex": "$-4.80$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "807b1a0fa286023eb82b7851f4c268c9c4467a13c673ae1220fb9fd4232a56d7",
+      "tex": "$8.53$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "45e507227c51687d7d88e1a0a704b80b6f0824a5fb24c27d338d53609f5ad6a3",
+      "tex": "$[13.67,46.67]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "44e73b01f800fe17a48bb831b4b2a6273ca30459a1d3f18c186ef75d9be13da0",
+      "tex": "$+0.67$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "d4949de5028a1009c728eeb6e532d53db487d21a82207f42dabedc80ff204971",
+      "tex": "$+60.00$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "f10cdc25aa24a64315a5be72920eb1515eb78a43a51a4707601d3f09902a4482",
+      "tex": "$6.29$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "5935d60be07c5084cc18b9eef377fe2ca1649ddfbafb8f3d11b96f17995838ff",
+      "tex": "$[13.33,46.67]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "4a1f941b3c6f426ec08de78c17e2f80f07a8b789701ba6b25126da00fab1231c",
+      "tex": "$I$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "2a6f81ee63754c7772494d0f9901d5bdfb837dc7cd3bc5eff66467bd08dee26f",
+      "tex": "$C$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "7bfd884c2afa85ece9a1e573cd5017dae519effd167908aac9998adc88bf2a90",
+      "tex": "$5I$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "4a3df97442865139514fa3f35e296b020f8d075f1d0f36bd027000fb4113a462",
+      "tex": "$I+C$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "08fb1a5912197da51df82a929ccdf7b766f9c4af601bd33a4196b5a5fc078f81",
+      "tex": "$I>8192$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "ad4404ea14e3307e2c1e8d2420f0e1caefe7ee75bd6d08b531b55f60693f35f0",
+      "tex": "$C=32768$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "be1c8e64c80397413bf5e71da575c3e8b6ab498848b1a76740a406b3692a81a5",
+      "tex": "$[-21.15,40.98]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "c1b9910fc918c5daf7435294fd7841feabbbf252fd6ba3d23e83b28971ccf88d",
+      "tex": "$[0.0394,0.2769]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "51c8b4ef36fae6d1124dfb4b2bfd4da5757028494cd65aee9bb6f769a958ec46",
+      "tex": "$[0.0437,0.1914]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "35d9cdeec01ac850ddbda8b8322e7f3d811057aa016e6147ab6d2203d973e0c0",
+      "tex": "$p=0.00624$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "f86dd345c9ea717c4617bcdb35f95c147e2298005852acc9270b5af2d962c323",
+      "tex": "$[1.170,1.667]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "fbcf65a9c251c37216a8b07568102aa7c15c7fb16944ff3046f6dbe86df5d786",
+      "tex": "$[0.630,1.119]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "a119c466e00ad07dd0f4b70560bce52a169f19ac7d8ce36ec3669c01e9d52084",
+      "tex": "$[0.3320,0.5656]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "f66a848d2d42ca43158c81994a8b0a0678c92669ed187f869c4314874b1f0e2f",
+      "tex": "$[0.724,0.896]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "fdb7e4174324b03133889268d9624a9dc5c8c9e2798f06f27d19ae470afd50d0",
+      "tex": "$[0.2931,0.5087]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "e307343351d934fa10d8a0aa2383f569312e4bceb1493fca29c8914140e92426",
+      "tex": "$[0.635,0.877]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "a0793f13dddef6d2a3f38346db603d9c71413f5dc912d05f83d45f472db5c6d6",
+      "tex": "$[0.1932,0.4759]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "606b45e2fc4cec097f22a7719390f8e618b5157f9c57ab2471da4b1535798d13",
+      "tex": "$[0.466,0.711]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "98a53ea53ec2dac98b5b0b64f188844e78b8133e68a48b292e4069d1fb826199",
+      "tex": "$[-0.0321,0.1705]$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "9278ece5531d3c2ef7dd7cfe364d616cd47269826c55f24f76aa7c3410372dba",
+      "tex": "$p=0.36592$"
+    },
+    {
+      "source": "migration_primary_body.tex",
+      "sha256": "e093a5773d62d2284de3bc9272381fb844978389a2ee2c7cbbd64718a1ba7fe9",
+      "tex": "$[-0.0600,0.1695]$"
+    },
+    {
+      "source": "migration_gate_map.tex",
+      "sha256": "08d5c05b46ab7e037a999c983ebb4a8e07a72a3266a446e95f5751b49aeabd39",
+      "tex": "$0.70$"
+    },
+    {
+      "source": "migration_gate_map.tex",
+      "sha256": "dde2209b43c24079fd0d28a4c5189869713f192301135185f152b898c644ca37",
+      "tex": "$0.50$"
+    },
+    {
+      "source": "migration_gate_map.tex",
+      "sha256": "2e8d71002f4e6081c2067888f9bb59eb3118132522dee0901c363d14576422f8",
+      "tex": "$0.05$"
+    },
+    {
+      "source": "migration_gate_map.tex",
+      "sha256": "ec0df0ddeb4f07a1bd52c7a48e754e61a952a3d540af96739fd773400d44a618",
+      "tex": "$p<0.05$"
+    },
+    {
+      "source": "reproduction_evidence_map.tex",
+      "sha256": "cd15d3a571b67c26cfa4d135c0beb323c631d85844625699d123761440301d5d",
+      "tex": "$T$"
+    },
+    {
+      "source": "reproduction_evidence_map.tex",
+      "sha256": "a5eeb1aa9f9fe5d662de1657e76cb975bff7f484cbe7be88b038669d7512a4ed",
+      "tex": "$[T,x,q]$"
+    },
+    {
+      "source": "reproduction_evidence_map.tex",
+      "sha256": "66416153b28afb2dfcc5bc5e9c1d3dcd26a7e2e2e2f6f306a6195d0fb26a8c11",
+      "tex": "$[x,T,q]$"
+    },
+    {
+      "source": "reproduction_evidence_map.tex",
+      "sha256": "5a91d206785aa6fa4360d4b719aa63c50fa214ec9b9d588eb775313b4228c5f6",
+      "tex": "$[-1.92,14.33]$"
+    },
+    {
+      "source": "reproduction_evidence_map.tex",
+      "sha256": "892a378d8d980a116f480ef27463a59b364b34a7e7a62c45c6b33a850340d47b",
+      "tex": "$[-0.39,31.67]$"
+    },
+    {
+      "source": "reproduction_evidence_map.tex",
+      "sha256": "7f0420394d7a748c0e34767a1b684941ad6c0bdab609b704f71e4a9ff21724a2",
+      "tex": "$8.07$"
+    },
+    {
+      "source": "early_state_detail.tex",
+      "sha256": "047f1add44f6acce667b4ed8ce87cf1ddbe525c9f7e8d251d87c26abe17af1a7",
+      "tex": "$[0.34375,0.78125]$"
+    },
+    {
+      "source": "early_state_detail.tex",
+      "sha256": "ff0f65756612cf5a1f39eb74c081fc097552f06e6f8ac40828c0a5091b9e3fb8",
+      "tex": "$[0.19585,0.63335]$"
+    }
+  ],
+  "citation_keys": [
+    "openai2025graphwalks",
+    "qwen2026qwen35card",
+    "tang2026trace",
+    "xu2024rereading",
+    "yang2025qwen3"
+  ],
+  "bibliography_sha256": "f03d4ffaf8de9ad2a5d3a223ccdf16ec4e9c224f5507a78d30ebdf85cc3cbeb0"
+}

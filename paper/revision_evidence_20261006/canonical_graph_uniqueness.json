@@ -1,0 +1,80 @@
+{
+  "selected_question_count": 12,
+  "distinct_canonical_labelled_graphs": 12,
+  "duplicate_groups": [],
+  "checks": [
+    {
+      "row_index": 424,
+      "problem_type": "bfs",
+      "edge_count": 42,
+      "canonical_labelled_edge_sha256": "db8e85c2e9138966f728b50966cfd084ec072e3df9abc527118698994ac8db95"
+    },
+    {
+      "row_index": 417,
+      "problem_type": "bfs",
+      "edge_count": 42,
+      "canonical_labelled_edge_sha256": "543b222bc41aef8faf8631cdc9aa58bdfefe41f7ae6cce8030476c61089f6202"
+    },
+    {
+      "row_index": 32,
+      "problem_type": "parents",
+      "edge_count": 42,
+      "canonical_labelled_edge_sha256": "449d806722e2afcee956fa2292c28cb093249580d5c2d99c64fe65171b0a62d2"
+    },
+    {
+      "row_index": 31,
+      "problem_type": "parents",
+      "edge_count": 38,
+      "canonical_labelled_edge_sha256": "281d4c2d8b8c643c8cdcd6598114313671174d41861499b1ba77eccc4755bdd7"
+    },
+    {
+      "row_index": 420,
+      "problem_type": "bfs",
+      "edge_count": 38,
+      "canonical_labelled_edge_sha256": "e37d33ab79c3095ddc8f815553502cfdfdd35c2e7eb4fd4ec4c2eef7791b8ab5"
+    },
+    {
+      "row_index": 36,
+      "problem_type": "parents",
+      "edge_count": 35,
+      "canonical_labelled_edge_sha256": "755b51ae4b3533c3fbc8b08e190c10114d3b8ea12d014ef4cd234b23f74047e2"
+    },
+    {
+      "row_index": 423,
+      "problem_type": "bfs",
+      "edge_count": 38,
+      "canonical_labelled_edge_sha256": "00c1117ccb4302aac6184f5fcaa40a18e08680be5cafa52627d5186b9f854775"
+    },
+    {
+      "row_index": 421,
+      "problem_type": "bfs",
+      "edge_count": 33,
+      "canonical_labelled_edge_sha256": "252aa5ea7ce8979e1a5ce6aa0b9cd2412e92d1ae90d713c3997b3f19ff07de17"
+    },
+    {
+      "row_index": 21,
+      "problem_type": "parents",
+      "edge_count": 38,
+      "canonical_labelled_edge_sha256": "8ed5af0b4f0d2793cc9cde353cb19a7ba625ef6a90933789d03faa1ff0e1912b"
+    },
+    {
+      "row_index": 17,
+      "problem_type": "parents",
+      "edge_count": 36,
+      "canonical_labelled_edge_sha256": "bbeb8d82244bc72ec615615dbb9c5bc41b0ad8205a012f929f959d30bede3ebc"
+    },
+    {
+      "row_index": 42,
+      "problem_type": "parents",
+      "edge_count": 41,
+      "canonical_labelled_edge_sha256": "9a59dfc66e56f0c7849d8bc24e29d9cb0cd147867a2550b6beb438f090c92d72"
+    },
+    {
+      "row_index": 422,
+      "problem_type": "bfs",
+      "edge_count": 36,
+      "canonical_labelled_edge_sha256": "a67abaa8aee29bd0e319d339eef46b41fce67decc5ceb455c8115e4f9c6df989"
+    }
+  ],
+  "scope": "Detects exact labelled-edge graph reuse regardless of edge order; does not certify statistical independence or test graph isomorphism"
+}

@@ -1,0 +1,391 @@
+{
+  "dependencies": {
+    "logs\\official_graph_budget_extension\\frozen.json": "64ed7eb78161929f63e4c8eca9de7883b22cad0a39f390a95ee5756eae539b4d",
+    "logs\\official_graph_budget_extension\\results.json": "4f9d03b8b9cd35c806fe85d0858f04f6bc064fbef8f596cb516b79921cc63f75",
+    "run_official_graph_native_order.py": "7519608fab594695231687c3d78324d5ccfe042180c6204ff296ce66bdee34ed",
+    "run_official_graph_native_probe.py": "1e437859c65b0fcb5008635144af17e8e5f101813b5914c773e30fd7508da825",
+    "protocol_official_graph_native_order_20261003.md": "f23f4662c1d4805ae57d10ba7d9b5ab12fae6014ef41187bdc099b6b3f5fb0b3"
+  },
+  "qualified_models": [
+    "qwen3:1.7b"
+  ],
+  "cases": [
+    {
+      "model": "qwen3:1.7b",
+      "paper_row": {
+        "row_index": 1,
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> eccbc87e4b\ncfcd208495 -> c9f0f895fb\ncfcd208495 -> e4da3b7fbb\ncfcd208495 -> 1679091c5a\ncfcd208495 -> c4ca4238a0\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> c4ca4238a0\nc4ca4238a0 -> eccbc87e4b\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> c4ca4238a0\nc81e728d9d -> e4da3b7fbb\nc81e728d9d -> a87ff679a2\nc81e728d9d -> 1679091c5a\nc81e728d9d -> e4da3b7fbb\nc81e728d9d -> a87ff679a2\neccbc87e4b -> eccbc87e4b\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> 8f14e45fce\neccbc87e4b -> eccbc87e4b\neccbc87e4b -> c4ca4238a0\na87ff679a2 -> cfcd208495\na87ff679a2 -> c9f0f895fb\na87ff679a2 -> e4da3b7fbb\na87ff679a2 -> e4da3b7fbb\na87ff679a2 -> cfcd208495\ne4da3b7fbb -> 1679091c5a\ne4da3b7fbb -> a87ff679a2\ne4da3b7fbb -> 8f14e45fce\ne4da3b7fbb -> 8f14e45fce\ne4da3b7fbb -> c4ca4238a0\n1679091c5a -> c4ca4238a0\n1679091c5a -> a87ff679a2\n1679091c5a -> e4da3b7fbb\n1679091c5a -> cfcd208495\n1679091c5a -> 1679091c5a\n8f14e45fce -> a87ff679a2\n8f14e45fce -> cfcd208495\n8f14e45fce -> c9f0f895fb\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> c81e728d9d\nc9f0f895fb -> c81e728d9d\nc9f0f895fb -> 8f14e45fce\nc9f0f895fb -> 8f14e45fce\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> 8f14e45fce\n\n\nOperation:\nFind the parents of node e4da3b7fbb.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "c81e728d9d",
+          "cfcd208495",
+          "a87ff679a2",
+          "1679091c5a",
+          "eccbc87e4b"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      },
+      "source_request_sha256": "e0c8086ace748624f8dfca91801f2f2d7e1239d9021bb3335ff22dc0322282db",
+      "trace": "Below are selected reasoning traces or trace tail windows from independent first attempts on the same graph problem. They may contain mistakes. Use them only as scratchpad hints, and verify against the graph.\n<first_run_reasoning_traces>\n[Trace 1] Okay, let's see. The task is to find the parents of node e4da3b7fbb. Parents here mean the nodes that have an edge pointing to e4da3b7fbb. So I need to look through all the edges in the graph and check which nodes have a directed edge pointing to e4da3b7fbb.\n\nFirst, I'll go through the edges provided. Let me list out the edges to make it easier. The graph has several edges. Let me parse them one by one.\n\nThe edges are:\n\n1. cfcd208495 -> eccbc87e4b\n2. cfcd208495 -> c9f0f895fb\n3. cfcd208495 -> e4da3b7fbb\n4. cfcd208495 -> 1679091c5a\n5. cfcd208495 -> c4ca4238a0\n6. c4ca4238a0 -> 1679091c5a\n7. c4ca4238a0 -> c4ca4238a0\n8. c4ca4238a0 -> eccbc87e4b\n9. c4ca4238a0 -> c9f0f895fb\n10. c4ca4238a0 -> c4ca4238a0\n11. c81e728d9d -> e4da3b7fbb\n12. c81e728d9d -> a87ff679a2\n13. c81e728d9d -> 1679091c5a\n14. c81e728d9d -> e4da3b7fbb\n15. c81e728d9d -> a87ff679a2\n16. c81e728d9d -> 1679091c5a\n17. c81e728d9d -> e4da3b7fbb\n18. c81e728d9d -> a87ff679a2\n19. c81e728d9d -> 1679091c5a\n20. c81e728d9d -> e4da3b7fbb\n21. c81e728d9d -> a87ff679a2\n22. eccbc87e4b -> eccbc87e4b\n23. eccbc87e4b -> e4da3b7fbb\n24. eccbc87e4b -> 8f14e45fce\n25. eccbc87e4b -> eccbc87e4b\n26. eccbc87e4b -> c4ca4238a0\n27. a87ff679a2 -> cfcd208495\n28. a87ff679a2 -> c9f0f895fb\n29. a87ff679a2 -> e4da3b7fbb\n30. a87ff679a2 -> e4da3b7fbb\n31. a87ff679a2 -> cfcd208495\n32. e4da3b7fbb -> 1679091c5a\n33. e4da3b7fbb -> a87ff679a2\n34. e4da3b7fbb -> 8f14e45fce\n35. e4da3b7fbb -> 8f14e45fce\n36. e4da3b7fbb -> c4ca4238a0\n37. 1679091c5a -> c4ca4238a0\n38. 1679091c5a -> a87ff679a2\n39. 1679091c5a -> e4da3b7fbb\n40. 1679091c5a -> cfcd208495\n41. 1679091c5a -> 1679091c5a\n42. 8f14e45fce -> a87ff679a2\n43. 8f14e45fce -> cfcd208495\n44. 8f14e45fce -> c9f0f895fb\n45. 8f14e45fce -> eccbc87e4b\n46. 8f14e45fce -> c81e728d9d\n47. c9f0f895fb -> c81e728d9d\n48. c9f0f895fb -> 8f14e45fce\n49. c9f0f895fb -> 8f14e45fce\n50. c9f0f895fb -> eccbc87e4b\n51. c9f0f895fb -> 8f14e45fce\n\nNow, I need to find which nodes have an edge pointing to e4da3b7fbb. Let's look through the edges.\n\nLooking at the edges, the ones that point to e4da3b7fbb are:\n\n- Edge 3: cfcd208495 -> e4da3b7fbb\n- Edge 11: c81e728d9d -> e4da3b7fbb\n- Edge 17: c81e728d9d -> e4da3b7fbb\n- Edge 20: c81e728d9d -> e4da3b7fbb\n- Edge 23: eccbc87e4b -> e4da3b7fbb\n- Edge 36: e4da3b7fbb -> ... (but this is the node itself, so not counted as a parent)\n- Also, check if there are others. Let me check again.\n\nWait, edge 3 is cfcd208495 -> e4da3b7fbb. Then edge 11 is c81e728d9d -> e4da3b7fbb. Edge 17 is same as 11? Wait, looking at the list:\n\nEdge 11: c81e728d9d -> e4da3b7fbb\nEdge 17: c81e728d9d -> e4da3b7fbb\nEdge 20: c81e728d9d -> e4da3b7fbb\nEdge 23: eccbc87e4b -> e4da3b7fbb\n\nSo the parents are cfcd208495, c81e728d9d, eccbc87e4b.\n\nWait, let me check again. Are there any other edges pointing to e4da3b7fbb?\n\nLooking at edge 3: cfcd208495 -> e4da3b7fbb. Yes.\n\nEdge 11: c81e728d9d -> e4da3b7fbb.\n\nEdge 17: same as 11? Wait, in the list, edge 17 is c81e728d9d -> e4da3b7fbb. So that's the same as edge 11. So that's three edges pointing to e4da3b7fbb from c81e728d9d.\n\nThen edge 23: eccbc87e4b -> e4da3b7fbb.\n\nSo the parents are cfcd208495, c81e728d9d, and eccbc87e4b.\n\nTherefore, the set of nodes is {cfcd208495, c81e728d9d, eccbc87e4b}.\n\nBut wait, the problem says \"the parents of a node\" are the nodes that have an edge leading to the given node, and do not include the given node itself. So in this case, the parents are the ones that point to e4da3b7fbb. So the answer should be those three nodes.\n\nSo the final answer is [cfcd208495, c81e728d9d, eccbc87e4b].\n</first_run_reasoning_traces>",
+      "source_score": {
+        "prediction": [
+          "cfcd208495",
+          "c81e728d9d",
+          "eccbc87e4b"
+        ],
+        "valid": true,
+        "em": 0.0,
+        "f1": 0.75
+      }
+    },
+    {
+      "model": "qwen3:1.7b",
+      "paper_row": {
+        "row_index": 401,
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> e4da3b7fbb\ncfcd208495 -> 45c48cce2e\ncfcd208495 -> d3d9446802\ncfcd208495 -> e4da3b7fbb\nc4ca4238a0 -> cfcd208495\nc4ca4238a0 -> d3d9446802\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> 8f14e45fce\nc81e728d9d -> e4da3b7fbb\nc81e728d9d -> c9f0f895fb\nc81e728d9d -> c4ca4238a0\nc81e728d9d -> cfcd208495\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> cfcd208495\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> a87ff679a2\na87ff679a2 -> d3d9446802\na87ff679a2 -> d3d9446802\na87ff679a2 -> e4da3b7fbb\na87ff679a2 -> cfcd208495\ne4da3b7fbb -> d3d9446802\ne4da3b7fbb -> 8f14e45fce\ne4da3b7fbb -> d3d9446802\ne4da3b7fbb -> eccbc87e4b\n1679091c5a -> a87ff679a2\n1679091c5a -> c81e728d9d\n1679091c5a -> 45c48cce2e\n1679091c5a -> c9f0f895fb\n8f14e45fce -> 8f14e45fce\n8f14e45fce -> cfcd208495\n8f14e45fce -> a87ff679a2\n8f14e45fce -> 45c48cce2e\nc9f0f895fb -> 1679091c5a\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> e4da3b7fbb\nc9f0f895fb -> cfcd208495\n45c48cce2e -> c4ca4238a0\n45c48cce2e -> c4ca4238a0\n45c48cce2e -> 8f14e45fce\n45c48cce2e -> c81e728d9d\nd3d9446802 -> c81e728d9d\nd3d9446802 -> c81e728d9d\nd3d9446802 -> e4da3b7fbb\nd3d9446802 -> c81e728d9d\n\n\nOperation:\nPerform a BFS from node d3d9446802 and return only the nodes at exactly depth 4 (not nodes at intermediate depths).\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [],
+        "prompt_chars": 2650,
+        "problem_type": "bfs",
+        "date_added": "04-12-2025"
+      },
+      "source_request_sha256": "529902274291286dfd6eef9f1ff81601908a4679fa11e14c5130ead5423cda97",
+      "trace": "Below are selected reasoning traces or trace tail windows from independent first attempts on the same graph problem. They may contain mistakes. Use them only as scratchpad hints, and verify against the graph.\n<first_run_reasoning_traces>\n[Trace 1] Okay, let's tackle this problem step by step. The user wants me to perform a BFS from node d3d9446802 and return only the nodes at exactly depth 4. \n\nFirst, I need to understand the graph structure. The graph has a lot of edges, but I need to focus on the nodes and their connections. Let me list out the nodes and their edges to visualize the structure.\n\nLooking at the edges provided:\n\n- The node d3d9446802 has edges to c81e728d9d, cfcd208495, e4da3b7fbb, and c4ca4238a0. Wait, actually, looking at the edges, d3d9446802 is connected to c81e728d9d, cfcd208495, e4da3b7fbb, and c4ca4238a0. Also, there's an edge from c4ca4238a0 to d3d9446802, but that's probably a bidirectional connection. But since the graph is directed, I need to follow the edges as given.\n\nNow, the BFS starts at d3d9446802. The depth starts at 0, so the initial node is depth 0. Then, its neighbors are depth 1. Then their neighbors are depth 2, and so on.\n\nThe operation specifies to return nodes at exactly depth 4. So I need to track the BFS levels.\n\nLet me try to map out the levels:\n\nLevel 0: d3d9446802 (depth 0)\nLevel 1: nodes directly connected to d3d9446802. From the edges, d3d9446802 is connected to c81e728d9d, cfcd208495, e4da3b7fbb, and c4ca4238a0. So level 1 nodes are these four.\n\nLevel 2: nodes connected to level 1 nodes, but not already visited. Let's check each node in level 1.\n\nFirst, c81e728d9d is connected to e4da3b7fbb, c4ca4238a0, and cfcd208495. But wait, the edges for c81e728d9d are: c81e728d9d -> e4da3b7fbb, c81e728d9d -> c4ca4238a0, and c81e728d9d -> cfcd208495. So the neighbors are e4da3b7fbb, c4ca4238a0, cfcd208495. But c4ca4238a0 is already in level 1. So for level 2, we add e4da3b7fbb and cfcd208495, but wait, cfcd208495 is already in level 1? Wait, no. Wait, d3d9446802 is connected to cfcd208495. So cfcd208495 is in level 1. So when processing c81e728d9d's neighbors, e4da3b7fbb and cfcd208495 are already in level 1. So the new nodes for level 2 would be the ones not already visited. So for c81e728d9d's neighbors, e4da3b7fbb and cfcd208495 are already in level 1, so no new nodes here. Then, the other neighbor is c4ca4238a0, which is in level 1. So no new nodes from c81e728d9d.\n\nNext, cfcd208495 is connected to e4da3b7fbb, 8f14e45fce, d3d9446802, and c4ca4238a0. But d3d9446802 is in level 0, and c4ca4238a0 is in level 1. So the neighbors for cfcd208495 are e4da3b7fbb (already in level 1), 8f14e45fce, and c4ca4238a0 (level 1). So 8f14e45fce is new for level 2.\n\nThen, e4da3b7fbb is connected to d3d9446802 (level 0), 8f14e45fce, d3d9446802 again, and eccbc87e4b. So the neighbors are 8f14e45fce (level 2?), d3d9446802 (already visited), and eccbc87e4b. So eccbc87e4b is new for level 2.\n\nThen, c4ca4238a0 is connected to d3d9446802 (level 0), 1679091c5a, 8f14e45fce, and 8f14e45fce again. So the neighbors are 1679091c5a (new for level 2) and 8f14e45fce (already in level 2? Wait, 8f14e45fce was added from cfcd208495's neighbor. So yes, 8f14e45fce is in level 2. So the new node here is 1679091c5a.\n\nSo level 2 nodes are 8f14e45fce, 1679091c5a, and eccbc87e4b. Wait, let me check again:\n\nFrom c81e728d9d's neighbors: e4da3b7fbb (level 1), cfcd208495 (level 1), and c4ca4238a0 (level 1). So no new nodes here.\n\nFrom cfcd208495's neighbors: e4da3b7fbb (level 1), 8f14e45fce (new), and c4ca4238a0 (level 1). So 8f14e45fce is added.\n\nFrom e4da3b7fbb's neighbors: d3d9446802 (level 0), 8f14e45fce (level 2), d3d9446802 again, and eccbc87e4b. So eccbc87e4b is new.\n\nFrom c4ca4238a0's neighbors: d3d9446802 (level 0), 1679091c5a (new), 8f14e45fce (level 2), and 8f14e45fce again. So 1679091c5a is added.\n\nSo level 2 nodes are 8f14e45fce, 1679091c5a, and eccbc87e4b.\n\nNow, moving to level 3. These are the nodes connected to level 2 nodes, not already visited.\n\nStarting with 8f14e45fce: connected to 8f14e45fce (self-loop?), 45c48cce2e, c9f0f895fb, and e4da3b7fbb (level 1). So the neighbors are 45c48cce2e and c9f0f895fb. But 45c48cce2e and c9f0f895fb are new for level 3.\n\nNext, 1679091c5a: connected to a87ff679a2, c81e728d9d, 45c48cce2e, and c9f0f895fb. So a87ff679a2 is new for level 3.\n\nThen, eccbc87e4b: connected to a87ff679a2, e4da3b7fbb (level 1), and c81e728d9d. So a87ff679a2 is new for level 3.\n\nSo level 3 nodes are 45c48cce2e, c9f0f895fb, a87ff679a2.\n\nNow, level 4: nodes connected to level 3 nodes, not already visited.\n\nStarting with 45c48cce2e: connected to c4ca4238a0 (level 1), 8f14e45fce (level 2), and c9f0f895fb (level 3). So the neighbors are c4ca4238a0 (already in level 1) and c9f0f895fb (level 3). So no new nodes here.\n\nNext, c9f0f895fb: connected to 1679091c5a (level 2), eccbc87e4b (level 2), and e4da3b7fbb (level 1). So the neighbors are 1679091c5a (level 2) and eccbc87e4b (level 2). No new nodes here.\n\nThen, a87ff679a2: connected to d3d9446802 (level 0), 45c48cce2e (level 3), and c81e728d9d (level 1). So the neighbors are 45c48cce2e (level 3) and c81e728d9d (level 1). So 45c48cce2e is already in level 3. So no new nodes here.\n\nSo level 4 nodes would be any nodes connected to level 3 nodes that haven't been visited yet. But from the above, none are added. Wait, but let me check again.\n\nWait, for 45c48cce2e, its neighbors are c4ca4238a0 (level 1), 8f14e45fce (level 2), and c9f0f895fb (level 3). So c9f0f895fb is in level 3. So when processing 45c48cce2e's neighbors, we check if they are already visited. Since c4ca4238a0 is level 1, which is already visited. 8f14e45fce is level 2, already visited. c9f0f895fb is level 3, already visited. So no new nodes here.\n\nSimilarly for c9f0f895fb's neighbors: 1679091c5a (level 2), eccbc87e4b (level 2), and e4da3b7fbb (level 1). So 1679091c5a and eccbc87e4b are already visited. So no new nodes.\n\nFor a87ff679a2's neighbors: d3d9446802 (level 0), 45c48cce2e (level 3), and c81e728d9d (level 1). So 45c48cce2e is level 3, already visited. So no new nodes.\n\nTherefore, level 4 has no nodes. But wait, the operation says to return nodes at exactly depth 4. So if there are no nodes at depth 4, the answer is an empty set.\n\nBut let me check again. Maybe I missed something. Let me retrace.\n\nLevel 0: d3d9446802\n\nLevel 1: c81e728d9d, cfcd208495, e4da3b7fbb, c4ca4238a0\n\nLevel 2: 8f14e45fce, 1679091c5a, eccbc87e4b\n\nLevel 3: 45c48cce2e, c9f0f895fb, a87ff679a2\n\nLevel 4: none.\n\nSo the answer should be an empty set. But let me check if any nodes were added in level 4. For example, maybe there's a node that's connected to level 3 nodes but not yet visited. But according to the above, none are added. So the final answer is empty.\n</first_run_reasoning_traces>",
+      "source_score": {
+        "prediction": [],
+        "valid": true,
+        "em": 1.0,
+        "f1": 1.0
+      }
+    }
+  ],
+  "model_inventory": {
+    "models": [
+      {
+        "name": "qwen3:8b",
+        "model": "qwen3:8b",
+        "modified_at": "2026-09-30T09:40:32.4117571+08:00",
+        "size": 5225388164,
+        "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "8.2B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 40960,
+          "embedding_length": 4096
+        },
+        "capabilities": [
+          "completion",
+          "tools",
+          "thinking"
+        ]
+      },
+      {
+        "name": "qwen2.5:3b-instruct",
+        "model": "qwen2.5:3b-instruct",
+        "modified_at": "2026-09-29T10:23:24.0269854+08:00",
+        "size": 1929912432,
+        "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen2",
+          "families": [
+            "qwen2"
+          ],
+          "parameter_size": "3.1B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 32768,
+          "embedding_length": 2048
+        },
+        "capabilities": [
+          "completion",
+          "tools"
+        ]
+      },
+      {
+        "name": "qwen3:1.7b",
+        "model": "qwen3:1.7b",
+        "modified_at": "2026-09-29T10:15:44.3088373+08:00",
+        "size": 1359293444,
+        "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "2.0B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 40960,
+          "embedding_length": 2048
+        },
+        "capabilities": [
+          "completion",
+          "tools",
+          "thinking"
+        ]
+      },
+      {
+        "name": "nomic-embed-text:latest",
+        "model": "nomic-embed-text:latest",
+        "modified_at": "2026-09-21T00:14:28.4573049+08:00",
+        "size": 274302450,
+        "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "nomic-bert",
+          "families": [
+            "nomic-bert"
+          ],
+          "parameter_size": "137M",
+          "quantization_level": "F16",
+          "context_length": 2048,
+          "embedding_length": 768
+        },
+        "capabilities": [
+          "embedding"
+        ]
+      },
+      {
+        "name": "qwen3:4b",
+        "model": "qwen3:4b",
+        "modified_at": "2026-09-18T13:14:36.6149998+08:00",
+        "size": 2497293931,
+        "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 2560
+        },
+        "capabilities": [
+          "completion",
+          "tools",
+          "thinking"
+        ]
+      },
+      {
+        "name": "openbmb/minicpm5-2b:latest",
+        "model": "openbmb/minicpm5-2b:latest",
+        "modified_at": "2026-09-14T11:17:19.9681905+08:00",
+        "size": 1561319547,
+        "digest": "71a44e98400fbd490d66332a0ebba31143479a714987c13f45c82e94025cbfa7",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "llama",
+          "families": [
+            "llama"
+          ],
+          "parameter_size": "2.5B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 131072,
+          "embedding_length": 2048
+        },
+        "capabilities": [
+          "tools",
+          "thinking",
+          "completion"
+        ]
+      },
+      {
+        "name": "openbmb/minicpm-o4.5:latest",
+        "model": "openbmb/minicpm-o4.5:latest",
+        "modified_at": "2026-09-10T10:23:12.2428177+08:00",
+        "size": 6121828780,
+        "digest": "e900f7386920e4eeef9a24bf0ab6fcd29ab37fc3439979af6387e49c2893c5db",
+        "details": {
+          "parent_model": "/Users/tianchi/.ollama/models/blobs/sha256-1237a97ee081b8abebc47aa7dad565701e8f5f904cdc92f6723ac4281bbc0932",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3",
+            "clip"
+          ],
+          "parameter_size": "8.2B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 40960,
+          "embedding_length": 4096
+        },
+        "capabilities": [
+          "tools",
+          "thinking",
+          "completion",
+          "vision"
+        ]
+      },
+      {
+        "name": "qwopus-glm18b:latest",
+        "model": "qwopus-glm18b:latest",
+        "modified_at": "2026-07-05T21:29:34.8711342+08:00",
+        "size": 9836642228,
+        "digest": "89af5161f5c022395fd02ed4a0e9ed0cf22e8bfcf13335470e94a44d0c56424e",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen35",
+          "families": [
+            "qwen35"
+          ],
+          "parameter_size": "15.9B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 4096
+        },
+        "capabilities": [
+          "tools",
+          "thinking",
+          "completion"
+        ]
+      },
+      {
+        "name": "llama3.2:3b",
+        "model": "llama3.2:3b",
+        "modified_at": "2026-06-19T23:59:52.738666+08:00",
+        "size": 2019393189,
+        "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "llama",
+          "families": [
+            "llama"
+          ],
+          "parameter_size": "3.2B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 131072,
+          "embedding_length": 3072
+        },
+        "capabilities": [
+          "completion",
+          "tools"
+        ]
+      },
+      {
+        "name": "qwen2.5:7b",
+        "model": "qwen2.5:7b",
+        "modified_at": "2026-06-19T23:57:20.4741817+08:00",
+        "size": 4683087332,
+        "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen2",
+          "families": [
+            "qwen2"
+          ],
+          "parameter_size": "7.6B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 32768,
+          "embedding_length": 3584
+        },
+        "capabilities": [
+          "completion",
+          "tools"
+        ]
+      },
+      {
+        "name": "qwen3.5:4b",
+        "model": "qwen3.5:4b",
+        "modified_at": "2026-06-12T00:18:43.5076114+08:00",
+        "size": 3389983735,
+        "digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen35",
+          "families": [
+            "qwen35"
+          ],
+          "parameter_size": "4.7B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 2560
+        },
+        "capabilities": [
+          "completion",
+          "vision",
+          "tools",
+          "thinking"
+        ]
+      },
+      {
+        "name": "qwen3-vl:8b",
+        "model": "qwen3-vl:8b",
+        "modified_at": "2026-06-08T20:51:32.7398821+08:00",
+        "size": 6140415879,
+        "digest": "901cae73216286ea8c5aba8b46d307ff7188f737285ec500c795a12f05225d28",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3vl",
+          "families": [
+            "qwen3vl"
+          ],
+          "parameter_size": "8.8B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 4096
+        },
+        "capabilities": [
+          "completion",
+          "vision",
+          "tools",
+          "thinking"
+        ]
+      },
+      {
+        "name": "qwen3.6:latest",
+        "model": "qwen3.6:latest",
+        "modified_at": "2026-06-07T21:14:55.4917937+08:00",
+        "size": 23938333577,
+        "digest": "07d35212591fc27746f0a317c975a6d68754fb38e9053d82e25f06057af28522",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen35moe",
+          "families": [
+            "qwen35moe"
+          ],
+          "parameter_size": "36.0B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 2048
+        },
+        "capabilities": [
+          "completion",
+          "vision",
+          "tools",
+          "thinking"
+        ]
+      }
+    ]
+  },
+  "arm_orders": [
+    [
+      "pre",
+      "reread",
+      "post"
+    ],
+    [
+      "post",
+      "reread",
+      "pre"
+    ]
+  ],
+  "producer_cost_already_in_extension": true
+}

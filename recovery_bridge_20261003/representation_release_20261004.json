@@ -1,0 +1,124 @@
+{
+  "status": "two_completed_release_provenance_checks_passed",
+  "inference_calls": 0,
+  "source_sha256": "be54d90e2f04d89c50265dcf3f7d7f7db8f5421dae69b1bcd61c2540db9c483a",
+  "stages": {
+    "identity_recode": {
+      "audited_calls": 48,
+      "unknown_usage_calls": 0,
+      "model_identity": {
+        "name": "qwen3:1.7b",
+        "model": "qwen3:1.7b",
+        "modified_at": "2026-09-29T10:15:44.3088373+08:00",
+        "size": 1359293444,
+        "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "2.0B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 40960,
+          "embedding_length": 2048
+        },
+        "capabilities": [
+          "completion",
+          "tools",
+          "thinking"
+        ]
+      },
+      "independent_graph_units": 8,
+      "seed_repetitions": 2,
+      "physical_research_tokens": 287979,
+      "physical_arm_token_sums": {
+        "original": 114237,
+        "compact": 56591,
+        "long_alias": 117151
+      },
+      "figure_values_match_saved_summary": true,
+      "assets": {
+        "logs\\official_graph_identity_recode\\frozen.json": "74d9118a1163a13aa7c6d613f256684ad88e026169f296bb08b8d0283e0822fe",
+        "logs\\official_graph_identity_recode\\independent_audit.json": "480315c300063f761b2192f5455975cc5524e9ff8798d63f8fc3b8fd3b4029a2",
+        "logs\\official_graph_identity_recode\\results.json": "ed3196a748bbe59e708dc2282f6f650029d6056ae64c5c905ea26bab64d3ddc1",
+        "logs\\official_graph_identity_recode\\summary.json": "6dbb18991b6bdef0c199072e843cbe83f1e01f404ce9d0c58089bfa6f439b0d7",
+        "paper\\figures\\data\\official_graph_identity_recode.csv": "3d59dceac930531b6d8657a04c7fd73ed2eb2ea0026eae9b3e7d38d125e38613",
+        "paper\\figures\\plot_official_graph_identity_recode.R": "aa5f2f5008d3136c01d6928c16d3a560e8965560d792b77deb2f682e4fabc136",
+        "paper\\figures\\official_graph_identity_recode.pdf": "ea7f421c3dc38e03caf867c552ed5e619901fa03566f76bf2d78846a4328f27f",
+        "paper\\figures\\official_graph_identity_recode.png": "795db42f291f3fe02939535de7be17eb3cab9f180786c8c1e81c777555254a86"
+      },
+      "scope": "Existing independent audit certification and figure/data provenance; no new scoring or inference.",
+      "cost_denominator": "Each physical arm sum includes16calls:8graphs×2seeds; mean single reading is arm_sum/16.",
+      "compact_dictionary_bytes": 25156,
+      "preprocessing_seconds": 1.0344405996147543,
+      "gate": false
+    },
+    "reasoning_mode": {
+      "audited_calls": 64,
+      "unknown_usage_calls": 0,
+      "model_identity": {
+        "name": "qwen3:1.7b",
+        "model": "qwen3:1.7b",
+        "modified_at": "2026-09-29T10:15:44.3088373+08:00",
+        "size": 1359293444,
+        "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "2.0B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 40960,
+          "embedding_length": 2048
+        },
+        "capabilities": [
+          "completion",
+          "tools",
+          "thinking"
+        ]
+      },
+      "independent_graph_units": 16,
+      "seed_repetitions": 2,
+      "physical_research_tokens": 338653,
+      "physical_arm_token_sums": {
+        "on": 206611,
+        "off": 132042
+      },
+      "figure_values_match_saved_summary": true,
+      "assets": {
+        "logs\\official_graph_reasoning_mode\\frozen.json": "0519746b7262a90ecbfed0dd6e6bc931360e330ccf0d10355811f37ee911c894",
+        "logs\\official_graph_reasoning_mode\\independent_audit.json": "925bd8b2c14cd2e6713ba5a5f014353467679b515c420a17edac3f3f36b50e5b",
+        "logs\\official_graph_reasoning_mode\\results.json": "89e412d8879349dc1b8d2f194034fb61f58cb8292d72941ab53c2cd87da76022",
+        "logs\\official_graph_reasoning_mode\\summary.json": "74d8f99e688ddceb4f519f889d95189f2c73975fd5b40f496626a628c5331068",
+        "paper\\figures\\data\\official_graph_reasoning_mode.csv": "f73da66f3419cb4353d6c56074dadf9a858c01ad8fa77523c7d2093e3a9b1cb1",
+        "paper\\figures\\plot_official_graph_reasoning_mode.R": "d45b30f029ede7f8bc60ce7035bebacf07e3a4677d9b8f975db7cdd044700fa8",
+        "paper\\figures\\official_graph_reasoning_mode.pdf": "2e9c9c33c80f97bec36c91b58c80f32fd715a605413f7cf122d13b9260398ed9",
+        "paper\\figures\\official_graph_reasoning_mode.png": "758bc6037a3667107a09b244678599c72991f90e033d05761e10c1782c1128d2"
+      },
+      "scope": "Existing independent audit certification and figure/data provenance; no new scoring or inference.",
+      "cost_denominator": "Figure deployment_tokens is the sum of two-seed mean costs over16graphs: physical32call_sum/2. Mean single reading is physical_sum/32.",
+      "derived_route_actual_selected_call_tokens": 162993,
+      "derived_route_definition": "Parents use saved off calls; BFS use saved on calls. No third physical32callarm was generated.",
+      "gates": {
+        "off": {
+          "exploratory_followup_gate": false,
+          "dominated_by_always_off": false
+        },
+        "route": {
+          "exploratory_followup_gate": false,
+          "dominated_by_always_off": false
+        }
+      }
+    }
+  },
+  "limitations": [
+    "No claim that either stage passed its prespecified improvement gate.",
+    "Different models, interventions and task strata cannot be pooled as one trace-reuse effect.",
+    "Logical token totals and separately measured preprocessing are not comprehensive hardware cost or contiguous end-to-end latency."
+  ]
+}

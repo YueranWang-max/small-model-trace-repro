@@ -1,0 +1,54 @@
+[
+  {
+    "path": "inputs\\paper\\evidence_paired4b_20261006\\arm_summary.csv",
+    "sha256": "162d37ca8ec1cb874675cc2b5640f4ff0d225149b192a5fb978d314c18a1e7fe"
+  },
+  {
+    "path": "inputs\\paper\\evidence_paired4b_20261006\\audited_calls.csv",
+    "sha256": "afcd5ea2c621114767824aa3c76b1633cdeb4193d69e9ada92417d67d9c17c88"
+  },
+  {
+    "path": "inputs\\paper\\evidence_paired4b_20261006\\contrasts.csv",
+    "sha256": "f70c077f0d95b9686aab016a76f4ea679f445cee4f684123d6760741f626c231"
+  },
+  {
+    "path": "inputs\\paper\\evidence_paired4b_20261006\\graph_summary.csv",
+    "sha256": "f2a0c4f360dd0065926f72605bb585c90916cbf04f1664b79173be1b2915c0b2"
+  },
+  {
+    "path": "inputs\\paper\\evidence_paired4b_20261006\\summary.json",
+    "sha256": "4694f1745d9e779eae9ee9200812a6417511f9a14b2461cdec0c799653ec8dda"
+  },
+  {
+    "path": "inputs\\paper\\evidence_verification_20261006\\arm_summary.csv",
+    "sha256": "cefc70cd37a8ccb23202bdbc452f70b299131ef25e7392b774e216d4935e3d5b"
+  },
+  {
+    "path": "inputs\\paper\\evidence_verification_20261006\\audited_calls.csv",
+    "sha256": "6d790c02c3975f56a80de4300a57bb53da64b89efb432a9a7580e1bc22ca5238"
+  },
+  {
+    "path": "inputs\\paper\\evidence_verification_20261006\\contrasts.csv",
+    "sha256": "3ef3e5c5101cba74c8d38fd4ca059c5fa78165de7a6e763b9829b00b407dc4e4"
+  },
+  {
+    "path": "inputs\\paper\\evidence_verification_20261006\\graph_summary.csv",
+    "sha256": "0af169c4e172a7c351f6d8a61b3e4c52dfaeea785c3e371815a66f6e5ad13c89"
+  },
+  {
+    "path": "inputs\\paper\\evidence_verification_20261006\\summary.json",
+    "sha256": "f1eb5f98df79342b1024d14461213b76e83852afb0a5050684eb7b4c2a54b481"
+  },
+  {
+    "path": "paired_models_20261006.R",
+    "sha256": "d3e92692ab8ef79773ddb94598a769d6f9bcd3bbb93268d8bd6091da831c51e0"
+  },
+  {
+    "path": "publication_font_helpers_20261006.R",
+    "sha256": "38c22080812d699f43fa01b86d98e8aa6d7424875a91c336c77eadabda97c91d"
+  },
+  {
+    "path": "render_all.R",
+    "sha256": "a09e8957e7170ddcc20a05d5c9e02c83bd547316bd4c293d115bf9a4d2d149c1"
+  }
+]

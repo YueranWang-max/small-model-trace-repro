@@ -1,0 +1,34 @@
+{
+  "complete": true,
+  "planned_new_calls": 60,
+  "qualified_new": 60,
+  "unknown_new": [],
+  "old_baseline_known": 60,
+  "old_baseline_unknown": [],
+  "known_new_research_tokens": 525827,
+  "unknown_attempted_usage": [],
+  "observed_new_request_wall_seconds": 5912.52784429997,
+  "f1_all_plan_bounds": [
+    1.0,
+    1.0
+  ],
+  "em_all_plan_bounds": [
+    1.0,
+    1.0
+  ],
+  "scope": "Same-question sequential diagnostic selected after truncation; not fresh confirmation or equal-compute control",
+  "all_60_planned_payload_and_tokenization_checks": "passed",
+  "maximum_generated_allowance": 28672,
+  "f1": 1.0,
+  "em": 1.0,
+  "valid_count": 60,
+  "length_terminated": 0,
+  "mean_deployment_tokens": 8763.783333333333,
+  "long_minus_old_direct": {
+    "mean_difference": 0.30333333333333334,
+    "lower": 0.13333333333333333,
+    "upper": 0.4666666666666666
+  },
+  "old_length_count": 18,
+  "old_length_thinking_prefix_match_count": 0
+}

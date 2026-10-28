@@ -1,0 +1,737 @@
+{
+  "primary_complete": false,
+  "original_unknown_attempt": 20,
+  "contrasts": {
+    "f1": {
+      "complete_graphs": 15,
+      "complete_pair_mean_8b_minus_1_7b": 0.18900556501175697,
+      "descriptive_95_interval": [
+        0.11557239057239058,
+        0.2773834201144573
+      ],
+      "positive_graphs": 10,
+      "negative_graphs": 0,
+      "equal_graphs": 5,
+      "all_16_graph_primary_missingness_bounds": [
+        0.14594271719852217,
+        0.17719271719852217
+      ]
+    },
+    "em": {
+      "complete_graphs": 15,
+      "complete_pair_mean_8b_minus_1_7b": 0.36666666666666664,
+      "descriptive_95_interval": [
+        0.3,
+        0.43333333333333335
+      ],
+      "positive_graphs": 7,
+      "negative_graphs": 0,
+      "equal_graphs": 8,
+      "all_16_graph_primary_missingness_bounds": [
+        0.3125,
+        0.34375
+      ]
+    }
+  },
+  "groups": [
+    {
+      "type": "parents",
+      "bin": [
+        2000,
+        3500
+      ],
+      "graphs": 4,
+      "qwen3:1.7b": {
+        "f1_missingness_bounds": [
+          0.6461309523809524,
+          0.6461309523809524
+        ],
+        "em_missingness_bounds": [
+          0.125,
+          0.125
+        ]
+      },
+      "qwen3:8b": {
+        "f1_missingness_bounds": [
+          1.0,
+          1.0
+        ],
+        "em_missingness_bounds": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "type": "bfs",
+      "bin": [
+        2000,
+        3500
+      ],
+      "graphs": 4,
+      "qwen3:1.7b": {
+        "f1_missingness_bounds": [
+          0.870770202020202,
+          0.870770202020202
+        ],
+        "em_missingness_bounds": [
+          0.375,
+          0.375
+        ]
+      },
+      "qwen3:8b": {
+        "f1_missingness_bounds": [
+          0.85,
+          0.975
+        ],
+        "em_missingness_bounds": [
+          0.75,
+          0.875
+        ]
+      }
+    },
+    {
+      "type": "parents",
+      "bin": [
+        14000,
+        16000
+      ],
+      "graphs": 4,
+      "qwen3:1.7b": {
+        "f1_missingness_bounds": [
+          0.03571428571428571,
+          0.03571428571428571
+        ],
+        "em_missingness_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "qwen3:8b": {
+        "f1_missingness_bounds": [
+          0.225,
+          0.225
+        ],
+        "em_missingness_bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "type": "bfs",
+      "bin": [
+        14000,
+        16000
+      ],
+      "graphs": 4,
+      "qwen3:1.7b": {
+        "f1_missingness_bounds": [
+          0.030718954248366015,
+          0.030718954248366015
+        ],
+        "em_missingness_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "qwen3:8b": {
+        "f1_missingness_bounds": [
+          0.09210526315789473,
+          0.09210526315789473
+        ],
+        "em_missingness_bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  ],
+  "cases": [
+    {
+      "row_index": 16,
+      "type": "parents",
+      "bin": [
+        2000,
+        3500
+      ],
+      "gold_empty": false,
+      "qwen3:1.7b": {
+        "known_repeats": 2,
+        "f1_available": 0.5178571428571428,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.5178571428571428,
+          0.5178571428571428
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "qwen3:8b": {
+        "known_repeats": 2,
+        "f1_available": 1.0,
+        "em_available": 1.0,
+        "f1_bounds": [
+          1.0,
+          1.0
+        ],
+        "em_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "complete_pair": true
+    },
+    {
+      "row_index": 17,
+      "type": "parents",
+      "bin": [
+        2000,
+        3500
+      ],
+      "gold_empty": false,
+      "qwen3:1.7b": {
+        "known_repeats": 2,
+        "f1_available": 0.7333333333333334,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.7333333333333334,
+          0.7333333333333334
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "qwen3:8b": {
+        "known_repeats": 2,
+        "f1_available": 1.0,
+        "em_available": 1.0,
+        "f1_bounds": [
+          1.0,
+          1.0
+        ],
+        "em_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "complete_pair": true
+    },
+    {
+      "row_index": 18,
+      "type": "parents",
+      "bin": [
+        2000,
+        3500
+      ],
+      "gold_empty": false,
+      "qwen3:1.7b": {
+        "known_repeats": 2,
+        "f1_available": 0.5833333333333333,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.5833333333333333,
+          0.5833333333333333
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "qwen3:8b": {
+        "known_repeats": 2,
+        "f1_available": 1.0,
+        "em_available": 1.0,
+        "f1_bounds": [
+          1.0,
+          1.0
+        ],
+        "em_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "complete_pair": true
+    },
+    {
+      "row_index": 19,
+      "type": "parents",
+      "bin": [
+        2000,
+        3500
+      ],
+      "gold_empty": false,
+      "qwen3:1.7b": {
+        "known_repeats": 2,
+        "f1_available": 0.75,
+        "em_available": 0.5,
+        "f1_bounds": [
+          0.75,
+          0.75
+        ],
+        "em_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      "qwen3:8b": {
+        "known_repeats": 2,
+        "f1_available": 1.0,
+        "em_available": 1.0,
+        "f1_bounds": [
+          1.0,
+          1.0
+        ],
+        "em_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "complete_pair": true
+    },
+    {
+      "row_index": 416,
+      "type": "bfs",
+      "bin": [
+        2000,
+        3500
+      ],
+      "gold_empty": true,
+      "qwen3:1.7b": {
+        "known_repeats": 2,
+        "f1_available": 1.0,
+        "em_available": 1.0,
+        "f1_bounds": [
+          1.0,
+          1.0
+        ],
+        "em_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "qwen3:8b": {
+        "known_repeats": 1,
+        "f1_available": 1.0,
+        "em_available": 1.0,
+        "f1_bounds": [
+          0.5,
+          1.0
+        ],
+        "em_bounds": [
+          0.5,
+          1.0
+        ]
+      },
+      "complete_pair": false
+    },
+    {
+      "row_index": 417,
+      "type": "bfs",
+      "bin": [
+        2000,
+        3500
+      ],
+      "gold_empty": false,
+      "qwen3:1.7b": {
+        "known_repeats": 2,
+        "f1_available": 0.8,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.8,
+          0.8
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "qwen3:8b": {
+        "known_repeats": 2,
+        "f1_available": 0.9,
+        "em_available": 0.5,
+        "f1_bounds": [
+          0.9,
+          0.9
+        ],
+        "em_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      "complete_pair": true
+    },
+    {
+      "row_index": 418,
+      "type": "bfs",
+      "bin": [
+        2000,
+        3500
+      ],
+      "gold_empty": false,
+      "qwen3:1.7b": {
+        "known_repeats": 2,
+        "f1_available": 0.9444444444444444,
+        "em_available": 0.5,
+        "f1_bounds": [
+          0.9444444444444444,
+          0.9444444444444444
+        ],
+        "em_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      "qwen3:8b": {
+        "known_repeats": 2,
+        "f1_available": 1.0,
+        "em_available": 1.0,
+        "f1_bounds": [
+          1.0,
+          1.0
+        ],
+        "em_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "complete_pair": true
+    },
+    {
+      "row_index": 419,
+      "type": "bfs",
+      "bin": [
+        2000,
+        3500
+      ],
+      "gold_empty": false,
+      "qwen3:1.7b": {
+        "known_repeats": 2,
+        "f1_available": 0.7386363636363636,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.7386363636363636,
+          0.7386363636363636
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "qwen3:8b": {
+        "known_repeats": 2,
+        "f1_available": 1.0,
+        "em_available": 1.0,
+        "f1_bounds": [
+          1.0,
+          1.0
+        ],
+        "em_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "complete_pair": true
+    },
+    {
+      "row_index": 150,
+      "type": "parents",
+      "bin": [
+        14000,
+        16000
+      ],
+      "gold_empty": false,
+      "qwen3:1.7b": {
+        "known_repeats": 2,
+        "f1_available": 0.0,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.0,
+          0.0
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "qwen3:8b": {
+        "known_repeats": 2,
+        "f1_available": 0.1,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.1,
+          0.1
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "complete_pair": true
+    },
+    {
+      "row_index": 151,
+      "type": "parents",
+      "bin": [
+        14000,
+        16000
+      ],
+      "gold_empty": false,
+      "qwen3:1.7b": {
+        "known_repeats": 2,
+        "f1_available": 0.0,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.0,
+          0.0
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "qwen3:8b": {
+        "known_repeats": 2,
+        "f1_available": 0.0,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.0,
+          0.0
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "complete_pair": true
+    },
+    {
+      "row_index": 152,
+      "type": "parents",
+      "bin": [
+        14000,
+        16000
+      ],
+      "gold_empty": false,
+      "qwen3:1.7b": {
+        "known_repeats": 2,
+        "f1_available": 0.14285714285714285,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.14285714285714285,
+          0.14285714285714285
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "qwen3:8b": {
+        "known_repeats": 2,
+        "f1_available": 0.8,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.8,
+          0.8
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "complete_pair": true
+    },
+    {
+      "row_index": 153,
+      "type": "parents",
+      "bin": [
+        14000,
+        16000
+      ],
+      "gold_empty": false,
+      "qwen3:1.7b": {
+        "known_repeats": 2,
+        "f1_available": 0.0,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.0,
+          0.0
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "qwen3:8b": {
+        "known_repeats": 2,
+        "f1_available": 0.0,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.0,
+          0.0
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "complete_pair": true
+    },
+    {
+      "row_index": 500,
+      "type": "bfs",
+      "bin": [
+        14000,
+        16000
+      ],
+      "gold_empty": false,
+      "qwen3:1.7b": {
+        "known_repeats": 2,
+        "f1_available": 0.0,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.0,
+          0.0
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "qwen3:8b": {
+        "known_repeats": 2,
+        "f1_available": 0.0,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.0,
+          0.0
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "complete_pair": true
+    },
+    {
+      "row_index": 501,
+      "type": "bfs",
+      "bin": [
+        14000,
+        16000
+      ],
+      "gold_empty": false,
+      "qwen3:1.7b": {
+        "known_repeats": 2,
+        "f1_available": 0.0,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.0,
+          0.0
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "qwen3:8b": {
+        "known_repeats": 2,
+        "f1_available": 0.0,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.0,
+          0.0
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "complete_pair": true
+    },
+    {
+      "row_index": 502,
+      "type": "bfs",
+      "bin": [
+        14000,
+        16000
+      ],
+      "gold_empty": false,
+      "qwen3:1.7b": {
+        "known_repeats": 2,
+        "f1_available": 0.12287581699346406,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.12287581699346406,
+          0.12287581699346406
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "qwen3:8b": {
+        "known_repeats": 2,
+        "f1_available": 0.3684210526315789,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.3684210526315789,
+          0.3684210526315789
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "complete_pair": true
+    },
+    {
+      "row_index": 503,
+      "type": "bfs",
+      "bin": [
+        14000,
+        16000
+      ],
+      "gold_empty": false,
+      "qwen3:1.7b": {
+        "known_repeats": 2,
+        "f1_available": 0.0,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.0,
+          0.0
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "qwen3:8b": {
+        "known_repeats": 2,
+        "f1_available": 0.0,
+        "em_available": 0.0,
+        "f1_bounds": [
+          0.0,
+          0.0
+        ],
+        "em_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "complete_pair": true
+    }
+  ],
+  "always_empty_f1_em": 0.0625,
+  "limitations": [
+    "Complete paired protocol-score estimates describe 15 graphs; missingness bounds describe all 16.",
+    "Client request errors score zero under the frozen deployment rule; their actual model answers and usage remain unknown.",
+    "Intervals are exploratory and not adjusted across exploration stages.",
+    "Model comparison includes weights, training and capacity; no size-only causal interpretation.",
+    "Known tokens are a lower bound because original attempt 020 and request-error usage are unknown.",
+    "Source competence is not evidence of successful trace transfer."
+  ]
+}

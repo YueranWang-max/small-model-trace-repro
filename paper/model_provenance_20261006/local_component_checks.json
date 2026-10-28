@@ -1,0 +1,125 @@
+{
+  "checked_utc": "2026-10-06T04:30:31.882428+00:00",
+  "checks": [
+    {
+      "model": "qwen3:1.7b",
+      "manifest_sha256": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+      "matches_frozen_local_tag": true,
+      "components": [
+        {
+          "media_type": "application/vnd.docker.container.image.v1+json",
+          "sha256": "517ccaff02fe9f99718ab2f478e611aa2813c36263eeed86c2427bc122d14ad8",
+          "bytes": 487,
+          "verified": true,
+          "blob_archived": true
+        },
+        {
+          "media_type": "application/vnd.ollama.image.model",
+          "sha256": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6",
+          "bytes": 1359279776,
+          "verified": true,
+          "blob_archived": false
+        },
+        {
+          "media_type": "application/vnd.ollama.image.template",
+          "sha256": "ae370d884f108d16e7cc8fd5259ebc5773a0afa6e078b11f4ed7e39a27e0dfc4",
+          "bytes": 1723,
+          "verified": true,
+          "blob_archived": true
+        },
+        {
+          "media_type": "application/vnd.ollama.image.license",
+          "sha256": "d18a5cc71b84bc4af394a31116bd3932b42241de70c77d2b76d69a314ec8aa12",
+          "bytes": 11338,
+          "verified": true,
+          "blob_archived": true
+        },
+        {
+          "media_type": "application/vnd.ollama.image.params",
+          "sha256": "cff3f395ef3756ab63e58b0ad1b32bb6f802905cae1472e6a12034e4246fbbdb",
+          "bytes": 120,
+          "verified": true,
+          "blob_archived": true
+        }
+      ]
+    },
+    {
+      "model": "qwen3:4b",
+      "manifest_sha256": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+      "matches_frozen_local_tag": true,
+      "components": [
+        {
+          "media_type": "application/vnd.docker.container.image.v1+json",
+          "sha256": "e18a783aae5525fd2852fc94c985541a77e791e034abc2d3056474d59de336fc",
+          "bytes": 487,
+          "verified": true,
+          "blob_archived": true
+        },
+        {
+          "media_type": "application/vnd.ollama.image.model",
+          "sha256": "3e4cb14174460404e7a233e531675303b2fbf7749c02f91864fe311ab6344e4f",
+          "bytes": 2497280480,
+          "verified": true,
+          "blob_archived": false
+        },
+        {
+          "media_type": "application/vnd.ollama.image.template",
+          "sha256": "2d54db2b9bb29ce7db54fea63a891f5859603813c555b1f88b5e0994652897f9",
+          "bytes": 1506,
+          "verified": true,
+          "blob_archived": true
+        },
+        {
+          "media_type": "application/vnd.ollama.image.license",
+          "sha256": "d18a5cc71b84bc4af394a31116bd3932b42241de70c77d2b76d69a314ec8aa12",
+          "bytes": 11338,
+          "verified": true,
+          "blob_archived": true
+        },
+        {
+          "media_type": "application/vnd.ollama.image.params",
+          "sha256": "cff3f395ef3756ab63e58b0ad1b32bb6f802905cae1472e6a12034e4246fbbdb",
+          "bytes": 120,
+          "verified": true,
+          "blob_archived": true
+        }
+      ]
+    },
+    {
+      "model": "qwen3.5:4b",
+      "manifest_sha256": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+      "matches_frozen_local_tag": true,
+      "components": [
+        {
+          "media_type": "application/vnd.docker.container.image.v1+json",
+          "sha256": "de9fed2251b37295b763727a59ca35cf5cfe5c7379bc3e2104b2ce3c145aa887",
+          "bytes": 475,
+          "verified": true,
+          "blob_archived": true
+        },
+        {
+          "media_type": "application/vnd.ollama.image.model",
+          "sha256": "81fb60c7daa80fc1123380b98970b320ae233409f0f71a72ed7b9b0d62f40490",
+          "bytes": 3389971840,
+          "verified": true,
+          "blob_archived": false
+        },
+        {
+          "media_type": "application/vnd.ollama.image.license",
+          "sha256": "7339fa418c9ad3e8e12e74ad0fd26a9cc4be8703f9c110728a992b193be85cb2",
+          "bytes": 11355,
+          "verified": true,
+          "blob_archived": true
+        },
+        {
+          "media_type": "application/vnd.ollama.image.params",
+          "sha256": "9371364b27a52acac9d87f88bd93c9db1174d8d6ec57f6888925cdc1788871ff",
+          "bytes": 65,
+          "verified": true,
+          "blob_archived": true
+        }
+      ]
+    }
+  ],
+  "scope": "Hashes verify preserved local package integrity, not third-party attestation of model execution. Frozen Qwen3.5 package differs from the current publisher tag."
+}

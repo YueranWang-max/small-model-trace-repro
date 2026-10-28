@@ -1,0 +1,1023 @@
+{
+  "hashes": {
+    "data\\qasper_official\\qasper-train-v0.3.json": "9458bfe76074a8fa8d1685af02bcc73537aa6d338ad20591dfaff1946bc88bf4",
+    "protocol_qasper_dependency_guard_20261002.md": "31ed5878fb5fafdec7d0928e86264faba088bc2cb66bf7d06d38336968bd8053",
+    "run_qasper_dependency_guard.py": "45001fd8ee9399ae0f24e0167cdf58506b0f8be5ed3f1603f492cd682a97623c",
+    "run_qasper_relation_packet.py": "9e38451ce843806ab47c704eb6f54548ffa3f545ede3f6e3c473669fa9d9238a",
+    "logs\\qasper_fingerprint\\split.json": "be6b0e12d007aac3c3beb3f2706ff19feee88391db3483aef1f302feea974e32",
+    "run_qasper_fingerprint.py": "0d3204d4e8cdb02d99f8bfe1e9a01e1417887c01837fb8eb6cb91c8982018541",
+    "run_stageC.py": "27c3ff0abd38f70559432ad58eb3f8c1306226c46b7a58bc229e7a6ee407608c",
+    "run_qasper_format_control.py": "809c49360b6ee4403a1858a850be5ee6c6a09c5ddec230e51a935eaeab82f150",
+    "run_qasper_contract_replication.py": "36f078eb5e43784c65e8b7358aa0fa8a5bcfeb27bbb978e10704f2ec38a97f27",
+    "run_qasper_visible_trace_replication.py": "64718eacf14e7a64e6c610eebd37b8f8e54e6ffed13b63bd5d533167e8a901b4",
+    "rescore_qasper_demand_transfer.py": "8e5209bf67e3b0ce1fe37b7a64e05b3e6fa02b064a4df636d565e8fdc731f879",
+    "repro_lib.py": "f681c774a1c4d3900ad2afe983d139981d5341a38723e1219b7424240b307bc6"
+  },
+  "tasks": [
+    {
+      "paper_id": "1808.09920",
+      "id": "bbeb74731b9ac7f61e2d74a7d9ea74caa85e62ef",
+      "title": "Question Answering by Reasoning Across Documents with Graph Convolutional Networks",
+      "question": "How many documents at a time can Entity-GCN handle?",
+      "kind": "quantity",
+      "material": {
+        "full": "[P6] Section: Introduction\nIn our approach, only a small query encoder, the GCN layers and a simple feed-forward answer selection component are learned. Instead of training RNN encoders, we use contextualized embeddings (ELMo) to obtain initial (local) representations of nodes. This implies that only a lightweight computation has to be performed online, both at train and test time, whereas the rest is preprocessed. Even in the somewhat contrived WikiHop setting, where fairly small sets of candidates are provided, the model is at least 5 times faster to train than BiDAF. Interestingly, when we substitute ELMo with simple pre-trained word embeddings, Entity-GCN still performs on par with many techniques that use expensive question-aware recurrent document encoders.\n\n[P46] Section: Error analysis\nSecondly, we study how the model performance degrades when the input graph is large. In particular, we observe a negative Pearson's correlation (-0.687) between accuracy and the number of candidate answers. However, the performance does not decrease steeply. The distribution of the number of candidates in the dataset peaks at 5 and has an average of approximately 20. Therefore, the model does not see many samples where there are a large number of candidate entities during training. Differently, we notice that as the number of nodes in the graph increases, the model performance drops but more gently (negative but closer to zero Pearson's correlation). This is important as document sets can be large in practical applications. See Figure 3 in the supplemental material for plots.\n\n[P5] Section: Introduction\nThe multi-document setting imposes scalability challenges. In realistic scenarios, a system needs to learn to answer a query for a given collection (e.g., Wikipedia or a domain-specific set of documents). In such scenarios one cannot afford to run expensive document encoders (e.g., RNN or transformer-like self-attention BIBREF14 ), unless the computation can be preprocessed both at train and test time. Even if (similarly to WikiHop creators) one considers a coarse-to-fine approach, where a set of potentially relevant documents is provided, re-encoding them in a query-specific way remains the bottleneck. In contrast to other proposed methods (e.g., BIBREF12 , BIBREF10 , BIBREF3 ), we avoid training expensive document encoders.\n\n[P44] Section: Ablation study\nIn Figure 3 , we show how the model performance goes when the input graph is large. In particular, how Entity-GCN performs as the number of candidate answers or the number of nodes increases.\n\n[P58] Section: Architecture\nDuring preliminary trials, we experimented with different numbers of R-GCN-layers (in the range 1-7). We observed that with WikiHop, for $L \\ge 3$ models reach essentially the same performance, but more layers increase the time required to train them. Besides, we observed that the gating mechanism learns to keep more and more information from the past at each layer making unnecessary to have more layers than required.\n\n[P37] Section: Ablation study\nWe argue that ELMo is crucial, since we do not rely on any other context encoder. However, it is interesting to explore how our R-GCN performs without it. Therefore, in this experiment, we replace the deep contextualized embeddings of both the query and the nodes with GloVe BIBREF22 vectors (insensitive to context). Since we do not have any component in our model that processes the documents, we expect a drop in performance. In other words, in this ablation our model tries to answer questions without reading the context at all. For example, in Figure 1 , our model would be aware that “Stockholm” and “Sweden” appear in the same document but any context words, including the ones encoding relations (e.g., “is the capital of”) will be hidden. Besides, in the masked case all mentions become `unknown' tokens with GloVe and therefore the predictions are equivalent to a random guess. Once the strong pre-trained encoder is out of the way, we also ablate the use of our R-GCN component, thus completely depriving the model from inductive biases that aim at multi-hop reasoning.\n\n[P2] Section: Introduction\nEven though these new datasets are challenging and require reasoning within documents, many question answering and search applications require aggregation of information across multiple documents. The WikiHop dataset BIBREF0 was explicitly created to facilitate the development of systems dealing with these scenarios. Each example in WikiHop consists of a collection of documents, a query and a set of candidate answers (Figure 1 ). Though there is no guarantee that a question cannot be answered by relying just on a single sentence, the authors ensure that it is answerable using a chain of reasoning crossing document boundaries.\n\n[P48] Section: Related work\nIn previous work, BiDAF BIBREF3 , FastQA BIBREF6 , Coref-GRU BIBREF12 , MHPGM BIBREF11 , and Weaver / Jenga BIBREF10 have been applied to multi-document question answering. The first two mainly focus on single document QA and BIBREF0 adapted both of them to work with WikiHop. They process each instance of the dataset by concatenating all $d \\in S_q$ in a random order adding document separator tokens. They trained using the first answer mention in the concatenated document and evaluating exact match at test time. Coref-GRU, similarly to us, encodes relations between entity mentions in the document. Instead of using graph neural network layers, as we do, they augment RNNs with jump links corresponding to pairs of corefereed mentions. MHPGM uses a multi-attention mechanism in combination with external commonsense relations to perform multiple hops of reasoning. Weaver is a deep co-encoding model that uses several alternating bi-LSTMs to process the concatenated documents and the query.",
+        "packet": "[P6] Section: Introduction\nIn our approach, only a small query encoder, the GCN layers and a simple feed-forward answer selection component are learned. Instead of training RNN encoders, we use contextualized embeddings (ELMo) to obtain initial (local) representations of nodes. This implies that only a lightweight computation has to be performed online, both at train and test time, whereas the rest is preprocessed. Even in the somewhat contrived WikiHop setting, where fairly small sets of candidates are provided, the model is at least 5 times faster to train than BiDAF. Interestingly, when we substitute ELMo with simple pre-trained word embeddings, Entity-GCN still performs on par with many techniques that use expensive question-aware recurrent document encoders.\n\n[P46] Section: Error analysis\nSecondly, we study how the model performance degrades when the input graph is large. In particular, we observe a negative Pearson's correlation (-0.687) between accuracy and the number of candidate answers. However, the performance does not decrease steeply. The distribution of the number of candidates in the dataset peaks at 5 and has an average of approximately 20. Therefore, the model does not see many samples where there are a large number of candidate entities during training. Differently, we notice that as the number of nodes in the graph increases, the model performance drops but more gently (negative but closer to zero Pearson's correlation). This is important as document sets can be large in practical applications. See Figure 3 in the supplemental material for plots.\n\n[P5] Section: Introduction\nThe multi-document setting imposes scalability challenges. In realistic scenarios, a system needs to learn to answer a query for a given collection (e.g., Wikipedia or a domain-specific set of documents). In such scenarios one cannot afford to run expensive document encoders (e.g., RNN or transformer-like self-attention BIBREF14 ), unless the computation can be preprocessed both at train and test time. Even if (similarly to WikiHop creators) one considers a coarse-to-fine approach, where a set of potentially relevant documents is provided, re-encoding them in a query-specific way remains the bottleneck. In contrast to other proposed methods (e.g., BIBREF12 , BIBREF10 , BIBREF3 ), we avoid training expensive document encoders.\n\n[P44] Section: Ablation study\nIn Figure 3 , we show how the model performance goes when the input graph is large. In particular, how Entity-GCN performs as the number of candidate answers or the number of nodes increases.\n\n[P58] Section: Architecture\nDuring preliminary trials, we experimented with different numbers of R-GCN-layers (in the range 1-7). We observed that with WikiHop, for $L \\ge 3$ models reach essentially the same performance, but more layers increase the time required to train them. Besides, we observed that the gating mechanism learns to keep more and more information from the past at each layer making unnecessary to have more layers than required.\n\n[P37] Section: Ablation study\nWe argue that ELMo is crucial, since we do not rely on any other context encoder. However, it is interesting to explore how our R-GCN performs without it. Therefore, in this experiment, we replace the deep contextualized embeddings of both the query and the nodes with GloVe BIBREF22 vectors (insensitive to context). Since we do not have any component in our model that processes the documents, we expect a drop in performance. In other words, in this ablation our model tries to answer questions without reading the context at all. For example, in Figure 1 , our model would be aware that “Stockholm” and “Sweden” appear in the same document but any context words, including the ones encoding relations (e.g., “is the capital of”) will be hidden. Besides, in the masked case all mentions become `unknown' tokens with GloVe and therefore the predictions are equivalent to a random guess. Once the strong pre-trained encoder is out of the way, we also ablate the use of our R-GCN component, thus completely depriving the model from inductive biases that aim at multi-hop reasoning.\n\n[P2] Section: Introduction\nEven though these new datasets are challenging and require reasoning within documents, many question answering and search applications require aggregation of information across multiple documents. The WikiHop dataset BIBREF0 was explicitly created to facilitate the development of systems dealing with these scenarios. Each example in WikiHop consists of a collection of documents, a query and a set of candidate answers (Figure 1 ). Though there is no guarantee that a question cannot be answered by relying just on a single sentence, the authors ensure that it is answerable using a chain of reasoning crossing document boundaries.\n\n[P48] Section: Related work\nIn previous work, BiDAF BIBREF3 , FastQA BIBREF6 , Coref-GRU BIBREF12 , MHPGM BIBREF11 , and Weaver / Jenga BIBREF10 have been applied to multi-document question answering. The first two mainly focus on single document QA and BIBREF0 adapted both of them to work with WikiHop. They process each instance of the dataset by concatenating all $d \\in S_q$ in a random order adding document separator tokens. They trained using the first answer mention in the concatenated document and evaluating exact match at test time. Coref-GRU, similarly to us, encodes relations between entity mentions in the document. Instead of using graph neural network layers, as we do, they augment RNNs with jump links corresponding to pairs of corefereed mentions. MHPGM uses a multi-attention mechanism in combination with external commonsense relations to perform multiple hops of reasoning. Weaver is a deep co-encoding model that uses several alternating bi-LSTMs to process the concatenated documents and the query."
+      },
+      "ledger": [
+        {
+          "paragraph_id": 6,
+          "fragments": [
+            {
+              "text": "In our approach, only a small query encoder, the GCN layers and a simple feed-forward answer selection component are learned. Instead of training RNN encoders, we use contextualized embeddings (ELMo) to obtain initial (local) representations of nodes. This implies that only a lightweight computation has to be performed online, both at train and test time, whereas the rest is preprocessed. Even in the somewhat contrived WikiHop setting, where fairly small sets of candidates are provided, the model is at least 5 times faster to train than BiDAF. Interestingly, when we substitute ELMo with simple pre-trained word embeddings, Entity-GCN still performs on par with many techniques that use expensive question-aware recurrent document encoders.",
+              "char_start": 0,
+              "char_length": 746,
+              "byte_start": 0,
+              "byte_length": 746,
+              "paragraph_sha256": "e7172d563c550fe7967e8798fccece504df4842f0e1672750543d6fc29c83dac",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 46,
+          "fragments": [
+            {
+              "text": "Secondly, we study how the model performance degrades when the input graph is large. In particular, we observe a negative Pearson's correlation (-0.687) between accuracy and the number of candidate answers. However, the performance does not decrease steeply. The distribution of the number of candidates in the dataset peaks at 5 and has an average of approximately 20. Therefore, the model does not see many samples where there are a large number of candidate entities during training. Differently, we notice that as the number of nodes in the graph increases, the model performance drops but more gently (negative but closer to zero Pearson's correlation). This is important as document sets can be large in practical applications. See Figure 3 in the supplemental material for plots.",
+              "char_start": 0,
+              "char_length": 786,
+              "byte_start": 0,
+              "byte_length": 786,
+              "paragraph_sha256": "1756f668febdbe857843ec78cb7635722ebc994af82b5206af96fae74c5e4da1",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 5,
+          "fragments": [
+            {
+              "text": "The multi-document setting imposes scalability challenges. In realistic scenarios, a system needs to learn to answer a query for a given collection (e.g., Wikipedia or a domain-specific set of documents). In such scenarios one cannot afford to run expensive document encoders (e.g., RNN or transformer-like self-attention BIBREF14 ), unless the computation can be preprocessed both at train and test time. Even if (similarly to WikiHop creators) one considers a coarse-to-fine approach, where a set of potentially relevant documents is provided, re-encoding them in a query-specific way remains the bottleneck. In contrast to other proposed methods (e.g., BIBREF12 , BIBREF10 , BIBREF3 ), we avoid training expensive document encoders.",
+              "char_start": 0,
+              "char_length": 735,
+              "byte_start": 0,
+              "byte_length": 735,
+              "paragraph_sha256": "2d42a195f94b670f8cffcc1cf65b57e995c3e468c4369b104ede478ce37a075b",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 44,
+          "fragments": [
+            {
+              "text": "In Figure 3 , we show how the model performance goes when the input graph is large. In particular, how Entity-GCN performs as the number of candidate answers or the number of nodes increases.",
+              "char_start": 0,
+              "char_length": 191,
+              "byte_start": 0,
+              "byte_length": 191,
+              "paragraph_sha256": "8320b5ce638af810ae75ea3274c98625bb58764d2723be6c983e4d0ae3914762",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 58,
+          "fragments": [
+            {
+              "text": "During preliminary trials, we experimented with different numbers of R-GCN-layers (in the range 1-7). We observed that with WikiHop, for $L \\ge 3$ models reach essentially the same performance, but more layers increase the time required to train them. Besides, we observed that the gating mechanism learns to keep more and more information from the past at each layer making unnecessary to have more layers than required.",
+              "char_start": 0,
+              "char_length": 421,
+              "byte_start": 0,
+              "byte_length": 421,
+              "paragraph_sha256": "fff1f836f9a050f70d4e76a4855732b791ce3ecde17fa68b42288c696b10c676",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 37,
+          "fragments": [
+            {
+              "text": "We argue that ELMo is crucial, since we do not rely on any other context encoder. However, it is interesting to explore how our R-GCN performs without it. Therefore, in this experiment, we replace the deep contextualized embeddings of both the query and the nodes with GloVe BIBREF22 vectors (insensitive to context). Since we do not have any component in our model that processes the documents, we expect a drop in performance. In other words, in this ablation our model tries to answer questions without reading the context at all. For example, in Figure 1 , our model would be aware that “Stockholm” and “Sweden” appear in the same document but any context words, including the ones encoding relations (e.g., “is the capital of”) will be hidden. Besides, in the masked case all mentions become `unknown' tokens with GloVe and therefore the predictions are equivalent to a random guess. Once the strong pre-trained encoder is out of the way, we also ablate the use of our R-GCN component, thus completely depriving the model from inductive biases that aim at multi-hop reasoning.",
+              "char_start": 0,
+              "char_length": 1081,
+              "byte_start": 0,
+              "byte_length": 1093,
+              "paragraph_sha256": "ca9bafb7df17726e2287f243a5584db4810f4e7ec1e5b13485e76284834819a0",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 2,
+          "fragments": [
+            {
+              "text": "Even though these new datasets are challenging and require reasoning within documents, many question answering and search applications require aggregation of information across multiple documents. The WikiHop dataset BIBREF0 was explicitly created to facilitate the development of systems dealing with these scenarios. Each example in WikiHop consists of a collection of documents, a query and a set of candidate answers (Figure 1 ). Though there is no guarantee that a question cannot be answered by relying just on a single sentence, the authors ensure that it is answerable using a chain of reasoning crossing document boundaries.",
+              "char_start": 0,
+              "char_length": 633,
+              "byte_start": 0,
+              "byte_length": 633,
+              "paragraph_sha256": "d46b7db26235dd995a45e62b499e5f6b09eb6c83e0c989dba7130d83d4d88bfc",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 48,
+          "fragments": [
+            {
+              "text": "In previous work, BiDAF BIBREF3 , FastQA BIBREF6 , Coref-GRU BIBREF12 , MHPGM BIBREF11 , and Weaver / Jenga BIBREF10 have been applied to multi-document question answering. The first two mainly focus on single document QA and BIBREF0 adapted both of them to work with WikiHop. They process each instance of the dataset by concatenating all $d \\in S_q$ in a random order adding document separator tokens. They trained using the first answer mention in the concatenated document and evaluating exact match at test time. Coref-GRU, similarly to us, encodes relations between entity mentions in the document. Instead of using graph neural network layers, as we do, they augment RNNs with jump links corresponding to pairs of corefereed mentions. MHPGM uses a multi-attention mechanism in combination with external commonsense relations to perform multiple hops of reasoning. Weaver is a deep co-encoding model that uses several alternating bi-LSTMs to process the concatenated documents and the query.",
+              "char_start": 0,
+              "char_length": 997,
+              "byte_start": 0,
+              "byte_length": 997,
+              "paragraph_sha256": "ab1066f38b047ede7a35b0de7fddd6d713f125aedaea112bb7fbac3c7eb78e2d",
+              "whole_paragraph_guard": true
+            }
+          ]
+        }
+      ],
+      "selected": [
+        6,
+        46,
+        5,
+        44,
+        58,
+        37,
+        2,
+        48
+      ]
+    },
+    {
+      "paper_id": "1712.03547",
+      "id": "a4d8fdcaa8adf99bdd1d7224f1a85c610659a9d3",
+      "title": "Inducing Interpretability in Knowledge Graph Embeddings",
+      "question": "When they say \"comparable performance\", how much of a performance drop do these new embeddings result in?",
+      "kind": "quantity",
+      "material": {
+        "full": "[P3] Section: Introduction\nAlthough these methods have shown good performance in applications, they don't address the problem of understanding semantics of individual dimensions of the KG embedding. A recent work BIBREF6 addressed the problem of learning semantic features for KGs. However, they don't directly use vector space modeling.\n\n[P42] Section: Conclusion and Future Works\nIn this work, we proposed a method for inducing interpretability in KG embeddings using a coherence regularization term. We evaluated the proposed and the baseline method on the interpretability of the learned embeddings. We also evaluated the methods on different KG tasks and compared their performance. We found that the proposed method achieves better interpretability while maintaining comparable performance on KG tasks. As next steps, we plan to evaluate the generalizability of the method with more recent KG embeddings.\n\n[P0] Section: Abstract\nWe study the problem of inducing interpretability in KG embeddings. Specifically, we explore the Universal Schema (Riedel et al., 2013) and propose a method to induce interpretability. There have been many vector space models proposed for the problem, however, most of these methods don't address the interpretability (semantics) of individual dimensions. In this work, we study this problem and propose a method for inducing interpretability in KG embeddings using entity co-occurrence statistics. The proposed method significantly improves the interpretability, while maintaining comparable performance in other KG tasks.\n\n[P2] Section: Introduction\nThese KGs have grown huge, but they are still not complete BIBREF1 . Hence the task of inferring new facts becomes important. Many vector space models have been proposed which can perform reasoning over KGs efficiently BIBREF2 , BIBREF3 , BIBREF4 , BIBREF5 , BIBREF0 , BIBREF1 etc. These methods learn representations for entities and relations as vectors in a vector space, capturing global information about the KG. The task of KG inference is then defined as operations over these vectors. Some of these methods like BIBREF0 , BIBREF1 are capable of exploiting additional text data apart from the KG, resulting in better representations.\n\n[P36] Section: Results\nThe objective of the coherence regularization term being tangential to that of the original loss function, is not expected to affect performance on the link prediction task. However, the results show a trivial drop of $1.2$ in MRR as the coherence term gives credibility to triples that are otherwise deemed incorrect by the closed world assumption.\n\n[P5] Section: Related Work\nSeveral methods have been proposed for learning KG embeddings. They differ on the modeling of entities and relations, usage of text data and interpretability of the learned embeddings. We summarize some of these methods in following sections.\n\n[P7] Section: Interpretability of Embedding\nWhile the vector space models perform well in many tasks, the semantics of learned representations are not directly clear. This problem for word embeddings was addressed by BIBREF12 where they proposed a set of constraints inducing interpretability. However, its adaptation for KG embeddings hasn't been addressed. A recent work BIBREF6 addressed a similar problem, where they learn coherent semantic features for entities and relations in KG. Our method differs from theirs in the following two aspects. Firstly, we use vector space modeling leading directly to KG embeddings while they need to infer KG embeddings from their probabilistic model. Second, we incorporate additional information about entities which helps in learning interpretable embeddings.\n\n[P8] Section: Proposed Method\nWe are interested in inducing interpretability in KG embeddings and regularization is one good way to do it. So we want to look at novel regularizers in KG embeddings. Hence, we explore a measure of coherence proposed in BIBREF7 . This measure allows automated evaluation of the quality of topics learned by topic modeling methods by using additional Point-wise Mutual Information (PMI) for word pairs. It was also shown to have high correlation with human evaluation of topics.",
+        "packet": "[P3] Section: Introduction\nAlthough these methods have shown good performance in applications, they don't address the problem of understanding semantics of individual dimensions of the KG embedding. A recent work BIBREF6 addressed the problem of learning semantic features for KGs. However, they don't directly use vector space modeling.\n\n[P42] Section: Conclusion and Future Works\nIn this work, we proposed a method for inducing interpretability in KG embeddings using a coherence regularization term. \n[omitted source between fragments]\nWe found that the proposed method achieves better interpretability while maintaining comparable performance on KG tasks. \n\n[P0] Section: Abstract\nWe study the problem of inducing interpretability in KG embeddings. Specifically, we explore the Universal Schema (Riedel et al., 2013) and propose a method to induce interpretability. There have been many vector space models proposed for the problem, however, most of these methods don't address the interpretability (semantics) of individual dimensions. In this work, we study this problem and propose a method for inducing interpretability in KG embeddings using entity co-occurrence statistics. The proposed method significantly improves the interpretability, while maintaining comparable performance in other KG tasks.\n\n[P2] Section: Introduction\nThese KGs have grown huge, but they are still not complete BIBREF1 . Hence the task of inferring new facts becomes important. Many vector space models have been proposed which can perform reasoning over KGs efficiently BIBREF2 , BIBREF3 , BIBREF4 , BIBREF5 , BIBREF0 , BIBREF1 etc. These methods learn representations for entities and relations as vectors in a vector space, capturing global information about the KG. The task of KG inference is then defined as operations over these vectors. Some of these methods like BIBREF0 , BIBREF1 are capable of exploiting additional text data apart from the KG, resulting in better representations.\n\n[P36] Section: Results\nThe objective of the coherence regularization term being tangential to that of the original loss function, is not expected to affect performance on the link prediction task. However, the results show a trivial drop of $1.2$ in MRR as the coherence term gives credibility to triples that are otherwise deemed incorrect by the closed world assumption.\n\n[P5] Section: Related Work\nSeveral methods have been proposed for learning KG embeddings. They differ on the modeling of entities and relations, usage of text data and interpretability of the learned embeddings. We summarize some of these methods in following sections.\n\n[P7] Section: Interpretability of Embedding\nWhile the vector space models perform well in many tasks, the semantics of learned representations are not directly clear. This problem for word embeddings was addressed by BIBREF12 where they proposed a set of constraints inducing interpretability. However, its adaptation for KG embeddings hasn't been addressed. A recent work BIBREF6 addressed a similar problem, where they learn coherent semantic features for entities and relations in KG. Our method differs from theirs in the following two aspects. Firstly, we use vector space modeling leading directly to KG embeddings while they need to infer KG embeddings from their probabilistic model. Second, we incorporate additional information about entities which helps in learning interpretable embeddings.\n\n[P8] Section: Proposed Method\nWe are interested in inducing interpretability in KG embeddings and regularization is one good way to do it. So we want to look at novel regularizers in KG embeddings. Hence, we explore a measure of coherence proposed in BIBREF7 . This measure allows automated evaluation of the quality of topics learned by topic modeling methods by using additional Point-wise Mutual Information (PMI) for word pairs. It was also shown to have high correlation with human evaluation of topics."
+      },
+      "ledger": [
+        {
+          "paragraph_id": 3,
+          "fragments": [
+            {
+              "text": "Although these methods have shown good performance in applications, they don't address the problem of understanding semantics of individual dimensions of the KG embedding. A recent work BIBREF6 addressed the problem of learning semantic features for KGs. However, they don't directly use vector space modeling.",
+              "char_start": 0,
+              "char_length": 310,
+              "byte_start": 0,
+              "byte_length": 310,
+              "paragraph_sha256": "bd037276ce448a191899018232498d1bf0f79feebeca414a5d8e3577b431bf91",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 42,
+          "fragments": [
+            {
+              "text": "In this work, we proposed a method for inducing interpretability in KG embeddings using a coherence regularization term. ",
+              "char_start": 0,
+              "char_length": 121,
+              "byte_start": 0,
+              "byte_length": 121,
+              "paragraph_sha256": "dcc06b7baf9b0081b7eceef747b1558a8482c338d88328d729c997e23c6cebca",
+              "whole_paragraph_guard": false
+            },
+            {
+              "text": "We found that the proposed method achieves better interpretability while maintaining comparable performance on KG tasks. ",
+              "char_start": 306,
+              "char_length": 121,
+              "byte_start": 306,
+              "byte_length": 121,
+              "paragraph_sha256": "dcc06b7baf9b0081b7eceef747b1558a8482c338d88328d729c997e23c6cebca",
+              "whole_paragraph_guard": false
+            }
+          ]
+        },
+        {
+          "paragraph_id": 0,
+          "fragments": [
+            {
+              "text": "We study the problem of inducing interpretability in KG embeddings. Specifically, we explore the Universal Schema (Riedel et al., 2013) and propose a method to induce interpretability. There have been many vector space models proposed for the problem, however, most of these methods don't address the interpretability (semantics) of individual dimensions. In this work, we study this problem and propose a method for inducing interpretability in KG embeddings using entity co-occurrence statistics. The proposed method significantly improves the interpretability, while maintaining comparable performance in other KG tasks.",
+              "char_start": 0,
+              "char_length": 623,
+              "byte_start": 0,
+              "byte_length": 623,
+              "paragraph_sha256": "4c7571233bbe0571ad76dc33aa8e978c02ea16339ff63fdb26e6d17313f74b57",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 2,
+          "fragments": [
+            {
+              "text": "These KGs have grown huge, but they are still not complete BIBREF1 . Hence the task of inferring new facts becomes important. Many vector space models have been proposed which can perform reasoning over KGs efficiently BIBREF2 , BIBREF3 , BIBREF4 , BIBREF5 , BIBREF0 , BIBREF1 etc. These methods learn representations for entities and relations as vectors in a vector space, capturing global information about the KG. The task of KG inference is then defined as operations over these vectors. Some of these methods like BIBREF0 , BIBREF1 are capable of exploiting additional text data apart from the KG, resulting in better representations.",
+              "char_start": 0,
+              "char_length": 640,
+              "byte_start": 0,
+              "byte_length": 640,
+              "paragraph_sha256": "3b891dd32d1e8f2e3beb14d311b4615624c8334bed1e1933194c3214e75f3ccd",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 36,
+          "fragments": [
+            {
+              "text": "The objective of the coherence regularization term being tangential to that of the original loss function, is not expected to affect performance on the link prediction task. However, the results show a trivial drop of $1.2$ in MRR as the coherence term gives credibility to triples that are otherwise deemed incorrect by the closed world assumption.",
+              "char_start": 0,
+              "char_length": 349,
+              "byte_start": 0,
+              "byte_length": 349,
+              "paragraph_sha256": "11d06a5694a98171397c84666d5cc76140288f75a651f55debb67c9317c73879",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 5,
+          "fragments": [
+            {
+              "text": "Several methods have been proposed for learning KG embeddings. They differ on the modeling of entities and relations, usage of text data and interpretability of the learned embeddings. We summarize some of these methods in following sections.",
+              "char_start": 0,
+              "char_length": 242,
+              "byte_start": 0,
+              "byte_length": 242,
+              "paragraph_sha256": "341e1f9055fd964f466181a8da2d59b6ad8473b9c86d2ac2beb29a2be1bd4233",
+              "whole_paragraph_guard": false
+            }
+          ]
+        },
+        {
+          "paragraph_id": 7,
+          "fragments": [
+            {
+              "text": "While the vector space models perform well in many tasks, the semantics of learned representations are not directly clear. This problem for word embeddings was addressed by BIBREF12 where they proposed a set of constraints inducing interpretability. However, its adaptation for KG embeddings hasn't been addressed. A recent work BIBREF6 addressed a similar problem, where they learn coherent semantic features for entities and relations in KG. Our method differs from theirs in the following two aspects. Firstly, we use vector space modeling leading directly to KG embeddings while they need to infer KG embeddings from their probabilistic model. Second, we incorporate additional information about entities which helps in learning interpretable embeddings.",
+              "char_start": 0,
+              "char_length": 758,
+              "byte_start": 0,
+              "byte_length": 758,
+              "paragraph_sha256": "3d07fb607b51023070dc4e56cc8b3c93bbebb88dc9baf1e2daacb70fd25f5a49",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 8,
+          "fragments": [
+            {
+              "text": "We are interested in inducing interpretability in KG embeddings and regularization is one good way to do it. So we want to look at novel regularizers in KG embeddings. Hence, we explore a measure of coherence proposed in BIBREF7 . This measure allows automated evaluation of the quality of topics learned by topic modeling methods by using additional Point-wise Mutual Information (PMI) for word pairs. It was also shown to have high correlation with human evaluation of topics.",
+              "char_start": 0,
+              "char_length": 478,
+              "byte_start": 0,
+              "byte_length": 478,
+              "paragraph_sha256": "1ad9e1d471c7ff2b8cd4155e5c976d9d280d6eb9fd7ff86429f7430f78165f22",
+              "whole_paragraph_guard": true
+            }
+          ]
+        }
+      ],
+      "selected": [
+        3,
+        42,
+        0,
+        2,
+        36,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "paper_id": "1911.03894",
+      "id": "5471766ca7c995dd7f0f449407902b32ac9db269",
+      "title": "CamemBERT: a Tasty French Language Model",
+      "question": "How much better was results of CamemBERT than previous results on these tasks?",
+      "kind": "quantity",
+      "material": {
+        "full": "[P54] Section: Experiments ::: Results ::: Named-Entity Recognition\nFor named entity recognition, our experiments show that CamemBERT achieves a slightly better precision than the traditional CRF-based SEM architectures described above in Section SECREF25 (CRF and Bi-LSTM+CRF), but shows a dramatic improvement in finding entity mentions, raising the recall score by 3.5 points. Both improvements result in a 2.36 point increase in the F1 score with respect to the best SEM architecture (BiLSTM-CRF), giving CamemBERT the state of the art for NER on the FTB. One other important finding is the results obtained by mBERT. Previous work with this model showed increased performance in NER for German, Dutch and Spanish when mBERT is used as contextualised word embedding for an NER-specific model BIBREF48, but our results suggest that the multilingual setting in which mBERT was trained is simply not enough to use it alone and fine-tune it for French NER, as it shows worse performance than even simple CRF models, suggesting that monolingual models could be better at NER.\n\n[P55] Section: Experiments ::: Discussion\nCamemBERT displays improved performance compared to prior work for the 4 downstream tasks considered. This confirms the hypothesis that pretrained language models can be effectively fine-tuned for various downstream tasks, as observed for English in previous work. Moreover, our results also show that dedicated monolingual models still outperform multilingual ones. We explain this point in two ways. First, the scale of data is possibly essential to the performance of CamemBERT. Indeed, we use 138GB of uncompressed text vs. 57GB for mBERT. Second, with more data comes more diversity in the pretraining distribution. Reaching state-of-the-art performances on 4 different tasks and 6 different datasets requires robust pretrained models. Our results suggest that the variability in the downstream tasks and datasets considered is handled more efficiently by a general language model than by Wikipedia-pretrained models such as mBERT.\n\n[P58] Section: Appendix ::: Impact of Whole-Word Masking\nWe analyze the addition of whole-word masking on the downstream performance of CamemBERT. As reported for English on other downstream tasks, whole word masking improves downstream performances for all tasks but NER as seen in Table TABREF46. NER is highly sensitive to capitalisation, prefixes, suffixes and other subword features that could be used by a model to correctly identify entity mentions. Thus the added information by learning the masking at a subword level rather than at whole-word level seems to have a detrimental effect on downstream NER results.\n\n[P6] Section: Introduction\nWe evaluate our model on four downstream tasks (POS tagging, dependency parsing, NER and natural language inference (NLI)), achieving state-of-the-art results in most tasks, confirming the effectiveness of large BERT-based models for French.\n\n[P2] Section: Introduction\nThese transfer learning methods exhibit clear advantages over more traditional task-specific approaches, probably the most important being that they can be trained in an unsupervised manner. They nevertheless come with implementation challenges, namely the amount of data and computational resources needed for pretraining that can reach hundreds of gigabytes of uncompressed text and require hundreds of GPUs BIBREF11, BIBREF9. The latest transformer architecture has gone uses as much as 750GB of plain text and 1024 TPU v3 for pretraining BIBREF10. This has limited the availability of these state-of-the-art models to the English language, at least in the monolingual setting. Even though multilingual models give remarkable results, they are often larger and their results still lag behind their monolingual counterparts BIBREF12. This is particularly inconvenient as it hinders their practical use in NLP systems as well as the investigation of their language modeling capacity, something that remains to be investigated in the case of, for instance, morphologically rich languages.\n\n[P49] Section: Experiments ::: Experimental Setup ::: Fine-tuning\nAlthough this might push the performances even further, for all tasks except NLI, we don't apply any regularisation techniques such as weight decay, learning rate warm-up or discriminative fine-tuning. We show that fine-tuning CamemBERT in a straight-forward manner leads to state-of-the-art results on most tasks and outperforms the existing BERT-based models in most cases.\n\n[P20] Section: CamemBERT ::: Optimisation\nFollowing BIBREF9, we optimise the model using Adam BIBREF23 ($\\beta _1 = 0.9$, $\\beta _2 = 0.98$) for 100k steps. We use large batch sizes of 8192 sequences. Each sequence contains at most 512 tokens. We enforce each sequence to only contain complete sentences. Additionally, we used the DOC-SENTENCES scenario from BIBREF9, consisting of not mixing multiple documents in the same sequence, which showed slightly better results.\n\n[P51] Section: Experiments ::: Results ::: Part-of-Speech tagging and dependency parsing\nFor POS tagging and dependency parsing, we compare CamemBERT to three other near state-of-the-art models in Table TABREF32. CamemBERT outperforms UDPipe Future by a large margin for all treebanks and all metrics. Despite a much simpler optimisation process, CamemBERT beats UDify performances on all the available French treebanks.",
+        "packet": "[P54] Section: Experiments ::: Results ::: Named-Entity Recognition\nFor named entity recognition, our experiments show that CamemBERT achieves a slightly better precision than the traditional CRF-based SEM architectures described above in Section SECREF25 (CRF and Bi-LSTM+CRF), but shows a dramatic improvement in finding entity mentions, raising the recall score by 3.5 points. Both improvements result in a 2.36 point increase in the F1 score with respect to the best SEM architecture (BiLSTM-CRF), giving CamemBERT the state of the art for NER on the FTB. One other important finding is the results obtained by mBERT. Previous work with this model showed increased performance in NER for German, Dutch and Spanish when mBERT is used as contextualised word embedding for an NER-specific model BIBREF48, but our results suggest that the multilingual setting in which mBERT was trained is simply not enough to use it alone and fine-tune it for French NER, as it shows worse performance than even simple CRF models, suggesting that monolingual models could be better at NER.\n\n[P55] Section: Experiments ::: Discussion\nCamemBERT displays improved performance compared to prior work for the 4 downstream tasks considered. This confirms the hypothesis that pretrained language models can be effectively fine-tuned for various downstream tasks, as observed for English in previous work. Moreover, our results also show that dedicated monolingual models still outperform multilingual ones. We explain this point in two ways. First, the scale of data is possibly essential to the performance of CamemBERT. Indeed, we use 138GB of uncompressed text vs. 57GB for mBERT. Second, with more data comes more diversity in the pretraining distribution. Reaching state-of-the-art performances on 4 different tasks and 6 different datasets requires robust pretrained models. Our results suggest that the variability in the downstream tasks and datasets considered is handled more efficiently by a general language model than by Wikipedia-pretrained models such as mBERT.\n\n[P58] Section: Appendix ::: Impact of Whole-Word Masking\nWe analyze the addition of whole-word masking on the downstream performance of CamemBERT. As reported for English on other downstream tasks, whole word masking improves downstream performances for all tasks but NER as seen in Table TABREF46. NER is highly sensitive to capitalisation, prefixes, suffixes and other subword features that could be used by a model to correctly identify entity mentions. Thus the added information by learning the masking at a subword level rather than at whole-word level seems to have a detrimental effect on downstream NER results.\n\n[P6] Section: Introduction\nWe evaluate our model on four downstream tasks (POS tagging, dependency parsing, NER and natural language inference (NLI)), achieving state-of-the-art results in most tasks, confirming the effectiveness of large BERT-based models for French.\n\n[P2] Section: Introduction\nThese transfer learning methods exhibit clear advantages over more traditional task-specific approaches, probably the most important being that they can be trained in an unsupervised manner. They nevertheless come with implementation challenges, namely the amount of data and computational resources needed for pretraining that can reach hundreds of gigabytes of uncompressed text and require hundreds of GPUs BIBREF11, BIBREF9. The latest transformer architecture has gone uses as much as 750GB of plain text and 1024 TPU v3 for pretraining BIBREF10. This has limited the availability of these state-of-the-art models to the English language, at least in the monolingual setting. Even though multilingual models give remarkable results, they are often larger and their results still lag behind their monolingual counterparts BIBREF12. This is particularly inconvenient as it hinders their practical use in NLP systems as well as the investigation of their language modeling capacity, something that remains to be investigated in the case of, for instance, morphologically rich languages.\n\n[P49] Section: Experiments ::: Experimental Setup ::: Fine-tuning\nAlthough this might push the performances even further, for all tasks except NLI, we don't apply any regularisation techniques such as weight decay, learning rate warm-up or discriminative fine-tuning. We show that fine-tuning CamemBERT in a straight-forward manner leads to state-of-the-art results on most tasks and outperforms the existing BERT-based models in most cases.\n\n[P20] Section: CamemBERT ::: Optimisation\nFollowing BIBREF9, we optimise the model using Adam BIBREF23 ($\\beta _1 = 0.9$, $\\beta _2 = 0.98$) for 100k steps. We use large batch sizes of 8192 sequences. Each sequence contains at most 512 tokens. We enforce each sequence to only contain complete sentences. Additionally, we used the DOC-SENTENCES scenario from BIBREF9, consisting of not mixing multiple documents in the same sequence, which showed slightly better results.\n\n[P51] Section: Experiments ::: Results ::: Part-of-Speech tagging and dependency parsing\nFor POS tagging and dependency parsing, we compare CamemBERT to three other near state-of-the-art models in Table TABREF32. CamemBERT outperforms UDPipe Future by a large margin for all treebanks and all metrics. Despite a much simpler optimisation process, CamemBERT beats UDify performances on all the available French treebanks."
+      },
+      "ledger": [
+        {
+          "paragraph_id": 54,
+          "fragments": [
+            {
+              "text": "For named entity recognition, our experiments show that CamemBERT achieves a slightly better precision than the traditional CRF-based SEM architectures described above in Section SECREF25 (CRF and Bi-LSTM+CRF), but shows a dramatic improvement in finding entity mentions, raising the recall score by 3.5 points. Both improvements result in a 2.36 point increase in the F1 score with respect to the best SEM architecture (BiLSTM-CRF), giving CamemBERT the state of the art for NER on the FTB. One other important finding is the results obtained by mBERT. Previous work with this model showed increased performance in NER for German, Dutch and Spanish when mBERT is used as contextualised word embedding for an NER-specific model BIBREF48, but our results suggest that the multilingual setting in which mBERT was trained is simply not enough to use it alone and fine-tune it for French NER, as it shows worse performance than even simple CRF models, suggesting that monolingual models could be better at NER.",
+              "char_start": 0,
+              "char_length": 1006,
+              "byte_start": 0,
+              "byte_length": 1006,
+              "paragraph_sha256": "82c7fe5a64160e49525932d226a94188d4a5bd3f32b6c47bfa54bf3ad5f70e9c",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 55,
+          "fragments": [
+            {
+              "text": "CamemBERT displays improved performance compared to prior work for the 4 downstream tasks considered. This confirms the hypothesis that pretrained language models can be effectively fine-tuned for various downstream tasks, as observed for English in previous work. Moreover, our results also show that dedicated monolingual models still outperform multilingual ones. We explain this point in two ways. First, the scale of data is possibly essential to the performance of CamemBERT. Indeed, we use 138GB of uncompressed text vs. 57GB for mBERT. Second, with more data comes more diversity in the pretraining distribution. Reaching state-of-the-art performances on 4 different tasks and 6 different datasets requires robust pretrained models. Our results suggest that the variability in the downstream tasks and datasets considered is handled more efficiently by a general language model than by Wikipedia-pretrained models such as mBERT.",
+              "char_start": 0,
+              "char_length": 936,
+              "byte_start": 0,
+              "byte_length": 936,
+              "paragraph_sha256": "fe9c3068a0f250c61b4ade05a639ca04195079bb52b7af0f986d4fb7b24caa2b",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 58,
+          "fragments": [
+            {
+              "text": "We analyze the addition of whole-word masking on the downstream performance of CamemBERT. As reported for English on other downstream tasks, whole word masking improves downstream performances for all tasks but NER as seen in Table TABREF46. NER is highly sensitive to capitalisation, prefixes, suffixes and other subword features that could be used by a model to correctly identify entity mentions. Thus the added information by learning the masking at a subword level rather than at whole-word level seems to have a detrimental effect on downstream NER results.",
+              "char_start": 0,
+              "char_length": 563,
+              "byte_start": 0,
+              "byte_length": 563,
+              "paragraph_sha256": "99cef35600361eb2b62c057f30b0aa3c3fd2eb762f791588926334fbfe0dc429",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 6,
+          "fragments": [
+            {
+              "text": "We evaluate our model on four downstream tasks (POS tagging, dependency parsing, NER and natural language inference (NLI)), achieving state-of-the-art results in most tasks, confirming the effectiveness of large BERT-based models for French.",
+              "char_start": 0,
+              "char_length": 241,
+              "byte_start": 0,
+              "byte_length": 241,
+              "paragraph_sha256": "612e5df25e482b1d77d75589de9d6e7843b5a4d6b35c13832961e8d6d32f3fb0",
+              "whole_paragraph_guard": false
+            }
+          ]
+        },
+        {
+          "paragraph_id": 2,
+          "fragments": [
+            {
+              "text": "These transfer learning methods exhibit clear advantages over more traditional task-specific approaches, probably the most important being that they can be trained in an unsupervised manner. They nevertheless come with implementation challenges, namely the amount of data and computational resources needed for pretraining that can reach hundreds of gigabytes of uncompressed text and require hundreds of GPUs BIBREF11, BIBREF9. The latest transformer architecture has gone uses as much as 750GB of plain text and 1024 TPU v3 for pretraining BIBREF10. This has limited the availability of these state-of-the-art models to the English language, at least in the monolingual setting. Even though multilingual models give remarkable results, they are often larger and their results still lag behind their monolingual counterparts BIBREF12. This is particularly inconvenient as it hinders their practical use in NLP systems as well as the investigation of their language modeling capacity, something that remains to be investigated in the case of, for instance, morphologically rich languages.",
+              "char_start": 0,
+              "char_length": 1088,
+              "byte_start": 0,
+              "byte_length": 1088,
+              "paragraph_sha256": "67359f9b2a477c680d57efe8a4b352b46851ce7d4becb94de4cc0c525a5b0a88",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 49,
+          "fragments": [
+            {
+              "text": "Although this might push the performances even further, for all tasks except NLI, we don't apply any regularisation techniques such as weight decay, learning rate warm-up or discriminative fine-tuning. We show that fine-tuning CamemBERT in a straight-forward manner leads to state-of-the-art results on most tasks and outperforms the existing BERT-based models in most cases.",
+              "char_start": 0,
+              "char_length": 375,
+              "byte_start": 0,
+              "byte_length": 375,
+              "paragraph_sha256": "19c21b4208957c768cb1be7bd10a1692f2dc41659f5152fe7d379612e86c91fd",
+              "whole_paragraph_guard": false
+            }
+          ]
+        },
+        {
+          "paragraph_id": 20,
+          "fragments": [
+            {
+              "text": "Following BIBREF9, we optimise the model using Adam BIBREF23 ($\\beta _1 = 0.9$, $\\beta _2 = 0.98$) for 100k steps. We use large batch sizes of 8192 sequences. Each sequence contains at most 512 tokens. We enforce each sequence to only contain complete sentences. Additionally, we used the DOC-SENTENCES scenario from BIBREF9, consisting of not mixing multiple documents in the same sequence, which showed slightly better results.",
+              "char_start": 0,
+              "char_length": 429,
+              "byte_start": 0,
+              "byte_length": 429,
+              "paragraph_sha256": "33761f497de3212c3efbfdb38425ab55fc1cd9d1454d8c7f682e7a7fa60078fa",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 51,
+          "fragments": [
+            {
+              "text": "For POS tagging and dependency parsing, we compare CamemBERT to three other near state-of-the-art models in Table TABREF32. CamemBERT outperforms UDPipe Future by a large margin for all treebanks and all metrics. Despite a much simpler optimisation process, CamemBERT beats UDify performances on all the available French treebanks.",
+              "char_start": 0,
+              "char_length": 331,
+              "byte_start": 0,
+              "byte_length": 331,
+              "paragraph_sha256": "ddb1b516bd66f80a2d30001639f933fe32a6447801cc819f2a87d66f1684d160",
+              "whole_paragraph_guard": true
+            }
+          ]
+        }
+      ],
+      "selected": [
+        54,
+        55,
+        58,
+        6,
+        2,
+        49,
+        20,
+        51
+      ]
+    },
+    {
+      "paper_id": "1610.04377",
+      "id": "94dc437463f7a7d68b8f6b57f1e3606eacc4490a",
+      "title": "Civique: Using Social Media to Detect Urban Emergencies",
+      "question": "How many categories are there?",
+      "kind": "quantity",
+      "material": {
+        "full": "[P37] Section: Demostration Description\nThis showcase aims at detecting related tweets, and classifying them into appropriate categories. For this, we have created a list of filter words, which are used to filter tweets from the Twitter streaming API. These set of words help us filter the tweets related to any incident. We will tweet, and users are able to see how our system captures such tweets and classifies them. Users should be able to see the tweet emerge as an incident on the web-interface, as shown in figure FIGREF26 and the on the android application, as shown in figure FIGREF27 . Figure FIGREF27 demonstrates how a notification is generated when our system detects an emergency tweet. When a user clicks the emerged spot, the system should be able to display the sanitized version / extracted spatio-temporal data from the tweet. We test the system in a realtime environment, and validate our experiments. We also report the false positives generated during the process in section SECREF25 above.\n\n[P39] Section: Demostration Description\nCivique includes a set of local contacts for civic authorities who are to be / who can be contacted in case of various emergencies. Users can see how Civique detects an emergency and classifies it. They can also watch how the system generates a notification on the web interface and the Android interface, requesting them to contact the authorities for emergencies. Users can change their preferences on the mobile device anytime and can also opt not to receive notifications. Users should be able to contact the authorities online using the application, but in case the online contact is not responsive, or in case of a sudden loss of connectivity, we provide the user with the offline contact information of the concerned civic authorities along with the notifications.\n\n[P42] Section: Conclusions\nIn the future, we aim to develop detection of emergency categories on the fly, obscure emergencies like “airplane hijacking” should also be detected by our system. We plan to analyze the temporal sequence of the tweet set from a single location to determine whether multiple problems on the same location are the result of a single event, or relate to multiple events.\n\n[P6] Section: Motivation and Challenges\nThere are several challenges in building such an application: (a) Such a system expects a tweet to be location tagged. Otherwise, event detection techniques to extract the spatio-temporal data from the tweet can be vague, and lead to false alarms. (b) Such a system should also be able to verify the user's credibility as pranksters may raise false alarms. (c) Tweets are usually written in a very informal language, which requires a sophisticated language processing component to sanitize the tweet input before event detection. (d) A channel with the concerned authorities should be established for them to take serious action, on alarms raised by such a system. (e) An urban emergency such as a natural disaster could affect communications severely, in case of an earthquake or a cyclone, communications channels like Internet connectivity may get disrupted easily. In such cases, our system may not be of help, as it requires the user to be connected to the internet. We address the above challenges and present our approach in the next section.\n\n[P26] Section: Type Classification\nWe employ a multi-class Naive Bayes classifier as the second stage classification mechanism, for categorizing tweets appropriately, depending on the type of emergencies they indicate. This multi-class classifier is trained on data manually labeled with classes. We tokenize the training data using “NgramTokenizer” and then, apply a filter to create word vectors of strings before training. We use “trigrams” as features to build a model which, later, classifies tweets into appropriate categories, in real time. We then perform cross validation using standard techniques to calculate the results, which are shown under the label “Stage 2”, in table TABREF20 .\n\n[P0] Section: Abstract\nWe present the Civique system for emergency detection in urban areas by monitoring micro blogs like Tweets. The system detects emergency related events, and classifies them into appropriate categories like\"fire\",\"accident\",\"earthquake\", etc. We demonstrate our ideas by classifying Twitter posts in real time, visualizing the ongoing event on a map interface and alerting users with options to contact relevant authorities, both online and offline. We evaluate our classifiers for both the steps, i.e., emergency detection and categorization, and obtain F-scores exceeding 70% and 90%, respectively. We demonstrate Civique using a web interface and on an Android application, in realtime, and show its use for both tweet detection and visualization.\n\n[P24] Section: Pre-Processing Modules\nPlease note that, our current system performs compression, normalization and spell-checking if the language used is English. The classifier training and detection process are described below.\n\n[P35] Section: Demostration Description\nUsers interact with Civique through its Web-based user interface and Android based application interface. The features underlying Civique are demonstrated through the following two show cases:",
+        "packet": "[P37] Section: Demostration Description\nThis showcase aims at detecting related tweets, and classifying them into appropriate categories. For this, we have created a list of filter words, which are used to filter tweets from the Twitter streaming API. These set of words help us filter the tweets related to any incident. We will tweet, and users are able to see how our system captures such tweets and classifies them. Users should be able to see the tweet emerge as an incident on the web-interface, as shown in figure FIGREF26 and the on the android application, as shown in figure FIGREF27 . Figure FIGREF27 demonstrates how a notification is generated when our system detects an emergency tweet. When a user clicks the emerged spot, the system should be able to display the sanitized version / extracted spatio-temporal data from the tweet. We test the system in a realtime environment, and validate our experiments. We also report the false positives generated during the process in section SECREF25 above.\n\n[P39] Section: Demostration Description\nCivique includes a set of local contacts for civic authorities who are to be / who can be contacted in case of various emergencies. Users can see how Civique detects an emergency and classifies it. \n\n[P42] Section: Conclusions\nIn the future, we aim to develop detection of emergency categories on the fly, obscure emergencies like “airplane hijacking” should also be detected by our system. We plan to analyze the temporal sequence of the tweet set from a single location to determine whether multiple problems on the same location are the result of a single event, or relate to multiple events.\n\n[P6] Section: Motivation and Challenges\nThere are several challenges in building such an application: (a) Such a system expects a tweet to be location tagged. Otherwise, event detection techniques to extract the spatio-temporal data from the tweet can be vague, and lead to false alarms. (b) Such a system should also be able to verify the user's credibility as pranksters may raise false alarms. (c) Tweets are usually written in a very informal language, which requires a sophisticated language processing component to sanitize the tweet input before event detection. (d) A channel with the concerned authorities should be established for them to take serious action, on alarms raised by such a system. (e) An urban emergency such as a natural disaster could affect communications severely, in case of an earthquake or a cyclone, communications channels like Internet connectivity may get disrupted easily. \n\n[P26] Section: Type Classification\nWe employ a multi-class Naive Bayes classifier as the second stage classification mechanism, for categorizing tweets appropriately, depending on the type of emergencies they indicate. This multi-class classifier is trained on data manually labeled with classes. We tokenize the training data using “NgramTokenizer” and then, apply a filter to create word vectors of strings before training. We use “trigrams” as features to build a model which, later, classifies tweets into appropriate categories, in real time. We then perform cross validation using standard techniques to calculate the results, which are shown under the label “Stage 2”, in table TABREF20 .\n\n[P0] Section: Abstract\nWe present the Civique system for emergency detection in urban areas by monitoring micro blogs like Tweets. The system detects emergency related events, and classifies them into appropriate categories like\"fire\",\"accident\",\"earthquake\", etc. We demonstrate our ideas by classifying Twitter posts in real time, visualizing the ongoing event on a map interface and alerting users with options to contact relevant authorities, both online and offline. We evaluate our classifiers for both the steps, i.e., emergency detection and categorization, and obtain F-scores exceeding 70% and 90%, respectively. We demonstrate Civique using a web interface and on an Android application, in realtime, and show its use for both tweet detection and visualization.\n\n[P24] Section: Pre-Processing Modules\nPlease note that, our current system performs compression, normalization and spell-checking if the language used is English. The classifier training and detection process are described below.\n\n[P35] Section: Demostration Description\nUsers interact with Civique through its Web-based user interface and Android based application interface. The features underlying Civique are demonstrated through the following two show cases:"
+      },
+      "ledger": [
+        {
+          "paragraph_id": 37,
+          "fragments": [
+            {
+              "text": "This showcase aims at detecting related tweets, and classifying them into appropriate categories. For this, we have created a list of filter words, which are used to filter tweets from the Twitter streaming API. These set of words help us filter the tweets related to any incident. We will tweet, and users are able to see how our system captures such tweets and classifies them. Users should be able to see the tweet emerge as an incident on the web-interface, as shown in figure FIGREF26 and the on the android application, as shown in figure FIGREF27 . Figure FIGREF27 demonstrates how a notification is generated when our system detects an emergency tweet. When a user clicks the emerged spot, the system should be able to display the sanitized version / extracted spatio-temporal data from the tweet. We test the system in a realtime environment, and validate our experiments. We also report the false positives generated during the process in section SECREF25 above.",
+              "char_start": 0,
+              "char_length": 972,
+              "byte_start": 0,
+              "byte_length": 972,
+              "paragraph_sha256": "682555fe7b2dd90e4fbeb298fecce1af8de71f77bb08469087d5c10073347caf",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 39,
+          "fragments": [
+            {
+              "text": "Civique includes a set of local contacts for civic authorities who are to be / who can be contacted in case of various emergencies. Users can see how Civique detects an emergency and classifies it. ",
+              "char_start": 0,
+              "char_length": 198,
+              "byte_start": 0,
+              "byte_length": 198,
+              "paragraph_sha256": "cfc7dbc2771ba39c44bbcef04959117412082327023754c9dc9eb970777365c7",
+              "whole_paragraph_guard": false
+            }
+          ]
+        },
+        {
+          "paragraph_id": 42,
+          "fragments": [
+            {
+              "text": "In the future, we aim to develop detection of emergency categories on the fly, obscure emergencies like “airplane hijacking” should also be detected by our system. We plan to analyze the temporal sequence of the tweet set from a single location to determine whether multiple problems on the same location are the result of a single event, or relate to multiple events.",
+              "char_start": 0,
+              "char_length": 368,
+              "byte_start": 0,
+              "byte_length": 372,
+              "paragraph_sha256": "b864aec22a1e28589eefbee1f07ad252f0770a8a539b4b91e43f3d9694fa6f8b",
+              "whole_paragraph_guard": false
+            }
+          ]
+        },
+        {
+          "paragraph_id": 6,
+          "fragments": [
+            {
+              "text": "There are several challenges in building such an application: (a) Such a system expects a tweet to be location tagged. Otherwise, event detection techniques to extract the spatio-temporal data from the tweet can be vague, and lead to false alarms. (b) Such a system should also be able to verify the user's credibility as pranksters may raise false alarms. (c) Tweets are usually written in a very informal language, which requires a sophisticated language processing component to sanitize the tweet input before event detection. (d) A channel with the concerned authorities should be established for them to take serious action, on alarms raised by such a system. (e) An urban emergency such as a natural disaster could affect communications severely, in case of an earthquake or a cyclone, communications channels like Internet connectivity may get disrupted easily. ",
+              "char_start": 0,
+              "char_length": 869,
+              "byte_start": 0,
+              "byte_length": 869,
+              "paragraph_sha256": "3fd1b553209147a0c2b676803b626a8c8f7ba50c60da5bf854c9913c6d3954a3",
+              "whole_paragraph_guard": false
+            }
+          ]
+        },
+        {
+          "paragraph_id": 26,
+          "fragments": [
+            {
+              "text": "We employ a multi-class Naive Bayes classifier as the second stage classification mechanism, for categorizing tweets appropriately, depending on the type of emergencies they indicate. This multi-class classifier is trained on data manually labeled with classes. We tokenize the training data using “NgramTokenizer” and then, apply a filter to create word vectors of strings before training. We use “trigrams” as features to build a model which, later, classifies tweets into appropriate categories, in real time. We then perform cross validation using standard techniques to calculate the results, which are shown under the label “Stage 2”, in table TABREF20 .",
+              "char_start": 0,
+              "char_length": 660,
+              "byte_start": 0,
+              "byte_length": 672,
+              "paragraph_sha256": "8e2ea7b97a159d217c6796df987b6b2adcb20f81a87ab304c59c51f7afd993d2",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 0,
+          "fragments": [
+            {
+              "text": "We present the Civique system for emergency detection in urban areas by monitoring micro blogs like Tweets. The system detects emergency related events, and classifies them into appropriate categories like\"fire\",\"accident\",\"earthquake\", etc. We demonstrate our ideas by classifying Twitter posts in real time, visualizing the ongoing event on a map interface and alerting users with options to contact relevant authorities, both online and offline. We evaluate our classifiers for both the steps, i.e., emergency detection and categorization, and obtain F-scores exceeding 70% and 90%, respectively. We demonstrate Civique using a web interface and on an Android application, in realtime, and show its use for both tweet detection and visualization.",
+              "char_start": 0,
+              "char_length": 749,
+              "byte_start": 0,
+              "byte_length": 749,
+              "paragraph_sha256": "d46f0dfe6565b70356afd161d5cfb121e21a7cbfe23af5cef08184274af75536",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 24,
+          "fragments": [
+            {
+              "text": "Please note that, our current system performs compression, normalization and spell-checking if the language used is English. The classifier training and detection process are described below.",
+              "char_start": 0,
+              "char_length": 191,
+              "byte_start": 0,
+              "byte_length": 191,
+              "paragraph_sha256": "fd7408cc8754a035b10065c562c0295f4ce621e407209e2d06985da82495983c",
+              "whole_paragraph_guard": false
+            }
+          ]
+        },
+        {
+          "paragraph_id": 35,
+          "fragments": [
+            {
+              "text": "Users interact with Civique through its Web-based user interface and Android based application interface. The features underlying Civique are demonstrated through the following two show cases:",
+              "char_start": 0,
+              "char_length": 192,
+              "byte_start": 0,
+              "byte_length": 192,
+              "paragraph_sha256": "a8b2722777ce1196f9a4301f62d3ec8c6696e168352c3eeef9793f2c673ed640",
+              "whole_paragraph_guard": false
+            }
+          ]
+        }
+      ],
+      "selected": [
+        37,
+        39,
+        42,
+        6,
+        26,
+        0,
+        24,
+        35
+      ]
+    },
+    {
+      "paper_id": "1910.11949",
+      "id": "1c85a25ec9d0c4f6622539f48346e23ff666cd5f",
+      "title": "Automatic Reminiscence Therapy for Dementia.",
+      "question": "How many questions per image on average are available in dataset?",
+      "kind": "quantity",
+      "material": {
+        "full": "[P19] Section: Datasets ::: MS-COCO, Bing and Flickr datasets\nWe use MS COCO, Bing and Flickr datasets from BIBREF26 to train the model that generates questions. These datasets contain natural questions about images with the purpose of knowing more about the picture. As can be seen in the Figure FIGREF8, questions cannot be answered by only looking at the image. Each source contains 5,000 images with 5 questions per image, adding a total of 15,000 images with 75,000 questions. COCO dataset includes images of complex everyday scenes containing common objects in their natural context, but it is limited in terms of the concepts it covers. Bing dataset contains more event related questions and has a wider range of questions longitudes (between 3 and 20 words), while Flickr questions are shorter (less than 6 words) and the images appear to be more casual.\n\n[P27] Section: Validation ::: Qualitative results\nOur first goal was to generate meaningful questions from the provided pictures. Table TABREF16 contains some generated questions by our VQG model for each of the proposed images. These images were not in the training set as they were taken from photo albums, so the model was the first time that had these images as input. By looking at the questions, we can easily realise that the model is not only able to generate questions grammatically correct, but to understand the content of the image and ask about it. Furthermore, we not only wanted to generate only a question per image, but to bring out up to five questions for a deeper conversation.\n\n[P18] Section: Datasets\nOne of the first requirements to develop an architecture using a machine learning approach is a training dataset. The lack of open-source datasets containing dialogues from reminiscence therapy lead as to use a dataset with content similar to the one used in the therapy. In particular, we use two types of datasets to train our models: A dataset that maps pictures with questions, and an open-domain conversation dataset. The details of the two datasets are as follows.\n\n[P3] Section: Introduction\nWe propose a conversational agent that simulates a reminiscence therapist by asking questions about the patient's experiences. Questions are generated from pictures provided by the patient, which contain significant moments or important people in user's life. Moreover, to engage the user in the conversation we propose a second model which generates comments on user's answers. A chatbot model trained with a dataset containing simple conversations between different people. The activity pretends to be challenging for the patient, as the questions may require the user to exercise the memory. Our contributions include:\n\n[P7] Section: Related Work\nOur conversational agent uses two architectures to simulate a specialized reminiscence therapist. The block in charge of generating questions is based on the work Show, Attend and Tell BIBREF13. This work generates descriptions from pictures, also known as image captioning. In our case, we focus on generating questions from pictures. Our second architecture is inspired by Neural Conversational Model from BIBREF14 where the author presents an end-to-end approach to generate simple conversations. Building an open-domain conversational agent is a challenging problem. As addressed in BIBREF15 and BIBREF16, the lack of a consistent personality and lack of long-term memory which produces some meaningless responses in these models are still unresolved problems.\n\n[P33] Section: Validation ::: Qualitative results\nElisabot: hello ! how are you ?\n\n[P48] Section: Validation ::: Qualitative results\nElisabot: hello how are you ?\n\n[P73] Section: Conclusions\nThis project has many possible future lines. In our future work, we suggest to train the model including the Reddit dataset which could improve the chatbot model, as it has many open-domain conversations. Moreover, we would like to include speech recognition and generation, as well as real-time text translation, to make Elisabot more autonomous and open to older adults with reading and writing difficulties. Furthermore, the lack of consistency in the dialogue might be avoided by improving the architecture including information about passed conversation into the model. We also think it would be a good idea to recognize feelings from the user's answers and give a feedback according to them.",
+        "packet": "[P19] Section: Datasets ::: MS-COCO, Bing and Flickr datasets\nWe use MS COCO, Bing and Flickr datasets from BIBREF26 to train the model that generates questions. These datasets contain natural questions about images with the purpose of knowing more about the picture. As can be seen in the Figure FIGREF8, questions cannot be answered by only looking at the image. Each source contains 5,000 images with 5 questions per image, adding a total of 15,000 images with 75,000 questions. COCO dataset includes images of complex everyday scenes containing common objects in their natural context, but it is limited in terms of the concepts it covers. Bing dataset contains more event related questions and has a wider range of questions longitudes (between 3 and 20 words), while Flickr questions are shorter (less than 6 words) and the images appear to be more casual.\n\n[P27] Section: Validation ::: Qualitative results\nOur first goal was to generate meaningful questions from the provided pictures. Table TABREF16 contains some generated questions by our VQG model for each of the proposed images. These images were not in the training set as they were taken from photo albums, so the model was the first time that had these images as input. By looking at the questions, we can easily realise that the model is not only able to generate questions grammatically correct, but to understand the content of the image and ask about it. Furthermore, we not only wanted to generate only a question per image, but to bring out up to five questions for a deeper conversation.\n\n[P18] Section: Datasets\nOne of the first requirements to develop an architecture using a machine learning approach is a training dataset. \n[omitted source between fragments]\nIn particular, we use two types of datasets to train our models: A dataset that maps pictures with questions, and an open-domain conversation dataset. The details of the two datasets are as follows.\n\n[P3] Section: Introduction\nWe propose a conversational agent that simulates a reminiscence therapist by asking questions about the patient's experiences. Questions are generated from pictures provided by the patient, which contain significant moments or important people in user's life. Moreover, to engage the user in the conversation we propose a second model which generates comments on user's answers. \n\n[P7] Section: Related Work\nOur conversational agent uses two architectures to simulate a specialized reminiscence therapist. The block in charge of generating questions is based on the work Show, Attend and Tell BIBREF13. This work generates descriptions from pictures, also known as image captioning. In our case, we focus on generating questions from pictures. Our second architecture is inspired by Neural Conversational Model from BIBREF14 where the author presents an end-to-end approach to generate simple conversations. Building an open-domain conversational agent is a challenging problem. As addressed in BIBREF15 and BIBREF16, the lack of a consistent personality and lack of long-term memory which produces some meaningless responses in these models are still unresolved problems.\n\n[P33] Section: Validation ::: Qualitative results\nElisabot: hello ! how are you ?\n\n[P48] Section: Validation ::: Qualitative results\nElisabot: hello how are you ?\n\n[P73] Section: Conclusions\nThis project has many possible future lines. In our future work, we suggest to train the model including the Reddit dataset which could improve the chatbot model, as it has many open-domain conversations. "
+      },
+      "ledger": [
+        {
+          "paragraph_id": 19,
+          "fragments": [
+            {
+              "text": "We use MS COCO, Bing and Flickr datasets from BIBREF26 to train the model that generates questions. These datasets contain natural questions about images with the purpose of knowing more about the picture. As can be seen in the Figure FIGREF8, questions cannot be answered by only looking at the image. Each source contains 5,000 images with 5 questions per image, adding a total of 15,000 images with 75,000 questions. COCO dataset includes images of complex everyday scenes containing common objects in their natural context, but it is limited in terms of the concepts it covers. Bing dataset contains more event related questions and has a wider range of questions longitudes (between 3 and 20 words), while Flickr questions are shorter (less than 6 words) and the images appear to be more casual.",
+              "char_start": 0,
+              "char_length": 800,
+              "byte_start": 0,
+              "byte_length": 800,
+              "paragraph_sha256": "5171ef5e0a84d5e39d656cbea97f08875b872f440cdf1bb37617431723883f1a",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 27,
+          "fragments": [
+            {
+              "text": "Our first goal was to generate meaningful questions from the provided pictures. Table TABREF16 contains some generated questions by our VQG model for each of the proposed images. These images were not in the training set as they were taken from photo albums, so the model was the first time that had these images as input. By looking at the questions, we can easily realise that the model is not only able to generate questions grammatically correct, but to understand the content of the image and ask about it. Furthermore, we not only wanted to generate only a question per image, but to bring out up to five questions for a deeper conversation.",
+              "char_start": 0,
+              "char_length": 647,
+              "byte_start": 0,
+              "byte_length": 647,
+              "paragraph_sha256": "6932eeef0972b4761d3fbe72cf160e6d83cc3387ea5532670fc163b3dedb54f7",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 18,
+          "fragments": [
+            {
+              "text": "One of the first requirements to develop an architecture using a machine learning approach is a training dataset. ",
+              "char_start": 0,
+              "char_length": 114,
+              "byte_start": 0,
+              "byte_length": 114,
+              "paragraph_sha256": "cd3896616afbd5e357d052481e6277d1d764b4e1f8aaedbfe283405845fcf62e",
+              "whole_paragraph_guard": false
+            },
+            {
+              "text": "In particular, we use two types of datasets to train our models: A dataset that maps pictures with questions, and an open-domain conversation dataset. The details of the two datasets are as follows.",
+              "char_start": 272,
+              "char_length": 198,
+              "byte_start": 272,
+              "byte_length": 198,
+              "paragraph_sha256": "cd3896616afbd5e357d052481e6277d1d764b4e1f8aaedbfe283405845fcf62e",
+              "whole_paragraph_guard": false
+            }
+          ]
+        },
+        {
+          "paragraph_id": 3,
+          "fragments": [
+            {
+              "text": "We propose a conversational agent that simulates a reminiscence therapist by asking questions about the patient's experiences. Questions are generated from pictures provided by the patient, which contain significant moments or important people in user's life. Moreover, to engage the user in the conversation we propose a second model which generates comments on user's answers. ",
+              "char_start": 0,
+              "char_length": 379,
+              "byte_start": 0,
+              "byte_length": 379,
+              "paragraph_sha256": "e0f1724c8a2014fed34e379070eb15b7bcf4cb616bd20d28d01c9ad1f1a06015",
+              "whole_paragraph_guard": false
+            }
+          ]
+        },
+        {
+          "paragraph_id": 7,
+          "fragments": [
+            {
+              "text": "Our conversational agent uses two architectures to simulate a specialized reminiscence therapist. The block in charge of generating questions is based on the work Show, Attend and Tell BIBREF13. This work generates descriptions from pictures, also known as image captioning. In our case, we focus on generating questions from pictures. Our second architecture is inspired by Neural Conversational Model from BIBREF14 where the author presents an end-to-end approach to generate simple conversations. Building an open-domain conversational agent is a challenging problem. As addressed in BIBREF15 and BIBREF16, the lack of a consistent personality and lack of long-term memory which produces some meaningless responses in these models are still unresolved problems.",
+              "char_start": 0,
+              "char_length": 764,
+              "byte_start": 0,
+              "byte_length": 764,
+              "paragraph_sha256": "d2304792a563dcb6e7b3fed5ab8bde637055623a874ef96b56909f622d8cd83e",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 33,
+          "fragments": [
+            {
+              "text": "Elisabot: hello ! how are you ?",
+              "char_start": 0,
+              "char_length": 31,
+              "byte_start": 0,
+              "byte_length": 31,
+              "paragraph_sha256": "172f532667c9c552803d52cbf5dd6da3ea64cb5341cfcee2d3be976d478cd3c8",
+              "whole_paragraph_guard": false
+            }
+          ]
+        },
+        {
+          "paragraph_id": 48,
+          "fragments": [
+            {
+              "text": "Elisabot: hello how are you ?",
+              "char_start": 0,
+              "char_length": 29,
+              "byte_start": 0,
+              "byte_length": 29,
+              "paragraph_sha256": "40910f194d51d1309a2d7309014c6bc3e6972738ca0370a8510aa73092c42308",
+              "whole_paragraph_guard": false
+            }
+          ]
+        },
+        {
+          "paragraph_id": 73,
+          "fragments": [
+            {
+              "text": "This project has many possible future lines. In our future work, we suggest to train the model including the Reddit dataset which could improve the chatbot model, as it has many open-domain conversations. ",
+              "char_start": 0,
+              "char_length": 205,
+              "byte_start": 0,
+              "byte_length": 205,
+              "paragraph_sha256": "2b27edacca1e71dc8a105970cfcb4432ed43dc096265f24068f5357725ba6e3d",
+              "whole_paragraph_guard": false
+            }
+          ]
+        }
+      ],
+      "selected": [
+        19,
+        27,
+        18,
+        3,
+        7,
+        33,
+        48,
+        73
+      ]
+    },
+    {
+      "paper_id": "1910.11949",
+      "id": "4b41f399b193d259fd6e24f3c6e95dc5cae926dd",
+      "title": "Automatic Reminiscence Therapy for Dementia.",
+      "question": "How big dataset is used for training this system?",
+      "kind": "procedure",
+      "material": {
+        "full": "[P21] Section: Validation\nAn important aspect of dialogue response generation systems is how to evaluate the quality of the generated response. This section presents the training procedure and the quantitative evaluation of the model, together with some qualitative results.\n\n[P18] Section: Datasets\nOne of the first requirements to develop an architecture using a machine learning approach is a training dataset. The lack of open-source datasets containing dialogues from reminiscence therapy lead as to use a dataset with content similar to the one used in the therapy. In particular, we use two types of datasets to train our models: A dataset that maps pictures with questions, and an open-domain conversation dataset. The details of the two datasets are as follows.\n\n[P25] Section: Validation ::: Quantitative evaluation\nWe use the BLEU BIBREF30 metric on the validation set for the VQG model training. BLEU is a measure of similitude between generated and target sequences of words, widely used in natural language processing. It assumes that valid generated responses have significant word overlap with the ground truth responses. We use it because in this case we have five different references for each of the generated questions. We obtain a BLEU score of 2.07.\n\n[P5] Section: Introduction\nAn end-to-end deep learning approach which do not require hand-crafted rules and it is ready to be used by mild cognitive impairment patients. The system is designed to be intuitive and easy to use for the users and could be reached by any smartphone with internet connection.\n\n[P71] Section: Conclusions\nWe presented a dialogue system for handling sessions of 30 minutes of reminiscence therapy. Elisabot, our conversational agent leads the therapy by showing a picture and generating some questions. The goal of the system is to improve users mood and stimulate their memory and communication skills. Two models were proposed to generate the dialogue system for the reminiscence therapy. A visual question generator composed of a CNN and a LSTM with attention and a sequence-to-sequence model to generate feedback on the user's answers. We realize that fine-tuning our chatbot model with another dataset improved the generated dialogue.\n\n[P8] Section: Related Work\nSome works have proposed conversational agents for older adults with a variety of uses, such as stimulate conversation BIBREF17 , palliative care BIBREF18 or daily assistance. An example of them is ‘Billie’ reported in BIBREF19 which is a virtual agent that uses facial expression for a more natural behavior and is focused on managing user’s calendar, or ‘Mary’ BIBREF20 that assists the users by organizing their tasks offering reminders and guidance with household activities. Both of the works perform well on its specific tasks, but report difficulties to maintain a casual conversation. Other works focus on the content used in Reminiscence therapy. Like BIBREF21 where the authors propose a system that recommends multimedia content to be used in therapy, or Visual Dialog BIBREF22 where the conversational agent is the one that has to answer the questions about the image.\n\n[P0] Section: Abstract\nWith people living longer than ever, the number of cases with dementia such as Alzheimer's disease increases steadily. It affects more than 46 million people worldwide, and it is estimated that in 2050 more than 100 million will be affected. While there are not effective treatments for these terminal diseases, therapies such as reminiscence, that stimulate memories from the past are recommended. Currently, reminiscence therapy takes place in care homes and is guided by a therapist or a carer. In this work, we present an AI-based solution to automatize the reminiscence therapy, which consists in a dialogue system that uses photos as input to generate questions. We run a usability case study with patients diagnosed of mild cognitive impairment that shows they found the system very entertaining and challenging. Overall, this paper presents how reminiscence therapy can be automatized by using machine learning, and deployed to smartphones and laptops, making the therapy more accessible to every person affected by dementia.\n\n[P2] Section: Introduction\nTherapies such as reminiscence, that stimulate memories of the patient's past, have well documented benefits on social, mental and emotional well-being BIBREF5BIBREF6, making them a very desirable practice, especially for older adults. Reminiscence therapy in particular involves the discussion of events and past experiences using tangible prompts such as pictures or music to evoke memories and stimulate conversation BIBREF7. With this aim, we explore multi-modal deep learning architectures to be used to develop an intuitive, easy to use, and robust dialogue system to automatize the reminiscence therapy for people affected by mild cognitive impairment or at early stages of Alzheimer's disease.",
+        "packet": "[P21] Section: Validation\nAn important aspect of dialogue response generation systems is how to evaluate the quality of the generated response. This section presents the training procedure and the quantitative evaluation of the model, together with some qualitative results.\n\n[P18] Section: Datasets\nOne of the first requirements to develop an architecture using a machine learning approach is a training dataset. The lack of open-source datasets containing dialogues from reminiscence therapy lead as to use a dataset with content similar to the one used in the therapy. \n\n[P25] Section: Validation ::: Quantitative evaluation\nWe use the BLEU BIBREF30 metric on the validation set for the VQG model training. BLEU is a measure of similitude between generated and target sequences of words, widely used in natural language processing. It assumes that valid generated responses have significant word overlap with the ground truth responses. We use it because in this case we have five different references for each of the generated questions. We obtain a BLEU score of 2.07.\n\n[P5] Section: Introduction\nAn end-to-end deep learning approach which do not require hand-crafted rules and it is ready to be used by mild cognitive impairment patients. The system is designed to be intuitive and easy to use for the users and could be reached by any smartphone with internet connection.\n\n[P71] Section: Conclusions\nWe presented a dialogue system for handling sessions of 30 minutes of reminiscence therapy. Elisabot, our conversational agent leads the therapy by showing a picture and generating some questions. The goal of the system is to improve users mood and stimulate their memory and communication skills. Two models were proposed to generate the dialogue system for the reminiscence therapy. A visual question generator composed of a CNN and a LSTM with attention and a sequence-to-sequence model to generate feedback on the user's answers. We realize that fine-tuning our chatbot model with another dataset improved the generated dialogue.\n\n[P8] Section: Related Work\nSome works have proposed conversational agents for older adults with a variety of uses, such as stimulate conversation BIBREF17 , palliative care BIBREF18 or daily assistance. An example of them is ‘Billie’ reported in BIBREF19 which is a virtual agent that uses facial expression for a more natural behavior and is focused on managing user’s calendar, or ‘Mary’ BIBREF20 that assists the users by organizing their tasks offering reminders and guidance with household activities. Both of the works perform well on its specific tasks, but report difficulties to maintain a casual conversation. Other works focus on the content used in Reminiscence therapy. Like BIBREF21 where the authors propose a system that recommends multimedia content to be used in therapy, or Visual Dialog BIBREF22 where the conversational agent is the one that has to answer the questions about the image.\n\n[P0] Section: Abstract\nWith people living longer than ever, the number of cases with dementia such as Alzheimer's disease increases steadily. It affects more than 46 million people worldwide, and it is estimated that in 2050 more than 100 million will be affected. While there are not effective treatments for these terminal diseases, therapies such as reminiscence, that stimulate memories from the past are recommended. Currently, reminiscence therapy takes place in care homes and is guided by a therapist or a carer. In this work, we present an AI-based solution to automatize the reminiscence therapy, which consists in a dialogue system that uses photos as input to generate questions. We run a usability case study with patients diagnosed of mild cognitive impairment that shows they found the system very entertaining and challenging. Overall, this paper presents how reminiscence therapy can be automatized by using machine learning, and deployed to smartphones and laptops, making the therapy more accessible to every person affected by dementia.\n\n[P2] Section: Introduction\nTherapies such as reminiscence, that stimulate memories of the patient's past, have well documented benefits on social, mental and emotional well-being BIBREF5BIBREF6, making them a very desirable practice, especially for older adults. Reminiscence therapy in particular involves the discussion of events and past experiences using tangible prompts such as pictures or music to evoke memories and stimulate conversation BIBREF7. With this aim, we explore multi-modal deep learning architectures to be used to develop an intuitive, easy to use, and robust dialogue system to automatize the reminiscence therapy for people affected by mild cognitive impairment or at early stages of Alzheimer's disease."
+      },
+      "ledger": [
+        {
+          "paragraph_id": 21,
+          "fragments": [
+            {
+              "text": "An important aspect of dialogue response generation systems is how to evaluate the quality of the generated response. This section presents the training procedure and the quantitative evaluation of the model, together with some qualitative results.",
+              "char_start": 0,
+              "char_length": 248,
+              "byte_start": 0,
+              "byte_length": 248,
+              "paragraph_sha256": "1704a9467ec5eea9e2bd3dc4df996dd13db1cb662f3ad9cae764b5d6aee10388",
+              "whole_paragraph_guard": false
+            }
+          ]
+        },
+        {
+          "paragraph_id": 18,
+          "fragments": [
+            {
+              "text": "One of the first requirements to develop an architecture using a machine learning approach is a training dataset. The lack of open-source datasets containing dialogues from reminiscence therapy lead as to use a dataset with content similar to the one used in the therapy. ",
+              "char_start": 0,
+              "char_length": 272,
+              "byte_start": 0,
+              "byte_length": 272,
+              "paragraph_sha256": "cd3896616afbd5e357d052481e6277d1d764b4e1f8aaedbfe283405845fcf62e",
+              "whole_paragraph_guard": false
+            }
+          ]
+        },
+        {
+          "paragraph_id": 25,
+          "fragments": [
+            {
+              "text": "We use the BLEU BIBREF30 metric on the validation set for the VQG model training. BLEU is a measure of similitude between generated and target sequences of words, widely used in natural language processing. It assumes that valid generated responses have significant word overlap with the ground truth responses. We use it because in this case we have five different references for each of the generated questions. We obtain a BLEU score of 2.07.",
+              "char_start": 0,
+              "char_length": 445,
+              "byte_start": 0,
+              "byte_length": 445,
+              "paragraph_sha256": "ee10d14b3385b5e27e174cfdf28d7169610723c2db7726ca468d8d1651fcebc1",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 5,
+          "fragments": [
+            {
+              "text": "An end-to-end deep learning approach which do not require hand-crafted rules and it is ready to be used by mild cognitive impairment patients. The system is designed to be intuitive and easy to use for the users and could be reached by any smartphone with internet connection.",
+              "char_start": 0,
+              "char_length": 276,
+              "byte_start": 0,
+              "byte_length": 276,
+              "paragraph_sha256": "f1a31b839334f686a3926f463c6917010fc8c0af444c4106eafd776f2c8f0d3c",
+              "whole_paragraph_guard": false
+            }
+          ]
+        },
+        {
+          "paragraph_id": 71,
+          "fragments": [
+            {
+              "text": "We presented a dialogue system for handling sessions of 30 minutes of reminiscence therapy. Elisabot, our conversational agent leads the therapy by showing a picture and generating some questions. The goal of the system is to improve users mood and stimulate their memory and communication skills. Two models were proposed to generate the dialogue system for the reminiscence therapy. A visual question generator composed of a CNN and a LSTM with attention and a sequence-to-sequence model to generate feedback on the user's answers. We realize that fine-tuning our chatbot model with another dataset improved the generated dialogue.",
+              "char_start": 0,
+              "char_length": 633,
+              "byte_start": 0,
+              "byte_length": 633,
+              "paragraph_sha256": "c90f3d283bab36c62dc0a15cad6af255d628b2a71d0196317437e96efb608de3",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 8,
+          "fragments": [
+            {
+              "text": "Some works have proposed conversational agents for older adults with a variety of uses, such as stimulate conversation BIBREF17 , palliative care BIBREF18 or daily assistance. An example of them is ‘Billie’ reported in BIBREF19 which is a virtual agent that uses facial expression for a more natural behavior and is focused on managing user’s calendar, or ‘Mary’ BIBREF20 that assists the users by organizing their tasks offering reminders and guidance with household activities. Both of the works perform well on its specific tasks, but report difficulties to maintain a casual conversation. Other works focus on the content used in Reminiscence therapy. Like BIBREF21 where the authors propose a system that recommends multimedia content to be used in therapy, or Visual Dialog BIBREF22 where the conversational agent is the one that has to answer the questions about the image.",
+              "char_start": 0,
+              "char_length": 880,
+              "byte_start": 0,
+              "byte_length": 890,
+              "paragraph_sha256": "a2598dd77acb9498fe23161d3f735835a4d7eac9f6629bd13f6161112a114444",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 0,
+          "fragments": [
+            {
+              "text": "With people living longer than ever, the number of cases with dementia such as Alzheimer's disease increases steadily. It affects more than 46 million people worldwide, and it is estimated that in 2050 more than 100 million will be affected. While there are not effective treatments for these terminal diseases, therapies such as reminiscence, that stimulate memories from the past are recommended. Currently, reminiscence therapy takes place in care homes and is guided by a therapist or a carer. In this work, we present an AI-based solution to automatize the reminiscence therapy, which consists in a dialogue system that uses photos as input to generate questions. We run a usability case study with patients diagnosed of mild cognitive impairment that shows they found the system very entertaining and challenging. Overall, this paper presents how reminiscence therapy can be automatized by using machine learning, and deployed to smartphones and laptops, making the therapy more accessible to every person affected by dementia.",
+              "char_start": 0,
+              "char_length": 1033,
+              "byte_start": 0,
+              "byte_length": 1033,
+              "paragraph_sha256": "ffe910326fdabb79cc120ca0faa3f401859377e0f76d5b2721e9ca4397d2b704",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 2,
+          "fragments": [
+            {
+              "text": "Therapies such as reminiscence, that stimulate memories of the patient's past, have well documented benefits on social, mental and emotional well-being BIBREF5BIBREF6, making them a very desirable practice, especially for older adults. Reminiscence therapy in particular involves the discussion of events and past experiences using tangible prompts such as pictures or music to evoke memories and stimulate conversation BIBREF7. With this aim, we explore multi-modal deep learning architectures to be used to develop an intuitive, easy to use, and robust dialogue system to automatize the reminiscence therapy for people affected by mild cognitive impairment or at early stages of Alzheimer's disease.",
+              "char_start": 0,
+              "char_length": 701,
+              "byte_start": 0,
+              "byte_length": 701,
+              "paragraph_sha256": "6743065c0e455caee573d313dea81f3364970604d419a6900177771499b8ad39",
+              "whole_paragraph_guard": true
+            }
+          ]
+        }
+      ],
+      "selected": [
+        21,
+        18,
+        25,
+        5,
+        71,
+        8,
+        0,
+        2
+      ]
+    },
+    {
+      "paper_id": "2003.12218",
+      "id": "928828544e38fe26c53d81d1b9c70a9fb1cc3feb",
+      "title": "Comprehensive Named Entity Recognition on CORD-19 with Distant or Weak Supervision",
+      "question": "What is the size of this dataset?",
+      "kind": "fact",
+      "material": {
+        "full": "[P2] Section: Introduction\nNamed entity recognition (NER) is a fundamental step in text mining system development to facilitate the COVID-19 studies. There is critical need for NER methods that can quickly adapt to all the COVID-19 related new types without much human effort for training data annotation. We created this CORD-19-NER dataset with comprehensive named entity annotation on the CORD-19 corpus (2020-03-13). This dataset covers 75 fine-grained named entity types. CORD-19-NER is automatically generated by combining the annotation results from four sources. In the following sections, we introduce the details of CORD-19-NER dataset construction. We also show some NER annotation results in this dataset.\n\n[P0] Section: Abstract\nWe created this CORD-19-NER dataset with comprehensive named entity recognition (NER) on the COVID-19 Open Research Dataset Challenge (CORD-19) corpus (2020- 03-13). This CORD-19-NER dataset covers 74 fine-grained named entity types. It is automatically generated by combining the annotation results from four sources: (1) pre-trained NER model on 18 general entity types from Spacy, (2) pre-trained NER model on 18 biomedical entity types from SciSpacy, (3) knowledge base (KB)-guided NER model on 127 biomedical entity types with our distantly-supervised NER method, and (4) seed-guided NER model on 8 new entity types (specifically related to the COVID-19 studies) with our weakly-supervised NER method. We hope this dataset can help the text mining community build downstream applications. We also hope this dataset can bring insights for the COVID- 19 studies, both on the biomedical side and on the social side.\n\n[P34] Section: Conclusion\nIn the future, we will further improve the CORD-19-NER dataset quality. We will also build text mining systems based on the CORD-19-NER dataset with richer functionalities. We hope this dataset can help the text mining community build downstream applications. We also hope this dataset can bring insights for the COVID-19 studies, both on the biomedical side and on the social side.\n\n[P1] Section: Introduction\nCoronavirus disease 2019 (COVID-19) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The disease was first identified in 2019 in Wuhan, Central China, and has since spread globally, resulting in the 2019–2020 coronavirus pandemic. On March 16th, 2020, researchers and leaders from the Allen Institute for AI, Chan Zuckerberg Initiative (CZI), Georgetown University’s Center for Security and Emerging Technology (CSET), Microsoft, and the National Library of Medicine (NLM) at the National Institutes of Health released the COVID-19 Open Research Dataset (CORD-19) of scholarly literature about COVID-19, SARS-CoV-2, and the coronavirus group.\n\n[P35] Section: Acknowledgment\nResearch was sponsored in part by US DARPA KAIROS Program No. FA8750-19-2-1004 and SocialSim Program No. W911NF-17-C-0099, National Science Foundation IIS 16-18481, IIS 17-04532, and IIS-17-41317, and DTRA HDTRA11810026. Any opinions, findings, and conclusions or recommendations expressed herein are those of the authors and should not be interpreted as necessarily representing the views, either expressed or implied, of DARPA or the U.S. Government. The U.S. Government is authorized to reproduce and distribute reprints for government purposes notwithstanding any copyright annotation hereon. The views and conclusions contained in this paper are those of the authors and should not be interpreted as representing any funding agencies.\n\n[P4] Section: CORD-19-NER Dataset ::: Corpus\nCorpus Tokenization. The raw corpus is a combination of the “title\", “abstract\" and “full-text\" from the CORD-19 corpus. We first conduct automatic phrase mining on the raw corpus using AutoPhrase BIBREF0. Then we do the second round of tokenization with Spacy on the phrase-replaced corpus. We have observed that keeping the AutoPhrase results will significantly improve the distantly- and weakly-supervised NER performance.\n\n[P33] Section: Results ::: Top-Frequent Entity Summarization\nIn Table TABREF34, we show some examples of the most frequent entities in the annotated corpus. Specifically, we show the entity types including both our new types and some UMLS types that have not been manually annotated before. We find our annotated entities very informative for the COVID-19 studies. For example, the most frequent entities for the type “SIGN_OR_SYMPTOM behavior\" includes “cough\" and “respiratory symptoms\" that are the most common symptoms for COVID-19 . The most frequent entities for the type “INDIVIDUAL_BEHAVIOR\" includes “hand hygiene\", “disclosures\" and “absenteeism\", which indicates that people focus more on hand cleaning for the COVID-19 issue. Also, the most frequent entities for the type “MACHINE_ACTIVITY\" includes “machine learning\", “data processing\" and “automation\", which indicates that people focus more on the automated methods that can process massive data for the COVID-19 studies. This type also includes “telecommunication\" as the top results, which is quite reasonable under the current COVID-19 situation. More examples can be found in our dataset.\n\n[P31] Section: Results ::: NER Annotation Results\nIn Figure FIGREF28, we show some examples of the annotation results in CORD-19-NER. We can see that our distantly- or weakly supervised methods achieve high quality recognizing the new entity types, requiring only several seed examples as the input. For example, we recognized “SARS-CoV-2\" as the “CORONAVIRUS\" type, “bat\" and “pangolins\" as the “WILDLIFE\" type and “Van der Waals forces\" as the “PHYSICAL_SCIENCE\" type. This NER annotation results help downstream text mining tasks in discovering the origin and the physical nature of the virus. Our NER methods are domain-independent that can be applied to corpus in different domains. In addition, we show another example of NER annotation on New York Times with our system in Figure FIGREF29.",
+        "packet": "[P2] Section: Introduction\nNamed entity recognition (NER) is a fundamental step in text mining system development to facilitate the COVID-19 studies. There is critical need for NER methods that can quickly adapt to all the COVID-19 related new types without much human effort for training data annotation. We created this CORD-19-NER dataset with comprehensive named entity annotation on the CORD-19 corpus (2020-03-13). This dataset covers 75 fine-grained named entity types. CORD-19-NER is automatically generated by combining the annotation results from four sources. In the following sections, we introduce the details of CORD-19-NER dataset construction. We also show some NER annotation results in this dataset.\n\n[P0] Section: Abstract\nWe created this CORD-19-NER dataset with comprehensive named entity recognition (NER) on the COVID-19 Open Research Dataset Challenge (CORD-19) corpus (2020- 03-13). This CORD-19-NER dataset covers 74 fine-grained named entity types. It is automatically generated by combining the annotation results from four sources: (1) pre-trained NER model on 18 general entity types from Spacy, (2) pre-trained NER model on 18 biomedical entity types from SciSpacy, (3) knowledge base (KB)-guided NER model on 127 biomedical entity types with our distantly-supervised NER method, and (4) seed-guided NER model on 8 new entity types (specifically related to the COVID-19 studies) with our weakly-supervised NER method. We hope this dataset can help the text mining community build downstream applications. We also hope this dataset can bring insights for the COVID- 19 studies, both on the biomedical side and on the social side.\n\n[P34] Section: Conclusion\nIn the future, we will further improve the CORD-19-NER dataset quality. We will also build text mining systems based on the CORD-19-NER dataset with richer functionalities. We hope this dataset can help the text mining community build downstream applications. We also hope this dataset can bring insights for the COVID-19 studies, both on the biomedical side and on the social side.\n\n[P1] Section: Introduction\nCoronavirus disease 2019 (COVID-19) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The disease was first identified in 2019 in Wuhan, Central China, and has since spread globally, resulting in the 2019–2020 coronavirus pandemic. On March 16th, 2020, researchers and leaders from the Allen Institute for AI, Chan Zuckerberg Initiative (CZI), Georgetown University’s Center for Security and Emerging Technology (CSET), Microsoft, and the National Library of Medicine (NLM) at the National Institutes of Health released the COVID-19 Open Research Dataset (CORD-19) of scholarly literature about COVID-19, SARS-CoV-2, and the coronavirus group.\n\n[P35] Section: Acknowledgment\nResearch was sponsored in part by US DARPA KAIROS Program No. FA8750-19-2-1004 and SocialSim Program No. W911NF-17-C-0099, National Science Foundation IIS 16-18481, IIS 17-04532, and IIS-17-41317, and DTRA HDTRA11810026. Any opinions, findings, and conclusions or recommendations expressed herein are those of the authors and should not be interpreted as necessarily representing the views, either expressed or implied, of DARPA or the U.S. Government. The U.S. Government is authorized to reproduce and distribute reprints for government purposes notwithstanding any copyright annotation hereon. The views and conclusions contained in this paper are those of the authors and should not be interpreted as representing any funding agencies.\n\n[P4] Section: CORD-19-NER Dataset ::: Corpus\nCorpus Tokenization. The raw corpus is a combination of the “title\", “abstract\" and “full-text\" from the CORD-19 corpus. \n[omitted source between fragments]\nThen we do the second round of tokenization with Spacy on the phrase-replaced corpus. \n\n[P33] Section: Results ::: Top-Frequent Entity Summarization\nIn Table TABREF34, we show some examples of the most frequent entities in the annotated corpus. Specifically, we show the entity types including both our new types and some UMLS types that have not been manually annotated before. We find our annotated entities very informative for the COVID-19 studies. For example, the most frequent entities for the type “SIGN_OR_SYMPTOM behavior\" includes “cough\" and “respiratory symptoms\" that are the most common symptoms for COVID-19 . The most frequent entities for the type “INDIVIDUAL_BEHAVIOR\" includes “hand hygiene\", “disclosures\" and “absenteeism\", which indicates that people focus more on hand cleaning for the COVID-19 issue. Also, the most frequent entities for the type “MACHINE_ACTIVITY\" includes “machine learning\", “data processing\" and “automation\", which indicates that people focus more on the automated methods that can process massive data for the COVID-19 studies. This type also includes “telecommunication\" as the top results, which is quite reasonable under the current COVID-19 situation. More examples can be found in our dataset.\n\n[P31] Section: Results ::: NER Annotation Results\nIn Figure FIGREF28, we show some examples of the annotation results in CORD-19-NER. We can see that our distantly- or weakly supervised methods achieve high quality recognizing the new entity types, requiring only several seed examples as the input. For example, we recognized “SARS-CoV-2\" as the “CORONAVIRUS\" type, “bat\" and “pangolins\" as the “WILDLIFE\" type and “Van der Waals forces\" as the “PHYSICAL_SCIENCE\" type. This NER annotation results help downstream text mining tasks in discovering the origin and the physical nature of the virus. Our NER methods are domain-independent that can be applied to corpus in different domains. In addition, we show another example of NER annotation on New York Times with our system in Figure FIGREF29."
+      },
+      "ledger": [
+        {
+          "paragraph_id": 2,
+          "fragments": [
+            {
+              "text": "Named entity recognition (NER) is a fundamental step in text mining system development to facilitate the COVID-19 studies. There is critical need for NER methods that can quickly adapt to all the COVID-19 related new types without much human effort for training data annotation. We created this CORD-19-NER dataset with comprehensive named entity annotation on the CORD-19 corpus (2020-03-13). This dataset covers 75 fine-grained named entity types. CORD-19-NER is automatically generated by combining the annotation results from four sources. In the following sections, we introduce the details of CORD-19-NER dataset construction. We also show some NER annotation results in this dataset.",
+              "char_start": 0,
+              "char_length": 690,
+              "byte_start": 0,
+              "byte_length": 690,
+              "paragraph_sha256": "8e559588875d38648fe0d2e1a2fecac6b85875d53a0b81688395d22a19189c08",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 0,
+          "fragments": [
+            {
+              "text": "We created this CORD-19-NER dataset with comprehensive named entity recognition (NER) on the COVID-19 Open Research Dataset Challenge (CORD-19) corpus (2020- 03-13). This CORD-19-NER dataset covers 74 fine-grained named entity types. It is automatically generated by combining the annotation results from four sources: (1) pre-trained NER model on 18 general entity types from Spacy, (2) pre-trained NER model on 18 biomedical entity types from SciSpacy, (3) knowledge base (KB)-guided NER model on 127 biomedical entity types with our distantly-supervised NER method, and (4) seed-guided NER model on 8 new entity types (specifically related to the COVID-19 studies) with our weakly-supervised NER method. We hope this dataset can help the text mining community build downstream applications. We also hope this dataset can bring insights for the COVID- 19 studies, both on the biomedical side and on the social side.",
+              "char_start": 0,
+              "char_length": 917,
+              "byte_start": 0,
+              "byte_length": 917,
+              "paragraph_sha256": "239ad64dba767b94241a4587334b64057a0ed248fa9ea6ac908e4b61199eca61",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 34,
+          "fragments": [
+            {
+              "text": "In the future, we will further improve the CORD-19-NER dataset quality. We will also build text mining systems based on the CORD-19-NER dataset with richer functionalities. We hope this dataset can help the text mining community build downstream applications. We also hope this dataset can bring insights for the COVID-19 studies, both on the biomedical side and on the social side.",
+              "char_start": 0,
+              "char_length": 382,
+              "byte_start": 0,
+              "byte_length": 382,
+              "paragraph_sha256": "d72e591f038d6f6cff69f8242fb73efadc0085e0342949ba479241aefd1f749f",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 1,
+          "fragments": [
+            {
+              "text": "Coronavirus disease 2019 (COVID-19) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The disease was first identified in 2019 in Wuhan, Central China, and has since spread globally, resulting in the 2019–2020 coronavirus pandemic. On March 16th, 2020, researchers and leaders from the Allen Institute for AI, Chan Zuckerberg Initiative (CZI), Georgetown University’s Center for Security and Emerging Technology (CSET), Microsoft, and the National Library of Medicine (NLM) at the National Institutes of Health released the COVID-19 Open Research Dataset (CORD-19) of scholarly literature about COVID-19, SARS-CoV-2, and the coronavirus group.",
+              "char_start": 0,
+              "char_length": 690,
+              "byte_start": 0,
+              "byte_length": 694,
+              "paragraph_sha256": "27880fa6b2f6551ec100efed591dfd153f22554c2ad4f643fa5a449f48c018d9",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 35,
+          "fragments": [
+            {
+              "text": "Research was sponsored in part by US DARPA KAIROS Program No. FA8750-19-2-1004 and SocialSim Program No. W911NF-17-C-0099, National Science Foundation IIS 16-18481, IIS 17-04532, and IIS-17-41317, and DTRA HDTRA11810026. Any opinions, findings, and conclusions or recommendations expressed herein are those of the authors and should not be interpreted as necessarily representing the views, either expressed or implied, of DARPA or the U.S. Government. The U.S. Government is authorized to reproduce and distribute reprints for government purposes notwithstanding any copyright annotation hereon. The views and conclusions contained in this paper are those of the authors and should not be interpreted as representing any funding agencies.",
+              "char_start": 0,
+              "char_length": 739,
+              "byte_start": 0,
+              "byte_length": 739,
+              "paragraph_sha256": "39ec990c337169c369211039f84579975ed1eccd49f7389c4527a577a1005a5c",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 4,
+          "fragments": [
+            {
+              "text": "Corpus Tokenization. The raw corpus is a combination of the “title\", “abstract\" and “full-text\" from the CORD-19 corpus. ",
+              "char_start": 0,
+              "char_length": 121,
+              "byte_start": 0,
+              "byte_length": 127,
+              "paragraph_sha256": "64352596ef98b5fbb01b1b4c2914204e7d3123d0aae8c71dc5b0d494c5668129",
+              "whole_paragraph_guard": false
+            },
+            {
+              "text": "Then we do the second round of tokenization with Spacy on the phrase-replaced corpus. ",
+              "char_start": 206,
+              "char_length": 86,
+              "byte_start": 212,
+              "byte_length": 86,
+              "paragraph_sha256": "64352596ef98b5fbb01b1b4c2914204e7d3123d0aae8c71dc5b0d494c5668129",
+              "whole_paragraph_guard": false
+            }
+          ]
+        },
+        {
+          "paragraph_id": 33,
+          "fragments": [
+            {
+              "text": "In Table TABREF34, we show some examples of the most frequent entities in the annotated corpus. Specifically, we show the entity types including both our new types and some UMLS types that have not been manually annotated before. We find our annotated entities very informative for the COVID-19 studies. For example, the most frequent entities for the type “SIGN_OR_SYMPTOM behavior\" includes “cough\" and “respiratory symptoms\" that are the most common symptoms for COVID-19 . The most frequent entities for the type “INDIVIDUAL_BEHAVIOR\" includes “hand hygiene\", “disclosures\" and “absenteeism\", which indicates that people focus more on hand cleaning for the COVID-19 issue. Also, the most frequent entities for the type “MACHINE_ACTIVITY\" includes “machine learning\", “data processing\" and “automation\", which indicates that people focus more on the automated methods that can process massive data for the COVID-19 studies. This type also includes “telecommunication\" as the top results, which is quite reasonable under the current COVID-19 situation. More examples can be found in our dataset.",
+              "char_start": 0,
+              "char_length": 1097,
+              "byte_start": 0,
+              "byte_length": 1121,
+              "paragraph_sha256": "f647f52c48e43c51c64a8c8c8ab3d3a9354a81dc1f15aee49e96da6c58f7a90a",
+              "whole_paragraph_guard": true
+            }
+          ]
+        },
+        {
+          "paragraph_id": 31,
+          "fragments": [
+            {
+              "text": "In Figure FIGREF28, we show some examples of the annotation results in CORD-19-NER. We can see that our distantly- or weakly supervised methods achieve high quality recognizing the new entity types, requiring only several seed examples as the input. For example, we recognized “SARS-CoV-2\" as the “CORONAVIRUS\" type, “bat\" and “pangolins\" as the “WILDLIFE\" type and “Van der Waals forces\" as the “PHYSICAL_SCIENCE\" type. This NER annotation results help downstream text mining tasks in discovering the origin and the physical nature of the virus. Our NER methods are domain-independent that can be applied to corpus in different domains. In addition, we show another example of NER annotation on New York Times with our system in Figure FIGREF29.",
+              "char_start": 0,
+              "char_length": 746,
+              "byte_start": 0,
+              "byte_length": 760,
+              "paragraph_sha256": "cab4124205a736ce85fe488de27263a0f3bd234d2fe0327f7d7dff0bea808ad5",
+              "whole_paragraph_guard": true
+            }
+          ]
+        }
+      ],
+      "selected": [
+        2,
+        0,
+        34,
+        1,
+        35,
+        4,
+        33,
+        31
+      ]
+    }
+  ],
+  "prep_sec": 1.2623292999342084,
+  "cohort_paper_ids": [
+    "1904.06941",
+    "1801.07804",
+    "1911.11951",
+    "1906.09777",
+    "1811.04604",
+    "1808.09920",
+    "1909.03464",
+    "1910.04601",
+    "1810.02100",
+    "1712.03547",
+    "1907.04152",
+    "1811.01786",
+    "1703.08098",
+    "1610.05243",
+    "2003.08529",
+    "1911.03894",
+    "1909.08306",
+    "1808.03986",
+    "1605.08675",
+    "1610.04377",
+    "1906.06045",
+    "1812.07023",
+    "1909.05360",
+    "2002.00876",
+    "1910.06748",
+    "1806.11322",
+    "1612.07843",
+    "1909.08167",
+    "1910.11949",
+    "2003.12218"
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "figure": "method",
+    "file": "dictionary.csv",
+    "source": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\figures\\editaplot_informed_20261013\\real_case_dictionary.csv",
+    "sha256": "d0526ed75ec3e1e40089c52d4c398f541a93f86b3f3b16c4286a4e4ccf8eecb8"
+  },
+  {
+    "figure": "method",
+    "file": "edges.csv",
+    "source": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\figures\\editaplot_informed_20261013\\real_case_edges.csv",
+    "sha256": "b6875a4e8cbb9ccb884892e9be1d0b5bbeb5e2c8a6bc9dbf42036bc74deb4bc8"
+  },
+  {
+    "figure": "method",
+    "file": "inputs.csv",
+    "source": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\figures\\editaplot_informed_20261013\\real_case_layout.csv",
+    "sha256": "69d677f663f559d255f015ea37db1bf41daa9f3a975347348debe00369bcf1c7"
+  },
+  {
+    "figure": "method",
+    "file": "components.csv",
+    "source": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\figures\\editaplot_informed_20261013\\prefix_token_components.csv",
+    "sha256": "721dde3868df392a6a3c50de5fb021041643a15d5d0ff533c632ce5c5238ecf1"
+  },
+  {
+    "figure": "models",
+    "file": "graphs_17.csv",
+    "source": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\evidence_verification_20261006\\graph_summary.csv",
+    "sha256": "0af169c4e172a7c351f6d8a61b3e4c52dfaeea785c3e371815a66f6e5ad13c89"
+  },
+  {
+    "figure": "models",
+    "file": "graphs_4.csv",
+    "source": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\evidence_paired4b_20261006\\graph_summary.csv",
+    "sha256": "f2a0c4f360dd0065926f72605bb585c90916cbf04f1664b79173be1b2915c0b2"
+  },
+  {
+    "figure": "models",
+    "file": "arms_17.csv",
+    "source": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\evidence_verification_20261006\\arm_summary.csv",
+    "sha256": "cefc70cd37a8ccb23202bdbc452f70b299131ef25e7392b774e216d4935e3d5b"
+  },
+  {
+    "figure": "models",
+    "file": "arms_4.csv",
+    "source": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\evidence_paired4b_20261006\\arm_summary.csv",
+    "sha256": "162d37ca8ec1cb874675cc2b5640f4ff0d225149b192a5fb978d314c18a1e7fe"
+  },
+  {
+    "figure": "models",
+    "file": "contrasts_17.csv",
+    "source": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\evidence_verification_20261006\\contrasts.csv",
+    "sha256": "3ef3e5c5101cba74c8d38fd4ca059c5fa78165de7a6e763b9829b00b407dc4e4"
+  },
+  {
+    "figure": "models",
+    "file": "contrasts_4.csv",
+    "source": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\evidence_paired4b_20261006\\contrasts.csv",
+    "sha256": "f70c077f0d95b9686aab016a76f4ea679f445cee4f684123d6760741f626c231"
+  }
+]

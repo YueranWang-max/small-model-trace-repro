@@ -1,0 +1,216 @@
+% !TEX program = pdflatex
+
+% Trace as State local reproduction — arXiv preprint draft
+
+% Compile: pdflatex -> bibtex -> pdflatex x2
+
+\documentclass[10pt]{article}
+% Cairo figure PDFs use PDF 1.7.
+\ifdefined\pdfminorversion
+  \pdfminorversion=7
+\fi
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amsmath,amssymb}
+
+\usepackage{booktabs}
+
+\usepackage{array}
+
+\usepackage{graphicx}
+
+\usepackage[numbers,sort&compress]{natbib}
+
+\usepackage{xurl}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\usepackage{microtype}
+% Consistent manuscript paragraph style, including first paragraphs after headings.
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0pt plus 1pt}
+% Run-in paragraph headings use the same indentation as body paragraphs.
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\parindent}%
+  {3.25ex plus 1ex minus .2ex}{-1em}{\normalfont\normalsize\bfseries}}
+\makeatother
+\setlength{\emergencystretch}{2em}
+
+\usepackage{xcolor}
+
+\usepackage{xspace}
+
+
+\newcommand{\ie}{i.e.,\xspace}
+
+\newcommand{\eg}{e.g.,\xspace}
+
+\title{\textbf{Better Graph Answers from a Small Model:\\
+Simpler Inputs and a Short Reused Trace}}
+
+\author{Yueran Wang\thanks{School of Artificial Intelligence, Beijing Normal University. Correspondence: \texttt{wangyueran@mail.bnu.edu.cn}.}}
+
+\date{October 2026}
+
+\begin{document}
+% Set the XeTeX PDF backend version on the first page.
+\ifdefined\XeTeXversion\special{pdf:minorversion 7}\fi
+
+\maketitle
+
+\begin{abstract}
+Small local language models can become more useful if their inputs are easier to process and a short prior reasoning trace helps them answer. We investigate this approach on graph tasks, preserving every source element through reversible short node labels and reusing one brief thinking trace. In an independently frozen study of 24 new graphs, Qwen3-1.7B F1 rises from 0.6542 with compact inputs alone to 0.7703 with a front trace (difference 0.1161; descriptive 95\% interval $[0.0437,0.1914]$; paired sign-flip $p=0.00624$). The improvement requires 39.8\% more preparation-inclusive model tokens than compact direct reading. In prespecified secondary comparisons, compact direct reading itself raises F1 from original-input 0.3176 to 0.6542 while using 42.4\% fewer model tokens; the combined trace package also exceeds both original-input direct baselines, including a larger-output baseline, in accuracy with fewer total model tokens. These secondary comparisons are unadjusted for multiplicity. Local reproduction of the original five-trace Trace as State intervention motivates the adaptation and identifies context, output-budget and answer-interface limits. Front-versus-back trace superiority remains uncertain, and a separate 8K practical-capacity criterion fails despite input fit. The result is a measured choice between lower-token compact reading and a more accurate short-trace package on a local small model; transfer to natural documents remains untested.
+\end{abstract}
+
+\input{migration_primary_body}
+
+\section*{Use of Generative AI Tools}
+
+OpenAI generative-AI tools, including Codex, were used for literature discovery, experimental-design discussion, code drafting and debugging, experiment orchestration, statistical and reproducibility checks, figure-code drafting, and language editing. Experimental observations came from archived local Ollama calls and deterministic programs. All fourteen figures were rendered deterministically in R as vector graphics, with plotting sources, audited CSV inputs and raster previews preserved. Numeric extraction and auditing use separately archived Python scripts. Older synthetic and document explorations and the weaker-provenance model bridge are excluded from this manuscript's empirical evidence. The author is responsible for the manuscript and any public submission. No generative-AI system is listed as an author.
+
+\bibliographystyle{unsrtnat}
+
+\bibliography{references}
+
+\appendix
+
+\input{migration_gate_map}
+\input{reproduction_evidence_map}
+\input{early_state_detail}
+
+
+\section{Reproducibility}
+\paragraph{Primary archives.} The experiments used locally served models on a laptop RTX 5070 Ti with 12\,GB GPU memory. The completed short-trace, longer-input and sampling archives are \protect\path{logs/official_graph_five_trace/}, \protect\path{logs/official_graph_long_boundary/} and \protect\path{logs/official_graph_sampling_control/}. Representation and decoding controls retain separate archives under \protect\path{logs/official_graph_identity_recode/}, \protect\path{logs/official_graph_reasoning_mode/} and \protect\path{logs/official_graph_indexed_source/}. Each archive preserves its frozen protocol or dependencies, selected cases and recorded calls. The new prospective replication preserves 240 complete calls under \protect\path{logs/official_graph_confirmatory_20261006/}. The model bridge and later native studies are under \protect\path{recovery_bridge_20261003/}. Their records distinguish completed, interrupted, unqualified and unattempted outcomes.
+
+\paragraph{Independent verification.} The read-only program \protect\path{paper/verify_primary_evidence_20261005.py} recomputes graph labels and visible-answer scores without importing the original solver or scorer. Its output is \protect\path{paper/evidence_verification_20261005/primary_reverification.json}. It records hashes for all 590 inspected earlier ledgers and study-specific results. The separate \protect\path{paper/audit_confirmatory_20261006.py} independently reconstructs random selection and allocation, recomputes the twelve graph answers, rescores all 240 new raw responses and reports the prespecified descriptive intervals. Its audited CSVs and manifest are under \protect\path{paper/evidence_verification_20261006/}. Historical rescoring uses preserved parsed native responses; exact transport-byte preservation is a stronger feature of the new studies, not a claim about every historical record. The full source-dataset SHA-256 digest appears in the machine-readable manifest. Local model tags are retained alongside digests because nominal variant names and serving metadata parameter counts are not interchangeable.
+
+\paragraph{Completed follow-ups.} The second-model study, output-budget diagnostic and retained-case context diagnostic preserve 240, 60 and 26 calls under \protect\path{logs/official_graph_paired4b_20261006/}, \protect\path{logs/output_budget_control_20261006/} and \protect\path{logs/context_recovery_20261006/}. Their read-only auditors are \protect\path{paper/audit_paired4b_20261006.py}, \protect\path{paper/audit_output_budget_control_20261006.py} and \protect\path{paper/audit_context_recovery_20261006.py}. Each writes a separate manifest, scored-call table and complete summary. The context count includes one unscored input probe. The bounded evidence package contains the saved responses and copied R inputs; model weights are identified by hashes rather than redistributed.
+
+\paragraph{Complete compact-input extension.} Discovery and independent confirmation archives retain 168 and 264 complete calls under \protect\path{logs/user_benefit_20261009/} and \protect\path{logs/trace_benefit_confirmation_20261010/}. Frozen protocols, exact payload/response bytes, recoding dictionaries and all failed answers are retained. Separate auditors \protect\path{paper/audit_user_benefit_20261009.py} and \protect\path{paper/audit_trace_benefit_confirmation_20261010.py} recompute gold sets and scores without importing the runners. Reports, graph tables, R plotting scripts and preparation-inclusive costs are versioned separately. The discovery's archived cooling correction and reboot recovery preserve the original frozen stimuli and eighteen completed calls. Both extensions use Ollama 0.40.0; they are not pooled with the earlier runtime.
+
+\paragraph{Pinned model packages.} The three archived Qwen3-1.7B, Qwen3-4B and Qwen3.5-4B packages use Q4\_K\_M quantization. Their local manifest and component hashes, including the actual weight files, were checked and recorded. The two Qwen3 public registry manifests matched their frozen digests on 6 October 2026. The Qwen3.5 public tag had changed, so its current package is not the tested version. The old weight's public content-addressed endpoint remained available, while its local manifest, parameters and metadata were preserved. The release records this version difference; an unpinned download is not an exact reproduction. These checks establish package consistency and distinguish it from inference execution provenance.
+
+\paragraph{Figures.} Ten empirical figures and two detailed method figures were drawn in OriginPro 2027 from audited CSV inputs. The main confirmation figure was drawn in R from the frozen graph-level results, and an additional overall method schematic was generated in R from the evaluated protocol. Colors and direct labels distinguish the compared methods. The identifier-mapping example, reader input-token counts and token-cost decomposition use confirmation-study records. Figure source code and input tables are retained with editable native projects, vector PDF and high-resolution PNG/TIFF outputs. Earlier R-rendered versions remain archived for comparison. Plot generation does not rescore answers or change experimental observations.
+
+\paragraph{Evidence inclusion.} This manuscript reports the separately audited official-graph studies. Older synthetic and document explorations with incomplete response-level provenance, and the earlier bridge with reconstructed intended requests, are excluded from its results and empirical claims. Their archived files are retained unchanged outside the submission. New experiments are recorded prospectively and do not reconstruct missing historical outputs.
+
+\paragraph{Availability.} Study protocols, response-level records, scoring programs and figure source files are retained in the reproducibility materials. The experimental evidence has not yet been deposited in a public repository.
+
+\section{Native Source Qualification}
+\label{app:hybrid-source}
+
+\paragraph{Design.} This separately audited experiment tests full-source graph answering under a qualified native-thinking interface. It measures source performance rather than trace reuse. The subsequent five-trace trial terminated early (Appendix~\ref{app:hybrid-interrupted}).
+
+\paragraph{Prospective protocol and verification.} We used the fixed local \texttt{qwen3.5:4b} model digest, Ollama~0.35.1, the archived official general-thinking sampling profile, a 65,536-token context allocation and a 32,768-token output allowance. The original graph, system instruction and terminal-answer format were retained. Eight distinct official GraphWalks graphs were selected in dataset order after excluding 58 earlier official-study graphs and 16 model-bridge graphs, including interrupted or unreached cases. Two fixed source seeds were used per graph. The catalogue character intervals were $[2000,3500)$ and $[14000,16000)$, with two parents and two BFS graphs per interval; catalogue and complete-prompt character counts were recorded separately. One separately logged single-output-token calibration preceded the 16 scored calls. No request was retried. An independent auditor reconstructed selection from historical frozen manifests, recomputed BFS labels using queue distances, rendered the official Jinja template independently of the runner's renderer translation, and verified intended payloads, native input counts, model identity, resident context and usage. All 17 returned records qualified; the calibration was excluded from primary task scores and retained in costs.
+
+\begin{table}[htbp]
+\centering
+\caption{Full-source qualification on eight independent official graphs, with two repeats per graph. Repeats are averaged within graphs before averaging graphs. F1 is node-set F1. Normal format requires a normal stop and a valid terminal visible answer; it does not imply correctness. No trace reuse was tested in these calls.}
+\label{tab:hybrid-source}
+\begin{tabular}{lrrrr}
+\toprule
+Task group & Graphs/calls & F1 (\%) & EM (\%) & Normal format \\
+\midrule
+Short parents & 2/4 & 100.00 & 100.00 & 4/4 \\
+Short BFS & 2/4 & 100.00 & 100.00 & 4/4 \\
+Long parents & 2/4 & 100.00 & 100.00 & 4/4 \\
+Long BFS & 2/4 & 71.43 & 50.00 & 4/4 \\
+All planned tasks & 8/16 & 92.86 & 87.50 & 16/16 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Result and complete known cost.} The frozen qualification gate---at least 15 of 16 normal-format outputs, mean F1 at least 0.70, EM at least 0.50, and complete qualified inputs and usage---passed without amendment. Always predicting the empty set yielded F1 and EM of 12.5\%. Both exact-match errors were on long-BFS graph~504: its two source F1 scores were 0 and $6/7$; graph~505 was answered exactly in both repeats. Thus, the long-BFS subgroup has only two independent graphs, and its 50\% EM is not a reliable population-rate estimate. The 16 scored calls used 292,579 API tokens and 3,317.907 seconds of summed client request time; calibration used 117 tokens, yielding 292,696 known research tokens with no unknown usage. Recorded selection, independent label checking, token counting and metadata preparation before freeze serialization took 2.172 seconds. Server total, load, prefill and decode times are reported separately in the archived analysis; these fields need not sum exactly. This is not a measured five-trace deployment cost or an energy comparison.
+
+\paragraph{Interpretive limits and next test.} Model family, training, tokenizer, sampling profile, output allowance and fresh graph identities differ from earlier bridges, so cross-stage differences do not identify a parameter-size, architecture-only or budget-only causal effect. ``Fresh'' means unused in this research workflow; pretraining non-overlap with these public graphs has not been established. Longer cases also contain larger graphs. The result qualifies a local source configuration for further study, but establishes neither trace-reuse gains nor source-free sufficiency. A source-performance gate is not a necessary condition for studying trace rescue: the original paper also reported trace benefits from much weaker first-pass scores. The gate's own verdict remains unchanged.
+
+A four-stratum follow-up was infeasible because only three unused short BFS graphs remained where four were required. Its implementations and failure identity were preserved. Together with the pilot's short-task and long-parents ceiling, this motivated a separately frozen study of 16 fresh long-BFS graphs, selected in dataset order with no future case-score filtering. This task focus is pilot-informed; it is not an outcome-independent task-family choice. The follow-up retains five native source traces, five repeats per reader, identical bundles in prefix and append, full-source sampling, Question First and full-prompt Re2 controls, and distinct node-wise majority and whole-set-mode source-answer controls. Its 131,072-token context requires a separate logged calibration. A single trace prediction pays for all five sources and one expected reader. A positive pilot would still require independent fresh-case confirmation.
+
+\paragraph{A structural single-prediction token-cost boundary.} A separate analytic check of the frozen follow-up inputs establishes a resource boundary without inspecting its solver outcomes. Let $I$ denote the qualified full-source input-token count and $C$ the common output allowance. A fresh full-source call costs at most $I+C$ logical API tokens, whereas a prediction paying for five sources incurs at least $5I$ source-input tokens before any source outputs or feedback reader. Hence $I>C/4$ rules out lower one-prediction total-token cost for this five-source design. All 16 follow-up cases satisfy this inequality at $C=32{,}768$. Their mean five-source input-only lower bound is 56,303.4375 tokens, exceeding the fresh-call input-plus-maximum-output upper bound of 44,028.6875. These are conditional planned-request bounds, not measured interim performance means. Actual qualified inputs must match the independently rendered counts and returned outputs must obey the frozen allowance. The cost criterion remains unchanged, and the accuracy and same-state placement questions remain open. The bound concerns logical token accounting, not cache-adjusted computation, latency, monetary cost or all possible trace methods. Fewer source passes, cheaper evidence readout or preparation reused across genuinely different deployed questions require separate new-case experiments; repeated samples of one question do not justify dividing the source bill by five.
+
+\paragraph{Archives and release status.} The complete qualification payloads, raw responses, frozen dependencies, independent audit, analysis and figure inputs are in \protect\path{recovery_bridge_20261003/hybrid_source_qualification/}; the bounded report is \protect\path{paper/OFFICIAL_GRAPH_HYBRID_SOURCE_20261004.md}. The analytic per-case cost certificate is \protect\path{hybrid_five_trace_single_prediction_cost_bound_20261004.json} under the recovery directory. The new five-trace protocol and analysis are frozen separately. The manuscript source package was compiled locally after figure replacement. This does not establish successful compilation on the arXiv server or completion of every historical response audit.
+
+\section{Interrupted Native Five-Trace Trial}
+\label{app:hybrid-interrupted}
+
+\paragraph{Terminal status and frozen denominator.} The prospective follow-up fixed 16 fresh long-BFS graphs, five source calls per graph and five repeats of each of five reader arms, for 480 scored slots plus one calibration. The process terminated after ordinal~24 because the post-response residency check failed. Independent reconstruction of dataset selection, queue-based gold labels, request rendering, seed order, native trace serialization, joint input feasibility, usage and the consecutive execution prefix passed. The frozen analysis was then executed unchanged. Only the first graph's source bundle was generated. Of the 480 scored slots, 14 returned qualified responses, eight were recorded as untransmitted budget declines, one returned response was unqualified, and 457 were not reached. Thus 22 scored outcomes are determined and 458 remain undetermined under the frozen primary rules. Neither a successful audit nor a normal process exit establishes completion of the planned experiment.
+
+\paragraph{Qualification failure is not a reasoning failure.} Ordinal~24 returned a normal stop, the expected model name, 11,246 input tokens matching the independently rendered count, and 19,563 output tokens. Its subsequently archived \protect\path{/api/ps} response contained an empty model list, so the frozen digest-and-context residency criterion failed. The response and incurred usage remain archived, but its primary score is undetermined. Later read-only metadata showed a different resident model, \texttt{qwen3:8b}, at a 32,768-token context. The surrounding server log also recorded other \protect\path{/v1/chat/completions} requests, that model's loading, and GPU-discovery warnings. This temporal evidence is consistent with shared-runtime switching but does not identify a unique cause or caller. Earlier qualification snapshots do not prove continuous resource exclusivity. A later model load cannot retrospectively qualify the failed record, and no stopped primary request was replayed.
+
+\paragraph{Observed context boundary.} The five actual source thinking fields had 40,116, 34,511, 37,679, 36,275 and 41,308 characters. None exceeded the original-style 50,000-character threshold, so no trace was clipped. Both independently reconstructed trace reader inputs contained 144,677 tokens, already 13,605 above the frozen 131,072-token context. With the common 32,768-token output allowance and 64-token margin, the reserve was 177,509. Reducing only the output reserve cannot fit this full input. The predeclared joint policy declined prefix and append symmetrically. Eight decline records were actually reached; later planned slots retain the frozen missing-outcome treatment. This is a deployment-feasibility observation on one graph and configuration, not proof that every remaining graph would fail or that a fitting trace would be ineffective. A character cap is not a portable token-budget guarantee.
+
+\paragraph{What the frozen analysis can establish.} Full-plan F1 bounds are $[0.0344,0.9969]$ for direct sampling, $[0.0342,0.9967]$ for Question First, $[0.0360,0.9985]$ for Re2, and $[0,0.95]$ for both trace arms. No complete graph pair supports the predeclared prefix contrasts. Ordering, accuracy-candidate, cost-candidate and important-progress indicators are all false. Failure to meet these evidence gates does not prove absence of every possible accuracy effect. Conditional scores from a few repeats on one graph cannot replace the prospective 16-graph comparison.
+
+\paragraph{Incurred cost and release scope.} All actually transmitted usage is known: 595,885 research tokens, including 117 calibration tokens and 595,768 scored-call tokens. The first graph's five sources alone cost 190,884 tokens; they remain charged to any trace-based single prediction even when the reader is declined. Summed scored-call client time was 7,777.206 seconds. These are incurred interrupted-workflow quantities, not complete-plan or average single-deployment costs. Before-freeze preparation and shared bundle/all-reader-job preparation were separately 2.266 and 3.234 seconds; the missing complete-workflow timer remains unmeasured. The analytic one-prediction logical-token boundary in Section~\ref{app:hybrid-source} remains conditional on its specified configuration; actual caching, latency, energy and genuine cross-question amortization are different questions.
+
+Original ledgers, terminal status, independent audit, frozen analysis, runtime diagnostics, figure CSVs and vector/600\,dpi outputs are preserved in \protect\path{recovery_bridge_20261003/hybrid_five_trace_replication/}. The bounded report is \protect\path{paper/OFFICIAL_GRAPH_HYBRID_FIVE_TRACE_INTERRUPTED_20261004.md}. A future bounded-state adaptation requires a separate frozen protocol and fresh cases; selected but unreached graphs cannot be quietly recycled as independent confirmation.
+
+\section{Interrupted Indexed-Source Comparison}
+\label{app:indexed-source}
+
+\paragraph{Protocol and audit scope.} This separate official-data experiment tested the local \texttt{qwen3:\allowbreak1.7b} reader on eight distinct graphs, two fixed seeds and six arms: original source with a common glossary, a reversible compact edge list, and a complete directed-relation index, each with thinking enabled or disabled. The allocated context was 32,768 tokens and output cap 8,192 tokens. The graph structure, including duplicate edges, self-loops and node inventory, was retained; the indexed representation uses incoming relations for parents and outgoing relations for BFS. The original-plus-glossary arm is not byte-identical to the official source baseline used in other stages. Independent response and selection audits both passed. Selection was reconstructed from eight prior frozen manifests excluding 50 graph identities, with the fixed length/task strata and interleaving order. Public-case nonoverlap with our earlier studies does not establish absence from model pretraining.
+
+\paragraph{Incomplete execution and bounded outcomes.} Ninety-four of 96 planned responses were saved. The final original/thinking-off call was attempted but its response and usage are unknown; the final compact/thinking-on call was not reached. Neither was replayed or replaced. All planned repetitions remain in the denominator; missing F1/EM values range from zero to one. These identification bounds are not confidence intervals. Complete response records were scored using the qualified, normally stopped visible terminal answer; unknown nodes count as false positives. Table~\ref{tab:indexed-interrupted} and Figure~\ref{fig:indexed-interrupted} retain the missingness rather than assigning unknown executions a fabricated failure score.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Interrupted representation comparison. Each arm planned 16 readings of eight graphs. Token entries are observed arm sums of model input and output; an asterisk denotes an incomplete cost lower bound, not a full deployment cost.}
+\label{tab:indexed-interrupted}
+\begin{tabular}{lrrrr}
+\toprule
+Representation / thinking & Saved & F1 (\%) & EM (\%) & Tokens \\
+\midrule
+Original / on & 16 & 44.84 & 12.50 & 107,475 \\
+Original / off & 15 & 28.39--34.64 & 0--6.25 & 53,844$^{*}$ \\
+Compact / on & 15 & 56.04--62.29 & 43.75--50.00 & 51,247$^{*}$ \\
+Compact / off & 16 & 25.80 & 0 & 36,047 \\
+Indexed / on & 16 & 40.77 & 31.25 & 52,847 \\
+Indexed / off & 16 & 44.50 & 12.50 & 23,032 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/refined_r_20261015/interrupted_indexed_figure/publication.pdf}
+\caption{Interrupted representation comparison by thinking mode. Coverage rings show known versus unknown readings out of sixteen per arm. Teal F1 and orange EM endpoint pairs give identification bounds over all planned slots; the F1 bounds are also printed. Zero-width ranges represent complete observed arms, not absence of sampling uncertainty. Costs are observed input-plus-output token sums, with $\geq$ marking incomplete lower bounds. CPU preprocessing (1.188\,s) and compact-dictionary storage (36,612 bytes) remain separate. Unknown readings were not resent.}
+\label{fig:indexed-interrupted}
+\end{figure}
+
+\paragraph{What the comparison establishes.} The prespecified indexed/thinking-off candidate cannot meet its requirement of a 0.10 F1 increase over original/thinking-on. A secondary compact/thinking-on signal remains positive under every possible missing response: F1 is higher by 11.20--17.45 percentage points and EM by 31.25--37.50 points. This was not the primary candidate, the graph sample is small, and its cost is incomplete; it requires separate new-case confirmation before a joint accuracy--efficiency claim. Incoming-node indexing may convert parents into a lookup and must be compared with a conventional exact graph program rather than presented as wholly model-performed reasoning. The known research token total is at least 324,492, with the attempted missing call's usage unknown.
+
+The raw/frozen ledgers, response audit, separate selection certificate, release CSVs and R outputs are preserved under \protect\path{logs/official_graph_indexed_source/}. The selection certificate verifies the study-specific graph selection. This evidence is separate from the 4B native five-trace migration study and does not establish a trace-reuse effect.
+
+\section{Representation and Thinking-Mode Controls}
+\label{app:representation-controls}
+
+\paragraph{Complete-source identity recoding.} A separate eight-graph, two-seed experiment with \texttt{qwen3:\allowbreak1.7b} compared the original labels, reversible short aliases and a long-alias control of comparable input-token length, retaining every graph relation. All 48 saved calls qualified, with no unknown usage. Strict F1 was 0.4371, 0.5904 and 0.3232 respectively; EM was 0.250, 0.375 and 0.125. Normally stopped valid responses numbered 14/16, 15/16 and 13/16. Observed input-plus-output token sums were 114,237, 56,591 and 117,151; these sums include both seeds, rather than representing a mean single prediction. Compact labels reduced input tokens by 69.15\% and total model tokens by 50.46\% against the original arm, with a separate 25,156-byte dictionary and 1.034\,s measured preprocessing. These quantities do not establish a complete hardware or contiguous deployment-time advantage.
+
+The compact-minus-original mean F1 difference was $+0.1523$, with a descriptive graph-cluster interval $[-0.2115,0.4098]$; six of eight graph differences were positive. The compact-minus-long-alias contrast was $+0.2662$, interval $[0.0109,0.4699]$, an exploratory contrast. The prespecified follow-up gate failed. Parent questions benefited more than BFS in this small sample, so the overall point estimate is not a task-uniform effect. This intervention changes representation, not self-generated reasoning state. Label reversibility, graph equivalence, selection, strict unknown-node scoring and archived assets were independently audited. An initially over-restrictive alias parser was repaired with the original raw responses retained; its diagnostic record is preserved.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/refined_r_20261015/official_graph_identity_recode/publication.pdf}
+\caption{Identity recoding on eight graph units and two seeds per arm. (a) Each colour tracks one identified graph across original, compact and long-alias representations, separately by task. F1 averages the two seeds; curved links interpolate between discrete conditions only. Horizontal marker offsets separate coincident scores without changing F1. (b) Fixed-radius annuli encode input/output token shares by angle, not total cost by size; centres print observed totals charging both readings per graph. Mean F1 and existing descriptive 95\% intervals appear below. Dictionary storage and CPU preprocessing are separate. All graph information survives reversible recoding; a positive estimate does not override the failed follow-up gate.}
+\label{fig:identity-controls}
+\end{figure}
+
+\paragraph{Thinking-mode control and fixed task route.} Sixteen different official graphs and two matched seeds were tested with thinking enabled or disabled, holding the source, model, remaining settings and nominal output allowance fixed. All 64 calls qualified with known usage; 31/32 on and 30/32 off responses normally stopped and met the terminal format. Thinking-on scored F1 0.3784 and EM 0.09375; off scored 0.1643 and 0. The prespecified route (parents off, BFS on) is derived from the relevant saved paired calls, not a third independently generated 32-call arm; it scored 0.3191 and 0.0625. Physical token sums were 206,611 for on and 132,042 for off. The selected route calls sum to 162,993 tokens.
+
+For one seed-averaged prediction per graph, the 16-graph cost sums are 103,305.5, 66,021 and 81,496.5 tokens, respectively. These divide physical two-seed sums by two; they are not mean single-question costs, which require a further division by 16. Off reduced model tokens by 36.09\% but decreased F1 by 21.41 percentage points, descriptive interval $[-35.19,-10.10]$ points. Routing reduced tokens by 21.11\% but decreased F1 by 5.93 points, interval $[-13.34,-0.61]$. Neither adaptation passed its follow-up gate. A cheap mode that gives worse answers is not a quality-preserving efficiency result. The thinking-off sampling profile was not separately optimized; this comparison does not establish the best achievable off-mode performance.
+
+\paragraph{Release provenance.} The two completed studies preserve 112 qualified calls and 626,632 observed research tokens. \protect\path{consolidate_representation_releases_20261004.py} verifies the existing independent-audit asset hashes, figure CSV/summary correspondence, raw model-token sums and the route-cost denominator. Its separate release manifest adds provenance checks without rewriting the original freezes, responses or analyses. Both studies used the nominal 1.7B Qwen3 variant and must remain distinct from the new 4B native partial-state experiment. Their primary purpose is to identify confounds and boundaries, not to establish a self-state mechanism.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/refined_r_20261015/official_graph_reasoning_mode/publication.pdf}
+\caption{Thinking-mode and fixed-route comparison on sixteen graph units and two paired seeds. (a) Four task--length strata with four graphs each; arrows connect thinking-off circles to thinking-on diamonds in the quality--cost plane. Axes are shared, F1 averages graphs, and token totals sum seed-averaged costs within strata. Arrows do not imply a continuous response curve or causal isolation. (b) All-graph complete-token totals, F1 means and existing descriptive 95\% intervals. Route reuses the prespecified parents/off and BFS/on subsets of saved calls. Lower cost accompanies lower observed quality; no trace-order mechanism is tested.}
+\label{fig:thinking-controls}
+\end{figure}
+
+\end{document}
+
+
+

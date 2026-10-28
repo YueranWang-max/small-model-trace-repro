@@ -1,0 +1,4103 @@
+{
+  "created_unix": 1791571868.7131164,
+  "scope": "Complete new extension raw records and independent audits, with historical evidence as a hashed companion; no model weights or full public750-row corpus redistributed.",
+  "historical_companion": {
+    "path": "paper\\reproducibility_evidence_candidate_20261006.zip",
+    "sha256": "51c663aa52d74a768eaa080e91127d56503bed7cdd3518489d45d691a1e2ceaa"
+  },
+  "public_corpus_reproduction": "Obtain archived GraphWalks750-row file and verify data_sha256 in each frozen.json; selected full inputs are already archived.",
+  "files": [
+    {
+      "path": "data/qwen3_tokenizer_official/tokenizer.json",
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    },
+    {
+      "path": "logs/checkpoint_binding_confirmation/frozen.json",
+      "sha256": "7c724da2a422d1dfca4ccaa58e461f173f515e25d51d617343269baffc9da591"
+    },
+    {
+      "path": "logs/checkpoint_representation/frozen.json",
+      "sha256": "cd50b79085ea85117613194ab16119ae8ab757462e48fbffd2667667a9f2643e"
+    },
+    {
+      "path": "logs/context_recovery_20261006/frozen.json",
+      "sha256": "cceb4ea4e110b21035391255e44798cb84c966798b7995d8949849f10f3bc421"
+    },
+    {
+      "path": "logs/controlled_checkpoint/frozen.json",
+      "sha256": "3a587578f478759edaa7b38ef88b7e2cb87519f7ef58f18e0cff9febf113b813"
+    },
+    {
+      "path": "logs/controlled_state_boundary/frozen.json",
+      "sha256": "fec612f899572cfea6bb987b0fb425b6f39f2aac0d50fa5284f132a19f78ca88"
+    },
+    {
+      "path": "logs/controlled_step_execution/frozen.json",
+      "sha256": "20250a1e7f928af7bf4292671e67648d99ce845d63c2617335bd90ead3c859a6"
+    },
+    {
+      "path": "logs/controlled_step_schema/frozen.json",
+      "sha256": "4c8cd6868c530e8a35cf392e3932e85474b08d26f8a63cc150f15d2d99796d62"
+    },
+    {
+      "path": "logs/lookup_chain/frozen.json",
+      "sha256": "49a0130c2dc4ab64b75237b34b489814e099bbd4c0b90d0647d43e6f2547a76d"
+    },
+    {
+      "path": "logs/lookup_chain_replication/frozen.json",
+      "sha256": "b293c6eac91ed4f70c9d7e2d87ec72a9dbcb85ae24884e9f1160213fa480c23c"
+    },
+    {
+      "path": "logs/lookup_confirmation/frozen.json",
+      "sha256": "5b7f5975d0a4a416fd3b75350eb2b0969481b22b88c02156852c4617c3e04999"
+    },
+    {
+      "path": "logs/lookup_semantics/frozen.json",
+      "sha256": "9628fc9f7f00f8b4f04ec41edfec733890bc6a647160ad7026edd98078872ae9"
+    },
+    {
+      "path": "logs/model_checkpoint_order/frozen.json",
+      "sha256": "ac30d8a037ada5968e683779486c6924d883cc6eaff2e788be58dc3e8bf585eb"
+    },
+    {
+      "path": "logs/official_graph_budget_extension/frozen.json",
+      "sha256": "64ed7eb78161929f63e4c8eca9de7883b22cad0a39f390a95ee5756eae539b4d"
+    },
+    {
+      "path": "logs/official_graph_confirmatory_20261006/frozen.json",
+      "sha256": "7676e721593ae6c0f1b2e0ec097d878940f29d3ffa2ad1125d9eb5057042d97b"
+    },
+    {
+      "path": "logs/official_graph_five_trace/frozen.json",
+      "sha256": "65554673c560b292a2aec8fdf1cbfb89dad6a2259f88ac13e4766e7148a4b7dd"
+    },
+    {
+      "path": "logs/official_graph_identity_recode/frozen.json",
+      "sha256": "74d9118a1163a13aa7c6d613f256684ad88e026169f296bb08b8d0283e0822fe"
+    },
+    {
+      "path": "logs/official_graph_indexed_source/frozen.json",
+      "sha256": "ba5527d26e80a4ee140a561e714ac004d07ed3ef6b898c83dfb263fcc5365fe1"
+    },
+    {
+      "path": "logs/official_graph_long_boundary/frozen.json",
+      "sha256": "178020f2ebf0fc37de2a2efb3add1152d3a5d95eca986ca1cf22cd90097ff929"
+    },
+    {
+      "path": "logs/official_graph_native_order/frozen.json",
+      "sha256": "6ca0c2ff1b23875aa251f8dff988186521287a4b60f66e6612a1ee9c4c5ee95d"
+    },
+    {
+      "path": "logs/official_graph_native_probe/frozen.json",
+      "sha256": "7b1c6b9004a07979e9512b3bcb3d0faa94b48c58d603cebea3341f67ca63ae67"
+    },
+    {
+      "path": "logs/official_graph_order_replication/frozen.json",
+      "sha256": "3a449bc5925e0c20f91f0519f15e014c47517cc82b02affd67fce02e9703a704"
+    },
+    {
+      "path": "logs/official_graph_paired4b_20261006/frozen.json",
+      "sha256": "93e86220334537bde1d06a9fe3cebc95f0408427f1743753aaa816853fcc83d6"
+    },
+    {
+      "path": "logs/official_graph_reasoning_mode/frozen.json",
+      "sha256": "0519746b7262a90ecbfed0dd6e6bc931360e330ccf0d10355811f37ee911c894"
+    },
+    {
+      "path": "logs/official_graph_sampling_control/frozen.json",
+      "sha256": "a5ab92cc6da2ee4cf9f3e933f84b3a371d03c8cddf4e7bf720071f76946d7004"
+    },
+    {
+      "path": "logs/output_budget_control_20261006/frozen.json",
+      "sha256": "a84678f3f45134e4e187c450fb4048e5634931a86728e8fa1e6d88de2100489a"
+    },
+    {
+      "path": "logs/qasper_answer_contract/frozen.json",
+      "sha256": "8da7d70cf0b0056c4148da7cb2b39d7d09af5f205e8b493e5731a8b2d06fd0bc"
+    },
+    {
+      "path": "logs/qasper_attention_guard/frozen.json",
+      "sha256": "c361d7c33d7f8934e2942484c516455c04c01bf6f334c2ad5ed1401d941d9860"
+    },
+    {
+      "path": "logs/qasper_attention_probe/frozen.json",
+      "sha256": "8626590936c3277affc5db6bb556119f0ef948a849019936b7b5c55a1974acd3"
+    },
+    {
+      "path": "logs/qasper_attention_reader/frozen.json",
+      "sha256": "36ef8baa71ebe3bc27382bb01eee3c96614fea3ade3d7b7c51d0156063c4da9c"
+    },
+    {
+      "path": "logs/qasper_bounded_core/frozen.json",
+      "sha256": "6970ef4ab9cca11c3da2b053fbfa3e29b2ce5b0d8da496e1b04687a2aca3815a"
+    },
+    {
+      "path": "logs/qasper_contract_fallback/frozen.json",
+      "sha256": "eca6bccec76c0969bb584409367653fbaf38336119a27ef9d4a48427c3fb4f75"
+    },
+    {
+      "path": "logs/qasper_contract_replication/frozen.json",
+      "sha256": "5f9e1f6bc671728377bd121ead1f78c6027a220b3305a80a62c9e8ab8885c150"
+    },
+    {
+      "path": "logs/qasper_deep_retained/frozen.json",
+      "sha256": "01e72bfb12cf326985f9b4e7049e66352e0ef7fe00b5fe843c6cc2e2f01c5ed4"
+    },
+    {
+      "path": "logs/qasper_demand_transfer/frozen.json",
+      "sha256": "5b240a511a290f2f4680f797b45d03409def10af1c44a85adfbe940d5a550038"
+    },
+    {
+      "path": "logs/qasper_dependency_guard/frozen.json",
+      "sha256": "ddf25370620e7742b68caaeddf065a3d1e4da73f09d0021647d213e3a2031e14"
+    },
+    {
+      "path": "logs/qasper_evidence_unit/frozen.json",
+      "sha256": "dbc7524901a78136814b8b4c2e16038f9ae55c6cb42c29ec483bc89333a33f3a"
+    },
+    {
+      "path": "logs/qasper_exam_reader/frozen.json",
+      "sha256": "8d946b41debdca056979ee63a5d749ba77a0d122f74d1a224a14504e8b0f2a8c"
+    },
+    {
+      "path": "logs/qasper_fact_blocks/frozen.json",
+      "sha256": "4eda9416e4e2764c5024f037c5c50ffb8abca25f32f105cd6aa4f62f2ac36987"
+    },
+    {
+      "path": "logs/qasper_fingerprint/frozen.json",
+      "sha256": "af0c78091efb963db250325c11507630d28c24cda1c7024a1cdfbf80401e3959"
+    },
+    {
+      "path": "logs/qasper_format_control/frozen.json",
+      "sha256": "85fa5b54ebe1403fb0641f3b8ccd8d5acd393bed31d52565c9750cea7e09d2a6"
+    },
+    {
+      "path": "logs/qasper_forward_bridge/frozen.json",
+      "sha256": "d44207e4eeba606dd8f67ebfaa376915a52eab48046cb6faab400cb29f939c87"
+    },
+    {
+      "path": "logs/qasper_genre_structure/frozen.json",
+      "sha256": "c551f8887b19f224b90d0f85a8e17e4103e9fe2dc819e06b5956154ffeaa8446"
+    },
+    {
+      "path": "logs/qasper_genre_structure_readout/frozen.json",
+      "sha256": "0e8cca36ff2f112345a9a730884d220f0d21efcb123eeaad30171410dbebd980"
+    },
+    {
+      "path": "logs/qasper_genre_structure_replication/frozen.json",
+      "sha256": "e380312de332341b5beb4418d43b7c029a40f902f01f1086cba05daac24b6cf1"
+    },
+    {
+      "path": "logs/qasper_holdout/frozen.json",
+      "sha256": "d0cd3fc4c37069f4a9b3dfc3feea66c7fed27ad0901fa5e73bbbea9efed6a57f"
+    },
+    {
+      "path": "logs/qasper_interface_full_binding/frozen.json",
+      "sha256": "8403f95a1ea411f1ba8875458e1fcb455601d6a6f84f3a41ec61263ebeeb1bdd"
+    },
+    {
+      "path": "logs/qasper_interface_replication/frozen.json",
+      "sha256": "61acb21f55261e2db1ed17819d3681ec3fba7ea8166fde6a244bec26c0e5c908"
+    },
+    {
+      "path": "logs/qasper_interface_transport_recovery/frozen.json",
+      "sha256": "517910bc917a029389793f443b514023448532acd48859539ab86f9d045caf62"
+    },
+    {
+      "path": "logs/qasper_intersection_prefix/frozen.json",
+      "sha256": "48a6cd2976f6b4d99e19f915a6ecf5bbc98c42c3bdd3f49b3b5e651c2b0c1c99"
+    },
+    {
+      "path": "logs/qasper_known_question_compiler/frozen.json",
+      "sha256": "0460a5c0b7ed679883c41f80c4a6752fbd78efaab0f441bbed92ec42d37e99e7"
+    },
+    {
+      "path": "logs/qasper_known_question_span_v2/frozen.json",
+      "sha256": "41558daea56c86fb50efb27b42fc69798905900d7b234dff86f810cd107ea097"
+    },
+    {
+      "path": "logs/qasper_layer_mentions/frozen.json",
+      "sha256": "74b45d6803bebe92b451a26dfa6cf1886447e99fd04001a822e5d3e2ab71474f"
+    },
+    {
+      "path": "logs/qasper_measurement_audit/frozen.json",
+      "sha256": "77dd2f7c4b34e631f2b62a2fb4d12782ac272f5cb87daccc5b426ec0a6853a11"
+    },
+    {
+      "path": "logs/qasper_multiq/frozen.json",
+      "sha256": "28327c137a5b4d27006310da208bc7c4182a5fd37a1bf4e6c8b3a604be91ed00"
+    },
+    {
+      "path": "logs/qasper_numeric_fields/frozen.json",
+      "sha256": "179c8d43ccea9cc6fdc5d04a42cbd0f2679dbacc359cee3df693f83f0a85f288"
+    },
+    {
+      "path": "logs/qasper_outline_route/frozen.json",
+      "sha256": "6fea572822f0361e4152db17791beca8c3f031439b4d19d86feeaf048e571a9e"
+    },
+    {
+      "path": "logs/qasper_paired_relations/frozen.json",
+      "sha256": "4d5ab344cbc2d63eb7b4a5648f28e2a306ff1fe224418c62192a94ed1c3dd778"
+    },
+    {
+      "path": "logs/qasper_paragraph_elements/frozen.json",
+      "sha256": "631ca58b9c9ed6b4f7c82d98e5bb5d8fd2f48a63fd66565a1d757bf01badd23a"
+    },
+    {
+      "path": "logs/qasper_prefix_vs_bm25/frozen.json",
+      "sha256": "d2f85c99383aa493587a43696099e9e27fd552364b7411e972b5a3e6da304486"
+    },
+    {
+      "path": "logs/qasper_question_first_controls/frozen.json",
+      "sha256": "3af3bfc8238a7a0d0e5f903cc61910e6c93c3c007a307976a1776ba64befe942"
+    },
+    {
+      "path": "logs/qasper_relation_closure/frozen.json",
+      "sha256": "b9aa613ddf3127bb4db6adc1a40f980cbeef63534fad246b8c5acd1a8c637cc8"
+    },
+    {
+      "path": "logs/qasper_relation_packet/frozen.json",
+      "sha256": "08981cb473b8a890f6d59b9c551b571e01bf10b97a8376a40473f3023ba365f0"
+    },
+    {
+      "path": "logs/qasper_retained_source/frozen.json",
+      "sha256": "d5b44b2430fae7fca697da1643f98e36553afa0f029272a146604341e0bac24b"
+    },
+    {
+      "path": "logs/qasper_schema_core/frozen.json",
+      "sha256": "b5fa77e44f278873be2420109110e30446f72ae822f97022294ed711d39e18e8"
+    },
+    {
+      "path": "logs/qasper_semantic_slots/frozen.json",
+      "sha256": "e9da40eb3e221ca7313c18c595117eeb09326880ee98ffc01ac8da21d9b0fc7c"
+    },
+    {
+      "path": "logs/qasper_small_trace_boundary/frozen.json",
+      "sha256": "13a6011d4f501c9b826f11dc58b1663b4ec21405bb426429c08d5afc26ff1bef"
+    },
+    {
+      "path": "logs/qasper_state_reading_ladder/frozen.json",
+      "sha256": "5df3aa1b7e555fad53adc9b52a51d400d41476c41af6eb7da6bbf02faa20a466"
+    },
+    {
+      "path": "logs/qasper_state_resume/frozen.json",
+      "sha256": "85e1882c817a2d14db855a500078d535ed155abe8117e6606c85b90e59d87ed4"
+    },
+    {
+      "path": "logs/qasper_state_resume_ablation/frozen.json",
+      "sha256": "63ed56302dad483ed2a4ab275fdf7a0e0f615bd2e5f9f2ff1446a529e5c96e76"
+    },
+    {
+      "path": "logs/qasper_state_resume_binding_control/frozen.json",
+      "sha256": "e1e88fdce817af874d712dc13250d0cb5e254f96c15a15ef459ffed9e83e5a9d"
+    },
+    {
+      "path": "logs/qasper_state_resume_oracle/frozen.json",
+      "sha256": "db87e6f0058869f55ba295bb93231492713ab1fd2faa70ade843118081718562"
+    },
+    {
+      "path": "logs/qasper_target_scope/frozen.json",
+      "sha256": "e2c47620d624cbf861330aacd263742e1a817394bdc8533f5731963d8c14aacb"
+    },
+    {
+      "path": "logs/qasper_trace_bridge/frozen.json",
+      "sha256": "40b8de47d5e0edda6e1f97ee7b3f60d551592166ab7f174974b1fbaf045774cc"
+    },
+    {
+      "path": "logs/qasper_trace_mechanism/frozen.json",
+      "sha256": "d5d173ad7ed4c3efcc6a0693c6f126176fd221e7e8613d0d0eeedfcbf69a13e3"
+    },
+    {
+      "path": "logs/qasper_typed_contract/frozen.json",
+      "sha256": "d36dec08fac28357c3251398ad84776226d3930291c85aa182d2f94b64a25fb1"
+    },
+    {
+      "path": "logs/qasper_visible_trace_bridge/frozen.json",
+      "sha256": "59c7907a1e4a7046af13debd9563424b80e38c7c5070d353fd813307b79d7dfb"
+    },
+    {
+      "path": "logs/qasper_visible_trace_replication/frozen.json",
+      "sha256": "dcd4a3e4172c4eead9da95fdd5aa3730f746c8565c78b07703f5a5f0c00e6205"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/artifact_postprocess.log",
+      "sha256": "a1192479bd4ca25f4b1a7bf5b480e696942f59c9e6ef134a229ab430b6e340ff"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/artifact_status.json",
+      "sha256": "19cab6f486a1445cf87ca1a59b6534f7d0bfce797506850bab378ed28501af3c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/audit_progress.json",
+      "sha256": "b7497eb8316dbeb7ff65374193b381d01989df39c218f8e4e2e7e6ffb5be5cc2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/frozen.json",
+      "sha256": "40bd6554a13faabef9dacf53a8088c3641beef4b81ef93ca06db8bbb3c95bce2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_append_0.json",
+      "sha256": "04c9e803e7f761f59709e91704603b0dab9eaf08b66b8c15beafe3aa60e0e46e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_append_0.response.json",
+      "sha256": "ea3a1d6f3c413c599088429bda6bcf1431f1c8a12ea3e510aa289675cff1615e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_append_1.json",
+      "sha256": "119ebabf113191390143ffc3fe6a807d3c44e624770de79d656469edc965c9d3"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_append_1.response.json",
+      "sha256": "780c8b26a15bf0508bc599596c798bad61802036ad113fe02bb1ff9c3c947ee2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_compact_0.json",
+      "sha256": "77f0538c55eccc24adf25d2c3ba831de1d73538e5b79c420e12b69029892f245"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_compact_0.response.json",
+      "sha256": "7f088817409cfda51b18e2aa2920a57fe1d70775a9e11c378a9ffbbca330ec40"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_compact_1.json",
+      "sha256": "3f037fef4cef98eb174fd5e083ef54255008712174568b4b134c988b2eff6f0e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_compact_1.response.json",
+      "sha256": "9c4e78f6a2eb8c312abd2fd587fd0b1bc5a35374cd4a11e160c84d4e8b26d750"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_original_0.json",
+      "sha256": "4cb2702df7d18631a9c48eff947458b87ae3f26cd53765b217510147605352c3"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_original_0.response.json",
+      "sha256": "0f901ac3bfe2333fada9fdfaea73a120bf0b109c16374ef441332ba1ea3c0c94"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_original_1.json",
+      "sha256": "1f74c307a0705d4d707e836f7f83222236d37c2d4b49e5acffd331365ff52dda"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_original_1.response.json",
+      "sha256": "3b7b38968798a0cf14cd060b9e2e218b8daa73d6ab862c38f43c7d551f2a4079"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_original_long_0.json",
+      "sha256": "c30565e698892771d068f1da4e8428e126e6c2ecbff750b3b97052c30d30d16a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_original_long_0.response.json",
+      "sha256": "e5a77b84515a79cfb5adf0848ae8f1bf31dadc7da30cca72958ff6fdbbf4b4d6"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_original_long_1.json",
+      "sha256": "4871d96ee38f491519419b29f42674da072eb943d5cbc9425729909b7eba4007"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_original_long_1.response.json",
+      "sha256": "ff2dc5cfddf82788c791c0329e9836a23374a808ead896d1f68e28ac5c63e0bb"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_prefix_0.json",
+      "sha256": "6c6504c822d3757e20652b2fe1934f3e7d76d61112f8052db17b5dff6ce9c3ce"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_prefix_0.response.json",
+      "sha256": "3576d6ff433e4c8b26c460f77427a47838bbb138dd4ea08f227e9f3a88662034"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_prefix_1.json",
+      "sha256": "3968a857c94a6ca4e9bc783c17f8cb938edc691d8032a3945620b7514162a8cb"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_prefix_1.response.json",
+      "sha256": "25df06f9546feeac40ef655133758cdbe406fdbce4fd5e530464ad0ec01ca742"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_source.json",
+      "sha256": "909d327c5f3b8ccf6698177ced17a44ac3b10d0d0dfcb01a21f0d37306b141d9"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g00_source.response.json",
+      "sha256": "40e8d593b73f79e2c46f6eb7a64ea71978704846e0237cc36718fb8e5a492fcf"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_append_0.json",
+      "sha256": "910276ec94fb1a6892ae6d1857c2e03bae979231dbfa888b501c30250c2b1dad"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_append_0.response.json",
+      "sha256": "bfc6ef1699aee191b61c75fe7fc954ea3dd2bab13dcb7491af72e776405728a8"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_append_1.json",
+      "sha256": "bad48275764a132f10624057cca3bc7509053f373e9efd8f8cac326588ddc62c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_append_1.response.json",
+      "sha256": "08a0ddcd49c73393dca2f8ee7eacf9701c76d036e0131def5f25a4c5db475bf4"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_compact_0.json",
+      "sha256": "d5bff915ea356aabdbb47c6f7617b5051c247b737be97beb5a9434498f8510cc"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_compact_0.response.json",
+      "sha256": "b4a2fe726ec5308ebbca7490b789811c2e8353264af74059ad7c092886d5e510"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_compact_1.json",
+      "sha256": "3b0915bb2f62b4a4cc32b84f27a4025aad45535dd5d44ddc0ad46356638ed6bd"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_compact_1.response.json",
+      "sha256": "808929bdfd62d0c1bda76bc50fa04a0d85a4bdbc4b923a4c27b6352c0f62ef5c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_original_0.json",
+      "sha256": "d15ed4e7cc889c80af12f01e6e8f0b25d6c966b875b05ff5810fe12b94e4a0f5"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_original_0.response.json",
+      "sha256": "275ce502606f9eecd78c9edc10ca2f14f43f9ae762502a516944ba7a8a7ea1b1"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_original_1.json",
+      "sha256": "7dea69066f4f27c3e98a2693f087962895969d83ffa81c4ea2256f10c991228a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_original_1.response.json",
+      "sha256": "d701c5dbc2be1a621a02d1c756271d545a13f5f62b7bff63ba6f0c568b6c3182"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_original_long_0.json",
+      "sha256": "06a923efc4a9b3d067402ac0e95fd09fcc634c91e1a6eb4f27462360052ace94"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_original_long_0.response.json",
+      "sha256": "1992025f057ed91cdb116a9de9bcddd23070f5a7c1a9419f44197c6e53c988ec"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_original_long_1.json",
+      "sha256": "8051e276259140257456921b6e2c615a3e2cf2c22637f66324c41d645b6b9434"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_original_long_1.response.json",
+      "sha256": "ca76bc4ca297a6b603099ce9fb6367a7528124bb3b1e60c140b3fa531ecbd5bc"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_prefix_0.json",
+      "sha256": "5071064b4ff8cf1a3cef03073f5427c6c5a0a81eff03358ea6eaab611684197a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_prefix_0.response.json",
+      "sha256": "7b155d3c2b37cf05168f97eaa599968bd209a557dbc881c2843f73bfd63d87f2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_prefix_1.json",
+      "sha256": "3f7f0b7a322d6139d59cd5358d9d8dcb9cdae12e7d8d732b33cb825ace771355"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_prefix_1.response.json",
+      "sha256": "77ca87aff4dc525ac138bf2c38fde94380064224f01e22aaefa4684227819cb2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_source.json",
+      "sha256": "437845388eb29aa8cea6700c8fdcbfbf0c7ba3d4b40fa0872f20f65b2c758ce6"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g01_source.response.json",
+      "sha256": "2c3e5ad66c172fc3a7dab7e3699d043069635e7dc40c9b01fa9f8ee9cc875b02"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_append_0.json",
+      "sha256": "6f5582fb8720433233b6713b60c31488ce6900dab1142aa409c8abf28033c637"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_append_0.response.json",
+      "sha256": "0b0a06192d5a34868c896cdef08e7a19f6cce7ee10678a7e59059580345d1b7c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_append_1.json",
+      "sha256": "6d2087108eb62369f4b14f866b6d148a71ded3e14e87977f87a678e8311c7c29"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_append_1.response.json",
+      "sha256": "9cb14535ffb23d4f469dd0daecb5c24abdeebafbc22fa323df2b0b83ea8afbd5"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_compact_0.json",
+      "sha256": "de3601f6828c302c7c37039a0ea66fa1403f33c7355ec8fbe578e4db3edd02f6"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_compact_0.response.json",
+      "sha256": "96bf86d6419479f3326115b871c9dd8c3f3854062b88e093f8f0fd6716244603"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_compact_1.json",
+      "sha256": "e9231c2db60fa6cb588fcc58a8965fa3eb9178a09a1db1ad52a8299b0c9c6a0b"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_compact_1.response.json",
+      "sha256": "e7c393fd9c8fbe752ee7cc6f6a68197b84253714384321efdc457c383a859fd0"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_original_0.json",
+      "sha256": "102b9a4726c5e8b8860c7c24c70608d7f39ecbd09e8790d460fae1df953a99b3"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_original_0.response.json",
+      "sha256": "5b6410bbc6b259acaa595acf127a876e534868479647d37fe5621db3b3a7ea7c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_original_1.json",
+      "sha256": "ba7c719061cdcc396224f20f3bab730d6cb58be1708e4c493f31991a519b3708"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_original_1.response.json",
+      "sha256": "015440d741fc6061a7124804f00bfbfea3a773fca969d5034a8f436bcb6cf15a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_original_long_0.json",
+      "sha256": "0b59bbfc188e822cdc9a60866186b7979426dafcbcc45c3d186444d7d32d8fd9"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_original_long_0.response.json",
+      "sha256": "bc10ebd7d1254746b1a7c36d28ba5f7f1d2efe1e6706394e0d58bb83c9880de0"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_original_long_1.json",
+      "sha256": "df0ab8e23ff0e56b407bb94e1dede0c8874e3e9f55e10285b130329910198a60"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_original_long_1.response.json",
+      "sha256": "847594eaa3fb19ebc1a771f79f3e82df23f0e5662e4bbac57b7a78aecca73dd7"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_prefix_0.json",
+      "sha256": "e9cde5fd23cf8e412147cc5c5d50bfc953d392daa60222d689788dd5748666ca"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_prefix_0.response.json",
+      "sha256": "08d4b73a4f9604621118245059e9ed36530c12cf6c07472cd963134920390de0"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_prefix_1.json",
+      "sha256": "2e8e6807f9ad9089690ef661e636cfa6e15edb11836b096d8b7c4c0c665befed"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_prefix_1.response.json",
+      "sha256": "7fd33dee3bf7f1901d7e674043cd6fc29cce8f5780566aed97174e00613acb2e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_source.json",
+      "sha256": "bc17cf59f3b787ea43d1b689f3e474198b7554be48303c32e3fdc75c18865a49"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g02_source.response.json",
+      "sha256": "12d16861d834924a6f5ec5151b5adf882574a8a6dcf5a5b518c6265032db0b31"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_append_0.json",
+      "sha256": "9bb5e53507568f1af8dcb922e8963635a6e428ff667d22e83033fda2fb9b0bed"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_append_0.response.json",
+      "sha256": "6b383f01a880ccaeb5d7b938d20a148b145a9217597224af89c4e45b9e784deb"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_append_1.json",
+      "sha256": "f2b71e2cb70a883a9349608aac18ee16e7eb9e1f31bc188e1bfb2e1e4888c2d1"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_append_1.response.json",
+      "sha256": "6366f71cfffaed9646112c2f6f76806203b836aa5f2301555ba6f92b825c1e69"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_compact_0.json",
+      "sha256": "4cd8f935844e00966a59dc88c4e8b1edcd0e12bc6c576e7da6a2522b96bd87b7"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_compact_0.response.json",
+      "sha256": "44cfbb6341263f93d6507758a311b39f6e5165cd0ad24de8a2f2175bf5dfc4e6"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_compact_1.json",
+      "sha256": "7dade5d10e6b0842a3faa39eb6cb71b804ae087b8c4b748962ec2d855b7301b1"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_compact_1.response.json",
+      "sha256": "a934ad0188e89f43e303f243dca99e987619651595019e48e437650d259bbf11"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_original_0.json",
+      "sha256": "5cd0240b282ada00b23eec29207f1468ea49260f8c9d64ed6ba5b2c796e6c94a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_original_0.response.json",
+      "sha256": "2714480ea356e6f7764e29b36f80067e35ece6c859ace003a861f980ddb4fb57"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_original_1.json",
+      "sha256": "5f6db99fd49883547b30adcca67402bda7f2bad7c8ee67199cb94640f66c4e97"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_original_1.response.json",
+      "sha256": "3343054c54bd34f6fa466de580cde997135f524afcacfd3d8dfeccb34d527c2d"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_original_long_0.json",
+      "sha256": "195039fee6eb06e723cc4c236d7786ca78b773d0c47ced4bfbdac86d07c584a3"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_original_long_0.response.json",
+      "sha256": "cd58587ce4864b469c522fbfc5fbb27f6fc3858cc930caecc12ca727a183565b"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_original_long_1.json",
+      "sha256": "1af161bec259fc3b76cbcad212fcfa66fdf5a136f8e8c2ea529bad6695ce5823"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_original_long_1.response.json",
+      "sha256": "517a0cc55b2b96921bbf197bf92471186a4f19761425f524de98caa54e1fbd30"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_prefix_0.json",
+      "sha256": "33a0905b7c0d1409cf7c4bb65031eecbc7e986bc8fcf02a56a17c96b6686c977"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_prefix_0.response.json",
+      "sha256": "f648c4e702ac8f6ff82056cf5b34fc92b3f9306f2b212f5e5ab20ec4c61fbfb4"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_prefix_1.json",
+      "sha256": "97834dfc5f6b3164bb6f0d3e73b6c93c4900ed62bdf0ed8f5b64be6e6e5b53b9"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_prefix_1.response.json",
+      "sha256": "1d73eb2d68fe4d01ddde41816e814cc705a3e56991678ed9a2305c3a068d363d"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_source.json",
+      "sha256": "798915156dcaaca8265d4c8ed308f42835c5eb284b33c227277eee53b625bcc3"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g03_source.response.json",
+      "sha256": "972ccad574103bbb5100e60b28c486df63735f2e583232b4c13a465b9f4f5174"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_append_0.json",
+      "sha256": "6e4f30a1f291e143bad4c3205a82a2c7284e47f95a94d5c2748fc03f128ca39c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_append_0.response.json",
+      "sha256": "b100b8478cf162569412af3fefaf202fc25b0b3e06817be4fc382bd396282c62"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_append_1.json",
+      "sha256": "91896881c8b4f8ba06b3e5a2b68f47996185f6575ad827f50ed612085f2a7d30"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_append_1.response.json",
+      "sha256": "b12ef7ab963c41e34aefd8e4a22928216c9f5df4316e0ee4bcc93896704a16f2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_compact_0.json",
+      "sha256": "68dd6881aac16d185b0623036a13aa09c4f16a4544054e184437b8bc30d02b29"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_compact_0.response.json",
+      "sha256": "b64b123e638b6ca7d77bf3d7ecf9e181548e81066ea7ad4171857daf32c3a92a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_compact_1.json",
+      "sha256": "5b564ae874b70a6fad05a887612980d20df0093761e382afda237f08ebd39914"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_compact_1.response.json",
+      "sha256": "f57e427b5dcf896efc7204ab1a665a70c08348c0fe580f0693822cb44a40624f"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_original_0.json",
+      "sha256": "75f317470a4c1922f55e37cba38d191ea0fe56991e27acfbcd03920a3d748f56"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_original_0.response.json",
+      "sha256": "8ff09811d66e0add0d18bdf7dd9e5798148c6f8d30ca8e15d2539bab92e30994"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_original_1.json",
+      "sha256": "5c083905df7b107c2de67dec2aba7e3144e6cb47f0667638ec0e9db56869e633"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_original_1.response.json",
+      "sha256": "0e3f35d60a7f207ecf66d8e6d7cdee256ef5ba9c8dbab846c37b6fc3d379c1e9"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_original_long_0.json",
+      "sha256": "b64296e44872fb4f41001fcc6a66cf01e3234dd1955749b6a0feff2cd1a701b9"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_original_long_0.response.json",
+      "sha256": "9ebf4bc2b4507a9ebe02081a7d36f8474086303f404c096e8ce641d6751f2f7c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_original_long_1.json",
+      "sha256": "3ec1550a49a6669bec679e837c0b3c3eacdf7af675a753b9e5e60ac0a731b2ff"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_original_long_1.response.json",
+      "sha256": "085fa6bdd63c47c1a77a0909cb8f339396c44efa24064db276dc7074041ec74e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_prefix_0.json",
+      "sha256": "93267573602883646cdd97b8ad2d3000872d31177903712ee9672e35f6eaf5fe"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_prefix_0.response.json",
+      "sha256": "8cadc7ca5b7f4195957e32116ce7ccd53c170b911f0abee9e52d063fee9429ec"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_prefix_1.json",
+      "sha256": "b6967fec76678929a2f2dc84c3d67c3b37b270aac9ac63eb70e0363203faa728"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_prefix_1.response.json",
+      "sha256": "67c364b742df046bc29b6621abe976e4f22e9fc9433c1f864c74f4fcf1231efb"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_source.json",
+      "sha256": "1df0b8a9043c95e2e9949996c90b5b440047c9c973fda311ca22664a445031c5"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g04_source.response.json",
+      "sha256": "20911834045a9f7dc41fcb117dcead36ae47135f3c7f4c6a386e313e7c3a4ea4"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_append_0.json",
+      "sha256": "b54e4db2f1127d3922d60891a3fced4b037615a3c7a18a95c708c7238c030a13"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_append_0.response.json",
+      "sha256": "4427b6171d8806ef3aa98397a73e66d3618c4874079ca97a7d01f7f410d1a1ca"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_append_1.json",
+      "sha256": "e63f8a85b6708e7ac19c9c062690e870c0e3beb8c7f3a86f250f9570029af320"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_append_1.response.json",
+      "sha256": "e0b3bf07adba1659c1c32817d8913e4902d07c2123ca82796c8313c05868f610"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_compact_0.json",
+      "sha256": "dc74a07a53d4617c3fe81fec1fd7a720e1515ba9b2bff15140a91c520687ed70"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_compact_0.response.json",
+      "sha256": "4713b52828c66b4c4299a4f9d59559749133b0529b731891f137523cfcaa14b7"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_compact_1.json",
+      "sha256": "21d0a8de602d0f9a9b86ec96af43287c570a99989601a4ccf62010a1ed00a002"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_compact_1.response.json",
+      "sha256": "b3d67c274d0a190c797ed7657f9ef57274c86ff203a1f32a9579764305500349"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_original_0.json",
+      "sha256": "aafc0deab1806c2e26d939048cfe716dcf65f5133e32403fc0d04fb6a3fcb1f6"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_original_0.response.json",
+      "sha256": "b4b531252f58c6fd1d7f5181004753281c99151e76d7bc04d6ea9dfd526f571d"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_original_1.json",
+      "sha256": "24f163aab02d8679e37fe2053aa8892e0f5899b5ccf6af660a146d3b24597816"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_original_1.response.json",
+      "sha256": "8d4833486d7b4db2ebe24b519213dd9545c1f9994ed4042ff14fdf040fc3a94c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_original_long_0.json",
+      "sha256": "db0bf0758aed83621afdc1b4b12283803bcd6386348c98d52f919707ee03b943"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_original_long_0.response.json",
+      "sha256": "01103647fff60c6b436f7c4a4d276429c0b74cd66e3d85c89dffd13b301e0270"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_original_long_1.json",
+      "sha256": "e8f3a561fe01947974040e72bcb390513f4940088a31d9d7a45f6ab503ffba2e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_original_long_1.response.json",
+      "sha256": "bfd1da2106b007654b5ff423e2d6735ef5fe07af0bcbbde6a4127d7777be9dd0"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_prefix_0.json",
+      "sha256": "60b8e9868091730db8761dc09dc8546f27b59e7f94ad9097b55468739cab2b0e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_prefix_0.response.json",
+      "sha256": "bca3a207e2945be59efffa19f11994c681c90c1e135b4c9bf7a8722d4535bad0"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_prefix_1.json",
+      "sha256": "0612f961f428f6b36cb51a525c7314beaed2d41662e600524bef59eeddcc4b5a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_prefix_1.response.json",
+      "sha256": "01d21b19d0ca4db44c55eec80ed35f1984b619a3b7136bd6fadcfbf10fe2ec77"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_source.json",
+      "sha256": "cad087056dc40c8a94b171086c9f9b3c36b4af58babb15ebaad547bafdc15ea7"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g05_source.response.json",
+      "sha256": "5422f45aac7ad593d2906ee1fc3fc9a885d38acb80a0af5b6daa94a0ec0e4baf"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_append_0.json",
+      "sha256": "490728775da1e5d6cf7c180f609284952e9bc99f0688734e50c67e46e2c09076"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_append_0.response.json",
+      "sha256": "3e34abe26edaf0991ced24a1b801cd643d80596184c34870184821973cd1a1c2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_append_1.json",
+      "sha256": "c1cdd70a8591f6ba88fa5741f9fb8551996e4d4595b18d87460b945f1c107aac"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_append_1.response.json",
+      "sha256": "97fab23da389a26cd014a00782c46d8ab3994118c9f86133f646a08e23939eb2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_compact_0.json",
+      "sha256": "82874ba793a8db70ced8dd7dd6281fc04c5ab4d4134d2127e25b9ae7a9524fd9"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_compact_0.response.json",
+      "sha256": "b7bf063e2ea763841e7732f13112ae0446ffe2a1172afc8544a40731514a32c9"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_compact_1.json",
+      "sha256": "38e2d614fa017972641e30a0810e2aeb70ff38a20836f012acb6b0c5d0a9891e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_compact_1.response.json",
+      "sha256": "24878659ea3b65f5c4eb179ec572d9f0ea0dd37ac625a6c9776864f4fb4c4865"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_original_0.json",
+      "sha256": "8320caab771ba184938674193c22608bdc23906ebc204d9aecec2426911e9871"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_original_0.response.json",
+      "sha256": "31120401e2dba3b444fe960d90843aa4dec39267fcd28be3e771cd473111a6ea"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_original_1.json",
+      "sha256": "9ba3b511c96ef34722480a19cd29d7bf29ff5442f533711d6451cc126570a97c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_original_1.response.json",
+      "sha256": "0600dbd9b69611a325e878ea7cf473c0fd2838af7e2289fc16c531cc958e207b"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_original_long_0.json",
+      "sha256": "edd7aed4d9caee12ff284377aff78c586c3d78296453b78a4a59dee1c59a2dc6"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_original_long_0.response.json",
+      "sha256": "92fc940ae7ecdc56ddc47e02900d331f0a8161b10745c09a4f3e241ff855ae66"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_original_long_1.json",
+      "sha256": "8ad26e1cb3ee3d7121584d401011230751638b75c244ef66c624443b50311ac3"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_original_long_1.response.json",
+      "sha256": "b2b731ff79aceae414701b3d28cc8a7af76fef6d80eca2b9e75131b327d63194"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_prefix_0.json",
+      "sha256": "42bb3f41c464cce6566d550f478623ebf484e8777d66e980cabd05226cc3f057"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_prefix_0.response.json",
+      "sha256": "dda6a98b14092505f8e8f3f7a03bc5e09cd2297f4880b7c4dc0cb7a3ae6c0446"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_prefix_1.json",
+      "sha256": "f8c3924c6aeb0e1f68386fc27f9a354c9a3c02b58519ed1af5087d52eb099cd1"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_prefix_1.response.json",
+      "sha256": "10b9a7ccf5086884b69369babca30db107ad046cbd360da89e0bf6a8114790dc"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_source.json",
+      "sha256": "eaec0076f629d0dcd6c86171272aa5e809879343f7c03f472cfb9a3d4ed00405"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g06_source.response.json",
+      "sha256": "cba5ccdbff3a00d8f555dba136207b5028e154c3796374f3dfecf86e757e1cd6"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_append_0.json",
+      "sha256": "c9ed9858cffcd93006b0304bfd5c153ccd9315361411c7b40025c1a2e3ad9de7"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_append_0.response.json",
+      "sha256": "5f2a7616a79f94b31a9c54359021bab95c1027cb347be7608db78394fe031d8f"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_append_1.json",
+      "sha256": "a61398e94e4b398b624be4e73366dca9c49840b07e95b90f3f0317c88c674876"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_append_1.response.json",
+      "sha256": "fb9e6131cbf4f3b172ae69cb9a57010372b1e7468251a5c3fed940ea3ceac953"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_compact_0.json",
+      "sha256": "e360b9cfb107aa52ee44683a206a7a129952afe5aed0636a3acb0a045f807bf5"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_compact_0.response.json",
+      "sha256": "7c4b953813e9922a01f0782e6b0e286f5c3b1cad8d27707094027532d84c75f2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_compact_1.json",
+      "sha256": "80158a5ab8e897b8caf80c5848fff1fda9e338d457bee25beb8f19802c5fe63b"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_compact_1.response.json",
+      "sha256": "55a218f2447b1c2057fef9bf075a407e072665dc726775ed3cd14aae4ccb4281"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_original_0.json",
+      "sha256": "ecace9f62df4c610769c60445f7010e79fd69571b717468dbfe69e36307c86fd"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_original_0.response.json",
+      "sha256": "b477978d28ddb3d8e8a6a3b3e112219204ee9a5f16182663c6b0f9eebb02d8c8"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_original_1.json",
+      "sha256": "0f848fcb477fb1e0040f3141c8cf1247988ac3a3b9dba44e0bac6d684e21064f"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_original_1.response.json",
+      "sha256": "f67365459538e498ebd8ad4fc0027bf196b9cdf4f4ef9d69d3591fbbd4e7da09"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_original_long_0.json",
+      "sha256": "560d4a5496fd2b87f227962c6e38e9681e49e2bacf84bb0955c6f1cd38190cde"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_original_long_0.response.json",
+      "sha256": "07005029cd2e9b5001bb75ba6c810e6162ba6ed9545b429a303f4813ce2d1d74"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_original_long_1.json",
+      "sha256": "b0e191855f962e6013bcea40446d225e833224a942bf8826278fc10e8e6657ea"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_original_long_1.response.json",
+      "sha256": "8d500a5be41122d9b7faf0ddc47906884c4289ba3a7ebdcbfd82cddf98a35bf0"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_prefix_0.json",
+      "sha256": "a11ec1b804dfa592be3967d9b09a15f4e699006c19f1c4cf77730133af95d551"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_prefix_0.response.json",
+      "sha256": "b8d26f9e5156c5090d417ff7089a0f9c1c2903af1f6cfc68c4e0570cbaba22ae"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_prefix_1.json",
+      "sha256": "f4afa868c0634b5de1dadebe9d0f33c96ce211860da540f34ae5ca93e0761dde"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_prefix_1.response.json",
+      "sha256": "f844e4088d7d4e9eee728708ee7ae3708f2ebed080fda86cfa3e1084bce5e482"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_source.json",
+      "sha256": "e2bd30f45172a8069bc326c9ed75a9b710f8cc4726b841c080803efc06405809"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g07_source.response.json",
+      "sha256": "c211d3f1d6dbf0f2d8799cf0b3f71e4a45cc11ddb658a0d7c2887b2062b7d32a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_append_0.json",
+      "sha256": "2d1ede4b7dcc869b3d34cb33eb7f5655df391c6eb8d4f193caeb77ae0ba1d8fd"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_append_0.response.json",
+      "sha256": "c90d5ad9474b348634c30219896a3d5d248c0145d8b4e885edbdb150af55c271"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_append_1.json",
+      "sha256": "5151c2fadb666d1f5d40cf31768aa3bb9448f084736977ea4d81dcb73eda0492"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_append_1.response.json",
+      "sha256": "12f5e8981d0713f12c84b331fda07f6810b0091b4d964bc49b5cd34a28005e0b"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_compact_0.json",
+      "sha256": "cac6b6750a24c26c78dce5a7ff410a904bf91f4ab58336db44083e9bdca84380"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_compact_0.response.json",
+      "sha256": "6afe95b5719b81ced3d2b35ff7f0eca813141fedebe4f885d2fd9e586dc67ffc"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_compact_1.json",
+      "sha256": "907a4bc4f6d481a3832566eaf3c242b1969323eb42ee74cd87f7f46af8ab5940"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_compact_1.response.json",
+      "sha256": "9d5035bead0bd0172b319ada7fba72cc7d0b7725b4db12e6e4acfab162352938"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_original_0.json",
+      "sha256": "60becad3a1973e8fe524d0d6c80c2a934f2b45035f9e3763b749df42db4fe8f2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_original_0.response.json",
+      "sha256": "026b60609bd47a414be83d826f1ee4ef4690b2bbc1dae0cdf35dce2e95f08065"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_original_1.json",
+      "sha256": "c4119c04bcdff2ff6de07937a6542f1284c8d70dcd16ef6c9f07450d0d074739"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_original_1.response.json",
+      "sha256": "b6f48cb2c13fbbdc1a3ab099160d2d490eff378aebc4fb552bcc4dac4448394d"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_original_long_0.json",
+      "sha256": "db8920233fd2b9941e18c387cfc8b1004400081b6af6ebeda998cbf88b49fe70"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_original_long_0.response.json",
+      "sha256": "030f1d9e1ac3972af72cd59ad8e1f68226c254f388ffb6f0642c8f81c9104c04"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_original_long_1.json",
+      "sha256": "cb6730f67d18d01f1cd070c5c6e81ca1f2baaf2babb741302588978292852ddf"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_original_long_1.response.json",
+      "sha256": "9899993ee8074ccc1495c87af31735419c5bfc888340a01691fb320a30c6be81"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_prefix_0.json",
+      "sha256": "cad6015a5e235ac9dfb499e366c79792257a1f96d98439a92dd987df2bc85789"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_prefix_0.response.json",
+      "sha256": "e163f74a3d1297736fa711b243108d22bc1bda9ea265dadf1637b1c5d1eb74e0"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_prefix_1.json",
+      "sha256": "229bea3d948823cacfde4e66e113e1f554dd04f147841f0b34663400885bc7a2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_prefix_1.response.json",
+      "sha256": "13bc9f0d9e5cddd4dce895d490f9c0e41c221f496e0c3769fe3117b2a68071b0"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_source.json",
+      "sha256": "a00c51babb82dc2761d0c79af8699a884510dc0a73b624dd449d134d16d4c18a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g08_source.response.json",
+      "sha256": "925f33fbc7e26c2cc2db8091199c438f1258e9ff8ce05920f5c98d13552db934"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_append_0.json",
+      "sha256": "9a01db24943010a566c5f2d1c9feea400f18477601b1688b2bd245944f1b7cc2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_append_0.response.json",
+      "sha256": "017736ef798ca08a541072a1da574c41159b296eab5b8476ab272815f395faac"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_append_1.json",
+      "sha256": "1d4b5954937aa6d4103cf10782ee0a3da93da71069adaef6c2318099883cf2e6"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_append_1.response.json",
+      "sha256": "e9954ad2c957619e79282c69197dbf6de7fee549593bb002060d3874e89bb2d4"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_compact_0.json",
+      "sha256": "337404d69b6a16636730d1d5976ef6cebe2b24e4321fb6ad092d8dbf2650a866"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_compact_0.response.json",
+      "sha256": "8e631e00a046bd03c31cdb457bc3baabeda78ad81567fd7a597d95c7a97bf286"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_compact_1.json",
+      "sha256": "3f2349821447dff0c12632be1cfe4ad35a60ed3e3475ff6a8d0da39a32a01b17"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_compact_1.response.json",
+      "sha256": "172ca49aa5be8f9eb10ba03396f961eaadb823e98dd9f2fdd87ec60f9e52d10e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_original_0.json",
+      "sha256": "3f748283003d3b75b7814cc739455fdac8012407c2c5e6527f1d3f052fe890c2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_original_0.response.json",
+      "sha256": "2491b78dce29f915b70fb1fa71e396ed6264c215338194daeb81bf51e0a61129"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_original_1.json",
+      "sha256": "ed55a97ac57ec4036b92cc6151710f46fd83a1666dc0b11cc347c7264d94dbe4"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_original_1.response.json",
+      "sha256": "af53e62d65a5445cf27020446184c33d58fbab3eb9f9837e58b45af139224db3"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_original_long_0.json",
+      "sha256": "29d64d4d44b46f95daa0b5795582de921df3b60813b67358aa3c2ed0e258979e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_original_long_0.response.json",
+      "sha256": "ab7ab06f71c19866bc90de32ff46228a878cb389bb7e34dd1bf5be4d70187fe0"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_original_long_1.json",
+      "sha256": "bd8e877485e29a137e38fa632bea8205e2b2ec6275a7c1c51de4ce221300e051"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_original_long_1.response.json",
+      "sha256": "39e2fbd6d18c44ae3d6f03708ada4f32b77556b5bd0cd16bc04f8727ed37b703"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_prefix_0.json",
+      "sha256": "6dbc9fc6552e33c0bd50b3c11012c5dc55e58b6125e431b1dafd593f9fb5608a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_prefix_0.response.json",
+      "sha256": "cf2f87e23910e2cd82c057d06c599821e718eaba885c3c7d6d19134f556c6ca7"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_prefix_1.json",
+      "sha256": "9f45a25100994db3bea624b897debda3acc6fa2ad8ca1029ebab0c1dea749134"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_prefix_1.response.json",
+      "sha256": "c005e4f070be6819dcd055f5fcb1e93d0778be486e45883497d18a88b18beb94"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_source.json",
+      "sha256": "6360eba84f44c68ed86b5e40f3f25446c9e742d6a815608e67a0cfd265bdf339"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g09_source.response.json",
+      "sha256": "0b139c15470e44608f242165033122fd5d8472099eb1dec366d2c1987b9cbf32"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_append_0.json",
+      "sha256": "a07f1650830a18bb7dc969c21464eccc0bb2bd15c4ccdc18cf4d8f6787c1c95e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_append_0.response.json",
+      "sha256": "d93177f8108a3103251345a3ee6394f6a466a233ebe27286af57765a734356c9"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_append_1.json",
+      "sha256": "4512be0c3baa8d4ae8c704d3baefd3195fef7cd96421e9e7987cd94af8fd0223"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_append_1.response.json",
+      "sha256": "b4c8cc49cbb3261dbb1b94a386e348d47f48316974772055b913e18182b0d5ab"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_compact_0.json",
+      "sha256": "ff4ce7fc3add77853be030b7edde7d11739b234069c6b3b5a6c68d904acf35a9"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_compact_0.response.json",
+      "sha256": "cf5d118402386668289a03227db9796a9113a4cf278b5aac227d202c50dc0389"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_compact_1.json",
+      "sha256": "d9b4a01755a788ba55925f1b9935a8b920966aee5cc8a12043e9ebb3ac1896d7"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_compact_1.response.json",
+      "sha256": "7326de71f09f0f2d85d3e8b9bfe98d454a9898d30b2211b5a33e79863ceca9e8"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_original_0.json",
+      "sha256": "bb997ff89038bbb20b74e5c693d1c25c765585001d8778c197c573b5800e6cae"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_original_0.response.json",
+      "sha256": "c7573d519a81c5ed5ac6215b63521a4c3fa24a19897d5c221d722b2be059d575"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_original_1.json",
+      "sha256": "62734369dc5ff4354dcab4b4bfd44c377f6dc10c666c86da1e8a806b70664d52"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_original_1.response.json",
+      "sha256": "ebb8ca7cb866ec4baf56cd063497ecd1bf6ea7fefc0dc16bb8eb8fba5e326f92"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_original_long_0.json",
+      "sha256": "64a178e79ef714926f785b9d855a5f1411aeb8ce7ca33947d1be6967797d8ec5"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_original_long_0.response.json",
+      "sha256": "42757e06a666126d7b90ade830e9f305169e5383b701be88b1c5e0ff8706a3b2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_original_long_1.json",
+      "sha256": "6aa1e4ac65b63d4de325f6089b639e196dc257be1983cbded4b620367c936f8c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_original_long_1.response.json",
+      "sha256": "b4ada37fa3b7563a4fb7b5b0524ef4f687a57f36f903679581ed3483df74178e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_prefix_0.json",
+      "sha256": "94ee83285780515a685de555b958ff1ff5fe764da21c27772d54797de58ca213"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_prefix_0.response.json",
+      "sha256": "22cae8380c7eb14fefd649a01fc706b56a55cbea0754f59eb9c6874b9cd1f8e2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_prefix_1.json",
+      "sha256": "865170da0235632d9d9d9cf2e265b99d82279063982e654351c07ca875b45e54"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_prefix_1.response.json",
+      "sha256": "3deb26c7483fa15cf62ca928e04579524296066db9c55a48c9516604b95d85a3"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_source.json",
+      "sha256": "22a39bd3c120f4162336c2f48c44084cc6e43e61b11d60bf23b5d1da0d72995d"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g10_source.response.json",
+      "sha256": "9f03dcd9c0d99c35a4798039b5724d6a57db4d0d753a9a168ae881357cae7d17"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_append_0.json",
+      "sha256": "f1ad2a27460e8983436a2a8bda4740f90fef9f2d139902908ccc4c9c7b2b9e35"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_append_0.response.json",
+      "sha256": "6794d0fef9d7423a9f11933851275fa8e76dbef9a9d31a3b4783c208f9974dbd"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_append_1.json",
+      "sha256": "153e692add3015e7751b6f9df68696efcb6f5c4bc290c0525d9f003c1a37ee23"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_append_1.response.json",
+      "sha256": "64c07260831204de1de19518cefd3f72f553cc941fea3ceaa1e64d3142d4aec9"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_compact_0.json",
+      "sha256": "b3246f34ba337fef3373809c8e4df60a2beded6c9bbf90200e9332bbf4e07a26"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_compact_0.response.json",
+      "sha256": "8a37a18b3cf822d35e381ffbfc2e8faf42a65c0f61dbd4c4b48a803aaca228ac"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_compact_1.json",
+      "sha256": "863f0d1cf82a1f7f26eb336a734a074d956e3b879d3f079571374ba8b20231d9"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_compact_1.response.json",
+      "sha256": "5c92cd1d3d2738cba118dce86c7b89c5fb38352f1207994458185a7ede0a0450"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_original_0.json",
+      "sha256": "e5c83ab7beb566babe1b06d5eec358aa72afaac76d753f46b63378eb324cf7a8"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_original_0.response.json",
+      "sha256": "8b0107d8a74a88136b783f63087108cbd482781ce6549441ba2d503e0e0d7417"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_original_1.json",
+      "sha256": "54b000216b0b4b682f16593f30f029bb1a56fd9b182ede79c3bc79f4738fdf34"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_original_1.response.json",
+      "sha256": "07f07022013b4167fb41c44b7ffc36914fb1bb51327af46f49172f0808a2cc8a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_original_long_0.json",
+      "sha256": "0ba1093e71482082cd2916f572ec647af02252b7f04d048761e3d79fbebb9bbd"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_original_long_0.response.json",
+      "sha256": "ffeaca7d7ab45c6d055719adc207f54e31c412c01a69f71fce863167b944761f"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_original_long_1.json",
+      "sha256": "88b14a8f38c4dbcaf3aaa9282ce0fae7517e7e0844c4d1c218bfb2ecd82dc5ff"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_original_long_1.response.json",
+      "sha256": "bc594701ea97b87b693e63815529d1f272905d7903be6cac560214ef3a92a107"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_prefix_0.json",
+      "sha256": "29729744f45a09b794d79b5b1dd5960adaf2920fba533c0076bcbd53eb8d043e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_prefix_0.response.json",
+      "sha256": "6d278c55f29c7af0128cdcca8bedfb89232d05ac62a637cf1159354672df2d41"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_prefix_1.json",
+      "sha256": "31f5203cd342581406e2778dc290ecae10c261b4e76be5d81b29ed1aa8ca3d77"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_prefix_1.response.json",
+      "sha256": "10068ae638126e238a671b48d8b64017a80001586f0755b06f953a16540cc625"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_source.json",
+      "sha256": "99fdd8018979c2c8d5a7901c0339444992e759b360d51c6c913852bcf5cf6729"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g11_source.response.json",
+      "sha256": "2e6dcf86e50ee3e0110315ab275462ec59ec88a0f145589a7803a8d0aea44b46"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_append_0.json",
+      "sha256": "a02f41ef77cbcc548ec4ba38ee5849a84a0b6c2e78f88dee53da56396faa3528"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_append_0.response.json",
+      "sha256": "b24578fc9b358c23eb39ff7782f4c4f4c73abea444bd41dabe58746f0bc94618"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_append_1.json",
+      "sha256": "22fa8865dc22b177a304046123f584d0c8189cefc7a15632749b8da1f794d21f"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_append_1.response.json",
+      "sha256": "557d5dec42f78c930e4481f7ba14bf0acd37292d9ea0e065be525a35500ef18f"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_compact_0.json",
+      "sha256": "ea9bb19bc11e8f402a972172a6a1d1328f0cd01deb53d8256f4047ef1bb7d1a5"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_compact_0.response.json",
+      "sha256": "03c357042dc2a1c842f515b9393d4acb9ad74fdcfba93bad0edacb082d3c583d"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_compact_1.json",
+      "sha256": "7343f774537cd1561abb59b461afb64179bcffea9ea2a45c1181ade84d24a0d5"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_compact_1.response.json",
+      "sha256": "3ffb2901374c2065480abddf18ec7d485591c82465874cef577d4ee419584e5d"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_original_0.json",
+      "sha256": "f49fabb397145443cc679ee28841fa85cc212f7d6164aafac8f76232e6e7e1b3"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_original_0.response.json",
+      "sha256": "2f2a41ace5e2f8f1edab7fcb34fb1459472355b199931390dc4d5a699349118a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_original_1.json",
+      "sha256": "007516d7378a77bc736053c3f76e296c56336c3f87d6234505a20eacd1e75164"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_original_1.response.json",
+      "sha256": "6c1dfa82e5527062caed561a16cba15f372c18d1a66d28bcadd874fbaab44c7b"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_original_long_0.json",
+      "sha256": "7ccfbbe5b5327a8dfc3ff9b46bbb30188b9f34d0792c011c05ff976faa29179d"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_original_long_0.response.json",
+      "sha256": "7acfd7065448f9abd5c31433ec7c610232519e5e90d47097dd670528bd2b4215"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_original_long_1.json",
+      "sha256": "1536e3080aaab952bcbe527c71e114f645f8cddd626a8c88a2ee41cb767a7eb1"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_original_long_1.response.json",
+      "sha256": "e94280dbacc37075ff26a50205a5beb4303898890b392f7b35d257cc71ff942a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_prefix_0.json",
+      "sha256": "b008f889625009f664524896915edd2ac9c4d6d203c60fe1b584c462fa092de8"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_prefix_0.response.json",
+      "sha256": "21fe8b6ec96142404c1286a2115c3644ba4efc19041865593d4c91c8bf7fddb8"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_prefix_1.json",
+      "sha256": "5659a5949e5de718390a113bde17d72f8d50fcf46621136b31b27b24eb8b9ff6"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_prefix_1.response.json",
+      "sha256": "a540962dd85a88739666c83a2fc3c2b8988612e3ed390d3b1a7a1015f2850bfd"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_source.json",
+      "sha256": "6b546dd5829ced776c4b77ff7bcf2c1aebff1da576756c0071ac1051298ae529"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g12_source.response.json",
+      "sha256": "2bb1b6c3cbc31faf31eac080e8aa11847448ec983c47705f602a83fd6cb21b72"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_append_0.json",
+      "sha256": "384c5e1b84222140f32d7b2ae145e97242a7106670521102370db192fb2c9e1d"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_append_0.response.json",
+      "sha256": "1fa1fe310d8360e3b955ad433a12c4695bca9370f9df91cc36de433261ddbd19"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_append_1.json",
+      "sha256": "07066899c59e5ce9692f626027e97d840a70b72deb339e19cb026de4f17b5774"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_append_1.response.json",
+      "sha256": "1fc6e696907415c774b868878cfbc45496b95f1a552408c0834d209d463a325d"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_compact_0.json",
+      "sha256": "f1713c0e42f0bae84829839a8139929d95d61585d9393cb327cc4dcb8ba505d2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_compact_0.response.json",
+      "sha256": "6d4ee953f41f418474fb08bede21f72a35a17dc4d95d2385df7c0c478417adb0"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_compact_1.json",
+      "sha256": "61e42acec5daf97b265d0a6691272bce088c5f94be119d706367566a2ece80b3"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_compact_1.response.json",
+      "sha256": "f059351f4fb9671ff118b2c7dfbf557e8f4d8805bd532cf3c74c49d66c7035e6"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_original_0.json",
+      "sha256": "f6420912b7485998a30859ea36eca85cfd19530f632c506e153ae0d288ef7cb3"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_original_0.response.json",
+      "sha256": "f13641cfb51d3689a56cd9332a3f583cec9bec0ee375e4ece75be8ece1833e40"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_original_1.json",
+      "sha256": "544e9227fdc8ddee396f200b8334f9a6b52d8b73a6b742ec7d152859199a03fd"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_original_1.response.json",
+      "sha256": "c532070a5420c1a009bf40a4c086ab9858d9b18e60ccb7bc1594dab274440e7e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_original_long_0.json",
+      "sha256": "efd0bd6fd49ae3b8c9af0b2f01ce9cf7deb970751b1148f048d2f7d9133c7b7a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_original_long_0.response.json",
+      "sha256": "fdf667fc271904f071c25f740daeca4d582b0bb646dbe6c1bc31f0c2aff627b7"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_original_long_1.json",
+      "sha256": "b6550d96b23a95a8d14fd46ecd67ce459b593bdac5d7d70610621fc6d0015981"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_original_long_1.response.json",
+      "sha256": "72895335065e038849d32f6bc06b2fe2d57c1ce813879c4d8cd7edbe1d0d59c0"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_prefix_0.json",
+      "sha256": "ecf94923b0c31166a700ba3ee780dbabd72bf1f14b1410835a016ada9729c98a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_prefix_0.response.json",
+      "sha256": "24627548d56f1db30d38995f797edc07df2b5893814f4d87b6a46053ed522076"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_prefix_1.json",
+      "sha256": "2f86a9fff9ec8e4059f40a536f8de9222b17e5d0e8eb690ccea6b6f2e07ac825"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_prefix_1.response.json",
+      "sha256": "0a0a504818755d89532a06e3d04d476bf85f46e5e6b0ec979d3db24130d6ebe5"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_source.json",
+      "sha256": "1f4191f4598b07c2ffa36c1216f5543d164c1e364a690a8d46fe5fd93f21fb68"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g13_source.response.json",
+      "sha256": "296db46313783ed65204178de83fda6009136a4de007569bcb747b5bd55343bb"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_append_0.json",
+      "sha256": "8264ba99e41104cef4a44c2c466c84482cfe40dfd373b6a98cf15bc3a149aeff"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_append_0.response.json",
+      "sha256": "a2aa49b14993e8c9c1485b18119702e56d960ec8a7720f4ba5d3c7f777f9ebe7"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_append_1.json",
+      "sha256": "14cd779a82d654817c6003c2b2d17e367736399d32689adf6d363c83bb287a52"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_append_1.response.json",
+      "sha256": "4966e9d8b50d4f80c41e63a68a61e00fe5d87bd67888b06627579c2c9e6b54d2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_compact_0.json",
+      "sha256": "4120637b79efc320f7d929d644eb865c1a92ed88b047aa7cc0fb0b97085f3df8"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_compact_0.response.json",
+      "sha256": "a4945c7b7222b95f2862410958dde2373a6fa43023f0083962c76908e8a6c1ae"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_compact_1.json",
+      "sha256": "71b71e70ecb3610fa94ba1fdbf11083d6a934691fd6de6fdabe1176761910c44"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_compact_1.response.json",
+      "sha256": "2a0834592c3fe7f8094670533f99325bf829ce53003811e50585fa24f60e551a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_original_0.json",
+      "sha256": "037523e7423dfaf8485c95dff3edd0fc7760a777ed7384e642c85dc9e7bef0b9"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_original_0.response.json",
+      "sha256": "dd058ebad190b992b3d2c5006c7e4aa279b97e8a3da5db1646ebbf83c45442b6"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_original_1.json",
+      "sha256": "14cd2664f269bcab27f9aa6c85ca850e333e5d84f9e71dd7f9a126b70275f45c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_original_1.response.json",
+      "sha256": "c64a83e6e805be0b4ffbe31db1101a166ca34a389513bce6b3c667b1998faf95"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_original_long_0.json",
+      "sha256": "ef927e8382b915a7f31b35b6c7b1e5526b88fd2ac2a3b3e5edc8cbbed395f336"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_original_long_0.response.json",
+      "sha256": "7ace972343e107ad7dd26dc28c319ba9e4f39828ded54d372479d62558227ace"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_original_long_1.json",
+      "sha256": "85fbe5f47b75c9d1056e4ce9bd44b90567785404d10a805c6bbd1e6b11804f61"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_original_long_1.response.json",
+      "sha256": "72e05ab666863eed400146bcf8dc40ed95b7bf847d3a2f4f55628156ce5bb52c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_prefix_0.json",
+      "sha256": "52fdb2d8598212637c0795a4b85a5e82943676dfb3b20622fad800f57f849cd1"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_prefix_0.response.json",
+      "sha256": "aa34162c3516dbfa94a9670ce38f4ad0f2cda12e8c917482f0d3d7f95e287d1a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_prefix_1.json",
+      "sha256": "fabf2c7809372a43f08908d981beb27215146f4621c600ccdbdb87c1fcc74381"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_prefix_1.response.json",
+      "sha256": "1f146a39e3e904965ca5176b3da0bf9a0a4cb0233688e681a47526910537d654"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_source.json",
+      "sha256": "241d3fb9b1fb8778f8366a0b846090390eff7844d89a30f331aef58d7a24fc5c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g14_source.response.json",
+      "sha256": "280ad2f941d5616830e0bb9bc9a1be573bb7a4c95f1060bea806c87d1130b055"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_append_0.json",
+      "sha256": "747ac2e8ef7185b8861cd017e53a56ca26c61030d0b2c8c723f6c4c80a1f0ffc"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_append_0.response.json",
+      "sha256": "dfbda2a327d83a6eb1a7cb14fef325a535bcf3f4ee2d890e80d4ef60d6bd98f8"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_append_1.json",
+      "sha256": "6ca1a8365289b4bad62f686de7c7df3c894abba82c0194c68c2eb7cf2f29cf9d"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_append_1.response.json",
+      "sha256": "582fc69ccfc6e69562751fbc5a19d521318f557fdc2997d0af2720fbd3fc6852"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_compact_0.json",
+      "sha256": "d55c7c12e8cbbab3a6981f05c8b28313e17ba9e25e25c20800745c13bf28621d"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_compact_0.response.json",
+      "sha256": "9e4b88faf123332732a5416d47b971e8330d2cbf597270a86f32d18d37fd3ab2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_compact_1.json",
+      "sha256": "1360efe7124655a997169fa640f968ae97b2ce9a150d00882b8df82100f7e86f"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_compact_1.response.json",
+      "sha256": "2472bba4253aafb74825690e61090c912c555a4a39f0f3b1f2f914cb019f9f02"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_original_0.json",
+      "sha256": "34653d2b3356ece02c13a1e26d2cee7e78a2fde9c0afdf3a55fb7bb9bf72c489"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_original_0.response.json",
+      "sha256": "cf1fd6ec95c97afbbcf317de4982f7258619c0ae6f0651f818fa282a9c97b68e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_original_1.json",
+      "sha256": "98351aa0f2f5b714816decc91832be17902d9db8e8c986ef6d5317a3eba6f045"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_original_1.response.json",
+      "sha256": "b9caad27607adead1e3446c504ae7583dbcc5511e56cd9be764a951e41c512f7"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_original_long_0.json",
+      "sha256": "42c0c7c0b4eb8bf69fecfdedda1f3beb52f2609f52ba6a00f52eed657eef20b9"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_original_long_0.response.json",
+      "sha256": "901aa3dc6244b6149d404e792fa77dbf3c962faa231bdb4cf2f18bc2d55ef92d"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_original_long_1.json",
+      "sha256": "5b7e2daea18e5891f4ef99276aac7de7f5e6c217ac4485e648691b482da74e3e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_original_long_1.response.json",
+      "sha256": "1b8bfe26b8b121497e4459cb0ce4052252da6ef65b15b89b8d100f85696c1ae3"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_prefix_0.json",
+      "sha256": "85db6cf0f8ae64487124d4b0544bd360ae8510b1e7f45d2aba84bce1279d9b9c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_prefix_0.response.json",
+      "sha256": "d4722820ad343a6f768468aa7cb959f86beb71364623fe9438fb37d5fdac4e18"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_prefix_1.json",
+      "sha256": "ac87bad389ae464a1d3a3b252b6813278597941ef218c91bec3becae647fd083"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_prefix_1.response.json",
+      "sha256": "fb640ed4548f1d9dc620f2547621b4deb6b64fb237cdadc26460a9d89725124e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_source.json",
+      "sha256": "84af894a7291b8bef422fe4b04680bfbef9b3e784a165a9d30dfee703b2ae980"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g15_source.response.json",
+      "sha256": "548dd56ca0f8ab041ceb9b37b42c352d45d79646b6f3e2a08f0410b33671ab7a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_append_0.json",
+      "sha256": "2d28be8a58aae31f0f59537244670d3bb7e6422de4a692e754d106fc3459dd8e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_append_0.response.json",
+      "sha256": "52f837852dc5d2c9c613005e4d0184ba3b5ac6f1b432671dfce5ea7b1145d546"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_append_1.json",
+      "sha256": "f8411e804c515fd9742021a05309c09219381acf750c76067c4f9ba9d1b9ea1b"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_append_1.response.json",
+      "sha256": "a4e70bae0a61c7a3669a64d660a10b8e1ae99a446c1b137055a222ec60a7587d"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_compact_0.json",
+      "sha256": "5c057d8f56a268bafc538d62ff3b3f4957aa1aa72593b47bf8874db090676dba"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_compact_0.response.json",
+      "sha256": "01781270e873a1a33441f69119fb143f8392bf5bfed5697b1e138755fd343ad5"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_compact_1.json",
+      "sha256": "26147c615c1026e3e8cac97f32341bf2f7334a59668b38f24e0a7a5ddb57f282"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_compact_1.response.json",
+      "sha256": "0959f7076a7c13b71316b77328a2a668a55aa0ff144fabc86dc712b7fb2a8833"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_original_0.json",
+      "sha256": "9665eb631195b6e5d08c6cc5edbb677c9b64702b535fb4c8db05682cde287b09"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_original_0.response.json",
+      "sha256": "38a5452f45178e3e4451386de8d0049e831419ae118f59a993f4e65f361f4082"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_original_1.json",
+      "sha256": "618da9cdb7b0a845adb1854beeb439d5d1810a8ee6345deb141a1ec49da014a1"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_original_1.response.json",
+      "sha256": "ec62de934296eed4c200abba3499a5b9aad06b006ad14c049d500a181fdfdeac"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_original_long_0.json",
+      "sha256": "f0447bbbf470dfab2b6179741c3ed0c3b0131470c40a0063ef5191f823d37d52"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_original_long_0.response.json",
+      "sha256": "9a10dd86f575691d96f78aa864727c344b5c089dcfd3e715bad5603e2ec24577"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_original_long_1.json",
+      "sha256": "04727fcbeed8ff205a71c19cd06b37ec58c31182baaed312f63d5481564897b5"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_original_long_1.response.json",
+      "sha256": "e3e762c57cfeecec1bb318bcadd2f110aa709a470668cb4edbe6e135adf87364"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_prefix_0.json",
+      "sha256": "8405c2a3d45b3282994cb968d1537f874ea9fe97de0b91da3d6d783ed63ca5f8"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_prefix_0.response.json",
+      "sha256": "9b57d7e96b6dbb545c56a5c8c1c156e53602e158a01b786b90e47dcb6205299a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_prefix_1.json",
+      "sha256": "6a4575497079bee1453dd7d63a85b505abab6acc96bc8b4b9c860f3b763b8e48"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_prefix_1.response.json",
+      "sha256": "4e7e97912f27b3ad42c9f1f1ca499c50ae4b20e8ea235a33abeb5e370f000975"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_source.json",
+      "sha256": "8da9a9676cd2418c553f18dd08a23e0aae807168b9a3db3988c9d0b5e37246b5"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g16_source.response.json",
+      "sha256": "d97e517a28dde559dba5d21745a72980edccbb9691f80c587f7a2f484e991124"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_append_0.json",
+      "sha256": "090d9fa384bed1ef09411786540bfdefdd4f25c381bc8f0c539dac01d84068e5"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_append_0.response.json",
+      "sha256": "ba216088f3ddb3c42815ed647b966b1134d5f81931cf3c835c9cdadb7728f4c0"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_append_1.json",
+      "sha256": "22bdeab2e0ca1717706c822b82748135ed1314a822a8e0b80e94b45fd14772d5"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_append_1.response.json",
+      "sha256": "7e807fe497ce2fc544b21fcf3099376452cb4ca4bbcfd9411fbb979bc3e8e5c6"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_compact_0.json",
+      "sha256": "d241811c265154fc5214523bad615c4f901040a29b567ac4d3a2ed46f963edf5"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_compact_0.response.json",
+      "sha256": "01a6975196fe3cbdf6fd3515f9f9c1cbeacb2556d357503a937a704cc0b3353f"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_compact_1.json",
+      "sha256": "3ac13ef2eff0a7c20f404165245b6f22de36685ddcd718f98ddb45f2bcfc36f1"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_compact_1.response.json",
+      "sha256": "e9fde589e9fc8cffd644f080ff59e858ad3f0e2aa13b70042d2b12a970a0322a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_original_0.json",
+      "sha256": "88a3f9818424f6efd3ee819006a55fe329c4baa72dea7260bfc7d24311476da5"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_original_0.response.json",
+      "sha256": "ae4f1fbc4f2d8f497c098067984622ef8793881f7231721b874a0f2aba751982"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_original_1.json",
+      "sha256": "ba929dd8884899adf23c07afdecba57fceaff627457d357bb8c5a791fdf5e85e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_original_1.response.json",
+      "sha256": "2ad1ecde683bf38e07da16582fb32197ca1835161c5b9ccf767433519df9ebe4"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_original_long_0.json",
+      "sha256": "0acbc656ed09dbfcc7467839739a9c25ae0600ae5150ee1421e1a7370289c0ee"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_original_long_0.response.json",
+      "sha256": "9bced8cb60975ee155ba025f296987b7254f69613ae497ff41a344b44328caa7"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_original_long_1.json",
+      "sha256": "0683aab712d19cb084f049e33084a55fdd7b1958241130e7407eeb54bd5dfc77"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_original_long_1.response.json",
+      "sha256": "c8c924fd263d6c582e224e43cf40aba38ba7e13bae599df95142087a44964190"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_prefix_0.json",
+      "sha256": "652ef22e65920836cdfbf8d73bbe12002c81f8e348b3cc0ef34bc047795c6a1d"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_prefix_0.response.json",
+      "sha256": "c83f45005bfd14089ca294bc1373b91b05d789657ecc46b7a573004aa4b55ce4"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_prefix_1.json",
+      "sha256": "4c6551d1b6e4b445d512cace756135291e671660a2313d13cffefc92de0a66c6"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_prefix_1.response.json",
+      "sha256": "437c33e942c0960d8337a06e1209a148094dbc8868afd730b53f9a17bc470d19"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_source.json",
+      "sha256": "f1f59077c8e5dc43d8731a73d0c8e8081ef7c224afca990d84fb016897d12121"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g17_source.response.json",
+      "sha256": "b20d02745e392adb0edac2ee48a8d4c48ca310998bee24d9af95585d85083ada"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_append_0.json",
+      "sha256": "d332a0e6eaabbfab40d3599f13e535e34e27ab6fa19361dfefafa5feb7c45b88"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_append_0.response.json",
+      "sha256": "28d67f796a61c2a50694024ffdaec86cb92a0c7a11df0b1736f8f37b8683d55c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_append_1.json",
+      "sha256": "31af37dea12c80d6575da7b65bd7ad7275d1288263f7247394b2a8d6a5584445"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_append_1.response.json",
+      "sha256": "79d9677b7086bfb7b66141c17a2a4be6d263a68dde38b44b878e7923bd42d51c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_compact_0.json",
+      "sha256": "518c85836a4b360ca230bf73719d31d3a2025e4e546fbddb6788a1fa5ddb7caf"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_compact_0.response.json",
+      "sha256": "20f8f03139db187eaa5eac8d1d9f054d208b2b772ad66ac498596689f8d33535"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_compact_1.json",
+      "sha256": "651b3e06bb115c8f676ed4851a4ceb401d47fc7ef886c4feaf46d6a149e9fb4f"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_compact_1.response.json",
+      "sha256": "cf1fd74202c60449012f8683a28524b9abfd5b8713a3e426f141011d2d98f254"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_original_0.json",
+      "sha256": "2269cee3c487d9069810886f1e859067507e2639d14f7c01458ffd5cfaec5335"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_original_0.response.json",
+      "sha256": "b0c29dba25a8ccacef4d83caaf86eb55fa1d2e1b982a51a93b380f0f94452347"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_original_1.json",
+      "sha256": "6059711cbc49e9575e3ce5a6fc502d6e4eef7d441a277bb13c86712f2e8232f8"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_original_1.response.json",
+      "sha256": "883d3d8dddc2dede35cc5e967bb3f7d28cf8f5bc48e7c78b371b4fa8ad0be088"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_original_long_0.json",
+      "sha256": "9390fb29dd3d54d34204f381a9e1491d810248952ea71767a222e4945efc5069"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_original_long_0.response.json",
+      "sha256": "a11d7234ee4877b88ec84a37c89ce38332d04e42098cad5ce22147323da409d3"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_original_long_1.json",
+      "sha256": "117c565049c60bd0a4db25af19c31bc00ae58f7eb31f0978dd13df6df1fdc640"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_original_long_1.response.json",
+      "sha256": "8b6ac59159142fac713c51295a16fdc28cabbbc170584a6d79e5ff5b32ad096a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_prefix_0.json",
+      "sha256": "2738391ded174859edb56c9be963ccf6cd84cb4b412cf96f66c5cc9143e629de"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_prefix_0.response.json",
+      "sha256": "e8ef92f51a978896b8d2155372e1a0bbc8b5291423acb62e9bf1b3b040124543"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_prefix_1.json",
+      "sha256": "97e8987e1dfb8cf4eab9c7f35eaf93894d16877fe452c722fe6b44a581f4e956"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_prefix_1.response.json",
+      "sha256": "e49c1f66c16483eaf7fb4a9cbc83a9fd8ac79eaa627e4a60c83de7727b721a32"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_source.json",
+      "sha256": "c7107a216fbc2a9334a0f7a6d6de1fc496077265958f55883a8afc2535203262"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g18_source.response.json",
+      "sha256": "7ac010169299821f5a3160c07a5f2869b98d16f2754ad99de725face1bd5e80a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_append_0.json",
+      "sha256": "3c350615f1f6d190c736a5d7256d91c5c02336f5e6c48614a81819bd6842a86f"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_append_0.response.json",
+      "sha256": "30da55ae64dd70240bfef6802f903bbf238c970dc4de33f9012948833efb10c4"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_append_1.json",
+      "sha256": "912df788c581dab72e6238926ef11c4a91b1418e0126d081c60d0a9b78c97af9"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_append_1.response.json",
+      "sha256": "62d4f84f1b0906144d62c28de3f349f30d9e8566f2d593c2356ebda00c9c72d7"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_compact_0.json",
+      "sha256": "84b795c711f00653453921f8bbb94340dc31cf3bc61beace10ff6d1f17a42586"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_compact_0.response.json",
+      "sha256": "65c937a5bb71bb06600ec4ba6c0dc748552b811635ed5af875ca34c4aa9ba18f"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_compact_1.json",
+      "sha256": "34de496cc9a3f7f63f893952fa3a71606c37f5185cf7ece954c1989f2882f7b7"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_compact_1.response.json",
+      "sha256": "58a2aac6f279b887a5fa8ae32b123c6f5265e773bf7b09522a9ef6f59b8dcdf3"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_original_0.json",
+      "sha256": "be1773cd10bce43358cd0387ef0238dd4fc50c157b1ebcb70cdf1e81206d5a41"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_original_0.response.json",
+      "sha256": "a89d0f742b8f7fd47d953ba7bf4393f888b32fdf599e8c5c08ea32b81aa5e7b3"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_original_1.json",
+      "sha256": "3546a04b41b85226027a204772c1ec644a115589d41a35fab59f04854688c3eb"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_original_1.response.json",
+      "sha256": "b95d0905a18946aaff0ecdc34f9bb01e986afb40f82632bd91e4c06e07511832"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_original_long_0.json",
+      "sha256": "a9fe0bc106576408b055cc04a390bb2c7dbc4213d5789f21e7f21b807a21064a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_original_long_0.response.json",
+      "sha256": "d8b252634e16508a8d755cfbf924df9f9655f19fcdf6bd708ba952df94240e53"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_original_long_1.json",
+      "sha256": "39941684a832ee91cd1a4a1ba92f7c60982feb95b5d8316ef1d4b6681bcbfe48"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_original_long_1.response.json",
+      "sha256": "d718dfd2a8464cf91327a392f8335d93edfb2d3d6e7f6117710f91f5485a62da"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_prefix_0.json",
+      "sha256": "b8182a675807ee0997c5c39fd7b6ab5e9326f5b99b5442c6252abf36d12fcf15"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_prefix_0.response.json",
+      "sha256": "1f98254cddb4d1f0958108376c50224ac463137c53d57f48f8917a8b109603a6"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_prefix_1.json",
+      "sha256": "425c6b87c47cc444f295675f09f444f730b054b1492b8455d485bfb247a4e1b7"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_prefix_1.response.json",
+      "sha256": "201894ec2ee785bd07adc119f3d5d3111241e3f0e2903b549ffa1a7aaa3a4fef"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_source.json",
+      "sha256": "bae2d7f31f96021f058dfbd6c01f7d00e443a700a1aa1ef500a18495b6a608a0"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g19_source.response.json",
+      "sha256": "b4a32ad3e5ae2d4afb5dafaa9e622f1e1c561523aef05fa974de2a8aedb8461e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_append_0.json",
+      "sha256": "613531de6db43655f621643a303208e8839718b85d934ccd258ec6ebf29cf33e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_append_0.response.json",
+      "sha256": "3dd82a5f359b2d41b138623c3e5c7dbf503cd1537f796dccb799b3003fb9b571"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_append_1.json",
+      "sha256": "514a9edbf9c5f7d034bf6af72c96041600ced9cc695ba2a378126d5fba6fd3d4"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_append_1.response.json",
+      "sha256": "3825b09720d793dc537fa644ae5ec2a75264ec18d6613c26cdf84a3190d1ad33"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_compact_0.json",
+      "sha256": "28bac3cd8340e68dc1ca68bc85446963b48d82434444b546ce5eae4e50cf2156"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_compact_0.response.json",
+      "sha256": "5eb85241fd40968d0d8aea5ca4fa200fcc26269eaf4e976f28b6def337d80455"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_compact_1.json",
+      "sha256": "b1beeb73f2c98d8cd55221976298a8c986fd4875f42d2435f9591e9d7fcd2ba2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_compact_1.response.json",
+      "sha256": "7735b216fbb1f77d8754650d3505b6d0349e8302ed7e5995c9609db9893e3357"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_original_0.json",
+      "sha256": "8a82bb51e3f0583e3eba43406de129f7da7599a02ddf6f529e19ee79c6b7c411"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_original_0.response.json",
+      "sha256": "7f6edd1c0da72b89deb94418cceb9792821fdad1062e7ebc0e3a287388e049b0"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_original_1.json",
+      "sha256": "f61d9a1d470ff411e0702d108746671c53d72935653cabae8db149ba6e93eb16"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_original_1.response.json",
+      "sha256": "65bc41cb9b19748aafd3229c0fbc9f0860ebc7ef90fdede011dd33bedde94a28"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_original_long_0.json",
+      "sha256": "c8cfae18d76b4eeaba97d695acb3570267541f429d10857a35575ce6eb4a6b62"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_original_long_0.response.json",
+      "sha256": "9535dbb55cc24221bb94b873fa6d0e0e5f09b28281046430a85eb61a875c8e5a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_original_long_1.json",
+      "sha256": "47c6b982d3117cd400fd29f07d3d831e3f5d513229ca8296547d9ec8bea67989"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_original_long_1.response.json",
+      "sha256": "0522ec1d5a855668d2facb7efb1b1fc0df7d74921dc25cca9688cbc10d3bd64d"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_prefix_0.json",
+      "sha256": "ceb435837ffc8485dc531e4d752655eb60ec5cfb3c541fce0c4784f9cd39476e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_prefix_0.response.json",
+      "sha256": "cb0bf70e139f7c31c5fc2ce506fbaadd22bc31d9a622cac43bfe2858f7a582f1"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_prefix_1.json",
+      "sha256": "55bbf26eed3346a3ce075c8735f5f0fd8d44e4938fad187e6b7eed58421deb41"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_prefix_1.response.json",
+      "sha256": "3c23216a828bd91b8ae3c0039e179af7916999f4ca00c1b92d4d76b6d62c6568"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_source.json",
+      "sha256": "8a5f71150313e304c430813eafe1eb5dd16e0de8b5d334f66c9d5c02126cf9fa"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g20_source.response.json",
+      "sha256": "9c5035e9c8a6f785d2ca5df44097188db3ed5a716952012e6ae8a89184264ddb"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_append_0.json",
+      "sha256": "609d250895abf571f9e59435333457a53399d515fdcc4f22a9f02ea0965cc8d4"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_append_0.response.json",
+      "sha256": "c097ec6a8da70f91440607a11367af45a0694d85c7698190aefd9921fe3cfd21"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_append_1.json",
+      "sha256": "fa94cbc866a90c72c135de9bebf86b6c64c8fe6366634cd1a239319dbde9b46a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_append_1.response.json",
+      "sha256": "3253fd85737e9f36dd1a5b665c732ecdb1d0693038fd4a20ef797b7ed6b980dc"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_compact_0.json",
+      "sha256": "2c2f57a594b09b09ff196f8d89b5a1d044db133317dbe9434dcf0f998bd3de21"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_compact_0.response.json",
+      "sha256": "813f8a2be9d137bab74270b460ca376524ce2b9cabe8161c33ee81fb20d37b2f"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_compact_1.json",
+      "sha256": "ec05fcc56fb878f914e289bc3780a12a00780ded3f21b6c63ddc5dc339b3aeda"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_compact_1.response.json",
+      "sha256": "fb2db1d76b4619e17d573d4e54b9ec1b45406ef45429cabc059e734e53ac18ca"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_original_0.json",
+      "sha256": "30161dafedd420d20e61ba1da483b5b594d72695682528906ba4e2334029baa0"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_original_0.response.json",
+      "sha256": "501c5cf299aa638c607bcfd4b572448c6792ab61a6fbfabf3b0aa0968dccee3e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_original_1.json",
+      "sha256": "ec119fc6ea17e7a272e96a44865d40be259605e9c71584bbf0bc5d5484d46a87"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_original_1.response.json",
+      "sha256": "0551985d5ee7b05e525fe28ee3e0150f08bccf5ae2fda5661669559fb0f28fc3"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_original_long_0.json",
+      "sha256": "b660c97f47bb07cbd31f7e0314a525b1fa47c58d4e875d60e840db32b0d8b76d"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_original_long_0.response.json",
+      "sha256": "06c4bd4f5a69739883707b426e4a78800b7128ab9e92035e5d4fc428ea36404c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_original_long_1.json",
+      "sha256": "4f87fc19a687410338c98dcb602a193936263dac819f31b3e5cc554eda1a7137"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_original_long_1.response.json",
+      "sha256": "04ce9388f07f145a0d14459666337f75f4371273ae085b7dd4f8099f39cc15f4"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_prefix_0.json",
+      "sha256": "9982ecfa441b6571f9565d888479d6272c8bdb0a87e4c2413e6cbd7ba465c58a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_prefix_0.response.json",
+      "sha256": "bc394411aabb86ab5b5f301e2746e3746dbc8fb74753ac7c272aba4ffd45c218"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_prefix_1.json",
+      "sha256": "e553fd622953e55fa6eee23d6ea1dc4946104733f1ac14b77c903a5f41930ab3"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_prefix_1.response.json",
+      "sha256": "b60ca858754febe485b5f29a26c49ded76438de2e80f6ef5e7d4b925570afadf"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_source.json",
+      "sha256": "863b24e00308dc972864b0497ca2c2e2537864162803c40a4df0285cd9969dcf"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g21_source.response.json",
+      "sha256": "783501c3fa22f7f2c8032a732a541aace890901372992b50c2f8bf69a706fb2a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_append_0.json",
+      "sha256": "e7d479988366cc619651fb9815e4dcffcd4a498f03d60b587be2ad6dedc5317e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_append_0.response.json",
+      "sha256": "b99442fe343e6f88aa5c0b100615a1df8abceb9c713f4054116f52f454bd5f51"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_append_1.json",
+      "sha256": "4676b3e79dc50afea170eb822f414ac6a7a756687c5d71f07b74885c26fffeff"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_append_1.response.json",
+      "sha256": "9c318ad6d1df743f7c9a3d3c3dad07b5d4b50bedd58c4cc3de227a07d2a8359b"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_compact_0.json",
+      "sha256": "399d79b48e3568c967201805afdb03248c8e862e067e10d0ae7b3d84c4e2c21f"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_compact_0.response.json",
+      "sha256": "d3f8197dab90e7a1c4fb301d37514dc56eae84d7176db97cad935789669bbe3e"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_compact_1.json",
+      "sha256": "8372f7dcd5dfbf14cfb6a3c50e7fd4905dd4198f96ae657053124f39d6f5137c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_compact_1.response.json",
+      "sha256": "9fcc3a44dc44dcba7ae8e07ca50882c3026c43ec8eef0f746698b0fa561b5650"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_original_0.json",
+      "sha256": "e102e56cbcef4b795ff71f0fd229dc0400eeb50fbfd4b88960f9cfc3411683fb"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_original_0.response.json",
+      "sha256": "9691558dccdf8e5515e25dc85276b188950c5165f991016f97ce6c4f3f94d889"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_original_1.json",
+      "sha256": "1e658261b029d1980ead734c8a02492357713179f71b7f5b68a5c17c22fa2789"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_original_1.response.json",
+      "sha256": "783371a00eeca8d9cdf49077205df15f33209c2415096db9dd41dc89f42880cf"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_original_long_0.json",
+      "sha256": "dda3c818a7fb9a412917fa1319d255c3ddc3d4e3d7393e709ceed3edd331a035"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_original_long_0.response.json",
+      "sha256": "604806fa680aa3b87ced7bf4d1018ddeca846d4a0b5ee00deb27dbddce722876"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_original_long_1.json",
+      "sha256": "41f0d2bd71781b00c2a6ea323c2048c2ffb3bc244acc73c89c2f4b8bd8ba4d60"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_original_long_1.response.json",
+      "sha256": "722dc1a6dc3ef368b9d2ed448cc4ec3c5718aa52afacea5b47dad3a9f2d0388c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_prefix_0.json",
+      "sha256": "7c2e72d90ce946462efc1e2baeabb84090cbb7ab788fbbd72b0ec6efb7bc8512"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_prefix_0.response.json",
+      "sha256": "4b0706ceacd5a71058bf9c94aaa33a0064febda6f0d88cb340e6df387ae9dafe"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_prefix_1.json",
+      "sha256": "ad1a8feb6caa9fa5d4833aa6c25d4961e5909222a813609dff3eab61d3410836"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_prefix_1.response.json",
+      "sha256": "fa8342db970cce6aaf243ebae9ffcd4501005bb8a390add885504f328acdb507"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_source.json",
+      "sha256": "ffcc6e5bd2e6cbc774a4da0e1b3d56b05b3e5065ce5c4bc1c5c68f501ca4390c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g22_source.response.json",
+      "sha256": "6ae082f15fb3e412f5f1c8da5a942bd8e52a433ce74453ae904f821814979101"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_append_0.json",
+      "sha256": "daa28dae77c4cd9d06560435d856e6fe36d14f8dfa514aea5f126e8e1c772301"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_append_0.response.json",
+      "sha256": "6cd30e2e93e7fca74a8f8878fb5d6d790f58c3a049575d3093f9a54dc8fec295"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_append_1.json",
+      "sha256": "2e74153ee3b2baf25f7389454be1cb6076a31e49763d69e7f7a5045b4a69f6e2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_append_1.response.json",
+      "sha256": "de54d727ff0b4d1678e8b3a6212060e35c5e8ed827d97990bf5c3fe4bf77a128"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_compact_0.json",
+      "sha256": "0e5b8a913a64d6cbc40fd5feb7f3c8299d82e9351c2dffa630a88e3d5187387a"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_compact_0.response.json",
+      "sha256": "7187dbbd42d0456d54befe0477d14543ac847fbc3a20545eacd33b20721ae9af"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_compact_1.json",
+      "sha256": "703af6810ed3c9e302f81f25b26a0e2f765d20e40189eb889c1c0c91ede6cd0f"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_compact_1.response.json",
+      "sha256": "7724b1bdf98ecbf0dbb7a33b54de9e7084ca2a0a5147bdd392ddff7c87fb56f1"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_original_0.json",
+      "sha256": "793a32bccd3056c164d4b058bd3d26862451901444b07316ab7a87358ddcd97d"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_original_0.response.json",
+      "sha256": "6ed4dd8e17d65d79d50c4ee069f9bb3aa839f64bd6be552a6d5fdda1c65c869c"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_original_1.json",
+      "sha256": "d93b62442d5242f93fb432c59ddfcb00618b5f61291b5427daacd9dbd02902d5"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_original_1.response.json",
+      "sha256": "6dea35960475dbc2ce06a4023690522177021366581c4ba48f5ca549cbd2f254"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_original_long_0.json",
+      "sha256": "518ea5f911ea78fe6282fd524458ca75dbfe0ff0a8e3fe29cbf7445de5aba4fc"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_original_long_0.response.json",
+      "sha256": "4d2ef10b151499a7ad4d32b4ad8cba0abedecaf02653ec125f70546b44b25996"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_original_long_1.json",
+      "sha256": "36690baaf7641afafb95a37d19eb2cb5590f6a9d2c5eda35e47afcbe5a658677"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_original_long_1.response.json",
+      "sha256": "5173dcc47367eeeaef92672d782c54fecc62d6fced51b0d20597d39b42ed2c18"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_prefix_0.json",
+      "sha256": "a1e130767c448c682421abbf5a06d169a9c131b2990127cb81bc6ca0df55b8de"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_prefix_0.response.json",
+      "sha256": "7d8cb55335d89e2fdcc5d35b434531fd18f41e7d09c2a2993252855c0041a0b6"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_prefix_1.json",
+      "sha256": "dd2e5389e5582155d1553d2f916bb956c71b07e6bab9ac871d2ad281f55513ee"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_prefix_1.response.json",
+      "sha256": "38d08a07755ca286bd0180ab846319cb6b253a46d6c42f7823ca49bfaf8bfad2"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_source.json",
+      "sha256": "afbf9d24eacf9d4531fb20a3dec5413ddf8e4ef21f6a8237031d9e812ae02f05"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/g23_source.response.json",
+      "sha256": "1f8eb86b0fffe331e2de75d479395d3ad82d9361f84e26b87f75183d5c5f4c61"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/postprocess.log",
+      "sha256": "004409081fa41415da248835e572b25324c3f230d3431063b4ec314ef6a5fad6"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/postprocess_status.json",
+      "sha256": "0c53c477ec13608984f5d6f283889963eaf061d560e5a68fe55ee6fef4d0a576"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/results.json",
+      "sha256": "211fd3f07e42d86526590d5e7b35eda92af130978af2734654fcff9734cd6367"
+    },
+    {
+      "path": "logs/trace_benefit_confirmation_20261010/status.json",
+      "sha256": "f6f0080120bdd3d7a15362dbf0886d788e72b63ea9d07c4ae36bc787d67e5f61"
+    },
+    {
+      "path": "logs/user_benefit_20261009/execution_correction_cooling/AMENDMENT.json",
+      "sha256": "6254e3637368d075806d633fd1305db518ac0a9ee335502dd51af74fa3d9cf2b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/execution_correction_cooling/frozen_before.json",
+      "sha256": "d9187dd04ec1b364acf93c5169a8b4bd9fb342a2dd72532e7e76ad2c480b7eba"
+    },
+    {
+      "path": "logs/user_benefit_20261009/execution_correction_cooling/run_user_benefit_20261009.py",
+      "sha256": "f742fae0b38cdf76efe6042d530562ec4c6caccd8b99e3cf08f08de8553ebfed"
+    },
+    {
+      "path": "logs/user_benefit_20261009/execution_correction_cooling/status_before.json",
+      "sha256": "c63b2ca4e8df95c776cb0587fd1fa3a67e59f91437bcb7cde1dc6aeef4763faf"
+    },
+    {
+      "path": "logs/user_benefit_20261009/frozen.json",
+      "sha256": "4c8cadb636b5d6e89071df7e3c281c187d7b62c769957e313ae2b642b03bbfed"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g00_compact_0.json",
+      "sha256": "4a91e0985a845e8cd55cac3d74b05840d6ca04bed8ebb60c487dcf9f3aec7418"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g00_compact_0.response.json",
+      "sha256": "4d4dc4717f35de80a25dd086184c449854e84775da8f85d9ba85900569bcfb5a"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g00_compact_1.json",
+      "sha256": "424f83ee16c32d3e0b9a8cc06bc75acf34a5d50b2f00c29b57da0519d8011a6d"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g00_compact_1.response.json",
+      "sha256": "804275146521a250ea4155ab2c915cc275365fe49df46f8d4e63070dc6ad414b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g00_original_0.json",
+      "sha256": "74473ed099de48b5331482f332e53821f0691738f47e26b27b9bd301e07b1695"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g00_original_0.response.json",
+      "sha256": "c25ab651cdfd183e40818b4a6f4f32f5fe3ce3546280ab57d66a47a04719270f"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g00_original_1.json",
+      "sha256": "234335fde0848c90ea7cda372a68fa06fed04b5c3756b6daa80e2184b5b0a30f"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g00_original_1.response.json",
+      "sha256": "8ff375cc8f149a4702f3e938ab1ca684163824c45a854bcf4cdfd6fd22288a6b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g00_prefix_0.json",
+      "sha256": "48efd64eb31d1c339def741c07ce85de2e436a05cf9dd38f3e2486a58f874ba1"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g00_prefix_0.response.json",
+      "sha256": "fb0ed142e1a5ae7ebe35660e7726c94f60bdc1f9765f32c93620b5bb8d3e53ea"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g00_prefix_1.json",
+      "sha256": "2a5316224cd403d4f631d02c0f0c21faa3a53ae4c42d864a05d7ffa7b7018de9"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g00_prefix_1.response.json",
+      "sha256": "66fbe4eb7c8e2fbc30105180c6aa2e88e1286da27e0a21d376c970709b5068cf"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g00_source.json",
+      "sha256": "348fb6cb2abb5cc6b5f7bbaba3ba81bfe0c6377e09c6bd2728fc524fe4df5cfd"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g00_source.response.json",
+      "sha256": "5b2cacaabb0c00f21b6d1da74f90451d50afd5c58084cd4bcd64d21f1a1829b9"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g01_compact_0.json",
+      "sha256": "b949fce2236dadd773cf8c41d9831b651354f25903155fb2b320e5d127568948"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g01_compact_0.response.json",
+      "sha256": "8f8e4a281ae5dd52bfda8e294c691ca7acb78b5cc348cb06f4ec411404aada2b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g01_compact_1.json",
+      "sha256": "8a5af48da0e687b3ee4be71bbc6885441ed0fde20178b369872898f657f9484b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g01_compact_1.response.json",
+      "sha256": "74065822dd3aa9a0c875d823d590828f44311303f48d5e87d124cbf28e29116e"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g01_original_0.json",
+      "sha256": "973fa27ef8e6554fec32016eb6bf9f1cbe7d80a30123d373f73c91c9fa134617"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g01_original_0.response.json",
+      "sha256": "91adb9a35a190b03df2ef93ac75aad3547b6ad91bb6fc37002167379a330bd45"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g01_original_1.json",
+      "sha256": "1fdb64bd463bce55cfe6a0cc9641d073f84094f6f9dee3f37f875d294ac95b85"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g01_original_1.response.json",
+      "sha256": "8dda2787e9799f9100eb5bdf5edf87e3ccd4e3a6992df52ce6662a133f664385"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g01_prefix_0.json",
+      "sha256": "e1dbcb5e15ff99133a0d0466d1545701dd5430033cd27f7dacfb1a9532edec63"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g01_prefix_0.response.json",
+      "sha256": "6a6502bdf20d3b94aac4970dddb86287ade355810392aee793ed21942987be14"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g01_prefix_1.json",
+      "sha256": "0e58aa42c8af47fe12d8863cf45654a12e75d5ca5cdb39a635b135f27ef67b60"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g01_prefix_1.response.json",
+      "sha256": "665cd022731b0c08df2cd2c7b42f58624c9a23517b0cd726df2778f6f4ad04be"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g01_source.json",
+      "sha256": "e4eee3f544ab118d8d852198afcf85c8b571bd8479c122b773d95c5069f2cbb2"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g01_source.response.json",
+      "sha256": "cdb677308fee35cd57fd314a72fb440ae8cd678b14e20953b5a48da2ec1d15a9"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g02_compact_0.json",
+      "sha256": "d6147e4edcde59863ab37ffbaff5335a8dbac57787d5816b64fe0fe287b7ad5b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g02_compact_0.response.json",
+      "sha256": "ce42a02fd59997d7a6f3a47ca45e606a645b213855e4d430d9e999387c54d2d3"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g02_compact_1.json",
+      "sha256": "8899609f350b269afd8d5b84511f1fa4a234ab66d06fa4fab2934715d19142df"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g02_compact_1.response.json",
+      "sha256": "89f5ba96ab055aed8ded03561fe61296a8d80d7f98232c4dcbf42b19732114dd"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g02_original_0.json",
+      "sha256": "e7105777c02329d42269e5a88046b4b996bfc87627a35641e2b43b4c4be6a089"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g02_original_0.response.json",
+      "sha256": "b6f6adef4be31b470ca8f4db16e87c8964963de4e701bc33c12fb54d9f0ea5cc"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g02_original_1.json",
+      "sha256": "def55a1591f2e2cdf4977fa3734d2771e898895c4cfd3dd76190ec704836faa6"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g02_original_1.response.json",
+      "sha256": "a1e91ae9a2f900bab35eb35bb17ad7a3817ebfafe156ad886ff1dccfc57918f1"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g02_prefix_0.json",
+      "sha256": "4279bab2094d9a9a75f9c4398ec2f8d37715b9c92bea061448f790150dbb4b35"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g02_prefix_0.response.json",
+      "sha256": "14b39fb53a06f07e70891ac9be579960ee17fa4c83ead7302ee7238c30d00bcb"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g02_prefix_1.json",
+      "sha256": "0dbea1adabe6888bae1b974bbf919449347bb5b3295d1b1928167af933aa1d8b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g02_prefix_1.response.json",
+      "sha256": "88c90925a93e6feb8963f36d7bea411c128ce7b9f6b712b9cc63c344e6520b3b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g02_source.json",
+      "sha256": "26c03b1ea154cc4f403a9eb4eb150b5db256cd6ffaf6158d775a2196c0da0213"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g02_source.response.json",
+      "sha256": "e2081839d6306c588f7463f1cce9a238d3f75e5fb16dcb384aa82aaca4b78121"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g03_compact_0.json",
+      "sha256": "19a98638288908d801d223e42886f7371e1c06e37334fe94e6e2e94ab5386645"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g03_compact_0.response.json",
+      "sha256": "dc1a700b9fd5f53f4caa100ed8683181216e624fddfd4d6f7380e802a0186003"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g03_compact_1.json",
+      "sha256": "358ab7f9e4122c0a25c585a0a878e5ad4de8d31a37d6bb6c6211841d7ba3da05"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g03_compact_1.response.json",
+      "sha256": "5a64a8e07e79fc99769914853d19b40bde25e70a3a82be8e632e788b7a682d13"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g03_original_0.json",
+      "sha256": "9dbebf4060f464aef438b951774228605950a0fb820488072c5e4c05276bbc92"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g03_original_0.response.json",
+      "sha256": "0bb5f5ef4f988b7bd31d25106c472e4dc41ddf89aa61e9113c41ef95d79b148a"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g03_original_1.json",
+      "sha256": "2a39886a6cfb31d920d0220cbb729a3c0914be64faf830a6241026e3ee51e3fd"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g03_original_1.response.json",
+      "sha256": "33e4e3d96a6caecc4c0bd8363a733b1f2624b89afa16a8adee94a2bfe8a02012"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g03_prefix_0.json",
+      "sha256": "1934e03b977589a7bf76bcafc14fc381b17ab12f23eab3153971efc8934699c3"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g03_prefix_0.response.json",
+      "sha256": "0dbc90c70fcf70068dc52238c44572ece45cc2ec7a09db39242f8c3d58c3bd9d"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g03_prefix_1.json",
+      "sha256": "3084ab0333913ed8023ba9527e85b5957bc43edda9fa5596a748053f686d7146"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g03_prefix_1.response.json",
+      "sha256": "209a0e94382866baf5d395de61daba27d69a3bf5af34772a407fc1a9454900ba"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g03_source.json",
+      "sha256": "7084a28373bca7123d31abae02c92514c9e916e06c66331cfed82c7ee3386eef"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g03_source.response.json",
+      "sha256": "3496038f56df98f4e65abe9e61ad3226a986b0f4b37877cd586878bf2e0a23e1"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g04_compact_0.json",
+      "sha256": "a4c211a06ed7cde603dadc17dfeec825a1dc5814854819baaae51732982b3bc3"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g04_compact_0.response.json",
+      "sha256": "2152463dba3d272173a460096cabd270a04a878864a33ac414ff58ac48422d92"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g04_compact_1.json",
+      "sha256": "fd2a05542558c591d378e7c6ec73d973d2182a028775c70003f57191eecf1cba"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g04_compact_1.response.json",
+      "sha256": "cfa9c5be080e395582b3cd22bcf60058d392c93ee71a64635341c42e8187a1e2"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g04_original_0.json",
+      "sha256": "9dd962e37ef948d82fcf5cc2d0a219ee12035ee79039d09ab042a63c7b3786e9"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g04_original_0.response.json",
+      "sha256": "329d325ba2cf8c950780de877463c0906bc7355a4d8201d08247b6fcb8e95993"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g04_original_1.json",
+      "sha256": "fa164a958d37715e8a8c824a719084821ca1ed5c0ad07f72bec67282c5dc9fa4"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g04_original_1.response.json",
+      "sha256": "86eaf63e73efd9bf9eb026b9c9d3c7a09cdb37bc81ff244e5ce50598d27e60ae"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g04_prefix_0.json",
+      "sha256": "ae733b1235f1fe56053c2c559901333a5ae1aee27ce8a598a96db19bbc75ce92"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g04_prefix_0.response.json",
+      "sha256": "8091176113b5b65775718f7b44902207f80444db3bb969684822371509196e46"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g04_prefix_1.json",
+      "sha256": "0432ac0325c1f093e77ced9bc3ebf775445114d5c45abc372e9ae4428411d821"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g04_prefix_1.response.json",
+      "sha256": "b283dea9541c5522008918ced30bc63268e049a163579cd87d5be342b8905e3a"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g04_source.json",
+      "sha256": "5715deb8e344d223463d492aaf5b5e158f7e2e43325cd4c83443c0686f92668f"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g04_source.response.json",
+      "sha256": "00e167c4574b76e9220403dcda0006af6c4aec804c202a1c22d188d0941f173d"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g05_compact_0.json",
+      "sha256": "217ec9018f6de73e363a841aab835c3b3dbe9a799888d3ea50dc2adb9e197788"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g05_compact_0.response.json",
+      "sha256": "76691a87f544e5e2211993cc058153c711a31c6d5cddc1e8fbd5d3a0bc023a9c"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g05_compact_1.json",
+      "sha256": "ef142168a89c7b8fb44d74815198d3c206d568372833bcd5a266dc539c79c03d"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g05_compact_1.response.json",
+      "sha256": "08d503a500b8e776eb6f013780cbf93f21804e878e03ddf88b49743272ab9469"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g05_original_0.json",
+      "sha256": "2843a7acd10bfcd0f02118ba7872b10734fc734e5e6843581b5e2384bdcea7b6"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g05_original_0.response.json",
+      "sha256": "3f6290e6450eca330a75a8ca8593ce364330ff51a819c37c00a68bfc0eefdb80"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g05_original_1.json",
+      "sha256": "765004870d5c73a143f31db5d8657acf22c808a4befe514463f2a0af64ac1251"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g05_original_1.response.json",
+      "sha256": "c6324d00cf6a2bdbfcd5f919c7e575bec9b57e765bb20919e0c0276fcec81263"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g05_prefix_0.json",
+      "sha256": "d7b98eb3d3e6cf2942919a05c3588cdd00993866e94bdfde054174e323b70758"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g05_prefix_0.response.json",
+      "sha256": "8c717df0092238e27b6a53b612ea4e1da2d08dd1bd1f6870a1f2e54756b78782"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g05_prefix_1.json",
+      "sha256": "1efc4185930dc0e09e1aa659e6333010ca969eef1d87ee801a495fdf79068673"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g05_prefix_1.response.json",
+      "sha256": "73e44a0d0953972d983e952b870e005293cbe1463c202008c9c0f6a371a86d3b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g05_source.json",
+      "sha256": "ed721fa0a7a86d979af338581a7e3a057eb2c06ad1a9e12ebd822d068d3e0ad8"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g05_source.response.json",
+      "sha256": "efb2382cffbe98725d23f2974af967af20d075e0bb88eeb447b360aaec7facec"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g06_compact_0.json",
+      "sha256": "751e820079b96081e9b1c96b1f81a3400061dddaecf78d3a2b62ce9fbc69a5e6"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g06_compact_0.response.json",
+      "sha256": "cab482c0ee2c796c9171c0259bf723924a7c7715daa380c5b772d93bedb405e9"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g06_compact_1.json",
+      "sha256": "005a64d0dc738ec34b80f766b298111f370406137435a59747706d31a260a2de"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g06_compact_1.response.json",
+      "sha256": "b882e34077433babd8749818315df5288b96ef3abc4538bb9fe2f10e8a39e731"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g06_original_0.json",
+      "sha256": "cc0f74106c2c33a1486c76979786350ea098d7d8835434cdbdd870a51cafede4"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g06_original_0.response.json",
+      "sha256": "d452ded005f8c2f3702afd0b3630f3bbe97ffc62c7194a6177a8d58984827f47"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g06_original_1.json",
+      "sha256": "2b4c766fc8912ab10bca14fd7e2aa04d4b30f19aa90678fb11f05a97622d3bd4"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g06_original_1.response.json",
+      "sha256": "9b583aa907b96091d9309c0fa1f3b8ef5b300f82b42740b20a41ace590535599"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g06_prefix_0.json",
+      "sha256": "3bc8524e253bf778cd554dbd46a343b26cd6e3669a6389a347e221d5dacf854a"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g06_prefix_0.response.json",
+      "sha256": "7fa36f328bf621246df603ff07b559eefabdeb454a8759ca5c58d01dde2824a5"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g06_prefix_1.json",
+      "sha256": "a2c24f54cf7a857a7a4141d81b7f1d6a95d8352b702c2d3bc990c2d8a8f589fd"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g06_prefix_1.response.json",
+      "sha256": "db1532c5e593a58ce3162e1f9e7e2b7aad6915d492c0419f90247a5679e95c54"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g06_source.json",
+      "sha256": "24b7da7effc7c2856201f8c7b7bb414b840246866047f042261b4af955ec36c6"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g06_source.response.json",
+      "sha256": "dacbe14ed2d4282b85d7936e4abb2192a6f3f5ebcd48b73623386b32adc39ed8"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g07_compact_0.json",
+      "sha256": "4a7a615702b6f1e6474c51260c23acce7199ac1ed60f4168090ebeb421664b47"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g07_compact_0.response.json",
+      "sha256": "c928ba958a29627bd825765b80591f2ae28374c240d364086f1089d8d689e615"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g07_compact_1.json",
+      "sha256": "f21a96e9a7a6538c2b39fccef51e755e74fc70d91cc17b74ce13479008da1238"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g07_compact_1.response.json",
+      "sha256": "996cb362dc9650e4a95819e5c4be06cb4d5810413aae30b9c84a6aaff5e3db63"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g07_original_0.json",
+      "sha256": "fa9b06305b9cdca9397d3f69c139129488f67421156f15c58815adfd84f48eb7"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g07_original_0.response.json",
+      "sha256": "5361b8ed5d2f23ac47304d1380ce068ecf3dc3d34b6457cc15121e88a689d61b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g07_original_1.json",
+      "sha256": "cd14b752884c8584dbe7b3a9d08223f4b9c52d950d61e97167636d4dfdc1929f"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g07_original_1.response.json",
+      "sha256": "660d5c22f874d3532370101e370441a34eac69078acd05f5d77448f3456225d9"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g07_prefix_0.json",
+      "sha256": "33b9ad12a05d1f34475fb52b39d76e2e19d078d639566ec015f364bd742cf2d6"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g07_prefix_0.response.json",
+      "sha256": "6d4565f4ea0435fac98e2a0a032928b0c858a6999226286536f53e4e8fe660b8"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g07_prefix_1.json",
+      "sha256": "9343090b56526c7fa8d45bf551a4bde01106942eb251bb9a4081dd4671d4b1b5"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g07_prefix_1.response.json",
+      "sha256": "3a1f5d248dc88d5aef545a5557536accea61d8140f59a0f39305d5f95a431f6c"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g07_source.json",
+      "sha256": "2fd7bb11051727cd3b02371b5512855c574270483fd21f54724910e55875c402"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g07_source.response.json",
+      "sha256": "49d527f4843067e5ac4f70cf44be38b8e45fb064a7e75b1f6d901465385cb7fe"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g08_compact_0.json",
+      "sha256": "ef27348ff82fb242f0bf6dd9e58b06687008b3c07555b209e585a2be4e800ff7"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g08_compact_0.response.json",
+      "sha256": "85a51c89208153f109a6c77ab356b25cb734b8a812898fd675d22a39c6c9541f"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g08_compact_1.json",
+      "sha256": "df1e5f415141402a11db1c925cc658cd79300b4fe240b9ef170a7c908c18de0e"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g08_compact_1.response.json",
+      "sha256": "222705b273fa619747b02295e167733e76ae8188126981e34db5a57acca55ddc"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g08_original_0.json",
+      "sha256": "dd69df9a4d5d221afda64332717ee147bdff6f844152c182fdd9bbb244862370"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g08_original_0.response.json",
+      "sha256": "2a08f063fc825a1653e9c9027da76683f63dd5d9174429b1c158f5ef5bd737f3"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g08_original_1.json",
+      "sha256": "8b2ef16028201da20cacd6016f0a988dd3f0fa824d51ee1c7818dfb78b28a13c"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g08_original_1.response.json",
+      "sha256": "833eccdff9d21be190bfe8852adaafa0eb1da0b9532b13c673b0d61ebdb9b083"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g08_prefix_0.json",
+      "sha256": "15c6789d18f30c38116f2eb1ec90945613b8e6a0c3e1f24f0782af5723720807"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g08_prefix_0.response.json",
+      "sha256": "84a741079bca152af164aa168819c2de995790d3eed7f9b635685bd828734e01"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g08_prefix_1.json",
+      "sha256": "df434b255117803ae75ca8994385fa4f6daccd71af748dbf51d2073411f6d782"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g08_prefix_1.response.json",
+      "sha256": "09bfec8d715579123cee8c44f9af81221af79fe36b63f78f4fb6d4457c98eda0"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g08_source.json",
+      "sha256": "4c3d7f1e2ca6899bca900478cfe4ef2b5b60e60184a5ee1fd9c73664ebe0d00a"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g08_source.response.json",
+      "sha256": "23403b659bc56719b8637384a64a7f68a0f75c637a8ea353128e06aa8916f2fe"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g09_compact_0.json",
+      "sha256": "1196c6dd9765be4774f19132ac1b8b7b31f3a04a219a4fec852f3f6ef08b2b3e"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g09_compact_0.response.json",
+      "sha256": "4fc75efa118f35820e3d85e5663307097788e4dc4ebb13e4f9f12c66c7ba8bc2"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g09_compact_1.json",
+      "sha256": "0dfbe8c8d0bab8b396d6e4e4544057ac9099893d6a8ecd5a3a59e6b34b088de0"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g09_compact_1.response.json",
+      "sha256": "79ea413f9b474b2212add333a63c2226473390c827ea031f5a66c243f0f374e8"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g09_original_0.json",
+      "sha256": "29f0fb1f6803983084a1bfcbee28bc41ffa25ec57e84fa3a0765b1a3e2f8a53e"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g09_original_0.response.json",
+      "sha256": "6261a2c06ca9e07df7a9bf48397823cc135bb3d3e4c1d0e89d4d8610a9a9d4ff"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g09_original_1.json",
+      "sha256": "ef0c0a9d4ccdc89e3c4948bdc56cef3032bb55eb59feadb9126f49ab75e4ef82"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g09_original_1.response.json",
+      "sha256": "43af889092765174db4134fa1fbb4e74832f59986e9cbbdd8a725963ebd701ba"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g09_prefix_0.json",
+      "sha256": "c482a01c507ce0d644060fe25b09bae33690937c5e68088bd137ff8348d575e7"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g09_prefix_0.response.json",
+      "sha256": "a81bae730fa8e38e66423d0b7585bb3ea68b705b2e693e5e17975849aa978a7c"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g09_prefix_1.json",
+      "sha256": "63edbe4bc634411f67302ac688716e87a591a182fef2442c9968495224407a32"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g09_prefix_1.response.json",
+      "sha256": "113f6270729c03f8482cc3973f4e1f875dba9d8c42b9b26bbeb2f0df44b156ab"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g09_source.json",
+      "sha256": "1c084ada1f819e597514434e58b6fa2dbce834b56739c8641079fd8f87d55440"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g09_source.response.json",
+      "sha256": "855b212664909a5cc0ee1a36096fef0c737adcd3787992b0f56dc0e4bc7b3857"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g10_compact_0.json",
+      "sha256": "b9e5b200779ff363b7315ab4d7b9be9283515fa5044031951d147ad53d51d5e7"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g10_compact_0.response.json",
+      "sha256": "d85df689cb91412906b6fdf18a9dab0d1e39473f3442b9b9f0ae972a806aec9d"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g10_compact_1.json",
+      "sha256": "54a2f243c8b353004f42f1069a355224483d6aafb991bf34a8f0be860758a07f"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g10_compact_1.response.json",
+      "sha256": "0f351e73cd4e05b5dc023c03df3da085a7d418c2fbbe3b9f97d60548d71ce50f"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g10_original_0.json",
+      "sha256": "8b97a32d21ba619e7e80a97acb829db33cb0bdd9d1f13d625aedf6e2bba545ea"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g10_original_0.response.json",
+      "sha256": "e3eba43e5aa77586434f2c6b4547a36ccde64bd00f02192d1dd299f2b99b0266"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g10_original_1.json",
+      "sha256": "6db606d2874e95680de123c19f522b480a5534f13d5d1b90d8c388fbc16b75af"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g10_original_1.response.json",
+      "sha256": "f18c5e79bfbc2742703be6117867bdf00f38339789ba59461d5539adab667220"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g10_prefix_0.json",
+      "sha256": "570553b9d13ef0d67532c7672eefc7df9525be609f64ecc2f5110d2d6cae87d8"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g10_prefix_0.response.json",
+      "sha256": "6d576a72d75eabe30e6db697e9a32fdb35454d21b0127cfd80d4d3810279c896"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g10_prefix_1.json",
+      "sha256": "f443a3ed5d98f4bba443dcad0a72e0a3971ad4a523925199d50ae17f474d16aa"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g10_prefix_1.response.json",
+      "sha256": "d4f7dd724f1fe5295f85445dab47efaf5b5370323a20250d73dbe6323d9b8f98"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g10_source.json",
+      "sha256": "97664e3bad7381f4c77b57905e92fd26784f20737ef8c2c106e2ced727716306"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g10_source.response.json",
+      "sha256": "6f3052ddeef4555528325592cc5f2e0ac55a75b4a0fea7a8f4a110fa3be60160"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g11_compact_0.json",
+      "sha256": "d961c1c36d7122d51cbe46ce26263affd2545589ac3bd33d170bed4d4f602dd3"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g11_compact_0.response.json",
+      "sha256": "e064dcedcc861702dc49ac11a18d6bf8826909343b61ec2ad3b4a9a23aea3ffc"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g11_compact_1.json",
+      "sha256": "ba4087435e170fa5b7d4f0c37406f070629d37dda483beca7e438571f0a393c5"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g11_compact_1.response.json",
+      "sha256": "36e074646e7ad8eb6fdd427bfbcb69559521488b74ec52b210be0477f30664a5"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g11_original_0.json",
+      "sha256": "c0de5f785c4415fd0f81c5001d2f7e2b4a392c78be5435fc7be7c64d0845e73b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g11_original_0.response.json",
+      "sha256": "695e8c833ca6ae30d993492842c1ef0cc92d80a937de6a59225d08013a6f10ca"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g11_original_1.json",
+      "sha256": "c9937e5ef205e4b60765ac37cb540f13b96f4ecc33f0c70382c5e86f2b262fa2"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g11_original_1.response.json",
+      "sha256": "ffae5008f7196596cd35c99c3b2f87d3a78d311b85054460edfb757ed4c3eb7a"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g11_prefix_0.json",
+      "sha256": "2d4f116bf339854ed39d40eec7421592bd75fe5bb20b65766f5dceaa71e831d5"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g11_prefix_0.response.json",
+      "sha256": "2b1cffe875c449c4fc758296b1e422074d55717f647768c1b0440a06bef9347d"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g11_prefix_1.json",
+      "sha256": "361919829a8f98259795815f497d97744319fe7c77306b1ee048191fe34565cd"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g11_prefix_1.response.json",
+      "sha256": "4e51edc3b6816f3a5f74de689d8159e7ae0db9da3a1ade16cc52c9b7a3aa0fb5"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g11_source.json",
+      "sha256": "cd4f78d0f284c08b89256968db0302e717d98d3fe36a88244500d829367ed3e2"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g11_source.response.json",
+      "sha256": "c16d77e1999fbaaef3f89e5008c89d902a0da95613081ea79988398f42d3fd3b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g12_compact_0.json",
+      "sha256": "ef12b225db2505b0d700025ca3f67931c738a724abe021650d391c03c2edf35f"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g12_compact_0.response.json",
+      "sha256": "71c9313c482c501e03f01613ec2822c50f7a73618c6f0d1f4f9e9e276df8c997"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g12_compact_1.json",
+      "sha256": "6f7a82abce0c954bcc8845ccceae1f7d125180ba2d515109295571cfd4a05e10"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g12_compact_1.response.json",
+      "sha256": "8e0eff28055aedd9594b1492d5444193176b1a86113c0e666405f4de2c0fefb0"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g12_original_0.json",
+      "sha256": "0f71f2bcb7f317418cfb35fb74d472296735229dc745d57bb3bcf45fa466ed4b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g12_original_0.response.json",
+      "sha256": "a98903bfd38d9f74331ea11ea52ab8655541cca1666b8e3390ea7b70e0b93d5c"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g12_original_1.json",
+      "sha256": "c8d2e85d9dd974f14162c2048f8809910fa0018ce801ab56ced0909279c8dac0"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g12_original_1.response.json",
+      "sha256": "9aa016ba2ceac2834c5cd5d9c156dd1928cc70a8a1a6d815e5f5ae72f3735800"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g12_prefix_0.json",
+      "sha256": "646bb8d6edc4d067c46b740fcc6cf1ca6ce114e8214b5a6a8eff0aef86d34de5"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g12_prefix_0.response.json",
+      "sha256": "954a767fd82b5da9e996b869c6738ab8535a0bfa6af6698ac7352747f4385f05"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g12_prefix_1.json",
+      "sha256": "19aa9ba957cd6edb9a4504ebb944b5bb6da52640ee8963ca1838fa24d1bfc2b4"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g12_prefix_1.response.json",
+      "sha256": "79a3a270b19471f8cca76d09139f709cc76c7747fc48582e63390a59e9223464"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g12_source.json",
+      "sha256": "dc7364b8c243028d2abe09fb0e79991f6939a068eae3d7ebacb73ea627c66419"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g12_source.response.json",
+      "sha256": "e8539bebbe1c003baca6e5ebab53b0ea432aef929a33957d60e79f5af64de4ef"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g13_compact_0.json",
+      "sha256": "e52cfecf2b5c75cb374ad49c78a4e53170a64709d5d0e559ffa774497fd1831d"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g13_compact_0.response.json",
+      "sha256": "69b6b9796e0e3bceb1a6300eb17473eb49b1802c57ead30f25df67aa834d1544"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g13_compact_1.json",
+      "sha256": "5399f2201c85e295ea03e0fc825f5d807aee7df075deedec37f38cbc98dfe5f2"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g13_compact_1.response.json",
+      "sha256": "d8a49b7148250548c080422d73e4ff027aa05204512ffa169e1e8893a0cfd90c"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g13_original_0.json",
+      "sha256": "728e2844115073a090cd61b1a30d7787fa6deb4641a9b00d139e07888fa3c007"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g13_original_0.response.json",
+      "sha256": "fbdbc97adc0f889ec9c76a1649c82041613db6cb02f292e8389203d0e861632a"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g13_original_1.json",
+      "sha256": "f27cfaa7f2057bdc990cee25532b52d2b696f329e4b59d6819e27a49941ff8be"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g13_original_1.response.json",
+      "sha256": "f44b7eb4b14567c6c4c30dc7c933d9aed8a9251195d9e35c1d0408b6427d311c"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g13_prefix_0.json",
+      "sha256": "27cba02278327684dd8197684940c03210abb18e01ac018162354c5976e9263b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g13_prefix_0.response.json",
+      "sha256": "37353107e69c9e836030d086d68ab5e514d00448024db0dfcebd12bc60075ff9"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g13_prefix_1.json",
+      "sha256": "c52308c4ff814ce2993f6eda3786a879f70b407d68a5b6fffddadbb78e3aec79"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g13_prefix_1.response.json",
+      "sha256": "4a249b3efd43747b4f3e3468042b9ddaafa4a55a9f2b38d853c340d4dba0b859"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g13_source.json",
+      "sha256": "1630b1fc57205c2bd64d16cebc8ef8f3ed19b45647b651121103788f443aada7"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g13_source.response.json",
+      "sha256": "d1e05373109bf0b4ebac37fd2b8cf9ef26709ba327b0a9d320b1183791e794d4"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g14_compact_0.json",
+      "sha256": "0f5a311efb8c2abd251af841b37730b2310dc8d0a32cc584344bff4f323b50d4"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g14_compact_0.response.json",
+      "sha256": "faf481156429d390fcc07c607224577b9a8822166335f43e0510650e499f6f76"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g14_compact_1.json",
+      "sha256": "97335a942125a34c5d73b05eb4a64a73ca933e669b95c03e829bf6643b65e23a"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g14_compact_1.response.json",
+      "sha256": "399c6426cbe6ccea2ae63bffffa6593907270d7fc10e0e7b87003a2ea041497e"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g14_original_0.json",
+      "sha256": "6d81b43a528d65d2f05bd33393d59735c2fa71a7b0345c674662838839865a28"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g14_original_0.response.json",
+      "sha256": "3c955b6916d2f07554bbf1f3df7d2f68f922422183e900393820a0b22f8122cb"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g14_original_1.json",
+      "sha256": "d6784ec9a1b50dd5e99edf4495af578407bc5001e724851047bba2f3a8c65e0a"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g14_original_1.response.json",
+      "sha256": "3e5c5e09dd1fb438b4e51cc2334598f891e8227abc30cc5e2e1f0c9b57c9f15f"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g14_prefix_0.json",
+      "sha256": "213adf570fb2ebfa7d3bdac58b5b0b000eb395e07541ac7116444b81610d838e"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g14_prefix_0.response.json",
+      "sha256": "a70482970efd4872575aeb4b8049d6ba49ae9f6779967c191784f0deb749ddc7"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g14_prefix_1.json",
+      "sha256": "0dcca7ffa71b9194c61d2ecaf99a84e71554a7ad624e0b19194ec0e48bf9b04e"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g14_prefix_1.response.json",
+      "sha256": "899103d99067137c11b60e595755a00997891cfa79a4c31294c7fe133aa838ac"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g14_source.json",
+      "sha256": "a3ed5175781faf1b52219b8044439220ea0469b8046d41082614049ac9d048f6"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g14_source.response.json",
+      "sha256": "484b512cc89b0fb26e435ee54a75285d89f80ca1afd9d394fe0c4642f0cbfb63"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g15_compact_0.json",
+      "sha256": "13d4cec7fedb2c664b61b62e3fbf8224ac0950d9c528b0bb63d7aea4682cf8ee"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g15_compact_0.response.json",
+      "sha256": "a850dcabc5fcc29c2313ff02d7116f7112a88a804b155bed4929b38bc2c67f92"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g15_compact_1.json",
+      "sha256": "268cc08f922ce4d4ca2d848e1c2c4938cf537bd94e7838d8334bab89550a55aa"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g15_compact_1.response.json",
+      "sha256": "8ba8af6f350031b5a65b49f37de158daa6a63a76a749061d0988da92d121b763"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g15_original_0.json",
+      "sha256": "47bdeec60d038b9414e06e91b052d57e079b0a1cd1af3509f4f3ef7e0706cf09"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g15_original_0.response.json",
+      "sha256": "ee68d15d9c24bdb2267874878bd170e0bea5d555a03b02cbd44f56c50814e4f6"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g15_original_1.json",
+      "sha256": "a3518fa92cc786f76a098cdd797410c7f0c4b22a032de9f6c0ca22807295c552"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g15_original_1.response.json",
+      "sha256": "833166510095f90631901da0fc52baa0ecee02e02132e88022896c7d732dfae0"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g15_prefix_0.json",
+      "sha256": "95032b799b17521044f50c65c234eb927d50777518526467d1db6f39748e4462"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g15_prefix_0.response.json",
+      "sha256": "153a191e5e3864f5fac8b2b8c3119ee609c953924b9c8dc4b6989daabbfdb7e5"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g15_prefix_1.json",
+      "sha256": "5610b9931de79e0383627eae9c17a7323f7a9fa30592adf1e53a33108e9905e6"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g15_prefix_1.response.json",
+      "sha256": "cddd5e346028c7b467ba894892bad58162c818a342ba41621aaa9121141624b3"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g15_source.json",
+      "sha256": "5a56885287e1789ea76bfb51929a109f0031dd97fd70f1c89bec0410517651cf"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g15_source.response.json",
+      "sha256": "3ecec0e33b110a5875f01cb88be9086cfb6c8ccc07123485fad1410a6041daa6"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g16_compact_0.json",
+      "sha256": "0ba2edfcea8330b34a733f391b075b75306a00bbec502e98936ff516affa2eca"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g16_compact_0.response.json",
+      "sha256": "828a20f233b0b5ec382096314bc9f8023ec9e3d6b9919450bccbc079e4d0715e"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g16_compact_1.json",
+      "sha256": "d966bf815f120f80886345f9c3444b1c11a0f887a27abce7622908f7de39ef9e"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g16_compact_1.response.json",
+      "sha256": "d1011a274feb0e9809806105661fdb528d442aeadf7bb6c460e0c60d3e82c305"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g16_original_0.json",
+      "sha256": "f57a8b8b4df0aa42fbf3564f1ceb4cc27ea6912671ea9e8af9f3ef553e689b39"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g16_original_0.response.json",
+      "sha256": "d704ec2abd0ee52fc9900ceff8bf0c5adad462c0519e4b79fc7ec6f8efe21be0"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g16_original_1.json",
+      "sha256": "f18eb829220aa623e5a0a7f2174207427ef3b654bb8f44729ed584ef4535ede1"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g16_original_1.response.json",
+      "sha256": "48be5fc9dbcb4479b29eb1d3e2f632638c45166f87b5fc24d3d4e1e685e4c102"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g16_prefix_0.json",
+      "sha256": "ab3fa31baf1def5112c7e3f266ad649bc56da382bdb7146589543b02e16ffd0a"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g16_prefix_0.response.json",
+      "sha256": "3607274d81ddd799c8fb139447dc44cd69d91b9b77add4dc8de3f4cc3839fa35"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g16_prefix_1.json",
+      "sha256": "f5cdb1853f2aefc685226f9779e0ab226efa6eb4e48d1967402bf80cce31e860"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g16_prefix_1.response.json",
+      "sha256": "f04aa5c32e0d12754a069355ad8b26157296852b6312c9d7b243383777693c79"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g16_source.json",
+      "sha256": "cc5a8bb929ff4890c5e56d326b9bef193afd5d023fa777bf53457c8b5eea2287"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g16_source.response.json",
+      "sha256": "6c5375bc9d49715f71290a6c6c9747ff0d328102d2ac60c5630113100cd80c5d"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g17_compact_0.json",
+      "sha256": "78665f7580d7e7517024c942c5c9b8b94708f182f714a744519a8d1c1c75e1b8"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g17_compact_0.response.json",
+      "sha256": "7166df3c58a82f46a841e52623ef8906c3d18f16c69f6a1c59c932bb08e1e286"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g17_compact_1.json",
+      "sha256": "cfceea05d5ffeecf17793eacea31d486247f82f27fe800b5be3bc88479ce1cca"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g17_compact_1.response.json",
+      "sha256": "fdcd3dc443f09182c700203d621ee4136b17202174c34f9a60f7932f5e174117"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g17_original_0.json",
+      "sha256": "a73750a03370eb66cbf0466e6a46853284d74e94ceced0ec25d0d3a7d14445d6"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g17_original_0.response.json",
+      "sha256": "522cafcc5c05633ffca3969909e57d3362e7ff81d470575e95517177447f475a"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g17_original_1.json",
+      "sha256": "97cdeab4b7d36ebc4f5b51312521f9ed9f9943998f8039d3eb88b51073d6bca3"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g17_original_1.response.json",
+      "sha256": "4d518a366b74d03c007611b342e08fe8b03d62c3791d129cf3491e1576064c44"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g17_prefix_0.json",
+      "sha256": "cb764b2d14bffe5e1d7578ffbababa8a2dff3bb57d1369c9c7f58fa697ed1e3a"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g17_prefix_0.response.json",
+      "sha256": "658f8670d4346b6558019ec6127fd7bf6833853c409821940667ed9a66d81347"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g17_prefix_1.json",
+      "sha256": "69a779be1bf3b435dbdc2e9ee7a3443a8232b5f5f7aadc54a4fa059e65523625"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g17_prefix_1.response.json",
+      "sha256": "a13c530d72b5634dc21871932a82eba0576949c60f125744b5f1b8e69d6f705a"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g17_source.json",
+      "sha256": "d1ee0f2313a20310b845d9c7121a44594d311556f5f5374b6e1f2d330d8e1a95"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g17_source.response.json",
+      "sha256": "c797720dbc9d1606b286fab46a8bd4da08cf4b6797adaddbd0a885f5e4e7710e"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g18_compact_0.json",
+      "sha256": "3ea27da36fa879a67284dff066d7f693fb3d7379a07f5d1cd5dac29d77148e6b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g18_compact_0.response.json",
+      "sha256": "ed1d7dba11f424028d6abb960e8b2d4c402345760c0c71865a2e2ae195224b1b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g18_compact_1.json",
+      "sha256": "bbc0664cc1f956bcaf2602fff9ebf6e979035d6307bdd154afe92274ebbaf70d"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g18_compact_1.response.json",
+      "sha256": "2f0c207229820e2a998faad4bb517bf0db1c533452e5834a5c5a69997f511b34"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g18_original_0.json",
+      "sha256": "ee4dc70e2a582309a5f0899d0da62df06ef76ca8f1230f1717697665c92b0455"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g18_original_0.response.json",
+      "sha256": "d0223f159cb37b47ad66240a5d62d077416dd384e84835f56b95755e24671a24"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g18_original_1.json",
+      "sha256": "883391cff548ec40cacf37d06c18be125573442af8708b93b80783fe04247ba1"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g18_original_1.response.json",
+      "sha256": "3a2d785a2b7d7ab24c52ca8b250e6ac4bd580a9daba59d3eee3f0f8e0237f371"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g18_prefix_0.json",
+      "sha256": "8c00cae6cef03db1b5c79a628513c3a6198d78f872ed9ffe6f25a2b14b77529b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g18_prefix_0.response.json",
+      "sha256": "c7ef51bdcb6f0916076154775c59685405ce69918eeaffe700ba1c82300fc5be"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g18_prefix_1.json",
+      "sha256": "ac14baecf2440c2435076d2b9f7c6ca2fc898f827851b66c35d9fa2af2540be9"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g18_prefix_1.response.json",
+      "sha256": "c06c1111a5e530662ab3fe04fba4ccc0bcf396d34dfe691ea1ff17e4319f11a3"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g18_source.json",
+      "sha256": "ec8dbadab4bc168d94ba439077f3039d8e090cc37809f5507785ca265956ed73"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g18_source.response.json",
+      "sha256": "52af1a37c72ea590039a2abdc188fab3f837bc97bb7487aced53eaa2aa1f510f"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g19_compact_0.json",
+      "sha256": "14c3d12074a2d8ebbfc018a8911dfc8298d04ab6f11102fc6a50d4f17522729a"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g19_compact_0.response.json",
+      "sha256": "0aa3f7eabc52e5b90d081d5cfa8848d08c06e3553db50ebb83267f9932a88463"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g19_compact_1.json",
+      "sha256": "66c49f6b67ca848827ec31406f311b7883e3b6f32ccd5eb05e387566a68dcc47"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g19_compact_1.response.json",
+      "sha256": "5b6efb339752ae3a69f91b2eec90ab0d681987c6f1180c0b24a7325136695083"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g19_original_0.json",
+      "sha256": "12af397338201cbc60e3f1ee3f2b0446968bfea73a21286b56db3240b88ff102"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g19_original_0.response.json",
+      "sha256": "1c2fd69a1cfc781dd900fbc419286cbc7b3595686c1721b3d5015250c021482e"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g19_original_1.json",
+      "sha256": "14b1c3245d7c7f91a9405e4b7cdac690ee072e824d54a0c911422378b75e8055"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g19_original_1.response.json",
+      "sha256": "9d3a38e71aa0936b98fb0d021181990ee945ddecbb8b01290920c5f8943b10a5"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g19_prefix_0.json",
+      "sha256": "09fafe83137b508a2466b16d6db5fa2a87d3f63268782b2bcd2f84e2e1c97e87"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g19_prefix_0.response.json",
+      "sha256": "7291eaf96b6be581c1fda1314f06686288ffb109d91a58e11fc81983672acb34"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g19_prefix_1.json",
+      "sha256": "6f093c9631dacebeec8c4b297b1487093590d430d1b767f92663ef1a182733c2"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g19_prefix_1.response.json",
+      "sha256": "2133c26d91d0fa7e3cb9ac339828b44d94cb271aeefcc482dfe1b655460a4b46"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g19_source.json",
+      "sha256": "fcb0aeb1190cabf6622aa9980e4e1d594cf384dfb67f40521c1bd4862510a55d"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g19_source.response.json",
+      "sha256": "2458db9faaccd9cb1473459d35bd158360dd47108ad96cf249e20677a9957199"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g20_compact_0.json",
+      "sha256": "786c447c84767c7ca766f52a884337836a73d10592c435ce8466a6a56d5ceca0"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g20_compact_0.response.json",
+      "sha256": "bbe5cceb07bc0e5d2d334ad4d2ca950ea81805a684f7ce3c29fe4951ed4004a0"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g20_compact_1.json",
+      "sha256": "030284e919d5aab7b59ad33c32d88773f7105fea0cb885b377dddf7c2d5e6c45"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g20_compact_1.response.json",
+      "sha256": "d61bb7959713fd0f27f7da49f7eba06bd4a2a700880ed4f804a122c0e36c1205"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g20_original_0.json",
+      "sha256": "39ce910dce109521c1ad2bceef35f942badd2a8edfc117e643a7ea059428240b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g20_original_0.response.json",
+      "sha256": "2ac8ba6f68fe6b5ffdafe80467e80c6bfb65d1be87aecca61d97952a725fb5ca"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g20_original_1.json",
+      "sha256": "eac329c8041063692a47ee01cf95d78876468aa642b338eec3cf03e3a8900b15"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g20_original_1.response.json",
+      "sha256": "7ad2329e07c6384656604fff936e644a0b3516b3941bba98953e15df80a459da"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g20_prefix_0.json",
+      "sha256": "587f4596718e771133e1ec8ae00282d58e85810c9c9a3abbae0d2208eefa488c"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g20_prefix_0.response.json",
+      "sha256": "b53aac63f96f081c8f9b03a130e3837891a30252ef5c77a94965c0da8c7c2808"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g20_prefix_1.json",
+      "sha256": "fdf2216aeb14a459969d55b9188454d5803b6cb66ea4cdac946aa07f617909c0"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g20_prefix_1.response.json",
+      "sha256": "f94471f0986041dc0dc7c00c179e9196cbf4f1f92a147b689012c8eb12817bbd"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g20_source.json",
+      "sha256": "8e2308998a6786bfd2e63814ce8cc95acf4495c039989845f51c596b033533fd"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g20_source.response.json",
+      "sha256": "918c146a8adb45c0432bbeac5502cd14e37fb1abc9126abeb6b777b800754a69"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g21_compact_0.json",
+      "sha256": "101e6ea548b605a26dd72ca7f8e86a5a9d13a05f177717685aab48fde783cd25"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g21_compact_0.response.json",
+      "sha256": "df85c18f1d81d996f94055f829b864e8ec512dc3f3a05707373571986ce62e8b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g21_compact_1.json",
+      "sha256": "d6255187ea78b11ace32ef3fc048605c51a05ce8b045de653f8acf708ab2651a"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g21_compact_1.response.json",
+      "sha256": "ef86ad0c94edce7c75307f5b9d3b9c7ca8627afe52f480df269a81ed11587382"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g21_original_0.json",
+      "sha256": "f48313a979396ecf1b1bbbfeb05d157c4b4eba386439257b6d4a62f29fe2f13c"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g21_original_0.response.json",
+      "sha256": "5cac7efbcfe58f25a56fcc315405f112c719840de3328fc66ac413f6acb160bd"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g21_original_1.json",
+      "sha256": "da7e9521f50057769dedc31d2fef040a7c60bd8b68120c78a15a51f157940dfd"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g21_original_1.response.json",
+      "sha256": "46d48b185a94bf981a8d52b5cea38feb20a2ac596aa9af2437342d3d9d8d4051"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g21_prefix_0.json",
+      "sha256": "52028b09337275ebf004a2eead7badb0d1c61ec49c96b9e1a652e47ca5fc73e7"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g21_prefix_0.response.json",
+      "sha256": "eb628c6cdaf5b68bbe77f4479e2a8c0da70d4360afb7b1064201071b711b9eaf"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g21_prefix_1.json",
+      "sha256": "a3c6f662af6e3de0267a41682fbfd7bb54cd6c6b6f460fb3cbf3bf1dce78f842"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g21_prefix_1.response.json",
+      "sha256": "b9d327b626f77cc8ba639545343269daa85beb63f16e742e2cc1f601af9cc93d"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g21_source.json",
+      "sha256": "5a6ac8b818527d27b5740a4daea4c919b5d14c6a037d7a5493fe51d1aae85a42"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g21_source.response.json",
+      "sha256": "a17885a713519c9e267fba47c65609ef9f5076951a987e04e1c744586950e1c8"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g22_compact_0.json",
+      "sha256": "e8b723cc3a368c586f4c66408d97c99a94058ac8e4d75bb221ed5fe7c5579ae0"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g22_compact_0.response.json",
+      "sha256": "ce95b344cc9511eea068cd483379e57352cb555d169d9b7c6864dbbe1b1e1102"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g22_compact_1.json",
+      "sha256": "b149c2928091d84dafba662de40370d0b77188e44d795a4821b8fafe738d0f4b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g22_compact_1.response.json",
+      "sha256": "10940ae7c27c40e9a6a10315a87fc6a207afd44cc33ddc833c9be86fbc0220c6"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g22_original_0.json",
+      "sha256": "51db78266349fc0b6fd03c6cf84151d388f4b242c40e858bac0727d0f44e43d3"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g22_original_0.response.json",
+      "sha256": "3f8d7f746fdba4d4d9ee575235eab3eea78d4e65da630019faa1fb6dce4f2eab"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g22_original_1.json",
+      "sha256": "ffaede98cad2956155a6682cf82032b70f50fe22408144a695727fb35bf172e6"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g22_original_1.response.json",
+      "sha256": "2e5b993f3c23563c0ca23daf08af314588a3c3bc8a8cf426981a276ce3a2ec76"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g22_prefix_0.json",
+      "sha256": "06fa55fd01889706f9c978002e92c250222e6c521c39c61e5432e324794fba8c"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g22_prefix_0.response.json",
+      "sha256": "0698f8bbedfc245757659a5ce02fe0d744d6c702d7391bb8bdf37ef9f682aec1"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g22_prefix_1.json",
+      "sha256": "5f219ff79b403a5b7711e757c07864a0b6a02144bc0e84899b33c14eed07e5da"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g22_prefix_1.response.json",
+      "sha256": "1531410aa48dad57165ff4a814be5266201ab7537ce648e53903fbfe8f5aab1b"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g22_source.json",
+      "sha256": "6e3318b2fa6420c52ffb6f59657e55683d99724f385bd646f3c0317d89d66fb7"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g22_source.response.json",
+      "sha256": "dd1bb1fd79955d08964f2b5b3888f6d1ae6296bba7099134e096270904d48de7"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g23_compact_0.json",
+      "sha256": "d432af00643579aef43c6d3df16a2cbfada532d669d7b0d3ea4f6e28d63ff4e1"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g23_compact_0.response.json",
+      "sha256": "4943bd130338fbacbb5cd29363badbc932aab5a8d109a41ec385116d538d4122"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g23_compact_1.json",
+      "sha256": "7d6971419cde95711d1b3f5ff9d63fb84f72588c5443eb5f06905b54c5e5cf0e"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g23_compact_1.response.json",
+      "sha256": "8ea883a6910270e240d9afbb19e788b151bd1561af9843bea88a9ebac23f15c4"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g23_original_0.json",
+      "sha256": "d389b744064ea576c58eebf89b5910daba93d1a72c992ae94f48bc12eec13d65"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g23_original_0.response.json",
+      "sha256": "6ac45034abbf4a2c5b85845e291639ec340268d5a17a338fb532b2d80602616c"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g23_original_1.json",
+      "sha256": "91acb7d948a5ff3c4b93521d17815e1c0f6a371766be409493ea3f706fa414af"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g23_original_1.response.json",
+      "sha256": "e2e085792b63b16ec69ad1ee7bc9aa100428ceb2f88d058dbecde3dbcc99d845"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g23_prefix_0.json",
+      "sha256": "2460c81c18620646fcbb92d4aa1d83c5a0b7d21136cb6ee77055e810ec0d84e7"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g23_prefix_0.response.json",
+      "sha256": "b036425ddacf4cbab237f8d7035214d7f7e52a1af6087ca54b074ec7929cc052"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g23_prefix_1.json",
+      "sha256": "5ebdf59c2f6be7e90b0ac9e8714164a92e7d1b8f3cddbbba870e2b442b7a87d6"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g23_prefix_1.response.json",
+      "sha256": "1f299b7f0f309c5fcb93530ef1229ef74c3ac186191b7c05152a60b983458d2e"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g23_source.json",
+      "sha256": "de3abd93107e26232b87391c476b2020baca2376c49436226bc57c2b5a60b569"
+    },
+    {
+      "path": "logs/user_benefit_20261009/g23_source.response.json",
+      "sha256": "631d0f27d409f1d6752517f2964ca8f80dcd40a6b71dd5b88d924c38410ac801"
+    },
+    {
+      "path": "logs/user_benefit_20261009/interim_audit_latest.log",
+      "sha256": "62efa290a95a4a467e99407f6e6c10beed8cfc02a43c2be898601f6dd74d1d24"
+    },
+    {
+      "path": "logs/user_benefit_20261009/postprocess.log",
+      "sha256": "76e4855ad2bbf5f0e0c48b9e5749b311f04df132a5af7bb6c288343be27c58be"
+    },
+    {
+      "path": "logs/user_benefit_20261009/postprocess_status.json",
+      "sha256": "dc96075990e49798f456568788e257b0100944c85d378222661521b9b3437569"
+    },
+    {
+      "path": "logs/user_benefit_20261009/reboot_recovery.json",
+      "sha256": "16027b308ea5c3342e646eb83e2c023092232e0c01bed5f1df2b002403199f49"
+    },
+    {
+      "path": "logs/user_benefit_20261009/results.json",
+      "sha256": "58e7f6e901fc655c3239bcf96521b713f272d29b3e5f5a0b0b465a4b756eb5ea"
+    },
+    {
+      "path": "logs/user_benefit_20261009/resume_preflight.json",
+      "sha256": "f2f95f347160fdfcc383e1fde7740bf27072b9d53e8e86eea83e513a6a2de235"
+    },
+    {
+      "path": "logs/user_benefit_20261009/status.json",
+      "sha256": "e7ec2095b32132342d42268b1105e7edc4c6da586c42fd9fe0702c6f56ade6a9"
+    },
+    {
+      "path": "paper/arxiv_source_candidate_20261010_confirmed.zip",
+      "sha256": "e7e6abd1ff128472f434a41df21b13f0e7a1c5eb19c21dd684b2986e7df14f90"
+    },
+    {
+      "path": "paper/arxiv_source_candidate_manifest_20261010.json",
+      "sha256": "629272ffa29a84ca7781cf7dba7a64c735a69b4cb18e947f8e04e24edc65fd20"
+    },
+    {
+      "path": "paper/audit_content_preservation_20261010_confirmed.py",
+      "sha256": "51f0f4a649df0d5ea2f27a403a70ebe6be8895040b441fdf99928d6a90de1b96"
+    },
+    {
+      "path": "paper/audit_final_pdf_20261010_confirmed.py",
+      "sha256": "dbbf5afa950f8b70482130895996d36fb2ea6fca70495368745705c23c847dc0"
+    },
+    {
+      "path": "paper/audit_trace_benefit_confirmation_20261010.py",
+      "sha256": "8c73ae1f41dd593cb598429722650bdfbf675d4ce2bbe9833f6f407f810463c0"
+    },
+    {
+      "path": "paper/audit_user_benefit_20261009.py",
+      "sha256": "dcca2b4accad6fa2499bd20653d93751ba3277c5b08af8ef905fd47583e50d24"
+    },
+    {
+      "path": "paper/build_submission_bundle_20261010_confirmed.py",
+      "sha256": "5b4dfadb835d3f2317afa56e017ef974cda4432e8971033bed40168ed8e5210c"
+    },
+    {
+      "path": "paper/check_confirmed_claims_20261010.py",
+      "sha256": "18e6ac506c4bf1edc1b68e7cc6af82fd24d8dcb6555c7b6c9770b185a2aae41c"
+    },
+    {
+      "path": "paper/check_final_manuscript_20261010.py",
+      "sha256": "c2ad3f2062905e2dc4128beb444743ad6d559c99551fccc170476e83f9c20c71"
+    },
+    {
+      "path": "paper/CONFIRMATION_EVIDENCE_REVIEW_20261010.md",
+      "sha256": "d76615a3dc3c9c974c51fd7102aee1eb6373d8770497412d813cfab5b15c6d8a"
+    },
+    {
+      "path": "paper/evidence_trace_benefit_confirmation_20261010/graph_means.csv",
+      "sha256": "5954707d6018598d8e74a76132cc17236ca325be5c32b16309973660ef53642a"
+    },
+    {
+      "path": "paper/evidence_trace_benefit_confirmation_20261010/graph_round_trip_checks.json",
+      "sha256": "725af8b107ffdb83b85b543ae80f72543fbc427a384d98b226cdd949c4c04daf"
+    },
+    {
+      "path": "paper/evidence_trace_benefit_confirmation_20261010/plot_arms.csv",
+      "sha256": "a1850fc725071f909957cf63fa98dcef75f82c44c1d051d7c9363da6f61ea2bf"
+    },
+    {
+      "path": "paper/evidence_trace_benefit_confirmation_20261010/plot_contrasts.csv",
+      "sha256": "3d938e7dcb6b58bd6681ce0643108a0ddabebacd216751cea0ebf6cb15acdad9"
+    },
+    {
+      "path": "paper/evidence_trace_benefit_confirmation_20261010/release_manifest.json",
+      "sha256": "177e9801c5205a1ddaaace5d2df0d1acdc02f59b869be5b6c416749971c8ad67"
+    },
+    {
+      "path": "paper/evidence_trace_benefit_confirmation_20261010/rescored_calls.json",
+      "sha256": "c32961e781d0a8a47c0b344c78b82c712aebe4c558f3d26f850003d376004a9f"
+    },
+    {
+      "path": "paper/evidence_trace_benefit_confirmation_20261010/summary.json",
+      "sha256": "c887a9a8c82b91836e54eff07d7b1516eb399de4cfe8706f49a88a283464c25a"
+    },
+    {
+      "path": "paper/evidence_user_benefit_20261009/graph_means.csv",
+      "sha256": "6c15914445b36492ef7fd769440ac685b0894a720dc5f4040e9647dd7be1a3ae"
+    },
+    {
+      "path": "paper/evidence_user_benefit_20261009/graph_round_trip_checks.json",
+      "sha256": "0a6412c6fb2100583bc5c22e203fa1f37b9e02e30ed39e23cde4a8fae2b59eca"
+    },
+    {
+      "path": "paper/evidence_user_benefit_20261009/plot_arms.csv",
+      "sha256": "21be1559fb6b0f4c4bf7b5b6d0b4e328ac4082ac9565805fa6bfd82b2c665790"
+    },
+    {
+      "path": "paper/evidence_user_benefit_20261009/rescored_calls.json",
+      "sha256": "26a11c480ef00c13c816a03c36a63856e8388d3f4a0795a5616f75434bab1c23"
+    },
+    {
+      "path": "paper/evidence_user_benefit_20261009/summary.json",
+      "sha256": "ac750505ee4576e1f50e4a6ea6b7eaf83408010f8effc06e3abab6e6739fb4b9"
+    },
+    {
+      "path": "paper/figures/trace_benefit_confirmation_20261010/confirmation.pdf",
+      "sha256": "4d7baf6f05313e8411854aa93f62a6ab651342ed5aed114b083a6ce2b83f1410"
+    },
+    {
+      "path": "paper/figures/trace_benefit_confirmation_20261010/confirmation.png",
+      "sha256": "bd507bd4200d31709fee211266084d898127c9078a6f9d7f9ff231f41c448176"
+    },
+    {
+      "path": "paper/figures/trace_benefit_confirmation_20261010/PROVENANCE.txt",
+      "sha256": "4b2b569e2cdf0de3e82ef4eb63995091914ece3cf316f01e1abf2547e905ac72"
+    },
+    {
+      "path": "paper/figures/user_benefit_20261009/PROVENANCE.txt",
+      "sha256": "39a5d4665802c5d8e4c61df604f287e892fce4e7340caac2d0515bafd68a9abe"
+    },
+    {
+      "path": "paper/figures/user_benefit_20261009/user_benefit.pdf",
+      "sha256": "1ae8dfadfaf69f5558e058c4464395fbf37fe7356d96c40cc0cf423231f7914c"
+    },
+    {
+      "path": "paper/figures/user_benefit_20261009/user_benefit.png",
+      "sha256": "8f26b260d40f297e71ac3c0c452cadad2ad3b6876081e717378bfae4039bb9b5"
+    },
+    {
+      "path": "paper/FINAL_REVIEW_20261010.md",
+      "sha256": "ba33e02167f933759b0b7e1dfc39938b7f20b81d93c015ae562201316d5ec8bc"
+    },
+    {
+      "path": "paper/main.pdf",
+      "sha256": "0a7beaa886f5a91406e8e27c7d8f51b1fd0331be11c42294cfa53db010713224"
+    },
+    {
+      "path": "paper/main.tex",
+      "sha256": "1b3068f887b5cd0a6e7ce298f14a4db033882800b2ccf3e75dbc275076618d0c"
+    },
+    {
+      "path": "paper/migration_primary_body.tex",
+      "sha256": "403dc762e72ee9549070a7718473992c88bd4142d63b01f262752d8e70648e7c"
+    },
+    {
+      "path": "paper/plot_trace_benefit_confirmation_20261010.R",
+      "sha256": "84fd745249d5ee621a047e8ab60e92c93276ec1f8c1854a42953e399db12aa7d"
+    },
+    {
+      "path": "paper/plot_user_benefit_20261009.R",
+      "sha256": "69c1175b45c8e48ac8be44ac444c080fdb9956ce1e5ef03ab8adb55dbbc289a0"
+    },
+    {
+      "path": "paper/revision_evidence_20261010/before_integration/main.pdf",
+      "sha256": "7843ba36b473e306181ea0fa66f1d6937ed00d834954e3e639f671396929512e"
+    },
+    {
+      "path": "paper/revision_evidence_20261010/before_integration/main.tex",
+      "sha256": "3cd196141a95ce206d31f722beefb911a6a88670e75f7586729caae6e708ecdb"
+    },
+    {
+      "path": "paper/revision_evidence_20261010/before_integration/migration_primary_body.tex",
+      "sha256": "5da778c5b0bc8370803e29f2497e84e9e8d5ef5c7d42bf6d8dad5e62c5259d43"
+    },
+    {
+      "path": "paper/revision_evidence_20261010/confirmed_claims_and_historical_preservation.json",
+      "sha256": "46cf13ee2e8908ab914f54ec0e3d97287266839e5a0f2d15342d2bfb6062b092"
+    },
+    {
+      "path": "paper/revision_evidence_20261010/content_preservation_audit.json",
+      "sha256": "fcb66d03a6fb6ce1cabe6960ddd4ebe735802505f5547f6febc89105c04e463b"
+    },
+    {
+      "path": "paper/revision_evidence_20261010/final_numeric_and_dependency_checks.json",
+      "sha256": "3272692c9855e24daea7753f47d560bf43ad07b3470976065e639bd5a2dd8c5e"
+    },
+    {
+      "path": "paper/revision_evidence_20261010/integration_progress.json",
+      "sha256": "51866bf376b923bbe8bd536fc84922db349aacdaa8f7d06c37bbdcb9f9d4612c"
+    },
+    {
+      "path": "paper/revision_evidence_20261010/latest_local_compile.json",
+      "sha256": "ef998992c88937cb9abfd80f2848c7e0d1bf7c409ada5247ca8dbffe4b8b784c"
+    },
+    {
+      "path": "paper/revision_evidence_20261010/reviewed_content_contract_confirmed_extension.json",
+      "sha256": "6e74e204618cc954ddb77d52074678c261570774cb650cb3eb4c905b16e3c8bb"
+    },
+    {
+      "path": "paper/revision_evidence_20261010/reviewed_content_contract_confirmed_extension_v2.json",
+      "sha256": "517ad42140ef7bb914761d62991f5657d997dbbf41870d5cdde16db1cf36817d"
+    },
+    {
+      "path": "paper/revision_evidence_20261010/reviewed_content_contract_confirmed_extension_v3.json",
+      "sha256": "d721b8fc10f80d07855773401f1106cf4c97998a50d11ea35394c148a05417f3"
+    },
+    {
+      "path": "paper/revision_evidence_20261010/table_numeric_presence.json",
+      "sha256": "7a1fd3bd351b9719be266197637cb63156abcb480f659990b0d0f23a357c4218"
+    },
+    {
+      "path": "paper/SUBMISSION_METADATA_20261010.md",
+      "sha256": "01457a2a3fde96ff349c723f70c158d7d3a0ee0de71e2fbb27ab04efed8dcb62"
+    },
+    {
+      "path": "paper/TRACE_BENEFIT_CONFIRMATION_RESULTS_20261010.md",
+      "sha256": "82b1154ef5e3140add623ae2443f071fa276fb2416da2dbd3748087c874b108c"
+    },
+    {
+      "path": "paper/USER_BENEFIT_RESULTS_20261009.md",
+      "sha256": "f1933c38fa18db6ef878ac6cbfe8600ab48b279f5111f68e17c717be90b86f7a"
+    },
+    {
+      "path": "paper/write_trace_benefit_report_20261010.py",
+      "sha256": "e1d0791f4afb3c44b450c4dd02e2b4911c6f4eb9fac0b8d6f0a59f0bcfd4b5c8"
+    },
+    {
+      "path": "paper/write_user_benefit_report_20261009.py",
+      "sha256": "073a4c3526655e96082c91c2a4c148dbd22e147a399e5fe261814e777f8de0bc"
+    },
+    {
+      "path": "protocol_trace_benefit_confirmation_20261010.md",
+      "sha256": "ad9484a55d3942e338baa464941fe96d4cd9a0b696e65e5c005976eda15cf60a"
+    },
+    {
+      "path": "protocol_user_benefit_20261009.md",
+      "sha256": "428ee2adf100e73588570af8e8fd14582e7a4d303fc9456c68d25a55bd255f37"
+    },
+    {
+      "path": "report/benefit_population_20261009.json",
+      "sha256": "af5542b8076e7cf006a124b92c5cae779199e4ded57c52342beb5ca451a0b63d"
+    },
+    {
+      "path": "run_official_graph_five_trace.py",
+      "sha256": "6113fa5ccdfee9cbaa7ee39e653a77252f2b0f43a2ce80f348e3ec0c96aa08b6"
+    },
+    {
+      "path": "run_official_graph_identity_recode.py",
+      "sha256": "f8062d046adbce00eb81fcd74f74373b56dca5629d257d9eab2f0bbb02ea330d"
+    },
+    {
+      "path": "run_official_graph_long_boundary.py",
+      "sha256": "94c70c2b235d5519fda7e6c53f5ca23e2100816e559fbb0d0c392db8a97a25f7"
+    },
+    {
+      "path": "run_official_graph_native_order.py",
+      "sha256": "7519608fab594695231687c3d78324d5ccfe042180c6204ff296ce66bdee34ed"
+    },
+    {
+      "path": "run_official_graph_native_probe.py",
+      "sha256": "1e437859c65b0fcb5008635144af17e8e5f101813b5914c773e30fd7508da825"
+    },
+    {
+      "path": "run_trace_benefit_confirmation_20261010.py",
+      "sha256": "ac8d765c8ae8581b12dde97d570b018bd05688f5f418c05ef27d6db6ced54e26"
+    },
+    {
+      "path": "run_user_benefit_20261009.py",
+      "sha256": "1c599d10bb4e0ad0139cd26a4ce2faef62e12bb88572ef923ca192e5580e8de6"
+    }
+  ]
+}

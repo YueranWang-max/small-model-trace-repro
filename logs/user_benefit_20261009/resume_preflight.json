@@ -1,0 +1,24 @@
+{
+  "known_completed": 18,
+  "planned": 168,
+  "remaining": 150,
+  "ambiguous_transmissions": [],
+  "known_raw_and_payload_hashes_verified": true,
+  "inference_allowed": true,
+  "mode": "device_and_ledger_check",
+  "resume_rule": "Read completed ledgers without retransmission; only send remaining planned keys after GPU health and runtime identity pass.",
+  "devices": [
+    {
+      "Name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+      "Status": "OK",
+      "ConfigManagerErrorCode": 0
+    },
+    {
+      "Name": "Intel(R) UHD Graphics",
+      "Status": "OK",
+      "ConfigManagerErrorCode": 0
+    }
+  ],
+  "telemetry_available": true,
+  "telemetry": "153, 0, 57"
+}

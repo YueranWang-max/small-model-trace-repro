@@ -1,0 +1,27 @@
+[
+  {
+    "path": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\figures\\origin_native_final_20261014\\method_network\\source_00_graph_geometry.csv",
+    "sha256": "9a1768923e92e17c241026560c580f4cd8df16dfcb9998ea38bc3e33e2e3ef06",
+    "copy": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\figures\\polished_three_20261015\\network\\source_00_graph_geometry.csv"
+  },
+  {
+    "path": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\figures\\origin_native_final_20261014\\method_network\\source_01_complete_graph_edges.csv",
+    "sha256": "21ed4127a3b2317f30bb7e8a35d21df04f55b6e71701430f40999096a44a3e42",
+    "copy": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\figures\\polished_three_20261015\\network\\source_01_complete_graph_edges.csv"
+  },
+  {
+    "path": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\evidence_trace_benefit_confirmation_20261010\\graph_means.csv",
+    "sha256": "5954707d6018598d8e74a76132cc17236ca325be5c32b16309973660ef53642a",
+    "copy": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\figures\\polished_three_20261015\\confirmation\\graph_means.csv"
+  },
+  {
+    "path": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\evidence_trace_benefit_confirmation_20261010\\plot_arms.csv",
+    "sha256": "a1850fc725071f909957cf63fa98dcef75f82c44c1d051d7c9363da6f61ea2bf",
+    "copy": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\figures\\polished_three_20261015\\confirmation\\plot_arms.csv"
+  },
+  {
+    "path": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\evidence_trace_benefit_confirmation_20261010\\plot_contrasts.csv",
+    "sha256": "3d938e7dcb6b58bd6681ce0643108a0ddabebacd216751cea0ebf6cb15acdad9",
+    "copy": "D:\\project\\tangjie\\trace_as_state_repro\\paper\\figures\\polished_three_20261015\\confirmation\\plot_contrasts.csv"
+  }
+]

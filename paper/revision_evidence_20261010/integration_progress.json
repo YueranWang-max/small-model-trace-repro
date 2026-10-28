@@ -1,0 +1,23 @@
+{
+  "updated_unix": 1791571294.9865272,
+  "source_integrated": true,
+  "title": "Improving Local Small-Model Graph Reasoning: Compact Inputs and Reused Traces",
+  "historical_figures_retained": 9,
+  "new_R_figures": 2,
+  "total_figures": 11,
+  "tables": 8,
+  "pages": 28,
+  "all_44_fonts_embedded": true,
+  "builtin_compile": "environment_failure",
+  "external_compile": "passed",
+  "pdf_sha256": "309bd172f39a11544535ba81f1d296e99dc1134c5cf4bc10dc6c9dc0b581a69b",
+  "content_contract": "reviewed_content_contract_confirmed_extension_v2.json",
+  "pending": [
+    "dedicated new-study numerical-claim audit",
+    "historical results/figure/caption preservation comparison",
+    "refresh evidence manifest after R label correction",
+    "dated source ZIP and evidence package",
+    "final scientific/editorial review and submission metadata"
+  ],
+  "submission_done": false
+}

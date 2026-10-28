@@ -1,0 +1,1429 @@
+{
+  "dependencies": {
+    "run_official_graph_paired4b_20261006.py": "9968724b1d05a2c6d4f6c0d7924bd621fac650af29b5470233a05693b93be8b1",
+    "protocol_official_graph_paired4b_20261006.md": "5a4b48824d933dd7e010e46b3ffed9e22fa364830f19068f22b913db752caea2",
+    "run_official_graph_native_probe.py": "1e437859c65b0fcb5008635144af17e8e5f101813b5914c773e30fd7508da825",
+    "run_official_graph_five_trace.py": "6113fa5ccdfee9cbaa7ee39e653a77252f2b0f43a2ce80f348e3ec0c96aa08b6",
+    "run_official_graph_native_order.py": "7519608fab594695231687c3d78324d5ccfe042180c6204ff296ce66bdee34ed",
+    "run_official_graph_sampling_control.py": "5823e238897ce219b8d5b2f1c7f56260e8da6c3137283d1acaa360badc977e3e",
+    "run_official_graph_long_boundary.py": "94c70c2b235d5519fda7e6c53f5ca23e2100816e559fbb0d0c392db8a97a25f7",
+    "data/qwen3_tokenizer_official/tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "logs/official_graph_confirmatory_20261006/frozen.json": "7676e721593ae6c0f1b2e0ec097d878940f29d3ffa2ad1125d9eb5057042d97b",
+    "logs\\official_graph_confirmatory_20261006\\frozen.json": "7676e721593ae6c0f1b2e0ec097d878940f29d3ffa2ad1125d9eb5057042d97b"
+  },
+  "data_sha256": "54036036c91d8e04bb2a5fcd9e36f8e2a852cacece5dfc2b1ee40e3a6182b516",
+  "selected": [
+    {
+      "row_index": 424,
+      "graph_head_sha256": "6dd6df71dd14c7bc64d1d74f57c3870255e87b75d9d45863f750e1bd993ceaf4",
+      "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> d3d9446802\ncfcd208495 -> c81e728d9d\ncfcd208495 -> 45c48cce2e\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> d3d9446802\nc4ca4238a0 -> 8f14e45fce\nc81e728d9d -> d3d9446802\nc81e728d9d -> c9f0f895fb\nc81e728d9d -> 1679091c5a\neccbc87e4b -> 1679091c5a\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> e4da3b7fbb\na87ff679a2 -> e4da3b7fbb\na87ff679a2 -> aab3238922\na87ff679a2 -> 45c48cce2e\ne4da3b7fbb -> c51ce410c1\ne4da3b7fbb -> c9f0f895fb\ne4da3b7fbb -> cfcd208495\n1679091c5a -> eccbc87e4b\n1679091c5a -> c81e728d9d\n1679091c5a -> a87ff679a2\n8f14e45fce -> c9f0f895fb\n8f14e45fce -> c9f0f895fb\n8f14e45fce -> 45c48cce2e\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> 1679091c5a\nc9f0f895fb -> c4ca4238a0\n45c48cce2e -> cfcd208495\n45c48cce2e -> aab3238922\n45c48cce2e -> eccbc87e4b\nd3d9446802 -> c81e728d9d\nd3d9446802 -> e4da3b7fbb\nd3d9446802 -> cfcd208495\n6512bd43d9 -> 1679091c5a\n6512bd43d9 -> cfcd208495\n6512bd43d9 -> aab3238922\nc20ad4d76f -> c4ca4238a0\nc20ad4d76f -> c81e728d9d\nc20ad4d76f -> cfcd208495\nc51ce410c1 -> d3d9446802\nc51ce410c1 -> d3d9446802\nc51ce410c1 -> c4ca4238a0\naab3238922 -> cfcd208495\naab3238922 -> 45c48cce2e\naab3238922 -> c51ce410c1\n\n\nOperation:\nPerform a BFS from node 1679091c5a and return only the nodes at exactly depth 5 (not nodes at intermediate depths).\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+      "answer_nodes": [],
+      "prompt_chars": 2675,
+      "problem_type": "bfs",
+      "date_added": "04-12-2025"
+    },
+    {
+      "row_index": 417,
+      "graph_head_sha256": "456697eac02525b4fc26a767c37b544019f272de02aaf789b4e7d59ea8cb7f65",
+      "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> 1679091c5a\ncfcd208495 -> c81e728d9d\ncfcd208495 -> c81e728d9d\nc4ca4238a0 -> c4ca4238a0\nc4ca4238a0 -> d3d9446802\nc4ca4238a0 -> cfcd208495\nc81e728d9d -> c51ce410c1\nc81e728d9d -> 8f14e45fce\nc81e728d9d -> c20ad4d76f\neccbc87e4b -> 1679091c5a\neccbc87e4b -> c51ce410c1\neccbc87e4b -> c4ca4238a0\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> c81e728d9d\ne4da3b7fbb -> c51ce410c1\ne4da3b7fbb -> d3d9446802\ne4da3b7fbb -> 8f14e45fce\n1679091c5a -> 6512bd43d9\n1679091c5a -> e4da3b7fbb\n1679091c5a -> e4da3b7fbb\n8f14e45fce -> a87ff679a2\n8f14e45fce -> c9f0f895fb\n8f14e45fce -> c20ad4d76f\nc9f0f895fb -> c51ce410c1\nc9f0f895fb -> c9f0f895fb\nc9f0f895fb -> c4ca4238a0\n45c48cce2e -> 6512bd43d9\n45c48cce2e -> 1679091c5a\n45c48cce2e -> e4da3b7fbb\nd3d9446802 -> c81e728d9d\nd3d9446802 -> aab3238922\nd3d9446802 -> 6512bd43d9\n6512bd43d9 -> c81e728d9d\n6512bd43d9 -> aab3238922\n6512bd43d9 -> 45c48cce2e\nc20ad4d76f -> eccbc87e4b\nc20ad4d76f -> c81e728d9d\nc20ad4d76f -> d3d9446802\nc51ce410c1 -> eccbc87e4b\nc51ce410c1 -> 6512bd43d9\nc51ce410c1 -> 45c48cce2e\naab3238922 -> c4ca4238a0\naab3238922 -> aab3238922\naab3238922 -> 45c48cce2e\n\n\nOperation:\nPerform a BFS from node c9f0f895fb and return only the nodes at exactly depth 1 (not nodes at intermediate depths).\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+      "answer_nodes": [
+        "c4ca4238a0",
+        "c51ce410c1"
+      ],
+      "prompt_chars": 2675,
+      "problem_type": "bfs",
+      "date_added": "04-12-2025"
+    },
+    {
+      "row_index": 32,
+      "graph_head_sha256": "5115a86c6d5652009d53214c21cca60be630615f3c29b41816fb6849c2101f7b",
+      "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> aab3238922\ncfcd208495 -> a87ff679a2\ncfcd208495 -> 45c48cce2e\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> c51ce410c1\nc4ca4238a0 -> c51ce410c1\nc81e728d9d -> e4da3b7fbb\nc81e728d9d -> c20ad4d76f\nc81e728d9d -> c51ce410c1\neccbc87e4b -> c4ca4238a0\neccbc87e4b -> c51ce410c1\neccbc87e4b -> e4da3b7fbb\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> aab3238922\na87ff679a2 -> c20ad4d76f\ne4da3b7fbb -> c20ad4d76f\ne4da3b7fbb -> 1679091c5a\ne4da3b7fbb -> eccbc87e4b\n1679091c5a -> d3d9446802\n1679091c5a -> c20ad4d76f\n1679091c5a -> c9f0f895fb\n8f14e45fce -> c81e728d9d\n8f14e45fce -> cfcd208495\n8f14e45fce -> c81e728d9d\nc9f0f895fb -> aab3238922\nc9f0f895fb -> d3d9446802\nc9f0f895fb -> 6512bd43d9\n45c48cce2e -> c4ca4238a0\n45c48cce2e -> c20ad4d76f\n45c48cce2e -> d3d9446802\nd3d9446802 -> a87ff679a2\nd3d9446802 -> c51ce410c1\nd3d9446802 -> 6512bd43d9\n6512bd43d9 -> 45c48cce2e\n6512bd43d9 -> c81e728d9d\n6512bd43d9 -> cfcd208495\nc20ad4d76f -> c9f0f895fb\nc20ad4d76f -> a87ff679a2\nc20ad4d76f -> 6512bd43d9\nc51ce410c1 -> e4da3b7fbb\nc51ce410c1 -> d3d9446802\nc51ce410c1 -> c9f0f895fb\naab3238922 -> cfcd208495\naab3238922 -> 8f14e45fce\naab3238922 -> 8f14e45fce\n\n\nOperation:\nFind the parents of node c9f0f895fb.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+      "answer_nodes": [
+        "c20ad4d76f",
+        "1679091c5a",
+        "c51ce410c1"
+      ],
+      "prompt_chars": 2663,
+      "problem_type": "parents",
+      "date_added": "04-12-2025"
+    },
+    {
+      "row_index": 31,
+      "graph_head_sha256": "48d9846becd69fece61153984e7508c1c78c1c732816029b852cf6d56908acac",
+      "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> c81e728d9d\ncfcd208495 -> c9f0f895fb\ncfcd208495 -> a87ff679a2\ncfcd208495 -> eccbc87e4b\nc4ca4238a0 -> 45c48cce2e\nc4ca4238a0 -> c4ca4238a0\nc4ca4238a0 -> cfcd208495\nc4ca4238a0 -> 8f14e45fce\nc81e728d9d -> 45c48cce2e\nc81e728d9d -> 45c48cce2e\nc81e728d9d -> cfcd208495\nc81e728d9d -> 1679091c5a\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> 1679091c5a\neccbc87e4b -> d3d9446802\neccbc87e4b -> a87ff679a2\na87ff679a2 -> c81e728d9d\na87ff679a2 -> c81e728d9d\na87ff679a2 -> c9f0f895fb\na87ff679a2 -> 45c48cce2e\ne4da3b7fbb -> e4da3b7fbb\ne4da3b7fbb -> c4ca4238a0\ne4da3b7fbb -> e4da3b7fbb\ne4da3b7fbb -> c81e728d9d\n1679091c5a -> e4da3b7fbb\n1679091c5a -> a87ff679a2\n1679091c5a -> c4ca4238a0\n1679091c5a -> e4da3b7fbb\n8f14e45fce -> d3d9446802\n8f14e45fce -> c4ca4238a0\n8f14e45fce -> 1679091c5a\n8f14e45fce -> c9f0f895fb\nc9f0f895fb -> c81e728d9d\nc9f0f895fb -> cfcd208495\nc9f0f895fb -> d3d9446802\nc9f0f895fb -> d3d9446802\n45c48cce2e -> d3d9446802\n45c48cce2e -> eccbc87e4b\n45c48cce2e -> 45c48cce2e\n45c48cce2e -> cfcd208495\nd3d9446802 -> c4ca4238a0\nd3d9446802 -> 1679091c5a\nd3d9446802 -> d3d9446802\nd3d9446802 -> 1679091c5a\n\n\nOperation:\nFind the parents of node e4da3b7fbb.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+      "answer_nodes": [
+        "1679091c5a"
+      ],
+      "prompt_chars": 2638,
+      "problem_type": "parents",
+      "date_added": "02-27-2026"
+    },
+    {
+      "row_index": 420,
+      "graph_head_sha256": "d36169b2a71d4c7854c15bd3d76b27880773ac9bdf51c16424544ac5bb3c16aa",
+      "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> 45c48cce2e\ncfcd208495 -> 1679091c5a\ncfcd208495 -> c81e728d9d\ncfcd208495 -> d3d9446802\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> d3d9446802\nc4ca4238a0 -> 45c48cce2e\nc4ca4238a0 -> 8f14e45fce\nc81e728d9d -> 1679091c5a\nc81e728d9d -> eccbc87e4b\nc81e728d9d -> 45c48cce2e\nc81e728d9d -> eccbc87e4b\neccbc87e4b -> eccbc87e4b\neccbc87e4b -> cfcd208495\neccbc87e4b -> c81e728d9d\neccbc87e4b -> 1679091c5a\na87ff679a2 -> 1679091c5a\na87ff679a2 -> 1679091c5a\na87ff679a2 -> 1679091c5a\na87ff679a2 -> e4da3b7fbb\ne4da3b7fbb -> d3d9446802\ne4da3b7fbb -> a87ff679a2\ne4da3b7fbb -> d3d9446802\ne4da3b7fbb -> a87ff679a2\n1679091c5a -> d3d9446802\n1679091c5a -> 45c48cce2e\n1679091c5a -> eccbc87e4b\n1679091c5a -> e4da3b7fbb\n8f14e45fce -> 8f14e45fce\n8f14e45fce -> cfcd208495\n8f14e45fce -> e4da3b7fbb\n8f14e45fce -> cfcd208495\nc9f0f895fb -> e4da3b7fbb\nc9f0f895fb -> c4ca4238a0\nc9f0f895fb -> 1679091c5a\nc9f0f895fb -> 45c48cce2e\n45c48cce2e -> 45c48cce2e\n45c48cce2e -> 8f14e45fce\n45c48cce2e -> cfcd208495\n45c48cce2e -> c81e728d9d\nd3d9446802 -> d3d9446802\nd3d9446802 -> eccbc87e4b\nd3d9446802 -> c81e728d9d\nd3d9446802 -> c4ca4238a0\n\n\nOperation:\nPerform a BFS from node 45c48cce2e and return only the nodes at exactly depth 1 (not nodes at intermediate depths).\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+      "answer_nodes": [
+        "c81e728d9d",
+        "cfcd208495",
+        "8f14e45fce"
+      ],
+      "prompt_chars": 2650,
+      "problem_type": "bfs",
+      "date_added": "04-12-2025"
+    },
+    {
+      "row_index": 36,
+      "graph_head_sha256": "94d732f0d860e661eaf8539697c0b6c5d0aa8b4dcb2a00a63b84a8c1fc12e275",
+      "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> eccbc87e4b\ncfcd208495 -> 1679091c5a\ncfcd208495 -> c4ca4238a0\ncfcd208495 -> c81e728d9d\ncfcd208495 -> c9f0f895fb\nc4ca4238a0 -> 8f14e45fce\nc4ca4238a0 -> 8f14e45fce\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> cfcd208495\nc4ca4238a0 -> 8f14e45fce\nc81e728d9d -> eccbc87e4b\nc81e728d9d -> eccbc87e4b\nc81e728d9d -> a87ff679a2\nc81e728d9d -> a87ff679a2\nc81e728d9d -> cfcd208495\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> cfcd208495\neccbc87e4b -> c81e728d9d\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> c81e728d9d\na87ff679a2 -> c81e728d9d\na87ff679a2 -> 1679091c5a\na87ff679a2 -> 1679091c5a\na87ff679a2 -> eccbc87e4b\na87ff679a2 -> 1679091c5a\ne4da3b7fbb -> cfcd208495\ne4da3b7fbb -> 8f14e45fce\ne4da3b7fbb -> c4ca4238a0\ne4da3b7fbb -> 1679091c5a\ne4da3b7fbb -> c81e728d9d\n1679091c5a -> 8f14e45fce\n1679091c5a -> c81e728d9d\n1679091c5a -> c4ca4238a0\n1679091c5a -> 1679091c5a\n1679091c5a -> 1679091c5a\n8f14e45fce -> 1679091c5a\n8f14e45fce -> c81e728d9d\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> 8f14e45fce\n8f14e45fce -> a87ff679a2\nc9f0f895fb -> c4ca4238a0\nc9f0f895fb -> c4ca4238a0\nc9f0f895fb -> 1679091c5a\nc9f0f895fb -> 8f14e45fce\nc9f0f895fb -> c4ca4238a0\n\n\nOperation:\nFind the parents of node c9f0f895fb.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+      "answer_nodes": [
+        "cfcd208495",
+        "eccbc87e4b"
+      ],
+      "prompt_chars": 2663,
+      "problem_type": "parents",
+      "date_added": "04-12-2025"
+    },
+    {
+      "row_index": 423,
+      "graph_head_sha256": "d84d97d1322c58477f3ccae234b5a671a62f4a330992fbb3f244431ecbd22a1b",
+      "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> c4ca4238a0\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> cfcd208495\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> eccbc87e4b\nc4ca4238a0 -> 45c48cce2e\nc4ca4238a0 -> c4ca4238a0\nc81e728d9d -> c81e728d9d\nc81e728d9d -> c9f0f895fb\nc81e728d9d -> e4da3b7fbb\nc81e728d9d -> 1679091c5a\neccbc87e4b -> 1679091c5a\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> a87ff679a2\neccbc87e4b -> c81e728d9d\na87ff679a2 -> a87ff679a2\na87ff679a2 -> a87ff679a2\na87ff679a2 -> 1679091c5a\na87ff679a2 -> a87ff679a2\ne4da3b7fbb -> 45c48cce2e\ne4da3b7fbb -> c81e728d9d\ne4da3b7fbb -> c81e728d9d\ne4da3b7fbb -> c9f0f895fb\n1679091c5a -> d3d9446802\n1679091c5a -> c9f0f895fb\n1679091c5a -> e4da3b7fbb\n1679091c5a -> c4ca4238a0\n8f14e45fce -> e4da3b7fbb\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> e4da3b7fbb\n8f14e45fce -> 1679091c5a\nc9f0f895fb -> d3d9446802\nc9f0f895fb -> 45c48cce2e\nc9f0f895fb -> c81e728d9d\nc9f0f895fb -> cfcd208495\n45c48cce2e -> c81e728d9d\n45c48cce2e -> e4da3b7fbb\n45c48cce2e -> cfcd208495\n45c48cce2e -> e4da3b7fbb\nd3d9446802 -> eccbc87e4b\nd3d9446802 -> 1679091c5a\nd3d9446802 -> 45c48cce2e\nd3d9446802 -> 8f14e45fce\n\n\nOperation:\nPerform a BFS from node 45c48cce2e and return only the nodes at exactly depth 2 (not nodes at intermediate depths).\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+      "answer_nodes": [
+        "1679091c5a",
+        "c4ca4238a0",
+        "c9f0f895fb",
+        "8f14e45fce"
+      ],
+      "prompt_chars": 2650,
+      "problem_type": "bfs",
+      "date_added": "04-12-2025"
+    },
+    {
+      "row_index": 421,
+      "graph_head_sha256": "d9dfe2b7155fd1c402b66024132fd5ece8b39e9ceb50664d030380cecb99b2f8",
+      "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> eccbc87e4b\ncfcd208495 -> a87ff679a2\ncfcd208495 -> cfcd208495\ncfcd208495 -> c81e728d9d\ncfcd208495 -> eccbc87e4b\nc4ca4238a0 -> 8f14e45fce\nc4ca4238a0 -> 8f14e45fce\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> cfcd208495\nc4ca4238a0 -> c81e728d9d\nc81e728d9d -> c9f0f895fb\nc81e728d9d -> a87ff679a2\nc81e728d9d -> c81e728d9d\nc81e728d9d -> 8f14e45fce\nc81e728d9d -> 8f14e45fce\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> 1679091c5a\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> a87ff679a2\na87ff679a2 -> eccbc87e4b\na87ff679a2 -> c4ca4238a0\na87ff679a2 -> cfcd208495\na87ff679a2 -> 1679091c5a\na87ff679a2 -> eccbc87e4b\ne4da3b7fbb -> e4da3b7fbb\ne4da3b7fbb -> 1679091c5a\ne4da3b7fbb -> c81e728d9d\ne4da3b7fbb -> 8f14e45fce\ne4da3b7fbb -> 8f14e45fce\n1679091c5a -> 8f14e45fce\n1679091c5a -> 8f14e45fce\n1679091c5a -> 1679091c5a\n1679091c5a -> c4ca4238a0\n1679091c5a -> c4ca4238a0\n8f14e45fce -> c4ca4238a0\n8f14e45fce -> a87ff679a2\n8f14e45fce -> c9f0f895fb\n8f14e45fce -> a87ff679a2\n8f14e45fce -> c4ca4238a0\nc9f0f895fb -> e4da3b7fbb\nc9f0f895fb -> 8f14e45fce\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> cfcd208495\nc9f0f895fb -> eccbc87e4b\n\n\nOperation:\nPerform a BFS from node 8f14e45fce and return only the nodes at exactly depth 2 (not nodes at intermediate depths).\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+      "answer_nodes": [
+        "c81e728d9d",
+        "cfcd208495",
+        "e4da3b7fbb",
+        "1679091c5a",
+        "eccbc87e4b"
+      ],
+      "prompt_chars": 2675,
+      "problem_type": "bfs",
+      "date_added": "04-12-2025"
+    },
+    {
+      "row_index": 21,
+      "graph_head_sha256": "a828c3315c2983ca4e914bfcd9f8a2b383e4ac65140547e9b354dc361277fd3f",
+      "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> e4da3b7fbb\ncfcd208495 -> cfcd208495\ncfcd208495 -> c81e728d9d\ncfcd208495 -> c4ca4238a0\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> a87ff679a2\nc4ca4238a0 -> 8f14e45fce\nc81e728d9d -> cfcd208495\nc81e728d9d -> 1679091c5a\nc81e728d9d -> c81e728d9d\nc81e728d9d -> 1679091c5a\neccbc87e4b -> a87ff679a2\neccbc87e4b -> a87ff679a2\neccbc87e4b -> cfcd208495\neccbc87e4b -> c4ca4238a0\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> 1679091c5a\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> 45c48cce2e\ne4da3b7fbb -> 1679091c5a\ne4da3b7fbb -> eccbc87e4b\ne4da3b7fbb -> e4da3b7fbb\ne4da3b7fbb -> 8f14e45fce\n1679091c5a -> c4ca4238a0\n1679091c5a -> 1679091c5a\n1679091c5a -> eccbc87e4b\n1679091c5a -> 45c48cce2e\n8f14e45fce -> d3d9446802\n8f14e45fce -> d3d9446802\n8f14e45fce -> c81e728d9d\n8f14e45fce -> eccbc87e4b\nc9f0f895fb -> c4ca4238a0\nc9f0f895fb -> c4ca4238a0\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> a87ff679a2\n45c48cce2e -> 8f14e45fce\n45c48cce2e -> 45c48cce2e\n45c48cce2e -> 1679091c5a\n45c48cce2e -> e4da3b7fbb\nd3d9446802 -> 8f14e45fce\nd3d9446802 -> d3d9446802\nd3d9446802 -> c81e728d9d\nd3d9446802 -> a87ff679a2\n\n\nOperation:\nFind the parents of node c81e728d9d.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+      "answer_nodes": [
+        "8f14e45fce",
+        "cfcd208495",
+        "d3d9446802"
+      ],
+      "prompt_chars": 2638,
+      "problem_type": "parents",
+      "date_added": "02-27-2026"
+    },
+    {
+      "row_index": 17,
+      "graph_head_sha256": "7627e5c51c7403a0d0306b69894a16ba4b788c1aee604a109c2256ac0d4abb6a",
+      "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> c9f0f895fb\ncfcd208495 -> c9f0f895fb\ncfcd208495 -> 45c48cce2e\ncfcd208495 -> 1679091c5a\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> a87ff679a2\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> a87ff679a2\nc81e728d9d -> 1679091c5a\nc81e728d9d -> d3d9446802\nc81e728d9d -> 45c48cce2e\nc81e728d9d -> a87ff679a2\neccbc87e4b -> c81e728d9d\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> cfcd208495\neccbc87e4b -> 45c48cce2e\na87ff679a2 -> 1679091c5a\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> c4ca4238a0\na87ff679a2 -> c4ca4238a0\ne4da3b7fbb -> cfcd208495\ne4da3b7fbb -> cfcd208495\ne4da3b7fbb -> eccbc87e4b\ne4da3b7fbb -> 45c48cce2e\n1679091c5a -> 8f14e45fce\n1679091c5a -> 1679091c5a\n1679091c5a -> c4ca4238a0\n1679091c5a -> c4ca4238a0\n8f14e45fce -> 1679091c5a\n8f14e45fce -> cfcd208495\n8f14e45fce -> cfcd208495\n8f14e45fce -> a87ff679a2\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> c9f0f895fb\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> d3d9446802\n45c48cce2e -> c81e728d9d\n45c48cce2e -> c9f0f895fb\n45c48cce2e -> 45c48cce2e\n45c48cce2e -> 45c48cce2e\nd3d9446802 -> e4da3b7fbb\nd3d9446802 -> 45c48cce2e\nd3d9446802 -> c9f0f895fb\nd3d9446802 -> e4da3b7fbb\n\n\nOperation:\nFind the parents of node d3d9446802.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+      "answer_nodes": [
+        "c81e728d9d",
+        "c9f0f895fb"
+      ],
+      "prompt_chars": 2638,
+      "problem_type": "parents",
+      "date_added": "04-12-2025"
+    },
+    {
+      "row_index": 42,
+      "graph_head_sha256": "d161f50faa1aaf57a3140aa40703f24775c114aafb08aad425269b03a75c701e",
+      "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> cfcd208495\ncfcd208495 -> c4ca4238a0\ncfcd208495 -> eccbc87e4b\ncfcd208495 -> e4da3b7fbb\nc4ca4238a0 -> eccbc87e4b\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> 8f14e45fce\nc4ca4238a0 -> cfcd208495\nc81e728d9d -> c4ca4238a0\nc81e728d9d -> e4da3b7fbb\nc81e728d9d -> c81e728d9d\nc81e728d9d -> a87ff679a2\nc81e728d9d -> 8f14e45fce\neccbc87e4b -> c4ca4238a0\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> c4ca4238a0\neccbc87e4b -> c81e728d9d\neccbc87e4b -> a87ff679a2\na87ff679a2 -> c9f0f895fb\na87ff679a2 -> 1679091c5a\na87ff679a2 -> e4da3b7fbb\na87ff679a2 -> a87ff679a2\na87ff679a2 -> c81e728d9d\ne4da3b7fbb -> e4da3b7fbb\ne4da3b7fbb -> eccbc87e4b\ne4da3b7fbb -> 8f14e45fce\ne4da3b7fbb -> cfcd208495\ne4da3b7fbb -> c81e728d9d\n1679091c5a -> cfcd208495\n1679091c5a -> eccbc87e4b\n1679091c5a -> a87ff679a2\n1679091c5a -> a87ff679a2\n1679091c5a -> 8f14e45fce\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> c4ca4238a0\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> 1679091c5a\n8f14e45fce -> eccbc87e4b\nc9f0f895fb -> cfcd208495\nc9f0f895fb -> c81e728d9d\nc9f0f895fb -> 1679091c5a\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> 8f14e45fce\n\n\nOperation:\nFind the parents of node 8f14e45fce.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+      "answer_nodes": [
+        "c81e728d9d",
+        "cfcd208495",
+        "e4da3b7fbb",
+        "1679091c5a",
+        "c4ca4238a0",
+        "c9f0f895fb"
+      ],
+      "prompt_chars": 2663,
+      "problem_type": "parents",
+      "date_added": "04-12-2025"
+    },
+    {
+      "row_index": 422,
+      "graph_head_sha256": "140ab3404ad4563b338bbb9eab54742353f0750bb238c8d7814be33f10633415",
+      "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> c81e728d9d\ncfcd208495 -> cfcd208495\ncfcd208495 -> a87ff679a2\ncfcd208495 -> c81e728d9d\nc4ca4238a0 -> eccbc87e4b\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> cfcd208495\nc4ca4238a0 -> cfcd208495\nc4ca4238a0 -> cfcd208495\nc81e728d9d -> a87ff679a2\nc81e728d9d -> e4da3b7fbb\nc81e728d9d -> e4da3b7fbb\nc81e728d9d -> c4ca4238a0\nc81e728d9d -> e4da3b7fbb\neccbc87e4b -> eccbc87e4b\neccbc87e4b -> 8f14e45fce\neccbc87e4b -> c81e728d9d\neccbc87e4b -> 1679091c5a\neccbc87e4b -> a87ff679a2\na87ff679a2 -> a87ff679a2\na87ff679a2 -> eccbc87e4b\na87ff679a2 -> c81e728d9d\na87ff679a2 -> 1679091c5a\na87ff679a2 -> a87ff679a2\ne4da3b7fbb -> a87ff679a2\ne4da3b7fbb -> c81e728d9d\ne4da3b7fbb -> cfcd208495\ne4da3b7fbb -> c4ca4238a0\ne4da3b7fbb -> e4da3b7fbb\n1679091c5a -> 8f14e45fce\n1679091c5a -> 1679091c5a\n1679091c5a -> c81e728d9d\n1679091c5a -> cfcd208495\n1679091c5a -> 1679091c5a\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> 8f14e45fce\n8f14e45fce -> c4ca4238a0\n8f14e45fce -> cfcd208495\n8f14e45fce -> c9f0f895fb\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> 1679091c5a\nc9f0f895fb -> cfcd208495\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> 1679091c5a\n\n\nOperation:\nPerform a BFS from node 1679091c5a and return only the nodes at exactly depth 5 (not nodes at intermediate depths).\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+      "answer_nodes": [],
+      "prompt_chars": 2675,
+      "problem_type": "bfs",
+      "date_added": "04-12-2025"
+    }
+  ],
+  "candidates": {
+    "parents": [
+      {
+        "row_index": 16,
+        "graph_head_sha256": "9125b6c5da725cbbb2353303ed960df763d76818c1ff64aa5b1492cf95a58f1d",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> 1679091c5a\ncfcd208495 -> c81e728d9d\ncfcd208495 -> e4da3b7fbb\ncfcd208495 -> a87ff679a2\ncfcd208495 -> c9f0f895fb\nc4ca4238a0 -> c4ca4238a0\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> 8f14e45fce\nc4ca4238a0 -> 8f14e45fce\nc4ca4238a0 -> e4da3b7fbb\nc81e728d9d -> 8f14e45fce\nc81e728d9d -> cfcd208495\nc81e728d9d -> c4ca4238a0\nc81e728d9d -> a87ff679a2\nc81e728d9d -> c9f0f895fb\neccbc87e4b -> eccbc87e4b\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> cfcd208495\neccbc87e4b -> eccbc87e4b\neccbc87e4b -> c4ca4238a0\na87ff679a2 -> c81e728d9d\na87ff679a2 -> 1679091c5a\na87ff679a2 -> e4da3b7fbb\na87ff679a2 -> e4da3b7fbb\na87ff679a2 -> 1679091c5a\ne4da3b7fbb -> 1679091c5a\ne4da3b7fbb -> cfcd208495\ne4da3b7fbb -> a87ff679a2\ne4da3b7fbb -> a87ff679a2\ne4da3b7fbb -> 8f14e45fce\n1679091c5a -> a87ff679a2\n1679091c5a -> 8f14e45fce\n1679091c5a -> cfcd208495\n1679091c5a -> 1679091c5a\n1679091c5a -> c9f0f895fb\n8f14e45fce -> cfcd208495\n8f14e45fce -> 8f14e45fce\n8f14e45fce -> c4ca4238a0\n8f14e45fce -> c81e728d9d\n8f14e45fce -> a87ff679a2\nc9f0f895fb -> 1679091c5a\nc9f0f895fb -> 1679091c5a\nc9f0f895fb -> c9f0f895fb\nc9f0f895fb -> c9f0f895fb\nc9f0f895fb -> c9f0f895fb\n\n\nOperation:\nFind the parents of node a87ff679a2.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "c81e728d9d",
+          "cfcd208495",
+          "e4da3b7fbb",
+          "1679091c5a",
+          "8f14e45fce"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 17,
+        "graph_head_sha256": "7627e5c51c7403a0d0306b69894a16ba4b788c1aee604a109c2256ac0d4abb6a",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> c9f0f895fb\ncfcd208495 -> c9f0f895fb\ncfcd208495 -> 45c48cce2e\ncfcd208495 -> 1679091c5a\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> a87ff679a2\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> a87ff679a2\nc81e728d9d -> 1679091c5a\nc81e728d9d -> d3d9446802\nc81e728d9d -> 45c48cce2e\nc81e728d9d -> a87ff679a2\neccbc87e4b -> c81e728d9d\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> cfcd208495\neccbc87e4b -> 45c48cce2e\na87ff679a2 -> 1679091c5a\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> c4ca4238a0\na87ff679a2 -> c4ca4238a0\ne4da3b7fbb -> cfcd208495\ne4da3b7fbb -> cfcd208495\ne4da3b7fbb -> eccbc87e4b\ne4da3b7fbb -> 45c48cce2e\n1679091c5a -> 8f14e45fce\n1679091c5a -> 1679091c5a\n1679091c5a -> c4ca4238a0\n1679091c5a -> c4ca4238a0\n8f14e45fce -> 1679091c5a\n8f14e45fce -> cfcd208495\n8f14e45fce -> cfcd208495\n8f14e45fce -> a87ff679a2\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> c9f0f895fb\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> d3d9446802\n45c48cce2e -> c81e728d9d\n45c48cce2e -> c9f0f895fb\n45c48cce2e -> 45c48cce2e\n45c48cce2e -> 45c48cce2e\nd3d9446802 -> e4da3b7fbb\nd3d9446802 -> 45c48cce2e\nd3d9446802 -> c9f0f895fb\nd3d9446802 -> e4da3b7fbb\n\n\nOperation:\nFind the parents of node d3d9446802.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "c81e728d9d",
+          "c9f0f895fb"
+        ],
+        "prompt_chars": 2638,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 18,
+        "graph_head_sha256": "1b806c471851fad5e5f3a01bb7fee51fa9cdd02efd674d34c72679d923da6ce9",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> d3d9446802\ncfcd208495 -> aab3238922\ncfcd208495 -> c20ad4d76f\nc4ca4238a0 -> a87ff679a2\nc4ca4238a0 -> c81e728d9d\nc4ca4238a0 -> 8f14e45fce\nc81e728d9d -> c51ce410c1\nc81e728d9d -> 45c48cce2e\nc81e728d9d -> c4ca4238a0\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> eccbc87e4b\neccbc87e4b -> c20ad4d76f\na87ff679a2 -> e4da3b7fbb\na87ff679a2 -> 1679091c5a\na87ff679a2 -> e4da3b7fbb\ne4da3b7fbb -> c51ce410c1\ne4da3b7fbb -> aab3238922\ne4da3b7fbb -> c4ca4238a0\n1679091c5a -> 45c48cce2e\n1679091c5a -> cfcd208495\n1679091c5a -> 6512bd43d9\n8f14e45fce -> aab3238922\n8f14e45fce -> 1679091c5a\n8f14e45fce -> cfcd208495\nc9f0f895fb -> c20ad4d76f\nc9f0f895fb -> 45c48cce2e\nc9f0f895fb -> a87ff679a2\n45c48cce2e -> d3d9446802\n45c48cce2e -> 45c48cce2e\n45c48cce2e -> c4ca4238a0\nd3d9446802 -> 6512bd43d9\nd3d9446802 -> c4ca4238a0\nd3d9446802 -> 1679091c5a\n6512bd43d9 -> cfcd208495\n6512bd43d9 -> aab3238922\n6512bd43d9 -> c9f0f895fb\nc20ad4d76f -> aab3238922\nc20ad4d76f -> cfcd208495\nc20ad4d76f -> cfcd208495\nc51ce410c1 -> eccbc87e4b\nc51ce410c1 -> c81e728d9d\nc51ce410c1 -> e4da3b7fbb\naab3238922 -> cfcd208495\naab3238922 -> a87ff679a2\naab3238922 -> 6512bd43d9\n\n\nOperation:\nFind the parents of node eccbc87e4b.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "c51ce410c1"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "02-27-2026"
+      },
+      {
+        "row_index": 19,
+        "graph_head_sha256": "aed9ae06c2afa3ab498b6c5c17b325b463df821f0716f1ef49cf8b1d3794015b",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> e4da3b7fbb\ncfcd208495 -> a87ff679a2\ncfcd208495 -> e4da3b7fbb\ncfcd208495 -> c81e728d9d\nc4ca4238a0 -> a87ff679a2\nc4ca4238a0 -> eccbc87e4b\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> a87ff679a2\nc4ca4238a0 -> a87ff679a2\nc81e728d9d -> c81e728d9d\nc81e728d9d -> cfcd208495\nc81e728d9d -> c9f0f895fb\nc81e728d9d -> eccbc87e4b\nc81e728d9d -> a87ff679a2\neccbc87e4b -> a87ff679a2\neccbc87e4b -> eccbc87e4b\neccbc87e4b -> eccbc87e4b\neccbc87e4b -> c4ca4238a0\neccbc87e4b -> c4ca4238a0\na87ff679a2 -> c4ca4238a0\na87ff679a2 -> cfcd208495\na87ff679a2 -> 1679091c5a\na87ff679a2 -> cfcd208495\na87ff679a2 -> 1679091c5a\ne4da3b7fbb -> e4da3b7fbb\ne4da3b7fbb -> c81e728d9d\ne4da3b7fbb -> 1679091c5a\ne4da3b7fbb -> a87ff679a2\ne4da3b7fbb -> 8f14e45fce\n1679091c5a -> c4ca4238a0\n1679091c5a -> 1679091c5a\n1679091c5a -> cfcd208495\n1679091c5a -> a87ff679a2\n1679091c5a -> a87ff679a2\n8f14e45fce -> e4da3b7fbb\n8f14e45fce -> e4da3b7fbb\n8f14e45fce -> cfcd208495\n8f14e45fce -> 1679091c5a\n8f14e45fce -> eccbc87e4b\nc9f0f895fb -> 1679091c5a\nc9f0f895fb -> c9f0f895fb\nc9f0f895fb -> c9f0f895fb\nc9f0f895fb -> 8f14e45fce\nc9f0f895fb -> c9f0f895fb\n\n\nOperation:\nFind the parents of node c4ca4238a0.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "1679091c5a",
+          "eccbc87e4b",
+          "a87ff679a2"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 20,
+        "graph_head_sha256": "c37743dd9b93f07e78dae2a25bc76212b88a31d8614665885b4d72e2ef938e8f",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> cfcd208495\ncfcd208495 -> c51ce410c1\ncfcd208495 -> a87ff679a2\nc4ca4238a0 -> a87ff679a2\nc4ca4238a0 -> c20ad4d76f\nc4ca4238a0 -> a87ff679a2\nc81e728d9d -> e4da3b7fbb\nc81e728d9d -> cfcd208495\nc81e728d9d -> cfcd208495\neccbc87e4b -> c51ce410c1\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> eccbc87e4b\na87ff679a2 -> c51ce410c1\na87ff679a2 -> c9f0f895fb\na87ff679a2 -> c4ca4238a0\ne4da3b7fbb -> 8f14e45fce\ne4da3b7fbb -> eccbc87e4b\ne4da3b7fbb -> 45c48cce2e\n1679091c5a -> c51ce410c1\n1679091c5a -> d3d9446802\n1679091c5a -> c81e728d9d\n8f14e45fce -> d3d9446802\n8f14e45fce -> e4da3b7fbb\n8f14e45fce -> cfcd208495\nc9f0f895fb -> c51ce410c1\nc9f0f895fb -> c4ca4238a0\nc9f0f895fb -> c4ca4238a0\n45c48cce2e -> 45c48cce2e\n45c48cce2e -> c20ad4d76f\n45c48cce2e -> c4ca4238a0\nd3d9446802 -> 1679091c5a\nd3d9446802 -> c20ad4d76f\nd3d9446802 -> c9f0f895fb\n6512bd43d9 -> a87ff679a2\n6512bd43d9 -> 8f14e45fce\n6512bd43d9 -> d3d9446802\nc20ad4d76f -> c4ca4238a0\nc20ad4d76f -> c81e728d9d\nc20ad4d76f -> d3d9446802\nc51ce410c1 -> c9f0f895fb\nc51ce410c1 -> aab3238922\nc51ce410c1 -> 45c48cce2e\naab3238922 -> cfcd208495\naab3238922 -> c4ca4238a0\naab3238922 -> e4da3b7fbb\n\n\nOperation:\nFind the parents of node 8f14e45fce.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "e4da3b7fbb",
+          "6512bd43d9"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 21,
+        "graph_head_sha256": "a828c3315c2983ca4e914bfcd9f8a2b383e4ac65140547e9b354dc361277fd3f",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> e4da3b7fbb\ncfcd208495 -> cfcd208495\ncfcd208495 -> c81e728d9d\ncfcd208495 -> c4ca4238a0\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> a87ff679a2\nc4ca4238a0 -> 8f14e45fce\nc81e728d9d -> cfcd208495\nc81e728d9d -> 1679091c5a\nc81e728d9d -> c81e728d9d\nc81e728d9d -> 1679091c5a\neccbc87e4b -> a87ff679a2\neccbc87e4b -> a87ff679a2\neccbc87e4b -> cfcd208495\neccbc87e4b -> c4ca4238a0\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> 1679091c5a\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> 45c48cce2e\ne4da3b7fbb -> 1679091c5a\ne4da3b7fbb -> eccbc87e4b\ne4da3b7fbb -> e4da3b7fbb\ne4da3b7fbb -> 8f14e45fce\n1679091c5a -> c4ca4238a0\n1679091c5a -> 1679091c5a\n1679091c5a -> eccbc87e4b\n1679091c5a -> 45c48cce2e\n8f14e45fce -> d3d9446802\n8f14e45fce -> d3d9446802\n8f14e45fce -> c81e728d9d\n8f14e45fce -> eccbc87e4b\nc9f0f895fb -> c4ca4238a0\nc9f0f895fb -> c4ca4238a0\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> a87ff679a2\n45c48cce2e -> 8f14e45fce\n45c48cce2e -> 45c48cce2e\n45c48cce2e -> 1679091c5a\n45c48cce2e -> e4da3b7fbb\nd3d9446802 -> 8f14e45fce\nd3d9446802 -> d3d9446802\nd3d9446802 -> c81e728d9d\nd3d9446802 -> a87ff679a2\n\n\nOperation:\nFind the parents of node c81e728d9d.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "8f14e45fce",
+          "cfcd208495",
+          "d3d9446802"
+        ],
+        "prompt_chars": 2638,
+        "problem_type": "parents",
+        "date_added": "02-27-2026"
+      },
+      {
+        "row_index": 22,
+        "graph_head_sha256": "efe74ade0fe57f26c3948fdb201094d5c04c8a3cc635a10fd27348622d6282eb",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> cfcd208495\ncfcd208495 -> c9f0f895fb\ncfcd208495 -> 1679091c5a\ncfcd208495 -> c81e728d9d\ncfcd208495 -> 1679091c5a\nc4ca4238a0 -> c81e728d9d\nc4ca4238a0 -> eccbc87e4b\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> e4da3b7fbb\nc81e728d9d -> c81e728d9d\nc81e728d9d -> c4ca4238a0\nc81e728d9d -> c9f0f895fb\nc81e728d9d -> 8f14e45fce\nc81e728d9d -> c4ca4238a0\neccbc87e4b -> eccbc87e4b\neccbc87e4b -> cfcd208495\neccbc87e4b -> a87ff679a2\neccbc87e4b -> 1679091c5a\neccbc87e4b -> e4da3b7fbb\na87ff679a2 -> cfcd208495\na87ff679a2 -> c4ca4238a0\na87ff679a2 -> e4da3b7fbb\na87ff679a2 -> c81e728d9d\na87ff679a2 -> 8f14e45fce\ne4da3b7fbb -> c81e728d9d\ne4da3b7fbb -> a87ff679a2\ne4da3b7fbb -> cfcd208495\ne4da3b7fbb -> 1679091c5a\ne4da3b7fbb -> 1679091c5a\n1679091c5a -> 8f14e45fce\n1679091c5a -> 8f14e45fce\n1679091c5a -> c81e728d9d\n1679091c5a -> c9f0f895fb\n1679091c5a -> c4ca4238a0\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> a87ff679a2\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> c81e728d9d\nc9f0f895fb -> c81e728d9d\nc9f0f895fb -> 8f14e45fce\nc9f0f895fb -> c81e728d9d\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> cfcd208495\n\n\nOperation:\nFind the parents of node a87ff679a2.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "e4da3b7fbb",
+          "eccbc87e4b",
+          "8f14e45fce"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 23,
+        "graph_head_sha256": "5c038b19f1ce164168849d9195033b5c50589e9349d9401577ee42b731fb58b5",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> eccbc87e4b\ncfcd208495 -> eccbc87e4b\ncfcd208495 -> c4ca4238a0\ncfcd208495 -> 1679091c5a\ncfcd208495 -> a87ff679a2\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> c4ca4238a0\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> a87ff679a2\nc81e728d9d -> c4ca4238a0\nc81e728d9d -> c4ca4238a0\nc81e728d9d -> a87ff679a2\nc81e728d9d -> a87ff679a2\nc81e728d9d -> a87ff679a2\neccbc87e4b -> 8f14e45fce\neccbc87e4b -> cfcd208495\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> a87ff679a2\neccbc87e4b -> e4da3b7fbb\na87ff679a2 -> c4ca4238a0\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> c81e728d9d\na87ff679a2 -> c81e728d9d\na87ff679a2 -> 1679091c5a\ne4da3b7fbb -> eccbc87e4b\ne4da3b7fbb -> 8f14e45fce\ne4da3b7fbb -> eccbc87e4b\ne4da3b7fbb -> 1679091c5a\ne4da3b7fbb -> c4ca4238a0\n1679091c5a -> 1679091c5a\n1679091c5a -> a87ff679a2\n1679091c5a -> c9f0f895fb\n1679091c5a -> c4ca4238a0\n1679091c5a -> c81e728d9d\n8f14e45fce -> a87ff679a2\n8f14e45fce -> e4da3b7fbb\n8f14e45fce -> 8f14e45fce\n8f14e45fce -> c81e728d9d\n8f14e45fce -> c4ca4238a0\nc9f0f895fb -> 1679091c5a\nc9f0f895fb -> c9f0f895fb\nc9f0f895fb -> cfcd208495\nc9f0f895fb -> c9f0f895fb\nc9f0f895fb -> cfcd208495\n\n\nOperation:\nFind the parents of node c81e728d9d.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "1679091c5a",
+          "a87ff679a2",
+          "8f14e45fce"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 24,
+        "graph_head_sha256": "30834159380d389ffdcb9f36fe74d7c980ff24c286c7aa3b016bef29b5e16b0f",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> c9f0f895fb\ncfcd208495 -> a87ff679a2\ncfcd208495 -> 45c48cce2e\ncfcd208495 -> c9f0f895fb\nc4ca4238a0 -> 8f14e45fce\nc4ca4238a0 -> 8f14e45fce\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> c9f0f895fb\nc81e728d9d -> 8f14e45fce\nc81e728d9d -> c4ca4238a0\nc81e728d9d -> cfcd208495\nc81e728d9d -> c81e728d9d\neccbc87e4b -> 8f14e45fce\neccbc87e4b -> a87ff679a2\neccbc87e4b -> a87ff679a2\neccbc87e4b -> e4da3b7fbb\na87ff679a2 -> cfcd208495\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> 1679091c5a\na87ff679a2 -> d3d9446802\ne4da3b7fbb -> 45c48cce2e\ne4da3b7fbb -> d3d9446802\ne4da3b7fbb -> e4da3b7fbb\ne4da3b7fbb -> cfcd208495\n1679091c5a -> c9f0f895fb\n1679091c5a -> a87ff679a2\n1679091c5a -> cfcd208495\n1679091c5a -> eccbc87e4b\n8f14e45fce -> 1679091c5a\n8f14e45fce -> c4ca4238a0\n8f14e45fce -> a87ff679a2\n8f14e45fce -> cfcd208495\nc9f0f895fb -> 45c48cce2e\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> c81e728d9d\nc9f0f895fb -> a87ff679a2\n45c48cce2e -> c4ca4238a0\n45c48cce2e -> d3d9446802\n45c48cce2e -> 8f14e45fce\n45c48cce2e -> 8f14e45fce\nd3d9446802 -> cfcd208495\nd3d9446802 -> a87ff679a2\nd3d9446802 -> 1679091c5a\nd3d9446802 -> d3d9446802\n\n\nOperation:\nFind the parents of node c4ca4238a0.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "c81e728d9d",
+          "45c48cce2e",
+          "8f14e45fce"
+        ],
+        "prompt_chars": 2638,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 25,
+        "graph_head_sha256": "ff9bfb521b5c940a27c87812d0222678bfa1d560fc09aef866927078928b8362",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> c4ca4238a0\ncfcd208495 -> c9f0f895fb\ncfcd208495 -> eccbc87e4b\ncfcd208495 -> cfcd208495\ncfcd208495 -> a87ff679a2\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> c4ca4238a0\nc4ca4238a0 -> c81e728d9d\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> c4ca4238a0\nc81e728d9d -> eccbc87e4b\nc81e728d9d -> a87ff679a2\nc81e728d9d -> c81e728d9d\nc81e728d9d -> eccbc87e4b\nc81e728d9d -> c9f0f895fb\neccbc87e4b -> c81e728d9d\neccbc87e4b -> 1679091c5a\neccbc87e4b -> 1679091c5a\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> eccbc87e4b\na87ff679a2 -> cfcd208495\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> a87ff679a2\na87ff679a2 -> eccbc87e4b\na87ff679a2 -> 8f14e45fce\ne4da3b7fbb -> e4da3b7fbb\ne4da3b7fbb -> 1679091c5a\ne4da3b7fbb -> c9f0f895fb\ne4da3b7fbb -> a87ff679a2\ne4da3b7fbb -> eccbc87e4b\n1679091c5a -> c81e728d9d\n1679091c5a -> c9f0f895fb\n1679091c5a -> c4ca4238a0\n1679091c5a -> 8f14e45fce\n1679091c5a -> cfcd208495\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> e4da3b7fbb\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> c9f0f895fb\n8f14e45fce -> eccbc87e4b\nc9f0f895fb -> c9f0f895fb\nc9f0f895fb -> c81e728d9d\nc9f0f895fb -> c4ca4238a0\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> cfcd208495\n\n\nOperation:\nFind the parents of node c81e728d9d.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "1679091c5a",
+          "c4ca4238a0",
+          "c9f0f895fb",
+          "eccbc87e4b"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "02-27-2026"
+      },
+      {
+        "row_index": 26,
+        "graph_head_sha256": "fd5989d87618dea9c14fc4634b7a31173df299dd84e323702121837754b1503c",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> c9f0f895fb\ncfcd208495 -> c81e728d9d\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> c81e728d9d\nc4ca4238a0 -> 45c48cce2e\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> e4da3b7fbb\nc81e728d9d -> 45c48cce2e\nc81e728d9d -> c81e728d9d\nc81e728d9d -> e4da3b7fbb\nc81e728d9d -> cfcd208495\neccbc87e4b -> a87ff679a2\neccbc87e4b -> a87ff679a2\neccbc87e4b -> 1679091c5a\neccbc87e4b -> d3d9446802\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> d3d9446802\na87ff679a2 -> eccbc87e4b\na87ff679a2 -> c4ca4238a0\ne4da3b7fbb -> c9f0f895fb\ne4da3b7fbb -> eccbc87e4b\ne4da3b7fbb -> d3d9446802\ne4da3b7fbb -> d3d9446802\n1679091c5a -> eccbc87e4b\n1679091c5a -> cfcd208495\n1679091c5a -> eccbc87e4b\n1679091c5a -> 1679091c5a\n8f14e45fce -> a87ff679a2\n8f14e45fce -> 1679091c5a\n8f14e45fce -> 1679091c5a\n8f14e45fce -> e4da3b7fbb\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> 1679091c5a\nc9f0f895fb -> c81e728d9d\nc9f0f895fb -> c81e728d9d\n45c48cce2e -> cfcd208495\n45c48cce2e -> eccbc87e4b\n45c48cce2e -> cfcd208495\n45c48cce2e -> 1679091c5a\nd3d9446802 -> cfcd208495\nd3d9446802 -> 45c48cce2e\nd3d9446802 -> d3d9446802\nd3d9446802 -> e4da3b7fbb\n\n\nOperation:\nFind the parents of node c4ca4238a0.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "a87ff679a2"
+        ],
+        "prompt_chars": 2638,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 27,
+        "graph_head_sha256": "0888c25d52efffe9de4c43341112bfe1a0e29337184bd78e3746bbe5165ad9e8",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> c16a5320fa\nc4ca4238a0 -> 6ea9ab1baa\nc81e728d9d -> c20ad4d76f\neccbc87e4b -> c81e728d9d\na87ff679a2 -> d645920e39\ne4da3b7fbb -> 182be0c5cd\n1679091c5a -> 1c383cd30b\n8f14e45fce -> aab3238922\nc9f0f895fb -> d645920e39\n45c48cce2e -> 1ff1de7740\nd3d9446802 -> e369853df7\n6512bd43d9 -> a5771bce93\nc20ad4d76f -> 45c48cce2e\nc51ce410c1 -> c4ca4238a0\naab3238922 -> 1ff1de7740\n9bf31c7ff0 -> aab3238922\nc74d97b01e -> 1679091c5a\n70efdf2ec9 -> 3416a75f4c\n6f4922f455 -> 3c59dc048e\n1f0e3dad99 -> c51ce410c1\n98f1370821 -> 1679091c5a\n3c59dc048e -> 6364d3f0f4\nb6d767d2f8 -> 98f1370821\n37693cfc74 -> aab3238922\n1ff1de7740 -> e4da3b7fbb\n8e296a067a -> e369853df7\n4e732ced34 -> 1f0e3dad99\n02e74f10e0 -> d645920e39\n33e75ff09d -> c51ce410c1\n6ea9ab1baa -> 1f0e3dad99\n34173cb38f -> 4e732ced34\nc16a5320fa -> 1ff1de7740\n6364d3f0f4 -> d3d9446802\n182be0c5cd -> c16a5320fa\ne369853df7 -> 37693cfc74\n1c383cd30b -> 37693cfc74\n19ca14e7ea -> d645920e39\na5bfc9e079 -> 1ff1de7740\na5771bce93 -> 1679091c5a\nd67d8ab4f4 -> e369853df7\nd645920e39 -> 6f4922f455\n3416a75f4c -> b6d767d2f8\na1d0c6e83f -> 45c48cce2e\n17e62166fc -> b6d767d2f8\nf7177163c8 -> 6512bd43d9\n6c8349cc72 -> c74d97b01e\n\n\nOperation:\nFind the parents of node c51ce410c1.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "1f0e3dad99",
+          "33e75ff09d"
+        ],
+        "prompt_chars": 2688,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 28,
+        "graph_head_sha256": "4315aea2b7cbe0ff7d95564192fdad72cc105de3a7a8c459e55783173d40e5ea",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> d3d9446802\ncfcd208495 -> a87ff679a2\ncfcd208495 -> a87ff679a2\ncfcd208495 -> 8f14e45fce\nc4ca4238a0 -> 8f14e45fce\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> eccbc87e4b\nc4ca4238a0 -> cfcd208495\nc81e728d9d -> cfcd208495\nc81e728d9d -> a87ff679a2\nc81e728d9d -> cfcd208495\nc81e728d9d -> a87ff679a2\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> 8f14e45fce\neccbc87e4b -> c81e728d9d\na87ff679a2 -> d3d9446802\na87ff679a2 -> c9f0f895fb\na87ff679a2 -> 45c48cce2e\na87ff679a2 -> 8f14e45fce\ne4da3b7fbb -> e4da3b7fbb\ne4da3b7fbb -> a87ff679a2\ne4da3b7fbb -> d3d9446802\ne4da3b7fbb -> c81e728d9d\n1679091c5a -> c4ca4238a0\n1679091c5a -> 1679091c5a\n1679091c5a -> e4da3b7fbb\n1679091c5a -> e4da3b7fbb\n8f14e45fce -> c81e728d9d\n8f14e45fce -> cfcd208495\n8f14e45fce -> 8f14e45fce\n8f14e45fce -> cfcd208495\nc9f0f895fb -> 45c48cce2e\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> c4ca4238a0\nc9f0f895fb -> 45c48cce2e\n45c48cce2e -> c4ca4238a0\n45c48cce2e -> c81e728d9d\n45c48cce2e -> cfcd208495\n45c48cce2e -> 1679091c5a\nd3d9446802 -> 8f14e45fce\nd3d9446802 -> c4ca4238a0\nd3d9446802 -> c81e728d9d\nd3d9446802 -> c9f0f895fb\n\n\nOperation:\nFind the parents of node 1679091c5a.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "45c48cce2e"
+        ],
+        "prompt_chars": 2638,
+        "problem_type": "parents",
+        "date_added": "02-27-2026"
+      },
+      {
+        "row_index": 29,
+        "graph_head_sha256": "07c12aab3473a68651ede0bb6656089b18d397d88e3eb3a52dba6f8b912b095e",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> e4da3b7fbb\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> c81e728d9d\ncfcd208495 -> e4da3b7fbb\nc4ca4238a0 -> eccbc87e4b\nc4ca4238a0 -> eccbc87e4b\nc4ca4238a0 -> cfcd208495\nc4ca4238a0 -> a87ff679a2\nc4ca4238a0 -> eccbc87e4b\nc81e728d9d -> 1679091c5a\nc81e728d9d -> 8f14e45fce\nc81e728d9d -> eccbc87e4b\nc81e728d9d -> 1679091c5a\nc81e728d9d -> c81e728d9d\neccbc87e4b -> a87ff679a2\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> a87ff679a2\neccbc87e4b -> e4da3b7fbb\na87ff679a2 -> c4ca4238a0\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> c4ca4238a0\na87ff679a2 -> a87ff679a2\na87ff679a2 -> eccbc87e4b\ne4da3b7fbb -> c9f0f895fb\ne4da3b7fbb -> c81e728d9d\ne4da3b7fbb -> c81e728d9d\ne4da3b7fbb -> c9f0f895fb\ne4da3b7fbb -> 1679091c5a\n1679091c5a -> c4ca4238a0\n1679091c5a -> a87ff679a2\n1679091c5a -> eccbc87e4b\n1679091c5a -> 1679091c5a\n1679091c5a -> e4da3b7fbb\n8f14e45fce -> c9f0f895fb\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> eccbc87e4b\nc9f0f895fb -> 8f14e45fce\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> e4da3b7fbb\nc9f0f895fb -> c4ca4238a0\nc9f0f895fb -> c81e728d9d\n\n\nOperation:\nFind the parents of node 1679091c5a.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "c81e728d9d",
+          "e4da3b7fbb"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "02-27-2026"
+      },
+      {
+        "row_index": 30,
+        "graph_head_sha256": "6df22b4d08246d2965b7656365cda207318f2e0c2339fc28a14318c35055e238",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> c4ca4238a0\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> e4da3b7fbb\ncfcd208495 -> 45c48cce2e\nc4ca4238a0 -> a87ff679a2\nc4ca4238a0 -> c4ca4238a0\nc4ca4238a0 -> 45c48cce2e\nc4ca4238a0 -> a87ff679a2\nc81e728d9d -> d3d9446802\nc81e728d9d -> cfcd208495\nc81e728d9d -> d3d9446802\nc81e728d9d -> c9f0f895fb\neccbc87e4b -> 45c48cce2e\neccbc87e4b -> cfcd208495\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> 8f14e45fce\na87ff679a2 -> d3d9446802\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> a87ff679a2\na87ff679a2 -> c81e728d9d\ne4da3b7fbb -> 8f14e45fce\ne4da3b7fbb -> 1679091c5a\ne4da3b7fbb -> c4ca4238a0\ne4da3b7fbb -> e4da3b7fbb\n1679091c5a -> c9f0f895fb\n1679091c5a -> e4da3b7fbb\n1679091c5a -> c81e728d9d\n1679091c5a -> 8f14e45fce\n8f14e45fce -> e4da3b7fbb\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> d3d9446802\n8f14e45fce -> d3d9446802\nc9f0f895fb -> e4da3b7fbb\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> e4da3b7fbb\n45c48cce2e -> c9f0f895fb\n45c48cce2e -> a87ff679a2\n45c48cce2e -> 8f14e45fce\n45c48cce2e -> c81e728d9d\nd3d9446802 -> 8f14e45fce\nd3d9446802 -> eccbc87e4b\nd3d9446802 -> d3d9446802\nd3d9446802 -> e4da3b7fbb\n\n\nOperation:\nFind the parents of node c81e728d9d.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "1679091c5a",
+          "a87ff679a2",
+          "45c48cce2e"
+        ],
+        "prompt_chars": 2638,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 31,
+        "graph_head_sha256": "48d9846becd69fece61153984e7508c1c78c1c732816029b852cf6d56908acac",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> c81e728d9d\ncfcd208495 -> c9f0f895fb\ncfcd208495 -> a87ff679a2\ncfcd208495 -> eccbc87e4b\nc4ca4238a0 -> 45c48cce2e\nc4ca4238a0 -> c4ca4238a0\nc4ca4238a0 -> cfcd208495\nc4ca4238a0 -> 8f14e45fce\nc81e728d9d -> 45c48cce2e\nc81e728d9d -> 45c48cce2e\nc81e728d9d -> cfcd208495\nc81e728d9d -> 1679091c5a\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> 1679091c5a\neccbc87e4b -> d3d9446802\neccbc87e4b -> a87ff679a2\na87ff679a2 -> c81e728d9d\na87ff679a2 -> c81e728d9d\na87ff679a2 -> c9f0f895fb\na87ff679a2 -> 45c48cce2e\ne4da3b7fbb -> e4da3b7fbb\ne4da3b7fbb -> c4ca4238a0\ne4da3b7fbb -> e4da3b7fbb\ne4da3b7fbb -> c81e728d9d\n1679091c5a -> e4da3b7fbb\n1679091c5a -> a87ff679a2\n1679091c5a -> c4ca4238a0\n1679091c5a -> e4da3b7fbb\n8f14e45fce -> d3d9446802\n8f14e45fce -> c4ca4238a0\n8f14e45fce -> 1679091c5a\n8f14e45fce -> c9f0f895fb\nc9f0f895fb -> c81e728d9d\nc9f0f895fb -> cfcd208495\nc9f0f895fb -> d3d9446802\nc9f0f895fb -> d3d9446802\n45c48cce2e -> d3d9446802\n45c48cce2e -> eccbc87e4b\n45c48cce2e -> 45c48cce2e\n45c48cce2e -> cfcd208495\nd3d9446802 -> c4ca4238a0\nd3d9446802 -> 1679091c5a\nd3d9446802 -> d3d9446802\nd3d9446802 -> 1679091c5a\n\n\nOperation:\nFind the parents of node e4da3b7fbb.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "1679091c5a"
+        ],
+        "prompt_chars": 2638,
+        "problem_type": "parents",
+        "date_added": "02-27-2026"
+      },
+      {
+        "row_index": 32,
+        "graph_head_sha256": "5115a86c6d5652009d53214c21cca60be630615f3c29b41816fb6849c2101f7b",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> aab3238922\ncfcd208495 -> a87ff679a2\ncfcd208495 -> 45c48cce2e\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> c51ce410c1\nc4ca4238a0 -> c51ce410c1\nc81e728d9d -> e4da3b7fbb\nc81e728d9d -> c20ad4d76f\nc81e728d9d -> c51ce410c1\neccbc87e4b -> c4ca4238a0\neccbc87e4b -> c51ce410c1\neccbc87e4b -> e4da3b7fbb\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> aab3238922\na87ff679a2 -> c20ad4d76f\ne4da3b7fbb -> c20ad4d76f\ne4da3b7fbb -> 1679091c5a\ne4da3b7fbb -> eccbc87e4b\n1679091c5a -> d3d9446802\n1679091c5a -> c20ad4d76f\n1679091c5a -> c9f0f895fb\n8f14e45fce -> c81e728d9d\n8f14e45fce -> cfcd208495\n8f14e45fce -> c81e728d9d\nc9f0f895fb -> aab3238922\nc9f0f895fb -> d3d9446802\nc9f0f895fb -> 6512bd43d9\n45c48cce2e -> c4ca4238a0\n45c48cce2e -> c20ad4d76f\n45c48cce2e -> d3d9446802\nd3d9446802 -> a87ff679a2\nd3d9446802 -> c51ce410c1\nd3d9446802 -> 6512bd43d9\n6512bd43d9 -> 45c48cce2e\n6512bd43d9 -> c81e728d9d\n6512bd43d9 -> cfcd208495\nc20ad4d76f -> c9f0f895fb\nc20ad4d76f -> a87ff679a2\nc20ad4d76f -> 6512bd43d9\nc51ce410c1 -> e4da3b7fbb\nc51ce410c1 -> d3d9446802\nc51ce410c1 -> c9f0f895fb\naab3238922 -> cfcd208495\naab3238922 -> 8f14e45fce\naab3238922 -> 8f14e45fce\n\n\nOperation:\nFind the parents of node c9f0f895fb.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "c20ad4d76f",
+          "1679091c5a",
+          "c51ce410c1"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 33,
+        "graph_head_sha256": "89ccbd588ae0092c12590b99bcee67ec4b40211975f7437ed54147365682a3d4",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> e4da3b7fbb\ncfcd208495 -> eccbc87e4b\ncfcd208495 -> c4ca4238a0\ncfcd208495 -> c81e728d9d\ncfcd208495 -> c9f0f895fb\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> e4da3b7fbb\nc81e728d9d -> a87ff679a2\nc81e728d9d -> a87ff679a2\nc81e728d9d -> c9f0f895fb\nc81e728d9d -> eccbc87e4b\nc81e728d9d -> a87ff679a2\neccbc87e4b -> a87ff679a2\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> cfcd208495\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> cfcd208495\na87ff679a2 -> eccbc87e4b\na87ff679a2 -> c4ca4238a0\na87ff679a2 -> 1679091c5a\na87ff679a2 -> c4ca4238a0\na87ff679a2 -> 8f14e45fce\ne4da3b7fbb -> c9f0f895fb\ne4da3b7fbb -> c9f0f895fb\ne4da3b7fbb -> 8f14e45fce\ne4da3b7fbb -> 8f14e45fce\ne4da3b7fbb -> a87ff679a2\n1679091c5a -> 1679091c5a\n1679091c5a -> cfcd208495\n1679091c5a -> cfcd208495\n1679091c5a -> cfcd208495\n1679091c5a -> c81e728d9d\n8f14e45fce -> 1679091c5a\n8f14e45fce -> c9f0f895fb\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> 1679091c5a\n8f14e45fce -> c4ca4238a0\nc9f0f895fb -> cfcd208495\nc9f0f895fb -> 8f14e45fce\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> e4da3b7fbb\nc9f0f895fb -> a87ff679a2\n\n\nOperation:\nFind the parents of node 1679091c5a.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "8f14e45fce",
+          "a87ff679a2"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "02-27-2026"
+      },
+      {
+        "row_index": 34,
+        "graph_head_sha256": "f7c80b22dd1dbb771ad1ef7d3259d3c0eea1de704f64214624505c93d86a2ca4",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> eccbc87e4b\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> d3d9446802\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> c20ad4d76f\nc4ca4238a0 -> c4ca4238a0\nc81e728d9d -> c81e728d9d\nc81e728d9d -> 6512bd43d9\nc81e728d9d -> c20ad4d76f\neccbc87e4b -> c81e728d9d\neccbc87e4b -> d3d9446802\neccbc87e4b -> 6512bd43d9\na87ff679a2 -> 45c48cce2e\na87ff679a2 -> 1679091c5a\na87ff679a2 -> c9f0f895fb\ne4da3b7fbb -> c4ca4238a0\ne4da3b7fbb -> 8f14e45fce\ne4da3b7fbb -> c51ce410c1\n1679091c5a -> aab3238922\n1679091c5a -> c20ad4d76f\n1679091c5a -> a87ff679a2\n8f14e45fce -> c81e728d9d\n8f14e45fce -> 45c48cce2e\n8f14e45fce -> eccbc87e4b\nc9f0f895fb -> c51ce410c1\nc9f0f895fb -> c9f0f895fb\nc9f0f895fb -> a87ff679a2\n45c48cce2e -> c51ce410c1\n45c48cce2e -> cfcd208495\n45c48cce2e -> c9f0f895fb\nd3d9446802 -> e4da3b7fbb\nd3d9446802 -> 1679091c5a\nd3d9446802 -> 6512bd43d9\n6512bd43d9 -> 6512bd43d9\n6512bd43d9 -> 8f14e45fce\n6512bd43d9 -> c9f0f895fb\nc20ad4d76f -> e4da3b7fbb\nc20ad4d76f -> 1679091c5a\nc20ad4d76f -> 8f14e45fce\nc51ce410c1 -> cfcd208495\nc51ce410c1 -> c81e728d9d\nc51ce410c1 -> 8f14e45fce\naab3238922 -> e4da3b7fbb\naab3238922 -> a87ff679a2\naab3238922 -> a87ff679a2\n\n\nOperation:\nFind the parents of node a87ff679a2.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "1679091c5a",
+          "aab3238922",
+          "c9f0f895fb"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 35,
+        "graph_head_sha256": "4ac7e1588e4141e643e2be6e33eb25db12f4da1e5cb6c6cdea4ba6e0389e7588",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> c9f0f895fb\ncfcd208495 -> cfcd208495\ncfcd208495 -> eccbc87e4b\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> a87ff679a2\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> 1679091c5a\nc81e728d9d -> c9f0f895fb\nc81e728d9d -> c81e728d9d\nc81e728d9d -> eccbc87e4b\nc81e728d9d -> a87ff679a2\nc81e728d9d -> a87ff679a2\neccbc87e4b -> eccbc87e4b\neccbc87e4b -> eccbc87e4b\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> c81e728d9d\neccbc87e4b -> eccbc87e4b\na87ff679a2 -> c9f0f895fb\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> e4da3b7fbb\na87ff679a2 -> 1679091c5a\na87ff679a2 -> 8f14e45fce\ne4da3b7fbb -> e4da3b7fbb\ne4da3b7fbb -> 1679091c5a\ne4da3b7fbb -> cfcd208495\ne4da3b7fbb -> 8f14e45fce\ne4da3b7fbb -> eccbc87e4b\n1679091c5a -> a87ff679a2\n1679091c5a -> 8f14e45fce\n1679091c5a -> c9f0f895fb\n1679091c5a -> c4ca4238a0\n1679091c5a -> c81e728d9d\n8f14e45fce -> e4da3b7fbb\n8f14e45fce -> c4ca4238a0\n8f14e45fce -> 1679091c5a\n8f14e45fce -> a87ff679a2\n8f14e45fce -> 1679091c5a\nc9f0f895fb -> 8f14e45fce\nc9f0f895fb -> 8f14e45fce\nc9f0f895fb -> 1679091c5a\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> c9f0f895fb\n\n\nOperation:\nFind the parents of node a87ff679a2.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "c81e728d9d",
+          "cfcd208495",
+          "1679091c5a",
+          "8f14e45fce",
+          "c9f0f895fb"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 36,
+        "graph_head_sha256": "94d732f0d860e661eaf8539697c0b6c5d0aa8b4dcb2a00a63b84a8c1fc12e275",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> eccbc87e4b\ncfcd208495 -> 1679091c5a\ncfcd208495 -> c4ca4238a0\ncfcd208495 -> c81e728d9d\ncfcd208495 -> c9f0f895fb\nc4ca4238a0 -> 8f14e45fce\nc4ca4238a0 -> 8f14e45fce\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> cfcd208495\nc4ca4238a0 -> 8f14e45fce\nc81e728d9d -> eccbc87e4b\nc81e728d9d -> eccbc87e4b\nc81e728d9d -> a87ff679a2\nc81e728d9d -> a87ff679a2\nc81e728d9d -> cfcd208495\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> cfcd208495\neccbc87e4b -> c81e728d9d\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> c81e728d9d\na87ff679a2 -> c81e728d9d\na87ff679a2 -> 1679091c5a\na87ff679a2 -> 1679091c5a\na87ff679a2 -> eccbc87e4b\na87ff679a2 -> 1679091c5a\ne4da3b7fbb -> cfcd208495\ne4da3b7fbb -> 8f14e45fce\ne4da3b7fbb -> c4ca4238a0\ne4da3b7fbb -> 1679091c5a\ne4da3b7fbb -> c81e728d9d\n1679091c5a -> 8f14e45fce\n1679091c5a -> c81e728d9d\n1679091c5a -> c4ca4238a0\n1679091c5a -> 1679091c5a\n1679091c5a -> 1679091c5a\n8f14e45fce -> 1679091c5a\n8f14e45fce -> c81e728d9d\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> 8f14e45fce\n8f14e45fce -> a87ff679a2\nc9f0f895fb -> c4ca4238a0\nc9f0f895fb -> c4ca4238a0\nc9f0f895fb -> 1679091c5a\nc9f0f895fb -> 8f14e45fce\nc9f0f895fb -> c4ca4238a0\n\n\nOperation:\nFind the parents of node c9f0f895fb.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "cfcd208495",
+          "eccbc87e4b"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 37,
+        "graph_head_sha256": "e74a4c6472f4b03dd8a84ebebb067af19080f6df4a18d16dd1aaa3d9f9dc62ff",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> cfcd208495\ncfcd208495 -> d3d9446802\ncfcd208495 -> cfcd208495\ncfcd208495 -> cfcd208495\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> eccbc87e4b\nc4ca4238a0 -> d3d9446802\nc4ca4238a0 -> 1679091c5a\nc81e728d9d -> 8f14e45fce\nc81e728d9d -> d3d9446802\nc81e728d9d -> eccbc87e4b\nc81e728d9d -> 1679091c5a\neccbc87e4b -> 8f14e45fce\neccbc87e4b -> cfcd208495\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> cfcd208495\na87ff679a2 -> 1679091c5a\na87ff679a2 -> a87ff679a2\na87ff679a2 -> e4da3b7fbb\na87ff679a2 -> 8f14e45fce\ne4da3b7fbb -> cfcd208495\ne4da3b7fbb -> 8f14e45fce\ne4da3b7fbb -> c81e728d9d\ne4da3b7fbb -> 8f14e45fce\n1679091c5a -> a87ff679a2\n1679091c5a -> c81e728d9d\n1679091c5a -> c4ca4238a0\n1679091c5a -> a87ff679a2\n8f14e45fce -> 8f14e45fce\n8f14e45fce -> 8f14e45fce\n8f14e45fce -> e4da3b7fbb\n8f14e45fce -> eccbc87e4b\nc9f0f895fb -> c4ca4238a0\nc9f0f895fb -> cfcd208495\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> e4da3b7fbb\n45c48cce2e -> d3d9446802\n45c48cce2e -> a87ff679a2\n45c48cce2e -> d3d9446802\n45c48cce2e -> 1679091c5a\nd3d9446802 -> c81e728d9d\nd3d9446802 -> eccbc87e4b\nd3d9446802 -> d3d9446802\nd3d9446802 -> a87ff679a2\n\n\nOperation:\nFind the parents of node d3d9446802.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "45c48cce2e",
+          "c4ca4238a0",
+          "c81e728d9d",
+          "cfcd208495"
+        ],
+        "prompt_chars": 2638,
+        "problem_type": "parents",
+        "date_added": "02-27-2026"
+      },
+      {
+        "row_index": 38,
+        "graph_head_sha256": "cbc6a7a530080ce6674797a04309a20107a555067ba06768a3c907ba99c4f5c9",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> 1679091c5a\ncfcd208495 -> e4da3b7fbb\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> c81e728d9d\ncfcd208495 -> 1679091c5a\nc4ca4238a0 -> cfcd208495\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> c81e728d9d\nc4ca4238a0 -> cfcd208495\nc4ca4238a0 -> 1679091c5a\nc81e728d9d -> a87ff679a2\nc81e728d9d -> 8f14e45fce\nc81e728d9d -> e4da3b7fbb\nc81e728d9d -> 8f14e45fce\nc81e728d9d -> 8f14e45fce\neccbc87e4b -> 1679091c5a\neccbc87e4b -> cfcd208495\neccbc87e4b -> 1679091c5a\neccbc87e4b -> 1679091c5a\neccbc87e4b -> 1679091c5a\na87ff679a2 -> c4ca4238a0\na87ff679a2 -> 1679091c5a\na87ff679a2 -> 1679091c5a\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> 8f14e45fce\ne4da3b7fbb -> c4ca4238a0\ne4da3b7fbb -> a87ff679a2\ne4da3b7fbb -> c4ca4238a0\ne4da3b7fbb -> a87ff679a2\ne4da3b7fbb -> 8f14e45fce\n1679091c5a -> c9f0f895fb\n1679091c5a -> 1679091c5a\n1679091c5a -> cfcd208495\n1679091c5a -> c9f0f895fb\n1679091c5a -> c9f0f895fb\n8f14e45fce -> 1679091c5a\n8f14e45fce -> c81e728d9d\n8f14e45fce -> 8f14e45fce\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> c81e728d9d\nc9f0f895fb -> c81e728d9d\nc9f0f895fb -> c9f0f895fb\nc9f0f895fb -> 1679091c5a\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> 1679091c5a\n\n\nOperation:\nFind the parents of node c9f0f895fb.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "1679091c5a",
+          "c4ca4238a0"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "02-27-2026"
+      },
+      {
+        "row_index": 39,
+        "graph_head_sha256": "86a5d5a6cfd499be7de7a80f8f32dac0f57d25521dd662adef9fa22128be5a52",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> d3d9446802\ncfcd208495 -> e4da3b7fbb\ncfcd208495 -> 45c48cce2e\ncfcd208495 -> 45c48cce2e\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> 45c48cce2e\nc4ca4238a0 -> d3d9446802\nc4ca4238a0 -> 45c48cce2e\nc81e728d9d -> 1679091c5a\nc81e728d9d -> e4da3b7fbb\nc81e728d9d -> a87ff679a2\nc81e728d9d -> c4ca4238a0\neccbc87e4b -> c4ca4238a0\neccbc87e4b -> eccbc87e4b\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> c81e728d9d\na87ff679a2 -> d3d9446802\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> cfcd208495\na87ff679a2 -> e4da3b7fbb\ne4da3b7fbb -> c81e728d9d\ne4da3b7fbb -> d3d9446802\ne4da3b7fbb -> e4da3b7fbb\ne4da3b7fbb -> c9f0f895fb\n1679091c5a -> d3d9446802\n1679091c5a -> d3d9446802\n1679091c5a -> 45c48cce2e\n1679091c5a -> eccbc87e4b\n8f14e45fce -> c4ca4238a0\n8f14e45fce -> cfcd208495\n8f14e45fce -> c81e728d9d\n8f14e45fce -> cfcd208495\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> c9f0f895fb\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> d3d9446802\n45c48cce2e -> 1679091c5a\n45c48cce2e -> c4ca4238a0\n45c48cce2e -> c4ca4238a0\n45c48cce2e -> cfcd208495\nd3d9446802 -> e4da3b7fbb\nd3d9446802 -> c81e728d9d\nd3d9446802 -> 45c48cce2e\nd3d9446802 -> c4ca4238a0\n\n\nOperation:\nFind the parents of node d3d9446802.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "cfcd208495",
+          "e4da3b7fbb",
+          "a87ff679a2",
+          "1679091c5a",
+          "c4ca4238a0",
+          "c9f0f895fb"
+        ],
+        "prompt_chars": 2638,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 40,
+        "graph_head_sha256": "4d47d677937776803267f9b843c210c78936fab8c408ddaf120132f2e3a1d710",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> 45c48cce2e\ncfcd208495 -> c9f0f895fb\ncfcd208495 -> a87ff679a2\ncfcd208495 -> eccbc87e4b\nc4ca4238a0 -> cfcd208495\nc4ca4238a0 -> 8f14e45fce\nc4ca4238a0 -> c4ca4238a0\nc4ca4238a0 -> eccbc87e4b\nc81e728d9d -> c9f0f895fb\nc81e728d9d -> c81e728d9d\nc81e728d9d -> d3d9446802\nc81e728d9d -> a87ff679a2\neccbc87e4b -> a87ff679a2\neccbc87e4b -> c81e728d9d\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> d3d9446802\na87ff679a2 -> 45c48cce2e\na87ff679a2 -> e4da3b7fbb\na87ff679a2 -> cfcd208495\na87ff679a2 -> a87ff679a2\ne4da3b7fbb -> eccbc87e4b\ne4da3b7fbb -> cfcd208495\ne4da3b7fbb -> cfcd208495\ne4da3b7fbb -> cfcd208495\n1679091c5a -> a87ff679a2\n1679091c5a -> c81e728d9d\n1679091c5a -> 45c48cce2e\n1679091c5a -> 8f14e45fce\n8f14e45fce -> e4da3b7fbb\n8f14e45fce -> 8f14e45fce\n8f14e45fce -> 8f14e45fce\n8f14e45fce -> a87ff679a2\nc9f0f895fb -> e4da3b7fbb\nc9f0f895fb -> 8f14e45fce\nc9f0f895fb -> c4ca4238a0\nc9f0f895fb -> a87ff679a2\n45c48cce2e -> eccbc87e4b\n45c48cce2e -> d3d9446802\n45c48cce2e -> 8f14e45fce\n45c48cce2e -> 45c48cce2e\nd3d9446802 -> e4da3b7fbb\nd3d9446802 -> 1679091c5a\nd3d9446802 -> c4ca4238a0\nd3d9446802 -> a87ff679a2\n\n\nOperation:\nFind the parents of node c4ca4238a0.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "c9f0f895fb",
+          "d3d9446802"
+        ],
+        "prompt_chars": 2638,
+        "problem_type": "parents",
+        "date_added": "02-27-2026"
+      },
+      {
+        "row_index": 41,
+        "graph_head_sha256": "b9cc8f4138489914ace3cb855678ebb3133b5ec2136b8538f01ffa7a6383c44a",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> cfcd208495\ncfcd208495 -> cfcd208495\ncfcd208495 -> c9f0f895fb\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> cfcd208495\nc4ca4238a0 -> cfcd208495\nc4ca4238a0 -> eccbc87e4b\nc4ca4238a0 -> a87ff679a2\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> eccbc87e4b\nc81e728d9d -> 1679091c5a\nc81e728d9d -> a87ff679a2\nc81e728d9d -> cfcd208495\nc81e728d9d -> cfcd208495\nc81e728d9d -> c4ca4238a0\neccbc87e4b -> a87ff679a2\neccbc87e4b -> 8f14e45fce\neccbc87e4b -> 1679091c5a\neccbc87e4b -> 1679091c5a\neccbc87e4b -> a87ff679a2\na87ff679a2 -> a87ff679a2\na87ff679a2 -> a87ff679a2\na87ff679a2 -> e4da3b7fbb\na87ff679a2 -> eccbc87e4b\na87ff679a2 -> e4da3b7fbb\ne4da3b7fbb -> c4ca4238a0\ne4da3b7fbb -> c4ca4238a0\ne4da3b7fbb -> cfcd208495\ne4da3b7fbb -> c81e728d9d\ne4da3b7fbb -> cfcd208495\n1679091c5a -> eccbc87e4b\n1679091c5a -> 1679091c5a\n1679091c5a -> c4ca4238a0\n1679091c5a -> c4ca4238a0\n1679091c5a -> a87ff679a2\n8f14e45fce -> cfcd208495\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> 1679091c5a\n8f14e45fce -> cfcd208495\nc9f0f895fb -> c9f0f895fb\nc9f0f895fb -> e4da3b7fbb\nc9f0f895fb -> c9f0f895fb\nc9f0f895fb -> e4da3b7fbb\nc9f0f895fb -> c81e728d9d\n\n\nOperation:\nFind the parents of node eccbc87e4b.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "1679091c5a",
+          "c4ca4238a0",
+          "a87ff679a2",
+          "8f14e45fce"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 42,
+        "graph_head_sha256": "d161f50faa1aaf57a3140aa40703f24775c114aafb08aad425269b03a75c701e",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> cfcd208495\ncfcd208495 -> c4ca4238a0\ncfcd208495 -> eccbc87e4b\ncfcd208495 -> e4da3b7fbb\nc4ca4238a0 -> eccbc87e4b\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> 8f14e45fce\nc4ca4238a0 -> cfcd208495\nc81e728d9d -> c4ca4238a0\nc81e728d9d -> e4da3b7fbb\nc81e728d9d -> c81e728d9d\nc81e728d9d -> a87ff679a2\nc81e728d9d -> 8f14e45fce\neccbc87e4b -> c4ca4238a0\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> c4ca4238a0\neccbc87e4b -> c81e728d9d\neccbc87e4b -> a87ff679a2\na87ff679a2 -> c9f0f895fb\na87ff679a2 -> 1679091c5a\na87ff679a2 -> e4da3b7fbb\na87ff679a2 -> a87ff679a2\na87ff679a2 -> c81e728d9d\ne4da3b7fbb -> e4da3b7fbb\ne4da3b7fbb -> eccbc87e4b\ne4da3b7fbb -> 8f14e45fce\ne4da3b7fbb -> cfcd208495\ne4da3b7fbb -> c81e728d9d\n1679091c5a -> cfcd208495\n1679091c5a -> eccbc87e4b\n1679091c5a -> a87ff679a2\n1679091c5a -> a87ff679a2\n1679091c5a -> 8f14e45fce\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> c4ca4238a0\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> 1679091c5a\n8f14e45fce -> eccbc87e4b\nc9f0f895fb -> cfcd208495\nc9f0f895fb -> c81e728d9d\nc9f0f895fb -> 1679091c5a\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> 8f14e45fce\n\n\nOperation:\nFind the parents of node 8f14e45fce.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "c81e728d9d",
+          "cfcd208495",
+          "e4da3b7fbb",
+          "1679091c5a",
+          "c4ca4238a0",
+          "c9f0f895fb"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 43,
+        "graph_head_sha256": "7fe7fa5b9c548705f75b96e4cdf1b7aee3535c0a819c06b52c92ff3538e9fe6c",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> a87ff679a2\ncfcd208495 -> eccbc87e4b\ncfcd208495 -> c9f0f895fb\nc4ca4238a0 -> a87ff679a2\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> e4da3b7fbb\nc81e728d9d -> eccbc87e4b\nc81e728d9d -> c9f0f895fb\nc81e728d9d -> 8f14e45fce\nc81e728d9d -> d3d9446802\neccbc87e4b -> c4ca4238a0\neccbc87e4b -> d3d9446802\neccbc87e4b -> c81e728d9d\neccbc87e4b -> cfcd208495\na87ff679a2 -> cfcd208495\na87ff679a2 -> 45c48cce2e\na87ff679a2 -> c4ca4238a0\na87ff679a2 -> eccbc87e4b\ne4da3b7fbb -> a87ff679a2\ne4da3b7fbb -> c9f0f895fb\ne4da3b7fbb -> c4ca4238a0\ne4da3b7fbb -> e4da3b7fbb\n1679091c5a -> a87ff679a2\n1679091c5a -> c81e728d9d\n1679091c5a -> c9f0f895fb\n1679091c5a -> cfcd208495\n8f14e45fce -> a87ff679a2\n8f14e45fce -> c9f0f895fb\n8f14e45fce -> cfcd208495\n8f14e45fce -> 8f14e45fce\nc9f0f895fb -> cfcd208495\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> eccbc87e4b\n45c48cce2e -> d3d9446802\n45c48cce2e -> c4ca4238a0\n45c48cce2e -> c9f0f895fb\n45c48cce2e -> cfcd208495\nd3d9446802 -> a87ff679a2\nd3d9446802 -> c4ca4238a0\nd3d9446802 -> cfcd208495\nd3d9446802 -> a87ff679a2\n\n\nOperation:\nFind the parents of node c9f0f895fb.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "c81e728d9d",
+          "cfcd208495",
+          "e4da3b7fbb",
+          "1679091c5a",
+          "8f14e45fce",
+          "45c48cce2e",
+          "c4ca4238a0"
+        ],
+        "prompt_chars": 2638,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 44,
+        "graph_head_sha256": "d62b077cfda3275e47adbc6ca8d1a23e6f4ceb3cff27ce59108d510ecf7f4157",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> cfcd208495\ncfcd208495 -> c4ca4238a0\ncfcd208495 -> c9f0f895fb\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> a87ff679a2\nc4ca4238a0 -> c4ca4238a0\nc4ca4238a0 -> c81e728d9d\nc81e728d9d -> a87ff679a2\nc81e728d9d -> c4ca4238a0\nc81e728d9d -> c9f0f895fb\nc81e728d9d -> 1679091c5a\nc81e728d9d -> eccbc87e4b\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> cfcd208495\neccbc87e4b -> cfcd208495\neccbc87e4b -> c81e728d9d\neccbc87e4b -> a87ff679a2\na87ff679a2 -> a87ff679a2\na87ff679a2 -> c4ca4238a0\na87ff679a2 -> c81e728d9d\na87ff679a2 -> c9f0f895fb\na87ff679a2 -> a87ff679a2\ne4da3b7fbb -> c9f0f895fb\ne4da3b7fbb -> c9f0f895fb\ne4da3b7fbb -> cfcd208495\ne4da3b7fbb -> eccbc87e4b\ne4da3b7fbb -> e4da3b7fbb\n1679091c5a -> c9f0f895fb\n1679091c5a -> cfcd208495\n1679091c5a -> eccbc87e4b\n1679091c5a -> c9f0f895fb\n1679091c5a -> a87ff679a2\n8f14e45fce -> e4da3b7fbb\n8f14e45fce -> cfcd208495\n8f14e45fce -> 1679091c5a\n8f14e45fce -> 1679091c5a\n8f14e45fce -> c9f0f895fb\nc9f0f895fb -> c9f0f895fb\nc9f0f895fb -> 8f14e45fce\nc9f0f895fb -> c81e728d9d\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> c9f0f895fb\n\n\nOperation:\nFind the parents of node cfcd208495.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "1679091c5a",
+          "8f14e45fce",
+          "e4da3b7fbb",
+          "eccbc87e4b"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "02-27-2026"
+      },
+      {
+        "row_index": 45,
+        "graph_head_sha256": "931589039fe1fcbfa217e73120eb73399b8ff952dbabbc26e4ded8a59e10efe4",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> c9f0f895fb\ncfcd208495 -> 1679091c5a\ncfcd208495 -> eccbc87e4b\ncfcd208495 -> c81e728d9d\ncfcd208495 -> 8f14e45fce\nc4ca4238a0 -> a87ff679a2\nc4ca4238a0 -> c81e728d9d\nc4ca4238a0 -> c81e728d9d\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> 8f14e45fce\nc81e728d9d -> e4da3b7fbb\nc81e728d9d -> c81e728d9d\nc81e728d9d -> cfcd208495\nc81e728d9d -> eccbc87e4b\nc81e728d9d -> c4ca4238a0\neccbc87e4b -> 1679091c5a\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> 1679091c5a\neccbc87e4b -> c4ca4238a0\neccbc87e4b -> a87ff679a2\na87ff679a2 -> cfcd208495\na87ff679a2 -> c81e728d9d\na87ff679a2 -> 1679091c5a\na87ff679a2 -> cfcd208495\na87ff679a2 -> a87ff679a2\ne4da3b7fbb -> a87ff679a2\ne4da3b7fbb -> eccbc87e4b\ne4da3b7fbb -> e4da3b7fbb\ne4da3b7fbb -> c9f0f895fb\ne4da3b7fbb -> c9f0f895fb\n1679091c5a -> c4ca4238a0\n1679091c5a -> eccbc87e4b\n1679091c5a -> 1679091c5a\n1679091c5a -> c81e728d9d\n1679091c5a -> 8f14e45fce\n8f14e45fce -> c9f0f895fb\n8f14e45fce -> a87ff679a2\n8f14e45fce -> c9f0f895fb\n8f14e45fce -> e4da3b7fbb\n8f14e45fce -> c9f0f895fb\nc9f0f895fb -> c9f0f895fb\nc9f0f895fb -> c9f0f895fb\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> eccbc87e4b\n\n\nOperation:\nFind the parents of node c81e728d9d.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "1679091c5a",
+          "a87ff679a2",
+          "c4ca4238a0",
+          "cfcd208495"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "02-27-2026"
+      },
+      {
+        "row_index": 46,
+        "graph_head_sha256": "1c23b8f9af8ebec3a995dbda545738ab69869d60be0be68cb6c862bd74adc752",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> c9f0f895fb\ncfcd208495 -> eccbc87e4b\ncfcd208495 -> c81e728d9d\ncfcd208495 -> c4ca4238a0\ncfcd208495 -> c4ca4238a0\nc4ca4238a0 -> eccbc87e4b\nc4ca4238a0 -> 8f14e45fce\nc4ca4238a0 -> a87ff679a2\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> eccbc87e4b\nc81e728d9d -> c81e728d9d\nc81e728d9d -> c81e728d9d\nc81e728d9d -> eccbc87e4b\nc81e728d9d -> cfcd208495\nc81e728d9d -> 8f14e45fce\neccbc87e4b -> eccbc87e4b\neccbc87e4b -> cfcd208495\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> e4da3b7fbb\na87ff679a2 -> 1679091c5a\na87ff679a2 -> c9f0f895fb\na87ff679a2 -> 1679091c5a\na87ff679a2 -> a87ff679a2\na87ff679a2 -> c9f0f895fb\ne4da3b7fbb -> e4da3b7fbb\ne4da3b7fbb -> e4da3b7fbb\ne4da3b7fbb -> c4ca4238a0\ne4da3b7fbb -> e4da3b7fbb\ne4da3b7fbb -> a87ff679a2\n1679091c5a -> 8f14e45fce\n1679091c5a -> 1679091c5a\n1679091c5a -> c81e728d9d\n1679091c5a -> e4da3b7fbb\n1679091c5a -> 1679091c5a\n8f14e45fce -> c4ca4238a0\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> a87ff679a2\n8f14e45fce -> e4da3b7fbb\n8f14e45fce -> c4ca4238a0\nc9f0f895fb -> 1679091c5a\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> 8f14e45fce\n\n\nOperation:\nFind the parents of node 1679091c5a.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "a87ff679a2",
+          "c4ca4238a0",
+          "c9f0f895fb"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "02-27-2026"
+      },
+      {
+        "row_index": 47,
+        "graph_head_sha256": "948937e6f3f0e16e8a0a31f188e1b1f7c733f0e479f2caccd9d7c720b7dc1c7f",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> c81e728d9d\ncfcd208495 -> eccbc87e4b\ncfcd208495 -> e4da3b7fbb\ncfcd208495 -> cfcd208495\ncfcd208495 -> a87ff679a2\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> c4ca4238a0\nc81e728d9d -> eccbc87e4b\nc81e728d9d -> cfcd208495\nc81e728d9d -> c4ca4238a0\nc81e728d9d -> cfcd208495\nc81e728d9d -> c81e728d9d\neccbc87e4b -> 1679091c5a\neccbc87e4b -> 1679091c5a\neccbc87e4b -> 8f14e45fce\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> e4da3b7fbb\na87ff679a2 -> eccbc87e4b\na87ff679a2 -> eccbc87e4b\na87ff679a2 -> c9f0f895fb\na87ff679a2 -> 1679091c5a\na87ff679a2 -> c9f0f895fb\ne4da3b7fbb -> c4ca4238a0\ne4da3b7fbb -> c9f0f895fb\ne4da3b7fbb -> c4ca4238a0\ne4da3b7fbb -> 8f14e45fce\ne4da3b7fbb -> c81e728d9d\n1679091c5a -> 1679091c5a\n1679091c5a -> 8f14e45fce\n1679091c5a -> c4ca4238a0\n1679091c5a -> cfcd208495\n1679091c5a -> a87ff679a2\n8f14e45fce -> c81e728d9d\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> c81e728d9d\n8f14e45fce -> c9f0f895fb\nc9f0f895fb -> cfcd208495\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> a87ff679a2\n\n\nOperation:\nFind the parents of node c4ca4238a0.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "1679091c5a",
+          "c81e728d9d",
+          "e4da3b7fbb"
+        ],
+        "prompt_chars": 2663,
+        "problem_type": "parents",
+        "date_added": "02-27-2026"
+      },
+      {
+        "row_index": 48,
+        "graph_head_sha256": "32d3c5f4cad7b0a31c2b044709b242ebd56d6d2f54de3435226c1611dd529561",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> 6f4922f455\ncfcd208495 -> eccbc87e4b\nc4ca4238a0 -> 98f1370821\nc4ca4238a0 -> aab3238922\nc81e728d9d -> 1f0e3dad99\nc81e728d9d -> c81e728d9d\neccbc87e4b -> aab3238922\neccbc87e4b -> 3c59dc048e\na87ff679a2 -> aab3238922\na87ff679a2 -> c4ca4238a0\ne4da3b7fbb -> c51ce410c1\ne4da3b7fbb -> 45c48cce2e\n1679091c5a -> 98f1370821\n1679091c5a -> cfcd208495\n8f14e45fce -> c74d97b01e\n8f14e45fce -> 45c48cce2e\nc9f0f895fb -> 98f1370821\nc9f0f895fb -> c4ca4238a0\n45c48cce2e -> c51ce410c1\n45c48cce2e -> d3d9446802\nd3d9446802 -> c74d97b01e\nd3d9446802 -> c9f0f895fb\n6512bd43d9 -> 98f1370821\n6512bd43d9 -> aab3238922\nc20ad4d76f -> 6512bd43d9\nc20ad4d76f -> 3c59dc048e\nc51ce410c1 -> eccbc87e4b\nc51ce410c1 -> b6d767d2f8\naab3238922 -> aab3238922\naab3238922 -> 98f1370821\n9bf31c7ff0 -> aab3238922\n9bf31c7ff0 -> 98f1370821\nc74d97b01e -> b6d767d2f8\nc74d97b01e -> 70efdf2ec9\n70efdf2ec9 -> d3d9446802\n70efdf2ec9 -> 1679091c5a\n6f4922f455 -> c20ad4d76f\n6f4922f455 -> 9bf31c7ff0\n1f0e3dad99 -> 6512bd43d9\n1f0e3dad99 -> aab3238922\n98f1370821 -> eccbc87e4b\n98f1370821 -> d3d9446802\n3c59dc048e -> cfcd208495\n3c59dc048e -> c51ce410c1\nb6d767d2f8 -> 9bf31c7ff0\nb6d767d2f8 -> c81e728d9d\n\n\nOperation:\nFind the parents of node 3c59dc048e.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "c20ad4d76f",
+          "eccbc87e4b"
+        ],
+        "prompt_chars": 2688,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 49,
+        "graph_head_sha256": "9b94921748890565bc8ef03824f5b9ca2597b90dfe0a79bcad34ab579fe23d05",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> a87ff679a2\ncfcd208495 -> cfcd208495\ncfcd208495 -> c81e728d9d\ncfcd208495 -> a87ff679a2\nc4ca4238a0 -> c81e728d9d\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> 8f14e45fce\nc4ca4238a0 -> e4da3b7fbb\nc81e728d9d -> 1679091c5a\nc81e728d9d -> eccbc87e4b\nc81e728d9d -> 45c48cce2e\nc81e728d9d -> c81e728d9d\neccbc87e4b -> eccbc87e4b\neccbc87e4b -> c4ca4238a0\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> a87ff679a2\na87ff679a2 -> 1679091c5a\na87ff679a2 -> a87ff679a2\na87ff679a2 -> c9f0f895fb\na87ff679a2 -> c9f0f895fb\ne4da3b7fbb -> 1679091c5a\ne4da3b7fbb -> eccbc87e4b\ne4da3b7fbb -> eccbc87e4b\ne4da3b7fbb -> c4ca4238a0\n1679091c5a -> eccbc87e4b\n1679091c5a -> 1679091c5a\n1679091c5a -> c4ca4238a0\n1679091c5a -> d3d9446802\n8f14e45fce -> 8f14e45fce\n8f14e45fce -> d3d9446802\n8f14e45fce -> c9f0f895fb\n8f14e45fce -> a87ff679a2\nc9f0f895fb -> c4ca4238a0\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> 1679091c5a\n45c48cce2e -> eccbc87e4b\n45c48cce2e -> c4ca4238a0\n45c48cce2e -> d3d9446802\n45c48cce2e -> 45c48cce2e\nd3d9446802 -> eccbc87e4b\nd3d9446802 -> c9f0f895fb\nd3d9446802 -> 8f14e45fce\nd3d9446802 -> eccbc87e4b\n\n\nOperation:\nFind the parents of node c4ca4238a0.\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "e4da3b7fbb",
+          "1679091c5a",
+          "eccbc87e4b",
+          "45c48cce2e",
+          "c9f0f895fb"
+        ],
+        "prompt_chars": 2638,
+        "problem_type": "parents",
+        "date_added": "04-12-2025"
+      }
+    ],
+    "bfs": [
+      {
+        "row_index": 416,
+        "graph_head_sha256": "28c2eb5b09bb5e8f9fbf1147cf86f4f07698da350c1502340d05c59e7c2d6349",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> c81e728d9d\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> 1679091c5a\nc4ca4238a0 -> d3d9446802\nc4ca4238a0 -> c81e728d9d\nc4ca4238a0 -> c81e728d9d\nc4ca4238a0 -> a87ff679a2\nc81e728d9d -> a87ff679a2\nc81e728d9d -> 1679091c5a\nc81e728d9d -> c81e728d9d\nc81e728d9d -> 1679091c5a\neccbc87e4b -> a87ff679a2\neccbc87e4b -> d3d9446802\neccbc87e4b -> 1679091c5a\neccbc87e4b -> c81e728d9d\na87ff679a2 -> c4ca4238a0\na87ff679a2 -> c4ca4238a0\na87ff679a2 -> a87ff679a2\na87ff679a2 -> 1679091c5a\ne4da3b7fbb -> eccbc87e4b\ne4da3b7fbb -> c81e728d9d\ne4da3b7fbb -> c81e728d9d\ne4da3b7fbb -> a87ff679a2\n1679091c5a -> d3d9446802\n1679091c5a -> 1679091c5a\n1679091c5a -> a87ff679a2\n1679091c5a -> 1679091c5a\n8f14e45fce -> c4ca4238a0\n8f14e45fce -> d3d9446802\n8f14e45fce -> 1679091c5a\n8f14e45fce -> 8f14e45fce\nc9f0f895fb -> 8f14e45fce\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> c4ca4238a0\nc9f0f895fb -> c4ca4238a0\n45c48cce2e -> c9f0f895fb\n45c48cce2e -> c9f0f895fb\n45c48cce2e -> cfcd208495\n45c48cce2e -> c81e728d9d\nd3d9446802 -> 8f14e45fce\nd3d9446802 -> cfcd208495\nd3d9446802 -> cfcd208495\nd3d9446802 -> c9f0f895fb\n\n\nOperation:\nPerform a BFS from node a87ff679a2 and return only the nodes at exactly depth 5 (not nodes at intermediate depths).\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [],
+        "prompt_chars": 2650,
+        "problem_type": "bfs",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 417,
+        "graph_head_sha256": "456697eac02525b4fc26a767c37b544019f272de02aaf789b4e7d59ea8cb7f65",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> 1679091c5a\ncfcd208495 -> c81e728d9d\ncfcd208495 -> c81e728d9d\nc4ca4238a0 -> c4ca4238a0\nc4ca4238a0 -> d3d9446802\nc4ca4238a0 -> cfcd208495\nc81e728d9d -> c51ce410c1\nc81e728d9d -> 8f14e45fce\nc81e728d9d -> c20ad4d76f\neccbc87e4b -> 1679091c5a\neccbc87e4b -> c51ce410c1\neccbc87e4b -> c4ca4238a0\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> 8f14e45fce\na87ff679a2 -> c81e728d9d\ne4da3b7fbb -> c51ce410c1\ne4da3b7fbb -> d3d9446802\ne4da3b7fbb -> 8f14e45fce\n1679091c5a -> 6512bd43d9\n1679091c5a -> e4da3b7fbb\n1679091c5a -> e4da3b7fbb\n8f14e45fce -> a87ff679a2\n8f14e45fce -> c9f0f895fb\n8f14e45fce -> c20ad4d76f\nc9f0f895fb -> c51ce410c1\nc9f0f895fb -> c9f0f895fb\nc9f0f895fb -> c4ca4238a0\n45c48cce2e -> 6512bd43d9\n45c48cce2e -> 1679091c5a\n45c48cce2e -> e4da3b7fbb\nd3d9446802 -> c81e728d9d\nd3d9446802 -> aab3238922\nd3d9446802 -> 6512bd43d9\n6512bd43d9 -> c81e728d9d\n6512bd43d9 -> aab3238922\n6512bd43d9 -> 45c48cce2e\nc20ad4d76f -> eccbc87e4b\nc20ad4d76f -> c81e728d9d\nc20ad4d76f -> d3d9446802\nc51ce410c1 -> eccbc87e4b\nc51ce410c1 -> 6512bd43d9\nc51ce410c1 -> 45c48cce2e\naab3238922 -> c4ca4238a0\naab3238922 -> aab3238922\naab3238922 -> 45c48cce2e\n\n\nOperation:\nPerform a BFS from node c9f0f895fb and return only the nodes at exactly depth 1 (not nodes at intermediate depths).\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "c4ca4238a0",
+          "c51ce410c1"
+        ],
+        "prompt_chars": 2675,
+        "problem_type": "bfs",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 418,
+        "graph_head_sha256": "691ad6a5e56662464039ab5f3bff38e6c78966e6cbdadce894afa9d9410c8e34",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> cfcd208495\ncfcd208495 -> a87ff679a2\ncfcd208495 -> a87ff679a2\ncfcd208495 -> d3d9446802\nc4ca4238a0 -> d3d9446802\nc4ca4238a0 -> d3d9446802\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> e4da3b7fbb\nc81e728d9d -> c9f0f895fb\nc81e728d9d -> c9f0f895fb\nc81e728d9d -> 8f14e45fce\nc81e728d9d -> c9f0f895fb\neccbc87e4b -> a87ff679a2\neccbc87e4b -> c81e728d9d\neccbc87e4b -> 8f14e45fce\neccbc87e4b -> 45c48cce2e\na87ff679a2 -> 1679091c5a\na87ff679a2 -> e4da3b7fbb\na87ff679a2 -> 45c48cce2e\na87ff679a2 -> eccbc87e4b\ne4da3b7fbb -> a87ff679a2\ne4da3b7fbb -> eccbc87e4b\ne4da3b7fbb -> 45c48cce2e\ne4da3b7fbb -> 45c48cce2e\n1679091c5a -> 45c48cce2e\n1679091c5a -> 8f14e45fce\n1679091c5a -> c4ca4238a0\n1679091c5a -> a87ff679a2\n8f14e45fce -> c81e728d9d\n8f14e45fce -> c81e728d9d\n8f14e45fce -> c9f0f895fb\n8f14e45fce -> eccbc87e4b\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> 1679091c5a\nc9f0f895fb -> 45c48cce2e\nc9f0f895fb -> c4ca4238a0\n45c48cce2e -> d3d9446802\n45c48cce2e -> 8f14e45fce\n45c48cce2e -> e4da3b7fbb\n45c48cce2e -> c9f0f895fb\nd3d9446802 -> c4ca4238a0\nd3d9446802 -> d3d9446802\nd3d9446802 -> e4da3b7fbb\nd3d9446802 -> 1679091c5a\n\n\nOperation:\nPerform a BFS from node 1679091c5a and return only the nodes at exactly depth 2 (not nodes at intermediate depths).\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "c81e728d9d",
+          "e4da3b7fbb",
+          "d3d9446802",
+          "eccbc87e4b",
+          "c9f0f895fb"
+        ],
+        "prompt_chars": 2650,
+        "problem_type": "bfs",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 419,
+        "graph_head_sha256": "d70ef481bf6a2551272b889c0de1beefcdbd0d29b5f6c854341abfe0fa0fa01f",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> c51ce410c1\ncfcd208495 -> aab3238922\ncfcd208495 -> c9f0f895fb\nc4ca4238a0 -> eccbc87e4b\nc4ca4238a0 -> 8f14e45fce\nc4ca4238a0 -> 1679091c5a\nc81e728d9d -> c9f0f895fb\nc81e728d9d -> c4ca4238a0\nc81e728d9d -> c81e728d9d\neccbc87e4b -> 6512bd43d9\neccbc87e4b -> aab3238922\neccbc87e4b -> eccbc87e4b\na87ff679a2 -> c9f0f895fb\na87ff679a2 -> aab3238922\na87ff679a2 -> c51ce410c1\ne4da3b7fbb -> c81e728d9d\ne4da3b7fbb -> c81e728d9d\ne4da3b7fbb -> 8f14e45fce\n1679091c5a -> 8f14e45fce\n1679091c5a -> c20ad4d76f\n1679091c5a -> e4da3b7fbb\n8f14e45fce -> c20ad4d76f\n8f14e45fce -> c9f0f895fb\n8f14e45fce -> cfcd208495\nc9f0f895fb -> cfcd208495\nc9f0f895fb -> d3d9446802\nc9f0f895fb -> e4da3b7fbb\n45c48cce2e -> 1679091c5a\n45c48cce2e -> eccbc87e4b\n45c48cce2e -> c20ad4d76f\nd3d9446802 -> c20ad4d76f\nd3d9446802 -> c81e728d9d\nd3d9446802 -> c9f0f895fb\n6512bd43d9 -> c9f0f895fb\n6512bd43d9 -> aab3238922\n6512bd43d9 -> e4da3b7fbb\nc20ad4d76f -> cfcd208495\nc20ad4d76f -> aab3238922\nc20ad4d76f -> c51ce410c1\nc51ce410c1 -> 1679091c5a\nc51ce410c1 -> 45c48cce2e\nc51ce410c1 -> aab3238922\naab3238922 -> d3d9446802\naab3238922 -> cfcd208495\naab3238922 -> 6512bd43d9\n\n\nOperation:\nPerform a BFS from node a87ff679a2 and return only the nodes at exactly depth 2 (not nodes at intermediate depths).\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "cfcd208495",
+          "e4da3b7fbb",
+          "1679091c5a",
+          "d3d9446802",
+          "45c48cce2e",
+          "6512bd43d9"
+        ],
+        "prompt_chars": 2675,
+        "problem_type": "bfs",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 420,
+        "graph_head_sha256": "d36169b2a71d4c7854c15bd3d76b27880773ac9bdf51c16424544ac5bb3c16aa",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> 45c48cce2e\ncfcd208495 -> 1679091c5a\ncfcd208495 -> c81e728d9d\ncfcd208495 -> d3d9446802\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> d3d9446802\nc4ca4238a0 -> 45c48cce2e\nc4ca4238a0 -> 8f14e45fce\nc81e728d9d -> 1679091c5a\nc81e728d9d -> eccbc87e4b\nc81e728d9d -> 45c48cce2e\nc81e728d9d -> eccbc87e4b\neccbc87e4b -> eccbc87e4b\neccbc87e4b -> cfcd208495\neccbc87e4b -> c81e728d9d\neccbc87e4b -> 1679091c5a\na87ff679a2 -> 1679091c5a\na87ff679a2 -> 1679091c5a\na87ff679a2 -> 1679091c5a\na87ff679a2 -> e4da3b7fbb\ne4da3b7fbb -> d3d9446802\ne4da3b7fbb -> a87ff679a2\ne4da3b7fbb -> d3d9446802\ne4da3b7fbb -> a87ff679a2\n1679091c5a -> d3d9446802\n1679091c5a -> 45c48cce2e\n1679091c5a -> eccbc87e4b\n1679091c5a -> e4da3b7fbb\n8f14e45fce -> 8f14e45fce\n8f14e45fce -> cfcd208495\n8f14e45fce -> e4da3b7fbb\n8f14e45fce -> cfcd208495\nc9f0f895fb -> e4da3b7fbb\nc9f0f895fb -> c4ca4238a0\nc9f0f895fb -> 1679091c5a\nc9f0f895fb -> 45c48cce2e\n45c48cce2e -> 45c48cce2e\n45c48cce2e -> 8f14e45fce\n45c48cce2e -> cfcd208495\n45c48cce2e -> c81e728d9d\nd3d9446802 -> d3d9446802\nd3d9446802 -> eccbc87e4b\nd3d9446802 -> c81e728d9d\nd3d9446802 -> c4ca4238a0\n\n\nOperation:\nPerform a BFS from node 45c48cce2e and return only the nodes at exactly depth 1 (not nodes at intermediate depths).\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "c81e728d9d",
+          "cfcd208495",
+          "8f14e45fce"
+        ],
+        "prompt_chars": 2650,
+        "problem_type": "bfs",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 421,
+        "graph_head_sha256": "d9dfe2b7155fd1c402b66024132fd5ece8b39e9ceb50664d030380cecb99b2f8",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> eccbc87e4b\ncfcd208495 -> a87ff679a2\ncfcd208495 -> cfcd208495\ncfcd208495 -> c81e728d9d\ncfcd208495 -> eccbc87e4b\nc4ca4238a0 -> 8f14e45fce\nc4ca4238a0 -> 8f14e45fce\nc4ca4238a0 -> e4da3b7fbb\nc4ca4238a0 -> cfcd208495\nc4ca4238a0 -> c81e728d9d\nc81e728d9d -> c9f0f895fb\nc81e728d9d -> a87ff679a2\nc81e728d9d -> c81e728d9d\nc81e728d9d -> 8f14e45fce\nc81e728d9d -> 8f14e45fce\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> 1679091c5a\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> a87ff679a2\na87ff679a2 -> eccbc87e4b\na87ff679a2 -> c4ca4238a0\na87ff679a2 -> cfcd208495\na87ff679a2 -> 1679091c5a\na87ff679a2 -> eccbc87e4b\ne4da3b7fbb -> e4da3b7fbb\ne4da3b7fbb -> 1679091c5a\ne4da3b7fbb -> c81e728d9d\ne4da3b7fbb -> 8f14e45fce\ne4da3b7fbb -> 8f14e45fce\n1679091c5a -> 8f14e45fce\n1679091c5a -> 8f14e45fce\n1679091c5a -> 1679091c5a\n1679091c5a -> c4ca4238a0\n1679091c5a -> c4ca4238a0\n8f14e45fce -> c4ca4238a0\n8f14e45fce -> a87ff679a2\n8f14e45fce -> c9f0f895fb\n8f14e45fce -> a87ff679a2\n8f14e45fce -> c4ca4238a0\nc9f0f895fb -> e4da3b7fbb\nc9f0f895fb -> 8f14e45fce\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> cfcd208495\nc9f0f895fb -> eccbc87e4b\n\n\nOperation:\nPerform a BFS from node 8f14e45fce and return only the nodes at exactly depth 2 (not nodes at intermediate depths).\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "c81e728d9d",
+          "cfcd208495",
+          "e4da3b7fbb",
+          "1679091c5a",
+          "eccbc87e4b"
+        ],
+        "prompt_chars": 2675,
+        "problem_type": "bfs",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 422,
+        "graph_head_sha256": "140ab3404ad4563b338bbb9eab54742353f0750bb238c8d7814be33f10633415",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> c81e728d9d\ncfcd208495 -> cfcd208495\ncfcd208495 -> a87ff679a2\ncfcd208495 -> c81e728d9d\nc4ca4238a0 -> eccbc87e4b\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> cfcd208495\nc4ca4238a0 -> cfcd208495\nc4ca4238a0 -> cfcd208495\nc81e728d9d -> a87ff679a2\nc81e728d9d -> e4da3b7fbb\nc81e728d9d -> e4da3b7fbb\nc81e728d9d -> c4ca4238a0\nc81e728d9d -> e4da3b7fbb\neccbc87e4b -> eccbc87e4b\neccbc87e4b -> 8f14e45fce\neccbc87e4b -> c81e728d9d\neccbc87e4b -> 1679091c5a\neccbc87e4b -> a87ff679a2\na87ff679a2 -> a87ff679a2\na87ff679a2 -> eccbc87e4b\na87ff679a2 -> c81e728d9d\na87ff679a2 -> 1679091c5a\na87ff679a2 -> a87ff679a2\ne4da3b7fbb -> a87ff679a2\ne4da3b7fbb -> c81e728d9d\ne4da3b7fbb -> cfcd208495\ne4da3b7fbb -> c4ca4238a0\ne4da3b7fbb -> e4da3b7fbb\n1679091c5a -> 8f14e45fce\n1679091c5a -> 1679091c5a\n1679091c5a -> c81e728d9d\n1679091c5a -> cfcd208495\n1679091c5a -> 1679091c5a\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> 8f14e45fce\n8f14e45fce -> c4ca4238a0\n8f14e45fce -> cfcd208495\n8f14e45fce -> c9f0f895fb\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> 1679091c5a\nc9f0f895fb -> cfcd208495\nc9f0f895fb -> a87ff679a2\nc9f0f895fb -> 1679091c5a\n\n\nOperation:\nPerform a BFS from node 1679091c5a and return only the nodes at exactly depth 5 (not nodes at intermediate depths).\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [],
+        "prompt_chars": 2675,
+        "problem_type": "bfs",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 423,
+        "graph_head_sha256": "d84d97d1322c58477f3ccae234b5a671a62f4a330992fbb3f244431ecbd22a1b",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> c4ca4238a0\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> 8f14e45fce\ncfcd208495 -> cfcd208495\nc4ca4238a0 -> c9f0f895fb\nc4ca4238a0 -> eccbc87e4b\nc4ca4238a0 -> 45c48cce2e\nc4ca4238a0 -> c4ca4238a0\nc81e728d9d -> c81e728d9d\nc81e728d9d -> c9f0f895fb\nc81e728d9d -> e4da3b7fbb\nc81e728d9d -> 1679091c5a\neccbc87e4b -> 1679091c5a\neccbc87e4b -> c9f0f895fb\neccbc87e4b -> a87ff679a2\neccbc87e4b -> c81e728d9d\na87ff679a2 -> a87ff679a2\na87ff679a2 -> a87ff679a2\na87ff679a2 -> 1679091c5a\na87ff679a2 -> a87ff679a2\ne4da3b7fbb -> 45c48cce2e\ne4da3b7fbb -> c81e728d9d\ne4da3b7fbb -> c81e728d9d\ne4da3b7fbb -> c9f0f895fb\n1679091c5a -> d3d9446802\n1679091c5a -> c9f0f895fb\n1679091c5a -> e4da3b7fbb\n1679091c5a -> c4ca4238a0\n8f14e45fce -> e4da3b7fbb\n8f14e45fce -> eccbc87e4b\n8f14e45fce -> e4da3b7fbb\n8f14e45fce -> 1679091c5a\nc9f0f895fb -> d3d9446802\nc9f0f895fb -> 45c48cce2e\nc9f0f895fb -> c81e728d9d\nc9f0f895fb -> cfcd208495\n45c48cce2e -> c81e728d9d\n45c48cce2e -> e4da3b7fbb\n45c48cce2e -> cfcd208495\n45c48cce2e -> e4da3b7fbb\nd3d9446802 -> eccbc87e4b\nd3d9446802 -> 1679091c5a\nd3d9446802 -> 45c48cce2e\nd3d9446802 -> 8f14e45fce\n\n\nOperation:\nPerform a BFS from node 45c48cce2e and return only the nodes at exactly depth 2 (not nodes at intermediate depths).\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [
+          "1679091c5a",
+          "c4ca4238a0",
+          "c9f0f895fb",
+          "8f14e45fce"
+        ],
+        "prompt_chars": 2650,
+        "problem_type": "bfs",
+        "date_added": "04-12-2025"
+      },
+      {
+        "row_index": 424,
+        "graph_head_sha256": "6dd6df71dd14c7bc64d1d74f57c3870255e87b75d9d45863f750e1bd993ceaf4",
+        "prompt": "\nYou will be given a graph as a list of directed edges. All nodes are at least degree 1. You will also get a description of an operation to perform on the graph.\nYour job is to execute the operation on the graph and return the set of nodes that the operation results in. If asked for a breadth-first search (BFS), only return the nodes that are both reachable and exactly at that depth (not nodes at intermediate depths), and do not return the starting node. If asked for the parents of a node, only return the nodes that have an edge leading to the given node, do not return the given node itself.\n\nHere is an example:\n<begin example>\n\nThe graph has the following edges:\nuvwx -> alke\nabcd -> uvwx\nabcd -> efgh\nefgh -> uvwx\n\nExample 1:\nOperation:\nPerform a BFS from node abcd with depth 1.\nFinal Answer: [uvwx, efgh]\n\nExample 2:\nOperation:\nPerform a BFS from node alke with depth 1.\nFinal Answer: []\n\nExample 3:\nOperation:\nFind the parents of node uvwx.\nFinal Answer: [abcd, efgh]\n\nExample 4:\nOperation:\nFind the parents of node abcd.\nFinal Answer: []\n\n<end example>\nHere is the graph to operate on:\nThe graph has the following edges:\ncfcd208495 -> d3d9446802\ncfcd208495 -> c81e728d9d\ncfcd208495 -> 45c48cce2e\nc4ca4238a0 -> 1679091c5a\nc4ca4238a0 -> d3d9446802\nc4ca4238a0 -> 8f14e45fce\nc81e728d9d -> d3d9446802\nc81e728d9d -> c9f0f895fb\nc81e728d9d -> 1679091c5a\neccbc87e4b -> 1679091c5a\neccbc87e4b -> e4da3b7fbb\neccbc87e4b -> e4da3b7fbb\na87ff679a2 -> e4da3b7fbb\na87ff679a2 -> aab3238922\na87ff679a2 -> 45c48cce2e\ne4da3b7fbb -> c51ce410c1\ne4da3b7fbb -> c9f0f895fb\ne4da3b7fbb -> cfcd208495\n1679091c5a -> eccbc87e4b\n1679091c5a -> c81e728d9d\n1679091c5a -> a87ff679a2\n8f14e45fce -> c9f0f895fb\n8f14e45fce -> c9f0f895fb\n8f14e45fce -> 45c48cce2e\nc9f0f895fb -> eccbc87e4b\nc9f0f895fb -> 1679091c5a\nc9f0f895fb -> c4ca4238a0\n45c48cce2e -> cfcd208495\n45c48cce2e -> aab3238922\n45c48cce2e -> eccbc87e4b\nd3d9446802 -> c81e728d9d\nd3d9446802 -> e4da3b7fbb\nd3d9446802 -> cfcd208495\n6512bd43d9 -> 1679091c5a\n6512bd43d9 -> cfcd208495\n6512bd43d9 -> aab3238922\nc20ad4d76f -> c4ca4238a0\nc20ad4d76f -> c81e728d9d\nc20ad4d76f -> cfcd208495\nc51ce410c1 -> d3d9446802\nc51ce410c1 -> d3d9446802\nc51ce410c1 -> c4ca4238a0\naab3238922 -> cfcd208495\naab3238922 -> 45c48cce2e\naab3238922 -> c51ce410c1\n\n\nOperation:\nPerform a BFS from node 1679091c5a and return only the nodes at exactly depth 5 (not nodes at intermediate depths).\n\nYou should reason through the operation step by step, and then return the set of nodes that the operation results in. Return your final answer as a list of nodes in the very last line of your response. For example, if the operation returns the set of nodes [node1, node2, node3], your response should be:\nFinal Answer: [node1, node2, node3]\nIf the operation returns the empty set, your response should be:\nFinal Answer: []\n",
+        "answer_nodes": [],
+        "prompt_chars": 2675,
+        "problem_type": "bfs",
+        "date_added": "04-12-2025"
+      }
+    ]
+  },
+  "exclusion_archives": {
+    "logs\\official_graph_budget_extension\\frozen.json": "64ed7eb78161929f63e4c8eca9de7883b22cad0a39f390a95ee5756eae539b4d",
+    "logs\\official_graph_five_trace\\frozen.json": "65554673c560b292a2aec8fdf1cbfb89dad6a2259f88ac13e4766e7148a4b7dd",
+    "logs\\official_graph_identity_recode\\frozen.json": "74d9118a1163a13aa7c6d613f256684ad88e026169f296bb08b8d0283e0822fe",
+    "logs\\official_graph_indexed_source\\frozen.json": "ba5527d26e80a4ee140a561e714ac004d07ed3ef6b898c83dfb263fcc5365fe1",
+    "logs\\official_graph_long_boundary\\frozen.json": "178020f2ebf0fc37de2a2efb3add1152d3a5d95eca986ca1cf22cd90097ff929",
+    "logs\\official_graph_native_order\\frozen.json": "6ca0c2ff1b23875aa251f8dff988186521287a4b60f66e6612a1ee9c4c5ee95d",
+    "logs\\official_graph_native_probe\\frozen.json": "7b1c6b9004a07979e9512b3bcb3d0faa94b48c58d603cebea3341f67ca63ae67",
+    "logs\\official_graph_order_replication\\frozen.json": "3a449bc5925e0c20f91f0519f15e014c47517cc82b02affd67fce02e9703a704",
+    "logs\\official_graph_reasoning_mode\\frozen.json": "0519746b7262a90ecbfed0dd6e6bc931360e330ccf0d10355811f37ee911c894",
+    "logs\\official_graph_sampling_control\\frozen.json": "a5ab92cc6da2ee4cf9f3e933f84b3a371d03c8cddf4e7bf720071f76946d7004"
+  },
+  "orders": [
+    [
+      [
+        "direct",
+        "pre",
+        "post"
+      ],
+      [
+        "post",
+        "direct",
+        "pre"
+      ],
+      [
+        "pre",
+        "direct",
+        "post"
+      ],
+      [
+        "post",
+        "pre",
+        "direct"
+      ],
+      [
+        "pre",
+        "direct",
+        "post"
+      ]
+    ],
+    [
+      [
+        "post",
+        "pre",
+        "direct"
+      ],
+      [
+        "pre",
+        "direct",
+        "post"
+      ],
+      [
+        "pre",
+        "direct",
+        "post"
+      ],
+      [
+        "direct",
+        "post",
+        "pre"
+      ],
+      [
+        "pre",
+        "direct",
+        "post"
+      ]
+    ],
+    [
+      [
+        "post",
+        "direct",
+        "pre"
+      ],
+      [
+        "direct",
+        "post",
+        "pre"
+      ],
+      [
+        "pre",
+        "post",
+        "direct"
+      ],
+      [
+        "direct",
+        "pre",
+        "post"
+      ],
+      [
+        "direct",
+        "post",
+        "pre"
+      ]
+    ],
+    [
+      [
+        "post",
+        "direct",
+        "pre"
+      ],
+      [
+        "direct",
+        "pre",
+        "post"
+      ],
+      [
+        "pre",
+        "post",
+        "direct"
+      ],
+      [
+        "post",
+        "direct",
+        "pre"
+      ],
+      [
+        "direct",
+        "post",
+        "pre"
+      ]
+    ],
+    [
+      [
+        "post",
+        "direct",
+        "pre"
+      ],
+      [
+        "pre",
+        "post",
+        "direct"
+      ],
+      [
+        "pre",
+        "direct",
+        "post"
+      ],
+      [
+        "pre",
+        "post",
+        "direct"
+      ],
+      [
+        "pre",
+        "post",
+        "direct"
+      ]
+    ],
+    [
+      [
+        "direct",
+        "pre",
+        "post"
+      ],
+      [
+        "post",
+        "pre",
+        "direct"
+      ],
+      [
+        "post",
+        "pre",
+        "direct"
+      ],
+      [
+        "pre",
+        "post",
+        "direct"
+      ],
+      [
+        "post",
+        "direct",
+        "pre"
+      ]
+    ],
+    [
+      [
+        "pre",
+        "direct",
+        "post"
+      ],
+      [
+        "pre",
+        "post",
+        "direct"
+      ],
+      [
+        "direct",
+        "post",
+        "pre"
+      ],
+      [
+        "direct",
+        "post",
+        "pre"
+      ],
+      [
+        "post",
+        "pre",
+        "direct"
+      ]
+    ],
+    [
+      [
+        "post",
+        "direct",
+        "pre"
+      ],
+      [
+        "direct",
+        "post",
+        "pre"
+      ],
+      [
+        "post",
+        "direct",
+        "pre"
+      ],
+      [
+        "direct",
+        "post",
+        "pre"
+      ],
+      [
+        "pre",
+        "post",
+        "direct"
+      ]
+    ],
+    [
+      [
+        "pre",
+        "direct",
+        "post"
+      ],
+      [
+        "post",
+        "pre",
+        "direct"
+      ],
+      [
+        "pre",
+        "post",
+        "direct"
+      ],
+      [
+        "direct",
+        "pre",
+        "post"
+      ],
+      [
+        "post",
+        "direct",
+        "pre"
+      ]
+    ],
+    [
+      [
+        "post",
+        "pre",
+        "direct"
+      ],
+      [
+        "direct",
+        "pre",
+        "post"
+      ],
+      [
+        "pre",
+        "post",
+        "direct"
+      ],
+      [
+        "post",
+        "direct",
+        "pre"
+      ],
+      [
+        "direct",
+        "post",
+        "pre"
+      ]
+    ],
+    [
+      [
+        "direct",
+        "pre",
+        "post"
+      ],
+      [
+        "direct",
+        "pre",
+        "post"
+      ],
+      [
+        "post",
+        "direct",
+        "pre"
+      ],
+      [
+        "pre",
+        "post",
+        "direct"
+      ],
+      [
+        "pre",
+        "direct",
+        "post"
+      ]
+    ],
+    [
+      [
+        "direct",
+        "post",
+        "pre"
+      ],
+      [
+        "pre",
+        "direct",
+        "post"
+      ],
+      [
+        "pre",
+        "direct",
+        "post"
+      ],
+      [
+        "direct",
+        "post",
+        "pre"
+      ],
+      [
+        "post",
+        "pre",
+        "direct"
+      ]
+    ]
+  ],
+  "source_seeds": [
+    202610061,
+    202610062,
+    202610063,
+    202610064,
+    202610065
+  ],
+  "reader_seeds": [
+    202610071,
+    202610072,
+    202610073,
+    202610074,
+    202610075
+  ],
+  "identity": {
+    "name": "qwen3:4b",
+    "model": "qwen3:4b",
+    "modified_at": "2026-09-18T13:14:36.6149998+08:00",
+    "size": 2497293931,
+    "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "4.0B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560
+    },
+    "capabilities": [
+      "completion",
+      "tools",
+      "thinking"
+    ]
+  },
+  "inventory": {
+    "models": [
+      {
+        "name": "qwen3:8b",
+        "model": "qwen3:8b",
+        "modified_at": "2026-09-30T09:40:32.4117571+08:00",
+        "size": 5225388164,
+        "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "8.2B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 40960,
+          "embedding_length": 4096
+        },
+        "capabilities": [
+          "completion",
+          "tools",
+          "thinking"
+        ]
+      },
+      {
+        "name": "qwen2.5:3b-instruct",
+        "model": "qwen2.5:3b-instruct",
+        "modified_at": "2026-09-29T10:23:24.0269854+08:00",
+        "size": 1929912432,
+        "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen2",
+          "families": [
+            "qwen2"
+          ],
+          "parameter_size": "3.1B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 32768,
+          "embedding_length": 2048
+        },
+        "capabilities": [
+          "completion",
+          "tools"
+        ]
+      },
+      {
+        "name": "qwen3:1.7b",
+        "model": "qwen3:1.7b",
+        "modified_at": "2026-09-29T10:15:44.3088373+08:00",
+        "size": 1359293444,
+        "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "2.0B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 40960,
+          "embedding_length": 2048
+        },
+        "capabilities": [
+          "completion",
+          "tools",
+          "thinking"
+        ]
+      },
+      {
+        "name": "nomic-embed-text:latest",
+        "model": "nomic-embed-text:latest",
+        "modified_at": "2026-09-21T00:14:28.4573049+08:00",
+        "size": 274302450,
+        "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "nomic-bert",
+          "families": [
+            "nomic-bert"
+          ],
+          "parameter_size": "137M",
+          "quantization_level": "F16",
+          "context_length": 2048,
+          "embedding_length": 768
+        },
+        "capabilities": [
+          "embedding"
+        ]
+      },
+      {
+        "name": "qwen3:4b",
+        "model": "qwen3:4b",
+        "modified_at": "2026-09-18T13:14:36.6149998+08:00",
+        "size": 2497293931,
+        "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 2560
+        },
+        "capabilities": [
+          "completion",
+          "tools",
+          "thinking"
+        ]
+      },
+      {
+        "name": "openbmb/minicpm5-2b:latest",
+        "model": "openbmb/minicpm5-2b:latest",
+        "modified_at": "2026-09-14T11:17:19.9681905+08:00",
+        "size": 1561319547,
+        "digest": "71a44e98400fbd490d66332a0ebba31143479a714987c13f45c82e94025cbfa7",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "llama",
+          "families": [
+            "llama"
+          ],
+          "parameter_size": "2.5B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 131072,
+          "embedding_length": 2048
+        },
+        "capabilities": [
+          "tools",
+          "thinking",
+          "completion"
+        ]
+      },
+      {
+        "name": "openbmb/minicpm-o4.5:latest",
+        "model": "openbmb/minicpm-o4.5:latest",
+        "modified_at": "2026-09-10T10:23:12.2428177+08:00",
+        "size": 6121828780,
+        "digest": "e900f7386920e4eeef9a24bf0ab6fcd29ab37fc3439979af6387e49c2893c5db",
+        "details": {
+          "parent_model": "/Users/tianchi/.ollama/models/blobs/sha256-1237a97ee081b8abebc47aa7dad565701e8f5f904cdc92f6723ac4281bbc0932",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3",
+            "clip"
+          ],
+          "parameter_size": "8.2B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 40960,
+          "embedding_length": 4096
+        },
+        "capabilities": [
+          "tools",
+          "thinking",
+          "completion",
+          "vision"
+        ]
+      },
+      {
+        "name": "qwopus-glm18b:latest",
+        "model": "qwopus-glm18b:latest",
+        "modified_at": "2026-07-05T21:29:34.8711342+08:00",
+        "size": 9836642228,
+        "digest": "89af5161f5c022395fd02ed4a0e9ed0cf22e8bfcf13335470e94a44d0c56424e",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen35",
+          "families": [
+            "qwen35"
+          ],
+          "parameter_size": "15.9B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 4096
+        },
+        "capabilities": [
+          "tools",
+          "thinking",
+          "completion"
+        ]
+      },
+      {
+        "name": "llama3.2:3b",
+        "model": "llama3.2:3b",
+        "modified_at": "2026-06-19T23:59:52.738666+08:00",
+        "size": 2019393189,
+        "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "llama",
+          "families": [
+            "llama"
+          ],
+          "parameter_size": "3.2B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 131072,
+          "embedding_length": 3072
+        },
+        "capabilities": [
+          "completion",
+          "tools"
+        ]
+      },
+      {
+        "name": "qwen2.5:7b",
+        "model": "qwen2.5:7b",
+        "modified_at": "2026-06-19T23:57:20.4741817+08:00",
+        "size": 4683087332,
+        "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen2",
+          "families": [
+            "qwen2"
+          ],
+          "parameter_size": "7.6B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 32768,
+          "embedding_length": 3584
+        },
+        "capabilities": [
+          "completion",
+          "tools"
+        ]
+      },
+      {
+        "name": "qwen3.5:4b",
+        "model": "qwen3.5:4b",
+        "modified_at": "2026-06-12T00:18:43.5076114+08:00",
+        "size": 3389983735,
+        "digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen35",
+          "families": [
+            "qwen35"
+          ],
+          "parameter_size": "4.7B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 2560
+        },
+        "capabilities": [
+          "completion",
+          "vision",
+          "tools",
+          "thinking"
+        ]
+      },
+      {
+        "name": "qwen3-vl:8b",
+        "model": "qwen3-vl:8b",
+        "modified_at": "2026-06-08T20:51:32.7398821+08:00",
+        "size": 6140415879,
+        "digest": "901cae73216286ea8c5aba8b46d307ff7188f737285ec500c795a12f05225d28",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3vl",
+          "families": [
+            "qwen3vl"
+          ],
+          "parameter_size": "8.8B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 4096
+        },
+        "capabilities": [
+          "completion",
+          "vision",
+          "tools",
+          "thinking"
+        ]
+      },
+      {
+        "name": "qwen3.6:latest",
+        "model": "qwen3.6:latest",
+        "modified_at": "2026-06-07T21:14:55.4917937+08:00",
+        "size": 23938333577,
+        "digest": "07d35212591fc27746f0a317c975a6d68754fb38e9053d82e25f06057af28522",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen35moe",
+          "families": [
+            "qwen35moe"
+          ],
+          "parameter_size": "36.0B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 2048
+        },
+        "capabilities": [
+          "completion",
+          "vision",
+          "tools",
+          "thinking"
+        ]
+      }
+    ]
+  },
+  "server_version": {
+    "version": "0.35.1"
+  },
+  "ctx": 32768,
+  "source_cap": 4096,
+  "reader_cap": 8192,
+  "planned_calls": 240
+}

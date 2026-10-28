@@ -1,0 +1,959 @@
+{
+  "scope": "Post hoc diagnostic only; original strict scores and gate unchanged. Single unambiguous visible Final Answer line may have surrounding prose; length outputs remain invalid, no thinking extraction.",
+  "summaries": {
+    "task_cue": {
+      "known": 18,
+      "strict_exact": 4,
+      "sensitive_exact": 10,
+      "recovered_valid": 6,
+      "ambiguous_or_invalid": 3
+    },
+    "neutral_prefix": {
+      "known": 19,
+      "strict_exact": 8,
+      "sensitive_exact": 11,
+      "recovered_valid": 5,
+      "ambiguous_or_invalid": 6
+    },
+    "append": {
+      "known": 19,
+      "strict_exact": 10,
+      "sensitive_exact": 12,
+      "recovered_valid": 3,
+      "ambiguous_or_invalid": 5
+    },
+    "question_first": {
+      "known": 18,
+      "strict_exact": 6,
+      "sensitive_exact": 13,
+      "recovered_valid": 9,
+      "ambiguous_or_invalid": 1
+    },
+    "direct": {
+      "known": 18,
+      "strict_exact": 5,
+      "sensitive_exact": 13,
+      "recovered_valid": 8,
+      "ambiguous_or_invalid": 3
+    },
+    "re2": {
+      "known": 19,
+      "strict_exact": 8,
+      "sensitive_exact": 16,
+      "recovered_valid": 8,
+      "ambiguous_or_invalid": 3
+    },
+    "prefix": {
+      "known": 18,
+      "strict_exact": 11,
+      "sensitive_exact": 13,
+      "recovered_valid": 2,
+      "ambiguous_or_invalid": 5
+    }
+  },
+  "details": [
+    {
+      "ordinal": 3,
+      "arm": "task_cue",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 4,
+      "arm": "neutral_prefix",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 5,
+      "arm": "append",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 6,
+      "arm": "question_first",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": true
+    },
+    {
+      "ordinal": 7,
+      "arm": "direct",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 8,
+      "arm": "re2",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 9,
+      "arm": "prefix",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 11,
+      "arm": "neutral_prefix",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 12,
+      "arm": "append",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 13,
+      "arm": "direct",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 14,
+      "arm": "re2",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 15,
+      "arm": "task_cue",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 16,
+      "arm": "question_first",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 17,
+      "arm": "prefix",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 19,
+      "arm": "question_first",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 20,
+      "arm": "re2",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 21,
+      "arm": "prefix",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 22,
+      "arm": "append",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 23,
+      "arm": "neutral_prefix",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 24,
+      "arm": "task_cue",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 25,
+      "arm": "direct",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 27,
+      "arm": "re2",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 28,
+      "arm": "task_cue",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": true
+    },
+    {
+      "ordinal": 29,
+      "arm": "prefix",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 30,
+      "arm": "direct",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 31,
+      "arm": "question_first",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 32,
+      "arm": "neutral_prefix",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 33,
+      "arm": "append",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 35,
+      "arm": "direct",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 36,
+      "arm": "task_cue",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": true
+    },
+    {
+      "ordinal": 37,
+      "arm": "append",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 38,
+      "arm": "prefix",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 39,
+      "arm": "neutral_prefix",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 40,
+      "arm": "re2",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 41,
+      "arm": "question_first",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": true
+    },
+    {
+      "ordinal": 43,
+      "arm": "append",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 44,
+      "arm": "neutral_prefix",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 45,
+      "arm": "task_cue",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": true
+    },
+    {
+      "ordinal": 46,
+      "arm": "question_first",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": true
+    },
+    {
+      "ordinal": 47,
+      "arm": "re2",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 48,
+      "arm": "prefix",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 49,
+      "arm": "direct",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": true
+    },
+    {
+      "ordinal": 51,
+      "arm": "question_first",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 52,
+      "arm": "re2",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 53,
+      "arm": "direct",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": true
+    },
+    {
+      "ordinal": 54,
+      "arm": "neutral_prefix",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": true
+    },
+    {
+      "ordinal": 55,
+      "arm": "prefix",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 56,
+      "arm": "task_cue",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 57,
+      "arm": "append",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": true
+    },
+    {
+      "ordinal": 59,
+      "arm": "question_first",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": true
+    },
+    {
+      "ordinal": 60,
+      "arm": "prefix",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 61,
+      "arm": "re2",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 62,
+      "arm": "append",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": false
+    },
+    {
+      "ordinal": 63,
+      "arm": "task_cue",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": true
+    },
+    {
+      "ordinal": 64,
+      "arm": "neutral_prefix",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": true
+    },
+    {
+      "ordinal": 65,
+      "arm": "direct",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 67,
+      "arm": "task_cue",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 68,
+      "arm": "direct",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 69,
+      "arm": "prefix",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 70,
+      "arm": "neutral_prefix",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 71,
+      "arm": "question_first",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 72,
+      "arm": "re2",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 73,
+      "arm": "append",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 75,
+      "arm": "append",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 76,
+      "arm": "re2",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 77,
+      "arm": "direct",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 78,
+      "arm": "question_first",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 79,
+      "arm": "prefix",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 80,
+      "arm": "neutral_prefix",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 81,
+      "arm": "task_cue",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 83,
+      "arm": "neutral_prefix",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 84,
+      "arm": "task_cue",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 85,
+      "arm": "direct",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 86,
+      "arm": "question_first",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 87,
+      "arm": "prefix",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 88,
+      "arm": "append",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 89,
+      "arm": "re2",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 91,
+      "arm": "neutral_prefix",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 92,
+      "arm": "append",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 93,
+      "arm": "prefix",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 94,
+      "arm": "task_cue",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 95,
+      "arm": "question_first",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 96,
+      "arm": "direct",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 97,
+      "arm": "re2",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 99,
+      "arm": "direct",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 100,
+      "arm": "append",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 101,
+      "arm": "re2",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 102,
+      "arm": "question_first",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 103,
+      "arm": "prefix",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 104,
+      "arm": "neutral_prefix",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 105,
+      "arm": "task_cue",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 107,
+      "arm": "task_cue",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 108,
+      "arm": "prefix",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 109,
+      "arm": "neutral_prefix",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 110,
+      "arm": "question_first",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 111,
+      "arm": "re2",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 112,
+      "arm": "append",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 113,
+      "arm": "direct",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 115,
+      "arm": "prefix",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 116,
+      "arm": "re2",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 117,
+      "arm": "task_cue",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 118,
+      "arm": "neutral_prefix",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 119,
+      "arm": "append",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": true
+    },
+    {
+      "ordinal": 120,
+      "arm": "question_first",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 121,
+      "arm": "direct",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 123,
+      "arm": "re2",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 124,
+      "arm": "append",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 125,
+      "arm": "neutral_prefix",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 126,
+      "arm": "direct",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 127,
+      "arm": "task_cue",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 128,
+      "arm": "question_first",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 129,
+      "arm": "prefix",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 131,
+      "arm": "prefix",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 132,
+      "arm": "task_cue",
+      "strict_em": 0.0,
+      "sensitive_em": 0,
+      "valid": true
+    },
+    {
+      "ordinal": 133,
+      "arm": "append",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 134,
+      "arm": "neutral_prefix",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 135,
+      "arm": "question_first",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 136,
+      "arm": "direct",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 137,
+      "arm": "re2",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 139,
+      "arm": "direct",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 140,
+      "arm": "append",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 141,
+      "arm": "neutral_prefix",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 142,
+      "arm": "re2",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 143,
+      "arm": "task_cue",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 144,
+      "arm": "question_first",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 145,
+      "arm": "prefix",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 147,
+      "arm": "append",
+      "strict_em": 1.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 148,
+      "arm": "re2",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    },
+    {
+      "ordinal": 149,
+      "arm": "neutral_prefix",
+      "strict_em": 0.0,
+      "sensitive_em": 1,
+      "valid": true
+    }
+  ]
+}

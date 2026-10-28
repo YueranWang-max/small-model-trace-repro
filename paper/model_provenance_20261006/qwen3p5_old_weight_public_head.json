@@ -1,0 +1,12 @@
+{
+  "checked_utc": "2026-10-06T04:31:23.233767+00:00",
+  "url": "https://registry.ollama.ai/v2/library/qwen3.5/blobs/sha256:81fb60c7daa80fc1123380b98970b320ae233409f0f71a72ed7b9b0d62f40490",
+  "method": "HEAD",
+  "expected_local_weight_sha256": "81fb60c7daa80fc1123380b98970b320ae233409f0f71a72ed7b9b0d62f40490",
+  "downloaded_weight_bytes": 0,
+  "http_status": 200,
+  "headers": {
+    "Content-Type": "application/octet-stream",
+    "Content-Length": "3389971840"
+  }
+}

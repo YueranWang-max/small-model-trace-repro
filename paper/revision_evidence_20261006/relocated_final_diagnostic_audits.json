@@ -1,0 +1,52 @@
+{
+  "scope": "Fresh read-only CPU audits of saved records on the same host in a separate root; not independent inference replication or external execution attestation",
+  "audits": 2,
+  "files": [
+    {
+      "path": "paper\\evidence_output_budget_control_20261006\\summary.json",
+      "sha256": "10a06f12fcdbe7f36cb92204a2f8ebd9c08127a68e3dd96a67f1326873d4cf74",
+      "relocated_byte_identical": true
+    },
+    {
+      "path": "paper\\evidence_output_budget_control_20261006\\manifest.json",
+      "sha256": "b5b6f7e8383fcac67da2867e6b6da20a3dec2364710e86bc3112936e9df91436",
+      "relocated_byte_identical": true
+    },
+    {
+      "path": "paper\\evidence_output_budget_control_20261006\\audited_calls.csv",
+      "sha256": "0b3b4dd77330e5ab1af3462d979b05f6b1f1416c84493e0d690c5b8f7fa08687",
+      "relocated_byte_identical": true
+    },
+    {
+      "path": "paper\\evidence_output_budget_control_20261006\\old_direct_calls.csv",
+      "sha256": "e4a9199893b929ee26baec9487df120dd93737f5c08721d68e730a72f8292983",
+      "relocated_byte_identical": true
+    },
+    {
+      "path": "paper\\evidence_output_budget_control_20261006\\graph_summary.csv",
+      "sha256": "916db50d184be92af3d3211fa25cf9a7008d5110aa164581907ac6534d7488d6",
+      "relocated_byte_identical": true
+    },
+    {
+      "path": "paper\\evidence_context_recovery_20261006\\summary.json",
+      "sha256": "082f3737df08c329a2c56a873fd7aa5e06ffa2a36ab289cf63777fbb5df16054",
+      "relocated_byte_identical": true
+    },
+    {
+      "path": "paper\\evidence_context_recovery_20261006\\manifest.json",
+      "sha256": "eba34327d2955ff8ce59c8cc3855a2d1b2443f284312439e58d70ff1291b8395",
+      "relocated_byte_identical": true
+    },
+    {
+      "path": "paper\\evidence_context_recovery_20261006\\audited_calls.csv",
+      "sha256": "3903ede1a49b20640d04c74c7a110582eede30b60a6a1e63782d43d91a120656",
+      "relocated_byte_identical": true
+    },
+    {
+      "path": "paper\\evidence_context_recovery_20261006\\arm_summary.csv",
+      "sha256": "2e574e56cef6caa0fa45880f8ac31cff8cb6043cb8e0fe723762b4af9313c4de",
+      "relocated_byte_identical": true
+    }
+  ],
+  "all_passed": true
+}

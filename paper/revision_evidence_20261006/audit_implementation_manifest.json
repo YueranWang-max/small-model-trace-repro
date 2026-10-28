@@ -1,0 +1,20 @@
+{
+  "scope": "Revised read-only auditors; original experimental runners, frozen plans and responses untouched",
+  "auditors": [
+    {
+      "path": "paper/audit_confirmatory_20261006.py",
+      "sha256": "0759c57e2d384844d208db140b736e964d6a64cffeaaecfe95e36f57614a64bc"
+    },
+    {
+      "path": "paper/audit_paired4b_20261006.py",
+      "sha256": "db1eb599c26317a8d3f412357aeb9d25c7fa50ee9218623ea85fd06906dd9b12"
+    },
+    {
+      "path": "paper/audit_context_recovery_20261006.py",
+      "sha256": "82712ea06f0d72038982e24f3f281bf3f1b70a9d3b628278c7ac614460f2146e"
+    }
+  ],
+  "completed_1p7b_reverification": "Full payload/tokenization checks passed; same F1/EM/cost results",
+  "paired4b_interim": "170 returned records checked, no complete 240-call finding yet",
+  "context_preflight": "All 26 planned payloads, order and token counts reconstructed; no new inference yet"
+}

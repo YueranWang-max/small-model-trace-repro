@@ -1,0 +1,83 @@
+{
+  "scope": "Mapped current completed paired-study clauses only; not blanket certification of every historical sentence",
+  "checks": [
+    {
+      "claim": "1.7B F1 by placement",
+      "required_exact_clause": "Mean F1 was 0.7715 for prefix, 0.7351 for append and 0.6915 for direct reading",
+      "audit_source": "evidence_verification_20261006\\summary.json",
+      "matched": true
+    },
+    {
+      "claim": "4B direct F1 and EM",
+      "required_exact_clause": "Direct reading achieved F1 0.6967 and EM 0.6833.",
+      "audit_source": "evidence_paired4b_20261006\\summary.json",
+      "matched": true
+    },
+    {
+      "claim": "4B preparation-inclusive tokens",
+      "required_exact_clause": "51,751.22 for prefix, 51,611.63 for append and 8,231.05 for direct reading",
+      "audit_source": "evidence_paired4b_20261006\\summary.json",
+      "matched": true
+    },
+    {
+      "claim": "4B logical research tokens",
+      "required_exact_clause": "3,740,754 model tokens",
+      "audit_source": "evidence_paired4b_20261006\\summary.json",
+      "matched": true
+    },
+    {
+      "claim": "4B request wall total",
+      "required_exact_clause": "15,435.86 seconds",
+      "audit_source": "evidence_paired4b_20261006\\summary.json",
+      "matched": true
+    },
+    {
+      "claim": "4B secondary F1 difference",
+      "required_exact_clause": "30.33 percentage points",
+      "audit_source": "evidence_paired4b_20261006\\summary.json",
+      "matched": true
+    },
+    {
+      "claim": "4B secondary descriptive interval",
+      "required_exact_clause": "[13.67,46.67]",
+      "audit_source": "evidence_paired4b_20261006\\summary.json",
+      "matched": true
+    },
+    {
+      "claim": "4B deployment ratio",
+      "required_exact_clause": "$6.29$ times",
+      "audit_source": "evidence_paired4b_20261006\\summary.json",
+      "matched": true
+    },
+    {
+      "claim": "4B ceiling scores",
+      "required_exact_clause": "mean F1 and EM were both 1.0000",
+      "audit_source": "evidence_paired4b_20261006\\summary.json",
+      "matched": true
+    },
+    {
+      "claim": "Abstract 1.7B placement scores",
+      "required_exact_clause": "prefix F1 was 0.7715 versus 0.7351 for append",
+      "audit_source": "evidence_verification_20261006\\summary.json",
+      "matched": true
+    }
+  ],
+  "source_hashes": [
+    {
+      "path": "evidence_verification_20261006\\summary.json",
+      "sha256": "f1eb5f98df79342b1024d14461213b76e83852afb0a5050684eb7b4c2a54b481"
+    },
+    {
+      "path": "evidence_paired4b_20261006\\summary.json",
+      "sha256": "4694f1745d9e779eae9ee9200812a6417511f9a14b2461cdec0c799653ec8dda"
+    },
+    {
+      "path": "migration_primary_body.tex",
+      "sha256": "4f4e585dd9a28a762d8b763f4c047729042c36476474383753d10fa0587f3b6d"
+    },
+    {
+      "path": "main.tex",
+      "sha256": "85b6be88f8ff4991d9a01b7f76c5c62ca19ead8a8c0ba440861c95211021f8f6"
+    }
+  ]
+}

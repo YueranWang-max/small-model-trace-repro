@@ -1,0 +1,13 @@
+{
+  "complete": false,
+  "qualified_returned_records": 124,
+  "planned": 240,
+  "graph_units_complete": 6,
+  "scope": "Consistency of independently rescored local raw responses, not external attestation",
+  "research_tokens_known": 1878003,
+  "research_observed_wall_seconds": 7647.853873399872,
+  "frozen_sha256": "93e86220334537bde1d06a9fe3cebc95f0408427f1743753aaa816853fcc83d6",
+  "empty_gold_graphs": 2,
+  "always_empty_baseline": 0.16666666666666666,
+  "source_valid_count": 0
+}

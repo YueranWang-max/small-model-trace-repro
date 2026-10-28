@@ -1,0 +1,9 @@
+{
+  "hashes": {
+    "data\\qasper_official\\qasper-train-v0.3.json": "9458bfe76074a8fa8d1685af02bcc73537aa6d338ad20591dfaff1946bc88bf4",
+    "run_qasper_layer_mentions.py": "0a031a4fb7f350394fa13630747d7cb5c496e6b65a78c1a8376e02c84ab90e83",
+    "build_qasper_relation_ledger.py": "eb3b5bdfbc8aa7af222383d8e8109bc005aaecd6c1468e3871021147ca86126b",
+    "logs\\qasper_fingerprint\\split.json": "be6b0e12d007aac3c3beb3f2706ff19feee88391db3483aef1f302feea974e32",
+    "protocol_qasper_layer_mentions_20261002.md": "8eb8d4543d3d9f339d5e6ae669f780fae578ea3f224d40cde899889e6ec0566a"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "kind": "conditional_analytic_bound_from_frozen_planned_inputs_not_outcome_analysis",
+  "frozen_sha256": "c62070ad840162ed4a0a8391c6a189fe3696ff79d9c5f4faabbbb5a26e0ab8ab",
+  "output_cap": 32768,
+  "case_bounds": [
+    {
+      "row_index": 506,
+      "source_input_tokens": 11246,
+      "five_source_input_token_lower_bound": 56230,
+      "fresh_single_call_token_upper_bound": 44014,
+      "strictly_more_before_any_source_output_or_reader": true
+    },
+    {
+      "row_index": 507,
+      "source_input_tokens": 11308,
+      "five_source_input_token_lower_bound": 56540,
+      "fresh_single_call_token_upper_bound": 44076,
+      "strictly_more_before_any_source_output_or_reader": true
+    },
+    {
+      "row_index": 508,
+      "source_input_tokens": 11277,
+      "five_source_input_token_lower_bound": 56385,
+      "fresh_single_call_token_upper_bound": 44045,
+      "strictly_more_before_any_source_output_or_reader": true
+    },
+    {
+      "row_index": 509,
+      "source_input_tokens": 11280,
+      "five_source_input_token_lower_bound": 56400,
+      "fresh_single_call_token_upper_bound": 44048,
+      "strictly_more_before_any_source_output_or_reader": true
+    },
+    {
+      "row_index": 510,
+      "source_input_tokens": 11277,
+      "five_source_input_token_lower_bound": 56385,
+      "fresh_single_call_token_upper_bound": 44045,
+      "strictly_more_before_any_source_output_or_reader": true
+    },
+    {
+      "row_index": 511,
+      "source_input_tokens": 11288,
+      "five_source_input_token_lower_bound": 56440,
+      "fresh_single_call_token_upper_bound": 44056,
+      "strictly_more_before_any_source_output_or_reader": true
+    },
+    {
+      "row_index": 512,
+      "source_input_tokens": 11216,
+      "five_source_input_token_lower_bound": 56080,
+      "fresh_single_call_token_upper_bound": 43984,
+      "strictly_more_before_any_source_output_or_reader": true
+    },
+    {
+      "row_index": 513,
+      "source_input_tokens": 11217,
+      "five_source_input_token_lower_bound": 56085,
+      "fresh_single_call_token_upper_bound": 43985,
+      "strictly_more_before_any_source_output_or_reader": true
+    },
+    {
+      "row_index": 514,
+      "source_input_tokens": 11150,
+      "five_source_input_token_lower_bound": 55750,
+      "fresh_single_call_token_upper_bound": 43918,
+      "strictly_more_before_any_source_output_or_reader": true
+    },
+    {
+      "row_index": 515,
+      "source_input_tokens": 11319,
+      "five_source_input_token_lower_bound": 56595,
+      "fresh_single_call_token_upper_bound": 44087,
+      "strictly_more_before_any_source_output_or_reader": true
+    },
+    {
+      "row_index": 516,
+      "source_input_tokens": 11287,
+      "five_source_input_token_lower_bound": 56435,
+      "fresh_single_call_token_upper_bound": 44055,
+      "strictly_more_before_any_source_output_or_reader": true
+    },
+    {
+      "row_index": 517,
+      "source_input_tokens": 11186,
+      "five_source_input_token_lower_bound": 55930,
+      "fresh_single_call_token_upper_bound": 43954,
+      "strictly_more_before_any_source_output_or_reader": true
+    },
+    {
+      "row_index": 518,
+      "source_input_tokens": 11261,
+      "five_source_input_token_lower_bound": 56305,
+      "fresh_single_call_token_upper_bound": 44029,
+      "strictly_more_before_any_source_output_or_reader": true
+    },
+    {
+      "row_index": 519,
+      "source_input_tokens": 11355,
+      "five_source_input_token_lower_bound": 56775,
+      "fresh_single_call_token_upper_bound": 44123,
+      "strictly_more_before_any_source_output_or_reader": true
+    },
+    {
+      "row_index": 520,
+      "source_input_tokens": 11326,
+      "five_source_input_token_lower_bound": 56630,
+      "fresh_single_call_token_upper_bound": 44094,
+      "strictly_more_before_any_source_output_or_reader": true
+    },
+    {
+      "row_index": 521,
+      "source_input_tokens": 11178,
+      "five_source_input_token_lower_bound": 55890,
+      "fresh_single_call_token_upper_bound": 43946,
+      "strictly_more_before_any_source_output_or_reader": true
+    }
+  ],
+  "all16_five_source_inputs_alone_exceed_fresh_call_maximum": true,
+  "mean_five_source_input_token_lower_bound": 56303.4375,
+  "mean_fresh_single_call_token_upper_bound": 44028.6875,
+  "conditions": [
+    "All five sources are paid per single trace prediction.",
+    "Qualified input counts match the frozen expected counts.",
+    "Fresh full-source reader uses the identical source user/system input and output allowance.",
+    "Returned output counts obey the frozen allowance.",
+    "Logical token costs include repeated input; cached work is not silently removed."
+  ],
+  "does_not_establish_accuracy_or_wall_energy_effect": true
+}

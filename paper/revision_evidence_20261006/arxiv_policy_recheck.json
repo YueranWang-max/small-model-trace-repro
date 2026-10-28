@@ -1,0 +1,18 @@
+{
+  "checked_date": "2026-10-06",
+  "primary_sources": [
+    "https://info.arxiv.org/help/moderation/index.html",
+    "https://info.arxiv.org/help/submit/index.html"
+  ],
+  "verified_topics": [
+    "Self-contained scholarly relevance and substantive research",
+    "Moderation is not peer review; novelty/significance may affect decisions",
+    "Significant generative AI use disclosure",
+    "Human author responsibility and no AI authorship",
+    "Registered author, license and possible endorsement",
+    "TeX sources, included figures and exact filename case"
+  ],
+  "scope": "Preparation review, no claim of actual arXiv moderation or server compilation",
+  "failed_guessed_ai_policy_url": "https://info.arxiv.org/help/policies/generative_ai.html",
+  "authoritative_ai_policy_location": "Moderation page section Policy for authors use of generative AI language tools"
+}

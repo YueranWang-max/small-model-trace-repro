@@ -1,0 +1,672 @@
+{
+  "excluded_graph_heads": 70,
+  "archive_hashes": {
+    "logs\\checkpoint_binding_confirmation\\frozen.json": "7c724da2a422d1dfca4ccaa58e461f173f515e25d51d617343269baffc9da591",
+    "logs\\checkpoint_representation\\frozen.json": "cd50b79085ea85117613194ab16119ae8ab757462e48fbffd2667667a9f2643e",
+    "logs\\context_recovery_20261006\\frozen.json": "cceb4ea4e110b21035391255e44798cb84c966798b7995d8949849f10f3bc421",
+    "logs\\controlled_checkpoint\\frozen.json": "3a587578f478759edaa7b38ef88b7e2cb87519f7ef58f18e0cff9febf113b813",
+    "logs\\controlled_state_boundary\\frozen.json": "fec612f899572cfea6bb987b0fb425b6f39f2aac0d50fa5284f132a19f78ca88",
+    "logs\\controlled_step_execution\\frozen.json": "20250a1e7f928af7bf4292671e67648d99ce845d63c2617335bd90ead3c859a6",
+    "logs\\controlled_step_schema\\frozen.json": "4c8cd6868c530e8a35cf392e3932e85474b08d26f8a63cc150f15d2d99796d62",
+    "logs\\lookup_chain\\frozen.json": "49a0130c2dc4ab64b75237b34b489814e099bbd4c0b90d0647d43e6f2547a76d",
+    "logs\\lookup_chain_replication\\frozen.json": "b293c6eac91ed4f70c9d7e2d87ec72a9dbcb85ae24884e9f1160213fa480c23c",
+    "logs\\lookup_confirmation\\frozen.json": "5b7f5975d0a4a416fd3b75350eb2b0969481b22b88c02156852c4617c3e04999",
+    "logs\\lookup_semantics\\frozen.json": "9628fc9f7f00f8b4f04ec41edfec733890bc6a647160ad7026edd98078872ae9",
+    "logs\\model_checkpoint_order\\frozen.json": "ac30d8a037ada5968e683779486c6924d883cc6eaff2e788be58dc3e8bf585eb",
+    "logs\\official_graph_budget_extension\\frozen.json": "64ed7eb78161929f63e4c8eca9de7883b22cad0a39f390a95ee5756eae539b4d",
+    "logs\\official_graph_confirmatory_20261006\\frozen.json": "7676e721593ae6c0f1b2e0ec097d878940f29d3ffa2ad1125d9eb5057042d97b",
+    "logs\\official_graph_five_trace\\frozen.json": "65554673c560b292a2aec8fdf1cbfb89dad6a2259f88ac13e4766e7148a4b7dd",
+    "logs\\official_graph_identity_recode\\frozen.json": "74d9118a1163a13aa7c6d613f256684ad88e026169f296bb08b8d0283e0822fe",
+    "logs\\official_graph_indexed_source\\frozen.json": "ba5527d26e80a4ee140a561e714ac004d07ed3ef6b898c83dfb263fcc5365fe1",
+    "logs\\official_graph_long_boundary\\frozen.json": "178020f2ebf0fc37de2a2efb3add1152d3a5d95eca986ca1cf22cd90097ff929",
+    "logs\\official_graph_native_order\\frozen.json": "6ca0c2ff1b23875aa251f8dff988186521287a4b60f66e6612a1ee9c4c5ee95d",
+    "logs\\official_graph_native_probe\\frozen.json": "7b1c6b9004a07979e9512b3bcb3d0faa94b48c58d603cebea3341f67ca63ae67",
+    "logs\\official_graph_order_replication\\frozen.json": "3a449bc5925e0c20f91f0519f15e014c47517cc82b02affd67fce02e9703a704",
+    "logs\\official_graph_paired4b_20261006\\frozen.json": "93e86220334537bde1d06a9fe3cebc95f0408427f1743753aaa816853fcc83d6",
+    "logs\\official_graph_reasoning_mode\\frozen.json": "0519746b7262a90ecbfed0dd6e6bc931360e330ccf0d10355811f37ee911c894",
+    "logs\\official_graph_sampling_control\\frozen.json": "a5ab92cc6da2ee4cf9f3e933f84b3a371d03c8cddf4e7bf720071f76946d7004",
+    "logs\\output_budget_control_20261006\\frozen.json": "a84678f3f45134e4e187c450fb4048e5634931a86728e8fa1e6d88de2100489a",
+    "logs\\qasper_answer_contract\\frozen.json": "8da7d70cf0b0056c4148da7cb2b39d7d09af5f205e8b493e5731a8b2d06fd0bc",
+    "logs\\qasper_attention_guard\\frozen.json": "c361d7c33d7f8934e2942484c516455c04c01bf6f334c2ad5ed1401d941d9860",
+    "logs\\qasper_attention_probe\\frozen.json": "8626590936c3277affc5db6bb556119f0ef948a849019936b7b5c55a1974acd3",
+    "logs\\qasper_attention_reader\\frozen.json": "36ef8baa71ebe3bc27382bb01eee3c96614fea3ade3d7b7c51d0156063c4da9c",
+    "logs\\qasper_bounded_core\\frozen.json": "6970ef4ab9cca11c3da2b053fbfa3e29b2ce5b0d8da496e1b04687a2aca3815a",
+    "logs\\qasper_contract_fallback\\frozen.json": "eca6bccec76c0969bb584409367653fbaf38336119a27ef9d4a48427c3fb4f75",
+    "logs\\qasper_contract_replication\\frozen.json": "5f9e1f6bc671728377bd121ead1f78c6027a220b3305a80a62c9e8ab8885c150",
+    "logs\\qasper_deep_retained\\frozen.json": "01e72bfb12cf326985f9b4e7049e66352e0ef7fe00b5fe843c6cc2e2f01c5ed4",
+    "logs\\qasper_demand_transfer\\frozen.json": "5b240a511a290f2f4680f797b45d03409def10af1c44a85adfbe940d5a550038",
+    "logs\\qasper_dependency_guard\\frozen.json": "ddf25370620e7742b68caaeddf065a3d1e4da73f09d0021647d213e3a2031e14",
+    "logs\\qasper_evidence_unit\\frozen.json": "dbc7524901a78136814b8b4c2e16038f9ae55c6cb42c29ec483bc89333a33f3a",
+    "logs\\qasper_exam_reader\\frozen.json": "8d946b41debdca056979ee63a5d749ba77a0d122f74d1a224a14504e8b0f2a8c",
+    "logs\\qasper_fact_blocks\\frozen.json": "4eda9416e4e2764c5024f037c5c50ffb8abca25f32f105cd6aa4f62f2ac36987",
+    "logs\\qasper_fingerprint\\frozen.json": "af0c78091efb963db250325c11507630d28c24cda1c7024a1cdfbf80401e3959",
+    "logs\\qasper_format_control\\frozen.json": "85fa5b54ebe1403fb0641f3b8ccd8d5acd393bed31d52565c9750cea7e09d2a6",
+    "logs\\qasper_forward_bridge\\frozen.json": "d44207e4eeba606dd8f67ebfaa376915a52eab48046cb6faab400cb29f939c87",
+    "logs\\qasper_genre_structure\\frozen.json": "c551f8887b19f224b90d0f85a8e17e4103e9fe2dc819e06b5956154ffeaa8446",
+    "logs\\qasper_genre_structure_readout\\frozen.json": "0e8cca36ff2f112345a9a730884d220f0d21efcb123eeaad30171410dbebd980",
+    "logs\\qasper_genre_structure_replication\\frozen.json": "e380312de332341b5beb4418d43b7c029a40f902f01f1086cba05daac24b6cf1",
+    "logs\\qasper_holdout\\frozen.json": "d0cd3fc4c37069f4a9b3dfc3feea66c7fed27ad0901fa5e73bbbea9efed6a57f",
+    "logs\\qasper_interface_full_binding\\frozen.json": "8403f95a1ea411f1ba8875458e1fcb455601d6a6f84f3a41ec61263ebeeb1bdd",
+    "logs\\qasper_interface_replication\\frozen.json": "61acb21f55261e2db1ed17819d3681ec3fba7ea8166fde6a244bec26c0e5c908",
+    "logs\\qasper_interface_transport_recovery\\frozen.json": "517910bc917a029389793f443b514023448532acd48859539ab86f9d045caf62",
+    "logs\\qasper_intersection_prefix\\frozen.json": "48a6cd2976f6b4d99e19f915a6ecf5bbc98c42c3bdd3f49b3b5e651c2b0c1c99",
+    "logs\\qasper_known_question_compiler\\frozen.json": "0460a5c0b7ed679883c41f80c4a6752fbd78efaab0f441bbed92ec42d37e99e7",
+    "logs\\qasper_known_question_span_v2\\frozen.json": "41558daea56c86fb50efb27b42fc69798905900d7b234dff86f810cd107ea097",
+    "logs\\qasper_layer_mentions\\frozen.json": "74b45d6803bebe92b451a26dfa6cf1886447e99fd04001a822e5d3e2ab71474f",
+    "logs\\qasper_measurement_audit\\frozen.json": "77dd2f7c4b34e631f2b62a2fb4d12782ac272f5cb87daccc5b426ec0a6853a11",
+    "logs\\qasper_multiq\\frozen.json": "28327c137a5b4d27006310da208bc7c4182a5fd37a1bf4e6c8b3a604be91ed00",
+    "logs\\qasper_numeric_fields\\frozen.json": "179c8d43ccea9cc6fdc5d04a42cbd0f2679dbacc359cee3df693f83f0a85f288",
+    "logs\\qasper_outline_route\\frozen.json": "6fea572822f0361e4152db17791beca8c3f031439b4d19d86feeaf048e571a9e",
+    "logs\\qasper_paired_relations\\frozen.json": "4d5ab344cbc2d63eb7b4a5648f28e2a306ff1fe224418c62192a94ed1c3dd778",
+    "logs\\qasper_paragraph_elements\\frozen.json": "631ca58b9c9ed6b4f7c82d98e5bb5d8fd2f48a63fd66565a1d757bf01badd23a",
+    "logs\\qasper_prefix_vs_bm25\\frozen.json": "d2f85c99383aa493587a43696099e9e27fd552364b7411e972b5a3e6da304486",
+    "logs\\qasper_question_first_controls\\frozen.json": "3af3bfc8238a7a0d0e5f903cc61910e6c93c3c007a307976a1776ba64befe942",
+    "logs\\qasper_relation_closure\\frozen.json": "b9aa613ddf3127bb4db6adc1a40f980cbeef63534fad246b8c5acd1a8c637cc8",
+    "logs\\qasper_relation_packet\\frozen.json": "08981cb473b8a890f6d59b9c551b571e01bf10b97a8376a40473f3023ba365f0",
+    "logs\\qasper_retained_source\\frozen.json": "d5b44b2430fae7fca697da1643f98e36553afa0f029272a146604341e0bac24b",
+    "logs\\qasper_schema_core\\frozen.json": "b5fa77e44f278873be2420109110e30446f72ae822f97022294ed711d39e18e8",
+    "logs\\qasper_semantic_slots\\frozen.json": "e9da40eb3e221ca7313c18c595117eeb09326880ee98ffc01ac8da21d9b0fc7c",
+    "logs\\qasper_small_trace_boundary\\frozen.json": "13a6011d4f501c9b826f11dc58b1663b4ec21405bb426429c08d5afc26ff1bef",
+    "logs\\qasper_state_reading_ladder\\frozen.json": "5df3aa1b7e555fad53adc9b52a51d400d41476c41af6eb7da6bbf02faa20a466",
+    "logs\\qasper_state_resume\\frozen.json": "85e1882c817a2d14db855a500078d535ed155abe8117e6606c85b90e59d87ed4",
+    "logs\\qasper_state_resume_ablation\\frozen.json": "63ed56302dad483ed2a4ab275fdf7a0e0f615bd2e5f9f2ff1446a529e5c96e76",
+    "logs\\qasper_state_resume_binding_control\\frozen.json": "e1e88fdce817af874d712dc13250d0cb5e254f96c15a15ef459ffed9e83e5a9d",
+    "logs\\qasper_state_resume_oracle\\frozen.json": "db87e6f0058869f55ba295bb93231492713ab1fd2faa70ade843118081718562",
+    "logs\\qasper_target_scope\\frozen.json": "e2c47620d624cbf861330aacd263742e1a817394bdc8533f5731963d8c14aacb",
+    "logs\\qasper_trace_bridge\\frozen.json": "40b8de47d5e0edda6e1f97ee7b3f60d551592166ab7f174974b1fbaf045774cc",
+    "logs\\qasper_trace_mechanism\\frozen.json": "d5d173ad7ed4c3efcc6a0693c6f126176fd221e7e8613d0d0eeedfcbf69a13e3",
+    "logs\\qasper_typed_contract\\frozen.json": "d36dec08fac28357c3251398ad84776226d3930291c85aa182d2f94b64a25fb1",
+    "logs\\qasper_visible_trace_bridge\\frozen.json": "59c7907a1e4a7046af13debd9563424b80e38c7c5070d353fd813307b79d7dfb",
+    "logs\\qasper_visible_trace_replication\\frozen.json": "dcd4a3e4172c4eead9da95fdd5aa3730f746c8565c78b07703f5a5f0c00e6205"
+  },
+  "pools": {
+    "short": {
+      "parents": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ],
+      "bfs": [
+        425,
+        426,
+        427,
+        428,
+        429,
+        430,
+        431,
+        432,
+        433,
+        434,
+        435,
+        436,
+        437,
+        438,
+        439,
+        440,
+        441,
+        442,
+        443,
+        444,
+        445,
+        446,
+        447,
+        448,
+        449
+      ]
+    },
+    "capacity": {
+      "parents": [
+        {
+          "row_index": 150,
+          "original_input_tokens": 11183,
+          "compact_input_tokens": 2565
+        },
+        {
+          "row_index": 151,
+          "original_input_tokens": 11205,
+          "compact_input_tokens": 2604
+        },
+        {
+          "row_index": 152,
+          "original_input_tokens": 11184,
+          "compact_input_tokens": 2578
+        },
+        {
+          "row_index": 153,
+          "original_input_tokens": 11194,
+          "compact_input_tokens": 2600
+        },
+        {
+          "row_index": 154,
+          "original_input_tokens": 11162,
+          "compact_input_tokens": 2600
+        },
+        {
+          "row_index": 155,
+          "original_input_tokens": 11219,
+          "compact_input_tokens": 2593
+        },
+        {
+          "row_index": 156,
+          "original_input_tokens": 11215,
+          "compact_input_tokens": 2604
+        },
+        {
+          "row_index": 157,
+          "original_input_tokens": 11153,
+          "compact_input_tokens": 2575
+        },
+        {
+          "row_index": 158,
+          "original_input_tokens": 11214,
+          "compact_input_tokens": 2591
+        },
+        {
+          "row_index": 159,
+          "original_input_tokens": 11295,
+          "compact_input_tokens": 2580
+        },
+        {
+          "row_index": 160,
+          "original_input_tokens": 11133,
+          "compact_input_tokens": 2560
+        },
+        {
+          "row_index": 161,
+          "original_input_tokens": 11170,
+          "compact_input_tokens": 2603
+        },
+        {
+          "row_index": 162,
+          "original_input_tokens": 11230,
+          "compact_input_tokens": 2573
+        },
+        {
+          "row_index": 163,
+          "original_input_tokens": 11215,
+          "compact_input_tokens": 2593
+        },
+        {
+          "row_index": 164,
+          "original_input_tokens": 11196,
+          "compact_input_tokens": 2597
+        },
+        {
+          "row_index": 165,
+          "original_input_tokens": 11155,
+          "compact_input_tokens": 2564
+        },
+        {
+          "row_index": 166,
+          "original_input_tokens": 11193,
+          "compact_input_tokens": 2579
+        },
+        {
+          "row_index": 167,
+          "original_input_tokens": 11143,
+          "compact_input_tokens": 2576
+        },
+        {
+          "row_index": 168,
+          "original_input_tokens": 11155,
+          "compact_input_tokens": 2599
+        },
+        {
+          "row_index": 169,
+          "original_input_tokens": 11179,
+          "compact_input_tokens": 2599
+        },
+        {
+          "row_index": 170,
+          "original_input_tokens": 11167,
+          "compact_input_tokens": 2564
+        },
+        {
+          "row_index": 171,
+          "original_input_tokens": 11221,
+          "compact_input_tokens": 2600
+        },
+        {
+          "row_index": 172,
+          "original_input_tokens": 11157,
+          "compact_input_tokens": 2564
+        },
+        {
+          "row_index": 173,
+          "original_input_tokens": 11236,
+          "compact_input_tokens": 2572
+        },
+        {
+          "row_index": 174,
+          "original_input_tokens": 11166,
+          "compact_input_tokens": 2562
+        },
+        {
+          "row_index": 175,
+          "original_input_tokens": 11165,
+          "compact_input_tokens": 2564
+        },
+        {
+          "row_index": 176,
+          "original_input_tokens": 11187,
+          "compact_input_tokens": 2575
+        },
+        {
+          "row_index": 177,
+          "original_input_tokens": 11167,
+          "compact_input_tokens": 2603
+        },
+        {
+          "row_index": 178,
+          "original_input_tokens": 11227,
+          "compact_input_tokens": 2591
+        },
+        {
+          "row_index": 179,
+          "original_input_tokens": 11203,
+          "compact_input_tokens": 2579
+        },
+        {
+          "row_index": 180,
+          "original_input_tokens": 11179,
+          "compact_input_tokens": 2561
+        },
+        {
+          "row_index": 181,
+          "original_input_tokens": 11231,
+          "compact_input_tokens": 2593
+        },
+        {
+          "row_index": 182,
+          "original_input_tokens": 11252,
+          "compact_input_tokens": 2577
+        },
+        {
+          "row_index": 183,
+          "original_input_tokens": 11175,
+          "compact_input_tokens": 2596
+        },
+        {
+          "row_index": 184,
+          "original_input_tokens": 11155,
+          "compact_input_tokens": 2565
+        },
+        {
+          "row_index": 185,
+          "original_input_tokens": 11214,
+          "compact_input_tokens": 2594
+        },
+        {
+          "row_index": 186,
+          "original_input_tokens": 11217,
+          "compact_input_tokens": 2600
+        },
+        {
+          "row_index": 187,
+          "original_input_tokens": 11159,
+          "compact_input_tokens": 2577
+        },
+        {
+          "row_index": 188,
+          "original_input_tokens": 11240,
+          "compact_input_tokens": 2570
+        },
+        {
+          "row_index": 189,
+          "original_input_tokens": 11230,
+          "compact_input_tokens": 2598
+        },
+        {
+          "row_index": 190,
+          "original_input_tokens": 11095,
+          "compact_input_tokens": 2562
+        },
+        {
+          "row_index": 191,
+          "original_input_tokens": 11260,
+          "compact_input_tokens": 2569
+        },
+        {
+          "row_index": 192,
+          "original_input_tokens": 11126,
+          "compact_input_tokens": 2562
+        },
+        {
+          "row_index": 193,
+          "original_input_tokens": 11146,
+          "compact_input_tokens": 2563
+        },
+        {
+          "row_index": 194,
+          "original_input_tokens": 11220,
+          "compact_input_tokens": 2575
+        },
+        {
+          "row_index": 195,
+          "original_input_tokens": 11208,
+          "compact_input_tokens": 2574
+        },
+        {
+          "row_index": 196,
+          "original_input_tokens": 11169,
+          "compact_input_tokens": 2564
+        },
+        {
+          "row_index": 197,
+          "original_input_tokens": 11163,
+          "compact_input_tokens": 2576
+        },
+        {
+          "row_index": 198,
+          "original_input_tokens": 11143,
+          "compact_input_tokens": 2560
+        },
+        {
+          "row_index": 199,
+          "original_input_tokens": 11100,
+          "compact_input_tokens": 2566
+        }
+      ],
+      "bfs": [
+        {
+          "row_index": 500,
+          "original_input_tokens": 11173,
+          "compact_input_tokens": 2618
+        },
+        {
+          "row_index": 501,
+          "original_input_tokens": 11150,
+          "compact_input_tokens": 2595
+        },
+        {
+          "row_index": 502,
+          "original_input_tokens": 11182,
+          "compact_input_tokens": 2592
+        },
+        {
+          "row_index": 503,
+          "original_input_tokens": 11178,
+          "compact_input_tokens": 2618
+        },
+        {
+          "row_index": 504,
+          "original_input_tokens": 11202,
+          "compact_input_tokens": 2592
+        },
+        {
+          "row_index": 505,
+          "original_input_tokens": 11273,
+          "compact_input_tokens": 2611
+        },
+        {
+          "row_index": 506,
+          "original_input_tokens": 11218,
+          "compact_input_tokens": 2612
+        },
+        {
+          "row_index": 507,
+          "original_input_tokens": 11280,
+          "compact_input_tokens": 2608
+        },
+        {
+          "row_index": 508,
+          "original_input_tokens": 11248,
+          "compact_input_tokens": 2611
+        },
+        {
+          "row_index": 509,
+          "original_input_tokens": 11250,
+          "compact_input_tokens": 2590
+        },
+        {
+          "row_index": 510,
+          "original_input_tokens": 11247,
+          "compact_input_tokens": 2588
+        },
+        {
+          "row_index": 511,
+          "original_input_tokens": 11259,
+          "compact_input_tokens": 2619
+        },
+        {
+          "row_index": 512,
+          "original_input_tokens": 11186,
+          "compact_input_tokens": 2579
+        },
+        {
+          "row_index": 513,
+          "original_input_tokens": 11188,
+          "compact_input_tokens": 2628
+        },
+        {
+          "row_index": 514,
+          "original_input_tokens": 11120,
+          "compact_input_tokens": 2576
+        },
+        {
+          "row_index": 515,
+          "original_input_tokens": 11289,
+          "compact_input_tokens": 2585
+        },
+        {
+          "row_index": 516,
+          "original_input_tokens": 11258,
+          "compact_input_tokens": 2608
+        },
+        {
+          "row_index": 517,
+          "original_input_tokens": 11156,
+          "compact_input_tokens": 2582
+        },
+        {
+          "row_index": 518,
+          "original_input_tokens": 11231,
+          "compact_input_tokens": 2596
+        },
+        {
+          "row_index": 519,
+          "original_input_tokens": 11325,
+          "compact_input_tokens": 2591
+        },
+        {
+          "row_index": 520,
+          "original_input_tokens": 11296,
+          "compact_input_tokens": 2587
+        },
+        {
+          "row_index": 521,
+          "original_input_tokens": 11149,
+          "compact_input_tokens": 2613
+        },
+        {
+          "row_index": 522,
+          "original_input_tokens": 11154,
+          "compact_input_tokens": 2579
+        },
+        {
+          "row_index": 523,
+          "original_input_tokens": 11167,
+          "compact_input_tokens": 2592
+        },
+        {
+          "row_index": 524,
+          "original_input_tokens": 11228,
+          "compact_input_tokens": 2591
+        },
+        {
+          "row_index": 525,
+          "original_input_tokens": 11242,
+          "compact_input_tokens": 2613
+        },
+        {
+          "row_index": 526,
+          "original_input_tokens": 11182,
+          "compact_input_tokens": 2593
+        },
+        {
+          "row_index": 527,
+          "original_input_tokens": 11127,
+          "compact_input_tokens": 2596
+        },
+        {
+          "row_index": 528,
+          "original_input_tokens": 11309,
+          "compact_input_tokens": 2600
+        },
+        {
+          "row_index": 529,
+          "original_input_tokens": 11157,
+          "compact_input_tokens": 2595
+        },
+        {
+          "row_index": 530,
+          "original_input_tokens": 11215,
+          "compact_input_tokens": 2593
+        },
+        {
+          "row_index": 531,
+          "original_input_tokens": 11256,
+          "compact_input_tokens": 2606
+        },
+        {
+          "row_index": 532,
+          "original_input_tokens": 11253,
+          "compact_input_tokens": 2613
+        },
+        {
+          "row_index": 533,
+          "original_input_tokens": 11322,
+          "compact_input_tokens": 2599
+        },
+        {
+          "row_index": 534,
+          "original_input_tokens": 11242,
+          "compact_input_tokens": 2597
+        },
+        {
+          "row_index": 535,
+          "original_input_tokens": 11167,
+          "compact_input_tokens": 2592
+        },
+        {
+          "row_index": 536,
+          "original_input_tokens": 11189,
+          "compact_input_tokens": 2597
+        },
+        {
+          "row_index": 537,
+          "original_input_tokens": 11174,
+          "compact_input_tokens": 2592
+        },
+        {
+          "row_index": 538,
+          "original_input_tokens": 11257,
+          "compact_input_tokens": 2613
+        },
+        {
+          "row_index": 539,
+          "original_input_tokens": 11170,
+          "compact_input_tokens": 2598
+        },
+        {
+          "row_index": 540,
+          "original_input_tokens": 11239,
+          "compact_input_tokens": 2610
+        },
+        {
+          "row_index": 541,
+          "original_input_tokens": 11321,
+          "compact_input_tokens": 2600
+        },
+        {
+          "row_index": 542,
+          "original_input_tokens": 11218,
+          "compact_input_tokens": 2593
+        },
+        {
+          "row_index": 543,
+          "original_input_tokens": 11360,
+          "compact_input_tokens": 2601
+        },
+        {
+          "row_index": 544,
+          "original_input_tokens": 11304,
+          "compact_input_tokens": 2601
+        },
+        {
+          "row_index": 545,
+          "original_input_tokens": 11285,
+          "compact_input_tokens": 2601
+        },
+        {
+          "row_index": 546,
+          "original_input_tokens": 11274,
+          "compact_input_tokens": 2616
+        },
+        {
+          "row_index": 547,
+          "original_input_tokens": 11172,
+          "compact_input_tokens": 2627
+        },
+        {
+          "row_index": 548,
+          "original_input_tokens": 11288,
+          "compact_input_tokens": 2600
+        },
+        {
+          "row_index": 549,
+          "original_input_tokens": 11225,
+          "compact_input_tokens": 2622
+        }
+      ]
+    }
+  },
+  "selection_uses": "Source length, operation type, graph identity and input token counts only; no gold labels or model scores."
+}

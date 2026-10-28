@@ -1,0 +1,31 @@
+{
+  "checks": [
+    {
+      "path": "paper\\evidence_paired4b_20261006\\summary.json",
+      "sha256": "4694f1745d9e779eae9ee9200812a6417511f9a14b2461cdec0c799653ec8dda",
+      "relocated_byte_identical": true
+    },
+    {
+      "path": "paper\\evidence_paired4b_20261006\\audited_calls.csv",
+      "sha256": "afcd5ea2c621114767824aa3c76b1633cdeb4193d69e9ada92417d67d9c17c88",
+      "relocated_byte_identical": true
+    },
+    {
+      "path": "paper\\evidence_paired4b_20261006\\graph_summary.csv",
+      "sha256": "f2a0c4f360dd0065926f72605bb585c90916cbf04f1664b79173be1b2915c0b2",
+      "relocated_byte_identical": true
+    },
+    {
+      "path": "paper\\evidence_paired4b_20261006\\arm_summary.csv",
+      "sha256": "162d37ca8ec1cb874675cc2b5640f4ff0d225149b192a5fb978d314c18a1e7fe",
+      "relocated_byte_identical": true
+    },
+    {
+      "path": "paper\\evidence_paired4b_20261006\\contrasts.csv",
+      "sha256": "f70c077f0d95b9686aab016a76f4ea679f445cee4f684123d6760741f626c231",
+      "relocated_byte_identical": true
+    }
+  ],
+  "scope": "Same-host fresh directory; offline independent scoring, not external inference replication",
+  "initial_packaging_omission": "Frozen runner absent on first staging attempt; full frozen dependency list subsequently copied and all checks passed"
+}

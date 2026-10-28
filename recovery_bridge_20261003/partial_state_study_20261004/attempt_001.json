@@ -1,0 +1,108 @@
+{
+  "plan": {
+    "ordinal": 1,
+    "phase": "calibration",
+    "row_index": null,
+    "repeat": null,
+    "seed": 202610198,
+    "arm": "calibration"
+  },
+  "request": {
+    "model": "qwen3.5:4b",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You solve directed-graph algorithm problems. Use only the graph and operation in the user message. Return exactly one visible line in this format: Final Answer: [node1, node2]. Use [] for the empty set. Do not include any text before or after that line."
+      },
+      {
+        "role": "user",
+        "content": "A directed graph has the nodes A and B and no edges. Find the parents of node B.\nReturn exactly one line in this format: Final Answer: [node1, node2]. Use [] for the empty set."
+      }
+    ],
+    "think": true,
+    "stream": false,
+    "keep_alive": "30m",
+    "options": {
+      "temperature": 1.0,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0,
+      "presence_penalty": 1.5,
+      "frequency_penalty": 0,
+      "repeat_penalty": 1,
+      "mirostat": 0,
+      "num_ctx": 65536,
+      "seed": 202610198,
+      "num_predict": 1
+    }
+  },
+  "request_sha256": "43cb5d4b73868704ed1af2735eff35dff7defbe0850fe0b3b99aefae94136096",
+  "expected_prompt_tokens": 116,
+  "completion": "returned",
+  "transmission": "attempting_once",
+  "prompt_construction_seconds": 0.0,
+  "request_preparation_seconds": 0.0,
+  "external_before": {
+    "ps": {
+      "models": []
+    },
+    "recorded_at": 1791092701.8060534
+  },
+  "started_at": 1791092701.814993,
+  "monotonic_started": 53125.953,
+  "raw": {
+    "model": "qwen3.5:4b",
+    "created_at": "2026-10-04T05:45:06.5361351Z",
+    "message": {
+      "role": "assistant",
+      "content": "",
+      "thinking": "Thinking"
+    },
+    "done": true,
+    "done_reason": "length",
+    "total_duration": 4702185400,
+    "load_duration": 4590956700,
+    "prompt_eval_count": 116,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 108082000,
+    "eval_count": 1,
+    "eval_duration": 1000
+  },
+  "ended_at": 1791092706.5376632,
+  "client_elapsed_seconds": 4.718000000000757,
+  "own_runtime_ps": {
+    "models": [
+      {
+        "name": "qwen3.5:4b",
+        "model": "qwen3.5:4b",
+        "size": 5606914128,
+        "digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen35",
+          "families": [
+            "qwen35"
+          ],
+          "parameter_size": "4.7B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-04T14:15:06.5376633+08:00",
+        "size_vram": 5606914128,
+        "context_length": 65536
+      }
+    ]
+  },
+  "external_after": {
+    "ps": {
+      "models": []
+    },
+    "recorded_at": 1791092706.7155383
+  },
+  "input_qualified": true,
+  "response_qualified": true,
+  "usage_qualified": true,
+  "resident_qualified": true,
+  "qualified": true,
+  "request_protocol_seconds_before_final_persist": 4.936999999998079
+}

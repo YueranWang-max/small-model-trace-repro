@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "official_ids_contiguous": true,
+    "extra_tokens_are_numbered_PAD_placeholders": true,
+    "official_vocab_ids_match": true,
+    "merges_match": true
+  },
+  "all_checks_pass": true,
+  "official_vocab_size": 248070,
+  "stored_vocab_size": 248320,
+  "additional_placeholder_count": 250,
+  "prior_failed_check_sha256": "f0b1ad72f1989e2eb6774e106c52fb0709679551100332352a869102afab2e47",
+  "original_total_count_failure_preserved": true,
+  "actual_rendering_verified": false,
+  "limitations": [
+    "Extra token generation is not proven impossible.",
+    "Inputs containing literal PAD placeholders require explicit tokenization qualification.",
+    "This explains the count difference without declaring exact tokenizer equivalence for all possible inputs."
+  ]
+}

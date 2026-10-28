@@ -1,0 +1,87 @@
+{
+  "job": {
+    "ordinal": 1,
+    "phase": "input_calibration",
+    "row_index": null,
+    "request": {
+      "model": "qwen3.5:4b",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You solve directed-graph algorithm problems. Use only the graph and operation in the user message. Return exactly one visible line in this format: Final Answer: [node1, node2]. Use [] for the empty set. Do not include any text before or after that line."
+        },
+        {
+          "role": "user",
+          "content": "A directed graph has the nodes A and B and no edges. Find the parents of node B.\nReturn exactly one line in this format: Final Answer: [node1, node2]. Use [] for the empty set."
+        }
+      ],
+      "think": true,
+      "stream": false,
+      "options": {
+        "temperature": 1.0,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0,
+        "presence_penalty": 1.5,
+        "frequency_penalty": 0,
+        "repeat_penalty": 1,
+        "mirostat": 0,
+        "num_ctx": 65536,
+        "num_predict": 1,
+        "seed": 202610100
+      }
+    },
+    "expected_prompt_tokens": 116,
+    "request_sha256": "50a6235f64c104a617e724c822fa400f583f4fa5b123aa3c9e76ea5f48b68f36"
+  },
+  "completion": "returned",
+  "transmission": "attempting_once",
+  "started_at": 1791079140.1238046,
+  "monotonic_started": 39563.203,
+  "raw": {
+    "model": "qwen3.5:4b",
+    "created_at": "2026-10-04T01:59:06.3997319Z",
+    "message": {
+      "role": "assistant",
+      "content": "",
+      "thinking": "The"
+    },
+    "done": true,
+    "done_reason": "length",
+    "total_duration": 6233067300,
+    "load_duration": 6092921600,
+    "prompt_eval_count": 116,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 128655000,
+    "eval_count": 1,
+    "eval_duration": 1000
+  },
+  "ended_at": 1791079146.4002364,
+  "elapsed_seconds": 6.280999999995402,
+  "runtime_ps": {
+    "models": [
+      {
+        "name": "qwen3.5:4b",
+        "model": "qwen3.5:4b",
+        "size": 5606914128,
+        "digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen35",
+          "families": [
+            "qwen35"
+          ],
+          "parameter_size": "4.7B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-04T10:04:06.3997319+08:00",
+        "size_vram": 5606914128,
+        "context_length": 65536
+      }
+    ]
+  },
+  "input_qualified": true,
+  "resident_qualified": true,
+  "response_qualified": true
+}

@@ -1,0 +1,2014 @@
+{
+  "source_sha256": "2ae7ee62a65b1c4225791c70de80c2aad4e8998cf1fd4f09a53103db4f21af93",
+  "selection": "Qasper dev ranks 125-130 inclusive; all questions",
+  "state_rule": "run_qasper_outline_route.build_paper, exact quotes and per-paragraph SHA256",
+  "model": "qwen3.5:4b",
+  "arms": [
+    "full",
+    "state_full",
+    "bm25_16",
+    "state_16",
+    "bm25_8",
+    "state_8",
+    "state_only"
+  ],
+  "papers": [
+    {
+      "paper_id": "1910.14599",
+      "title": "Adversarial NLI: A New Benchmark for Natural Language Understanding",
+      "state": "Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\n[Source P0 | Abstract] We introduce a new large-scale NLI benchmark dataset, collected via an iterative, adversarial human-and-model-in-the-loop procedure. We show that training models on this new dataset leads to state-of-the-art performance on a variety of popular NLI benchmarks, while posing a more difficult challenge with its new test set. Our analysis sheds light on the shortcomings of current state-of-the-art models, and shows that non-expert annotators are successful at finding their weaknesses. The data collection method can be applied in a never-ending learning scenario, becoming a moving target for NLU, rather than a static benchmark that will quickly saturate.\n[Source P1 | Section: Introduction] Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Introduction\nProgress in AI has been driven by, among other things, the development of challenging large-scale benchmarks like ImageNet BIBREF0 in computer vision, and SNLI BIBREF1, SQuAD BIBREF2, and others in natural language processing (NLP).\n[Source P1 | Section: Introduction] Recently, for natural language understanding (NLU) in particular, the focus has shifted to combined benchmarks like SentEval BIBREF3 and GLUE BIBREF4, which track model performance on multiple tasks and provide a unified platform for analysis.\n[Source P7 | Section: Dataset collection] Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Dataset collection\nThe primary aim of this work is to create a new large-scale NLI benchmark on which current state-of-the-art models fail.\n[Source P7 | Section: Dataset collection] This constitutes a new target for the field to work towards, and can elucidate model capabilities and limitations.\n[Source P8 | Section: Dataset collection ::: HAMLET] Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Dataset collection ::: HAMLET\nTo paraphrase the great bard BIBREF21, there is something rotten in the state of the art.\n[Source P8 | Section: Dataset collection ::: HAMLET] We propose Human-And-Model-in-the-Loop Entailment Training (HAMLET), a training procedure to automatically mitigate problems with current dataset collection procedures (see Figure FIGREF1).\n[Source P12 | Section: Dataset collection ::: Annotation details] Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Dataset collection ::: Annotation details\nWe employed crowdsourced workers from Mechanical Turk with qualifications.\n[Source P12 | Section: Dataset collection ::: Annotation details] For hypotheses that the model predicted the incorrect label for, but were verified by other humans, we paid an additional bonus on top of the standard rate.\n[Source P13 | Section: Dataset collection ::: Round 1] Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Dataset collection ::: Round 1\nFor the first round, we used a BERT-Large model BIBREF10 trained on a concatenation of SNLI BIBREF1 and MNLI BIBREF22, and selected the best-performing model we could train as the starting point for our dataset collection procedure.\n[Source P13 | Section: Dataset collection ::: Round 1] Contexts are either ground-truth contexts from that dataset, or they are Wikipedia passages retrieved using TF-IDF BIBREF24 based on a HotpotQA question.\n[Source P14 | Section: Dataset collection ::: Round 2] Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Dataset collection ::: Round 2\nFor the second round, we used a more powerful RoBERTa model BIBREF25 trained on SNLI, MNLI, an NLI-version of FEVER BIBREF26, and the training data from the previous round (A1).\n[Source P14 | Section: Dataset collection ::: Round 2] After a hyperparameter search, we selected the model with the best performance on the A1 development set.\n[Source P15 | Section: Dataset collection ::: Round 3] Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Dataset collection ::: Round 3\nFor the third round, we selected a more diverse set of contexts, in order to explore robustness under domain transfer.\n[Source P15 | Section: Dataset collection ::: Round 3] Finally, we also collected annotations using the longer contexts present in the GLUE RTE training data, which came from the RTE5 dataset BIBREF29.\n[Source P16 | Section: Dataset collection ::: Comparing with other datasets] Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Dataset collection ::: Comparing with other datasets\nThe ANLI dataset improves upon previous work in several ways.\n[Source P16 | Section: Dataset collection ::: Comparing with other datasets] First, and most obviously, the dataset is collected to be more difficult than previous datasets, by design.\n[Source P20 | Section: Dataset statistics] Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Dataset statistics\nThe dataset statistics can be found in Table TABREF7.\n[Source P21 | Section: Dataset statistics] Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Dataset statistics\nFor each round, we report the model error rate, both on verified and unverified examples.\n[Source P24 | Section: Results] Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Results\nTable TABREF13 reports the main results.\n[Source P24 | Section: Results] We show test set performance on the ANLI test sets per round, the total ANLI test set, and the exclusive test subset (examples from test-set-exclusive workers).\n[Source P25 | Section: Results ::: Base model performance is low.] Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Results ::: Base model performance is low.\n[Source P25 | Section: Results ::: Base model performance is low.] Notice that the base model for each round performs very poorly on that round's test set.\n[Source P26 | Section: Results ::: Rounds become increasingly more difficult.] Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Results ::: Rounds become increasingly more difficult.\n[Source P26 | Section: Results ::: Rounds become increasingly more difficult.] As already foreshadowed by the dataset statistics, round 3 is more difficult (yields lower performance) than round 2, and round 2 is more difficult than round 1.\n[Source P27 | Section: Results ::: Training on more rounds improves robustness.] Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Results ::: Training on more rounds improves robustness.\n[Source P38 | Section: Analysis ::: Reasoning types] The results are summarized in Table TABREF27.",
+      "state_sha256": "2b65c6a5990c9b8af0d01cae9bac5ec2d888dd24d13e967f5477d3643c1a2648",
+      "state_chars": 6975,
+      "state_construction_sec": 0.001832,
+      "source_chars": 37888,
+      "paragraph_sha256": [
+        "4cf7e58be5a886f941a403312ae13a6167b12a2b78f7114b84bf6511ce2f0a62",
+        "ca59849ad4f92b1df8417e8baf7123b16665e420cd842cb31944097e0eed78cd",
+        "e5d27b83021ee3ba4036b628089dea85d71194e6406c0cea841044920c869aa8",
+        "747c8cbcb71477c65fca72e1a8429bcab5ded7a470c1a06b8bcbf5dd9155d97c",
+        "e4aebd98227d85533a24cf70ba9bce27173875461c6e701619019cd62659341a",
+        "ee04a3140f62c254b7f5dfdb80ec91a5a455c67cb10802f944d6baa2a69a1bcd",
+        "75c19648315aeaa917224a3c1a9435fd805a28e3ad363d624edb62cc535cd3ec",
+        "5a2cbab0710d825f78a010cbf1570c9d5efc9abeed40a4089d25783576538ccf",
+        "ebf907cf5d92af2c5314bd5d709332cb5d0ef2a1edf73136ef6033c0a10112b5",
+        "39010784f9a5d0d946df6596caac8a6f465abebf31bc448025502a5cf042a029",
+        "b58cd514ed92ee819bf3bbf8f571f25990686e40d9a2fc637cd5d3f8100a762c",
+        "a7aa14843fbfb8bf2d82ecfa401af6b08e0ee197bd3c61c21b2a4c29dc962768",
+        "594c7af0f1e3c31621bac7659e76281a1322cfce2ae331af12912c6c457d6b4b",
+        "89e7c4f705cc0d858504b72995279ea02021be8a054c9ae2bbf3b983926bb978",
+        "ca3fd066da2ded19d782a01fa779f713edb98cf67dda5ce83eeed206ff93e9a4",
+        "96d48002bc3ea13eb4435cc3b27f7534c16e9325d9cd9ef1eb9750a97e69068b",
+        "d1fe32fe4e583d9e614e44d4eb4cf7a42e0542a7ef25342d47f60790da561159",
+        "e0de9c6cef5fe12e8ef3af9d2e3e89685708acc5a3a17ac4203d21280faa0290",
+        "707899868817dfe70325f8cfad11752dc950d6d3e28f3075389b3cac253628d3",
+        "3e81b1ebf3e87e46be91f5be045b1e374eda3a11fe7ecb47ace40685221dc8c4",
+        "2237f13f16daad7d75407bb03213c479488595847e244fc05e410cf443393a9a",
+        "31ec16ef522dfecf0abf11947be589f8e7b2348527aa4983a2be1980a4036cd9",
+        "3285f627264b07d7f1d05daa6eb5829e52b12bcd367210e09b7f41aeec371329",
+        "201473f9b746e389f8d2f454a16c3578e74bb235f607469ea723f036e1772455",
+        "7714940a9c2bad92f58612af8a15f0e197f17d8204f11fa8fb651d0862738538",
+        "648303e45a999c0639936fbcae0a757b567e92e20000d99e8481ac8e33555930",
+        "7a7ed58886f1171553e2eac5f5cdf4e172a7066402f9696e04a4a160fa1eaf8c",
+        "c45780a1dd364b0e2a68c157e3926352aa9bc42e1267fc3ea1a4befc3e7f257d",
+        "e2cac934c3949615570d51a8e0e1553ed0f74a3bc20ecb06d66da8380b4177af",
+        "9ddeb2769d8f85dbd5c351a20565093d6cfda5add81e575097748d43660ea326",
+        "5365dd38920e02a77d0f436447634230fafdae98246763b8320e184338f82466",
+        "ca9fd70e776ddf82f6b168d55223f2e9c8a2f5a717b20a35d49fa0f88ad3e0af",
+        "fab61fef03a1a52e9ac3354ff3a9d66506cf00d1ebd5fb1c7e350dd57879e3ef",
+        "029fcc5d7aea50aa7d4124fab246c1dcd899cf9b0fb6b27a95c3f06fc6f7643d",
+        "2b97ce8020b072a751334d74a860d2d31075fc1dad67a995c3fa04b2554dac27",
+        "f019a874a5de7e7bf23f737651c80f6d50472251332ef9897db5687b4144b12a",
+        "2e28e26d918e19ab3e1e02c3d06af25d868aa3a04d848fbf3de72ef8e2c2d451",
+        "a26a919f1492226d7077231d73ec352a9a4a9fc84e54bb0f88787228d3ab7f8a",
+        "8961a5952ab37756f04e3e8c949636bc470396d12bbb8d040c71c2e2a45dfb6f",
+        "be1e5217b7696825dd4740b87068ef54ff209ab491540e6e9b62636feb203908",
+        "8265de024659320b46ab2a93d7184410937dd11960f94d50561d0effd843e4ea",
+        "9156831fdf1d0b040e2766b20e31b44848a8a8389d2f967038b49435152400ac",
+        "e3024f51ec91ec691ef6d4518bbbb6a7657294eb9404951adf52a19c3fb59840",
+        "210fb13bd24458a65c7f60516675408ec237b6789ff0b89180b5a081cd725e06",
+        "9ecf1491c3d13556f9fb2e13b3d8ef2f551b6bfbfe2f094e63c621304a7d5ae5",
+        "2916c91b9e386b950c52ec33d535047190f4440722941daae55a69a756d726d6",
+        "0a727dbe5be8bf053e1361d0d35be484bfec68b479949f4974727dcf50ff9e4b",
+        "e214936ca733dc6f3e74319c7d4ffce48bbc50fdc0bcf3bc8911337c22d8ce68",
+        "e115342e94550b8fb0edf5a539dce8ef71af17e05ce9a7200be06f777b02ec93",
+        "7b824ae77f52abf41cd1ff20dbfb735bd95226435c66f02b711ee5632490cd67",
+        "f99d4df25dd629f083a6b500563677f1426d1aef0c7565591a623689bba5bc63",
+        "62265d5f5982becba8578911a52d49411e0fb067a84b75e183ede6690c180659",
+        "8d200d27b95e943563f85041be29f1915e40a450a6b42baac5761e98c8d243e5"
+      ],
+      "cards": [
+        {
+          "source_id": 0,
+          "section": "Abstract",
+          "quote": "We introduce a new large-scale NLI benchmark dataset, collected via an iterative, adversarial human-and-model-in-the-loop procedure. We show that training models on this new dataset leads to state-of-the-art performance on a variety of popular NLI benchmarks, while posing a more difficult challenge with its new test set. Our analysis sheds light on the shortcomings of current state-of-the-art models, and shows that non-expert annotators are successful at finding their weaknesses. The data collection method can be applied in a never-ending learning scenario, becoming a moving target for NLU, rather than a static benchmark that will quickly saturate.",
+          "source_sha256": "4cf7e58be5a886f941a403312ae13a6167b12a2b78f7114b84bf6511ce2f0a62"
+        },
+        {
+          "source_id": 1,
+          "section": "Introduction",
+          "quote": "Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Introduction\nProgress in AI has been driven by, among other things, the development of challenging large-scale benchmarks like ImageNet BIBREF0 in computer vision, and SNLI BIBREF1, SQuAD BIBREF2, and others in natural language processing (NLP).",
+          "source_sha256": "ca59849ad4f92b1df8417e8baf7123b16665e420cd842cb31944097e0eed78cd"
+        },
+        {
+          "source_id": 1,
+          "section": "Introduction",
+          "quote": "Recently, for natural language understanding (NLU) in particular, the focus has shifted to combined benchmarks like SentEval BIBREF3 and GLUE BIBREF4, which track model performance on multiple tasks and provide a unified platform for analysis.",
+          "source_sha256": "ca59849ad4f92b1df8417e8baf7123b16665e420cd842cb31944097e0eed78cd"
+        },
+        {
+          "source_id": 7,
+          "section": "Dataset collection",
+          "quote": "Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Dataset collection\nThe primary aim of this work is to create a new large-scale NLI benchmark on which current state-of-the-art models fail.",
+          "source_sha256": "5a2cbab0710d825f78a010cbf1570c9d5efc9abeed40a4089d25783576538ccf"
+        },
+        {
+          "source_id": 7,
+          "section": "Dataset collection",
+          "quote": "This constitutes a new target for the field to work towards, and can elucidate model capabilities and limitations.",
+          "source_sha256": "5a2cbab0710d825f78a010cbf1570c9d5efc9abeed40a4089d25783576538ccf"
+        },
+        {
+          "source_id": 8,
+          "section": "Dataset collection ::: HAMLET",
+          "quote": "Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Dataset collection ::: HAMLET\nTo paraphrase the great bard BIBREF21, there is something rotten in the state of the art.",
+          "source_sha256": "ebf907cf5d92af2c5314bd5d709332cb5d0ef2a1edf73136ef6033c0a10112b5"
+        },
+        {
+          "source_id": 8,
+          "section": "Dataset collection ::: HAMLET",
+          "quote": "We propose Human-And-Model-in-the-Loop Entailment Training (HAMLET), a training procedure to automatically mitigate problems with current dataset collection procedures (see Figure FIGREF1).",
+          "source_sha256": "ebf907cf5d92af2c5314bd5d709332cb5d0ef2a1edf73136ef6033c0a10112b5"
+        },
+        {
+          "source_id": 12,
+          "section": "Dataset collection ::: Annotation details",
+          "quote": "Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Dataset collection ::: Annotation details\nWe employed crowdsourced workers from Mechanical Turk with qualifications.",
+          "source_sha256": "594c7af0f1e3c31621bac7659e76281a1322cfce2ae331af12912c6c457d6b4b"
+        },
+        {
+          "source_id": 12,
+          "section": "Dataset collection ::: Annotation details",
+          "quote": "For hypotheses that the model predicted the incorrect label for, but were verified by other humans, we paid an additional bonus on top of the standard rate.",
+          "source_sha256": "594c7af0f1e3c31621bac7659e76281a1322cfce2ae331af12912c6c457d6b4b"
+        },
+        {
+          "source_id": 13,
+          "section": "Dataset collection ::: Round 1",
+          "quote": "Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Dataset collection ::: Round 1\nFor the first round, we used a BERT-Large model BIBREF10 trained on a concatenation of SNLI BIBREF1 and MNLI BIBREF22, and selected the best-performing model we could train as the starting point for our dataset collection procedure.",
+          "source_sha256": "89e7c4f705cc0d858504b72995279ea02021be8a054c9ae2bbf3b983926bb978"
+        },
+        {
+          "source_id": 13,
+          "section": "Dataset collection ::: Round 1",
+          "quote": "Contexts are either ground-truth contexts from that dataset, or they are Wikipedia passages retrieved using TF-IDF BIBREF24 based on a HotpotQA question.",
+          "source_sha256": "89e7c4f705cc0d858504b72995279ea02021be8a054c9ae2bbf3b983926bb978"
+        },
+        {
+          "source_id": 14,
+          "section": "Dataset collection ::: Round 2",
+          "quote": "Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Dataset collection ::: Round 2\nFor the second round, we used a more powerful RoBERTa model BIBREF25 trained on SNLI, MNLI, an NLI-version of FEVER BIBREF26, and the training data from the previous round (A1).",
+          "source_sha256": "ca3fd066da2ded19d782a01fa779f713edb98cf67dda5ce83eeed206ff93e9a4"
+        },
+        {
+          "source_id": 14,
+          "section": "Dataset collection ::: Round 2",
+          "quote": "After a hyperparameter search, we selected the model with the best performance on the A1 development set.",
+          "source_sha256": "ca3fd066da2ded19d782a01fa779f713edb98cf67dda5ce83eeed206ff93e9a4"
+        },
+        {
+          "source_id": 15,
+          "section": "Dataset collection ::: Round 3",
+          "quote": "Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Dataset collection ::: Round 3\nFor the third round, we selected a more diverse set of contexts, in order to explore robustness under domain transfer.",
+          "source_sha256": "96d48002bc3ea13eb4435cc3b27f7534c16e9325d9cd9ef1eb9750a97e69068b"
+        },
+        {
+          "source_id": 15,
+          "section": "Dataset collection ::: Round 3",
+          "quote": "Finally, we also collected annotations using the longer contexts present in the GLUE RTE training data, which came from the RTE5 dataset BIBREF29.",
+          "source_sha256": "96d48002bc3ea13eb4435cc3b27f7534c16e9325d9cd9ef1eb9750a97e69068b"
+        },
+        {
+          "source_id": 16,
+          "section": "Dataset collection ::: Comparing with other datasets",
+          "quote": "Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Dataset collection ::: Comparing with other datasets\nThe ANLI dataset improves upon previous work in several ways.",
+          "source_sha256": "d1fe32fe4e583d9e614e44d4eb4cf7a42e0542a7ef25342d47f60790da561159"
+        },
+        {
+          "source_id": 16,
+          "section": "Dataset collection ::: Comparing with other datasets",
+          "quote": "First, and most obviously, the dataset is collected to be more difficult than previous datasets, by design.",
+          "source_sha256": "d1fe32fe4e583d9e614e44d4eb4cf7a42e0542a7ef25342d47f60790da561159"
+        },
+        {
+          "source_id": 20,
+          "section": "Dataset statistics",
+          "quote": "Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Dataset statistics\nThe dataset statistics can be found in Table TABREF7.",
+          "source_sha256": "2237f13f16daad7d75407bb03213c479488595847e244fc05e410cf443393a9a"
+        },
+        {
+          "source_id": 21,
+          "section": "Dataset statistics",
+          "quote": "Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Dataset statistics\nFor each round, we report the model error rate, both on verified and unverified examples.",
+          "source_sha256": "31ec16ef522dfecf0abf11947be589f8e7b2348527aa4983a2be1980a4036cd9"
+        },
+        {
+          "source_id": 24,
+          "section": "Results",
+          "quote": "Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Results\nTable TABREF13 reports the main results.",
+          "source_sha256": "7714940a9c2bad92f58612af8a15f0e197f17d8204f11fa8fb651d0862738538"
+        },
+        {
+          "source_id": 24,
+          "section": "Results",
+          "quote": "We show test set performance on the ANLI test sets per round, the total ANLI test set, and the exclusive test subset (examples from test-set-exclusive workers).",
+          "source_sha256": "7714940a9c2bad92f58612af8a15f0e197f17d8204f11fa8fb651d0862738538"
+        },
+        {
+          "source_id": 25,
+          "section": "Results ::: Base model performance is low.",
+          "quote": "Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Results ::: Base model performance is low.",
+          "source_sha256": "648303e45a999c0639936fbcae0a757b567e92e20000d99e8481ac8e33555930"
+        },
+        {
+          "source_id": 25,
+          "section": "Results ::: Base model performance is low.",
+          "quote": "Notice that the base model for each round performs very poorly on that round's test set.",
+          "source_sha256": "648303e45a999c0639936fbcae0a757b567e92e20000d99e8481ac8e33555930"
+        },
+        {
+          "source_id": 26,
+          "section": "Results ::: Rounds become increasingly more difficult.",
+          "quote": "Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Results ::: Rounds become increasingly more difficult.",
+          "source_sha256": "7a7ed58886f1171553e2eac5f5cdf4e172a7066402f9696e04a4a160fa1eaf8c"
+        },
+        {
+          "source_id": 26,
+          "section": "Results ::: Rounds become increasingly more difficult.",
+          "quote": "As already foreshadowed by the dataset statistics, round 3 is more difficult (yields lower performance) than round 2, and round 2 is more difficult than round 1.",
+          "source_sha256": "7a7ed58886f1171553e2eac5f5cdf4e172a7066402f9696e04a4a160fa1eaf8c"
+        },
+        {
+          "source_id": 27,
+          "section": "Results ::: Training on more rounds improves robustness.",
+          "quote": "Paper 1910.14599: Adversarial NLI: A New Benchmark for Natural Language Understanding\nSection: Results ::: Training on more rounds improves robustness.",
+          "source_sha256": "c45780a1dd364b0e2a68c157e3926352aa9bc42e1267fc3ea1a4befc3e7f257d"
+        },
+        {
+          "source_id": 38,
+          "section": "Analysis ::: Reasoning types",
+          "quote": "The results are summarized in Table TABREF27.",
+          "source_sha256": "8961a5952ab37756f04e3e8c949636bc470396d12bbb8d040c71c2e2a45dfb6f"
+        }
+      ],
+      "index_sec": 0.001717,
+      "questions": [
+        {
+          "id": "a69a59b6c0ab27bcee1a780d6867df21e30aec08",
+          "question": "Do they compare human-level performance to model performance for their dataset?",
+          "query": "Paper: Adversarial NLI: A New Benchmark for Natural Language Understanding. Question: Do they compare human-level performance to model performance for their dataset?",
+          "selected_16": [
+            3,
+            10,
+            44,
+            2,
+            0,
+            9,
+            13,
+            19,
+            6,
+            34,
+            36,
+            46,
+            25,
+            32,
+            26,
+            4
+          ],
+          "selected_8": [
+            3,
+            10,
+            44,
+            2,
+            0,
+            9,
+            13,
+            19
+          ],
+          "search_sec": 0.000166
+        },
+        {
+          "id": "b3d01ac226ee979e188a4141877a6d2a5482de98",
+          "question": "What are the weaknesses found by non-expert annotators of current state-of-the-art NLI models?",
+          "query": "Paper: Adversarial NLI: A New Benchmark for Natural Language Understanding. Question: What are the weaknesses found by non-expert annotators of current state-of-the-art NLI models?",
+          "selected_16": [
+            48,
+            0,
+            3,
+            6,
+            28,
+            7,
+            29,
+            8,
+            14,
+            39,
+            4,
+            34,
+            35,
+            22,
+            11,
+            18
+          ],
+          "selected_8": [
+            48,
+            0,
+            3,
+            6,
+            28,
+            7,
+            29,
+            8
+          ],
+          "search_sec": 0.00018
+        },
+        {
+          "id": "af5730d82535464cedfa707a03415ac2e7a21295",
+          "question": "What data sources do they use for creating their dataset?",
+          "query": "Paper: Adversarial NLI: A New Benchmark for Natural Language Understanding. Question: What data sources do they use for creating their dataset?",
+          "selected_16": [
+            3,
+            44,
+            10,
+            13,
+            0,
+            24,
+            29,
+            7,
+            9,
+            16,
+            34,
+            42,
+            31,
+            19,
+            38,
+            2
+          ],
+          "selected_8": [
+            3,
+            44,
+            10,
+            13,
+            0,
+            24,
+            29,
+            7
+          ],
+          "search_sec": 0.000135
+        },
+        {
+          "id": "ee2c9bc24d70daa0c87e38e0558e09ab97feb4f2",
+          "question": "Do they use active learning to create their dataset?",
+          "query": "Paper: Adversarial NLI: A New Benchmark for Natural Language Understanding. Question: Do they use active learning to create their dataset?",
+          "selected_16": [
+            3,
+            7,
+            10,
+            44,
+            46,
+            43,
+            13,
+            0,
+            16,
+            38,
+            2,
+            19,
+            35,
+            5,
+            9,
+            42
+          ],
+          "selected_8": [
+            3,
+            7,
+            10,
+            44,
+            46,
+            43,
+            13,
+            0
+          ],
+          "search_sec": 0.000131
+        }
+      ]
+    },
+    {
+      "paper_id": "1911.02855",
+      "title": "Dice Loss for Data-imbalanced NLP Tasks",
+      "state": "Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\n[Source P0 | Abstract] Many NLP tasks such as tagging and machine reading comprehension are faced with the severe data imbalance issue: negative examples significantly outnumber positive examples, and the huge number of background examples (or easy-negative examples) overwhelms the training. The most commonly used cross entropy (CE) criteria is actually an accuracy-oriented objective, and thus creates a discrepancy between training and test: at training time, each training instance contributes equally to the objective function, while at test time F1 score concerns more about positive examples. In this paper, we propose to use dice loss in replacement of the standard cross-entropy objective for data-imbalanced NLP tasks. Dice loss is based on the Sorensen-Dice coefficient or Tversky index, which attaches similar importance to false positives and false negatives, and is more immune to the data-imbalance issue. To further alleviate the dominating influence from easy-negative examples in training, we propose to associate training examples with dynamically adjusted weights to deemphasize easy-negative examples.Theoretical analysis shows that this strategy narrows down the gap between the F1 score in evaluation and the dice loss in training. With the proposed training objective, we observe significant performance boost on a wide range of data imbalanced NLP tasks. Notably, we are able to achieve SOTA results on CTB5, CTB6 and UD1.4 for the part of speech tagging task; SOTA results on CoNLL03, OntoNotes5.0, MSRA and OntoNotes4.0 for the named entity recognition task; along with competitive results on the tasks of machine reading comprehension and paraphrase identification.\n[Source P1 | Section: Introduction] Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Introduction\nData imbalance is a common issue in a variety of NLP tasks such as tagging and machine reading comprehension.\n[Source P1 | Section: Introduction] Specifically, the number of tokens tagging class $O$ is 5 times as many as those with entity labels for the CoNLL03 dataset and 8 times for the OntoNotes5.0 dataset; Data-imbalanced issue is more severe for MRC tasks BIBREF4, BIBREF5, BIBREF6, BIBREF7, BIBREF8 with the value of negative-positive ratio being 50-200.\n[Source P7 | Section: Related Work ::: Data Resample] Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Related Work ::: Data Resample\nThe idea of weighting training examples has a long history.\n[Source P7 | Section: Related Work ::: Data Resample] Besides, recent work BIBREF25, BIBREF26 proposed to learn a separate network to predict sample weights.\n[Source P8 | Section: Related Work ::: Data Imbalance Issue in Object Detection] Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Related Work ::: Data Imbalance Issue in Object Detection\nThe background-object label imbalance issue is severe and thus well studied in the field of object detection BIBREF27, BIBREF28, BIBREF29, BIBREF30, BIBREF31.\n[Source P8 | Section: Related Work ::: Data Imbalance Issue in Object Detection] shrivastava2016ohem proposed the online hard example mining (OHEM) algorithm in an iterative manner that makes training progressively more difficult, and pushes the model to learn better.\n[Source P9 | Section: Losses ::: Notation] Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Losses ::: Notation\nFor illustration purposes, we use the binary classification task to demonstrate how different losses work.\n[Source P10 | Section: Losses ::: Notation] Let $p_i = [p_{i0},p_{i1} ]$ denote the probability vector, and $p_{i1}$ and $p_{i0}$ respectively denote the probability that a model assigns the positive and negative label to $x_i$.\n[Source P11 | Section: Losses ::: Cross Entropy Loss] Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Losses ::: Cross Entropy Loss\nThe vanilla cross entropy (CE) loss is given by:\n[Source P12 | Section: Losses ::: Cross Entropy Loss] Two strategies are normally used to address the the case where we wish that not all $x_i$ are treated equal: associating different classes with different weighting factor $\\alpha $ or resampling the datasets.\n[Source P14 | Section: Losses ::: Dice coefficient and Tversky index] Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Losses ::: Dice coefficient and Tversky index\nSørensen–Dice coefficient BIBREF0, BIBREF33, dice coefficient (DSC) for short, is a F1-oriented statistic used to gauge the similarity of two sets.\n[Source P15 | Section: Losses ::: Dice coefficient and Tversky index] Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Losses ::: Dice coefficient and Tversky index\nIn our case, $A$ is the set that contains of all positive examples predicted by a specific model, and $B$ is the set of all golden positive examples in the dataset.\n[Source P22 | Section: Losses ::: Self-adusting Dice Loss] Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Losses ::: Self-adusting Dice Loss\nConsider a simple case where the dataset consists of only one example $x_i$, which is classified as positive as long as $p_{i1}$ is larger than 0.5.\n[Source P23 | Section: Losses ::: Self-adusting Dice Loss] Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Losses ::: Self-adusting Dice Loss\nComparing Eq.DISPLAY_FORM14 with Eq.DISPLAY_FORM22, we can see that Eq.DISPLAY_FORM14 is actually a soft form of $F1$, using a continuous $p$ rather than the binary $\\mathbb {I}( p_{i1}>0.5)$.\n[Source P28 | Section: Experiments] Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Experiments\nWe evaluate the proposed method on four NLP tasks: part-of-speech tagging, named entity recognition, machine reading comprehension and paraphrase identification.\n[Source P28 | Section: Experiments] Baselines in our experiments are optimized by using the standard cross-entropy training objective.\n[Source P29 | Section: Experiments ::: Part-of-Speech Tagging] Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Experiments ::: Part-of-Speech Tagging\nPart-of-speech tagging (POS) is the task of assigning a label (e.g., noun, verb, adjective) to each word in a given text.\n[Source P29 | Section: Experiments ::: Part-of-Speech Tagging] In this paper, we choose BERT as the backbone and conduct experiments on three Chinese POS datasets.\n[Source P30 | Section: Experiments ::: Part-of-Speech Tagging ::: Datasets] Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Experiments ::: Part-of-Speech Tagging ::: Datasets\nWe conduct experiments on the widely used Chinese Treebank 5.0, 6.0 as well as UD1.4.\n[Source P34 | Section: Experiments ::: Part-of-Speech Tagging ::: Baselines] Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Experiments ::: Part-of-Speech Tagging ::: Baselines\nWe use the following baselines:",
+      "state_sha256": "74cb46656173231c7681c582faeb2bcd945b5c59d4a7d1c0ca41869a51b5daa8",
+      "state_chars": 6984,
+      "state_construction_sec": 0.000733,
+      "source_chars": 31750,
+      "paragraph_sha256": [
+        "e98e19b7d3ac55e00191a6470484710d9c400b1e48b99fc1a2117c7d08e3ed93",
+        "1eca5aa1bbe768ccee69c3408fda951ca557c0fd65a734063b0ce525af4a2b25",
+        "eb36410df868b2460f6a4c1cefc9c2eb4eba33f378713698fd932dd70f504240",
+        "73aad8b0afa9a8832664bade497d72fb2431393cdc933abe95424391a74e104b",
+        "a17f774316708f88cb55c526699da5982c7501462532e5bfbefd365f9d5ec6b1",
+        "4641bd8189ae3e681e84e545eb772e9d2ed7e1771ff4fc4c56f6e2aff87a324b",
+        "c736370de20708428427c1acec9ca6f6ebd32d0fe389f6a706fceaba700a27b1",
+        "66cad6f8a677714592409d4a4fd1ac1b08ddf324698337f4eb5c578a1a67ad80",
+        "e697d9d2242a675cf3cb986d1f2febc8b17b5b7ad4932c650cce424e09da31f4",
+        "d32380a3e47152cee42e8a09b8cc40aa50543cd1cb394ffe50e37df207d99ba9",
+        "13fb09ec20d44e4856a97575108362c33f92695634efdf17d427d85f563d9c2f",
+        "604c6dea5853c67c87f4318268572d1c13b086dc0b23b9de4299b9335a24fab1",
+        "fdfe7b6883f0159321284da7ae35cc111a6e3741f343a63bc5694e316fa3d4ab",
+        "5f8acb7de6218b107278844ed810c85d014be9374d95137344bc770086916514",
+        "2499eb0c38db503d05fccfca97b2b1394887c40f749cd9c7a5ec30d3fda8a4f2",
+        "f853d3419f765186cd26ff4b441f0b18314b9339860bd603d046b12cf9f44839",
+        "f3276d7e829ecd3787c96d360a60778c99614879b7960af9f4a12ec987c8341d",
+        "5bb547762017dd5db4dd06c307df1b348676d3ee94eedbc25aac20beb76e2ed6",
+        "85c988046ec9b8a69dc5008cef33af7afa9d3e318ddbccfa98a28e0b0c50b911",
+        "68b09c9827aa0c81474cc3ca82f380207b6e4cd2cdf96f5b1d4e01f4b166d160",
+        "e3c9544aee911fbcb9689af8487ad52d0e56a325b827127fd1ce59e1650dcd4e",
+        "b464a04094d4b7d4004a5774ecd4fd9072277149a79b21d3966313afec78ac75",
+        "494457134fde0266645974b455d840af7e7a2d705c9ffaa5ab0a1e12821ddc8e",
+        "b1163a3dfe7e7136c8a3d8bafa7edfdaba0cae55a0c2df455ea2a5319d730cb7",
+        "f14075a04bcbfe05961d2b473eb47db440cfe52d29cd701a71c7066969dbe14c",
+        "ed3fb06afddf4f6d72341fea48b7af24a7811f1f1d1f6c9aedab6f1681ec723b",
+        "def0b51be54c95170f01e2aec738b4bd7273896f857e077a3b78e4c9b4e6af0b",
+        "4743874be5a7563b6ae653b753ffb8d6dec21cdd4cf09fee906f63553427e4c0",
+        "d36ba5090f4f0e6c8650da57f7cfda2f9f9c536d4a1e9f43023562934e44c308",
+        "264a8d8a354ef2fcd1164fd4ce577fadb98a70149130aae50f2da002d15b0af0",
+        "0709c0086ab60b618f96c8da74dfa022a80a247e5da9188829fde3ea8d5edcd3",
+        "08b3730aea21c5c7614d4a2e70d78c4876216e03284fe012b48a6a33506d3218",
+        "db551d153404a711a2edb9e4c7ea680edaaff9b2d912f1b79f593cca8c09ab12",
+        "26b563496285813014c07860dded98b59781c2a0ddca1a568904fb9f357ab090",
+        "7613e8788d1f8d0fd3bbe746d93cf158929c8cacea1c21b28527d945efa6322d",
+        "f4355a3a3d56acb321c1b6a760803ef2dd9f2b9a24eaea600d6476eaf941063b",
+        "4cd9ee8637046defe9e23d00272fd10394bae2cbfd557776e0c08ea681afe166",
+        "7da6fa6ad50de24139eb43e1e3547da3ac2e5edd7d249fad02fae0f502ae23b1",
+        "eb9d7614496a640d96fdad4a89beef0d7c37e4671139ed8f430cc42b81e0c6c2",
+        "218c7627e628768aaee6147f10a8c9901351bee05ff5eea4d764d7f9902ef7a4",
+        "bdfe423f07cbb1a694933dbc0983b5a80a41059e6e65293e4d54b6fa586bf9d1",
+        "cdc02299ebb19fadedf7383cbc1b6e7e61040b9dbd9fda6f40ad149bc14c7459",
+        "73a59366ea85fa459d90f589a4c5435661177ae8ad33414ba9909bd5da2e341d",
+        "53ed0aad5b3271b11fa03aee7e48bd6a31ef54e9483d7e0ad3cc68658d958c30",
+        "e30dc3887f01582a773d53dcde9c18e53cd967670b64e64f79fddcf6c2a9cb45",
+        "df65a36627c823717595efb3b1fbd32c821e0d6790b506e029f51ca878612bdf",
+        "51f22cf79086420d98f163e488e50458eb5cc09dc7fb40a2c5f0bf8a4d76f725",
+        "8f1f73e0507a2c866aa8622304e4da5f44ffc90d97297766982899872d97307a",
+        "eccbfc3c41d1aa904a81f743b5156d76eeaba975a74786f93e15f81762724418",
+        "db680a4acebdf6f03aae0fb90824e653ab518ccdb2936f8d77c4393a337d652b",
+        "f87a4755b04410f9e886bdb533b736a14a50c6451f827fa419e44bd96eabe7cf",
+        "1a7f061d8ae5751bfeafe96e4f32bc0f2a7d2f75d146a5b96c0514637d4c7754",
+        "15989ed62dcc1e1dcebced2c6a97f72f6c61995e1b148918d8dc9baf28f89b1b",
+        "c9a12340d1b5bf69d1df59f71bf8a479712c0d587962625d49af32f8ef9694fa",
+        "9771c6bffd15b0f5b31b0eabcc9f4b84f8af11e581fbaf71143979d274a5d7de",
+        "ac3d3817b0b1f98ab31679ef85a7ab16e8836fcb9f3612d276560a2904629c05",
+        "d5ad821370e092305ff45f0cdfde6eed5cd5321b6f2eb456b1419e5daec21e9a",
+        "7e6c9c3c0ab72197eb3a0afddfa8b4dd388f4647b43c8aae6e3806f9f697bd6b",
+        "07971f58845396e79784dc39649629c7657a1156d9c9215ec3a8eab99799c73e",
+        "c4abdace7dd0d1add38464daff7a61f89a7d200e9415d64eff7b0a3dc4e7d6e7",
+        "9cdb7459cf540d934aa8ad0000f19c5efe964f7282ad23d52e2d019aa54b5fcd",
+        "8f93cd84dd92b04f583143092e38e688cdd8b0d3e5020d91bc26b29af4d4cf1c",
+        "315a82a9190dfe4b2458f1caa2a25db0e0931c7f12db7b7bef355ddd8f25f179",
+        "980f1f4d84000127a496e4b3520711224cf993f98237d14e8d83dbdddd81465e",
+        "2f2f251d01ce18f07dd53ea6c9e48ab52c4d4dd719689e824c1a3efb6cc4cf82",
+        "c83683821d1b4359a2fb193665201d413cc8daade33afa853f19500cf2a1a9d4",
+        "3f9806777190235b758050b6c3c513b20c4dbb6bdcf2c85ea1eb24dcaf90101c",
+        "e352f3f2d399a77e558d9b6cebb37e37784217054cbc4bcd34ed3ea768a89680",
+        "2b194ece1b6987ac8de249a5df02a39007874143253f166a60ba2fbf50df35eb",
+        "9c4829c3b63d18064457c37a53ead5d929d840010a61230e591d016b78f49f16"
+      ],
+      "cards": [
+        {
+          "source_id": 0,
+          "section": "Abstract",
+          "quote": "Many NLP tasks such as tagging and machine reading comprehension are faced with the severe data imbalance issue: negative examples significantly outnumber positive examples, and the huge number of background examples (or easy-negative examples) overwhelms the training. The most commonly used cross entropy (CE) criteria is actually an accuracy-oriented objective, and thus creates a discrepancy between training and test: at training time, each training instance contributes equally to the objective function, while at test time F1 score concerns more about positive examples. In this paper, we propose to use dice loss in replacement of the standard cross-entropy objective for data-imbalanced NLP tasks. Dice loss is based on the Sorensen-Dice coefficient or Tversky index, which attaches similar importance to false positives and false negatives, and is more immune to the data-imbalance issue. To further alleviate the dominating influence from easy-negative examples in training, we propose to associate training examples with dynamically adjusted weights to deemphasize easy-negative examples.Theoretical analysis shows that this strategy narrows down the gap between the F1 score in evaluation and the dice loss in training. With the proposed training objective, we observe significant performance boost on a wide range of data imbalanced NLP tasks. Notably, we are able to achieve SOTA results on CTB5, CTB6 and UD1.4 for the part of speech tagging task; SOTA results on CoNLL03, OntoNotes5.0, MSRA and OntoNotes4.0 for the named entity recognition task; along with competitive results on the tasks of machine reading comprehension and paraphrase identification.",
+          "source_sha256": "e98e19b7d3ac55e00191a6470484710d9c400b1e48b99fc1a2117c7d08e3ed93"
+        },
+        {
+          "source_id": 1,
+          "section": "Introduction",
+          "quote": "Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Introduction\nData imbalance is a common issue in a variety of NLP tasks such as tagging and machine reading comprehension.",
+          "source_sha256": "1eca5aa1bbe768ccee69c3408fda951ca557c0fd65a734063b0ce525af4a2b25"
+        },
+        {
+          "source_id": 1,
+          "section": "Introduction",
+          "quote": "Specifically, the number of tokens tagging class $O$ is 5 times as many as those with entity labels for the CoNLL03 dataset and 8 times for the OntoNotes5.0 dataset; Data-imbalanced issue is more severe for MRC tasks BIBREF4, BIBREF5, BIBREF6, BIBREF7, BIBREF8 with the value of negative-positive ratio being 50-200.",
+          "source_sha256": "1eca5aa1bbe768ccee69c3408fda951ca557c0fd65a734063b0ce525af4a2b25"
+        },
+        {
+          "source_id": 7,
+          "section": "Related Work ::: Data Resample",
+          "quote": "Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Related Work ::: Data Resample\nThe idea of weighting training examples has a long history.",
+          "source_sha256": "66cad6f8a677714592409d4a4fd1ac1b08ddf324698337f4eb5c578a1a67ad80"
+        },
+        {
+          "source_id": 7,
+          "section": "Related Work ::: Data Resample",
+          "quote": "Besides, recent work BIBREF25, BIBREF26 proposed to learn a separate network to predict sample weights.",
+          "source_sha256": "66cad6f8a677714592409d4a4fd1ac1b08ddf324698337f4eb5c578a1a67ad80"
+        },
+        {
+          "source_id": 8,
+          "section": "Related Work ::: Data Imbalance Issue in Object Detection",
+          "quote": "Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Related Work ::: Data Imbalance Issue in Object Detection\nThe background-object label imbalance issue is severe and thus well studied in the field of object detection BIBREF27, BIBREF28, BIBREF29, BIBREF30, BIBREF31.",
+          "source_sha256": "e697d9d2242a675cf3cb986d1f2febc8b17b5b7ad4932c650cce424e09da31f4"
+        },
+        {
+          "source_id": 8,
+          "section": "Related Work ::: Data Imbalance Issue in Object Detection",
+          "quote": "shrivastava2016ohem proposed the online hard example mining (OHEM) algorithm in an iterative manner that makes training progressively more difficult, and pushes the model to learn better.",
+          "source_sha256": "e697d9d2242a675cf3cb986d1f2febc8b17b5b7ad4932c650cce424e09da31f4"
+        },
+        {
+          "source_id": 9,
+          "section": "Losses ::: Notation",
+          "quote": "Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Losses ::: Notation\nFor illustration purposes, we use the binary classification task to demonstrate how different losses work.",
+          "source_sha256": "d32380a3e47152cee42e8a09b8cc40aa50543cd1cb394ffe50e37df207d99ba9"
+        },
+        {
+          "source_id": 10,
+          "section": "Losses ::: Notation",
+          "quote": "Let $p_i = [p_{i0},p_{i1} ]$ denote the probability vector, and $p_{i1}$ and $p_{i0}$ respectively denote the probability that a model assigns the positive and negative label to $x_i$.",
+          "source_sha256": "13fb09ec20d44e4856a97575108362c33f92695634efdf17d427d85f563d9c2f"
+        },
+        {
+          "source_id": 11,
+          "section": "Losses ::: Cross Entropy Loss",
+          "quote": "Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Losses ::: Cross Entropy Loss\nThe vanilla cross entropy (CE) loss is given by:",
+          "source_sha256": "604c6dea5853c67c87f4318268572d1c13b086dc0b23b9de4299b9335a24fab1"
+        },
+        {
+          "source_id": 12,
+          "section": "Losses ::: Cross Entropy Loss",
+          "quote": "Two strategies are normally used to address the the case where we wish that not all $x_i$ are treated equal: associating different classes with different weighting factor $\\alpha $ or resampling the datasets.",
+          "source_sha256": "fdfe7b6883f0159321284da7ae35cc111a6e3741f343a63bc5694e316fa3d4ab"
+        },
+        {
+          "source_id": 14,
+          "section": "Losses ::: Dice coefficient and Tversky index",
+          "quote": "Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Losses ::: Dice coefficient and Tversky index\nSørensen–Dice coefficient BIBREF0, BIBREF33, dice coefficient (DSC) for short, is a F1-oriented statistic used to gauge the similarity of two sets.",
+          "source_sha256": "2499eb0c38db503d05fccfca97b2b1394887c40f749cd9c7a5ec30d3fda8a4f2"
+        },
+        {
+          "source_id": 15,
+          "section": "Losses ::: Dice coefficient and Tversky index",
+          "quote": "Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Losses ::: Dice coefficient and Tversky index\nIn our case, $A$ is the set that contains of all positive examples predicted by a specific model, and $B$ is the set of all golden positive examples in the dataset.",
+          "source_sha256": "f853d3419f765186cd26ff4b441f0b18314b9339860bd603d046b12cf9f44839"
+        },
+        {
+          "source_id": 22,
+          "section": "Losses ::: Self-adusting Dice Loss",
+          "quote": "Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Losses ::: Self-adusting Dice Loss\nConsider a simple case where the dataset consists of only one example $x_i$, which is classified as positive as long as $p_{i1}$ is larger than 0.5.",
+          "source_sha256": "494457134fde0266645974b455d840af7e7a2d705c9ffaa5ab0a1e12821ddc8e"
+        },
+        {
+          "source_id": 23,
+          "section": "Losses ::: Self-adusting Dice Loss",
+          "quote": "Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Losses ::: Self-adusting Dice Loss\nComparing Eq.DISPLAY_FORM14 with Eq.DISPLAY_FORM22, we can see that Eq.DISPLAY_FORM14 is actually a soft form of $F1$, using a continuous $p$ rather than the binary $\\mathbb {I}( p_{i1}>0.5)$.",
+          "source_sha256": "b1163a3dfe7e7136c8a3d8bafa7edfdaba0cae55a0c2df455ea2a5319d730cb7"
+        },
+        {
+          "source_id": 28,
+          "section": "Experiments",
+          "quote": "Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Experiments\nWe evaluate the proposed method on four NLP tasks: part-of-speech tagging, named entity recognition, machine reading comprehension and paraphrase identification.",
+          "source_sha256": "d36ba5090f4f0e6c8650da57f7cfda2f9f9c536d4a1e9f43023562934e44c308"
+        },
+        {
+          "source_id": 28,
+          "section": "Experiments",
+          "quote": "Baselines in our experiments are optimized by using the standard cross-entropy training objective.",
+          "source_sha256": "d36ba5090f4f0e6c8650da57f7cfda2f9f9c536d4a1e9f43023562934e44c308"
+        },
+        {
+          "source_id": 29,
+          "section": "Experiments ::: Part-of-Speech Tagging",
+          "quote": "Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Experiments ::: Part-of-Speech Tagging\nPart-of-speech tagging (POS) is the task of assigning a label (e.g., noun, verb, adjective) to each word in a given text.",
+          "source_sha256": "264a8d8a354ef2fcd1164fd4ce577fadb98a70149130aae50f2da002d15b0af0"
+        },
+        {
+          "source_id": 29,
+          "section": "Experiments ::: Part-of-Speech Tagging",
+          "quote": "In this paper, we choose BERT as the backbone and conduct experiments on three Chinese POS datasets.",
+          "source_sha256": "264a8d8a354ef2fcd1164fd4ce577fadb98a70149130aae50f2da002d15b0af0"
+        },
+        {
+          "source_id": 30,
+          "section": "Experiments ::: Part-of-Speech Tagging ::: Datasets",
+          "quote": "Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Experiments ::: Part-of-Speech Tagging ::: Datasets\nWe conduct experiments on the widely used Chinese Treebank 5.0, 6.0 as well as UD1.4.",
+          "source_sha256": "0709c0086ab60b618f96c8da74dfa022a80a247e5da9188829fde3ea8d5edcd3"
+        },
+        {
+          "source_id": 34,
+          "section": "Experiments ::: Part-of-Speech Tagging ::: Baselines",
+          "quote": "Paper 1911.02855: Dice Loss for Data-imbalanced NLP Tasks\nSection: Experiments ::: Part-of-Speech Tagging ::: Baselines\nWe use the following baselines:",
+          "source_sha256": "7613e8788d1f8d0fd3bbe746d93cf158929c8cacea1c21b28527d945efa6322d"
+        }
+      ],
+      "index_sec": 0.001372,
+      "questions": [
+        {
+          "id": "23b2901264bda91045258b5d4120879ae292e950",
+          "question": "What are method improvements of F1 for paraphrase identification?",
+          "query": "Paper: Dice Loss for Data-imbalanced NLP Tasks. Question: What are method improvements of F1 for paraphrase identification?",
+          "selected_16": [
+            65,
+            62,
+            28,
+            52,
+            64,
+            66,
+            69,
+            63,
+            61,
+            53,
+            55,
+            5,
+            0,
+            68,
+            60,
+            29
+          ],
+          "selected_8": [
+            65,
+            62,
+            28,
+            52,
+            64,
+            66,
+            69,
+            63
+          ],
+          "search_sec": 0.000162
+        },
+        {
+          "id": "b5bc34e1e381dbf972d0b594fe8c66ff75305d71",
+          "question": "What are method's improvements of F1 for NER task for English and Chinese datasets?",
+          "query": "Paper: Dice Loss for Data-imbalanced NLP Tasks. Question: What are method's improvements of F1 for NER task for English and Chinese datasets?",
+          "selected_16": [
+            52,
+            39,
+            51,
+            40,
+            68,
+            53,
+            29,
+            55,
+            65,
+            42,
+            38,
+            62,
+            5,
+            54,
+            44,
+            1
+          ],
+          "selected_8": [
+            52,
+            39,
+            51,
+            40,
+            68,
+            53,
+            29,
+            55
+          ],
+          "search_sec": 0.000188
+        },
+        {
+          "id": "72f7ef55e150e16dcf97fe443aff9971a32414ef",
+          "question": "What are method's improvements of F1 w.r.t. baseline BERT tagger for Chinese POS datasets?",
+          "query": "Paper: Dice Loss for Data-imbalanced NLP Tasks. Question: What are method's improvements of F1 w.r.t. baseline BERT tagger for Chinese POS datasets?",
+          "selected_16": [
+            38,
+            52,
+            29,
+            39,
+            13,
+            35,
+            37,
+            65,
+            49,
+            33,
+            55,
+            53,
+            62,
+            67,
+            51,
+            68
+          ],
+          "selected_8": [
+            38,
+            52,
+            29,
+            39,
+            13,
+            35,
+            37,
+            65
+          ],
+          "search_sec": 0.000178
+        },
+        {
+          "id": "20e38438471266ce021817c6364f6a46d01564f2",
+          "question": "How are weights dynamically adjusted?",
+          "query": "Paper: Dice Loss for Data-imbalanced NLP Tasks. Question: How are weights dynamically adjusted?",
+          "selected_16": [
+            7,
+            65,
+            0,
+            55,
+            12,
+            9,
+            53,
+            68,
+            26,
+            4,
+            62,
+            38,
+            52,
+            54,
+            13,
+            28
+          ],
+          "selected_8": [
+            7,
+            65,
+            0,
+            55,
+            12,
+            9,
+            53,
+            68
+          ],
+          "search_sec": 0.000122
+        }
+      ]
+    },
+    {
+      "paper_id": "1911.06964",
+      "title": "Learning Autocomplete Systems as a Communication Game",
+      "state": "Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\n[Source P0 | Abstract] We study textual autocomplete---the task of predicting a full sentence from a partial sentence---as a human-machine communication game. Specifically, we consider three competing goals for effective communication: use as few tokens as possible (efficiency), transmit sentences faithfully (accuracy), and be learnable to humans (interpretability). We propose an unsupervised approach which tackles all three desiderata by constraining the communication scheme to keywords extracted from a source sentence for interpretability and optimizing the efficiency-accuracy tradeoff. Our experiments show that this approach results in an autocomplete system that is 52% more accurate at a given efficiency level compared to baselines, is robust to user variations, and saves time by nearly 50% compared to typing full sentences.\n[Source P1 | Section: Introduction] Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Introduction\nSuppose a user wants to write a sentence “I will be 10 minutes late.” Ideally, she would type just a few keywords such as “10 minutes late” and an autocomplete system would be able to infer the intended sentence (Figure FIGREF1).\n[Source P2 | Section: Introduction] Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Introduction\nOne approach to learn such schemes is to collect a supervised dataset of keywords-sentence pairs as a training set, but (i) it would be expensive to collect such data from users, and (ii) a static dataset would not capture a real user's natural predilection to adapt to the system BIBREF2.\n[Source P6 | Section: Approach] Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Approach\nConsider a communication game in which the goal is for a user to communicate a target sequence $x= (x_1, ..., x_m)$ to a system by passing a sequence of keywords $z= (z_1, ..., z_n)$.\n[Source P8 | Section: Approach] Our hypothesis is that such subsequence schemes naturally ensure interpretability, as efficient human and machine communication schemes are both likely to involve keeping important content words.\n[Source P9 | Section: Approach ::: Modeling with autoencoders.] Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Approach ::: Modeling with autoencoders.\n[Source P10 | Section: Approach ::: Modeling with autoencoders.] We use a standard sequence-to-sequence model with attention and copying for the decoder, but any model architecture can be used (see Appendix for details).\n[Source P11 | Section: Approach ::: Multi-objective optimization.] Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Approach ::: Multi-objective optimization.\n[Source P12 | Section: Approach ::: Multi-objective optimization.] However, we observe that naively weighting and searching over $\\lambda $ is suboptimal and highly unstable—even slight changes to the weighting results in degenerate schemes which keep all or none of its tokens.\n[Source P17 | Section: Approach ::: Optimization.] Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Approach ::: Optimization.\n[Source P18 | Section: Approach ::: Optimization.] We perform joint updates on $(\\alpha , \\beta , \\lambda )$, where $\\beta $ and $\\lambda $ are updated via standard gradient computations, while $\\alpha $ uses an unbiased, stochastic gradient estimate where we approximate the expectation in Eq (DISPLAY_FORM9).\n[Source P19 | Section: Experiments] Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Experiments\nWe evaluate our approach by training an autocomplete system on 500K randomly sampled sentences from Yelp reviews BIBREF6 (see Appendix for details).\n[Source P19 | Section: Experiments] The accuracy of a scheme is measured as the fraction of sentences generated by greedily decoding the model that exactly matches the target sentence.\n[Source P20 | Section: Experiments ::: Effectiveness of constrained objective.] Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Experiments ::: Effectiveness of constrained objective.\n[Source P20 | Section: Experiments ::: Effectiveness of constrained objective.] We first show that the linear objective in Eq (DISPLAY_FORM5) is suboptimal compared to the constrained objective in Eq (DISPLAY_FORM6).\n[Source P22 | Section: Experiments ::: Efficiency-accuracy tradeoff.] Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Experiments ::: Efficiency-accuracy tradeoff.\n[Source P22 | Section: Experiments ::: Efficiency-accuracy tradeoff.] We quantify the efficiency-accuracy tradeoff compared to two rule-based baselines: Unif and Stopword.\n[Source P24 | Section: Experiments ::: Robustness and analysis.] Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Experiments ::: Robustness and analysis.\n[Source P24 | Section: Experiments ::: Robustness and analysis.] We provide additional experimental results on the robustness of learned communication schemes as well as in-depth analysis on the correlation between the retention rates of tokens and their properties, which we defer to Appendix and for space.\n[Source P25 | Section: Experiments ::: User study.] Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Experiments ::: User study.\n[Source P26 | Section: Experiments ::: User study.] We observe that the system is likely to propose generic sentences for under-specified keywords (left column) and almost the same sentences for over-specified keywords (right column).\n[Source P28 | Section: Experiments ::: Acknowledgments] Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Experiments ::: Acknowledgments\nWe thank the reviewers and Yunseok Jang for their insightful comments.\n[Source P28 | Section: Experiments ::: Acknowledgments] This work was supported by NSF CAREER Award IIS-1552635 and an Intuit Research Award.\n[Source P29 | Section: Experiments ::: Reproducibility] Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Experiments ::: Reproducibility\nAll code, data and experiments are available on CodaLab at https://bit.ly/353fbyn.",
+      "state_sha256": "8a695f833d7c47f7735ab84d4a3675c8460c73d39c7ee904493606534e6d9cf7",
+      "state_chars": 6365,
+      "state_construction_sec": 0.000446,
+      "source_chars": 16088,
+      "paragraph_sha256": [
+        "6bb4e392f66020ec070e347713bb7258c521326150b2ef35181ddd00985a8987",
+        "d9ccb4091474c3aeb61b643422ff6cf045b4a819c6f92c17ec9ad6c80944025c",
+        "cbc9c428e96e9a21282a2806b1d9f833ae7414eab766b5185bf3efb3e77f7ee3",
+        "bca961407d6a9ce99b3ec92bca34c1bed1d4fdaec75361c478ee44d3c46192fe",
+        "9a915db97f78d369ed029dc739d49f0f02439f11ca99cc4f5873ad102b51f231",
+        "6e5ce6ed5b3c66357ec188d35f330092d746b0630f818f3b37e51ae724d8f31e",
+        "79f551882ee6c84a8097b7bd685799e9d04acd59f9cb1bd699250451416c7489",
+        "f10e2cb4376c172103a96b984aea4c191d59330c077989433d1e64305bda8abc",
+        "5eb5da896f694f6dd566e1d37c6e33700c1ea9e8e15c6791bbc58f275da3655c",
+        "218f502d68cf2cd5308e890bf39db05c3738a7ca065486f7c256c56bbb92ec6f",
+        "f3023613b281f5f08cd1aa5d5ab5f933165742a4b9bdbdd91c49ef05e9b4caf5",
+        "6cabea221925505f8743fa48c0f3b1fe5901e648a6bc7448dda22b38af5669cf",
+        "f7220e6e2b8a004f4cd5a0114836c695296b13696978d90d934e6f9105d5a2de",
+        "33a5142130068de4987f7e1a7c25d8075eff8bcedff18cf0c496741e0ef1091d",
+        "3a6016036326df16f955b5c7bb5ef82661efa3611ef52be95f1824688021171a",
+        "021da2b683acecb163c67092805cc623df2418703ad7733d83a1df6829321982",
+        "a9aab5f017f4ec4ecde2e8e666084ad0a714800f1f8d5b5ef603f6d85b6bd08e",
+        "1afd587edfba1c9a92a11fa2a00330d0b6b866766d46e2e2deee668afc7083df",
+        "88b150ac5e8d45475032aadae967a8f0dfcc0df1bd408fe87736d1c7c3ef2918",
+        "9eb60e488ece9fb771b0c949b926dcfebd00d85b5c80b74d26ac4b9503bf239b",
+        "f9ebe42958ba40142281baa8d73b23c7e82b7eb8f96e9db5135bbd5b9a8eea8c",
+        "b25c68fdde1a5b9944dcf0026b47a30b5334edcb397fdf41eebfca903684aa62",
+        "7dd90a5fd00f784da0cc0b2b2a56ab0bd3ee78d582b73e372290dae0eeee4a1f",
+        "de6bd0788cf114085d50385ff7dc91ab3442e26422016b836425377eae9d331b",
+        "f74c78d82457381bb2e39463bb46780b1d2ae82c710a502366edfaf06a4fdd33",
+        "4e44c5775793e5b7bd37f7f6e17a23166f4ae1c63d3d7f2b2ab900ab6378e1c2",
+        "a5d86f3d760625fe25d9166602e5a62c2171e040c29d2f5278ad4880ed7dddf5",
+        "0585e7ab45f1c439570257834e72ebafc08b3959f12a2c8643fc2b0aca0846eb",
+        "8be91fe8c5edc3a3e8ec13229e7e5d60300d7cdcc8cff99067499f54f35d058a",
+        "a45de535b408394abfef87e1a630b72f09f1d0bde126cc049dccbdcfe37cefce"
+      ],
+      "cards": [
+        {
+          "source_id": 0,
+          "section": "Abstract",
+          "quote": "We study textual autocomplete---the task of predicting a full sentence from a partial sentence---as a human-machine communication game. Specifically, we consider three competing goals for effective communication: use as few tokens as possible (efficiency), transmit sentences faithfully (accuracy), and be learnable to humans (interpretability). We propose an unsupervised approach which tackles all three desiderata by constraining the communication scheme to keywords extracted from a source sentence for interpretability and optimizing the efficiency-accuracy tradeoff. Our experiments show that this approach results in an autocomplete system that is 52% more accurate at a given efficiency level compared to baselines, is robust to user variations, and saves time by nearly 50% compared to typing full sentences.",
+          "source_sha256": "6bb4e392f66020ec070e347713bb7258c521326150b2ef35181ddd00985a8987"
+        },
+        {
+          "source_id": 1,
+          "section": "Introduction",
+          "quote": "Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Introduction\nSuppose a user wants to write a sentence “I will be 10 minutes late.” Ideally, she would type just a few keywords such as “10 minutes late” and an autocomplete system would be able to infer the intended sentence (Figure FIGREF1).",
+          "source_sha256": "d9ccb4091474c3aeb61b643422ff6cf045b4a819c6f92c17ec9ad6c80944025c"
+        },
+        {
+          "source_id": 2,
+          "section": "Introduction",
+          "quote": "Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Introduction\nOne approach to learn such schemes is to collect a supervised dataset of keywords-sentence pairs as a training set, but (i) it would be expensive to collect such data from users, and (ii) a static dataset would not capture a real user's natural predilection to adapt to the system BIBREF2.",
+          "source_sha256": "cbc9c428e96e9a21282a2806b1d9f833ae7414eab766b5185bf3efb3e77f7ee3"
+        },
+        {
+          "source_id": 6,
+          "section": "Approach",
+          "quote": "Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Approach\nConsider a communication game in which the goal is for a user to communicate a target sequence $x= (x_1, ..., x_m)$ to a system by passing a sequence of keywords $z= (z_1, ..., z_n)$.",
+          "source_sha256": "79f551882ee6c84a8097b7bd685799e9d04acd59f9cb1bd699250451416c7489"
+        },
+        {
+          "source_id": 8,
+          "section": "Approach",
+          "quote": "Our hypothesis is that such subsequence schemes naturally ensure interpretability, as efficient human and machine communication schemes are both likely to involve keeping important content words.",
+          "source_sha256": "5eb5da896f694f6dd566e1d37c6e33700c1ea9e8e15c6791bbc58f275da3655c"
+        },
+        {
+          "source_id": 9,
+          "section": "Approach ::: Modeling with autoencoders.",
+          "quote": "Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Approach ::: Modeling with autoencoders.",
+          "source_sha256": "218f502d68cf2cd5308e890bf39db05c3738a7ca065486f7c256c56bbb92ec6f"
+        },
+        {
+          "source_id": 10,
+          "section": "Approach ::: Modeling with autoencoders.",
+          "quote": "We use a standard sequence-to-sequence model with attention and copying for the decoder, but any model architecture can be used (see Appendix for details).",
+          "source_sha256": "f3023613b281f5f08cd1aa5d5ab5f933165742a4b9bdbdd91c49ef05e9b4caf5"
+        },
+        {
+          "source_id": 11,
+          "section": "Approach ::: Multi-objective optimization.",
+          "quote": "Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Approach ::: Multi-objective optimization.",
+          "source_sha256": "6cabea221925505f8743fa48c0f3b1fe5901e648a6bc7448dda22b38af5669cf"
+        },
+        {
+          "source_id": 12,
+          "section": "Approach ::: Multi-objective optimization.",
+          "quote": "However, we observe that naively weighting and searching over $\\lambda $ is suboptimal and highly unstable—even slight changes to the weighting results in degenerate schemes which keep all or none of its tokens.",
+          "source_sha256": "f7220e6e2b8a004f4cd5a0114836c695296b13696978d90d934e6f9105d5a2de"
+        },
+        {
+          "source_id": 17,
+          "section": "Approach ::: Optimization.",
+          "quote": "Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Approach ::: Optimization.",
+          "source_sha256": "1afd587edfba1c9a92a11fa2a00330d0b6b866766d46e2e2deee668afc7083df"
+        },
+        {
+          "source_id": 18,
+          "section": "Approach ::: Optimization.",
+          "quote": "We perform joint updates on $(\\alpha , \\beta , \\lambda )$, where $\\beta $ and $\\lambda $ are updated via standard gradient computations, while $\\alpha $ uses an unbiased, stochastic gradient estimate where we approximate the expectation in Eq (DISPLAY_FORM9).",
+          "source_sha256": "88b150ac5e8d45475032aadae967a8f0dfcc0df1bd408fe87736d1c7c3ef2918"
+        },
+        {
+          "source_id": 19,
+          "section": "Experiments",
+          "quote": "Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Experiments\nWe evaluate our approach by training an autocomplete system on 500K randomly sampled sentences from Yelp reviews BIBREF6 (see Appendix for details).",
+          "source_sha256": "9eb60e488ece9fb771b0c949b926dcfebd00d85b5c80b74d26ac4b9503bf239b"
+        },
+        {
+          "source_id": 19,
+          "section": "Experiments",
+          "quote": "The accuracy of a scheme is measured as the fraction of sentences generated by greedily decoding the model that exactly matches the target sentence.",
+          "source_sha256": "9eb60e488ece9fb771b0c949b926dcfebd00d85b5c80b74d26ac4b9503bf239b"
+        },
+        {
+          "source_id": 20,
+          "section": "Experiments ::: Effectiveness of constrained objective.",
+          "quote": "Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Experiments ::: Effectiveness of constrained objective.",
+          "source_sha256": "f9ebe42958ba40142281baa8d73b23c7e82b7eb8f96e9db5135bbd5b9a8eea8c"
+        },
+        {
+          "source_id": 20,
+          "section": "Experiments ::: Effectiveness of constrained objective.",
+          "quote": "We first show that the linear objective in Eq (DISPLAY_FORM5) is suboptimal compared to the constrained objective in Eq (DISPLAY_FORM6).",
+          "source_sha256": "f9ebe42958ba40142281baa8d73b23c7e82b7eb8f96e9db5135bbd5b9a8eea8c"
+        },
+        {
+          "source_id": 22,
+          "section": "Experiments ::: Efficiency-accuracy tradeoff.",
+          "quote": "Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Experiments ::: Efficiency-accuracy tradeoff.",
+          "source_sha256": "7dd90a5fd00f784da0cc0b2b2a56ab0bd3ee78d582b73e372290dae0eeee4a1f"
+        },
+        {
+          "source_id": 22,
+          "section": "Experiments ::: Efficiency-accuracy tradeoff.",
+          "quote": "We quantify the efficiency-accuracy tradeoff compared to two rule-based baselines: Unif and Stopword.",
+          "source_sha256": "7dd90a5fd00f784da0cc0b2b2a56ab0bd3ee78d582b73e372290dae0eeee4a1f"
+        },
+        {
+          "source_id": 24,
+          "section": "Experiments ::: Robustness and analysis.",
+          "quote": "Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Experiments ::: Robustness and analysis.",
+          "source_sha256": "f74c78d82457381bb2e39463bb46780b1d2ae82c710a502366edfaf06a4fdd33"
+        },
+        {
+          "source_id": 24,
+          "section": "Experiments ::: Robustness and analysis.",
+          "quote": "We provide additional experimental results on the robustness of learned communication schemes as well as in-depth analysis on the correlation between the retention rates of tokens and their properties, which we defer to Appendix and for space.",
+          "source_sha256": "f74c78d82457381bb2e39463bb46780b1d2ae82c710a502366edfaf06a4fdd33"
+        },
+        {
+          "source_id": 25,
+          "section": "Experiments ::: User study.",
+          "quote": "Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Experiments ::: User study.",
+          "source_sha256": "4e44c5775793e5b7bd37f7f6e17a23166f4ae1c63d3d7f2b2ab900ab6378e1c2"
+        },
+        {
+          "source_id": 26,
+          "section": "Experiments ::: User study.",
+          "quote": "We observe that the system is likely to propose generic sentences for under-specified keywords (left column) and almost the same sentences for over-specified keywords (right column).",
+          "source_sha256": "a5d86f3d760625fe25d9166602e5a62c2171e040c29d2f5278ad4880ed7dddf5"
+        },
+        {
+          "source_id": 28,
+          "section": "Experiments ::: Acknowledgments",
+          "quote": "Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Experiments ::: Acknowledgments\nWe thank the reviewers and Yunseok Jang for their insightful comments.",
+          "source_sha256": "8be91fe8c5edc3a3e8ec13229e7e5d60300d7cdcc8cff99067499f54f35d058a"
+        },
+        {
+          "source_id": 28,
+          "section": "Experiments ::: Acknowledgments",
+          "quote": "This work was supported by NSF CAREER Award IIS-1552635 and an Intuit Research Award.",
+          "source_sha256": "8be91fe8c5edc3a3e8ec13229e7e5d60300d7cdcc8cff99067499f54f35d058a"
+        },
+        {
+          "source_id": 29,
+          "section": "Experiments ::: Reproducibility",
+          "quote": "Paper 1911.06964: Learning Autocomplete Systems as a Communication Game\nSection: Experiments ::: Reproducibility\nAll code, data and experiments are available on CodaLab at https://bit.ly/353fbyn.",
+          "source_sha256": "a45de535b408394abfef87e1a630b72f09f1d0bde126cc049dccbdcfe37cefce"
+        }
+      ],
+      "index_sec": 0.000666,
+      "questions": [
+        {
+          "id": "1ff0fccf0dca95a6630380c84b0422bed854269a",
+          "question": "How are models evaluated in this human-machine communication game?",
+          "query": "Paper: Learning Autocomplete Systems as a Communication Game. Question: How are models evaluated in this human-machine communication game?",
+          "selected_16": [
+            8,
+            0,
+            5,
+            2,
+            18,
+            14,
+            29,
+            19,
+            3,
+            12,
+            21,
+            1,
+            28,
+            9,
+            17,
+            4
+          ],
+          "selected_8": [
+            8,
+            0,
+            5,
+            2,
+            18,
+            14,
+            29,
+            19
+          ],
+          "search_sec": 7.3e-05
+        },
+        {
+          "id": "3d7d865e905295d11f1e85af5fa89b210e3e9fdf",
+          "question": "How many participants were trying this communication game?",
+          "query": "Paper: Learning Autocomplete Systems as a Communication Game. Question: How many participants were trying this communication game?",
+          "selected_16": [
+            25,
+            28,
+            17,
+            4,
+            3,
+            12,
+            14,
+            5,
+            2,
+            9,
+            0,
+            29,
+            15,
+            7,
+            24,
+            11
+          ],
+          "selected_8": [
+            25,
+            28,
+            17,
+            4,
+            3,
+            12,
+            14,
+            5
+          ],
+          "search_sec": 6.4e-05
+        },
+        {
+          "id": "2ad4d3d222f5237ed97923640bc8e199409cbe52",
+          "question": "What user variations have been tested?",
+          "query": "Paper: Learning Autocomplete Systems as a Communication Game. Question: What user variations have been tested?",
+          "selected_16": [
+            0,
+            8,
+            6,
+            25,
+            26,
+            5,
+            2,
+            1,
+            9,
+            27,
+            29,
+            15,
+            7,
+            24,
+            28,
+            11
+          ],
+          "selected_8": [
+            0,
+            8,
+            6,
+            25,
+            26,
+            5,
+            2,
+            1
+          ],
+          "search_sec": 5.4e-05
+        },
+        {
+          "id": "3fad42be0fb2052bb404b989cc7d58b440cd23a0",
+          "question": "What are the baselines used?",
+          "query": "Paper: Learning Autocomplete Systems as a Communication Game. Question: What are the baselines used?",
+          "selected_16": [
+            10,
+            22,
+            5,
+            23,
+            29,
+            0,
+            8,
+            18,
+            19,
+            21,
+            2,
+            1,
+            15,
+            24,
+            13,
+            6
+          ],
+          "selected_8": [
+            10,
+            22,
+            5,
+            23,
+            29,
+            0,
+            8,
+            18
+          ],
+          "search_sec": 5.6e-05
+        }
+      ]
+    },
+    {
+      "paper_id": "1912.01214",
+      "title": "Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation",
+      "state": "Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\n[Source P0 | Abstract] Transfer learning between different language pairs has shown its effectiveness for Neural Machine Translation (NMT) in low-resource scenario. However, existing transfer methods involving a common target language are far from success in the extreme scenario of zero-shot translation, due to the language space mismatch problem between transferor (the parent model) and transferee (the child model) on the source side. To address this challenge, we propose an effective transfer learning approach based on cross-lingual pre-training. Our key idea is to make all source languages share the same feature space and thus enable a smooth transition for zero-shot translation. To this end, we introduce one monolingual pre-training method and two bilingual pre-training methods to obtain a universal encoder for different languages. Once the universal encoder is constructed, the parent model built on such encoder is trained with large-scale annotated data and then directly applied in zero-shot translation scenario. Experiments on two public datasets show that our approach significantly outperforms strong pivot-based baseline and various multilingual NMT approaches.\n[Source P1 | Section: Introduction] Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\nSection: Introduction\nAlthough Neural Machine Translation (NMT) has dominated recent research on translation tasks BIBREF0, BIBREF1, BIBREF2, NMT heavily relies on large-scale parallel data, resulting in poor performance on low-resource or zero-resource language pairs BIBREF3.\n[Source P1 | Section: Introduction] However, the pivot-based method requires doubled decoding time and suffers from the propagation of translation errors.\n[Source P8 | Section: Related Work] Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\nSection: Related Work\nIn recent years, zero-shot translation in NMT has attracted widespread attention in academic research.\n[Source P8 | Section: Related Work] Existing methods are mainly divided into four categories: pivot-based method, transfer learning, multilingual NMT, and unsupervised NMT.\n[Source P14 | Section: Approach] Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\nSection: Approach\nIn this section, we will present a cross-lingual pre-training based transfer approach.\n[Source P14 | Section: Approach] This method is designed for a common zero-shot scenario where there are a lot of source$\\leftrightarrow $pivot and pivot$\\leftrightarrow $target bilingual data but no source$\\leftrightarrow $target parallel data, and the whole training process can be summarized as follows step by step:\n[Source P19 | Section: Approach ::: Masked and Translation Language Model Pretraining] Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\nSection: Approach ::: Masked and Translation Language Model Pretraining\nTwo existing cross-lingual pre-training methods, Masked Language Modeling (MLM) and Translation Language Modeling (TLM), have shown their effectiveness on XNLI cross-lingual classification task BIBREF11, BIBREF28, but these methods have not been well studied on cross-lingual generation tasks in zero-shot condition.\n[Source P19 | Section: Approach ::: Masked and Translation Language Model Pretraining] We attempt to take advantage of the cross-lingual ability of the two methods for zero-shot translation.\n[Source P22 | Section: Approach ::: Bridge Language Model Pretraining] Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\nSection: Approach ::: Bridge Language Model Pretraining\nAside from MLM and TLM, we propose BRidge Language Modeling (BRLM) to further obtain word-level representation alignment between different languages.\n[Source P22 | Section: Approach ::: Bridge Language Model Pretraining] This method is inspired by the assumption that if the feature spaces of different languages are aligned very well, the masked words in the corrupted sentence can also be guessed by the context of the correspondingly aligned words on the other side.\n[Source P27 | Section: Approach ::: Transfer Protocol] Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\nSection: Approach ::: Transfer Protocol\nWe consider the typical zero-shot translation scenario in which a high resource pivot language has parallel data with both source and target languages, while source and target languages has no parallel data between themselves.\n[Source P27 | Section: Approach ::: Transfer Protocol] Our proposed cross-lingual pretraining based transfer approach for source$\\rightarrow $target zero-shot translation is mainly divided into two phrases: the pretraining phase and the transfer phase.\n[Source P31 | Section: Experiments ::: Setup] Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\nSection: Experiments ::: Setup\nWe evaluate our cross-lingual pre-training based transfer approach against several strong baselines on two public datatsets, Europarl BIBREF31 and MultiUN BIBREF32, which contain multi-parallel evaluation data to assess the zero-shot performance.\n[Source P31 | Section: Experiments ::: Setup] In all experiments, we use BLEU as the automatic metric for translation evaluation.\n[Source P32 | Section: Experiments ::: Setup ::: Datasets.] Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\nSection: Experiments ::: Setup ::: Datasets.\n[Source P32 | Section: Experiments ::: Setup ::: Datasets.] For Europarl corpus, we evaluate on French-English-Spanish (Fr-En-Es), German-English-French (De-En-Fr) and Romanian-English-German (Ro-En-De), where English acts as the pivot language, its left side is the source language, and its right side is the target language.\n[Source P34 | Section: Experiments ::: Setup ::: Experimental Details.] Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\nSection: Experiments ::: Setup ::: Experimental Details.\n[Source P34 | Section: Experiments ::: Setup ::: Experimental Details.] We use traditional transfer learning, pivot-based method and multilingual NMT as our baselines.\n[Source P36 | Section: Experiments ::: Main Results] Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\nSection: Experiments ::: Main Results\nTable TABREF19 and TABREF26 report zero-shot results on Europarl and Multi-UN evaluation sets, respectively.\n[Source P36 | Section: Experiments ::: Main Results] We compare our approaches with related approaches of pivoting, multilingual NMT (MNMT) BIBREF19, and cross-lingual transfer without pretraining BIBREF16.",
+      "state_sha256": "734ba4c54675d3c1deeca60669985fe6cb4ad752e66e5c030b30f7a869246596",
+      "state_chars": 6987,
+      "state_construction_sec": 0.000583,
+      "source_chars": 33870,
+      "paragraph_sha256": [
+        "ba601ab20baf21aa473c329e3f52f43233ad5df649da68ab69ed21226d4b7d84",
+        "6a1031d22436ddcbe14c544c17676fb2a9a93effff9713e2234daeed23b96b58",
+        "8215c9147fc09b03ce1801527f827d895274baaa0f49e5f5c7715c2eaa45541b",
+        "68702ea985cf37b724c8d50ae07e26c704e11e258a55ccf6a1e983156760ad19",
+        "9378ac3936eb5a6707460d0c24a0039465b406e18c685ce4be52c41823862725",
+        "3578a27ebef90039a7f8a5eda373b7a083497e75fbfa090c7a016662557df996",
+        "136e4fa79f1b2e669bea5b8c7bf737c1e6b6d2c6e35120fbf6d2f3c513517d51",
+        "43683ac6318bb11449d2939c748063846f01d9563ebcb78a91f046bfe92508e9",
+        "6d5293e84ffaa08919cd20638c4f3471d7f366dc3d7d67011c42a41c90c0706d",
+        "b1adbd40305833f8247e72009eff7b5bee453d12fadeea6fcae3e1a835f9bf38",
+        "83cc79819ab66b015e302447c17f1fca55497f7cd88b720a95ba0c7a1e9054f6",
+        "d98eaf54080f87c72f1ffffd795d65b732847063eb1ccba408a4de0e48ab88cb",
+        "8c7291fb66829e11c64729fa04bd66f5697f8a801fc1c3505d89830a554e0919",
+        "e44312fda215589f1cfc72d1478611dc423f98232fcfc10d01c8e4e783b158af",
+        "dc36d15ae1a2f3c6cbb805fe8019527007c1a89039b2fb1081af18adf5c3eb7b",
+        "5cec471307cb64254a9348517a578bc53024ea140cee1ede6b24314820da414f",
+        "530d129cb3c05def8509ffea4404c53eee7e700b6320eb6655d8ebcf754c400e",
+        "5eeec830598fd96a9cdc559c79c903bf66605b93e3a6fc2c014a0f411b4bc5e6",
+        "cc8f2d1e67fece620098b18516d95a27943c079af5a6cf76ce766a67240ffd74",
+        "6c36e7b664a32af8b825adda0b976703dd6916f6003be5415f43aa349e546bcd",
+        "b8d554d04e71ad1ecd29e1bb3ffb3796408752e4f8fb3b18132348087fe568f1",
+        "4610427da2e699936f4dfa38c17fab388fed4bf3e61ca69b6625614f2e93a69a",
+        "009c953c1e8aed08befbacf66f6a8e0168f56fa3ab798380b13be017fc9fdf3f",
+        "9065f2c57fbd60c3b435f2487a72b5326faa37685df37b33902d8ce49fcbf567",
+        "146741651dcacb417374f049c9d07548dac1a5f121ba7ce2fa7ed1a64e0656a2",
+        "e55f2d5189c270ccadfa57eca4d86539944e97510e865954aaebc291ab340524",
+        "609917b35998a8addd16f8e2f5ff629e581b24893f6d10d9c4b2a113b5207b35",
+        "e2c07fc6811c392ff75631bbd9e540b75eb7460c84963e527aa1e61ed4dec0d8",
+        "af266d812dc1543da81431d295f4e2601b735945db8f9b1864e6e7424a2561c7",
+        "2655c509378485066c6e7e4ee600f43e5f4f66f38f71d43a64ef1048c56939cc",
+        "455b12345769fed9a4029395ddfee75bc967ec7cf340fb4deb997a41c7823045",
+        "4bf785048df6710a27458a6140e6c507a92df20e9a4d285f379735f297637a8b",
+        "f092c3c46b43959e2180f20fa6453fa8cf05683c9be3a22ab201c8fff48375b7",
+        "006d17b156958e9c8c504e5241cc5a9ff259c56f7adccdc804c72276649fbe6e",
+        "518c07c60a2e837496f53f68f9542d6c5f040ace0b32292b57f54dbf6f9badc0",
+        "32e351a04ce893f63666f5fa53474ce28e1e42796188301f945ab00b3f28233a",
+        "7047927b9ea1a2282c829ba1fd3fc0ed6f4c74141b90494bebe8335fd9fb5bd8",
+        "e845ebdd13a18896f6525d9fa47883d9d6e35980ddb84bbec1900663968c6de2",
+        "fcec3a0b94c11d774764968b2ce0cf75d328345bddc1ae236c25b5b1e37e1f93",
+        "1dbc41bb7b42d1d4d05526a4ea2d1d3bec730748cc0af9dccc795ebdd31736ee",
+        "8217a6a4f0a874fb13faef60a1e0c25df83704d50307118830ef02718c3ffe40",
+        "59aab65f6171b3590ef834aa48ea148c99ccf542c0befb10487f0e59cdcb03ab",
+        "f4e4922b25d0f9f1d303439d1ccd444bd30639c87ce940e0c0cd4e34299f88db",
+        "4529fd93bfe5a22e9ed280b48517b58730e61999615ae5841aec110f0768c642",
+        "1ff35ff62cc6d91094337e27f79bc94efc77c4aa920d5b43a82fde09a90b3994",
+        "2aecc7d3eb6e46631659f3514660dda0724fdef0863abe0234c5ecf09bb67afb",
+        "7534ef272b5e109e191634b2bcbf6dfe1213a60d845ce1e5a6d82c0779ce80f7"
+      ],
+      "cards": [
+        {
+          "source_id": 0,
+          "section": "Abstract",
+          "quote": "Transfer learning between different language pairs has shown its effectiveness for Neural Machine Translation (NMT) in low-resource scenario. However, existing transfer methods involving a common target language are far from success in the extreme scenario of zero-shot translation, due to the language space mismatch problem between transferor (the parent model) and transferee (the child model) on the source side. To address this challenge, we propose an effective transfer learning approach based on cross-lingual pre-training. Our key idea is to make all source languages share the same feature space and thus enable a smooth transition for zero-shot translation. To this end, we introduce one monolingual pre-training method and two bilingual pre-training methods to obtain a universal encoder for different languages. Once the universal encoder is constructed, the parent model built on such encoder is trained with large-scale annotated data and then directly applied in zero-shot translation scenario. Experiments on two public datasets show that our approach significantly outperforms strong pivot-based baseline and various multilingual NMT approaches.",
+          "source_sha256": "ba601ab20baf21aa473c329e3f52f43233ad5df649da68ab69ed21226d4b7d84"
+        },
+        {
+          "source_id": 1,
+          "section": "Introduction",
+          "quote": "Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\nSection: Introduction\nAlthough Neural Machine Translation (NMT) has dominated recent research on translation tasks BIBREF0, BIBREF1, BIBREF2, NMT heavily relies on large-scale parallel data, resulting in poor performance on low-resource or zero-resource language pairs BIBREF3.",
+          "source_sha256": "6a1031d22436ddcbe14c544c17676fb2a9a93effff9713e2234daeed23b96b58"
+        },
+        {
+          "source_id": 1,
+          "section": "Introduction",
+          "quote": "However, the pivot-based method requires doubled decoding time and suffers from the propagation of translation errors.",
+          "source_sha256": "6a1031d22436ddcbe14c544c17676fb2a9a93effff9713e2234daeed23b96b58"
+        },
+        {
+          "source_id": 8,
+          "section": "Related Work",
+          "quote": "Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\nSection: Related Work\nIn recent years, zero-shot translation in NMT has attracted widespread attention in academic research.",
+          "source_sha256": "6d5293e84ffaa08919cd20638c4f3471d7f366dc3d7d67011c42a41c90c0706d"
+        },
+        {
+          "source_id": 8,
+          "section": "Related Work",
+          "quote": "Existing methods are mainly divided into four categories: pivot-based method, transfer learning, multilingual NMT, and unsupervised NMT.",
+          "source_sha256": "6d5293e84ffaa08919cd20638c4f3471d7f366dc3d7d67011c42a41c90c0706d"
+        },
+        {
+          "source_id": 14,
+          "section": "Approach",
+          "quote": "Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\nSection: Approach\nIn this section, we will present a cross-lingual pre-training based transfer approach.",
+          "source_sha256": "dc36d15ae1a2f3c6cbb805fe8019527007c1a89039b2fb1081af18adf5c3eb7b"
+        },
+        {
+          "source_id": 14,
+          "section": "Approach",
+          "quote": "This method is designed for a common zero-shot scenario where there are a lot of source$\\leftrightarrow $pivot and pivot$\\leftrightarrow $target bilingual data but no source$\\leftrightarrow $target parallel data, and the whole training process can be summarized as follows step by step:",
+          "source_sha256": "dc36d15ae1a2f3c6cbb805fe8019527007c1a89039b2fb1081af18adf5c3eb7b"
+        },
+        {
+          "source_id": 19,
+          "section": "Approach ::: Masked and Translation Language Model Pretraining",
+          "quote": "Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\nSection: Approach ::: Masked and Translation Language Model Pretraining\nTwo existing cross-lingual pre-training methods, Masked Language Modeling (MLM) and Translation Language Modeling (TLM), have shown their effectiveness on XNLI cross-lingual classification task BIBREF11, BIBREF28, but these methods have not been well studied on cross-lingual generation tasks in zero-shot condition.",
+          "source_sha256": "6c36e7b664a32af8b825adda0b976703dd6916f6003be5415f43aa349e546bcd"
+        },
+        {
+          "source_id": 19,
+          "section": "Approach ::: Masked and Translation Language Model Pretraining",
+          "quote": "We attempt to take advantage of the cross-lingual ability of the two methods for zero-shot translation.",
+          "source_sha256": "6c36e7b664a32af8b825adda0b976703dd6916f6003be5415f43aa349e546bcd"
+        },
+        {
+          "source_id": 22,
+          "section": "Approach ::: Bridge Language Model Pretraining",
+          "quote": "Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\nSection: Approach ::: Bridge Language Model Pretraining\nAside from MLM and TLM, we propose BRidge Language Modeling (BRLM) to further obtain word-level representation alignment between different languages.",
+          "source_sha256": "009c953c1e8aed08befbacf66f6a8e0168f56fa3ab798380b13be017fc9fdf3f"
+        },
+        {
+          "source_id": 22,
+          "section": "Approach ::: Bridge Language Model Pretraining",
+          "quote": "This method is inspired by the assumption that if the feature spaces of different languages are aligned very well, the masked words in the corrupted sentence can also be guessed by the context of the correspondingly aligned words on the other side.",
+          "source_sha256": "009c953c1e8aed08befbacf66f6a8e0168f56fa3ab798380b13be017fc9fdf3f"
+        },
+        {
+          "source_id": 27,
+          "section": "Approach ::: Transfer Protocol",
+          "quote": "Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\nSection: Approach ::: Transfer Protocol\nWe consider the typical zero-shot translation scenario in which a high resource pivot language has parallel data with both source and target languages, while source and target languages has no parallel data between themselves.",
+          "source_sha256": "e2c07fc6811c392ff75631bbd9e540b75eb7460c84963e527aa1e61ed4dec0d8"
+        },
+        {
+          "source_id": 27,
+          "section": "Approach ::: Transfer Protocol",
+          "quote": "Our proposed cross-lingual pretraining based transfer approach for source$\\rightarrow $target zero-shot translation is mainly divided into two phrases: the pretraining phase and the transfer phase.",
+          "source_sha256": "e2c07fc6811c392ff75631bbd9e540b75eb7460c84963e527aa1e61ed4dec0d8"
+        },
+        {
+          "source_id": 31,
+          "section": "Experiments ::: Setup",
+          "quote": "Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\nSection: Experiments ::: Setup\nWe evaluate our cross-lingual pre-training based transfer approach against several strong baselines on two public datatsets, Europarl BIBREF31 and MultiUN BIBREF32, which contain multi-parallel evaluation data to assess the zero-shot performance.",
+          "source_sha256": "4bf785048df6710a27458a6140e6c507a92df20e9a4d285f379735f297637a8b"
+        },
+        {
+          "source_id": 31,
+          "section": "Experiments ::: Setup",
+          "quote": "In all experiments, we use BLEU as the automatic metric for translation evaluation.",
+          "source_sha256": "4bf785048df6710a27458a6140e6c507a92df20e9a4d285f379735f297637a8b"
+        },
+        {
+          "source_id": 32,
+          "section": "Experiments ::: Setup ::: Datasets.",
+          "quote": "Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\nSection: Experiments ::: Setup ::: Datasets.",
+          "source_sha256": "f092c3c46b43959e2180f20fa6453fa8cf05683c9be3a22ab201c8fff48375b7"
+        },
+        {
+          "source_id": 32,
+          "section": "Experiments ::: Setup ::: Datasets.",
+          "quote": "For Europarl corpus, we evaluate on French-English-Spanish (Fr-En-Es), German-English-French (De-En-Fr) and Romanian-English-German (Ro-En-De), where English acts as the pivot language, its left side is the source language, and its right side is the target language.",
+          "source_sha256": "f092c3c46b43959e2180f20fa6453fa8cf05683c9be3a22ab201c8fff48375b7"
+        },
+        {
+          "source_id": 34,
+          "section": "Experiments ::: Setup ::: Experimental Details.",
+          "quote": "Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\nSection: Experiments ::: Setup ::: Experimental Details.",
+          "source_sha256": "518c07c60a2e837496f53f68f9542d6c5f040ace0b32292b57f54dbf6f9badc0"
+        },
+        {
+          "source_id": 34,
+          "section": "Experiments ::: Setup ::: Experimental Details.",
+          "quote": "We use traditional transfer learning, pivot-based method and multilingual NMT as our baselines.",
+          "source_sha256": "518c07c60a2e837496f53f68f9542d6c5f040ace0b32292b57f54dbf6f9badc0"
+        },
+        {
+          "source_id": 36,
+          "section": "Experiments ::: Main Results",
+          "quote": "Paper 1912.01214: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation\nSection: Experiments ::: Main Results\nTable TABREF19 and TABREF26 report zero-shot results on Europarl and Multi-UN evaluation sets, respectively.",
+          "source_sha256": "7047927b9ea1a2282c829ba1fd3fc0ed6f4c74141b90494bebe8335fd9fb5bd8"
+        },
+        {
+          "source_id": 36,
+          "section": "Experiments ::: Main Results",
+          "quote": "We compare our approaches with related approaches of pivoting, multilingual NMT (MNMT) BIBREF19, and cross-lingual transfer without pretraining BIBREF16.",
+          "source_sha256": "7047927b9ea1a2282c829ba1fd3fc0ed6f4c74141b90494bebe8335fd9fb5bd8"
+        }
+      ],
+      "index_sec": 0.001224,
+      "questions": [
+        {
+          "id": "b6f15fb6279b82e34a5bf4828b7b5ddabfdf1d54",
+          "question": "which multilingual approaches do they compare with?",
+          "query": "Paper: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation. Question: which multilingual approaches do they compare with?",
+          "selected_16": [
+            36,
+            45,
+            7,
+            33,
+            10,
+            41,
+            0,
+            34,
+            40,
+            11,
+            8,
+            38,
+            17,
+            20,
+            35,
+            27
+          ],
+          "selected_8": [
+            36,
+            45,
+            7,
+            33,
+            10,
+            41,
+            0,
+            34
+          ],
+          "search_sec": 0.00013
+        },
+        {
+          "id": "f5e6f43454332e0521a778db0b769481e23e7682",
+          "question": "what are the pivot-based baselines?",
+          "query": "Paper: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation. Question: what are the pivot-based baselines?",
+          "selected_16": [
+            37,
+            38,
+            34,
+            31,
+            35,
+            4,
+            14,
+            8,
+            33,
+            11,
+            30,
+            44,
+            32,
+            0,
+            18,
+            9
+          ],
+          "selected_8": [
+            37,
+            38,
+            34,
+            31,
+            35,
+            4,
+            14,
+            8
+          ],
+          "search_sec": 0.000133
+        },
+        {
+          "id": "9a05a5f4351db75da371f7ac12eb0b03607c4b87",
+          "question": "which datasets did they experiment with?",
+          "query": "Paper: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation. Question: which datasets did they experiment with?",
+          "selected_16": [
+            45,
+            10,
+            33,
+            36,
+            0,
+            17,
+            20,
+            32,
+            34,
+            35,
+            41,
+            27,
+            23,
+            1,
+            2,
+            9
+          ],
+          "selected_8": [
+            45,
+            10,
+            33,
+            36,
+            0,
+            17,
+            20,
+            32
+          ],
+          "search_sec": 0.000124
+        },
+        {
+          "id": "5eda469a8a77f028d0c5f1acd296111085614537",
+          "question": "what language pairs are explored?",
+          "query": "Paper: Cross-lingual Pre-training Based Transfer for Zero-shot Neural Machine Translation. Question: what language pairs are explored?",
+          "selected_16": [
+            18,
+            11,
+            0,
+            1,
+            2,
+            42,
+            33,
+            20,
+            41,
+            32,
+            10,
+            21,
+            22,
+            44,
+            23,
+            4
+          ],
+          "selected_8": [
+            18,
+            11,
+            0,
+            1,
+            2,
+            42,
+            33,
+            20
+          ],
+          "search_sec": 0.00012
+        }
+      ]
+    },
+    {
+      "paper_id": "1912.08960",
+      "title": "Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity",
+      "state": "Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\n[Source P0 | Abstract] Image captioning as a multimodal task has drawn much interest in recent years. However, evaluation for this task remains a challenging problem. Existing evaluation metrics focus on surface similarity between a candidate caption and a set of reference captions, and do not check the actual relation between a caption and the underlying visual content. We introduce a new diagnostic evaluation framework for the task of image captioning, with the goal of directly assessing models for grammaticality, truthfulness and diversity (GTD) of generated captions. We demonstrate the potential of our evaluation framework by evaluating existing image captioning models on a wide ranging set of synthetic datasets that we construct for diagnostic evaluation. We empirically show how the GTD evaluation framework, in combination with diagnostic datasets, can provide insights into model capabilities and limitations to supplement standard evaluations.\n[Source P1 | Section: Introduction] Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: Introduction\nAutomatically generating text to describe the content of images, also known as image captioning, is a multimodal task of considerable interest in both the computer vision and the NLP communities.\n[Source P1 | Section: Introduction] While these models demonstrate promising results, quantifying image captioning performance remains a challenging problem, in a similar way to other generative tasks BIBREF4, BIBREF5.\n[Source P8 | Section: Related work ::: Existing evaluation of image captioning] Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: Related work ::: Existing evaluation of image captioning\nAs a natural language generation task, image captioning frequently uses evaluation metrics such as BLEU BIBREF6, METEOR BIBREF7, ROUGE BIBREF8 and CIDEr BIBREF9.\n[Source P8 | Section: Related work ::: Existing evaluation of image captioning] SPICE more closely relates to our truthfulness evaluation than the other metrics, but it still uses overlap comparison to reference captions as a proxy to ground truth.\n[Source P11 | Section: Related work ::: Synthetic datasets] Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: Related work ::: Synthetic datasets\nRecently, many synthetic datasets have been proposed as diagnostic tools for deep learning models, such as CLEVR BIBREF21 for visual question answering (VQA), the bAbI tasks BIBREF22 for text understanding and reasoning, and ShapeWorld BIBREF11 for visually grounded language understanding.\n[Source P11 | Section: Related work ::: Synthetic datasets] The primary motivation is to reduce complexity which is considered irrelevant to the evaluation focus, to enable better control over the data, and to provide more detailed insights into strengths and limitations of existing models.\n[Source P13 | Section: GTD Evaluation Framework] Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: GTD Evaluation Framework\nIn the following we introduce GTD in more detail, consider it as an evaluation protocol covering necessary aspects of the multifaceted captioning task, rather than a specific metric.\n[Source P14 | Section: GTD Evaluation Framework ::: Grammaticality] Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: GTD Evaluation Framework ::: Grammaticality\nAn essential criterion for an image captioning model is that the captions generated are grammatically well-formed.\n[Source P15 | Section: GTD Evaluation Framework ::: Grammaticality] Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: GTD Evaluation Framework ::: Grammaticality\nThe ERG is a broad-coverage grammar based on the head-driven phrase structure grammar (HPSG) framework.\n[Source P16 | Section: GTD Evaluation Framework ::: Truthfulness] Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: GTD Evaluation Framework ::: Truthfulness\nThe second aspect we investigate is truthfulness, that is, whether a candidate caption is compatible with the content of the image it is supposed to describe.\n[Source P16 | Section: GTD Evaluation Framework ::: Truthfulness] We evaluate caption truthfulness on the basis of a linguistically-motivated approach using formal semantics.\n[Source P17 | Section: GTD Evaluation Framework ::: Diversity] Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: GTD Evaluation Framework ::: Diversity\nWhile grammaticality and truthfulness are essential requirements for image captions, these criteria alone can easily be “gamed” by specializing on a small set of generic statements which are true most of the time.\n[Source P18 | Section: GTD Evaluation Framework ::: Diversity] Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: GTD Evaluation Framework ::: Diversity\nAs ShapeWorldICE exploits a limited size of open-class words, we emphasize the diversity in ShapeWorldICE at the sentence level rather than the word level.\n[Source P20 | Section: Experimental Setup ::: Datasets] Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: Experimental Setup ::: Datasets\nWe develop a variety of ShapeWorldICE datasets, with a similar idea to the “skill tasks” in the bAbI framework BIBREF22.\n[Source P20 | Section: Experimental Setup ::: Datasets] Table TABREF4 gives an overview for different ShapeWorldICE datasets we use in this paper.\n[Source P22 | Section: Experimental Setup ::: Models] Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: Experimental Setup ::: Models\nWe experiment with two image captioning models: the Show&Tell model BIBREF0 and the LRCN1u model BIBREF1.\n[Source P23 | Section: Experimental Setup ::: Models] Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: Experimental Setup ::: Models\nWe follow the common practice in image captioning to use a CNN component pretrained on object detection and fine-tune its parameters on the image captioning task.\n[Source P24 | Section: Results] Here we discuss in detail the diagnostic results of these experiments.",
+      "state_sha256": "cb58b3808024ed52662cce31da44679fd68d50592f16ab5ee03bf0592d92e5f6",
+      "state_chars": 6933,
+      "state_construction_sec": 0.000616,
+      "source_chars": 30062,
+      "paragraph_sha256": [
+        "b9c246b9adbca7aa27c1f18cf9175498f44afe6902c3361c4a7a455b7ab54441",
+        "25a5a794c623d33b427824231e20b8ca2023063dba637ab849e1586894a9ec07",
+        "602654429da2713066403074ee654fdb67fd4e5c9df0d0228d101c2c95c751fe",
+        "0ce63254ab00eb9ee04bcda1b206009e73a6d5e0c5772605cca9d8f79698564c",
+        "c1ac7e26c65c1f4dae6d169c03c46a82701d173814b51719192e9e3ee790506c",
+        "465234e20ff785c46364eb4ff9834fbf1fe777178ceb513512617a7044edd38d",
+        "6f6e90d38d5bc6c68e1c0435c89556add691d2c0f2d4f1dce2a799c21358d11f",
+        "07d9a84e6c90ad8dea75b60885e9cd93f98f6c0397932d27f71f7db63872b47f",
+        "fb4709a77deac1d6ed09b9a260431abe964ffc0ad1f99464149fb293fc627c81",
+        "c277044c1a9c12737daa72029f25d8610506d045d8c4b3841facf50e8e0cc7a2",
+        "a17d454bd8407097f60b9dd983d8d1e0e5079dc66bcc22654a9c74060ce6d94d",
+        "3f9714c20bbaf9fae7bd54a20e72d3fb6d3fb731793b537f11b0080dc7411e0e",
+        "ea1d1989eba3db0991173980441297045e8e9d9f3c21698e7ea54f9b8c084671",
+        "730b43e5c3ac1ec34fdf2f67b31f0a2d1df3c245bb81968e801deb0682aef4c7",
+        "17922774a7c14ede8f04b103a8faf68b40238d4aad07a32653b75b6d47b1e7d8",
+        "fccaf960f7942442775abf370b468fd94f18b21a7e0527dfe157fc4d302831c9",
+        "35ab46cbc111fc994b72d51632c6492e0e984fe3b44319c5dcf06e75d9edb21a",
+        "39943c12a094690bbd9accf4ab0dd49186940f374114e658b3c104a4b23d9bc7",
+        "32c2f4f84d2ee0a111d831351e7fe1e1bcd0e093235e722320a0508f76f38afe",
+        "affc267483d56e3dbf4330976cf624df941f54b2a5fde8ff8d0f45d86c4f03c1",
+        "3405d9992f74d17c81f194be556c046c930186082bf50d8bcd440e7d275e0dc1",
+        "03a5c1c7dfe152fc87066ddf460c9bbeb2e571281306fa37d1acc1a7a2ed5fe3",
+        "6efc949145b7079f19473296794584a8fb308184cf2fa0c44830770d536d2b05",
+        "0b9d7e325f816d363215ab339473f33eddd0ed73843282a0c4d6eb316a3699f1",
+        "5f56b4bf0f623e21b89486c9cce281b8a6fd5f3c2f8cad673f4d74cb6271cbab",
+        "8218f8f5fbdfee8043a7cec9ebdd24b7f3ab7b29cba1f0b98157f20039551f9e",
+        "f8782206700752703514abf483e10495da4342c1dfe5d4aa2e42f07a236f24e9",
+        "114af03fe32fb51441bace8adae58eaac8a9668a01791343641681ef69e4efb1",
+        "a8e61b9af46a41b4ffc797c50cde50bba87f9456f81596b7592af3314d925dee",
+        "f5291221b0f6dd0eb078d15a3eb797ec7cd8a09f1416961bfd1980319b503d11",
+        "a4c3e53e21d4e980f7a27e1755a8baeda278b9a323d050a548d040dfb81c4df6",
+        "d1f2b59c15440418011907e93facf990332eedadeb6fa909e3079fd3c79f4543",
+        "cf006ddb517c905ab675bae73daf8040f525dbf4a7b0ffd3bbb50a2e1b9de52b",
+        "35e590ac319a1402cb84af74621264e09a852853e5e2b231f1e754b317d47595",
+        "3330264bbe43ba95ef10961c1ca9c05093051ff72e69efc435d5d6985d0a84f9",
+        "ed12adb2bd137c9bb1990ad5bc20bdd147249b84a1b9b01aff668b9485a7b375",
+        "7326ca1cdbfab0fa2e5acdd3e7b72e5a88312db5d103dec74fc168655c969f47",
+        "137b6b5e0b63fbf93207ceaf501ba048a9e86f76a3ed82bd41e04cc9d66da3a2",
+        "46ba613b80d73da75df03768d3a202a7df5921cd4af8c2a818c880be115f4e9d",
+        "4988d0c29982d2ed9533928759d74e5eb337fb35819e6ba14ea1e8c96ae64fa4"
+      ],
+      "cards": [
+        {
+          "source_id": 0,
+          "section": "Abstract",
+          "quote": "Image captioning as a multimodal task has drawn much interest in recent years. However, evaluation for this task remains a challenging problem. Existing evaluation metrics focus on surface similarity between a candidate caption and a set of reference captions, and do not check the actual relation between a caption and the underlying visual content. We introduce a new diagnostic evaluation framework for the task of image captioning, with the goal of directly assessing models for grammaticality, truthfulness and diversity (GTD) of generated captions. We demonstrate the potential of our evaluation framework by evaluating existing image captioning models on a wide ranging set of synthetic datasets that we construct for diagnostic evaluation. We empirically show how the GTD evaluation framework, in combination with diagnostic datasets, can provide insights into model capabilities and limitations to supplement standard evaluations.",
+          "source_sha256": "b9c246b9adbca7aa27c1f18cf9175498f44afe6902c3361c4a7a455b7ab54441"
+        },
+        {
+          "source_id": 1,
+          "section": "Introduction",
+          "quote": "Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: Introduction\nAutomatically generating text to describe the content of images, also known as image captioning, is a multimodal task of considerable interest in both the computer vision and the NLP communities.",
+          "source_sha256": "25a5a794c623d33b427824231e20b8ca2023063dba637ab849e1586894a9ec07"
+        },
+        {
+          "source_id": 1,
+          "section": "Introduction",
+          "quote": "While these models demonstrate promising results, quantifying image captioning performance remains a challenging problem, in a similar way to other generative tasks BIBREF4, BIBREF5.",
+          "source_sha256": "25a5a794c623d33b427824231e20b8ca2023063dba637ab849e1586894a9ec07"
+        },
+        {
+          "source_id": 8,
+          "section": "Related work ::: Existing evaluation of image captioning",
+          "quote": "Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: Related work ::: Existing evaluation of image captioning\nAs a natural language generation task, image captioning frequently uses evaluation metrics such as BLEU BIBREF6, METEOR BIBREF7, ROUGE BIBREF8 and CIDEr BIBREF9.",
+          "source_sha256": "fb4709a77deac1d6ed09b9a260431abe964ffc0ad1f99464149fb293fc627c81"
+        },
+        {
+          "source_id": 8,
+          "section": "Related work ::: Existing evaluation of image captioning",
+          "quote": "SPICE more closely relates to our truthfulness evaluation than the other metrics, but it still uses overlap comparison to reference captions as a proxy to ground truth.",
+          "source_sha256": "fb4709a77deac1d6ed09b9a260431abe964ffc0ad1f99464149fb293fc627c81"
+        },
+        {
+          "source_id": 11,
+          "section": "Related work ::: Synthetic datasets",
+          "quote": "Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: Related work ::: Synthetic datasets\nRecently, many synthetic datasets have been proposed as diagnostic tools for deep learning models, such as CLEVR BIBREF21 for visual question answering (VQA), the bAbI tasks BIBREF22 for text understanding and reasoning, and ShapeWorld BIBREF11 for visually grounded language understanding.",
+          "source_sha256": "3f9714c20bbaf9fae7bd54a20e72d3fb6d3fb731793b537f11b0080dc7411e0e"
+        },
+        {
+          "source_id": 11,
+          "section": "Related work ::: Synthetic datasets",
+          "quote": "The primary motivation is to reduce complexity which is considered irrelevant to the evaluation focus, to enable better control over the data, and to provide more detailed insights into strengths and limitations of existing models.",
+          "source_sha256": "3f9714c20bbaf9fae7bd54a20e72d3fb6d3fb731793b537f11b0080dc7411e0e"
+        },
+        {
+          "source_id": 13,
+          "section": "GTD Evaluation Framework",
+          "quote": "Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: GTD Evaluation Framework\nIn the following we introduce GTD in more detail, consider it as an evaluation protocol covering necessary aspects of the multifaceted captioning task, rather than a specific metric.",
+          "source_sha256": "730b43e5c3ac1ec34fdf2f67b31f0a2d1df3c245bb81968e801deb0682aef4c7"
+        },
+        {
+          "source_id": 14,
+          "section": "GTD Evaluation Framework ::: Grammaticality",
+          "quote": "Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: GTD Evaluation Framework ::: Grammaticality\nAn essential criterion for an image captioning model is that the captions generated are grammatically well-formed.",
+          "source_sha256": "17922774a7c14ede8f04b103a8faf68b40238d4aad07a32653b75b6d47b1e7d8"
+        },
+        {
+          "source_id": 15,
+          "section": "GTD Evaluation Framework ::: Grammaticality",
+          "quote": "Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: GTD Evaluation Framework ::: Grammaticality\nThe ERG is a broad-coverage grammar based on the head-driven phrase structure grammar (HPSG) framework.",
+          "source_sha256": "fccaf960f7942442775abf370b468fd94f18b21a7e0527dfe157fc4d302831c9"
+        },
+        {
+          "source_id": 16,
+          "section": "GTD Evaluation Framework ::: Truthfulness",
+          "quote": "Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: GTD Evaluation Framework ::: Truthfulness\nThe second aspect we investigate is truthfulness, that is, whether a candidate caption is compatible with the content of the image it is supposed to describe.",
+          "source_sha256": "35ab46cbc111fc994b72d51632c6492e0e984fe3b44319c5dcf06e75d9edb21a"
+        },
+        {
+          "source_id": 16,
+          "section": "GTD Evaluation Framework ::: Truthfulness",
+          "quote": "We evaluate caption truthfulness on the basis of a linguistically-motivated approach using formal semantics.",
+          "source_sha256": "35ab46cbc111fc994b72d51632c6492e0e984fe3b44319c5dcf06e75d9edb21a"
+        },
+        {
+          "source_id": 17,
+          "section": "GTD Evaluation Framework ::: Diversity",
+          "quote": "Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: GTD Evaluation Framework ::: Diversity\nWhile grammaticality and truthfulness are essential requirements for image captions, these criteria alone can easily be “gamed” by specializing on a small set of generic statements which are true most of the time.",
+          "source_sha256": "39943c12a094690bbd9accf4ab0dd49186940f374114e658b3c104a4b23d9bc7"
+        },
+        {
+          "source_id": 18,
+          "section": "GTD Evaluation Framework ::: Diversity",
+          "quote": "Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: GTD Evaluation Framework ::: Diversity\nAs ShapeWorldICE exploits a limited size of open-class words, we emphasize the diversity in ShapeWorldICE at the sentence level rather than the word level.",
+          "source_sha256": "32c2f4f84d2ee0a111d831351e7fe1e1bcd0e093235e722320a0508f76f38afe"
+        },
+        {
+          "source_id": 20,
+          "section": "Experimental Setup ::: Datasets",
+          "quote": "Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: Experimental Setup ::: Datasets\nWe develop a variety of ShapeWorldICE datasets, with a similar idea to the “skill tasks” in the bAbI framework BIBREF22.",
+          "source_sha256": "3405d9992f74d17c81f194be556c046c930186082bf50d8bcd440e7d275e0dc1"
+        },
+        {
+          "source_id": 20,
+          "section": "Experimental Setup ::: Datasets",
+          "quote": "Table TABREF4 gives an overview for different ShapeWorldICE datasets we use in this paper.",
+          "source_sha256": "3405d9992f74d17c81f194be556c046c930186082bf50d8bcd440e7d275e0dc1"
+        },
+        {
+          "source_id": 22,
+          "section": "Experimental Setup ::: Models",
+          "quote": "Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: Experimental Setup ::: Models\nWe experiment with two image captioning models: the Show&Tell model BIBREF0 and the LRCN1u model BIBREF1.",
+          "source_sha256": "6efc949145b7079f19473296794584a8fb308184cf2fa0c44830770d536d2b05"
+        },
+        {
+          "source_id": 23,
+          "section": "Experimental Setup ::: Models",
+          "quote": "Paper 1912.08960: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity\nSection: Experimental Setup ::: Models\nWe follow the common practice in image captioning to use a CNN component pretrained on object detection and fine-tune its parameters on the image captioning task.",
+          "source_sha256": "0b9d7e325f816d363215ab339473f33eddd0ed73843282a0c4d6eb316a3699f1"
+        },
+        {
+          "source_id": 24,
+          "section": "Results",
+          "quote": "Here we discuss in detail the diagnostic results of these experiments.",
+          "source_sha256": "5f56b4bf0f623e21b89486c9cce281b8a6fd5f3c2f8cad673f4d74cb6271cbab"
+        }
+      ],
+      "index_sec": 0.001155,
+      "questions": [
+        {
+          "id": "50e80cfa84200717921840fddcf3b051a9216ad8",
+          "question": "Are the images from a specific domain?",
+          "query": "Paper: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity. Question: Are the images from a specific domain?",
+          "selected_16": [
+            33,
+            21,
+            1,
+            18,
+            13,
+            10,
+            20,
+            11,
+            6,
+            36,
+            24,
+            28,
+            15,
+            8,
+            4,
+            17
+          ],
+          "selected_8": [
+            33,
+            21,
+            1,
+            18,
+            13,
+            10,
+            20,
+            11
+          ],
+          "search_sec": 0.000124
+        },
+        {
+          "id": "b1bc9ae9d40e7065343c12f860a461c7c730a612",
+          "question": "Which datasets are used?",
+          "query": "Paper: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity. Question: Which datasets are used?",
+          "selected_16": [
+            33,
+            11,
+            12,
+            21,
+            20,
+            17,
+            36,
+            18,
+            34,
+            5,
+            19,
+            10,
+            1,
+            30,
+            26,
+            37
+          ],
+          "selected_8": [
+            33,
+            11,
+            12,
+            21,
+            20,
+            17,
+            36,
+            18
+          ],
+          "search_sec": 0.000112
+        },
+        {
+          "id": "63a1cbe66fd58ff0ead895a8bac1198c38c008aa",
+          "question": "Which existing models are evaluated?",
+          "query": "Paper: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity. Question: Which existing models are evaluated?",
+          "selected_16": [
+            11,
+            21,
+            38,
+            37,
+            10,
+            6,
+            33,
+            5,
+            18,
+            0,
+            9,
+            17,
+            4,
+            22,
+            1,
+            3
+          ],
+          "selected_8": [
+            11,
+            21,
+            38,
+            37,
+            10,
+            6,
+            33,
+            5
+          ],
+          "search_sec": 0.000111
+        },
+        {
+          "id": "509af1f11bd6f3db59284258e18fdfebe86cae47",
+          "question": "How is diversity measured?",
+          "query": "Paper: Going Beneath the Surface: Evaluating Image Captioning for Grammaticality, Truthfulness and Diversity. Question: How is diversity measured?",
+          "selected_16": [
+            11,
+            3,
+            38,
+            33,
+            21,
+            34,
+            6,
+            0,
+            19,
+            15,
+            39,
+            17,
+            14,
+            5,
+            16,
+            12
+          ],
+          "selected_8": [
+            11,
+            3,
+            38,
+            33,
+            21,
+            34,
+            6,
+            0
+          ],
+          "search_sec": 0.000107
+        }
+      ]
+    },
+    {
+      "paper_id": "2001.08868",
+      "title": "Exploration Based Language Learning for Text-Based Games",
+      "state": "Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\n[Source P0 | Abstract] This work presents an exploration and imitation-learning-based agent capable of state-of-the-art performance in playing text-based computer games. Text-based computer games describe their world to the player through natural language and expect the player to interact with the game using text. These games are of interest as they can be seen as a testbed for language understanding, problem-solving, and language generation by artificial agents. Moreover, they provide a learning environment in which these skills can be acquired through interactions with an environment rather than using fixed corpora. One aspect that makes these games particularly challenging for learning agents is the combinatorially large action space. Existing methods for solving text-based games are limited to games that are either very simple or have an action space restricted to a predetermined set of admissible actions. In this work, we propose to use the exploration approach of Go-Explore for solving text-based games. More specifically, in an initial exploration phase, we first extract trajectories with high rewards, after which we train a policy to solve the game by imitating these trajectories. Our experiments show that this approach outperforms existing solutions in solving text-based games, and it is more sample efficient in terms of the number of interactions with the environment. Moreover, we show that the learned policy can generalize better than existing solutions to unseen games without using any restriction on the action space.\n[Source P1 | Section: Introduction] Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Introduction\nText-based games became popular in the mid 80s with the game series Zork BIBREF1 resulting in many different text-based games being produced and published BIBREF2.\n[Source P3 | Section: Introduction] Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Introduction\nTo address this challenge, we propose to use the idea behind the recently proposed Go-Explore BIBREF0 algorithm.\n[Source P4 | Section: Introduction ::: Reinforcement Learning Based Approaches for Text-Based Games] Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Introduction ::: Reinforcement Learning Based Approaches for Text-Based Games\nAmong reinforcement learning based efforts to solve text-based games two approaches are prominent.\n[Source P4 | Section: Introduction ::: Reinforcement Learning Based Approaches for Text-Based Games] This method was demonstrated with two-word sentences consisting of a verb-object pair (e.g.\n[Source P5 | Section: Introduction ::: Exploration in Reinforcement Learning] Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Introduction ::: Exploration in Reinforcement Learning\nIn most text-based games rewards are sparse, since the size of the action space makes the probability of observing a reward extremely low when taking only random actions.\n[Source P5 | Section: Introduction ::: Exploration in Reinforcement Learning] Many exploration based solutions have been proposed to address the challenges associated with reward sparsity.\n[Source P6 | Section: Methodology] Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Methodology\nGo-Explore BIBREF0 differs from the exploration-based algorithms discussed above in that it explicitly keeps track of under-explored areas of the state space and in that it utilizes the determinism of the simulator in order to return to those states, allowing it to explore sparse-reward environments in a sample efficient way (see BIBREF0 as well as section SECREF27).\n[Source P6 | Section: Methodology] For the experiments in this paper we mainly focus on the final performance of our policy, not how that policy is trained, thus making Go-Explore a suitable algorithm for our experiments.\n[Source P9 | Section: Methodology ::: Phase 1: Exploration] Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Methodology ::: Phase 1: Exploration\nIn phase 1, Go-Explore builds an archive of cells, where a cell is defined as a set of observations that are mapped to the same, discrete representation by some mapping function $f(x)$.\n[Source P10 | Section: Methodology ::: Phase 1: Exploration] Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Methodology ::: Phase 1: Exploration\nAt each iteration the algorithm selects a cell from this archive based on meta-data of the cell (e.g.\n[Source P11 | Section: Methodology ::: Phase 2: Generalization] Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Methodology ::: Phase 2: Generalization\nPhase 2 of Go-Explore uses the trajectories found in phase 1 and trains a policy based on those trajectories.\n[Source P12 | Section: Methodology ::: Phase 2: Generalization] Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Methodology ::: Phase 2: Generalization\nThe last hidden state $h_{|o_t|}^{enc}$ is used as the initial hidden state of the decoder which generates the action $a_t$ token by token.\n[Source P15 | Section: Experiments ::: Games and experiments setup] Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Experiments ::: Games and experiments setup\nA set of commonly used standard benchmarks BIBREF8, BIBREF3, BIBREF7 for agents that play text-based games are simple games which require no more than two words in each step to solve the game, and have a very limited number of admissible actions per observation.\n[Source P15 | Section: Experiments ::: Games and experiments setup] While simplifying, this setting limits the agent's ability to fully express natural language and learn more complex ways to speak.\n[Source P21 | Section: Experiments ::: Baselines] Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Experiments ::: Baselines\nFor the CoinCollector games, we compared Go-Explore with the episodic discovery bonus BIBREF30 that was used by BIBREF8 to improve two Q-learning-based baselines: DQN++ and DRQN++.\n[Source P22 | Section: Experiments ::: Baselines] Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Experiments ::: Baselines\nFor the CookingWorld games, we implemented three different treatments based on two existing methods:\n[Source P29 | Section: Experiments ::: Hyper-parameters] Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Experiments ::: Hyper-parameters\nIn all the games the maximum number of steps has been set to 50.\n[Source P29 | Section: Experiments ::: Hyper-parameters] The LSTM hidden state has been set to 300 for all the models.",
+      "state_sha256": "489bad2a0cc399cef656e5fef9ed1bb691a0dc980b9a85d5dae0b5fbe2750e69",
+      "state_chars": 6922,
+      "state_construction_sec": 0.000861,
+      "source_chars": 38983,
+      "paragraph_sha256": [
+        "1792b1872db704de255e88f5baed795d0b5ca19ef7ab478e6ceea674ceccbe34",
+        "ff7593b551cdc6155eb6d2cb40c21f33dddbd3894ab78c9805aa0b8bb7b80298",
+        "a52548004b65a29f9bd1f7f2571d624d7d1fe702e1ddb1f00cc85f735df66a3a",
+        "bb416056c2dd6f700b264cc18e17d15c129554a734fe2c008a21d5c7d43190e1",
+        "115ab60f61a8f57dcb996790772adca23d59e1dbd4b2790698c0900b38d4984c",
+        "07ff0063b803a65fdec1a1dec693e34ce01ca48b2e06c7184ed5b1166a752729",
+        "4115a0c1625b024ffc5bc688f289c505918d50ed3ac21d2c26ceccf86f4996b2",
+        "609464d47439addf6e62c1912f7c8f92f4f63262585cb98a9d0179e411501a88",
+        "92152169e9a40d7fcfeec37ada9e6475a7584d77ccd7fcf7e52e96da5c326f0f",
+        "5463decee024ef49dbc5e4492044156b718a555aad7a8ba2bc2d384c2e8a54f7",
+        "d3874893194204d2827aab2d18bbad098e482e9ed68f1d852b2b441f3e1251ac",
+        "57a37c8b4d883d6c1971541a52a447091b1977b94be2bc2586ab5fdeb5c3f6dd",
+        "8039ff338d6ac151debca155933b2ecac39b12517bfef736b17f46510a20ac96",
+        "4ddf25891ff279d315a65e666907fdd76d25a5a70c565adf270d2542b571f2d5",
+        "e4099d0e6973066499cfd49ebad56798fd9e21d7106a82ec17b23812a01c9601",
+        "3fb6b666a5d328150096185bf619d00cbedf7bf9a6da965366680233bb49c7fc",
+        "5d05bfb1048033aa4ff020662970b95f94a876baa5915d74cb6ade816f183c9d",
+        "f8631b288dcbd2f01b646803d84358057fde27e64426fa7226848a1ba1a27119",
+        "e0cc166faa6e0f02f5ff340cd896ca48d02580b4f8338ed123d49910131db7e3",
+        "7542225e046491b6126cedb070ecb78f2e25be97be98944cd621679c91a0aa2d",
+        "9e50c4947b1b10699c51810ba6a466c1ffb415bf54fc3b2790b7170dd531b155",
+        "44cfc77f11e37fa34dcc900ef4b88453b8c07fb932436ba1c01280d506ebdce0",
+        "e6c42fb32115f5901102d8a59834161e02e9472ed1fe317059a9e5a3fbcf65da",
+        "0f8bf4aedbf996fc8606e7cbc3d6037de28a46088a611ba687995ff4e2aa3893",
+        "c5094cd6379c189ed32c4e1aacbaa089b15e42d0e35008e323357aeb2b679401",
+        "1487971cee51363e07b01fd601254c510cd174eb717786a0779cae5137bd08ed",
+        "e3822dfb3bf84a512e6a06e7c40c22c9005271bab31c82a6a19409b522a25c88",
+        "60e18ebaca43a1694b48a2bf21decfa5b3b84d4c01c38b1065fd11a2ed15f5c6",
+        "9dcd6f2571a8e629968bf909a68a3f461e14137bd1599eabcfabfd1fbe0076c5",
+        "15e7d42013ea85ad716e1bc8b14ae968f7c9c00d5be2ed2aee36f821696364c6",
+        "f7f5989c55540b992c03c3288bdf5d1e0526ce42f2f39ab1cbd9c60b98504c30",
+        "0f25f60a1ee2f09ddc9a719ffc9679f8a99747e6ee8490044836282dadbc9fd0",
+        "c2723b751df306ba8d24e3a987f0ae00823a5cea579eb6640b36480ad660dbe5",
+        "6ef1d4bdb61f9132e207b62de24103b662eb5e8af5b0fcdd68ac17330dcac5a6",
+        "0858ea5b80aa840406d1723f86a2244e700e17ebd6fe3d519ad6837ffe1129ac",
+        "749a01d691d42044dc2f004f7bcbf8c5702007a00dc06734eb045af43a6ac278",
+        "5becdd0981b4f7333f43a509ad777c4570d7cfcc4e71bc64cf6664419c3d9c67",
+        "a6f4a40bdb5aa83c5b9d5913fc35776a93f3525716828e5280ba17a47cdc4750",
+        "0a3b885f58e419dfe1b67c2d1a0e8f52fd456a3318bd1660a30faace7f0ba2b9",
+        "edeb0fd33112fc9a4877f8704bd2bb2a2963f23b1e2600aef7c842073a22b29f",
+        "bb155cf2a76025cb8d8ea2e71f8ff30f9a920b0054b70cd90c4c64c7f7197d14",
+        "0329091c4df23d6772cea93731263c182be1ddd807a099760c24f785ebb49798",
+        "bacc85ea97c3f5890c99797081277908e01906ac59738262ba6cb3e1d181ce4e",
+        "42c1d4adbe25703d6c130678a77be46453271d6ddbc75d77c48a0593d67425ee",
+        "e65df4fb76acb72a4137def7123dc5fecffe16db9aae198e4c07eea365297a47",
+        "eb4b5e62fcfe01655d042da2f6270abe5e620cee5cebed184afd2547a943e0a8",
+        "0dc71cfeebe267b49ec82605786130e266d09400fee84e9059e9b185a0f0994c",
+        "7b6fa1921b2537109297d4bbfc3ce8f4eb062a28f8e7253013875a85f18d1215",
+        "f48ab49e47b84b0159a82d21a98d70bff0e00dc323e800bd9a924eaa693c23d0",
+        "e81852db356d9c787c1c441d7329a4b7d01bc5b7f557d9d8e2b6f4cffd0408b2",
+        "5685c72d6671e4264aaae39657e3a83a928f50592e2d8e5a1c5e1736a9dd8674",
+        "17357e178391e736c2d3dc89bf0253a3aceaae0760c9c2e618cfaad6fbe8422d",
+        "e130a1a3a5e722943c0b3207ceaa0e91863908be0e3ebd61f58ffa0cd94708be",
+        "b21430506a3d7df657878f43b0b9b17241111483ea0ef8e4f122b75599ab399c",
+        "d288d8af1b3fecc434212e664d22a143e602fe77ed79184575bc3a58d443f8cb",
+        "f73b9a9600ddd0b7e346c9e1f1846171eb1afa383632504bdb4420fd3efdc921",
+        "4e328e02ce22b2c22f5c06d8e716310d54cf577356018af5c2959e72fa5c7c61",
+        "71c6c1563a867daea466c8dc9e04b179a07d6a02205d5db2c826612c3b767cd3",
+        "402ed97434ed136b017818a1ef7e65f8afd8a135343fe13a506c3f401644697f"
+      ],
+      "cards": [
+        {
+          "source_id": 0,
+          "section": "Abstract",
+          "quote": "This work presents an exploration and imitation-learning-based agent capable of state-of-the-art performance in playing text-based computer games. Text-based computer games describe their world to the player through natural language and expect the player to interact with the game using text. These games are of interest as they can be seen as a testbed for language understanding, problem-solving, and language generation by artificial agents. Moreover, they provide a learning environment in which these skills can be acquired through interactions with an environment rather than using fixed corpora. One aspect that makes these games particularly challenging for learning agents is the combinatorially large action space. Existing methods for solving text-based games are limited to games that are either very simple or have an action space restricted to a predetermined set of admissible actions. In this work, we propose to use the exploration approach of Go-Explore for solving text-based games. More specifically, in an initial exploration phase, we first extract trajectories with high rewards, after which we train a policy to solve the game by imitating these trajectories. Our experiments show that this approach outperforms existing solutions in solving text-based games, and it is more sample efficient in terms of the number of interactions with the environment. Moreover, we show that the learned policy can generalize better than existing solutions to unseen games without using any restriction on the action space.",
+          "source_sha256": "1792b1872db704de255e88f5baed795d0b5ca19ef7ab478e6ceea674ceccbe34"
+        },
+        {
+          "source_id": 1,
+          "section": "Introduction",
+          "quote": "Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Introduction\nText-based games became popular in the mid 80s with the game series Zork BIBREF1 resulting in many different text-based games being produced and published BIBREF2.",
+          "source_sha256": "ff7593b551cdc6155eb6d2cb40c21f33dddbd3894ab78c9805aa0b8bb7b80298"
+        },
+        {
+          "source_id": 3,
+          "section": "Introduction",
+          "quote": "Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Introduction\nTo address this challenge, we propose to use the idea behind the recently proposed Go-Explore BIBREF0 algorithm.",
+          "source_sha256": "bb416056c2dd6f700b264cc18e17d15c129554a734fe2c008a21d5c7d43190e1"
+        },
+        {
+          "source_id": 4,
+          "section": "Introduction ::: Reinforcement Learning Based Approaches for Text-Based Games",
+          "quote": "Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Introduction ::: Reinforcement Learning Based Approaches for Text-Based Games\nAmong reinforcement learning based efforts to solve text-based games two approaches are prominent.",
+          "source_sha256": "115ab60f61a8f57dcb996790772adca23d59e1dbd4b2790698c0900b38d4984c"
+        },
+        {
+          "source_id": 4,
+          "section": "Introduction ::: Reinforcement Learning Based Approaches for Text-Based Games",
+          "quote": "This method was demonstrated with two-word sentences consisting of a verb-object pair (e.g.",
+          "source_sha256": "115ab60f61a8f57dcb996790772adca23d59e1dbd4b2790698c0900b38d4984c"
+        },
+        {
+          "source_id": 5,
+          "section": "Introduction ::: Exploration in Reinforcement Learning",
+          "quote": "Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Introduction ::: Exploration in Reinforcement Learning\nIn most text-based games rewards are sparse, since the size of the action space makes the probability of observing a reward extremely low when taking only random actions.",
+          "source_sha256": "07ff0063b803a65fdec1a1dec693e34ce01ca48b2e06c7184ed5b1166a752729"
+        },
+        {
+          "source_id": 5,
+          "section": "Introduction ::: Exploration in Reinforcement Learning",
+          "quote": "Many exploration based solutions have been proposed to address the challenges associated with reward sparsity.",
+          "source_sha256": "07ff0063b803a65fdec1a1dec693e34ce01ca48b2e06c7184ed5b1166a752729"
+        },
+        {
+          "source_id": 6,
+          "section": "Methodology",
+          "quote": "Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Methodology\nGo-Explore BIBREF0 differs from the exploration-based algorithms discussed above in that it explicitly keeps track of under-explored areas of the state space and in that it utilizes the determinism of the simulator in order to return to those states, allowing it to explore sparse-reward environments in a sample efficient way (see BIBREF0 as well as section SECREF27).",
+          "source_sha256": "4115a0c1625b024ffc5bc688f289c505918d50ed3ac21d2c26ceccf86f4996b2"
+        },
+        {
+          "source_id": 6,
+          "section": "Methodology",
+          "quote": "For the experiments in this paper we mainly focus on the final performance of our policy, not how that policy is trained, thus making Go-Explore a suitable algorithm for our experiments.",
+          "source_sha256": "4115a0c1625b024ffc5bc688f289c505918d50ed3ac21d2c26ceccf86f4996b2"
+        },
+        {
+          "source_id": 9,
+          "section": "Methodology ::: Phase 1: Exploration",
+          "quote": "Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Methodology ::: Phase 1: Exploration\nIn phase 1, Go-Explore builds an archive of cells, where a cell is defined as a set of observations that are mapped to the same, discrete representation by some mapping function $f(x)$.",
+          "source_sha256": "5463decee024ef49dbc5e4492044156b718a555aad7a8ba2bc2d384c2e8a54f7"
+        },
+        {
+          "source_id": 10,
+          "section": "Methodology ::: Phase 1: Exploration",
+          "quote": "Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Methodology ::: Phase 1: Exploration\nAt each iteration the algorithm selects a cell from this archive based on meta-data of the cell (e.g.",
+          "source_sha256": "d3874893194204d2827aab2d18bbad098e482e9ed68f1d852b2b441f3e1251ac"
+        },
+        {
+          "source_id": 11,
+          "section": "Methodology ::: Phase 2: Generalization",
+          "quote": "Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Methodology ::: Phase 2: Generalization\nPhase 2 of Go-Explore uses the trajectories found in phase 1 and trains a policy based on those trajectories.",
+          "source_sha256": "57a37c8b4d883d6c1971541a52a447091b1977b94be2bc2586ab5fdeb5c3f6dd"
+        },
+        {
+          "source_id": 12,
+          "section": "Methodology ::: Phase 2: Generalization",
+          "quote": "Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Methodology ::: Phase 2: Generalization\nThe last hidden state $h_{|o_t|}^{enc}$ is used as the initial hidden state of the decoder which generates the action $a_t$ token by token.",
+          "source_sha256": "8039ff338d6ac151debca155933b2ecac39b12517bfef736b17f46510a20ac96"
+        },
+        {
+          "source_id": 15,
+          "section": "Experiments ::: Games and experiments setup",
+          "quote": "Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Experiments ::: Games and experiments setup\nA set of commonly used standard benchmarks BIBREF8, BIBREF3, BIBREF7 for agents that play text-based games are simple games which require no more than two words in each step to solve the game, and have a very limited number of admissible actions per observation.",
+          "source_sha256": "3fb6b666a5d328150096185bf619d00cbedf7bf9a6da965366680233bb49c7fc"
+        },
+        {
+          "source_id": 15,
+          "section": "Experiments ::: Games and experiments setup",
+          "quote": "While simplifying, this setting limits the agent's ability to fully express natural language and learn more complex ways to speak.",
+          "source_sha256": "3fb6b666a5d328150096185bf619d00cbedf7bf9a6da965366680233bb49c7fc"
+        },
+        {
+          "source_id": 21,
+          "section": "Experiments ::: Baselines",
+          "quote": "Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Experiments ::: Baselines\nFor the CoinCollector games, we compared Go-Explore with the episodic discovery bonus BIBREF30 that was used by BIBREF8 to improve two Q-learning-based baselines: DQN++ and DRQN++.",
+          "source_sha256": "44cfc77f11e37fa34dcc900ef4b88453b8c07fb932436ba1c01280d506ebdce0"
+        },
+        {
+          "source_id": 22,
+          "section": "Experiments ::: Baselines",
+          "quote": "Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Experiments ::: Baselines\nFor the CookingWorld games, we implemented three different treatments based on two existing methods:",
+          "source_sha256": "e6c42fb32115f5901102d8a59834161e02e9472ed1fe317059a9e5a3fbcf65da"
+        },
+        {
+          "source_id": 29,
+          "section": "Experiments ::: Hyper-parameters",
+          "quote": "Paper 2001.08868: Exploration Based Language Learning for Text-Based Games\nSection: Experiments ::: Hyper-parameters\nIn all the games the maximum number of steps has been set to 50.",
+          "source_sha256": "15e7d42013ea85ad716e1bc8b14ae968f7c9c00d5be2ed2aee36f821696364c6"
+        },
+        {
+          "source_id": 29,
+          "section": "Experiments ::: Hyper-parameters",
+          "quote": "The LSTM hidden state has been set to 300 for all the models.",
+          "source_sha256": "15e7d42013ea85ad716e1bc8b14ae968f7c9c00d5be2ed2aee36f821696364c6"
+        }
+      ],
+      "index_sec": 0.001576,
+      "questions": [
+        {
+          "id": "df0257ab04686ddf1c6c4d9b0529a7632330b98e",
+          "question": "How better does new approach behave than existing solutions?",
+          "query": "Paper: Exploration Based Language Learning for Text-Based Games. Question: How better does new approach behave than existing solutions?",
+          "selected_16": [
+            0,
+            2,
+            3,
+            9,
+            35,
+            39,
+            38,
+            32,
+            4,
+            27,
+            36,
+            19,
+            22,
+            11,
+            33,
+            15
+          ],
+          "selected_8": [
+            0,
+            2,
+            3,
+            9,
+            35,
+            39,
+            38,
+            32
+          ],
+          "search_sec": 0.000135
+        },
+        {
+          "id": "568fb7989a133564d84911e7cb58e4d8748243ef",
+          "question": "How is trajectory with how rewards extracted?",
+          "query": "Paper: Exploration Based Language Learning for Text-Based Games. Question: How is trajectory with how rewards extracted?",
+          "selected_16": [
+            30,
+            31,
+            32,
+            9,
+            19,
+            27,
+            5,
+            6,
+            39,
+            11,
+            10,
+            0,
+            2,
+            18,
+            25,
+            51
+          ],
+          "selected_8": [
+            30,
+            31,
+            32,
+            9,
+            19,
+            27,
+            5,
+            6
+          ],
+          "search_sec": 0.000129
+        },
+        {
+          "id": "2c947447d81252397839d58c75ebcc71b34379b5",
+          "question": "On what Text-Based Games are experiments performed?",
+          "query": "Paper: Exploration Based Language Learning for Text-Based Games. Question: On what Text-Based Games are experiments performed?",
+          "selected_16": [
+            32,
+            19,
+            22,
+            15,
+            26,
+            0,
+            2,
+            5,
+            34,
+            3,
+            33,
+            4,
+            18,
+            25,
+            16,
+            10
+          ],
+          "selected_8": [
+            32,
+            19,
+            22,
+            15,
+            26,
+            0,
+            2,
+            5
+          ],
+          "search_sec": 0.000145
+        },
+        {
+          "id": "c01784b995f6594fdb23d7b62f20a35ae73eaa77",
+          "question": "How do the authors show that their learned policy generalize better than existing solutions to unseen games?",
+          "query": "Paper: Exploration Based Language Learning for Text-Based Games. Question: How do the authors show that their learned policy generalize better than existing solutions to unseen games?",
+          "selected_16": [
+            0,
+            3,
+            35,
+            19,
+            11,
+            36,
+            2,
+            32,
+            34,
+            5,
+            6,
+            39,
+            4,
+            33,
+            21,
+            31
+          ],
+          "selected_8": [
+            0,
+            3,
+            35,
+            19,
+            11,
+            36,
+            2,
+            32
+          ],
+          "search_sec": 0.000168
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "status": "offline_selection_and_four_control_renderings_passed",
+  "inference_calls": 0,
+  "source_sha256": "f84b6f995195bd7cc7794d9c9b3ca06d298a3279d42980763c272a3a0e97f0e0",
+  "preparation_sha256": "63fce3ee7181be6a4506729e01e8794b168d4adc8b085cb6f8413bc4195e0578",
+  "excluded_unique_graphs": 98,
+  "selected_rows": [
+    522,
+    523,
+    524,
+    525,
+    526,
+    527,
+    528,
+    529,
+    530,
+    531,
+    532,
+    533,
+    534,
+    535,
+    536,
+    537
+  ],
+  "complete_original_control_requests_checked": 64,
+  "limitations": [
+    "Not a frozen primary experiment or runtime qualification.",
+    "Synthetic partial-state fixtures are not audited performance or generated-state upper bounds.",
+    "Does not prove public graphs absent from model pretraining."
+  ]
+}

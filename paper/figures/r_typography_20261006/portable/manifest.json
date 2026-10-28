@@ -1,0 +1,21 @@
+{
+  "confirmatory_typography_20261006.R": "f52aa2ec1d358a43a5cb708c3a76e30e466ea77509697d2125a366393f4d1dc7",
+  "inputs/logs/official_graph_indexed_source/interrupted_figure_summary.csv": "601b6483d3a4bac1f8cafc749d3cae4e07b26292a68254352767d8a3af1359e2",
+  "inputs/paper/evidence_verification_20261006/arm_summary.csv": "cefc70cd37a8ccb23202bdbc452f70b299131ef25e7392b774e216d4935e3d5b",
+  "inputs/paper/evidence_verification_20261006/contrasts.csv": "3ef3e5c5101cba74c8d38fd4ca059c5fa78165de7a6e763b9829b00b407dc4e4",
+  "inputs/paper/evidence_verification_20261006/graph_summary.csv": "0af169c4e172a7c351f6d8a61b3e4c52dfaeea785c3e371815a66f6e5ad13c89",
+  "inputs/paper/figures/data/official_graph_identity_recode.csv": "3d59dceac930531b6d8657a04c7fd73ed2eb2ea0026eae9b3e7d38d125e38613",
+  "inputs/paper/figures/data/official_graph_identity_recode_cases.csv": "d2f99985ed876e8f43f9d04686ff98b3360687e0e985ff0dc8cba9ac045dbb6f",
+  "inputs/paper/figures/data/official_graph_reasoning_mode.csv": "f73da66f3419cb4353d6c56074dadf9a858c01ad8fa77523c7d2093e3a9b1cb1",
+  "inputs/paper/figures/data/official_graph_reasoning_mode_groups.csv": "c043df0d4af27bda6328a06b773d950645f64e71ffcfe240949d214395238543",
+  "inputs/recovery_bridge_20261003/hybrid_five_trace_replication/figure_f1_identification_bounds.csv": "f0497083c587fd9301430f6f2259852e48e3bad516e6b883e0d237307ae60475",
+  "inputs/recovery_bridge_20261003/hybrid_five_trace_replication/figure_input_feasibility.csv": "bc0bafc3682f0fb01d2314f8abfde1690ecbce2e4193e15ed777dcd9e726eba3",
+  "inputs/recovery_bridge_20261003/hybrid_five_trace_replication/figure_slot_coverage.csv": "310dd876be2ecba0b049804a10bd42d27a61b9a60c92c4f9dac66a8b4346a0de",
+  "inputs/recovery_bridge_20261003/hybrid_source_qualification/audited_calls.csv": "16e342ecc63cc00134d01a09a49a317e456050d614774a1565c9ca65282009b0",
+  "inputs/recovery_bridge_20261003/partial_state_study_20261004/display_arm_summary.csv": "486cb1e4e9e822d6c1cae28d4fd3d21f9856305ea073705fa2237a03e8348d8c",
+  "publication_font_helpers_20261006.R": "38c22080812d699f43fa01b86d98e8aa6d7424875a91c336c77eadabda97c91d",
+  "R_sessionInfo.txt": "4a45eb68ff68e16e75c2c57e0295bf7fe5feda3b1f28dd189c5fe458b2ea939a",
+  "README.md": "d867bc6b65f059e25d6b3b874dae65860c2870e7b9285dcd62608f33095a6690",
+  "render_all.R": "515bde3397b919a633dd454aa1b46ca795768fc56816001eba45181ad8dd5ddd",
+  "typography_20261006.R": "1bd56230a01665fb4eceaa14d1aef16d22f2cb95cff62e0abff4b03e9d119632"
+}

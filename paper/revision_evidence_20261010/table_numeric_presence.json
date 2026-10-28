@@ -1,0 +1,626 @@
+{
+  "scope": "Exact numeric token presence on corresponding table page, preserving decimal/fraction/sign; not full cell-position equivalence",
+  "checks": [
+    {
+      "table": "tab:local-configurations",
+      "value": "32,768",
+      "page": 2
+    },
+    {
+      "table": "tab:local-configurations",
+      "value": "32,768",
+      "page": 2
+    },
+    {
+      "table": "tab:local-configurations",
+      "value": "32,768",
+      "page": 2
+    },
+    {
+      "table": "tab:local-configurations",
+      "value": "65,536",
+      "page": 2
+    },
+    {
+      "table": "tab:local-configurations",
+      "value": "131,072",
+      "page": 2
+    },
+    {
+      "table": "tab:local-configurations",
+      "value": "196,608",
+      "page": 2
+    },
+    {
+      "table": "tab:local-configurations",
+      "value": "65,536",
+      "page": 2
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "0.7715",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "0.3333",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "60/60",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "34,901",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "0.7351",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "0.3833",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "60/60",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "34,622",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "0.6915",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "0.3333",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "59/60",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "4,093",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "1.0000",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "1.0000",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "60/60",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "51,751",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "1.0000",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "1.0000",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "60/60",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "51,612",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "0.6967",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "0.6833",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "42/60",
+      "page": 6
+    },
+    {
+      "table": "tab:paired-final",
+      "value": "8,231",
+      "page": 6
+    },
+    {
+      "table": "tab:budget-final",
+      "value": "8192",
+      "page": 8
+    },
+    {
+      "table": "tab:budget-final",
+      "value": "0.6967",
+      "page": 8
+    },
+    {
+      "table": "tab:budget-final",
+      "value": "0.6833",
+      "page": 8
+    },
+    {
+      "table": "tab:budget-final",
+      "value": "42/60",
+      "page": 8
+    },
+    {
+      "table": "tab:budget-final",
+      "value": "8,231",
+      "page": 8
+    },
+    {
+      "table": "tab:budget-final",
+      "value": "28672",
+      "page": 8
+    },
+    {
+      "table": "tab:budget-final",
+      "value": "1.0000",
+      "page": 8
+    },
+    {
+      "table": "tab:budget-final",
+      "value": "1.0000",
+      "page": 8
+    },
+    {
+      "table": "tab:budget-final",
+      "value": "60/60",
+      "page": 8
+    },
+    {
+      "table": "tab:budget-final",
+      "value": "8,764",
+      "page": 8
+    },
+    {
+      "table": "tab:context-final",
+      "value": "0.9750",
+      "page": 10
+    },
+    {
+      "table": "tab:context-final",
+      "value": "0.8000",
+      "page": 10
+    },
+    {
+      "table": "tab:context-final",
+      "value": "5/5",
+      "page": 10
+    },
+    {
+      "table": "tab:context-final",
+      "value": "350,021",
+      "page": 10
+    },
+    {
+      "table": "tab:context-final",
+      "value": "0.8984",
+      "page": 10
+    },
+    {
+      "table": "tab:context-final",
+      "value": "0.6000",
+      "page": 10
+    },
+    {
+      "table": "tab:context-final",
+      "value": "5/5",
+      "page": 10
+    },
+    {
+      "table": "tab:context-final",
+      "value": "344,816",
+      "page": 10
+    },
+    {
+      "table": "tab:context-final",
+      "value": "0.9583",
+      "page": 10
+    },
+    {
+      "table": "tab:context-final",
+      "value": "0.4000",
+      "page": 10
+    },
+    {
+      "table": "tab:context-final",
+      "value": "5/5",
+      "page": 10
+    },
+    {
+      "table": "tab:context-final",
+      "value": "36,498",
+      "page": 10
+    },
+    {
+      "table": "tab:context-final",
+      "value": "0.7220",
+      "page": 10
+    },
+    {
+      "table": "tab:context-final",
+      "value": "0.0000",
+      "page": 10
+    },
+    {
+      "table": "tab:context-final",
+      "value": "5/5",
+      "page": 10
+    },
+    {
+      "table": "tab:context-final",
+      "value": "39,719",
+      "page": 10
+    },
+    {
+      "table": "tab:context-final",
+      "value": "0.7692",
+      "page": 10
+    },
+    {
+      "table": "tab:context-final",
+      "value": "0.6000",
+      "page": 10
+    },
+    {
+      "table": "tab:context-final",
+      "value": "4/5",
+      "page": 10
+    },
+    {
+      "table": "tab:context-final",
+      "value": "50,578",
+      "page": 10
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "0.3176",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "0.0417",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "6,640.67",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "43",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "5",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "0.3668",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "0.0833",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "7,149.88",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "45",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "3",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "0.6542",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "0.2292",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "3,823.25",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "42",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "6",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "0.7703",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "0.3750",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "5,344.46",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "47",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "1",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "0.7130",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "0.3333",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "5,345.67",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "46",
+      "page": 11
+    },
+    {
+      "table": "tab:confirmation-benefit",
+      "value": "2",
+      "page": 11
+    },
+    {
+      "table": "tab:hybrid-source",
+      "value": "2/4",
+      "page": 22
+    },
+    {
+      "table": "tab:hybrid-source",
+      "value": "100.00",
+      "page": 22
+    },
+    {
+      "table": "tab:hybrid-source",
+      "value": "100.00",
+      "page": 22
+    },
+    {
+      "table": "tab:hybrid-source",
+      "value": "4/4",
+      "page": 22
+    },
+    {
+      "table": "tab:hybrid-source",
+      "value": "2/4",
+      "page": 22
+    },
+    {
+      "table": "tab:hybrid-source",
+      "value": "100.00",
+      "page": 22
+    },
+    {
+      "table": "tab:hybrid-source",
+      "value": "100.00",
+      "page": 22
+    },
+    {
+      "table": "tab:hybrid-source",
+      "value": "4/4",
+      "page": 22
+    },
+    {
+      "table": "tab:hybrid-source",
+      "value": "2/4",
+      "page": 22
+    },
+    {
+      "table": "tab:hybrid-source",
+      "value": "100.00",
+      "page": 22
+    },
+    {
+      "table": "tab:hybrid-source",
+      "value": "100.00",
+      "page": 22
+    },
+    {
+      "table": "tab:hybrid-source",
+      "value": "4/4",
+      "page": 22
+    },
+    {
+      "table": "tab:hybrid-source",
+      "value": "2/4",
+      "page": 22
+    },
+    {
+      "table": "tab:hybrid-source",
+      "value": "71.43",
+      "page": 22
+    },
+    {
+      "table": "tab:hybrid-source",
+      "value": "50.00",
+      "page": 22
+    },
+    {
+      "table": "tab:hybrid-source",
+      "value": "4/4",
+      "page": 22
+    },
+    {
+      "table": "tab:hybrid-source",
+      "value": "8/16",
+      "page": 22
+    },
+    {
+      "table": "tab:hybrid-source",
+      "value": "92.86",
+      "page": 22
+    },
+    {
+      "table": "tab:hybrid-source",
+      "value": "87.50",
+      "page": 22
+    },
+    {
+      "table": "tab:hybrid-source",
+      "value": "16/16",
+      "page": 22
+    },
+    {
+      "table": "tab:indexed-interrupted",
+      "value": "16",
+      "page": 25
+    },
+    {
+      "table": "tab:indexed-interrupted",
+      "value": "44.84",
+      "page": 25
+    },
+    {
+      "table": "tab:indexed-interrupted",
+      "value": "12.50",
+      "page": 25
+    },
+    {
+      "table": "tab:indexed-interrupted",
+      "value": "107,475",
+      "page": 25
+    },
+    {
+      "table": "tab:indexed-interrupted",
+      "value": "15",
+      "page": 25
+    },
+    {
+      "table": "tab:indexed-interrupted",
+      "value": "15",
+      "page": 25
+    },
+    {
+      "table": "tab:indexed-interrupted",
+      "value": "16",
+      "page": 25
+    },
+    {
+      "table": "tab:indexed-interrupted",
+      "value": "25.80",
+      "page": 25
+    },
+    {
+      "table": "tab:indexed-interrupted",
+      "value": "0",
+      "page": 25
+    },
+    {
+      "table": "tab:indexed-interrupted",
+      "value": "36,047",
+      "page": 25
+    },
+    {
+      "table": "tab:indexed-interrupted",
+      "value": "16",
+      "page": 25
+    },
+    {
+      "table": "tab:indexed-interrupted",
+      "value": "40.77",
+      "page": 25
+    },
+    {
+      "table": "tab:indexed-interrupted",
+      "value": "31.25",
+      "page": 25
+    },
+    {
+      "table": "tab:indexed-interrupted",
+      "value": "52,847",
+      "page": 25
+    },
+    {
+      "table": "tab:indexed-interrupted",
+      "value": "16",
+      "page": 25
+    },
+    {
+      "table": "tab:indexed-interrupted",
+      "value": "44.50",
+      "page": 25
+    },
+    {
+      "table": "tab:indexed-interrupted",
+      "value": "12.50",
+      "page": 25
+    },
+    {
+      "table": "tab:indexed-interrupted",
+      "value": "23,032",
+      "page": 25
+    }
+  ],
+  "passed": true
+}

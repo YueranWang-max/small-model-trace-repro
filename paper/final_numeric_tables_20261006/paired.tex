@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+Configuration & F1 & EM & Normal-valid & Tokens/answer\\
+\midrule
+1.7B prefix & 0.7715 & 0.3333 & 60/60 & 34,901\\
+1.7B append & 0.7351 & 0.3833 & 60/60 & 34,622\\
+1.7B direct & 0.6915 & 0.3333 & 59/60 & 4,093\\
+4B prefix & 1.0000 & 1.0000 & 60/60 & 51,751\\
+4B append & 1.0000 & 1.0000 & 60/60 & 51,612\\
+4B direct & 0.6967 & 0.6833 & 42/60 & 8,231\\
+\bottomrule
+\end{tabular}
+\caption{Completed Qwen3 comparisons on the same twelve graphs, five reader repeats each. Trace costs charge all five sources and one reader. Normal-valid refers to termination and visible-answer format, not correctness. The same questions are not twenty-four independent graph units.}
+\label{tab:paired-final}
+\end{table}

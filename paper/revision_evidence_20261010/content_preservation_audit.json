@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "pdf_sha256": "0a7beaa886f5a91406e8e27c7d8f51b1fd0331be11c42294cfa53db010713224",
+  "pages": 28,
+  "section_headings_checked": 30,
+  "figures_checked": 11,
+  "top_level_vector_forms": 11,
+  "tables_checked": 8,
+  "table_rows_checked": 45,
+  "exact_numeric_tokens_checked": 124,
+  "unhandled_complex_rows": [],
+  "display_math_blocks_protected": 2,
+  "inline_math_spans_protected": 98,
+  "cited_keys_and_bibitems_match": [
+    "openai2025graphwalks",
+    "qwen2026qwen35card",
+    "tang2026trace",
+    "xu2024rereading",
+    "yang2025qwen3"
+  ],
+  "limits": [
+    "No Markdown input exists for this manuscript; this is not a Markdown round-trip audit",
+    "Formula hashes protect the reviewed TeX, not full rendered-symbol semantic correctness",
+    "Table cell presence does not alone establish cell alignment",
+    "Counts and hashes do not establish scientific validity or external inference authenticity"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "state": "stopped_on_exception",
+  "recorded": 18,
+  "planned": 168,
+  "error": "RuntimeError('User STOP between calls')",
+  "updated_unix": 1791552324.6450744
+}

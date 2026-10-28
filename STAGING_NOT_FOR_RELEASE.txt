@@ -1,0 +1,1 @@
+CPU-only portability check of completed archived studies. Active 4B/context records and final manuscript are not yet included. Historical weaker-provenance bridge is for audit/selection lineage only, not manuscript empirical claims. Original copyright attribution is preserved and unverified.

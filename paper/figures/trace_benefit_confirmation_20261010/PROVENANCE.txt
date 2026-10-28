@@ -1,0 +1,5 @@
+Source: paper/plot_trace_benefit_confirmation_20261010.R
+Input: independently audited plot_arms.csv
+24 graph units; two seeds averaged within unit; descriptive means and paired95% graph bootstrap intervals.
+Both trace arms include complete single-source preparation per answer.
+See report for paired uncertainty and secondary-comparison limitations.

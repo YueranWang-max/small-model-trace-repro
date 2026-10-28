@@ -1,0 +1,71 @@
+{
+  "source_sha256": "2ae7ee62a65b1c4225791c70de80c2aad4e8998cf1fd4f09a53103db4f21af93",
+  "paper_ids": [
+    "1905.10851",
+    "1906.00790",
+    "1906.07662",
+    "1906.10225",
+    "1908.06941",
+    "1909.00175",
+    "1909.00326",
+    "1909.01296",
+    "1909.01383"
+  ],
+  "question_ids": {
+    "1905.10851": [
+      "ce6a3ca102a5ee62e86fc7def3b20b1f10d1eb25",
+      "49eb52b3ec0647e165a5e41488088c80a20cc78f",
+      "9bb7ae50bff91571a945c1af025ed2e67714a788",
+      "81dbe9a9ddaa5d02b02e01a306d898015a56ffb6"
+    ],
+    "1906.00790": [
+      "b249b60a8c94d0e40d65f1ffdfcac527dab57516",
+      "0f567251a6566f65170a1329eeeb5105932036b2",
+      "4aa9b60c0ccd379c6fb089c84a6c7b872ee9ec4f",
+      "60ce4868af45753c9e124e64e518c32376f12694"
+    ],
+    "1906.07662": [
+      "8d074aabf4f51c8455618c5bf7689d3f62c4da1d",
+      "fe2666ace293b4bfac3182db6d0c6f03ea799277",
+      "70a1b0f9f26f1b82c14783f1b76dfb5400444aa4",
+      "d3ca5f1814860a88ff30761fec3d860d35e39167"
+    ],
+    "1906.10225": [
+      "01f4a0a19467947a8f3bdd7ec9fac75b5222d710",
+      "7784d321ccc64db5141113b6783e4ba92fdd4b20",
+      "218615a005f7f00606223005fef22c07057d9d77",
+      "867290103f762e1ddfa6f2ea30dd0a327f595182"
+    ],
+    "1908.06941": [
+      "6b9b9e5d154cb963f6d921093539490daa5ebbae",
+      "bc4dca3e1e83f3b4bbb53a31557fc5d8971603b2",
+      "d46c0ea1ba68c649cc64d2ebb6af20202a74a3c7",
+      "6844683935d0d8f588fa06530f5068bf3e1ed0c0"
+    ],
+    "1909.00175": [
+      "badc9db40adbbf2ea7bac29f2e4e3b6b9175b1f9",
+      "67b66fe67a3cb2ce043070513664203e564bdcbd",
+      "f56d07f73b31a9c72ea737b40103d7004ef6a079",
+      "38e4aaeabf06a63a067b272f8950116733a7895c"
+    ],
+    "1909.00326": [
+      "384bf1f55c34b36cb03f916f50bbefade6c86a75",
+      "aef607d2ac46024be17b1ddd0ed3f13378c563a6",
+      "93beae291b455e5d3ecea6ac73b83632a3ae7ec7",
+      "6c91d44d5334a4ac80100eead4e105d34e99a284"
+    ],
+    "1909.01296": [
+      "ad08b215dca538930ef1f50b4e49cd25527028ad",
+      "31101dc9937f108e27e08a5f34be44f0090b8b6b",
+      "e4a315e9c190cf96493eefe04ce4ba6ae6894550",
+      "6263b2cba18207474786b303852d2f0d7068d4b6"
+    ],
+    "1909.01383": [
+      "627b8d7b5b985394428c974aca5ba0c1bbbba377",
+      "126ff22bfcc14a2f7e1a06a91ba7b646003e9cf0",
+      "7e4ef0a4debc048b244b61b4f7dc2518b5b466c0",
+      "b68f72aed961d5ba152e9dc50345e1e832196a76"
+    ]
+  },
+  "selection": "rank >=106, first nine with >=4 questions and 8000<=canonical chars<=32000"
+}

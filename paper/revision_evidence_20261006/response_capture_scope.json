@@ -1,0 +1,24 @@
+{
+  "scope": "Representative archive-structure inspection supplementing the full separate audits; not blanket authentication",
+  "sampled_records": [
+    {
+      "path": "logs/official_graph_five_trace/attempt_001.json",
+      "request_stored": true,
+      "parsed_response_stored": true,
+      "separate_raw_response_byte_hash": false
+    },
+    {
+      "path": "logs/official_graph_five_trace/attempt_006.json",
+      "request_stored": true,
+      "parsed_response_stored": true,
+      "separate_raw_response_byte_hash": false
+    },
+    {
+      "path": "recovery_bridge_20261003/hybrid_source_qualification/attempt_002.json",
+      "request_stored_in_job": true,
+      "parsed_response_stored": true
+    }
+  ],
+  "new_current_studies": "Both 240-call studies and 60/26 diagnostics save exact response bytes and captured request hashes; completed status must be separately checked",
+  "interpretation": "Parsed response preservation permits rescoring; exact transport-byte preservation strengthens provenance, but neither is third-party execution attestation"
+}

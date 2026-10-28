@@ -1,0 +1,2970 @@
+{
+  "analysis_complete": true,
+  "all_planned_outcomes_known_and_all_returned_responses_qualified": false,
+  "graph_units": 16,
+  "summary": {
+    "source": {
+      "f1_bounds": [
+        0.05165678674570604,
+        0.9891567867457061
+      ],
+      "em_bounds": [
+        0.0125,
+        0.95
+      ],
+      "deployment_tokens_lower": 2386.05,
+      "deployment_tokens_complete": false,
+      "solver_client_seconds_lower": 31.972849999999926,
+      "solver_client_seconds_complete": false,
+      "known_graph_outcomes": 1,
+      "normal_parse_fraction": 0.0625
+    },
+    "fresh": {
+      "f1_bounds": [
+        0.03441546429892712,
+        0.9969154642989271
+      ],
+      "em_bounds": [
+        0.0,
+        0.9625
+      ],
+      "deployment_tokens_lower": 1832.9875,
+      "deployment_tokens_complete": false,
+      "solver_client_seconds_lower": 24.82500000000009,
+      "solver_client_seconds_complete": false,
+      "known_graph_outcomes": 0,
+      "normal_parse_fraction": 0.0375
+    },
+    "question_first": {
+      "f1_bounds": [
+        0.034166666666666665,
+        0.9966666666666667
+      ],
+      "em_bounds": [
+        0.0125,
+        0.975
+      ],
+      "deployment_tokens_lower": 1414.875,
+      "deployment_tokens_complete": false,
+      "solver_client_seconds_lower": 19.521700000000056,
+      "solver_client_seconds_complete": false,
+      "known_graph_outcomes": 0,
+      "normal_parse_fraction": 0.0375
+    },
+    "re2": {
+      "f1_bounds": [
+        0.035979391756702686,
+        0.9984793917567026
+      ],
+      "em_bounds": [
+        0.0125,
+        0.975
+      ],
+      "deployment_tokens_lower": 1813.1875,
+      "deployment_tokens_complete": false,
+      "solver_client_seconds_lower": 20.895525,
+      "solver_client_seconds_complete": false,
+      "known_graph_outcomes": 0,
+      "normal_parse_fraction": 0.0375
+    },
+    "prefix": {
+      "f1_bounds": [
+        0.0,
+        0.95
+      ],
+      "em_bounds": [
+        0.0,
+        0.95
+      ],
+      "deployment_tokens_lower": 11930.25,
+      "deployment_tokens_complete": false,
+      "solver_client_seconds_lower": 159.86424999999963,
+      "solver_client_seconds_complete": false,
+      "known_graph_outcomes": 0,
+      "normal_parse_fraction": 0.0
+    },
+    "append": {
+      "f1_bounds": [
+        0.0,
+        0.95
+      ],
+      "em_bounds": [
+        0.0,
+        0.95
+      ],
+      "deployment_tokens_lower": 11930.25,
+      "deployment_tokens_complete": false,
+      "solver_client_seconds_lower": 159.86424999999963,
+      "solver_client_seconds_complete": false,
+      "known_graph_outcomes": 0,
+      "normal_parse_fraction": 0.0
+    },
+    "set_mode": {
+      "f1_bounds": [
+        0.061274509803921566,
+        0.9987745098039216
+      ],
+      "em_bounds": [
+        0.0,
+        0.9375
+      ],
+      "deployment_tokens_lower": 11930.25,
+      "deployment_tokens_complete": false,
+      "solver_client_seconds_lower": 159.86424999999963,
+      "solver_client_seconds_complete": false,
+      "known_graph_outcomes": 1,
+      "normal_parse_fraction": 0.0625
+    },
+    "node_majority": {
+      "f1_bounds": [
+        0.06,
+        0.9975
+      ],
+      "em_bounds": [
+        0.0,
+        0.9375
+      ],
+      "deployment_tokens_lower": 11930.25,
+      "deployment_tokens_complete": false,
+      "solver_client_seconds_lower": 159.86424999999963,
+      "solver_client_seconds_complete": false,
+      "known_graph_outcomes": 1,
+      "normal_parse_fraction": 0.0625
+    }
+  },
+  "comparisons": [
+    {
+      "comparator": "append",
+      "f1": {
+        "primary_all16_difference_bounds": [
+          -0.95,
+          0.95
+        ],
+        "complete_pair_graph_count": 0,
+        "complete_pair_rows": [],
+        "complete_pair_mean_difference": null,
+        "descriptive_bootstrap_ci": null,
+        "positive_graphs": 0,
+        "negative_graphs": 0,
+        "tied_graphs": 0,
+        "exact_two_sided_sign_p": 1.0,
+        "sign_test_is_direction_not_mean": true,
+        "holm_adjusted_sign_p": 1.0
+      },
+      "em": {
+        "primary_all16_difference_bounds": [
+          -0.95,
+          0.95
+        ],
+        "complete_pair_graph_count": 0,
+        "complete_pair_rows": [],
+        "complete_pair_mean_difference": null,
+        "descriptive_bootstrap_ci": null,
+        "positive_graphs": 0,
+        "negative_graphs": 0,
+        "tied_graphs": 0,
+        "exact_two_sided_sign_p": 1.0,
+        "sign_test_is_direction_not_mean": true
+      }
+    },
+    {
+      "comparator": "fresh",
+      "f1": {
+        "primary_all16_difference_bounds": [
+          -0.9969154642989271,
+          0.9155845357010729
+        ],
+        "complete_pair_graph_count": 0,
+        "complete_pair_rows": [],
+        "complete_pair_mean_difference": null,
+        "descriptive_bootstrap_ci": null,
+        "positive_graphs": 0,
+        "negative_graphs": 0,
+        "tied_graphs": 0,
+        "exact_two_sided_sign_p": 1.0,
+        "sign_test_is_direction_not_mean": true,
+        "holm_adjusted_sign_p": 1.0
+      },
+      "em": {
+        "primary_all16_difference_bounds": [
+          -0.9625,
+          0.95
+        ],
+        "complete_pair_graph_count": 0,
+        "complete_pair_rows": [],
+        "complete_pair_mean_difference": null,
+        "descriptive_bootstrap_ci": null,
+        "positive_graphs": 0,
+        "negative_graphs": 0,
+        "tied_graphs": 0,
+        "exact_two_sided_sign_p": 1.0,
+        "sign_test_is_direction_not_mean": true
+      }
+    },
+    {
+      "comparator": "question_first",
+      "f1": {
+        "primary_all16_difference_bounds": [
+          -0.9966666666666667,
+          0.9158333333333334
+        ],
+        "complete_pair_graph_count": 0,
+        "complete_pair_rows": [],
+        "complete_pair_mean_difference": null,
+        "descriptive_bootstrap_ci": null,
+        "positive_graphs": 0,
+        "negative_graphs": 0,
+        "tied_graphs": 0,
+        "exact_two_sided_sign_p": 1.0,
+        "sign_test_is_direction_not_mean": true,
+        "holm_adjusted_sign_p": 1.0
+      },
+      "em": {
+        "primary_all16_difference_bounds": [
+          -0.975,
+          0.9375
+        ],
+        "complete_pair_graph_count": 0,
+        "complete_pair_rows": [],
+        "complete_pair_mean_difference": null,
+        "descriptive_bootstrap_ci": null,
+        "positive_graphs": 0,
+        "negative_graphs": 0,
+        "tied_graphs": 0,
+        "exact_two_sided_sign_p": 1.0,
+        "sign_test_is_direction_not_mean": true
+      }
+    },
+    {
+      "comparator": "re2",
+      "f1": {
+        "primary_all16_difference_bounds": [
+          -0.9984793917567026,
+          0.9140206082432973
+        ],
+        "complete_pair_graph_count": 0,
+        "complete_pair_rows": [],
+        "complete_pair_mean_difference": null,
+        "descriptive_bootstrap_ci": null,
+        "positive_graphs": 0,
+        "negative_graphs": 0,
+        "tied_graphs": 0,
+        "exact_two_sided_sign_p": 1.0,
+        "sign_test_is_direction_not_mean": true,
+        "holm_adjusted_sign_p": 1.0
+      },
+      "em": {
+        "primary_all16_difference_bounds": [
+          -0.975,
+          0.9375
+        ],
+        "complete_pair_graph_count": 0,
+        "complete_pair_rows": [],
+        "complete_pair_mean_difference": null,
+        "descriptive_bootstrap_ci": null,
+        "positive_graphs": 0,
+        "negative_graphs": 0,
+        "tied_graphs": 0,
+        "exact_two_sided_sign_p": 1.0,
+        "sign_test_is_direction_not_mean": true
+      }
+    },
+    {
+      "comparator": "set_mode",
+      "f1": {
+        "primary_all16_difference_bounds": [
+          -0.9987745098039216,
+          0.8887254901960784
+        ],
+        "complete_pair_graph_count": 0,
+        "complete_pair_rows": [],
+        "complete_pair_mean_difference": null,
+        "descriptive_bootstrap_ci": null,
+        "positive_graphs": 0,
+        "negative_graphs": 0,
+        "tied_graphs": 0,
+        "exact_two_sided_sign_p": 1.0,
+        "sign_test_is_direction_not_mean": true,
+        "holm_adjusted_sign_p": 1.0
+      },
+      "em": {
+        "primary_all16_difference_bounds": [
+          -0.9375,
+          0.95
+        ],
+        "complete_pair_graph_count": 0,
+        "complete_pair_rows": [],
+        "complete_pair_mean_difference": null,
+        "descriptive_bootstrap_ci": null,
+        "positive_graphs": 0,
+        "negative_graphs": 0,
+        "tied_graphs": 0,
+        "exact_two_sided_sign_p": 1.0,
+        "sign_test_is_direction_not_mean": true
+      }
+    },
+    {
+      "comparator": "node_majority",
+      "f1": {
+        "primary_all16_difference_bounds": [
+          -0.9975,
+          0.89
+        ],
+        "complete_pair_graph_count": 0,
+        "complete_pair_rows": [],
+        "complete_pair_mean_difference": null,
+        "descriptive_bootstrap_ci": null,
+        "positive_graphs": 0,
+        "negative_graphs": 0,
+        "tied_graphs": 0,
+        "exact_two_sided_sign_p": 1.0,
+        "sign_test_is_direction_not_mean": true,
+        "holm_adjusted_sign_p": 1.0
+      },
+      "em": {
+        "primary_all16_difference_bounds": [
+          -0.9375,
+          0.95
+        ],
+        "complete_pair_graph_count": 0,
+        "complete_pair_rows": [],
+        "complete_pair_mean_difference": null,
+        "descriptive_bootstrap_ci": null,
+        "positive_graphs": 0,
+        "negative_graphs": 0,
+        "tied_graphs": 0,
+        "exact_two_sided_sign_p": 1.0,
+        "sign_test_is_direction_not_mean": true
+      }
+    }
+  ],
+  "graphs": [
+    {
+      "case_index": 0,
+      "row_index": 506,
+      "stratum": "long_bfs",
+      "arms": {
+        "source": {
+          "f1_bounds": [
+            0.8265085879312967,
+            0.8265085879312967
+          ],
+          "em_bounds": [
+            0.2,
+            0.2
+          ],
+          "known_outcomes": 5,
+          "normal_parse_fraction": 1.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 38176.8,
+          "deployment_tokens_complete": true,
+          "solver_client_seconds_lower": 511.5655999999988,
+          "solver_client_seconds_complete": true,
+          "budget_declines": 0
+        },
+        "fresh": {
+          "f1_bounds": [
+            0.5506474287828339,
+            0.9506474287828339
+          ],
+          "em_bounds": [
+            0.0,
+            0.4
+          ],
+          "known_outcomes": 3,
+          "normal_parse_fraction": 0.6,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 29327.8,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 397.20000000000147,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "question_first": {
+          "f1_bounds": [
+            0.5466666666666666,
+            0.9466666666666667
+          ],
+          "em_bounds": [
+            0.2,
+            0.6
+          ],
+          "known_outcomes": 3,
+          "normal_parse_fraction": 0.6,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 22638.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 312.3472000000009,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "re2": {
+          "f1_bounds": [
+            0.575670268107243,
+            0.9756702681072429
+          ],
+          "em_bounds": [
+            0.2,
+            0.6
+          ],
+          "known_outcomes": 3,
+          "normal_parse_fraction": 0.6,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 29011.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 334.3284,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "prefix": {
+          "f1_bounds": [
+            0.0,
+            0.2
+          ],
+          "em_bounds": [
+            0.0,
+            0.2
+          ],
+          "known_outcomes": 4,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 190884.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 2557.827999999994,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 4
+        },
+        "append": {
+          "f1_bounds": [
+            0.0,
+            0.2
+          ],
+          "em_bounds": [
+            0.0,
+            0.2
+          ],
+          "known_outcomes": 4,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 190884.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 2557.827999999994,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 4
+        },
+        "set_mode": {
+          "f1_bounds": [
+            0.9803921568627451,
+            0.9803921568627451
+          ],
+          "em_bounds": [
+            0,
+            0
+          ],
+          "known_outcomes": 1,
+          "normal_parse_fraction": 1,
+          "deployment_tokens_lower": 190884,
+          "deployment_tokens_complete": true,
+          "solver_client_seconds_lower": 2557.827999999994,
+          "solver_client_seconds_complete": true,
+          "vote": {
+            "f1": 0.9803921568627451,
+            "em": 0,
+            "valid": true,
+            "prediction": [
+              "006f52e910",
+              "0336dcbab0",
+              "1679091c5a",
+              "2838023a77",
+              "289dff0766",
+              "3c59dc048e",
+              "3cec07e9ba",
+              "5ef059938b",
+              "621bf66ddb",
+              "63dc7ed101",
+              "6512bd43d9",
+              "65ded5353c",
+              "7f39f8317f",
+              "8f53295a73",
+              "9872ed9fc2",
+              "a3f390d88e",
+              "c51ce410c1",
+              "c9e1074f5b",
+              "ea5d2f1c46",
+              "ec8ce6abb3",
+              "f457c545a9",
+              "f7177163c8",
+              "fbd7939d67",
+              "fc490ca45c",
+              "fe131d7f5a"
+            ]
+          }
+        },
+        "node_majority": {
+          "f1_bounds": [
+            0.96,
+            0.96
+          ],
+          "em_bounds": [
+            0,
+            0
+          ],
+          "known_outcomes": 1,
+          "normal_parse_fraction": 1,
+          "deployment_tokens_lower": 190884,
+          "deployment_tokens_complete": true,
+          "solver_client_seconds_lower": 2557.827999999994,
+          "solver_client_seconds_complete": true,
+          "vote": {
+            "f1": 0.96,
+            "em": 0,
+            "valid": true,
+            "prediction": [
+              "006f52e910",
+              "0336dcbab0",
+              "1679091c5a",
+              "2838023a77",
+              "289dff0766",
+              "3cec07e9ba",
+              "5ef059938b",
+              "621bf66ddb",
+              "63dc7ed101",
+              "6512bd43d9",
+              "65ded5353c",
+              "7f39f8317f",
+              "92cc227532",
+              "9872ed9fc2",
+              "a3f390d88e",
+              "c51ce410c1",
+              "c9e1074f5b",
+              "ea5d2f1c46",
+              "ec8ce6abb3",
+              "f457c545a9",
+              "f7177163c8",
+              "fbd7939d67",
+              "fc490ca45c",
+              "fe131d7f5a"
+            ]
+          }
+        }
+      },
+      "always_empty": {
+        "f1": 0.0,
+        "em": 0
+      },
+      "oracle_f1": 1.0,
+      "oracle_em": 1,
+      "source_token_lower": 190884,
+      "source_tokens_complete": true,
+      "all_invalid_source_group": false,
+      "source_group_f1_below_half": false
+    },
+    {
+      "case_index": 1,
+      "row_index": 507,
+      "stratum": "long_bfs",
+      "arms": {
+        "source": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "fresh": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "question_first": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "re2": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "prefix": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "append": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "set_mode": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        },
+        "node_majority": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        }
+      },
+      "always_empty": {
+        "f1": 0.0,
+        "em": 0
+      },
+      "oracle_f1": null,
+      "oracle_em": null,
+      "source_token_lower": 0,
+      "source_tokens_complete": false,
+      "all_invalid_source_group": false,
+      "source_group_f1_below_half": null
+    },
+    {
+      "case_index": 2,
+      "row_index": 508,
+      "stratum": "long_bfs",
+      "arms": {
+        "source": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "fresh": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "question_first": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "re2": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "prefix": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "append": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "set_mode": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        },
+        "node_majority": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        }
+      },
+      "always_empty": {
+        "f1": 0.0,
+        "em": 0
+      },
+      "oracle_f1": null,
+      "oracle_em": null,
+      "source_token_lower": 0,
+      "source_tokens_complete": false,
+      "all_invalid_source_group": false,
+      "source_group_f1_below_half": null
+    },
+    {
+      "case_index": 3,
+      "row_index": 509,
+      "stratum": "long_bfs",
+      "arms": {
+        "source": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "fresh": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "question_first": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "re2": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "prefix": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "append": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "set_mode": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        },
+        "node_majority": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        }
+      },
+      "always_empty": {
+        "f1": 1.0,
+        "em": 1
+      },
+      "oracle_f1": null,
+      "oracle_em": null,
+      "source_token_lower": 0,
+      "source_tokens_complete": false,
+      "all_invalid_source_group": false,
+      "source_group_f1_below_half": null
+    },
+    {
+      "case_index": 4,
+      "row_index": 510,
+      "stratum": "long_bfs",
+      "arms": {
+        "source": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "fresh": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "question_first": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "re2": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "prefix": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "append": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "set_mode": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        },
+        "node_majority": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        }
+      },
+      "always_empty": {
+        "f1": 0.0,
+        "em": 0
+      },
+      "oracle_f1": null,
+      "oracle_em": null,
+      "source_token_lower": 0,
+      "source_tokens_complete": false,
+      "all_invalid_source_group": false,
+      "source_group_f1_below_half": null
+    },
+    {
+      "case_index": 5,
+      "row_index": 511,
+      "stratum": "long_bfs",
+      "arms": {
+        "source": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "fresh": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "question_first": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "re2": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "prefix": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "append": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "set_mode": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        },
+        "node_majority": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        }
+      },
+      "always_empty": {
+        "f1": 0.0,
+        "em": 0
+      },
+      "oracle_f1": null,
+      "oracle_em": null,
+      "source_token_lower": 0,
+      "source_tokens_complete": false,
+      "all_invalid_source_group": false,
+      "source_group_f1_below_half": null
+    },
+    {
+      "case_index": 6,
+      "row_index": 512,
+      "stratum": "long_bfs",
+      "arms": {
+        "source": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "fresh": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "question_first": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "re2": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "prefix": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "append": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "set_mode": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        },
+        "node_majority": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        }
+      },
+      "always_empty": {
+        "f1": 0.0,
+        "em": 0
+      },
+      "oracle_f1": null,
+      "oracle_em": null,
+      "source_token_lower": 0,
+      "source_tokens_complete": false,
+      "all_invalid_source_group": false,
+      "source_group_f1_below_half": null
+    },
+    {
+      "case_index": 7,
+      "row_index": 513,
+      "stratum": "long_bfs",
+      "arms": {
+        "source": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "fresh": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "question_first": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "re2": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "prefix": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "append": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "set_mode": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        },
+        "node_majority": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        }
+      },
+      "always_empty": {
+        "f1": 0.0,
+        "em": 0
+      },
+      "oracle_f1": null,
+      "oracle_em": null,
+      "source_token_lower": 0,
+      "source_tokens_complete": false,
+      "all_invalid_source_group": false,
+      "source_group_f1_below_half": null
+    },
+    {
+      "case_index": 8,
+      "row_index": 514,
+      "stratum": "long_bfs",
+      "arms": {
+        "source": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "fresh": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "question_first": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "re2": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "prefix": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "append": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "set_mode": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        },
+        "node_majority": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        }
+      },
+      "always_empty": {
+        "f1": 1.0,
+        "em": 1
+      },
+      "oracle_f1": null,
+      "oracle_em": null,
+      "source_token_lower": 0,
+      "source_tokens_complete": false,
+      "all_invalid_source_group": false,
+      "source_group_f1_below_half": null
+    },
+    {
+      "case_index": 9,
+      "row_index": 515,
+      "stratum": "long_bfs",
+      "arms": {
+        "source": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "fresh": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "question_first": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "re2": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "prefix": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "append": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "set_mode": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        },
+        "node_majority": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        }
+      },
+      "always_empty": {
+        "f1": 0.0,
+        "em": 0
+      },
+      "oracle_f1": null,
+      "oracle_em": null,
+      "source_token_lower": 0,
+      "source_tokens_complete": false,
+      "all_invalid_source_group": false,
+      "source_group_f1_below_half": null
+    },
+    {
+      "case_index": 10,
+      "row_index": 516,
+      "stratum": "long_bfs",
+      "arms": {
+        "source": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "fresh": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "question_first": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "re2": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "prefix": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "append": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "set_mode": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        },
+        "node_majority": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        }
+      },
+      "always_empty": {
+        "f1": 0.0,
+        "em": 0
+      },
+      "oracle_f1": null,
+      "oracle_em": null,
+      "source_token_lower": 0,
+      "source_tokens_complete": false,
+      "all_invalid_source_group": false,
+      "source_group_f1_below_half": null
+    },
+    {
+      "case_index": 11,
+      "row_index": 517,
+      "stratum": "long_bfs",
+      "arms": {
+        "source": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "fresh": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "question_first": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "re2": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "prefix": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "append": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "set_mode": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        },
+        "node_majority": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        }
+      },
+      "always_empty": {
+        "f1": 0.0,
+        "em": 0
+      },
+      "oracle_f1": null,
+      "oracle_em": null,
+      "source_token_lower": 0,
+      "source_tokens_complete": false,
+      "all_invalid_source_group": false,
+      "source_group_f1_below_half": null
+    },
+    {
+      "case_index": 12,
+      "row_index": 518,
+      "stratum": "long_bfs",
+      "arms": {
+        "source": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "fresh": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "question_first": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "re2": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "prefix": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "append": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "set_mode": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        },
+        "node_majority": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        }
+      },
+      "always_empty": {
+        "f1": 0.0,
+        "em": 0
+      },
+      "oracle_f1": null,
+      "oracle_em": null,
+      "source_token_lower": 0,
+      "source_tokens_complete": false,
+      "all_invalid_source_group": false,
+      "source_group_f1_below_half": null
+    },
+    {
+      "case_index": 13,
+      "row_index": 519,
+      "stratum": "long_bfs",
+      "arms": {
+        "source": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "fresh": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "question_first": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "re2": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "prefix": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "append": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "set_mode": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        },
+        "node_majority": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        }
+      },
+      "always_empty": {
+        "f1": 0.0,
+        "em": 0
+      },
+      "oracle_f1": null,
+      "oracle_em": null,
+      "source_token_lower": 0,
+      "source_tokens_complete": false,
+      "all_invalid_source_group": false,
+      "source_group_f1_below_half": null
+    },
+    {
+      "case_index": 14,
+      "row_index": 520,
+      "stratum": "long_bfs",
+      "arms": {
+        "source": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "fresh": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "question_first": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "re2": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "prefix": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "append": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "set_mode": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        },
+        "node_majority": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        }
+      },
+      "always_empty": {
+        "f1": 0.0,
+        "em": 0
+      },
+      "oracle_f1": null,
+      "oracle_em": null,
+      "source_token_lower": 0,
+      "source_tokens_complete": false,
+      "all_invalid_source_group": false,
+      "source_group_f1_below_half": null
+    },
+    {
+      "case_index": 15,
+      "row_index": 521,
+      "stratum": "long_bfs",
+      "arms": {
+        "source": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "fresh": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "question_first": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "re2": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "prefix": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "append": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": 0.0,
+          "normal_parse_fraction_denominator": 5,
+          "deployment_tokens_lower": 0.0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0.0,
+          "solver_client_seconds_complete": false,
+          "budget_declines": 0
+        },
+        "set_mode": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        },
+        "node_majority": {
+          "f1_bounds": [
+            0.0,
+            1.0
+          ],
+          "em_bounds": [
+            0.0,
+            1.0
+          ],
+          "known_outcomes": 0,
+          "normal_parse_fraction": null,
+          "deployment_tokens_lower": 0,
+          "deployment_tokens_complete": false,
+          "solver_client_seconds_lower": 0,
+          "solver_client_seconds_complete": false,
+          "vote": null
+        }
+      },
+      "always_empty": {
+        "f1": 0.0,
+        "em": 0
+      },
+      "oracle_f1": null,
+      "oracle_em": null,
+      "source_token_lower": 0,
+      "source_tokens_complete": false,
+      "all_invalid_source_group": false,
+      "source_group_f1_below_half": null
+    }
+  ],
+  "ordering_evidence": false,
+  "accuracy_candidate": false,
+  "cost_candidate": false,
+  "important_progress_established": false,
+  "independent_confirmation_required": true,
+  "em_noninferiority_is_point_estimate_not_formal_noninferiority_test": true,
+  "always_empty_f1": 0.125,
+  "known_research_tokens": 595885,
+  "unknown_attempted_usage_calls": 0,
+  "calibration_tokens": 117,
+  "preparation_seconds": 2.2659999999959837,
+  "bundle_and_all_reader_job_preparation_seconds": 3.2339999999967404,
+  "full_research_workflow_seconds": null,
+  "limitations": [
+    "Bootstrap intervals are descriptive, not simultaneous confidence intervals.",
+    "Sign tests concern direction across graph pairs, not mean F1.",
+    "Unknown deployment outcomes are bounded; complete-pair results are secondary.",
+    "EM rule checks observed mean, not statistical noninferiority.",
+    "Five source calls are paid in full per trace or vote deployment.",
+    "Solver client wall includes requests but excludes shared preparation and qualification metadata; those are recorded separately, not silently amortized into a single deployment latency.",
+    "This experiment does not alone establish a novel method or important confirmed progress."
+  ]
+}

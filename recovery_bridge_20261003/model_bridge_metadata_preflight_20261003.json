@@ -1,0 +1,54 @@
+{
+  "model_inference_calls": 0,
+  "project_disk_unavailable": true,
+  "metadata": {
+    "qwen3:1.7b": {
+      "path": "C:\\Users\\dragoncat\\.codex\\visualizations\\2026\\09\\30\\01a0f263-8982-7de0-bb12-8e9f776eb131\\bridge_metadata_qwen3_1_7b.json",
+      "sha256": "56a6357f5885db220b6c085d9466e37b98312d3c44b91714d3232bc8b433cc46",
+      "capabilities": [
+        "completion",
+        "tools",
+        "thinking"
+      ],
+      "architecture": "qwen3",
+      "name": null,
+      "context_fields": {
+        "qwen3.context_length": 40960
+      },
+      "token_count": 151936
+    },
+    "qwen3:4b": {
+      "path": "C:\\Users\\dragoncat\\.codex\\visualizations\\2026\\09\\30\\01a0f263-8982-7de0-bb12-8e9f776eb131\\bridge_metadata_qwen3_4b.json",
+      "sha256": "9ed691cb7100995f434ef2626c0cab20cc2f07ec94784558f462fde9d74869b9",
+      "capabilities": [
+        "completion",
+        "tools",
+        "thinking"
+      ],
+      "architecture": "qwen3",
+      "name": null,
+      "context_fields": {
+        "qwen3.context_length": 262144
+      },
+      "token_count": 151936
+    },
+    "qwen3:8b": {
+      "path": "C:\\Users\\dragoncat\\.codex\\visualizations\\2026\\09\\30\\01a0f263-8982-7de0-bb12-8e9f776eb131\\bridge_metadata_qwen3_8b.json",
+      "sha256": "777f8c579f4d3800fd9e9b176fd958a89f15acecf63fe86df256a5c80af13766",
+      "capabilities": [
+        "completion",
+        "tools",
+        "thinking"
+      ],
+      "architecture": "qwen3",
+      "name": null,
+      "context_fields": {
+        "qwen3.context_length": 40960
+      },
+      "token_count": 151936
+    }
+  },
+  "same_1_7_and_8_template": true,
+  "same_all_1_7_and_8_token_ids": true,
+  "same_all_1_7_and_8_merges": true
+}

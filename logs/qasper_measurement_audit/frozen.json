@@ -1,0 +1,5 @@
+{
+  "protocol_sha256": "4aa0152c9a36a5e5fed4559167032a890dec860832618baecee39823ab2c153f",
+  "script_sha256": "6fa788cd40deb1343b404698eaa0468e23f8be240e8062c5e9c2223758c32963",
+  "scope": "offline auxiliary audit, no reader/selection changes, not a deployed semantic verifier"
+}

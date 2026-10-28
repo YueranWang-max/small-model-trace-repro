@@ -1,0 +1,7 @@
+{
+  "original_control_source": "https://arxiv.org/html/2609.02702v1",
+  "original_control_layout": "[x,q,x,q]",
+  "method_primary_source": "https://aclanthology.org/2024.emnlp-main.871/",
+  "doi": "10.18653/v1/2024.emnlp-main.871",
+  "change": "Activated existing verified primary bibliography entry; no frozen request or observation changed"
+}

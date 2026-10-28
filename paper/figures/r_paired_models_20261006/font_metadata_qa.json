@@ -1,0 +1,19 @@
+{
+  "min_final_pt": 5.583999660280016,
+  "max_final_pt": 6.979999489254421,
+  "svg_text_nodes": 50,
+  "fonts": [
+    {
+      "type": "TrueType",
+      "name": "EBKEFU+ArialMT",
+      "embedded_bytes": 35532
+    },
+    {
+      "type": "TrueType",
+      "name": "EVLCFP+Arial-BoldMT",
+      "embedded_bytes": 17772
+    }
+  ],
+  "outside_page": [],
+  "visual_check": "R PNG preview inspected; no clipped labels observed"
+}

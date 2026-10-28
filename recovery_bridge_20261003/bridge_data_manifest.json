@@ -1,0 +1,14 @@
+[
+  {
+    "path": "C:\\Users\\dragoncat\\.codex\\visualizations\\2026\\09\\30\\01a0f263-8982-7de0-bb12-8e9f776eb131\\graphwalks_128k_and_shorter.parquet",
+    "url": "https://huggingface.co/datasets/openai/graphwalks/resolve/be6cc6ecf9b4d495b07d1ff53d2a16598e90fed7/graphwalks_128k_and_shorter.parquet",
+    "sha256": "54036036c91d8e04bb2a5fcd9e36f8e2a852cacece5dfc2b1ee40e3a6182b516",
+    "bytes": 22128284
+  },
+  {
+    "path": "C:\\Users\\dragoncat\\.codex\\visualizations\\2026\\09\\30\\01a0f263-8982-7de0-bb12-8e9f776eb131\\tokenizer.json",
+    "url": "https://huggingface.co/Qwen/Qwen3-1.7B/resolve/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/tokenizer.json",
+    "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "bytes": 11422654
+  }
+]

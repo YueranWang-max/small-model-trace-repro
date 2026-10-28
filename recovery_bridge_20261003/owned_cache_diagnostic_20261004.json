@@ -1,0 +1,179 @@
+{
+  "status": "live_readonly_cache_diagnostic_not_performance_analysis",
+  "captured_utc": "2026-10-04T06:07:42.818753+00:00",
+  "source_path": "D:\\project\\tangjie\\trace_as_state_repro\\recovery_bridge_20261003\\owned_ollama_11435_stderr_20261004.log",
+  "source_bytes_as_read_sha256": "eea83e699335fa356afe018130782cb1b8de7b7dc126df680252fb86ae1ac781",
+  "source_bytes_read": 99569,
+  "selected_cache_lines": [
+    [
+      435,
+      "slot   operator(): id  0 | task 3 | cached n_tokens = 6144, memory_seq_rm [6144, end)"
+    ],
+    [
+      436,
+      "slot   operator(): id  0 | task 3 | cached n_tokens = 8192, memory_seq_rm [8192, end)"
+    ],
+    [
+      437,
+      "slot   operator(): id  0 | task 3 | cached n_tokens = 9136, memory_seq_rm [9136, end)"
+    ],
+    [
+      439,
+      "slot   operator(): id  0 | task 3 | cached n_tokens = 11180, memory_seq_rm [11180, end)"
+    ],
+    [
+      455,
+      "srv  get_availabl: updating prompt cache"
+    ],
+    [
+      460,
+      "srv        update:  - cache state: 2 prompts, 636.629 MiB (limits: 8192.000 MiB, 65536 tokens, 158569 est)"
+    ],
+    [
+      463,
+      "srv  get_availabl: prompt cache update took 165.32 ms"
+    ],
+    [
+      477,
+      "slot   operator(): id  0 | task 1034 | cached n_tokens = 0, memory_seq_rm [0, end)"
+    ],
+    [
+      478,
+      "slot   operator(): id  0 | task 1034 | cached n_tokens = 2048, memory_seq_rm [2048, end)"
+    ],
+    [
+      479,
+      "slot   operator(): id  0 | task 1034 | cached n_tokens = 4096, memory_seq_rm [4096, end)"
+    ],
+    [
+      480,
+      "slot   operator(): id  0 | task 1034 | cached n_tokens = 6144, memory_seq_rm [6144, end)"
+    ],
+    [
+      481,
+      "slot   operator(): id  0 | task 1034 | cached n_tokens = 8192, memory_seq_rm [8192, end)"
+    ],
+    [
+      482,
+      "slot   operator(): id  0 | task 1034 | cached n_tokens = 9150, memory_seq_rm [9150, end)"
+    ],
+    [
+      484,
+      "slot   operator(): id  0 | task 1034 | cached n_tokens = 11194, memory_seq_rm [11194, end)"
+    ],
+    [
+      664,
+      "srv  get_availabl: updating prompt cache"
+    ],
+    [
+      670,
+      "srv        update:  - cache state: 3 prompts, 2161.856 MiB (limits: 8192.000 MiB, 65536 tokens, 213241 est)"
+    ],
+    [
+      674,
+      "srv  get_availabl: prompt cache update took 1458.82 ms"
+    ],
+    [
+      688,
+      "slot   operator(): id  0 | task 33795 | cached n_tokens = 0, memory_seq_rm [0, end)"
+    ],
+    [
+      689,
+      "slot   operator(): id  0 | task 33795 | cached n_tokens = 2048, memory_seq_rm [2048, end)"
+    ],
+    [
+      690,
+      "slot   operator(): id  0 | task 33795 | cached n_tokens = 4096, memory_seq_rm [4096, end)"
+    ],
+    [
+      691,
+      "slot   operator(): id  0 | task 33795 | cached n_tokens = 6144, memory_seq_rm [6144, end)"
+    ],
+    [
+      692,
+      "slot   operator(): id  0 | task 33795 | cached n_tokens = 8192, memory_seq_rm [8192, end)"
+    ],
+    [
+      693,
+      "slot   operator(): id  0 | task 33795 | cached n_tokens = 10204, memory_seq_rm [10204, end)"
+    ],
+    [
+      696,
+      "slot   operator(): id  0 | task 33795 | cached n_tokens = 12248, memory_seq_rm [12248, end)"
+    ],
+    [
+      820,
+      "srv  get_availabl: updating prompt cache"
+    ],
+    [
+      828,
+      "srv        update:  - cache state: 3 prompts, 2772.803 MiB (limits: 8192.000 MiB, 65536 tokens, 223973 est)"
+    ],
+    [
+      832,
+      "srv  get_availabl: prompt cache update took 571.08 ms"
+    ],
+    [
+      845,
+      "slot   operator(): id  0 | task 53294 | cached n_tokens = 9136, memory_seq_rm [9136, end)"
+    ],
+    [
+      846,
+      "slot   operator(): id  0 | task 53294 | cached n_tokens = 10204, memory_seq_rm [10204, end)"
+    ],
+    [
+      848,
+      "slot   operator(): id  0 | task 53294 | cached n_tokens = 12248, memory_seq_rm [12248, end)"
+    ],
+    [
+      977,
+      "srv  get_availabl: updating prompt cache"
+    ],
+    [
+      984,
+      "srv        update:  - cache state: 4 prompts, 3966.501 MiB (limits: 8192.000 MiB, 65536 tokens, 222128 est)"
+    ],
+    [
+      989,
+      "srv  get_availabl: prompt cache update took 2404.71 ms"
+    ],
+    [
+      1005,
+      "slot   operator(): id  0 | task 72789 | cached n_tokens = 0, memory_seq_rm [0, end)"
+    ],
+    [
+      1006,
+      "slot   operator(): id  0 | task 72789 | cached n_tokens = 2048, memory_seq_rm [2048, end)"
+    ],
+    [
+      1007,
+      "slot   operator(): id  0 | task 72789 | cached n_tokens = 4096, memory_seq_rm [4096, end)"
+    ],
+    [
+      1008,
+      "slot   operator(): id  0 | task 72789 | cached n_tokens = 6144, memory_seq_rm [6144, end)"
+    ],
+    [
+      1009,
+      "slot   operator(): id  0 | task 72789 | cached n_tokens = 8192, memory_seq_rm [8192, end)"
+    ],
+    [
+      1010,
+      "slot   operator(): id  0 | task 72789 | cached n_tokens = 9299, memory_seq_rm [9299, end)"
+    ],
+    [
+      1013,
+      "slot   operator(): id  0 | task 72789 | cached n_tokens = 11343, memory_seq_rm [11343, end)"
+    ]
+  ],
+  "kv_cache_environment_value": "",
+  "flash_attention_environment_value": "false",
+  "frozen_sha256": "225e24d5f226df3e6c3fbe63e249ba0ef51ab0a5ec233df978539ab2eccd1cbb",
+  "inference_calls": 0,
+  "answer_scores_read": false,
+  "limitations": [
+    "Live append-only log read is a byte snapshot, not an atomic future full-log certificate.",
+    "Logged cache states/events do not prove causal latency savings or exact per-call cached work.",
+    "No active protocol, environment or serving process changed."
+  ]
+}

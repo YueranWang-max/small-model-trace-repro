@@ -1,0 +1,2017 @@
+{
+  "hashes": {
+    "data\\qasper_official\\qasper-train-v0.3.json": "9458bfe76074a8fa8d1685af02bcc73537aa6d338ad20591dfaff1946bc88bf4",
+    "protocol_qasper_relation_packet_20261002.md": "69afb3472fb348bc350f4f41890dd9c224ea8c4d246a8eb669684191eae1acc4",
+    "run_qasper_relation_packet.py": "9e38451ce843806ab47c704eb6f54548ffa3f545ede3f6e3c473669fa9d9238a",
+    "logs\\qasper_fingerprint\\split.json": "be6b0e12d007aac3c3beb3f2706ff19feee88391db3483aef1f302feea974e32",
+    "run_qasper_fingerprint.py": "0d3204d4e8cdb02d99f8bfe1e9a01e1417887c01837fb8eb6cb91c8982018541",
+    "run_stageC.py": "27c3ff0abd38f70559432ad58eb3f8c1306226c46b7a58bc229e7a6ee407608c",
+    "run_qasper_format_control.py": "809c49360b6ee4403a1858a850be5ee6c6a09c5ddec230e51a935eaeab82f150",
+    "run_qasper_contract_replication.py": "36f078eb5e43784c65e8b7358aa0fa8a5bcfeb27bbb978e10704f2ec38a97f27",
+    "run_qasper_visible_trace_replication.py": "64718eacf14e7a64e6c610eebd37b8f8e54e6ffed13b63bd5d533167e8a901b4",
+    "rescore_qasper_demand_transfer.py": "8e5209bf67e3b0ce1fe37b7a64e05b3e6fa02b064a4df636d565e8fdc731f879",
+    "repro_lib.py": "f681c774a1c4d3900ad2afe983d139981d5341a38723e1219b7424240b307bc6"
+  },
+  "tasks": [
+    {
+      "paper_id": "1911.12579",
+      "id": "a1064307a19cd7add32163a70b6623278a557946",
+      "question": "How many uniue words are in the dataset?",
+      "title": "A New Corpus for Low-Resourced Sindhi Language with Word Embeddings",
+      "kind": "quantity",
+      "material": {
+        "full": "[P10] Section: Related work\nThe natural language resources refer to a set of language data and descriptions BIBREF31 in machine readable form, used for building, improving, and evaluating NLP algorithms or softwares. Such resources include written or spoken corpora, lexicons, and annotated corpora for specific computational purposes. Many world languages are rich in such language processing resources integrated in the software tools including NLTK for English BIBREF5, Stanford CoreNLP BIBREF6, LTP for Chinese BIBREF7, TectoMT for German, Russian, Arabic BIBREF8 and multilingual toolkit BIBREF9. But Sindhi language is at an early stage for the development of such resources and software tools.\n\n[P2] Section: Introduction\nThe Language Resources (LRs) are fundamental elements for the development of high quality NLP systems based on automatic or NN based approaches. The LRs include written or spoken corpora, lexicons, and annotated corpora for specific computational purposes. The development of such resources has received great research interest for the digitization of human languages BIBREF4. Many world languages are rich in such language processing resources integrated in their software tools including English BIBREF5 BIBREF6, Chinese BIBREF7 and other languages BIBREF8 BIBREF9. The Sindhi language lacks the basic computational resources BIBREF10 of a large text corpus, which can be utilized for training robust word embeddings and developing language independent NLP applications including semantic analysis, sentiment analysis, parts of the speech tagging, named entity recognition, machine translation BIBREF11, multitasking BIBREF12, BIBREF13. Presently Sindhi Persian-Arabic is frequently used for online communication, newspapers, public institutions in Pakistan, and India BIBREF1. But little work has been carried out for the development of LRs such as raw corpus BIBREF14, BIBREF15, annotated corpus BIBREF16, BIBREF17, BIBREF1, BIBREF18. In the best of our knowledge, Sindhi lacks the large unlabelled corpus which can be utilized for generating and evaluating word embeddings for Statistical Sindhi Language Processing (SSLP).\n\n[P66] Section: Word similarity comparison of Word Embeddings ::: Comparison with WordSim353\nWe evaluate the performance of our proposed word embeddings using the WordSim353 dataset by translation English word pairs to Sindhi. Due to vocabulary differences between English and Sindhi, we were unable to find the authentic meaning of six terms, so we left these terms untranslated. So our final Sindhi WordSim353 consists of 347 word pairs. Table TABREF80 shows the Spearman correlation results using Eq. DISPLAY_FORM51 on different dimensional embeddings on the translated WordSim353. The Table TABREF80 presents complete results with the different ws for CBoW, SG and GloVe in which the ws=7 subsequently yield better performance than ws of 3 and 5, respectively. The SG model outperforms CBoW and GloVe in semantic and syntactic similarity by achieving the performance of 0.629 with ws=7. In comparison with English BIBREF27 achieved the average semantic and syntactic similarity of 0.637, 0.656 with CBoW and SG, respectively. Therefore, despite the challenges in translation from English to Sindhi, our proposed Sindhi word embeddings have efficiently captured the semantic and syntactic relationship.\n\n[P63] Section: Word similarity comparison of Word Embeddings ::: Nearest neighboring words\nThe cosine similarity matrix BIBREF35 is a popular approach to compute the relationship between all embedding dimensions of their distinct relevance to query word. The words with similar context get high cosine similarity and geometrical relatedness to Euclidean distance, which is a common and primary method to measure the distance between a set of words and nearest neighbors. Each word contains the most similar top eight nearest neighboring words determined by the highest cosine similarity score using Eq. DISPLAY_FORM48. We present the English translation of both query and retrieved words also discuss with their English meaning for ease of relevance judgment between the query and retrieved words.To take a closer look at the semantic and syntactic relationship captured in the proposed word embeddings, Table TABREF74 shows the top eight nearest neighboring words of five different query words Friday, Spring, Cricket, Red, Scientist taken from the vocabulary. As the first query word Friday returns the names of days Saturday, Sunday, Monday, Tuesday, Wednesday, Thursday in an unordered sequence. The SdfastText returns five names of days Sunday, Thursday, Monday, Tuesday and Wednesday respectively. The GloVe model also returns five names of days. However, CBoW and SG gave six names of days except Wednesday along with different writing forms of query word Friday being written in the Sindhi language which shows that CBoW and SG return more relevant words as compare to SdfastText and GloVe. The CBoW returned Add and GloVe returns Honorary words which are little similar to the querry word but SdfastText resulted two irrelevant words Kameeso (N) which is a name (N) of person in Sindhi and Phrase is a combination of three Sindhi words which are not tokenized properly. Similarly, nearest neighbors of second query word Spring are retrieved accurately as names and seasons and semantically related to query word Spring by CBoW, SG and Glove but SdfastText returned four irrelevant words of Dilbahar (N), Pharase, Ashbahar (N) and Farzana (N) out of eight. The third query word is Cricket, the name of a popular game. The first retrieved word in CBoW is Kabadi (N) that is a popular national game in Pakistan. Including Kabadi (N) all the returned words by CBoW, SG and GloVe are related to Cricket game or names of other games. But the first word in SdfastText contains a punctuation mark in retrieved word Gone.Cricket that are two words joined with a punctuation mark (.), which shows the tokenization error in preprocessing step, sixth retrieved word Misspelled is a combination of three words not related to query word, and Played, Being played are also irrelevant and stop words. Moreover, fourth query word Red gave results that contain names of closely related to query word and different forms of query word written in the Sindhi language. The last returned word Unknown by SdfastText is irrelevant and not found in the Sindhi dictionary for translation. The last query word Scientist also contains semantically related words by CBoW, SG, and GloVe, but the first Urdu word given by SdfasText belongs to the Urdu language which means that the vocabulary may also contain words of other languages. Another unknown word returned by SdfastText does not have any meaning in the Sindhi dictionary. More interesting observations in the presented results are the diacritized words retrieved from our proposed word embeddings and The authentic tokenization in the preprocessing step presented in Figure FIGREF22. However, SdfastText has returned tri-gram words of Phrase in query words Friday, Spring, a Misspelled word in Cricket and Scientist query words. Hence, the overall performance of our proposed SG, CBoW, and GloVe demonstrate high semantic relatedness in retrieving the top eight nearest neighbor words.\n\n[P51] Section: Statistical analysis of corpus ::: Stop words\nThe most frequent and least important words in NLP are often classified as stop words. The removal of such words can boost the performance of the NLP model BIBREF38, such as sentiment analysis and text classification. But the construction of such words list is time consuming and requires user decisions. Firstly, we determined Sindhi stop words by counting their term frequencies using Eq. DISPLAY_FORM59, and secondly, by analysing their grammatical status with the help of Sindhi linguistic expert because all the frequent words are not stop words (see Figure FIGREF62). After determining the importance of such words with the help of human judgment, we placed them in the list of stop words. The total number of detected stop words is 340 in our developed corpus. The partial list of most frequent Sindhi stop words is depicted in Table TABREF61 along with their frequency. The filtration of stop words is an essential preprocessing step for learning GloVe BIBREF26 word embeddings; therefore, we filtered out stop words for preparing input for the GloVe model. However, the sub-sampling approach BIBREF33 BIBREF24 is used to discard such most frequent words in CBoW and SG models.\n\n[P48] Section: Statistical analysis of corpus ::: Letter n-grams frequency\nWe denote the combination of letter occurrences in a word as n-grams, where each letter is a gram in a word. The letter n-gram frequency is carefully analyzed in order to find the length of words which is essential to develop NLP systems, including learning of word embeddings such as choosing the minimum or maximum length of sub-word for character-level representation learning BIBREF24. We calculate the letter n-grams in words along with their percentage in the developed corpus (see Table TABREF57). The bi-gram words are most frequent, mostly consists of stop words and secondly, 4-gram words have a higher frequency.\n\n[P11] Section: Related work\nThe corpus construction for NLP mainly involves important steps of acquisition, preprocessing, and tokenization. Initially, BIBREF14 discussed the morphological structure and challenges concerned with the corpus development along with orthographical and morphological features in the Persian-Arabic script. The raw and annotated corpus BIBREF1 for Sindhi Persian-Arabic is a good supplement towards the development of resources, including raw and annotated datasets for parts of speech tagging, morphological analysis, transliteration between Sindhi Persian-Arabic and Sindhi-Devanagari, and machine translation system. But the corpus is acquired only form Wikipedia-dumps. A survey-based study BIBREF4 provides all the progress made in the Sindhi Natural Language Processing (SNLP) with the complete gist of adopted techniques, developed tools and available resources which show that work on resource development on Sindhi needs more sophisticated efforts. The raw corpus is utilized for word segmentation BIBREF32 of Sindhi Persian-Arabic. More recently, an initiative towards the development of resources is taken BIBREF16 by open sourcing annotated dataset of Sindhi Persian-Arabic obtained from news and social blogs. The existing and proposed work is presented in Table TABREF9 on the corpus development, word segmentation, and word embeddings, respectively.\n\n[P13] Section: Related work\nThe performance of Word embeddings is evaluated using intrinsic BIBREF23 BIBREF29 and extrinsic evaluation BIBREF28 methods. The performance of word embeddings can be measured with intrinsic and extrinsic evaluation approaches. The intrinsic approach is used to measure the internal quality of word embeddings such as querying nearest neighboring words and calculating the semantic or syntactic similarity between similar word pairs. A method of direct comparison for intrinsic evaluation of word embeddings measures the neighborhood of a query word in vector space. The key advantage of that method is to reduce bias and create insight to find data-driven relevance judgment. An extrinsic evaluation approach is used to evaluate the performance in downstream NLP tasks, such as parts-of-speech tagging or named-entity recognition BIBREF23, but the Sindhi language lacks annotated corpus for such type of evaluation. Moreover, extrinsic evaluation is time consuming and difficult to interpret. Therefore, we opt intrinsic evaluation method BIBREF28 to get a quick insight into the quality of proposed Sindhi word embeddings by measuring the cosine distance between similar words and using WordSim353 dataset. A study reveals that the choice of optimized hyper-parameters BIBREF35 has a great impact on the quality of pretrained word embeddings as compare to desing a novel algorithm. Therefore, we optimized the hyperparameters for generating robust Sindhi word embeddings using CBoW, SG and GloVe models. The embedding visualization is also useful to visualize the similarity of word clusters. Therefore, we use t-SNE BIBREF36 dimensionality reduction algorithm for compressing high dimensional embedding into 2-dimensional $x$,$y$ coordinate pairs with PCA BIBREF37. The PCA is useful to combine input features by dropping the least important features while retaining the most valuable features.",
+        "packet": "[P10] Section: Related work\nThe natural language resources refer to a set of language data and descriptions BIBREF31 in machine readable form, used for building, improving, and evaluating NLP algorithms or softwares. \n[omitted source between fragments]\nMany world languages are rich in such language processing resources integrated in the software tools including NLTK for English BIBREF5, Stanford CoreNLP BIBREF6, LTP for Chinese BIBREF7, TectoMT for German, Russian, Arabic BIBREF8 and multilingual toolkit BIBREF9. \n\n[P2] Section: Introduction\nThe Language Resources (LRs) are fundamental elements for the development of high quality NLP systems based on automatic or NN based approaches. \n[omitted source between fragments]\nMany world languages are rich in such language processing resources integrated in their software tools including English BIBREF5 BIBREF6, Chinese BIBREF7 and other languages BIBREF8 BIBREF9. \n\n[P66] Section: Word similarity comparison of Word Embeddings ::: Comparison with WordSim353\nWe evaluate the performance of our proposed word embeddings using the WordSim353 dataset by translation English word pairs to Sindhi. \n[omitted source between fragments]\nTable TABREF80 shows the Spearman correlation results using Eq. \n[omitted source between fragments]\nDISPLAY_FORM51 on different dimensional embeddings on the translated WordSim353. \n[omitted source between fragments]\nThe Table TABREF80 presents complete results with the different ws for CBoW, SG and GloVe in which the ws=7 subsequently yield better performance than ws of 3 and 5, respectively. \n[omitted source between fragments]\nThe SG model outperforms CBoW and GloVe in semantic and syntactic similarity by achieving the performance of 0.629 with ws=7. \n[omitted source between fragments]\nIn comparison with English BIBREF27 achieved the average semantic and syntactic similarity of 0.637, 0.656 with CBoW and SG, respectively. \n[omitted source between fragments]\nTherefore, despite the challenges in translation from English to Sindhi, our proposed Sindhi word embeddings have efficiently captured the semantic and syntactic relationship.\n\n[P63] Section: Word similarity comparison of Word Embeddings ::: Nearest neighboring words\nWe present the English translation of both query and retrieved words also discuss with their English meaning for ease of relevance judgment between the query and retrieved words.To take a closer look at the semantic and syntactic relationship captured in the proposed word embeddings, Table TABREF74 shows the top eight nearest neighboring words of five different query words Friday, Spring, Cricket, Red, Scientist taken from the vocabulary. \n[omitted source between fragments]\nAs the first query word Friday returns the names of days Saturday, Sunday, Monday, Tuesday, Wednesday, Thursday in an unordered sequence. \n[omitted source between fragments]\nThe SdfastText returns five names of days Sunday, Thursday, Monday, Tuesday and Wednesday respectively. \n[omitted source between fragments]\nThe GloVe model also returns five names of days. \n[omitted source between fragments]\nBut the first word in SdfastText contains a punctuation mark in retrieved word Gone.Cricket that are two words joined with a punctuation mark (.), which shows the tokenization error in preprocessing step, sixth retrieved word Misspelled is a combination of three words not related to query word, and Played, Being played are also irrelevant and stop words. \n[omitted source between fragments]\nMore interesting observations in the presented results are the diacritized words retrieved from our proposed word embeddings and The authentic tokenization in the preprocessing step presented in Figure FIGREF22. \n\n[P51] Section: Statistical analysis of corpus ::: Stop words\nThe most frequent and least important words in NLP are often classified as stop words. \n[omitted source between fragments]\nDISPLAY_FORM59, and secondly, by analysing their grammatical status with the help of Sindhi linguistic expert because all the frequent words are not stop words (see Figure FIGREF62). \n\n[P48] Section: Statistical analysis of corpus ::: Letter n-grams frequency\nWe calculate the letter n-grams in words along with their percentage in the developed corpus (see Table TABREF57). \n[omitted source between fragments]\nThe bi-gram words are most frequent, mostly consists of stop words and secondly, 4-gram words have a higher frequency.\n\n[P11] Section: Related work\nThe raw corpus is utilized for word segmentation BIBREF32 of Sindhi Persian-Arabic. \n[omitted source between fragments]\nMore recently, an initiative towards the development of resources is taken BIBREF16 by open sourcing annotated dataset of Sindhi Persian-Arabic obtained from news and social blogs. \n[omitted source between fragments]\nThe existing and proposed work is presented in Table TABREF9 on the corpus development, word segmentation, and word embeddings, respectively.\n\n[P13] Section: Related work\nA method of direct comparison for intrinsic evaluation of word embeddings measures the neighborhood of a query word in vector space. \n[omitted source between fragments]\nTherefore, we opt intrinsic evaluation method BIBREF28 to get a quick insight into the quality of proposed Sindhi word embeddings by measuring the cosine distance between similar words and using WordSim353 dataset. "
+      },
+      "ledger": [
+        {
+          "paragraph_id": 10,
+          "fragments": [
+            {
+              "text": "The natural language resources refer to a set of language data and descriptions BIBREF31 in machine readable form, used for building, improving, and evaluating NLP algorithms or softwares. ",
+              "char_start": 0,
+              "char_length": 189,
+              "byte_start": 0,
+              "byte_length": 189,
+              "paragraph_sha256": "5d2a8e31672ea6e314389ce28be74897082a79b9e93ffba82d7baccd76b751b0"
+            },
+            {
+              "text": "Many world languages are rich in such language processing resources integrated in the software tools including NLTK for English BIBREF5, Stanford CoreNLP BIBREF6, LTP for Chinese BIBREF7, TectoMT for German, Russian, Arabic BIBREF8 and multilingual toolkit BIBREF9. ",
+              "char_start": 308,
+              "char_length": 266,
+              "byte_start": 308,
+              "byte_length": 266,
+              "paragraph_sha256": "5d2a8e31672ea6e314389ce28be74897082a79b9e93ffba82d7baccd76b751b0"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 2,
+          "fragments": [
+            {
+              "text": "The Language Resources (LRs) are fundamental elements for the development of high quality NLP systems based on automatic or NN based approaches. ",
+              "char_start": 0,
+              "char_length": 145,
+              "byte_start": 0,
+              "byte_length": 145,
+              "paragraph_sha256": "e9b7f7fe80bc894e3f0629aa9d8f7d0817050458e1f8e510eb0e53df78b96519"
+            },
+            {
+              "text": "Many world languages are rich in such language processing resources integrated in their software tools including English BIBREF5 BIBREF6, Chinese BIBREF7 and other languages BIBREF8 BIBREF9. ",
+              "char_start": 377,
+              "char_length": 191,
+              "byte_start": 377,
+              "byte_length": 191,
+              "paragraph_sha256": "e9b7f7fe80bc894e3f0629aa9d8f7d0817050458e1f8e510eb0e53df78b96519"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 66,
+          "fragments": [
+            {
+              "text": "We evaluate the performance of our proposed word embeddings using the WordSim353 dataset by translation English word pairs to Sindhi. ",
+              "char_start": 0,
+              "char_length": 134,
+              "byte_start": 0,
+              "byte_length": 134,
+              "paragraph_sha256": "08d3e83de9a2e23b5c711cbd5ccce32c222ee15b631c5af011ea89a07d50d66f"
+            },
+            {
+              "text": "Table TABREF80 shows the Spearman correlation results using Eq. ",
+              "char_start": 347,
+              "char_length": 64,
+              "byte_start": 347,
+              "byte_length": 64,
+              "paragraph_sha256": "08d3e83de9a2e23b5c711cbd5ccce32c222ee15b631c5af011ea89a07d50d66f"
+            },
+            {
+              "text": "DISPLAY_FORM51 on different dimensional embeddings on the translated WordSim353. ",
+              "char_start": 411,
+              "char_length": 81,
+              "byte_start": 411,
+              "byte_length": 81,
+              "paragraph_sha256": "08d3e83de9a2e23b5c711cbd5ccce32c222ee15b631c5af011ea89a07d50d66f"
+            },
+            {
+              "text": "The Table TABREF80 presents complete results with the different ws for CBoW, SG and GloVe in which the ws=7 subsequently yield better performance than ws of 3 and 5, respectively. ",
+              "char_start": 492,
+              "char_length": 180,
+              "byte_start": 492,
+              "byte_length": 180,
+              "paragraph_sha256": "08d3e83de9a2e23b5c711cbd5ccce32c222ee15b631c5af011ea89a07d50d66f"
+            },
+            {
+              "text": "The SG model outperforms CBoW and GloVe in semantic and syntactic similarity by achieving the performance of 0.629 with ws=7. ",
+              "char_start": 672,
+              "char_length": 126,
+              "byte_start": 672,
+              "byte_length": 126,
+              "paragraph_sha256": "08d3e83de9a2e23b5c711cbd5ccce32c222ee15b631c5af011ea89a07d50d66f"
+            },
+            {
+              "text": "In comparison with English BIBREF27 achieved the average semantic and syntactic similarity of 0.637, 0.656 with CBoW and SG, respectively. ",
+              "char_start": 798,
+              "char_length": 139,
+              "byte_start": 798,
+              "byte_length": 139,
+              "paragraph_sha256": "08d3e83de9a2e23b5c711cbd5ccce32c222ee15b631c5af011ea89a07d50d66f"
+            },
+            {
+              "text": "Therefore, despite the challenges in translation from English to Sindhi, our proposed Sindhi word embeddings have efficiently captured the semantic and syntactic relationship.",
+              "char_start": 937,
+              "char_length": 175,
+              "byte_start": 937,
+              "byte_length": 175,
+              "paragraph_sha256": "08d3e83de9a2e23b5c711cbd5ccce32c222ee15b631c5af011ea89a07d50d66f"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 63,
+          "fragments": [
+            {
+              "text": "We present the English translation of both query and retrieved words also discuss with their English meaning for ease of relevance judgment between the query and retrieved words.To take a closer look at the semantic and syntactic relationship captured in the proposed word embeddings, Table TABREF74 shows the top eight nearest neighboring words of five different query words Friday, Spring, Cricket, Red, Scientist taken from the vocabulary. ",
+              "char_start": 528,
+              "char_length": 443,
+              "byte_start": 528,
+              "byte_length": 443,
+              "paragraph_sha256": "6cb998b411c5aaf7f67e14ce9d8abff0267f61b7d54ab445dc5ea0ff7d0de69a"
+            },
+            {
+              "text": "As the first query word Friday returns the names of days Saturday, Sunday, Monday, Tuesday, Wednesday, Thursday in an unordered sequence. ",
+              "char_start": 971,
+              "char_length": 138,
+              "byte_start": 971,
+              "byte_length": 138,
+              "paragraph_sha256": "6cb998b411c5aaf7f67e14ce9d8abff0267f61b7d54ab445dc5ea0ff7d0de69a"
+            },
+            {
+              "text": "The SdfastText returns five names of days Sunday, Thursday, Monday, Tuesday and Wednesday respectively. ",
+              "char_start": 1109,
+              "char_length": 104,
+              "byte_start": 1109,
+              "byte_length": 104,
+              "paragraph_sha256": "6cb998b411c5aaf7f67e14ce9d8abff0267f61b7d54ab445dc5ea0ff7d0de69a"
+            },
+            {
+              "text": "The GloVe model also returns five names of days. ",
+              "char_start": 1213,
+              "char_length": 49,
+              "byte_start": 1213,
+              "byte_length": 49,
+              "paragraph_sha256": "6cb998b411c5aaf7f67e14ce9d8abff0267f61b7d54ab445dc5ea0ff7d0de69a"
+            },
+            {
+              "text": "But the first word in SdfastText contains a punctuation mark in retrieved word Gone.Cricket that are two words joined with a punctuation mark (.), which shows the tokenization error in preprocessing step, sixth retrieved word Misspelled is a combination of three words not related to query word, and Played, Being played are also irrelevant and stop words. ",
+              "char_start": 2346,
+              "char_length": 357,
+              "byte_start": 2346,
+              "byte_length": 357,
+              "paragraph_sha256": "6cb998b411c5aaf7f67e14ce9d8abff0267f61b7d54ab445dc5ea0ff7d0de69a"
+            },
+            {
+              "text": "More interesting observations in the presented results are the diacritized words retrieved from our proposed word embeddings and The authentic tokenization in the preprocessing step presented in Figure FIGREF22. ",
+              "char_start": 3319,
+              "char_length": 212,
+              "byte_start": 3319,
+              "byte_length": 212,
+              "paragraph_sha256": "6cb998b411c5aaf7f67e14ce9d8abff0267f61b7d54ab445dc5ea0ff7d0de69a"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 51,
+          "fragments": [
+            {
+              "text": "The most frequent and least important words in NLP are often classified as stop words. ",
+              "char_start": 0,
+              "char_length": 87,
+              "byte_start": 0,
+              "byte_length": 87,
+              "paragraph_sha256": "906c364f4f655df9f77394bb9d6fb4792ade0c9f5d2dbd1aed0fd02be0dbcf7a"
+            },
+            {
+              "text": "DISPLAY_FORM59, and secondly, by analysing their grammatical status with the help of Sindhi linguistic expert because all the frequent words are not stop words (see Figure FIGREF62). ",
+              "char_start": 391,
+              "char_length": 183,
+              "byte_start": 391,
+              "byte_length": 183,
+              "paragraph_sha256": "906c364f4f655df9f77394bb9d6fb4792ade0c9f5d2dbd1aed0fd02be0dbcf7a"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 48,
+          "fragments": [
+            {
+              "text": "We calculate the letter n-grams in words along with their percentage in the developed corpus (see Table TABREF57). ",
+              "char_start": 390,
+              "char_length": 115,
+              "byte_start": 390,
+              "byte_length": 115,
+              "paragraph_sha256": "9d2ee867e102686d113a1de4a04d85a94186069fb9a453941fa64cf67c1d58b0"
+            },
+            {
+              "text": "The bi-gram words are most frequent, mostly consists of stop words and secondly, 4-gram words have a higher frequency.",
+              "char_start": 505,
+              "char_length": 118,
+              "byte_start": 505,
+              "byte_length": 118,
+              "paragraph_sha256": "9d2ee867e102686d113a1de4a04d85a94186069fb9a453941fa64cf67c1d58b0"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 11,
+          "fragments": [
+            {
+              "text": "The raw corpus is utilized for word segmentation BIBREF32 of Sindhi Persian-Arabic. ",
+              "char_start": 958,
+              "char_length": 84,
+              "byte_start": 958,
+              "byte_length": 84,
+              "paragraph_sha256": "d07440139b77c16e46cc418276780394ae46234febdb368dc87e130fb0fe14ff"
+            },
+            {
+              "text": "More recently, an initiative towards the development of resources is taken BIBREF16 by open sourcing annotated dataset of Sindhi Persian-Arabic obtained from news and social blogs. ",
+              "char_start": 1042,
+              "char_length": 181,
+              "byte_start": 1042,
+              "byte_length": 181,
+              "paragraph_sha256": "d07440139b77c16e46cc418276780394ae46234febdb368dc87e130fb0fe14ff"
+            },
+            {
+              "text": "The existing and proposed work is presented in Table TABREF9 on the corpus development, word segmentation, and word embeddings, respectively.",
+              "char_start": 1223,
+              "char_length": 141,
+              "byte_start": 1223,
+              "byte_length": 141,
+              "paragraph_sha256": "d07440139b77c16e46cc418276780394ae46234febdb368dc87e130fb0fe14ff"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 13,
+          "fragments": [
+            {
+              "text": "A method of direct comparison for intrinsic evaluation of word embeddings measures the neighborhood of a query word in vector space. ",
+              "char_start": 434,
+              "char_length": 133,
+              "byte_start": 434,
+              "byte_length": 133,
+              "paragraph_sha256": "35f999b7128869e9035016fdcd7d546093733b9bb13cd580fc79d689af0d895d"
+            },
+            {
+              "text": "Therefore, we opt intrinsic evaluation method BIBREF28 to get a quick insight into the quality of proposed Sindhi word embeddings by measuring the cosine distance between similar words and using WordSim353 dataset. ",
+              "char_start": 994,
+              "char_length": 215,
+              "byte_start": 994,
+              "byte_length": 215,
+              "paragraph_sha256": "35f999b7128869e9035016fdcd7d546093733b9bb13cd580fc79d689af0d895d"
+            }
+          ]
+        }
+      ],
+      "selected": [
+        10,
+        2,
+        66,
+        63,
+        51,
+        48,
+        11,
+        13
+      ]
+    },
+    {
+      "paper_id": "1907.01413",
+      "id": "fffbd6cafef96eeeee2f9fa5d8ab2b325ec528e6",
+      "question": "How many speakers do they have in the dataset?",
+      "title": "Speaker-independent classification of phonetic segments from raw ultrasound in child speech",
+      "kind": "quantity",
+      "material": {
+        "full": "[P2] Section: Introduction\nSpeech and language therapists (SLTs) have found UTI to be very useful in speech therapy. In this work we explore the automatic processing of ultrasound tongue images in order to assist SLTs, who currently largely rely on manual processing when using articulatory imaging in speech therapy. One task that could assist SLTs is the automatic classification of tongue shapes from raw ultrasound. This can facilitate the diagnosis and treatment of speech sound disorders, by allowing SLTs to automatically identify incorrect articulations, or by quantifying patient progress in therapy. In addition to being directly useful for speech therapy, the classification of tongue shapes enables further understanding of phonetic variability in ultrasound tongue images. Much of the previous work in this area has focused on speaker-dependent models. In this work we investigate how automatic processing of ultrasound tongue imaging is affected by speaker variation, and how severe degradations in performance can be avoided when applying systems to data from previously unseen speakers through the use of speaker adaptation and speaker normalization approaches.\n\n[P10] Section: Ultrasound Data\nWe use the Ultrax Typically Developing dataset (UXTD) from the publicly available UltraSuite repository BIBREF19 . This dataset contains synchronized acoustic and ultrasound data from 58 typically developing children, aged 5-12 years old (31 female, 27 male). The data was aligned at the phone-level, according to the methods described in BIBREF19 , BIBREF25 . For this work, we discarded the acoustic data and focused only on the B-Mode ultrasound images capturing a midsaggital view of the tongue. The data was recorded using an Ultrasonix SonixRP machine using Articulate Assistant Advanced (AAA) software at INLINEFORM0 121fps with a 135 field of view. A single ultrasound frame consists of 412 echo returns from each of the 63 scan lines (63x412 raw frames). For this work, we only use UXTD type A (semantically unrelated words, such as pack, tap, peak, tea, oak, toe) and type B (non-words designed to elicit the articulation of target phones, such as apa, eepee, opo) utterances.\n\n[P22] Section: Conclusion\nIn this paper, we have investigated speaker-independent models for the classification of phonetic segments from raw ultrasound data. We have shown that the performance of the models heavily degrades when evaluated on data from unseen speakers. This is a result of the variability in ultrasound images, mostly due to differences across speakers, but also due to shifts in probe placement. Using the mean of all ultrasound frames for a new speaker improves the generalization of the models to unseen data, especially when using convolutional neural networks. We have also shown that adapting a pre-trained speaker-independent system using as few as 50 ultrasound frames can outperform a corresponding speaker-dependent system.\n\n[P14] Section: Preprocessing and Model Architectures\nThe first type of classifier we evaluate in this work are feedforward neural networks (DNNs) consisting of 3 hidden layers, each with 512 rectified linear units (ReLUs) with a softmax activation function. The networks are optimized for 40 epochs with a mini-batch of 32 samples using stochastic gradient descent. Based on preliminary experiments on the validation set, hyperparameters such learning rate, decay rate, and L2 weight vary depending on the input format (Raw, PCA, or DCT). Generally, Raw inputs work better with smaller learning rates and heavier regularization to prevent overfitting to the high-dimensional data. As a second classifier to evaluate, we use convolutional neural networks (CNNs) with 2 convolutional and max pooling layers, followed by 2 fully-connected ReLU layers with 512 nodes. The convolutional layers use 16 filters, 8x8 and 4x4 kernels respectively, and rectified units. The fully-connected layers use dropout with a drop probability of 0.2. Because CNN systems take longer to converge, they are optimized over 200 epochs. For all systems, at the end of every epoch, the model is evaluated on the development set, and the best model across all epochs is kept.\n\n[P20] Section: Results and Discussion\nFigure FIGREF12 shows pair-wise scatterplots for the CNN system. Training scenarios are compared in terms of the effect on individual speakers. It is observed, for example, that the performance of a speaker-adapted system is similar to a multi-speaker system, with most speakers clustered around the identity line (bottom left subplot). Figure FIGREF12 also illustrates the variability across speakers for each of the training scenarios. The classification task is easier for some speakers than others. In an attempt to understand this variability, we can look at correlation between accuracy scores and various speaker details. For the CNN systems, we have found some correlation (Pearson's product-moment correlation) between accuracy and age for the dependent ( INLINEFORM0 ), multi-speaker ( INLINEFORM1 ), and adapted ( INLINEFORM2 ) systems. A very small correlation ( INLINEFORM3 ) was found for the independent system. Similarly, some correlation was found between accuracy and sampling score ( INLINEFORM4 ) for the dependent system, but not for the remaining scenarios. No correlation was found between accuracy and gender (point biserial correlation).\n\n[P16] Section: Training Scenarios and Speaker Means\nThis work is primarily concerned with generalizing to unseen speakers. Therefore, we investigate a method to provide models with speaker-specific inputs. A simple approach is to use the speaker mean, which is the pixel-wise mean of all raw frames associated with a given speaker, illustrated in Figure FIGREF8 . The mean frame might capture an overall area of tongue activity, average out noise, and compensate for probe placement differences across speakers. Speaker means are computed after mean variance normalization. For PCA-based systems, matrix decomposition is applied on the matrix of speaker means for the training data with 50 components being kept, while the 2D DCT is applied normally to each mean frame. In the DNN systems, the speaker mean is appended to the input vector. In the CNN system, the raw speaker mean is given to the network as a second channel. All model configurations are similar to those described earlier, except for the DNN using Raw input. Earlier experiments have shown that a larger number of parameters are needed for good generalization with a large number of inputs, so we use layers of 1024 nodes rather than 512.\n\n[P19] Section: Results and Discussion\nSpeaker means improve results across all scenarios. It is particularly useful for speaker-independent systems. The ability to generalize to unseen speakers is clear in the CNN system. Using the mean as a second channel in the convolutional network has the advantage of relating each pixel to its corresponding speaker mean value, allowing the model to better generalize to unseen speakers.\n\n[P9] Section: Related Work\nEarlier work concerned with speech recognition from ultrasound data has mostly been focused on speaker-dependent systems BIBREF20 , BIBREF21 , BIBREF22 , BIBREF23 . An exception is the work of Xu et al. BIBREF24 , which investigates the classification of tongue gestures from ultrasound data using convolutional neural networks. Some results are presented for a speaker-independent system, although the investigation is limited to two speakers generalizing to a third. Fabre et al BIBREF5 present a method for automatic tongue contour extraction from ultrasound data. The system is evaluated in a speaker-independent way by training on data from eight speakers and evaluating on a single held out speaker. In both of these studies, a large drop in accuracy was observed when using speaker-independent systems in comparison to speaker-dependent systems. Our investigation differs from previous work in that we focus on child speech while using a larger number of speakers (58 children). Additionally, we use cross-validation to evaluate the performance of speaker-independent systems across all speakers, rather than using a small held out subset.",
+        "packet": "[P2] Section: Introduction\nSpeech and language therapists (SLTs) have found UTI to be very useful in speech therapy. \n[omitted source between fragments]\nIn this work we investigate how automatic processing of ultrasound tongue imaging is affected by speaker variation, and how severe degradations in performance can be avoided when applying systems to data from previously unseen speakers through the use of speaker adaptation and speaker normalization approaches.\n\n[P10] Section: Ultrasound Data\nWe use the Ultrax Typically Developing dataset (UXTD) from the publicly available UltraSuite repository BIBREF19 . \n[omitted source between fragments]\nThe data was aligned at the phone-level, according to the methods described in BIBREF19 , BIBREF25 . \n\n[P22] Section: Conclusion\nWe have shown that the performance of the models heavily degrades when evaluated on data from unseen speakers. \n[omitted source between fragments]\nThis is a result of the variability in ultrasound images, mostly due to differences across speakers, but also due to shifts in probe placement. \n\n[P14] Section: Preprocessing and Model Architectures\nThe first type of classifier we evaluate in this work are feedforward neural networks (DNNs) consisting of 3 hidden layers, each with 512 rectified linear units (ReLUs) with a softmax activation function. \n[omitted source between fragments]\nGenerally, Raw inputs work better with smaller learning rates and heavier regularization to prevent overfitting to the high-dimensional data. \n[omitted source between fragments]\nAs a second classifier to evaluate, we use convolutional neural networks (CNNs) with 2 convolutional and max pooling layers, followed by 2 fully-connected ReLU layers with 512 nodes. \n[omitted source between fragments]\nThe convolutional layers use 16 filters, 8x8 and 4x4 kernels respectively, and rectified units. \n[omitted source between fragments]\nThe fully-connected layers use dropout with a drop probability of 0.2. \n[omitted source between fragments]\nBecause CNN systems take longer to converge, they are optimized over 200 epochs. \n\n[P20] Section: Results and Discussion\nTraining scenarios are compared in terms of the effect on individual speakers. \n[omitted source between fragments]\nFor the CNN systems, we have found some correlation (Pearson's product-moment correlation) between accuracy and age for the dependent ( INLINEFORM0 ), multi-speaker ( INLINEFORM1 ), and adapted ( INLINEFORM2 ) systems. \n\n[P16] Section: Training Scenarios and Speaker Means\nIn the DNN systems, the speaker mean is appended to the input vector. \n[omitted source between fragments]\nIn the CNN system, the raw speaker mean is given to the network as a second channel. \n\n[P19] Section: Results and Discussion\nThe ability to generalize to unseen speakers is clear in the CNN system. \n[omitted source between fragments]\nUsing the mean as a second channel in the convolutional network has the advantage of relating each pixel to its corresponding speaker mean value, allowing the model to better generalize to unseen speakers.\n\n[P9] Section: Related Work\nThe system is evaluated in a speaker-independent way by training on data from eight speakers and evaluating on a single held out speaker. \n[omitted source between fragments]\nOur investigation differs from previous work in that we focus on child speech while using a larger number of speakers (58 children). "
+      },
+      "ledger": [
+        {
+          "paragraph_id": 2,
+          "fragments": [
+            {
+              "text": "Speech and language therapists (SLTs) have found UTI to be very useful in speech therapy. ",
+              "char_start": 0,
+              "char_length": 90,
+              "byte_start": 0,
+              "byte_length": 90,
+              "paragraph_sha256": "b97cfe51a6ca63607dab00f97ba7a220089c6a3b5285374315b7174e35cd5178"
+            },
+            {
+              "text": "In this work we investigate how automatic processing of ultrasound tongue imaging is affected by speaker variation, and how severe degradations in performance can be avoided when applying systems to data from previously unseen speakers through the use of speaker adaptation and speaker normalization approaches.",
+              "char_start": 839,
+              "char_length": 311,
+              "byte_start": 839,
+              "byte_length": 311,
+              "paragraph_sha256": "b97cfe51a6ca63607dab00f97ba7a220089c6a3b5285374315b7174e35cd5178"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 10,
+          "fragments": [
+            {
+              "text": "We use the Ultrax Typically Developing dataset (UXTD) from the publicly available UltraSuite repository BIBREF19 . ",
+              "char_start": 0,
+              "char_length": 115,
+              "byte_start": 0,
+              "byte_length": 115,
+              "paragraph_sha256": "4991b0cdbdf8502e64db129e8fcaf65aaa02e3984d3232706b25506ae0316db0"
+            },
+            {
+              "text": "The data was aligned at the phone-level, according to the methods described in BIBREF19 , BIBREF25 . ",
+              "char_start": 260,
+              "char_length": 101,
+              "byte_start": 260,
+              "byte_length": 101,
+              "paragraph_sha256": "4991b0cdbdf8502e64db129e8fcaf65aaa02e3984d3232706b25506ae0316db0"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 22,
+          "fragments": [
+            {
+              "text": "We have shown that the performance of the models heavily degrades when evaluated on data from unseen speakers. ",
+              "char_start": 133,
+              "char_length": 111,
+              "byte_start": 133,
+              "byte_length": 111,
+              "paragraph_sha256": "168f8966ca9fe894b56ffbad8582d927a8a258f6a0c13dea46961d6126d1485e"
+            },
+            {
+              "text": "This is a result of the variability in ultrasound images, mostly due to differences across speakers, but also due to shifts in probe placement. ",
+              "char_start": 244,
+              "char_length": 144,
+              "byte_start": 244,
+              "byte_length": 144,
+              "paragraph_sha256": "168f8966ca9fe894b56ffbad8582d927a8a258f6a0c13dea46961d6126d1485e"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 14,
+          "fragments": [
+            {
+              "text": "The first type of classifier we evaluate in this work are feedforward neural networks (DNNs) consisting of 3 hidden layers, each with 512 rectified linear units (ReLUs) with a softmax activation function. ",
+              "char_start": 0,
+              "char_length": 205,
+              "byte_start": 0,
+              "byte_length": 205,
+              "paragraph_sha256": "b4ee2da9062746062eebfb17859944c71d7f4e6447b40ad4f97fb24ead5d0066"
+            },
+            {
+              "text": "Generally, Raw inputs work better with smaller learning rates and heavier regularization to prevent overfitting to the high-dimensional data. ",
+              "char_start": 486,
+              "char_length": 142,
+              "byte_start": 486,
+              "byte_length": 142,
+              "paragraph_sha256": "b4ee2da9062746062eebfb17859944c71d7f4e6447b40ad4f97fb24ead5d0066"
+            },
+            {
+              "text": "As a second classifier to evaluate, we use convolutional neural networks (CNNs) with 2 convolutional and max pooling layers, followed by 2 fully-connected ReLU layers with 512 nodes. ",
+              "char_start": 628,
+              "char_length": 183,
+              "byte_start": 628,
+              "byte_length": 183,
+              "paragraph_sha256": "b4ee2da9062746062eebfb17859944c71d7f4e6447b40ad4f97fb24ead5d0066"
+            },
+            {
+              "text": "The convolutional layers use 16 filters, 8x8 and 4x4 kernels respectively, and rectified units. ",
+              "char_start": 811,
+              "char_length": 96,
+              "byte_start": 811,
+              "byte_length": 96,
+              "paragraph_sha256": "b4ee2da9062746062eebfb17859944c71d7f4e6447b40ad4f97fb24ead5d0066"
+            },
+            {
+              "text": "The fully-connected layers use dropout with a drop probability of 0.2. ",
+              "char_start": 907,
+              "char_length": 71,
+              "byte_start": 907,
+              "byte_length": 71,
+              "paragraph_sha256": "b4ee2da9062746062eebfb17859944c71d7f4e6447b40ad4f97fb24ead5d0066"
+            },
+            {
+              "text": "Because CNN systems take longer to converge, they are optimized over 200 epochs. ",
+              "char_start": 978,
+              "char_length": 81,
+              "byte_start": 978,
+              "byte_length": 81,
+              "paragraph_sha256": "b4ee2da9062746062eebfb17859944c71d7f4e6447b40ad4f97fb24ead5d0066"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 20,
+          "fragments": [
+            {
+              "text": "Training scenarios are compared in terms of the effect on individual speakers. ",
+              "char_start": 65,
+              "char_length": 79,
+              "byte_start": 65,
+              "byte_length": 79,
+              "paragraph_sha256": "46d95a55884fd92a672f3242880ce9d54d1163c952851a9e8b96a61f523c6f62"
+            },
+            {
+              "text": "For the CNN systems, we have found some correlation (Pearson's product-moment correlation) between accuracy and age for the dependent ( INLINEFORM0 ), multi-speaker ( INLINEFORM1 ), and adapted ( INLINEFORM2 ) systems. ",
+              "char_start": 629,
+              "char_length": 219,
+              "byte_start": 629,
+              "byte_length": 219,
+              "paragraph_sha256": "46d95a55884fd92a672f3242880ce9d54d1163c952851a9e8b96a61f523c6f62"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 16,
+          "fragments": [
+            {
+              "text": "In the DNN systems, the speaker mean is appended to the input vector. ",
+              "char_start": 718,
+              "char_length": 70,
+              "byte_start": 718,
+              "byte_length": 70,
+              "paragraph_sha256": "906f126f2d381344a55936f18954db5c1111621c90e87b520de3b6ac814152cd"
+            },
+            {
+              "text": "In the CNN system, the raw speaker mean is given to the network as a second channel. ",
+              "char_start": 788,
+              "char_length": 85,
+              "byte_start": 788,
+              "byte_length": 85,
+              "paragraph_sha256": "906f126f2d381344a55936f18954db5c1111621c90e87b520de3b6ac814152cd"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 19,
+          "fragments": [
+            {
+              "text": "The ability to generalize to unseen speakers is clear in the CNN system. ",
+              "char_start": 111,
+              "char_length": 73,
+              "byte_start": 111,
+              "byte_length": 73,
+              "paragraph_sha256": "7a81646611cfb280a1aed8bb17b10f34a0069c17fc577fdbe3931eb5ef4e5aad"
+            },
+            {
+              "text": "Using the mean as a second channel in the convolutional network has the advantage of relating each pixel to its corresponding speaker mean value, allowing the model to better generalize to unseen speakers.",
+              "char_start": 184,
+              "char_length": 205,
+              "byte_start": 184,
+              "byte_length": 205,
+              "paragraph_sha256": "7a81646611cfb280a1aed8bb17b10f34a0069c17fc577fdbe3931eb5ef4e5aad"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 9,
+          "fragments": [
+            {
+              "text": "The system is evaluated in a speaker-independent way by training on data from eight speakers and evaluating on a single held out speaker. ",
+              "char_start": 568,
+              "char_length": 138,
+              "byte_start": 568,
+              "byte_length": 138,
+              "paragraph_sha256": "4fb12f1faefcd8f3f9a50deb20d8b8f1bd47e0eb28756b0b0d5ef556d88975b2"
+            },
+            {
+              "text": "Our investigation differs from previous work in that we focus on child speech while using a larger number of speakers (58 children). ",
+              "char_start": 853,
+              "char_length": 133,
+              "byte_start": 853,
+              "byte_length": 133,
+              "paragraph_sha256": "4fb12f1faefcd8f3f9a50deb20d8b8f1bd47e0eb28756b0b0d5ef556d88975b2"
+            }
+          ]
+        }
+      ],
+      "selected": [
+        2,
+        10,
+        22,
+        14,
+        20,
+        16,
+        19,
+        9
+      ]
+    },
+    {
+      "paper_id": "1907.08501",
+      "id": "b921a1771ed0ba9dbeff9da000336ecf2bb38322",
+      "question": "How many iterations of visual search are done on average until an answer is found?",
+      "title": "A Comparative Evaluation of Visual and Natural Language Question Answering Over Linked Data",
+      "kind": "quantity",
+      "material": {
+        "full": "[P8] Section: RELATED WORK\nMany tools exist for visual consumption and interaction with RDF knowledge bases, however, they are not designed specifically towards the question answering use case. BIBREF4 give an overview of ontology and Linked Data visualization tools, and categorize them based on the used visualization methods, interaction techniques and supported ontology constructs.\n\n[P0] Section: Abstract\nWith the growing number and size of Linked Data datasets, it is crucial to make the data accessible and useful for users without knowledge of formal query languages. Two approaches towards this goal are knowledge graph visualization and natural language interfaces. Here, we investigate specifically question answering (QA) over Linked Data by comparing a diagrammatic visual approach with existing natural language-based systems. Given a QA benchmark (QALD7), we evaluate a visual method which is based on iteratively creating diagrams until the answer is found, against four QA systems that have natural language queries as input. Besides other benefits, the visual approach provides higher performance, but also requires more manual input. The results indicate that the methods can be used complementary, and that such a combination has a large positive impact on QA performance, and also facilitates additional features such as data exploration.\n\n[P15] Section: SYSTEM DESCRIPTION\nAs for the example, when attempting to answer a question such as “Who is the mayor of Paris?” the first step for a DQA user is finding a suitable starting point, in our case the entity Paris. The user enters “Paris” into the search box, and can then investigate the entity on the tool canvas. The information about the entity stems from the underlying dataset, for example Wikidata. The user can – in an incremental process – search in the properties of the given entity (or entities) and add relevant entities onto the canvas. In the given example, the property “head of government” connects the mayor to the city of Paris, Anne Hidalgo. The final diagram which answers the given question is presented in Figure FIGREF3 .\n\n[P1] Section: INTRODUCTION\nThe Semantic Web provides a large number of structured datasets in form of Linked Data. One central obstacle is to make this data available and consumable to lay users without knowledge of formal query languages such as SPARQL. In order to satisfy specific information needs of users, a typical approach are natural language interfaces to allow question answering over the Linked Data (QALD) by translating user queries into SPARQL BIBREF0 , BIBREF1 . As an alternative method, BIBREF2 propose a visual method of QA using an iterative diagrammatic approach. The diagrammatic approach relies on the visual means only, it requires more user interaction than natural language QA, but also provides additional benefits like intuitive insights into dataset characteristics, or a broader understanding of the answer and the potential to further explore the answer context, and finally allows for knowledge sharing by storing and sharing resulting diagrams.\n\n[P4] Section: INTRODUCTION\nIn a nutshell, users that applied DQA found the correct answer with an F1-score of 79.5%, compared to a maximum of 59.2% for the best performing QALD system. Furthermore, for the subset of questions where the QALD system could not provide a correct answer, users found the answer with 70% F1-score with DQA. We further analyze the characteristics of questions where the QALD or DQA, respectively, approach is better suited.\n\n[P25] Section: Evaluation Results and Discussion\nComparing DQA and WDAqua, the first interesting question is: To what extend is DQA helpful on questions that could not be answered by the QALD system? For WDAqua the overall F1 score on our test dataset is INLINEFORM0 . For the subset of questions where WDAqua had no, or only a partial, answer, DQA users found the correct answer in INLINEFORM1 of cases. On the other hand, the subset of questions that DQA users (partially) failed to answer, were answered correctly by WDAqua with an F1 of INLINEFORM2 . If DQA is used as a backup method for questions not correctly answered with WDAqua, then overall F1 can be raised to INLINEFORM3 . The increase from INLINEFORM4 to INLINEFORM5 demonstrates the potential of DQA as complementary component in QALD systems.\n\n[P17] Section: Evaluation Setup\nAs evaluation dataset, we reuse questions from the QALD7 benchmark task 4 “QA over Wikidata”. Question selection from QALD7 is based on the principles of question classification in QA BIBREF13 . Firstly, it is necessary to define question types which correspond to different scenarios of data exploration in DQA, as well as the type of expected answers and the question focus. The question focus refers to the main information in the question which help a user find the answer. We follow the model of BIBREF14 who categorize questions by their question word into WHO, WHICH, WHAT, NAME, and HOW questions. Given the question and answer type categories, we created four questionnaires with nine questions each resulting in 36 questions from the QALD dataset. The questions were picked in equal number for five basic question categories.\n\n[P7] Section: RELATED WORK\nAs introduced in BIBREF2 we understand diagrammatic question answering (DQA) as the process of QA relying solely on visual exploration using diagrams as a representation of the underlying knowledge source. The process includes (i) a model for diagrammatic representation of semantic data which supports data interaction using embedded queries, (ii) a simple method for step-by-step construction of diagrams with respect to cognitive boundaries and a layout that boosts understandability of diagrams, (iii) a library for visual data exploration and sharing based on its internal data model, and (iv) an evaluation of DQA as knowledge understanding and knowledge sharing tool. BIBREF3 propose a framework of five perspectives of knowledge visualization, which can be used to describe certain aspects of the DQA use cases, such as its goal to provide an iterative exploration method, which is accessible to any user, the possibility of knowledge sharing (via saved diagrams), or the general purpose of knowledge understanding and abstraction from technical details.",
+        "packet": "[P8] Section: RELATED WORK\nMany tools exist for visual consumption and interaction with RDF knowledge bases, however, they are not designed specifically towards the question answering use case. \n[omitted source between fragments]\nBIBREF4 give an overview of ontology and Linked Data visualization tools, and categorize them based on the used visualization methods, interaction techniques and supported ontology constructs.\n\n[P0] Section: Abstract\nWith the growing number and size of Linked Data datasets, it is crucial to make the data accessible and useful for users without knowledge of formal query languages. \n[omitted source between fragments]\nGiven a QA benchmark (QALD7), we evaluate a visual method which is based on iteratively creating diagrams until the answer is found, against four QA systems that have natural language queries as input. \n\n[P15] Section: SYSTEM DESCRIPTION\nAs for the example, when attempting to answer a question such as “Who is the mayor of Paris?” the first step for a DQA user is finding a suitable starting point, in our case the entity Paris. \n[omitted source between fragments]\nThe user can – in an incremental process – search in the properties of the given entity (or entities) and add relevant entities onto the canvas. \n\n[P1] Section: INTRODUCTION\nAs an alternative method, BIBREF2 propose a visual method of QA using an iterative diagrammatic approach. \n[omitted source between fragments]\nThe diagrammatic approach relies on the visual means only, it requires more user interaction than natural language QA, but also provides additional benefits like intuitive insights into dataset characteristics, or a broader understanding of the answer and the potential to further explore the answer context, and finally allows for knowledge sharing by storing and sharing resulting diagrams.\n\n[P4] Section: INTRODUCTION\nIn a nutshell, users that applied DQA found the correct answer with an F1-score of 79.5%, compared to a maximum of 59.2% for the best performing QALD system. \n[omitted source between fragments]\nFurthermore, for the subset of questions where the QALD system could not provide a correct answer, users found the answer with 70% F1-score with DQA. \n[omitted source between fragments]\nWe further analyze the characteristics of questions where the QALD or DQA, respectively, approach is better suited.\n\n[P25] Section: Evaluation Results and Discussion\nFor the subset of questions where WDAqua had no, or only a partial, answer, DQA users found the correct answer in INLINEFORM1 of cases. \n[omitted source between fragments]\nOn the other hand, the subset of questions that DQA users (partially) failed to answer, were answered correctly by WDAqua with an F1 of INLINEFORM2 . \n\n[P17] Section: Evaluation Setup\nQuestion selection from QALD7 is based on the principles of question classification in QA BIBREF13 . \n[omitted source between fragments]\nWe follow the model of BIBREF14 who categorize questions by their question word into WHO, WHICH, WHAT, NAME, and HOW questions. \n\n[P7] Section: RELATED WORK\nThe process includes (i) a model for diagrammatic representation of semantic data which supports data interaction using embedded queries, (ii) a simple method for step-by-step construction of diagrams with respect to cognitive boundaries and a layout that boosts understandability of diagrams, (iii) a library for visual data exploration and sharing based on its internal data model, and (iv) an evaluation of DQA as knowledge understanding and knowledge sharing tool. \n[omitted source between fragments]\nBIBREF3 propose a framework of five perspectives of knowledge visualization, which can be used to describe certain aspects of the DQA use cases, such as its goal to provide an iterative exploration method, which is accessible to any user, the possibility of knowledge sharing (via saved diagrams), or the general purpose of knowledge understanding and abstraction from technical details."
+      },
+      "ledger": [
+        {
+          "paragraph_id": 8,
+          "fragments": [
+            {
+              "text": "Many tools exist for visual consumption and interaction with RDF knowledge bases, however, they are not designed specifically towards the question answering use case. ",
+              "char_start": 0,
+              "char_length": 167,
+              "byte_start": 0,
+              "byte_length": 167,
+              "paragraph_sha256": "18f571213d321a465b8c5c952f68f80ed6a95b86f150b6b0b8b1db7506b3f261"
+            },
+            {
+              "text": "BIBREF4 give an overview of ontology and Linked Data visualization tools, and categorize them based on the used visualization methods, interaction techniques and supported ontology constructs.",
+              "char_start": 167,
+              "char_length": 192,
+              "byte_start": 167,
+              "byte_length": 192,
+              "paragraph_sha256": "18f571213d321a465b8c5c952f68f80ed6a95b86f150b6b0b8b1db7506b3f261"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 0,
+          "fragments": [
+            {
+              "text": "With the growing number and size of Linked Data datasets, it is crucial to make the data accessible and useful for users without knowledge of formal query languages. ",
+              "char_start": 0,
+              "char_length": 166,
+              "byte_start": 0,
+              "byte_length": 166,
+              "paragraph_sha256": "ff84b87ec05680d208dbb50374f32bcc1fedad93224e39513a25d5825ccbbb48"
+            },
+            {
+              "text": "Given a QA benchmark (QALD7), we evaluate a visual method which is based on iteratively creating diagrams until the answer is found, against four QA systems that have natural language queries as input. ",
+              "char_start": 431,
+              "char_length": 202,
+              "byte_start": 431,
+              "byte_length": 202,
+              "paragraph_sha256": "ff84b87ec05680d208dbb50374f32bcc1fedad93224e39513a25d5825ccbbb48"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 15,
+          "fragments": [
+            {
+              "text": "As for the example, when attempting to answer a question such as “Who is the mayor of Paris?” the first step for a DQA user is finding a suitable starting point, in our case the entity Paris. ",
+              "char_start": 0,
+              "char_length": 192,
+              "byte_start": 0,
+              "byte_length": 196,
+              "paragraph_sha256": "f174f4b6ec573c2b48cfd2ce5538f3115324d530c29a113447692d88c3822aa6"
+            },
+            {
+              "text": "The user can – in an incremental process – search in the properties of the given entity (or entities) and add relevant entities onto the canvas. ",
+              "char_start": 383,
+              "char_length": 145,
+              "byte_start": 391,
+              "byte_length": 149,
+              "paragraph_sha256": "f174f4b6ec573c2b48cfd2ce5538f3115324d530c29a113447692d88c3822aa6"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 1,
+          "fragments": [
+            {
+              "text": "As an alternative method, BIBREF2 propose a visual method of QA using an iterative diagrammatic approach. ",
+              "char_start": 452,
+              "char_length": 106,
+              "byte_start": 452,
+              "byte_length": 106,
+              "paragraph_sha256": "aef535299582cae7acc245ef23ff029fad4e8b17b372e0c6ae4a3a4931b03189"
+            },
+            {
+              "text": "The diagrammatic approach relies on the visual means only, it requires more user interaction than natural language QA, but also provides additional benefits like intuitive insights into dataset characteristics, or a broader understanding of the answer and the potential to further explore the answer context, and finally allows for knowledge sharing by storing and sharing resulting diagrams.",
+              "char_start": 558,
+              "char_length": 392,
+              "byte_start": 558,
+              "byte_length": 392,
+              "paragraph_sha256": "aef535299582cae7acc245ef23ff029fad4e8b17b372e0c6ae4a3a4931b03189"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 4,
+          "fragments": [
+            {
+              "text": "In a nutshell, users that applied DQA found the correct answer with an F1-score of 79.5%, compared to a maximum of 59.2% for the best performing QALD system. ",
+              "char_start": 0,
+              "char_length": 158,
+              "byte_start": 0,
+              "byte_length": 158,
+              "paragraph_sha256": "451b2e435a4de1d0a61a1119140ce9cf2c7d4694d6812cc93bc9548c8728f717"
+            },
+            {
+              "text": "Furthermore, for the subset of questions where the QALD system could not provide a correct answer, users found the answer with 70% F1-score with DQA. ",
+              "char_start": 158,
+              "char_length": 150,
+              "byte_start": 158,
+              "byte_length": 150,
+              "paragraph_sha256": "451b2e435a4de1d0a61a1119140ce9cf2c7d4694d6812cc93bc9548c8728f717"
+            },
+            {
+              "text": "We further analyze the characteristics of questions where the QALD or DQA, respectively, approach is better suited.",
+              "char_start": 308,
+              "char_length": 115,
+              "byte_start": 308,
+              "byte_length": 115,
+              "paragraph_sha256": "451b2e435a4de1d0a61a1119140ce9cf2c7d4694d6812cc93bc9548c8728f717"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 25,
+          "fragments": [
+            {
+              "text": "For the subset of questions where WDAqua had no, or only a partial, answer, DQA users found the correct answer in INLINEFORM1 of cases. ",
+              "char_start": 220,
+              "char_length": 136,
+              "byte_start": 220,
+              "byte_length": 136,
+              "paragraph_sha256": "4f2c3763368a00ed097d7aa991cdb1bb152c5a9ab7a055ede16b885007328868"
+            },
+            {
+              "text": "On the other hand, the subset of questions that DQA users (partially) failed to answer, were answered correctly by WDAqua with an F1 of INLINEFORM2 . ",
+              "char_start": 356,
+              "char_length": 150,
+              "byte_start": 356,
+              "byte_length": 150,
+              "paragraph_sha256": "4f2c3763368a00ed097d7aa991cdb1bb152c5a9ab7a055ede16b885007328868"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 17,
+          "fragments": [
+            {
+              "text": "Question selection from QALD7 is based on the principles of question classification in QA BIBREF13 . ",
+              "char_start": 94,
+              "char_length": 101,
+              "byte_start": 98,
+              "byte_length": 101,
+              "paragraph_sha256": "3c5ac4d489637a1e8a827ceb57b7b6fa648568493b30290c218f98e18ccc0d74"
+            },
+            {
+              "text": "We follow the model of BIBREF14 who categorize questions by their question word into WHO, WHICH, WHAT, NAME, and HOW questions. ",
+              "char_start": 478,
+              "char_length": 128,
+              "byte_start": 482,
+              "byte_length": 128,
+              "paragraph_sha256": "3c5ac4d489637a1e8a827ceb57b7b6fa648568493b30290c218f98e18ccc0d74"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 7,
+          "fragments": [
+            {
+              "text": "The process includes (i) a model for diagrammatic representation of semantic data which supports data interaction using embedded queries, (ii) a simple method for step-by-step construction of diagrams with respect to cognitive boundaries and a layout that boosts understandability of diagrams, (iii) a library for visual data exploration and sharing based on its internal data model, and (iv) an evaluation of DQA as knowledge understanding and knowledge sharing tool. ",
+              "char_start": 206,
+              "char_length": 469,
+              "byte_start": 206,
+              "byte_length": 469,
+              "paragraph_sha256": "177b97a9d172079512cb4693547b45e120e3917b4034a197bca7c8edba949ad9"
+            },
+            {
+              "text": "BIBREF3 propose a framework of five perspectives of knowledge visualization, which can be used to describe certain aspects of the DQA use cases, such as its goal to provide an iterative exploration method, which is accessible to any user, the possibility of knowledge sharing (via saved diagrams), or the general purpose of knowledge understanding and abstraction from technical details.",
+              "char_start": 675,
+              "char_length": 387,
+              "byte_start": 675,
+              "byte_length": 387,
+              "paragraph_sha256": "177b97a9d172079512cb4693547b45e120e3917b4034a197bca7c8edba949ad9"
+            }
+          ]
+        }
+      ],
+      "selected": [
+        8,
+        0,
+        15,
+        1,
+        4,
+        25,
+        17,
+        7
+      ]
+    },
+    {
+      "paper_id": "1810.00663",
+      "id": "fbd47705262bfa0a2ba1440a2589152def64cbbd",
+      "question": "By how much did their model outperform the baseline?",
+      "title": "Translating Navigation Instructions in Natural Language to a High-Level Plan for Behavioral Robot Navigation",
+      "kind": "quantity",
+      "material": {
+        "full": "[P63] Section: Qualitative Evaluation\nThis section discusses qualitative results to better understand how the proposed model uses the navigation graph.\n\n[P56] Section: Quantitative Evaluation\nFirst, we can observe that the final model “Ours with Mask and Ordered Triplets” outperforms the Baseline and Ablation models on all metrics in previously seen environments. The difference in performance is particularly evident for the Exact Match and Goal Match metrics, with our model increasing accuracy by 35% and 25% in comparison to the Baseline and Ablation models, respectively. These results suggest that providing the behavioral navigation graph to the model and allowing it to process this information as a knowledge base in an end-to-end fashion is beneficial.\n\n[P28] Section: Approach\nThe model then uses each attention distribution INLINEFORM0 to obtain a weighted sum of the encodings of the words in INLINEFORM1 , according to their relevance to the corresponding triplet INLINEFORM2 . This results in L attention vectors INLINEFORM3 , INLINEFORM4 .\n\n[P49] Section: Models Used in the Evaluation\nThe baseline approach is based on BIBREF20 . It divides the task of interpreting commands for behavioral navigation into two steps: path generation, and path verification. For path generation, this baseline uses a standard sequence-to-sequence model augmented with an attention mechanism, similar to BIBREF23 , BIBREF6 . For path verification, the baseline uses depth-first search to find a route in the graph that matches the sequence of predicted behaviors. If no route matches perfectly, the baseline changes up to three behaviors in the predicted sequence to try to turn it into a valid path.\n\n[P26] Section: Approach\nAttention layer: Matrices INLINEFORM0 and INLINEFORM1 generated by the encoder layer are combined using an attention mechanism. We use one-way attention because the graph contains information about the whole environment, while the instruction has (potentially incomplete) local information about the route of interest. The use of attention provides our model with a two-step strategy to interpret commands. This resembles the way people find paths on a map: first, relevant parts on the map are selected according to their affinity to each of the words in the input instruction (attention layer); second, the selected parts are connected to assemble a valid path (decoder layer). More formally, let INLINEFORM2 ( INLINEFORM3 ) be the INLINEFORM4 -th row of INLINEFORM5 , and INLINEFORM6 ( INLINEFORM7 ) the INLINEFORM8 -th row of INLINEFORM9 . We use each encoded triplet INLINEFORM10 in INLINEFORM11 to calculate its associated attention distribution INLINEFORM12 over all the atomic instructions INLINEFORM13 : DISPLAYFORM0\n\n[P0] Section: Abstract\nWe propose an end-to-end deep learning model for translating free-form natural language instructions to a high-level plan for behavioral robot navigation. We use attention models to connect information from both the user instructions and a topological representation of the environment. We evaluate our model's performance on a new dataset containing 10,050 pairs of navigation instructions. Our model significantly outperforms baseline approaches. Furthermore, our results suggest that it is possible to leverage the environment map as a relevant knowledge base to facilitate the translation of free-form navigational instruction.\n\n[P53] Section: Implementation Details\nThe dimensionality of the hidden state of the GRU networks was set to 128 in all the experiments. In general, we used 12.5% of the training set as validation for choosing models' hyper-parameters. In particular, we used dropout after the encoder and the fully-connected layers of the proposed model to reduce overfitting. Best performance was achieved with a dropout rate of 0.5 and batch size equal to 256. We also used scheduled sampling BIBREF29 at training time for all models except the baseline.\n\n[P31] Section: Approach\nDecoder layer: After the FC layer, the model predicts likelihoods over the sequence of behaviors that correspond to the input instructions with a GRU network. Without loss of generality, consider the INLINEFORM0 -th recurrent cell in the GRU network. This cell takes two inputs: a hidden state vector INLINEFORM1 from the prior cell, and a one-hot embedding of the previous behavior INLINEFORM2 that was predicted by the model. Based on these inputs, the GRU cell outputs a new hidden state INLINEFORM3 to compute likelihoods for the next behavior. These likelihoods are estimated by combining the output state INLINEFORM4 with relevant information from the context INLINEFORM5 : DISPLAYFORM0",
+        "packet": "[P63] Section: Qualitative Evaluation\nThis section discusses qualitative results to better understand how the proposed model uses the navigation graph.\n\n[P56] Section: Quantitative Evaluation\nFirst, we can observe that the final model “Ours with Mask and Ordered Triplets” outperforms the Baseline and Ablation models on all metrics in previously seen environments. \n[omitted source between fragments]\nThe difference in performance is particularly evident for the Exact Match and Goal Match metrics, with our model increasing accuracy by 35% and 25% in comparison to the Baseline and Ablation models, respectively. \n[omitted source between fragments]\nThese results suggest that providing the behavioral navigation graph to the model and allowing it to process this information as a knowledge base in an end-to-end fashion is beneficial.\n\n[P28] Section: Approach\nThe model then uses each attention distribution INLINEFORM0 to obtain a weighted sum of the encodings of the words in INLINEFORM1 , according to their relevance to the corresponding triplet INLINEFORM2 . \n[omitted source between fragments]\nThis results in L attention vectors INLINEFORM3 , INLINEFORM4 .\n\n[P49] Section: Models Used in the Evaluation\nThe baseline approach is based on BIBREF20 . \n[omitted source between fragments]\nFor path generation, this baseline uses a standard sequence-to-sequence model augmented with an attention mechanism, similar to BIBREF23 , BIBREF6 . \n\n[P26] Section: Approach\nAttention layer: Matrices INLINEFORM0 and INLINEFORM1 generated by the encoder layer are combined using an attention mechanism. \n[omitted source between fragments]\nThe use of attention provides our model with a two-step strategy to interpret commands. \n\n[P0] Section: Abstract\nWe use attention models to connect information from both the user instructions and a topological representation of the environment. \n[omitted source between fragments]\nOur model significantly outperforms baseline approaches. \n\n[P53] Section: Implementation Details\nIn particular, we used dropout after the encoder and the fully-connected layers of the proposed model to reduce overfitting. \n[omitted source between fragments]\nWe also used scheduled sampling BIBREF29 at training time for all models except the baseline.\n\n[P31] Section: Approach\nThis cell takes two inputs: a hidden state vector INLINEFORM1 from the prior cell, and a one-hot embedding of the previous behavior INLINEFORM2 that was predicted by the model. \n[omitted source between fragments]\nThese likelihoods are estimated by combining the output state INLINEFORM4 with relevant information from the context INLINEFORM5 : DISPLAYFORM0"
+      },
+      "ledger": [
+        {
+          "paragraph_id": 63,
+          "fragments": [
+            {
+              "text": "This section discusses qualitative results to better understand how the proposed model uses the navigation graph.",
+              "char_start": 0,
+              "char_length": 113,
+              "byte_start": 0,
+              "byte_length": 113,
+              "paragraph_sha256": "122863d413410d270dfc1dd4b96db0b63017dc2c4aa5e69c401b4c815e40dfe3"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 56,
+          "fragments": [
+            {
+              "text": "First, we can observe that the final model “Ours with Mask and Ordered Triplets” outperforms the Baseline and Ablation models on all metrics in previously seen environments. ",
+              "char_start": 0,
+              "char_length": 174,
+              "byte_start": 0,
+              "byte_length": 178,
+              "paragraph_sha256": "36530af7d80cb0032215dbf85fb2152416d0feb23271f916272f8a2234c5a263"
+            },
+            {
+              "text": "The difference in performance is particularly evident for the Exact Match and Goal Match metrics, with our model increasing accuracy by 35% and 25% in comparison to the Baseline and Ablation models, respectively. ",
+              "char_start": 174,
+              "char_length": 213,
+              "byte_start": 178,
+              "byte_length": 213,
+              "paragraph_sha256": "36530af7d80cb0032215dbf85fb2152416d0feb23271f916272f8a2234c5a263"
+            },
+            {
+              "text": "These results suggest that providing the behavioral navigation graph to the model and allowing it to process this information as a knowledge base in an end-to-end fashion is beneficial.",
+              "char_start": 387,
+              "char_length": 185,
+              "byte_start": 391,
+              "byte_length": 185,
+              "paragraph_sha256": "36530af7d80cb0032215dbf85fb2152416d0feb23271f916272f8a2234c5a263"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 28,
+          "fragments": [
+            {
+              "text": "The model then uses each attention distribution INLINEFORM0 to obtain a weighted sum of the encodings of the words in INLINEFORM1 , according to their relevance to the corresponding triplet INLINEFORM2 . ",
+              "char_start": 0,
+              "char_length": 204,
+              "byte_start": 0,
+              "byte_length": 204,
+              "paragraph_sha256": "8713599b3fee161bdf05bb0aead43f4f2fba0b4ac41b1fb29b40acda817a8915"
+            },
+            {
+              "text": "This results in L attention vectors INLINEFORM3 , INLINEFORM4 .",
+              "char_start": 204,
+              "char_length": 63,
+              "byte_start": 204,
+              "byte_length": 63,
+              "paragraph_sha256": "8713599b3fee161bdf05bb0aead43f4f2fba0b4ac41b1fb29b40acda817a8915"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 49,
+          "fragments": [
+            {
+              "text": "The baseline approach is based on BIBREF20 . ",
+              "char_start": 0,
+              "char_length": 45,
+              "byte_start": 0,
+              "byte_length": 45,
+              "paragraph_sha256": "09cb2417f9994bab8b574e0f2f54b63dc3ef643aa30240d44b6c7f1df65e60fb"
+            },
+            {
+              "text": "For path generation, this baseline uses a standard sequence-to-sequence model augmented with an attention mechanism, similar to BIBREF23 , BIBREF6 . ",
+              "char_start": 172,
+              "char_length": 149,
+              "byte_start": 172,
+              "byte_length": 149,
+              "paragraph_sha256": "09cb2417f9994bab8b574e0f2f54b63dc3ef643aa30240d44b6c7f1df65e60fb"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 26,
+          "fragments": [
+            {
+              "text": "Attention layer: Matrices INLINEFORM0 and INLINEFORM1 generated by the encoder layer are combined using an attention mechanism. ",
+              "char_start": 0,
+              "char_length": 128,
+              "byte_start": 0,
+              "byte_length": 128,
+              "paragraph_sha256": "94bca2a0b0cd82459558c6e4439ed91b9189138bc8a10b8854632df055833d53"
+            },
+            {
+              "text": "The use of attention provides our model with a two-step strategy to interpret commands. ",
+              "char_start": 319,
+              "char_length": 88,
+              "byte_start": 319,
+              "byte_length": 88,
+              "paragraph_sha256": "94bca2a0b0cd82459558c6e4439ed91b9189138bc8a10b8854632df055833d53"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 0,
+          "fragments": [
+            {
+              "text": "We use attention models to connect information from both the user instructions and a topological representation of the environment. ",
+              "char_start": 155,
+              "char_length": 132,
+              "byte_start": 155,
+              "byte_length": 132,
+              "paragraph_sha256": "ac38828623fd67eb202e8874b169cfb6cbad4092aaa26fa499607d7da850ea36"
+            },
+            {
+              "text": "Our model significantly outperforms baseline approaches. ",
+              "char_start": 392,
+              "char_length": 57,
+              "byte_start": 392,
+              "byte_length": 57,
+              "paragraph_sha256": "ac38828623fd67eb202e8874b169cfb6cbad4092aaa26fa499607d7da850ea36"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 53,
+          "fragments": [
+            {
+              "text": "In particular, we used dropout after the encoder and the fully-connected layers of the proposed model to reduce overfitting. ",
+              "char_start": 197,
+              "char_length": 125,
+              "byte_start": 197,
+              "byte_length": 125,
+              "paragraph_sha256": "f7b328d3999cd6331de1ee3e120c2facb556c6cfdaf410346c66250a4e2f6a2a"
+            },
+            {
+              "text": "We also used scheduled sampling BIBREF29 at training time for all models except the baseline.",
+              "char_start": 408,
+              "char_length": 93,
+              "byte_start": 408,
+              "byte_length": 93,
+              "paragraph_sha256": "f7b328d3999cd6331de1ee3e120c2facb556c6cfdaf410346c66250a4e2f6a2a"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 31,
+          "fragments": [
+            {
+              "text": "This cell takes two inputs: a hidden state vector INLINEFORM1 from the prior cell, and a one-hot embedding of the previous behavior INLINEFORM2 that was predicted by the model. ",
+              "char_start": 251,
+              "char_length": 177,
+              "byte_start": 251,
+              "byte_length": 177,
+              "paragraph_sha256": "1ce5d54eabf71c728ced0c8972afa1fc51e705385bb52325c4086c920329fcbe"
+            },
+            {
+              "text": "These likelihoods are estimated by combining the output state INLINEFORM4 with relevant information from the context INLINEFORM5 : DISPLAYFORM0",
+              "char_start": 549,
+              "char_length": 143,
+              "byte_start": 549,
+              "byte_length": 143,
+              "paragraph_sha256": "1ce5d54eabf71c728ced0c8972afa1fc51e705385bb52325c4086c920329fcbe"
+            }
+          ]
+        }
+      ],
+      "selected": [
+        63,
+        56,
+        28,
+        49,
+        26,
+        0,
+        53,
+        31
+      ]
+    },
+    {
+      "paper_id": "1712.02121",
+      "id": "056fc821d1ec1e8ca5dc958d14ea389857b1a299",
+      "question": "How many feature maps are generated for a given triple?",
+      "title": "A Novel Embedding Model for Knowledge Base Completion Based on Convolutional Neural Network",
+      "kind": "quantity",
+      "material": {
+        "full": "[P11] Section: Proposed ConvKB model\nOur ConvKB uses different filters $\\in \\mathbb {R}^{1\\times 3}$ to generate different feature maps. Let ${\\Omega }$ and $\\tau $ denote the set of filters and the number of filters, respectively, i.e. $\\tau = |{\\Omega }|$ , resulting in $\\tau $ feature maps. These $\\tau $ feature maps are concatenated into a single vector $\\in \\mathbb {R}^{\\tau k\\times 1}$ which is then computed with a weight vector ${w} \\in \\mathbb {R}^{\\tau k\\times 1}$ via a dot product to give a score for the triple $(h, r, t)$ . Figure 1 illustrates the computation process in ConvKB.\n\n[P5] Section: Introduction\nIn this paper, we present ConvKB—an embedding model which proposes a novel use of CNN for the KB completion task. In ConvKB, each entity or relation is associated with an unique $k$ -dimensional embedding. Let $v_h$ , $v_r$ and $v_t$ denote $k$ -dimensional embeddings of $h$ , $r$ and $t$ , respectively. For each triple (h, r, t), the corresponding triple of $k$ -dimensional embeddings ( $v_h$ , $v_h$0 , $v_h$1 ) is represented as a $v_h$2 input matrix. This input matrix is fed to the convolution layer where different filters of the same $v_h$3 shape are used to extract the global relationships among same dimensional entries of the embedding triple. That is, these filters are repeatedly operated over every row of the input matrix to produce different feature maps. The feature maps are concatenated into a single feature vector which is then computed with a weight vector via a dot product to produce a score for the triple (h, r, t). This score is used to infer whether the triple (h, r, t) is valid or not.\n\n[P0] Section: Abstract\nIn this paper, we propose a novel embedding model, named ConvKB, for knowledge base completion. Our model ConvKB advances state-of-the-art models by employing a convolutional neural network, so that it can capture global relationships and transitional characteristics between entities and relations in knowledge bases. In ConvKB, each triple (head entity, relation, tail entity) is represented as a 3-column matrix where each column vector represents a triple element. This 3-column matrix is then fed to a convolution layer where multiple filters are operated on the matrix to generate different feature maps. These feature maps are then concatenated into a single feature vector representing the input triple. The feature vector is multiplied with a weight vector via a dot product to return a score. This score is then used to predict whether the triple is valid or not. Experiments show that ConvKB achieves better link prediction performance than previous state-of-the-art embedding models on two benchmark datasets WN18RR and FB15k-237.\n\n[P20] Section: Evaluation protocol\nIn the KB completion or link prediction task BIBREF13 , the purpose is to predict a missing entity given a relation and another entity, i.e, inferring $h$ given $(r, t)$ or inferring $t$ given $(h, r)$ . The results are calculated based on ranking the scores produced by the score function $f$ on test triples.\n\n[P18] Section: Proposed ConvKB model\nhere $\\mathcal {G}^{\\prime }$ is a collection of invalid triples generated by corrupting valid triples in $\\mathcal {G}$ .\n\n[P4] Section: Introduction\nRecently, convolutional neural networks (CNNs), originally designed for computer vision BIBREF27 , have significantly received research attention in natural language processing BIBREF28 , BIBREF29 . CNN learns non-linear features to capture complex relationships with a remarkably less number of parameters compared to fully connected neural networks. Inspired from the success in computer vision, BIBREF30 proposed ConvE—the first model applying CNN for the KB completion task. In ConvE, only $v_h$ and $v_r$ are reshaped and then concatenated into an input matrix which is fed to the convolution layer. Different filters of the same $3\\times 3$ shape are operated over the input matrix to output feature map tensors. These feature map tensors are then vectorized and mapped into a vector via a linear transformation. Then this vector is computed with $v_t$ via a dot product to return a score for (h, r, t). See a formal definition of the ConvE score function in Table 1 . It is worth noting that ConvE focuses on the local relationships among different dimensional entries in each of $v_h$ or $v_r$ , i.e., ConvE does not observe the global relationships among same dimensional entries of an embedding triple ( $v_h$ , $v_r$ , $v_t$ ), so that ConvE ignores the transitional characteristic in transition-based models, which is one of the most useful intuitions for the task.\n\n[P1] Section: Introduction\nLarge-scale knowledge bases (KBs), such as YAGO BIBREF0 , Freebase BIBREF1 and DBpedia BIBREF2 , are usually databases of triples representing the relationships between entities in the form of fact (head entity, relation, tail entity) denoted as (h, r, t), e.g., (Melbourne, cityOf, Australia). These KBs are useful resources in many applications such as semantic searching and ranking BIBREF3 , BIBREF4 , BIBREF5 , question answering BIBREF6 , BIBREF7 and machine reading BIBREF8 . However, the KBs are still incomplete, i.e., missing a lot of valid triples BIBREF9 , BIBREF10 . Therefore, much research work has been devoted towards knowledge base completion or link prediction to predict whether a triple (h, r, t) is valid or not BIBREF11 .\n\n[P2] Section: Introduction\nMany embedding models have proposed to learn vector or matrix representations for entities and relations, obtaining state-of-the-art (SOTA) link prediction results BIBREF12 . In these embedding models, valid triples obtain lower implausibility scores than invalid triples. Let us take the well-known embedding model TransE BIBREF13 as an example. In TransE, entities and relations are represented by $k$ -dimensional vector embeddings. TransE employs a transitional characteristic to model relationships between entities, in which it assumes that if (h, r, t) is a valid fact, the embedding of head entity $h$ plus the embedding of relation $r$ should be close to the embedding of tail entity $t$ , i.e. $v_h$ + $v_r$ $\\approx $ $v_t$ (here, $v_h$ , $v_r$ and $h$0 are embeddings of $h$1 , $h$2 and $h$3 respectively). That is, a TransE score $h$4 of the valid triple (h, r, t) should be close to 0 and smaller than a score $h$5 of an invalid triple (h', r', t'). The transitional characteristic in TransE also implies the global relationships among same dimensional entries of $h$6 , $h$7 and $h$8 .",
+        "packet": "[P11] Section: Proposed ConvKB model\nOur ConvKB uses different filters $\\in \\mathbb {R}^{1\\times 3}$ to generate different feature maps. \n[omitted source between fragments]\nLet ${\\Omega }$ and $\\tau $ denote the set of filters and the number of filters, respectively, i.e. $\\tau = |{\\Omega }|$ , resulting in $\\tau $ feature maps. \n[omitted source between fragments]\nThese $\\tau $ feature maps are concatenated into a single vector $\\in \\mathbb {R}^{\\tau k\\times 1}$ which is then computed with a weight vector ${w} \\in \\mathbb {R}^{\\tau k\\times 1}$ via a dot product to give a score for the triple $(h, r, t)$ . \n\n[P5] Section: Introduction\nIn this paper, we present ConvKB—an embedding model which proposes a novel use of CNN for the KB completion task. \n[omitted source between fragments]\nIn ConvKB, each entity or relation is associated with an unique $k$ -dimensional embedding. \n[omitted source between fragments]\nLet $v_h$ , $v_r$ and $v_t$ denote $k$ -dimensional embeddings of $h$ , $r$ and $t$ , respectively. \n[omitted source between fragments]\nFor each triple (h, r, t), the corresponding triple of $k$ -dimensional embeddings ( $v_h$ , $v_h$0 , $v_h$1 ) is represented as a $v_h$2 input matrix. \n[omitted source between fragments]\nThat is, these filters are repeatedly operated over every row of the input matrix to produce different feature maps. \n[omitted source between fragments]\nThe feature maps are concatenated into a single feature vector which is then computed with a weight vector via a dot product to produce a score for the triple (h, r, t). \n\n[P0] Section: Abstract\nThis 3-column matrix is then fed to a convolution layer where multiple filters are operated on the matrix to generate different feature maps. \n[omitted source between fragments]\nThese feature maps are then concatenated into a single feature vector representing the input triple. \n\n[P20] Section: Evaluation protocol\nIn the KB completion or link prediction task BIBREF13 , the purpose is to predict a missing entity given a relation and another entity, i.e, inferring $h$ given $(r, t)$ or inferring $t$ given $(h, r)$ . \n[omitted source between fragments]\nThe results are calculated based on ranking the scores produced by the score function $f$ on test triples.\n\n[P18] Section: Proposed ConvKB model\nhere $\\mathcal {G}^{\\prime }$ is a collection of invalid triples generated by corrupting valid triples in $\\mathcal {G}$ .\n\n[P4] Section: Introduction\nDifferent filters of the same $3\\times 3$ shape are operated over the input matrix to output feature map tensors. \n[omitted source between fragments]\nThese feature map tensors are then vectorized and mapped into a vector via a linear transformation. \n\n[P1] Section: Introduction\nThese KBs are useful resources in many applications such as semantic searching and ranking BIBREF3 , BIBREF4 , BIBREF5 , question answering BIBREF6 , BIBREF7 and machine reading BIBREF8 . \n[omitted source between fragments]\nTherefore, much research work has been devoted towards knowledge base completion or link prediction to predict whether a triple (h, r, t) is valid or not BIBREF11 .\n\n[P2] Section: Introduction\nMany embedding models have proposed to learn vector or matrix representations for entities and relations, obtaining state-of-the-art (SOTA) link prediction results BIBREF12 . \n[omitted source between fragments]\nLet us take the well-known embedding model TransE BIBREF13 as an example. \n[omitted source between fragments]\nIn TransE, entities and relations are represented by $k$ -dimensional vector embeddings. \n[omitted source between fragments]\nTransE employs a transitional characteristic to model relationships between entities, in which it assumes that if (h, r, t) is a valid fact, the embedding of head entity $h$ plus the embedding of relation $r$ should be close to the embedding of tail entity $t$ , i.e. $v_h$ + $v_r$ $\\approx $ $v_t$ (here, $v_h$ , $v_r$ and $h$0 are embeddings of $h$1 , $h$2 and $h$3 respectively). \n[omitted source between fragments]\nThat is, a TransE score $h$4 of the valid triple (h, r, t) should be close to 0 and smaller than a score $h$5 of an invalid triple (h', r', t'). "
+      },
+      "ledger": [
+        {
+          "paragraph_id": 11,
+          "fragments": [
+            {
+              "text": "Our ConvKB uses different filters $\\in \\mathbb {R}^{1\\times 3}$ to generate different feature maps. ",
+              "char_start": 0,
+              "char_length": 100,
+              "byte_start": 0,
+              "byte_length": 100,
+              "paragraph_sha256": "683aec0fb5c2690cbcb3d7ae534eed0c2aca1aa96bb9705bc227a522ff7470ee"
+            },
+            {
+              "text": "Let ${\\Omega }$ and $\\tau $ denote the set of filters and the number of filters, respectively, i.e. $\\tau = |{\\Omega }|$ , resulting in $\\tau $ feature maps. ",
+              "char_start": 100,
+              "char_length": 158,
+              "byte_start": 100,
+              "byte_length": 158,
+              "paragraph_sha256": "683aec0fb5c2690cbcb3d7ae534eed0c2aca1aa96bb9705bc227a522ff7470ee"
+            },
+            {
+              "text": "These $\\tau $ feature maps are concatenated into a single vector $\\in \\mathbb {R}^{\\tau k\\times 1}$ which is then computed with a weight vector ${w} \\in \\mathbb {R}^{\\tau k\\times 1}$ via a dot product to give a score for the triple $(h, r, t)$ . ",
+              "char_start": 258,
+              "char_length": 246,
+              "byte_start": 258,
+              "byte_length": 246,
+              "paragraph_sha256": "683aec0fb5c2690cbcb3d7ae534eed0c2aca1aa96bb9705bc227a522ff7470ee"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 5,
+          "fragments": [
+            {
+              "text": "In this paper, we present ConvKB—an embedding model which proposes a novel use of CNN for the KB completion task. ",
+              "char_start": 0,
+              "char_length": 114,
+              "byte_start": 0,
+              "byte_length": 116,
+              "paragraph_sha256": "d5f3bd398ac77a8400eb2bc76c059313da5fd6f4b872ff640a0a856f134209f7"
+            },
+            {
+              "text": "In ConvKB, each entity or relation is associated with an unique $k$ -dimensional embedding. ",
+              "char_start": 114,
+              "char_length": 92,
+              "byte_start": 116,
+              "byte_length": 92,
+              "paragraph_sha256": "d5f3bd398ac77a8400eb2bc76c059313da5fd6f4b872ff640a0a856f134209f7"
+            },
+            {
+              "text": "Let $v_h$ , $v_r$ and $v_t$ denote $k$ -dimensional embeddings of $h$ , $r$ and $t$ , respectively. ",
+              "char_start": 206,
+              "char_length": 100,
+              "byte_start": 208,
+              "byte_length": 100,
+              "paragraph_sha256": "d5f3bd398ac77a8400eb2bc76c059313da5fd6f4b872ff640a0a856f134209f7"
+            },
+            {
+              "text": "For each triple (h, r, t), the corresponding triple of $k$ -dimensional embeddings ( $v_h$ , $v_h$0 , $v_h$1 ) is represented as a $v_h$2 input matrix. ",
+              "char_start": 306,
+              "char_length": 152,
+              "byte_start": 308,
+              "byte_length": 152,
+              "paragraph_sha256": "d5f3bd398ac77a8400eb2bc76c059313da5fd6f4b872ff640a0a856f134209f7"
+            },
+            {
+              "text": "That is, these filters are repeatedly operated over every row of the input matrix to produce different feature maps. ",
+              "char_start": 658,
+              "char_length": 117,
+              "byte_start": 660,
+              "byte_length": 117,
+              "paragraph_sha256": "d5f3bd398ac77a8400eb2bc76c059313da5fd6f4b872ff640a0a856f134209f7"
+            },
+            {
+              "text": "The feature maps are concatenated into a single feature vector which is then computed with a weight vector via a dot product to produce a score for the triple (h, r, t). ",
+              "char_start": 775,
+              "char_length": 170,
+              "byte_start": 777,
+              "byte_length": 170,
+              "paragraph_sha256": "d5f3bd398ac77a8400eb2bc76c059313da5fd6f4b872ff640a0a856f134209f7"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 0,
+          "fragments": [
+            {
+              "text": "This 3-column matrix is then fed to a convolution layer where multiple filters are operated on the matrix to generate different feature maps. ",
+              "char_start": 469,
+              "char_length": 142,
+              "byte_start": 469,
+              "byte_length": 142,
+              "paragraph_sha256": "c8c63f23bc45a510d1b9a35b48af08109c88142ead4e009f1bcaf24babb9ffad"
+            },
+            {
+              "text": "These feature maps are then concatenated into a single feature vector representing the input triple. ",
+              "char_start": 611,
+              "char_length": 101,
+              "byte_start": 611,
+              "byte_length": 101,
+              "paragraph_sha256": "c8c63f23bc45a510d1b9a35b48af08109c88142ead4e009f1bcaf24babb9ffad"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 20,
+          "fragments": [
+            {
+              "text": "In the KB completion or link prediction task BIBREF13 , the purpose is to predict a missing entity given a relation and another entity, i.e, inferring $h$ given $(r, t)$ or inferring $t$ given $(h, r)$ . ",
+              "char_start": 0,
+              "char_length": 204,
+              "byte_start": 0,
+              "byte_length": 204,
+              "paragraph_sha256": "2be9a14e033a72f023a2d84eaaff8d4b7c196a88a15264e1da512ed3a3f29988"
+            },
+            {
+              "text": "The results are calculated based on ranking the scores produced by the score function $f$ on test triples.",
+              "char_start": 204,
+              "char_length": 106,
+              "byte_start": 204,
+              "byte_length": 106,
+              "paragraph_sha256": "2be9a14e033a72f023a2d84eaaff8d4b7c196a88a15264e1da512ed3a3f29988"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 18,
+          "fragments": [
+            {
+              "text": "here $\\mathcal {G}^{\\prime }$ is a collection of invalid triples generated by corrupting valid triples in $\\mathcal {G}$ .",
+              "char_start": 0,
+              "char_length": 122,
+              "byte_start": 0,
+              "byte_length": 122,
+              "paragraph_sha256": "a8eaf22a5a50497d3dab6e9871000dddae8905c53b168371e9c4ee263a955d61"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 4,
+          "fragments": [
+            {
+              "text": "Different filters of the same $3\\times 3$ shape are operated over the input matrix to output feature map tensors. ",
+              "char_start": 605,
+              "char_length": 114,
+              "byte_start": 607,
+              "byte_length": 114,
+              "paragraph_sha256": "723bc3875f22fc8687ce280fecc57381133980adce542125e3f82a8c1f049c98"
+            },
+            {
+              "text": "These feature map tensors are then vectorized and mapped into a vector via a linear transformation. ",
+              "char_start": 719,
+              "char_length": 100,
+              "byte_start": 721,
+              "byte_length": 100,
+              "paragraph_sha256": "723bc3875f22fc8687ce280fecc57381133980adce542125e3f82a8c1f049c98"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 1,
+          "fragments": [
+            {
+              "text": "These KBs are useful resources in many applications such as semantic searching and ranking BIBREF3 , BIBREF4 , BIBREF5 , question answering BIBREF6 , BIBREF7 and machine reading BIBREF8 . ",
+              "char_start": 295,
+              "char_length": 188,
+              "byte_start": 295,
+              "byte_length": 188,
+              "paragraph_sha256": "47e27db3e74caac15fca11b3c089e27f02b4dea3de73bb9b0a82b8f72ba1e082"
+            },
+            {
+              "text": "Therefore, much research work has been devoted towards knowledge base completion or link prediction to predict whether a triple (h, r, t) is valid or not BIBREF11 .",
+              "char_start": 580,
+              "char_length": 164,
+              "byte_start": 580,
+              "byte_length": 164,
+              "paragraph_sha256": "47e27db3e74caac15fca11b3c089e27f02b4dea3de73bb9b0a82b8f72ba1e082"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 2,
+          "fragments": [
+            {
+              "text": "Many embedding models have proposed to learn vector or matrix representations for entities and relations, obtaining state-of-the-art (SOTA) link prediction results BIBREF12 . ",
+              "char_start": 0,
+              "char_length": 175,
+              "byte_start": 0,
+              "byte_length": 175,
+              "paragraph_sha256": "bdb5c9b6e2baa60844cdd4c95b83af658ead5edc81c7ddbadfaddeb06f2f8559"
+            },
+            {
+              "text": "Let us take the well-known embedding model TransE BIBREF13 as an example. ",
+              "char_start": 273,
+              "char_length": 74,
+              "byte_start": 273,
+              "byte_length": 74,
+              "paragraph_sha256": "bdb5c9b6e2baa60844cdd4c95b83af658ead5edc81c7ddbadfaddeb06f2f8559"
+            },
+            {
+              "text": "In TransE, entities and relations are represented by $k$ -dimensional vector embeddings. ",
+              "char_start": 347,
+              "char_length": 89,
+              "byte_start": 347,
+              "byte_length": 89,
+              "paragraph_sha256": "bdb5c9b6e2baa60844cdd4c95b83af658ead5edc81c7ddbadfaddeb06f2f8559"
+            },
+            {
+              "text": "TransE employs a transitional characteristic to model relationships between entities, in which it assumes that if (h, r, t) is a valid fact, the embedding of head entity $h$ plus the embedding of relation $r$ should be close to the embedding of tail entity $t$ , i.e. $v_h$ + $v_r$ $\\approx $ $v_t$ (here, $v_h$ , $v_r$ and $h$0 are embeddings of $h$1 , $h$2 and $h$3 respectively). ",
+              "char_start": 436,
+              "char_length": 383,
+              "byte_start": 436,
+              "byte_length": 383,
+              "paragraph_sha256": "bdb5c9b6e2baa60844cdd4c95b83af658ead5edc81c7ddbadfaddeb06f2f8559"
+            },
+            {
+              "text": "That is, a TransE score $h$4 of the valid triple (h, r, t) should be close to 0 and smaller than a score $h$5 of an invalid triple (h', r', t'). ",
+              "char_start": 819,
+              "char_length": 145,
+              "byte_start": 819,
+              "byte_length": 145,
+              "paragraph_sha256": "bdb5c9b6e2baa60844cdd4c95b83af658ead5edc81c7ddbadfaddeb06f2f8559"
+            }
+          ]
+        }
+      ],
+      "selected": [
+        11,
+        5,
+        0,
+        20,
+        18,
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "paper_id": "1911.01680",
+      "id": "2d47cdf2c1e0c64c73518aead1b94e0ee594b7a5",
+      "question": "How big is slot filing dataset?",
+      "title": "Improving Slot Filling by Utilizing Contextual Information",
+      "kind": "procedure",
+      "material": {
+        "full": "[P14] Section: Model ::: Consistency with Contextual Representation\nWe propose to maximize the mutual information (MI) between the word representation and its context in the loss function. In information theory, MI evaluates how much information we know about one random variable if the value of another variable is revealed. Formally, the mutual information between two random variable $X_1$ and $X_2$ is obtained by:\n\n[P31] Section: Experiments\nIn our experiments, we use Onsei Intent Slot dataset. Table TABREF21 shows the statics of this dataset. We use the following hyper parameters in our model: We set the word embedding and POS embedding to 768 and 30 respectively; The pre-trained BERT BIBREF17 embedding are used to initialize word embeddings; The hidden dimension of the Bi-LSTM, GCN and feed forward networks are 200; the hyper parameters $\\alpha $, $\\beta $ and $\\gamma $ are all set to 0.1; We use Adam optimizer with learning rate 0.003 to train the model. We use micro-averaged F1 score on all labels as the evaluation metric.\n\n[P34] Section: Conclusion & Future Work\nIn this work we introduce a new deep model for the task of Slot Filling. In a multi-task setting, our model increase the mutual information between word representations and its context, improve the label information in the context and predict which concepts are expressed in the given sentence. Our experiments on an image edit request corpus shows that our model achieves state-of-the-art results on this dataset.\n\n[P0] Section: Abstract\nSlot Filling is the task of extracting the semantic concept from a given natural language utterance. Recently it has been shown that using contextual information, either in work representations (e.g., BERT embedding) or in the computation graph of the model, could improve the performance of the model. However, recent work uses the contextual information in a restricted manner, e.g., by concatenating the word representation and its context feature vector, limiting the model from learning any direct association between the context and the label of word. We introduce a new deep model utilizing the contextual information for each work in the given sentence in a multi-task setting. Our model enforce consistency between the feature vectors of the context and the word while increasing the expressiveness of the context about the label of the word. Our empirical analysis on a slot filling dataset proves the superiority of the model over the baselines.\n\n[P5] Section: Model\nOur model is trained in a multi-task setting in which the main task is slot filling to identify the best possible sequence of labels for the given sentence. In the first auxiliary task we aim to increase consistency between the word representation and its context. The second auxiliary task is to enhance task specific information in contextual information. In this section, we explain each of these tasks in more details.\n\n[P2] Section: Introduction\nPrior work have shown that contextual information could be useful for SF. They utilize contextual information either in word level representation (i.e., via contextualize embedding e.g., BERT BIBREF0) or in the model computation graph (e.g., concatenating the context feature to the word feature BIBREF1). However, such methods fail to capture the explicit dependence between the context of the word and its label. Moreover, such limited use of contextual information (i.e., concatenation of the feature vector and context vector) in the model cannot model the interaction between the word representation and its context. In order to alleviate these issues, in this work, we propose a novel model to explicitly increase the predictability of the word label using its context and increasing the interactivity between word representations and its context. More specifically, in our model we use the context of the word to predict its label and by doing so our model learns label-aware context for each word in the sentence. In order to improve the interactivity between the word representation and its context, we increase the mutual information between the word representations and its context. In addition to these contributions, we also propose an auxiliary task to predict which labels are expressed in a given sentence. Our model is trained in a mutli-tasking framework. Our experiments on a SF dataset for identifying semantic concepts from natural language request to edit an image show the superiority of our model compared to previous baselines. Our model achieves the state-of-the-art results on the benchmark dataset by improving the F1 score by almost 2%, which corresponds to a 12.3% error rate reduction.\n\n[P1] Section: Introduction\nSlot Filling (SF) is the task of identifying the semantic concept expressed in natural language utterance. For instance, consider a request to edit an image expressed in natural language: “Remove the blue ball on the table and change the color of the wall to brown”. Here, the user asks for an \"Action\" (i.e., removing) on one “Object” (blue ball on the table) in the image and changing an “Attribute” (i.e., color) of the image to new “Value” (i.e., brown). Our goal in SF is to provide a sequence of labels for the given sentence to identify the semantic concept expressed in the given sentence.\n\n[P32] Section: Experiments\nWe compare our method with the models trained using Adobe internal NLU tool, Pytext BIBREF18 and Rasa BIBREF19 NLU tools. Table TABREF22 shows the results on Test set. Our model improves the F1 score by almost 2%, which corresponds to a 12.3% error rate reduction. This improvements proves the effectiveness of using contextual information for the task of slot filling.",
+        "packet": "[P14] Section: Model ::: Consistency with Contextual Representation\nIn information theory, MI evaluates how much information we know about one random variable if the value of another variable is revealed. \n[omitted source between fragments]\nFormally, the mutual information between two random variable $X_1$ and $X_2$ is obtained by:\n\n[P31] Section: Experiments\nIn our experiments, we use Onsei Intent Slot dataset. \n[omitted source between fragments]\nTable TABREF21 shows the statics of this dataset. \n[omitted source between fragments]\nWe use the following hyper parameters in our model: We set the word embedding and POS embedding to 768 and 30 respectively; The pre-trained BERT BIBREF17 embedding are used to initialize word embeddings; The hidden dimension of the Bi-LSTM, GCN and feed forward networks are 200; the hyper parameters $\\alpha $, $\\beta $ and $\\gamma $ are all set to 0.1; We use Adam optimizer with learning rate 0.003 to train the model. \n[omitted source between fragments]\nWe use micro-averaged F1 score on all labels as the evaluation metric.\n\n[P34] Section: Conclusion & Future Work\nIn this work we introduce a new deep model for the task of Slot Filling. \n[omitted source between fragments]\nOur experiments on an image edit request corpus shows that our model achieves state-of-the-art results on this dataset.\n\n[P0] Section: Abstract\nSlot Filling is the task of extracting the semantic concept from a given natural language utterance. \n[omitted source between fragments]\nOur empirical analysis on a slot filling dataset proves the superiority of the model over the baselines.\n\n[P5] Section: Model\nOur model is trained in a multi-task setting in which the main task is slot filling to identify the best possible sequence of labels for the given sentence. \n[omitted source between fragments]\nThe second auxiliary task is to enhance task specific information in contextual information. \n\n[P2] Section: Introduction\nOur model is trained in a mutli-tasking framework. \n[omitted source between fragments]\nOur experiments on a SF dataset for identifying semantic concepts from natural language request to edit an image show the superiority of our model compared to previous baselines. \n\n[P1] Section: Introduction\nSlot Filling (SF) is the task of identifying the semantic concept expressed in natural language utterance. \n[omitted source between fragments]\nOur goal in SF is to provide a sequence of labels for the given sentence to identify the semantic concept expressed in the given sentence.\n\n[P32] Section: Experiments\nWe compare our method with the models trained using Adobe internal NLU tool, Pytext BIBREF18 and Rasa BIBREF19 NLU tools. \n[omitted source between fragments]\nThis improvements proves the effectiveness of using contextual information for the task of slot filling."
+      },
+      "ledger": [
+        {
+          "paragraph_id": 14,
+          "fragments": [
+            {
+              "text": "In information theory, MI evaluates how much information we know about one random variable if the value of another variable is revealed. ",
+              "char_start": 121,
+              "char_length": 137,
+              "byte_start": 121,
+              "byte_length": 137,
+              "paragraph_sha256": "2869ae3536f455325d15f23bb1f459336297399a4b4f4c889c567787967eaaec"
+            },
+            {
+              "text": "Formally, the mutual information between two random variable $X_1$ and $X_2$ is obtained by:",
+              "char_start": 258,
+              "char_length": 92,
+              "byte_start": 258,
+              "byte_length": 92,
+              "paragraph_sha256": "2869ae3536f455325d15f23bb1f459336297399a4b4f4c889c567787967eaaec"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 31,
+          "fragments": [
+            {
+              "text": "In our experiments, we use Onsei Intent Slot dataset. ",
+              "char_start": 0,
+              "char_length": 54,
+              "byte_start": 0,
+              "byte_length": 54,
+              "paragraph_sha256": "0bd16dea1a4d80af2b44d427a61a024cbb4bbaf76646eb86eb6e389ff165c520"
+            },
+            {
+              "text": "Table TABREF21 shows the statics of this dataset. ",
+              "char_start": 54,
+              "char_length": 50,
+              "byte_start": 54,
+              "byte_length": 50,
+              "paragraph_sha256": "0bd16dea1a4d80af2b44d427a61a024cbb4bbaf76646eb86eb6e389ff165c520"
+            },
+            {
+              "text": "We use the following hyper parameters in our model: We set the word embedding and POS embedding to 768 and 30 respectively; The pre-trained BERT BIBREF17 embedding are used to initialize word embeddings; The hidden dimension of the Bi-LSTM, GCN and feed forward networks are 200; the hyper parameters $\\alpha $, $\\beta $ and $\\gamma $ are all set to 0.1; We use Adam optimizer with learning rate 0.003 to train the model. ",
+              "char_start": 104,
+              "char_length": 422,
+              "byte_start": 104,
+              "byte_length": 422,
+              "paragraph_sha256": "0bd16dea1a4d80af2b44d427a61a024cbb4bbaf76646eb86eb6e389ff165c520"
+            },
+            {
+              "text": "We use micro-averaged F1 score on all labels as the evaluation metric.",
+              "char_start": 526,
+              "char_length": 70,
+              "byte_start": 526,
+              "byte_length": 70,
+              "paragraph_sha256": "0bd16dea1a4d80af2b44d427a61a024cbb4bbaf76646eb86eb6e389ff165c520"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 34,
+          "fragments": [
+            {
+              "text": "In this work we introduce a new deep model for the task of Slot Filling. ",
+              "char_start": 0,
+              "char_length": 73,
+              "byte_start": 0,
+              "byte_length": 73,
+              "paragraph_sha256": "e10ca6fd68a50bae088664c0e177e9d2f1265a35adcead7a3d27551553b26c02"
+            },
+            {
+              "text": "Our experiments on an image edit request corpus shows that our model achieves state-of-the-art results on this dataset.",
+              "char_start": 295,
+              "char_length": 119,
+              "byte_start": 295,
+              "byte_length": 119,
+              "paragraph_sha256": "e10ca6fd68a50bae088664c0e177e9d2f1265a35adcead7a3d27551553b26c02"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 0,
+          "fragments": [
+            {
+              "text": "Slot Filling is the task of extracting the semantic concept from a given natural language utterance. ",
+              "char_start": 0,
+              "char_length": 101,
+              "byte_start": 0,
+              "byte_length": 101,
+              "paragraph_sha256": "131fe13d5565d0c9bcd647627149ca9f5c97439c1f12c36d8017e3405d24068b"
+            },
+            {
+              "text": "Our empirical analysis on a slot filling dataset proves the superiority of the model over the baselines.",
+              "char_start": 852,
+              "char_length": 104,
+              "byte_start": 852,
+              "byte_length": 104,
+              "paragraph_sha256": "131fe13d5565d0c9bcd647627149ca9f5c97439c1f12c36d8017e3405d24068b"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 5,
+          "fragments": [
+            {
+              "text": "Our model is trained in a multi-task setting in which the main task is slot filling to identify the best possible sequence of labels for the given sentence. ",
+              "char_start": 0,
+              "char_length": 157,
+              "byte_start": 0,
+              "byte_length": 157,
+              "paragraph_sha256": "768556e71645d783e111dcc55ddbc7c5eb3cf55117caf73b0995c2a331adfc85"
+            },
+            {
+              "text": "The second auxiliary task is to enhance task specific information in contextual information. ",
+              "char_start": 265,
+              "char_length": 93,
+              "byte_start": 265,
+              "byte_length": 93,
+              "paragraph_sha256": "768556e71645d783e111dcc55ddbc7c5eb3cf55117caf73b0995c2a331adfc85"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 2,
+          "fragments": [
+            {
+              "text": "Our model is trained in a mutli-tasking framework. ",
+              "char_start": 1323,
+              "char_length": 51,
+              "byte_start": 1323,
+              "byte_length": 51,
+              "paragraph_sha256": "7c96a1681210e52c9fa5aa37ff6aad311656a5bf67910ee0562c4e4e7cee4314"
+            },
+            {
+              "text": "Our experiments on a SF dataset for identifying semantic concepts from natural language request to edit an image show the superiority of our model compared to previous baselines. ",
+              "char_start": 1374,
+              "char_length": 179,
+              "byte_start": 1374,
+              "byte_length": 179,
+              "paragraph_sha256": "7c96a1681210e52c9fa5aa37ff6aad311656a5bf67910ee0562c4e4e7cee4314"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 1,
+          "fragments": [
+            {
+              "text": "Slot Filling (SF) is the task of identifying the semantic concept expressed in natural language utterance. ",
+              "char_start": 0,
+              "char_length": 107,
+              "byte_start": 0,
+              "byte_length": 107,
+              "paragraph_sha256": "8b2f2af35b17911ad180cbf19f4933b7476f4f029536215576fd6542effd096b"
+            },
+            {
+              "text": "Our goal in SF is to provide a sequence of labels for the given sentence to identify the semantic concept expressed in the given sentence.",
+              "char_start": 459,
+              "char_length": 138,
+              "byte_start": 475,
+              "byte_length": 138,
+              "paragraph_sha256": "8b2f2af35b17911ad180cbf19f4933b7476f4f029536215576fd6542effd096b"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 32,
+          "fragments": [
+            {
+              "text": "We compare our method with the models trained using Adobe internal NLU tool, Pytext BIBREF18 and Rasa BIBREF19 NLU tools. ",
+              "char_start": 0,
+              "char_length": 122,
+              "byte_start": 0,
+              "byte_length": 122,
+              "paragraph_sha256": "12e5b732038f337661c32a652102522298d37cb14053c3704c8c76615e1b8d11"
+            },
+            {
+              "text": "This improvements proves the effectiveness of using contextual information for the task of slot filling.",
+              "char_start": 265,
+              "char_length": 104,
+              "byte_start": 265,
+              "byte_length": 104,
+              "paragraph_sha256": "12e5b732038f337661c32a652102522298d37cb14053c3704c8c76615e1b8d11"
+            }
+          ]
+        }
+      ],
+      "selected": [
+        14,
+        31,
+        34,
+        0,
+        5,
+        2,
+        1,
+        32
+      ]
+    },
+    {
+      "paper_id": "1809.04686",
+      "id": "e930f153c89dfe9cff75b7b15e45cd3d700f4c72",
+      "question": "How big is the impact of training data size on the performance of the multilingual encoder?",
+      "title": "Zero-Shot Cross-lingual Classification Using Multilingual Neural Machine Translation",
+      "kind": "procedure",
+      "material": {
+        "full": "[P28] Section: Analyses\nIn this section, we try to analyze why our simple Encoder-Classifier system is effective at zero-shot classification. We perform a series of experiments to better understand this phenomenon. In particular, we study (1) the effect of shared sub-word vocabulary, (2) the amount of multilingual training data to measure the influence of multilinguality, (3) encoder/classifier capacity to measure the influence of representation power, and (4) model behavior on different training phases to assess the relation between generalization performance on English and zero-shot performance on French.\n\n[P24] Section: Zero-Shot Classification Results\nIn this section, we explore the zero-shot classification task in French for our systems. We assume that we do not have any French training data for all the three tasks and test how well our proposed method can generalize to the unseen French language without any further training. Specifically, we reuse the three proposed systems from Table 1 after being trained only on the English classification task and test the systems on data from an unseen language (e.g. French). A reasonable upper bound to which zero-shot performance should be compared to is bridging - translating a French test text to English and then applying the English classifier on the translated text. If we assume the translation to be perfect, we should expect this approach to perform as well as the English classifier.\n\n[P0] Section: Abstract\nTransferring representations from large supervised tasks to downstream tasks has shown promising results in AI fields such as Computer Vision and Natural Language Processing (NLP). In parallel, the recent progress in Machine Translation (MT) has enabled one to train multilingual Neural MT (NMT) systems that can translate between multiple languages and are also capable of performing zero-shot translation. However, little attention has been paid to leveraging representations learned by a multilingual NMT system to enable zero-shot multilinguality in other NLP tasks. In this paper, we demonstrate a simple framework, a multilingual Encoder-Classifier, for cross-lingual transfer learning by reusing the encoder from a multilingual NMT system and stitching it with a task-specific classifier component. Our proposed model achieves significant improvements in the English setup on three benchmark tasks - Amazon Reviews, SST and SNLI. Further, our system can perform classification in a new language for which no classification data was seen during training, showing that zero-shot classification is possible and remarkably competitive. In order to understand the underlying factors contributing to this finding, we conducted a series of analyses on the effect of the shared vocabulary, the training data type for NMT, classifier complexity, encoder representation power, and model generalization on zero-shot performance. Our results provide strong evidence that the representations learned from multilingual NMT systems are widely applicable across languages and tasks.\n\n[P6] Section: Multilingual Representations Using NMT\nAlthough there has been a large body of work in building multilingual NMT models which can translate between multiple languages at the same time BIBREF29 , BIBREF30 , BIBREF31 , BIBREF8 , zero-shot capabilities of such multilingual representations have only been tested for MT BIBREF8 . We propose a simple yet effective solution - reuse the encoder of a multilingual NMT model to initialize the encoder for other NLP tasks. To be able to achieve promising zero-shot classification performance, we consider two factors: (1) The ability to encode multiple source languages with the same encoder and (2) The ability to learn language agnostic representations of the source sequence. Based on the literature, both requirements can be satisfied by training a multilingual NMT model having a shared encoder BIBREF32 , BIBREF8 , and a separate decoder and attention mechanism for each target language BIBREF30 . After training such a multilingual NMT model, the decoder and the corresponding attention mechanisms (which are target-language specific) are discarded, while the multilingual encoder is used to initialize the encoder of our proposed Encoder-Classifier model.\n\n[P26] Section: Zero-Shot Classification Results\nTable 2 summarizes all of our zero-shot results for French classification on the three tasks. It can be seen that just by using the pre-trained NMT encoder, the zero-shot performance increases drastically from almost random to within 10% of the bridged system. Freezing the encoder further pushes this performance closer to the bridged system. On the Amazon Review task, our zero-shot system is within 2% of the best bridged system. On the SST task, our zero-shot system obtains an accuracy of 83.14% which is within 1.5% of the bridged equivalent (in this case the English system).\n\n[P13] Section: Corpora\nThe sentiment classification task proposed in BIBREF9 is also a binary classification problem where each sentence and phrase is associated with either a positive or a negative sentiment. We ignore phrase-level annotations and sentence-level neutral examples in our experiments. The dataset contains 6920, 872, and 1821 examples for training, development and testing, respectively. Since SST does not provide a multilingual test set, we used the public translation engine Google Translate to translate the SST test set to French. Previous work by BIBREF40 has shown that replacing the human translated test set with a synthetic set (obtained by using Google Translate) produces only a small difference of around 1% absolute accuracy on their human-translated French SNLI test set. Therefore, the performance measured on our `pseudo' French SST test set is expected to be a good indicator of zero-shot performance.\n\n[P19] Section: Model and Training Details\nThe Encoder-Classifier model here uses the encoder defined previously. With regards to the classifier, the pre- and post-pooling networks ( $f_{pre}$ , $f_{post}$ ) are both one-layer feed forward networks to cast the dimension size from 512 to 128 and from 128 to 32, respectively. We used max-pooling operator for the $f_{pool}$ network to pool the activation over time.\n\n[P12] Section: Corpora\nThe Amazon reviews dataset BIBREF39 is a multilingual sentiment classification dataset, providing data for four languages - English (En), French (Fr), German (De), and Japanese. We use the English and French datasets in our experiments. The dataset contains 6,000 documents in the train and test portions for each language. Each review consists of a category label, a title, a review, and a star rating (5-point scale). We only use the review text in our experiments. Following BIBREF39 , we mapped the reviews with lower scores (1 and 2) to negative examples and the reviews with higher scores (4 and 5) to positive examples, thereby turning it into a binary classification problem. Reviews with score 3 are dropped. We split the training dataset into 10% for development and the rest for training, and we truncate each example and keep the first 200 words in the review. Note that, since the data for each language was obtained by crawling different product pages, the data is not aligned across languages.",
+        "packet": "[P28] Section: Analyses\nIn this section, we try to analyze why our simple Encoder-Classifier system is effective at zero-shot classification. \n[omitted source between fragments]\nIn particular, we study (1) the effect of shared sub-word vocabulary, (2) the amount of multilingual training data to measure the influence of multilinguality, (3) encoder/classifier capacity to measure the influence of representation power, and (4) model behavior on different training phases to assess the relation between generalization performance on English and zero-shot performance on French.\n\n[P24] Section: Zero-Shot Classification Results\nWe assume that we do not have any French training data for all the three tasks and test how well our proposed method can generalize to the unseen French language without any further training. \n[omitted source between fragments]\nA reasonable upper bound to which zero-shot performance should be compared to is bridging - translating a French test text to English and then applying the English classifier on the translated text. \n\n[P0] Section: Abstract\nIn parallel, the recent progress in Machine Translation (MT) has enabled one to train multilingual Neural MT (NMT) systems that can translate between multiple languages and are also capable of performing zero-shot translation. \n[omitted source between fragments]\nIn order to understand the underlying factors contributing to this finding, we conducted a series of analyses on the effect of the shared vocabulary, the training data type for NMT, classifier complexity, encoder representation power, and model generalization on zero-shot performance. \n\n[P6] Section: Multilingual Representations Using NMT\nBased on the literature, both requirements can be satisfied by training a multilingual NMT model having a shared encoder BIBREF32 , BIBREF8 , and a separate decoder and attention mechanism for each target language BIBREF30 . \n[omitted source between fragments]\nAfter training such a multilingual NMT model, the decoder and the corresponding attention mechanisms (which are target-language specific) are discarded, while the multilingual encoder is used to initialize the encoder of our proposed Encoder-Classifier model.\n\n[P26] Section: Zero-Shot Classification Results\nFreezing the encoder further pushes this performance closer to the bridged system. \n[omitted source between fragments]\nOn the Amazon Review task, our zero-shot system is within 2% of the best bridged system. \n\n[P13] Section: Corpora\nThe sentiment classification task proposed in BIBREF9 is also a binary classification problem where each sentence and phrase is associated with either a positive or a negative sentiment. \n[omitted source between fragments]\nWe ignore phrase-level annotations and sentence-level neutral examples in our experiments. \n[omitted source between fragments]\nThe dataset contains 6920, 872, and 1821 examples for training, development and testing, respectively. \n[omitted source between fragments]\nSince SST does not provide a multilingual test set, we used the public translation engine Google Translate to translate the SST test set to French. \n[omitted source between fragments]\nPrevious work by BIBREF40 has shown that replacing the human translated test set with a synthetic set (obtained by using Google Translate) produces only a small difference of around 1% absolute accuracy on their human-translated French SNLI test set. \n[omitted source between fragments]\nTherefore, the performance measured on our `pseudo' French SST test set is expected to be a good indicator of zero-shot performance.\n\n[P19] Section: Model and Training Details\nThe Encoder-Classifier model here uses the encoder defined previously. \n[omitted source between fragments]\nWith regards to the classifier, the pre- and post-pooling networks ( $f_{pre}$ , $f_{post}$ ) are both one-layer feed forward networks to cast the dimension size from 512 to 128 and from 128 to 32, respectively. \n[omitted source between fragments]\nWe used max-pooling operator for the $f_{pool}$ network to pool the activation over time.\n\n[P12] Section: Corpora\nThe Amazon reviews dataset BIBREF39 is a multilingual sentiment classification dataset, providing data for four languages - English (En), French (Fr), German (De), and Japanese. \n[omitted source between fragments]\nNote that, since the data for each language was obtained by crawling different product pages, the data is not aligned across languages."
+      },
+      "ledger": [
+        {
+          "paragraph_id": 28,
+          "fragments": [
+            {
+              "text": "In this section, we try to analyze why our simple Encoder-Classifier system is effective at zero-shot classification. ",
+              "char_start": 0,
+              "char_length": 118,
+              "byte_start": 0,
+              "byte_length": 118,
+              "paragraph_sha256": "2210406c62d239ae0a95a354c22fbf0bf23b484b70624bf2ef21cc9f1bb6f76a"
+            },
+            {
+              "text": "In particular, we study (1) the effect of shared sub-word vocabulary, (2) the amount of multilingual training data to measure the influence of multilinguality, (3) encoder/classifier capacity to measure the influence of representation power, and (4) model behavior on different training phases to assess the relation between generalization performance on English and zero-shot performance on French.",
+              "char_start": 191,
+              "char_length": 399,
+              "byte_start": 191,
+              "byte_length": 399,
+              "paragraph_sha256": "2210406c62d239ae0a95a354c22fbf0bf23b484b70624bf2ef21cc9f1bb6f76a"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 24,
+          "fragments": [
+            {
+              "text": "We assume that we do not have any French training data for all the three tasks and test how well our proposed method can generalize to the unseen French language without any further training. ",
+              "char_start": 89,
+              "char_length": 192,
+              "byte_start": 89,
+              "byte_length": 192,
+              "paragraph_sha256": "732e2412319458733f6f9237114f7f0e1c96606aba62bdbe3ab03f2fa77ba47f"
+            },
+            {
+              "text": "A reasonable upper bound to which zero-shot performance should be compared to is bridging - translating a French test text to English and then applying the English classifier on the translated text. ",
+              "char_start": 472,
+              "char_length": 199,
+              "byte_start": 472,
+              "byte_length": 199,
+              "paragraph_sha256": "732e2412319458733f6f9237114f7f0e1c96606aba62bdbe3ab03f2fa77ba47f"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 0,
+          "fragments": [
+            {
+              "text": "In parallel, the recent progress in Machine Translation (MT) has enabled one to train multilingual Neural MT (NMT) systems that can translate between multiple languages and are also capable of performing zero-shot translation. ",
+              "char_start": 181,
+              "char_length": 227,
+              "byte_start": 181,
+              "byte_length": 227,
+              "paragraph_sha256": "07a41e40d1a777712ba398a01bd8d0b56e88aa363745b777bf40d7c3d270fbf5"
+            },
+            {
+              "text": "In order to understand the underlying factors contributing to this finding, we conducted a series of analyses on the effect of the shared vocabulary, the training data type for NMT, classifier complexity, encoder representation power, and model generalization on zero-shot performance. ",
+              "char_start": 1139,
+              "char_length": 286,
+              "byte_start": 1139,
+              "byte_length": 286,
+              "paragraph_sha256": "07a41e40d1a777712ba398a01bd8d0b56e88aa363745b777bf40d7c3d270fbf5"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 6,
+          "fragments": [
+            {
+              "text": "Based on the literature, both requirements can be satisfied by training a multilingual NMT model having a shared encoder BIBREF32 , BIBREF8 , and a separate decoder and attention mechanism for each target language BIBREF30 . ",
+              "char_start": 681,
+              "char_length": 225,
+              "byte_start": 681,
+              "byte_length": 225,
+              "paragraph_sha256": "d937b32415c567b96555ef85c7c2a57762436f9568b475f0a5d2f6d28fecb8c6"
+            },
+            {
+              "text": "After training such a multilingual NMT model, the decoder and the corresponding attention mechanisms (which are target-language specific) are discarded, while the multilingual encoder is used to initialize the encoder of our proposed Encoder-Classifier model.",
+              "char_start": 906,
+              "char_length": 259,
+              "byte_start": 906,
+              "byte_length": 259,
+              "paragraph_sha256": "d937b32415c567b96555ef85c7c2a57762436f9568b475f0a5d2f6d28fecb8c6"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 26,
+          "fragments": [
+            {
+              "text": "Freezing the encoder further pushes this performance closer to the bridged system. ",
+              "char_start": 261,
+              "char_length": 83,
+              "byte_start": 261,
+              "byte_length": 83,
+              "paragraph_sha256": "7728d6f76ff3c73f5597ca944362271b113608854f32f01121b481a8e992853d"
+            },
+            {
+              "text": "On the Amazon Review task, our zero-shot system is within 2% of the best bridged system. ",
+              "char_start": 344,
+              "char_length": 89,
+              "byte_start": 344,
+              "byte_length": 89,
+              "paragraph_sha256": "7728d6f76ff3c73f5597ca944362271b113608854f32f01121b481a8e992853d"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 13,
+          "fragments": [
+            {
+              "text": "The sentiment classification task proposed in BIBREF9 is also a binary classification problem where each sentence and phrase is associated with either a positive or a negative sentiment. ",
+              "char_start": 0,
+              "char_length": 187,
+              "byte_start": 0,
+              "byte_length": 187,
+              "paragraph_sha256": "71b9dc4b1f10e6a19f8b025ce4ee841865fe383ff97745fec4b45f40e7dccd59"
+            },
+            {
+              "text": "We ignore phrase-level annotations and sentence-level neutral examples in our experiments. ",
+              "char_start": 187,
+              "char_length": 91,
+              "byte_start": 187,
+              "byte_length": 91,
+              "paragraph_sha256": "71b9dc4b1f10e6a19f8b025ce4ee841865fe383ff97745fec4b45f40e7dccd59"
+            },
+            {
+              "text": "The dataset contains 6920, 872, and 1821 examples for training, development and testing, respectively. ",
+              "char_start": 278,
+              "char_length": 103,
+              "byte_start": 278,
+              "byte_length": 103,
+              "paragraph_sha256": "71b9dc4b1f10e6a19f8b025ce4ee841865fe383ff97745fec4b45f40e7dccd59"
+            },
+            {
+              "text": "Since SST does not provide a multilingual test set, we used the public translation engine Google Translate to translate the SST test set to French. ",
+              "char_start": 381,
+              "char_length": 148,
+              "byte_start": 381,
+              "byte_length": 148,
+              "paragraph_sha256": "71b9dc4b1f10e6a19f8b025ce4ee841865fe383ff97745fec4b45f40e7dccd59"
+            },
+            {
+              "text": "Previous work by BIBREF40 has shown that replacing the human translated test set with a synthetic set (obtained by using Google Translate) produces only a small difference of around 1% absolute accuracy on their human-translated French SNLI test set. ",
+              "char_start": 529,
+              "char_length": 251,
+              "byte_start": 529,
+              "byte_length": 251,
+              "paragraph_sha256": "71b9dc4b1f10e6a19f8b025ce4ee841865fe383ff97745fec4b45f40e7dccd59"
+            },
+            {
+              "text": "Therefore, the performance measured on our `pseudo' French SST test set is expected to be a good indicator of zero-shot performance.",
+              "char_start": 780,
+              "char_length": 132,
+              "byte_start": 780,
+              "byte_length": 132,
+              "paragraph_sha256": "71b9dc4b1f10e6a19f8b025ce4ee841865fe383ff97745fec4b45f40e7dccd59"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 19,
+          "fragments": [
+            {
+              "text": "The Encoder-Classifier model here uses the encoder defined previously. ",
+              "char_start": 0,
+              "char_length": 71,
+              "byte_start": 0,
+              "byte_length": 71,
+              "paragraph_sha256": "804d56e2ed04b1db9634a3d3e2de68c8433786c3bd3520672060e16b31f8eb86"
+            },
+            {
+              "text": "With regards to the classifier, the pre- and post-pooling networks ( $f_{pre}$ , $f_{post}$ ) are both one-layer feed forward networks to cast the dimension size from 512 to 128 and from 128 to 32, respectively. ",
+              "char_start": 71,
+              "char_length": 212,
+              "byte_start": 71,
+              "byte_length": 212,
+              "paragraph_sha256": "804d56e2ed04b1db9634a3d3e2de68c8433786c3bd3520672060e16b31f8eb86"
+            },
+            {
+              "text": "We used max-pooling operator for the $f_{pool}$ network to pool the activation over time.",
+              "char_start": 283,
+              "char_length": 89,
+              "byte_start": 283,
+              "byte_length": 89,
+              "paragraph_sha256": "804d56e2ed04b1db9634a3d3e2de68c8433786c3bd3520672060e16b31f8eb86"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 12,
+          "fragments": [
+            {
+              "text": "The Amazon reviews dataset BIBREF39 is a multilingual sentiment classification dataset, providing data for four languages - English (En), French (Fr), German (De), and Japanese. ",
+              "char_start": 0,
+              "char_length": 178,
+              "byte_start": 0,
+              "byte_length": 178,
+              "paragraph_sha256": "c66fcd107c00dcbbbbb0c6fb13f0aba313a1d989d96475dcaf6e4e607e656ad5"
+            },
+            {
+              "text": "Note that, since the data for each language was obtained by crawling different product pages, the data is not aligned across languages.",
+              "char_start": 873,
+              "char_length": 135,
+              "byte_start": 873,
+              "byte_length": 135,
+              "paragraph_sha256": "c66fcd107c00dcbbbbb0c6fb13f0aba313a1d989d96475dcaf6e4e607e656ad5"
+            }
+          ]
+        }
+      ],
+      "selected": [
+        28,
+        24,
+        0,
+        6,
+        26,
+        13,
+        19,
+        12
+      ]
+    },
+    {
+      "paper_id": "1703.04617",
+      "id": "73738e42d488b32c9db89ac8adefc75403fa2653",
+      "question": "how much of improvement the adaptation model can get?",
+      "title": "Exploring Question Understanding and Adaptation in Neural-Network-Based Question Answering",
+      "kind": "quantity",
+      "material": {
+        "full": "[P79] Section: Results\nTable 2 shows the ablation performances of various Q-code on the development set. Note that since the testset is hidden from us, we can only perform such an analysis on the development set. Our baseline model using no Q-code achieved a 68.00% and 77.36% EM and F1 scores, respectively. When we added the explicit question type T-code into the baseline model, the performance was improved slightly to 68.16%(EM) and 77.58%(F1). We then used TreeLSTM introduce syntactic parses for question representation and understanding (replacing simple question type as question understanding Q-code), which consistently shows further improvement. We further incorporated the soft adaptation. When letting the number of hidden question types ( $K$ ) to be 20, the performance improves to 68.73%/77.74% on EM and F1, respectively, which corresponds to the results of our model reported in Table 1 . Furthermore, after submitted our result, we have experimented with a large value of $K$ and found that when $K=100$ , we can achieve a better performance of 69.10%/78.38% on the development set.\n\n[P82] Section: Conclusions\nClosely modelling questions could be of importance for question answering and machine reading. In this paper, we introduce syntactic information to help encode questions in neural networks. We view and model different types of questions and the information shared among them as an adaptation task and proposed adaptation models for them. On the Stanford Question Answering Dataset (SQuAD), we show that these approaches can help attain better results over a competitive baseline.\n\n[P56] Section: Question Understanding and Adaptation\nAs discussed, different types of questions and their answers may share common regularity and have separate property at the same time. We also view this as an adaptation problem in order to let different types of questions share a basic model but still discriminate them when needed. Specifically, we borrow ideas from speaker adaptation BIBREF18 in speech recognition, where neural-network-based adaptation is performed among different groups of speakers.\n\n[P0] Section: Abstract\nThe last several years have seen intensive interest in exploring neural-network-based models for machine comprehension (MC) and question answering (QA). In this paper, we approach the problems by closely modelling questions in a neural network framework. We first introduce syntactic information to help encode questions. We then view and model different types of questions and the information shared among them as an adaptation task and proposed adaptation models for them. On the Stanford Question Answering Dataset (SQuAD), we show that these approaches can help attain better results over a competitive baseline.\n\n[P7] Section: Related Work\nDifferent types of questions are often used to seek for different types of information. For example, a \"what\" question could have very different property from that of a \"why\" question, while they may share information and need to be trained together instead of separately. We view this as a \"adaptation\" problem to let different types of questions share a basic model but still discriminate them when needed. Specifically, we are motivated by the ideas \"i-vector\" BIBREF18 in speech recognition, where neural network based adaptation is performed among different (groups) of speakers and we focused instead on different types of questions here.\n\n[P3] Section: Introduction\nIn this paper, we take a closer look at modeling questions in such an end-to-end neural network framework, since we regard question understanding is of importance for such problems. We first introduced syntactic information to help encode questions. We then viewed and modelled different types of questions and the information shared among them as an adaptation problem and proposed adaptation models for them. On the Stanford Question Answering Dataset (SQuAD), we show that these approaches can help attain better results on our competitive baselines.\n\n[P81] Section: Results\nFigure 5 shows the composition of F1 score. Take our best model as an example, we observed a 78.38% F1 score on the whole development set, which can be separated into two parts: one is where F1 score equals to 100%, which means an exact match. This part accounts for 69.10% of the entire development set. And the other part accounts for 30.90%, of which the average F1 score is 30.03%. For the latter, we can further divide it into two sub-parts: one is where the F1 score equals to 0%, which means that predict answer is totally wrong. This part occupies 14.89% of the total development set. The other part accounts for 16.01% of the development set, of which average F1 score is 57.96%. From this analysis we can see that reducing the zero F1 score (14.89%) is potentially an important direction to further improve the system.\n\n[P61] Section: Question Understanding and Adaptation\nAdapting In the adapting step, we first compute the similarity score between an input question vector $\\mathbf {x}\\in \\mathbb {R} ^{h}$ and each centroid vector of $K$ clusters $~\\mathbf {\\bar{x}}\\in \\mathbb {R} ^{K \\times h}$ . Each cluster here models a question type. Unlike the explicit question type modeling discussed above, here we do not specify what question types we are modeling but let the system to learn. Specifically, we only need to pre-specific how many clusters, $K$ , we are modeling. The similarity between an input question and cluster centroid can be used to compute similarity weight $\\mathbf {w}^a$ :",
+        "packet": "[P79] Section: Results\nTable 2 shows the ablation performances of various Q-code on the development set. \n[omitted source between fragments]\nNote that since the testset is hidden from us, we can only perform such an analysis on the development set. \n[omitted source between fragments]\nOur baseline model using no Q-code achieved a 68.00% and 77.36% EM and F1 scores, respectively. \n[omitted source between fragments]\nWhen we added the explicit question type T-code into the baseline model, the performance was improved slightly to 68.16%(EM) and 77.58%(F1). \n[omitted source between fragments]\nWe then used TreeLSTM introduce syntactic parses for question representation and understanding (replacing simple question type as question understanding Q-code), which consistently shows further improvement. \n[omitted source between fragments]\nWe further incorporated the soft adaptation. \n[omitted source between fragments]\nWhen letting the number of hidden question types ( $K$ ) to be 20, the performance improves to 68.73%/77.74% on EM and F1, respectively, which corresponds to the results of our model reported in Table 1 . \n[omitted source between fragments]\nFurthermore, after submitted our result, we have experimented with a large value of $K$ and found that when $K=100$ , we can achieve a better performance of 69.10%/78.38% on the development set.\n\n[P82] Section: Conclusions\nWe view and model different types of questions and the information shared among them as an adaptation task and proposed adaptation models for them. \n[omitted source between fragments]\nOn the Stanford Question Answering Dataset (SQuAD), we show that these approaches can help attain better results over a competitive baseline.\n\n[P56] Section: Question Understanding and Adaptation\nAs discussed, different types of questions and their answers may share common regularity and have separate property at the same time. \n[omitted source between fragments]\nWe also view this as an adaptation problem in order to let different types of questions share a basic model but still discriminate them when needed. \n\n[P0] Section: Abstract\nWe then view and model different types of questions and the information shared among them as an adaptation task and proposed adaptation models for them. \n[omitted source between fragments]\nOn the Stanford Question Answering Dataset (SQuAD), we show that these approaches can help attain better results over a competitive baseline.\n\n[P7] Section: Related Work\nWe view this as a \"adaptation\" problem to let different types of questions share a basic model but still discriminate them when needed. \n[omitted source between fragments]\nSpecifically, we are motivated by the ideas \"i-vector\" BIBREF18 in speech recognition, where neural network based adaptation is performed among different (groups) of speakers and we focused instead on different types of questions here.\n\n[P3] Section: Introduction\nWe then viewed and modelled different types of questions and the information shared among them as an adaptation problem and proposed adaptation models for them. \n[omitted source between fragments]\nOn the Stanford Question Answering Dataset (SQuAD), we show that these approaches can help attain better results on our competitive baselines.\n\n[P81] Section: Results\nTake our best model as an example, we observed a 78.38% F1 score on the whole development set, which can be separated into two parts: one is where F1 score equals to 100%, which means an exact match. \n[omitted source between fragments]\nFrom this analysis we can see that reducing the zero F1 score (14.89%) is potentially an important direction to further improve the system.\n\n[P61] Section: Question Understanding and Adaptation\nSpecifically, we only need to pre-specific how many clusters, $K$ , we are modeling. \n[omitted source between fragments]\nThe similarity between an input question and cluster centroid can be used to compute similarity weight $\\mathbf {w}^a$ :"
+      },
+      "ledger": [
+        {
+          "paragraph_id": 79,
+          "fragments": [
+            {
+              "text": "Table 2 shows the ablation performances of various Q-code on the development set. ",
+              "char_start": 0,
+              "char_length": 82,
+              "byte_start": 0,
+              "byte_length": 82,
+              "paragraph_sha256": "09f17423c99bbe979a475f717fc4fc36bf6748f1a2578f94bc42c3d119558016"
+            },
+            {
+              "text": "Note that since the testset is hidden from us, we can only perform such an analysis on the development set. ",
+              "char_start": 82,
+              "char_length": 108,
+              "byte_start": 82,
+              "byte_length": 108,
+              "paragraph_sha256": "09f17423c99bbe979a475f717fc4fc36bf6748f1a2578f94bc42c3d119558016"
+            },
+            {
+              "text": "Our baseline model using no Q-code achieved a 68.00% and 77.36% EM and F1 scores, respectively. ",
+              "char_start": 190,
+              "char_length": 96,
+              "byte_start": 190,
+              "byte_length": 96,
+              "paragraph_sha256": "09f17423c99bbe979a475f717fc4fc36bf6748f1a2578f94bc42c3d119558016"
+            },
+            {
+              "text": "When we added the explicit question type T-code into the baseline model, the performance was improved slightly to 68.16%(EM) and 77.58%(F1). ",
+              "char_start": 286,
+              "char_length": 141,
+              "byte_start": 286,
+              "byte_length": 141,
+              "paragraph_sha256": "09f17423c99bbe979a475f717fc4fc36bf6748f1a2578f94bc42c3d119558016"
+            },
+            {
+              "text": "We then used TreeLSTM introduce syntactic parses for question representation and understanding (replacing simple question type as question understanding Q-code), which consistently shows further improvement. ",
+              "char_start": 427,
+              "char_length": 208,
+              "byte_start": 427,
+              "byte_length": 208,
+              "paragraph_sha256": "09f17423c99bbe979a475f717fc4fc36bf6748f1a2578f94bc42c3d119558016"
+            },
+            {
+              "text": "We further incorporated the soft adaptation. ",
+              "char_start": 635,
+              "char_length": 45,
+              "byte_start": 635,
+              "byte_length": 45,
+              "paragraph_sha256": "09f17423c99bbe979a475f717fc4fc36bf6748f1a2578f94bc42c3d119558016"
+            },
+            {
+              "text": "When letting the number of hidden question types ( $K$ ) to be 20, the performance improves to 68.73%/77.74% on EM and F1, respectively, which corresponds to the results of our model reported in Table 1 . ",
+              "char_start": 680,
+              "char_length": 205,
+              "byte_start": 680,
+              "byte_length": 205,
+              "paragraph_sha256": "09f17423c99bbe979a475f717fc4fc36bf6748f1a2578f94bc42c3d119558016"
+            },
+            {
+              "text": "Furthermore, after submitted our result, we have experimented with a large value of $K$ and found that when $K=100$ , we can achieve a better performance of 69.10%/78.38% on the development set.",
+              "char_start": 885,
+              "char_length": 194,
+              "byte_start": 885,
+              "byte_length": 194,
+              "paragraph_sha256": "09f17423c99bbe979a475f717fc4fc36bf6748f1a2578f94bc42c3d119558016"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 82,
+          "fragments": [
+            {
+              "text": "We view and model different types of questions and the information shared among them as an adaptation task and proposed adaptation models for them. ",
+              "char_start": 190,
+              "char_length": 148,
+              "byte_start": 190,
+              "byte_length": 148,
+              "paragraph_sha256": "542ef2e6d9e80773a606900eec3fc628b43f1d6e5055638a74271605d4b9cf74"
+            },
+            {
+              "text": "On the Stanford Question Answering Dataset (SQuAD), we show that these approaches can help attain better results over a competitive baseline.",
+              "char_start": 338,
+              "char_length": 141,
+              "byte_start": 338,
+              "byte_length": 141,
+              "paragraph_sha256": "542ef2e6d9e80773a606900eec3fc628b43f1d6e5055638a74271605d4b9cf74"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 56,
+          "fragments": [
+            {
+              "text": "As discussed, different types of questions and their answers may share common regularity and have separate property at the same time. ",
+              "char_start": 0,
+              "char_length": 134,
+              "byte_start": 0,
+              "byte_length": 134,
+              "paragraph_sha256": "6c8356e93d195182f6fc1cf71572d9a878049493d703eecde7bae06b5d709b90"
+            },
+            {
+              "text": "We also view this as an adaptation problem in order to let different types of questions share a basic model but still discriminate them when needed. ",
+              "char_start": 134,
+              "char_length": 149,
+              "byte_start": 134,
+              "byte_length": 149,
+              "paragraph_sha256": "6c8356e93d195182f6fc1cf71572d9a878049493d703eecde7bae06b5d709b90"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 0,
+          "fragments": [
+            {
+              "text": "We then view and model different types of questions and the information shared among them as an adaptation task and proposed adaptation models for them. ",
+              "char_start": 322,
+              "char_length": 153,
+              "byte_start": 322,
+              "byte_length": 153,
+              "paragraph_sha256": "d63ed23869cbbe28e4fc17779f9ad4d928d6fe32532aae04d7628a6bce116b15"
+            },
+            {
+              "text": "On the Stanford Question Answering Dataset (SQuAD), we show that these approaches can help attain better results over a competitive baseline.",
+              "char_start": 475,
+              "char_length": 141,
+              "byte_start": 475,
+              "byte_length": 141,
+              "paragraph_sha256": "d63ed23869cbbe28e4fc17779f9ad4d928d6fe32532aae04d7628a6bce116b15"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 7,
+          "fragments": [
+            {
+              "text": "We view this as a \"adaptation\" problem to let different types of questions share a basic model but still discriminate them when needed. ",
+              "char_start": 273,
+              "char_length": 136,
+              "byte_start": 273,
+              "byte_length": 136,
+              "paragraph_sha256": "ded1bbb0ad7484e85492252b297777e6a1b3bfb5483afea7f7d607679aa80e67"
+            },
+            {
+              "text": "Specifically, we are motivated by the ideas \"i-vector\" BIBREF18 in speech recognition, where neural network based adaptation is performed among different (groups) of speakers and we focused instead on different types of questions here.",
+              "char_start": 409,
+              "char_length": 235,
+              "byte_start": 409,
+              "byte_length": 235,
+              "paragraph_sha256": "ded1bbb0ad7484e85492252b297777e6a1b3bfb5483afea7f7d607679aa80e67"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 3,
+          "fragments": [
+            {
+              "text": "We then viewed and modelled different types of questions and the information shared among them as an adaptation problem and proposed adaptation models for them. ",
+              "char_start": 250,
+              "char_length": 161,
+              "byte_start": 250,
+              "byte_length": 161,
+              "paragraph_sha256": "ce38e7420f6e6e6b2e90c7aebe3e8218f338e410ccfd6bd3142341fd42e35454"
+            },
+            {
+              "text": "On the Stanford Question Answering Dataset (SQuAD), we show that these approaches can help attain better results on our competitive baselines.",
+              "char_start": 411,
+              "char_length": 142,
+              "byte_start": 411,
+              "byte_length": 142,
+              "paragraph_sha256": "ce38e7420f6e6e6b2e90c7aebe3e8218f338e410ccfd6bd3142341fd42e35454"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 81,
+          "fragments": [
+            {
+              "text": "Take our best model as an example, we observed a 78.38% F1 score on the whole development set, which can be separated into two parts: one is where F1 score equals to 100%, which means an exact match. ",
+              "char_start": 44,
+              "char_length": 200,
+              "byte_start": 44,
+              "byte_length": 200,
+              "paragraph_sha256": "e96de83c35f6c4d1e4860e712edf1caef883e3a08b1583bfb37f80d0240c1fe4"
+            },
+            {
+              "text": "From this analysis we can see that reducing the zero F1 score (14.89%) is potentially an important direction to further improve the system.",
+              "char_start": 689,
+              "char_length": 139,
+              "byte_start": 689,
+              "byte_length": 139,
+              "paragraph_sha256": "e96de83c35f6c4d1e4860e712edf1caef883e3a08b1583bfb37f80d0240c1fe4"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 61,
+          "fragments": [
+            {
+              "text": "Specifically, we only need to pre-specific how many clusters, $K$ , we are modeling. ",
+              "char_start": 419,
+              "char_length": 85,
+              "byte_start": 419,
+              "byte_length": 85,
+              "paragraph_sha256": "6635c1dc2ee96823b18c66e48a7a110c23b00a69af17da687854cd6a56406f20"
+            },
+            {
+              "text": "The similarity between an input question and cluster centroid can be used to compute similarity weight $\\mathbf {w}^a$ :",
+              "char_start": 504,
+              "char_length": 120,
+              "byte_start": 504,
+              "byte_length": 120,
+              "paragraph_sha256": "6635c1dc2ee96823b18c66e48a7a110c23b00a69af17da687854cd6a56406f20"
+            }
+          ]
+        }
+      ],
+      "selected": [
+        79,
+        82,
+        56,
+        0,
+        7,
+        3,
+        81,
+        61
+      ]
+    },
+    {
+      "paper_id": "1810.08732",
+      "id": "7f2fd7ab968de720082133c42c2052d351589a67",
+      "question": "What type and size of word embeddings were used?",
+      "title": "Named Entity Recognition on Twitter for Turkish using Semi-supervised Learning with Word Embeddings",
+      "kind": "fact",
+      "material": {
+        "full": "[P30] Section: Experiments and Results\nWe designed a number of experimental settings to investigate their effects on Turkish Twitter NER. These settings are as follows: the text type of annotated data used for training, the text type of unlabeled data used to learn the word embeddings, using the capitalization feature or not, and applying text normalization. We evaluated all models on ENAMEX types with the CoNLL metric and reported phrase-level overall F-score performance results. To be more precise, the F-score values presented in Table TABREF23 , Table TABREF26 and Table TABREF27 are micro-averaged over the classes using the strict metric.\n\n[P32] Section: NER Models Trained on News\nIn addition to using TwitterDS-1 and TwitterDS-2 as test sets, we detected 291 completely non-Turkish tweets out of 5040 in TwitterDS-1 and filtered them out using the isTurkish tool BIBREF13 to obtain TwitterDS-1_FT. We also used the normalized versions of these data sets. As shown in Table TABREF23 , turning off the capitalization feature is better when text normalization is not applied (bold entries), but the best results are achieved when normalization is applied and the capitalization feature is used (underlined bold entries). To observe the effects of the type of the source text used to learn the word embeddings, we have three models as Web, Twt, and Web+Twt where we used the Turkish web corpus, tweet corpus, and their combination respectively to learn the word embeddings. Including in-domain data from a relatively smaller tweet corpus together with a larger web corpus yields in better Twitter NER performance.\n\n[P20] Section: Supervised Stage\nWord type information: Type information of tokens in the current window, i.e. all-capitalized, is-capitalized, all-digits, contains-apostrophe, and is-alphanumeric.\n\n[P14] Section: Unsupervised Stage\nAmong the methods presented in Mikolov-2013, we used the continuous Skip-gram model to obtain semantic representations of Turkish words. The Skip-gram model uses the current word as an input to the projection layer with a log-linear classifier and attempts to predict the representation of neighboring words within a certain range. In the Skip-gram model architecture we used, we have chosen 200 as the dimension of the obtained word vectors. The range of surrounding words is chosen to be 5, so that we will predict the distributed representations of the previous 2 words and the next 2 words using the current word. Our vector size and range decisions are aligned with the choices made in the previous study for Turkish NER by Demir-2014. The Skip-gram model architecture we used is shown in Figure FIGREF3 .\n\n[P17] Section: Supervised Stage\nContext: All tokens in the current window of size two.\n\n[P29] Section: Labeled Data\nThe second type of labeled data is annotated Turkish tweets, where we used two different sets. The first set, TwitterDS-1, has around 5K tweets with 54K tokens and 1336 annotated PLOs BIBREF4 . The second set, TwitterDS-2, which is publicly available, has 2320 tweets with around 21K tokens and 980 PLOs in total BIBREF12 . The counts for each of the ENAMEX-type named entities for these Turkish Twitter data sets are provided in Table TABREF21 .\n\n[P27] Section: Unlabeled Data\nWe applied tokenization on both Turkish news-web corpus and Turkish tweets corpus using the publicly available Zemberek tool developed for Turkish. We have also applied lower-casing on both corpora in order to limit the number of unique words. Since our combined tweets corpus is composed of Twitter-specific texts, we applied what we call Twitter processing where we replaced mentions, hashtags, smileys and URLs with certain keywords.\n\n[P24] Section: Supervised Stage\nIn addition to tailoring the features used by Ratinov-2009 for tweets, there are other Twitter-specific aspects of our NER system such as using word embeddings trained on an unlabeled tweet corpus, applying normalization on labeled tweets, and extracting Twitter-specific keywords like hashtags, mentions, smileys, and URLs from both labeled and unlabeled Turkish tweets. For text normalization as a pre-processing step of our system, we used the Turkish normalization interface developed for social media text with ill formed word detection and candidate word generation BIBREF8 .",
+        "packet": "[P30] Section: Experiments and Results\nWe designed a number of experimental settings to investigate their effects on Turkish Twitter NER. \n[omitted source between fragments]\nThese settings are as follows: the text type of annotated data used for training, the text type of unlabeled data used to learn the word embeddings, using the capitalization feature or not, and applying text normalization. \n\n[P32] Section: NER Models Trained on News\nWe also used the normalized versions of these data sets. \n[omitted source between fragments]\nAs shown in Table TABREF23 , turning off the capitalization feature is better when text normalization is not applied (bold entries), but the best results are achieved when normalization is applied and the capitalization feature is used (underlined bold entries). \n[omitted source between fragments]\nTo observe the effects of the type of the source text used to learn the word embeddings, we have three models as Web, Twt, and Web+Twt where we used the Turkish web corpus, tweet corpus, and their combination respectively to learn the word embeddings. \n[omitted source between fragments]\nIncluding in-domain data from a relatively smaller tweet corpus together with a larger web corpus yields in better Twitter NER performance.\n\n[P20] Section: Supervised Stage\nWord type information: Type information of tokens in the current window, i.e. all-capitalized, is-capitalized, all-digits, contains-apostrophe, and is-alphanumeric.\n\n[P14] Section: Unsupervised Stage\nIn the Skip-gram model architecture we used, we have chosen 200 as the dimension of the obtained word vectors. \n[omitted source between fragments]\nOur vector size and range decisions are aligned with the choices made in the previous study for Turkish NER by Demir-2014. \n\n[P17] Section: Supervised Stage\nContext: All tokens in the current window of size two.\n\n[P29] Section: Labeled Data\nThe second type of labeled data is annotated Turkish tweets, where we used two different sets. \n[omitted source between fragments]\nThe counts for each of the ENAMEX-type named entities for these Turkish Twitter data sets are provided in Table TABREF21 .\n\n[P27] Section: Unlabeled Data\nWe have also applied lower-casing on both corpora in order to limit the number of unique words. \n[omitted source between fragments]\nSince our combined tweets corpus is composed of Twitter-specific texts, we applied what we call Twitter processing where we replaced mentions, hashtags, smileys and URLs with certain keywords.\n\n[P24] Section: Supervised Stage\nIn addition to tailoring the features used by Ratinov-2009 for tweets, there are other Twitter-specific aspects of our NER system such as using word embeddings trained on an unlabeled tweet corpus, applying normalization on labeled tweets, and extracting Twitter-specific keywords like hashtags, mentions, smileys, and URLs from both labeled and unlabeled Turkish tweets. \n[omitted source between fragments]\nFor text normalization as a pre-processing step of our system, we used the Turkish normalization interface developed for social media text with ill formed word detection and candidate word generation BIBREF8 ."
+      },
+      "ledger": [
+        {
+          "paragraph_id": 30,
+          "fragments": [
+            {
+              "text": "We designed a number of experimental settings to investigate their effects on Turkish Twitter NER. ",
+              "char_start": 0,
+              "char_length": 99,
+              "byte_start": 0,
+              "byte_length": 99,
+              "paragraph_sha256": "d357b88d642c9e54994d5ba5bb353ad80bd1263a3ddfe07ce02c3f7d29cae123"
+            },
+            {
+              "text": "These settings are as follows: the text type of annotated data used for training, the text type of unlabeled data used to learn the word embeddings, using the capitalization feature or not, and applying text normalization. ",
+              "char_start": 99,
+              "char_length": 223,
+              "byte_start": 99,
+              "byte_length": 223,
+              "paragraph_sha256": "d357b88d642c9e54994d5ba5bb353ad80bd1263a3ddfe07ce02c3f7d29cae123"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 32,
+          "fragments": [
+            {
+              "text": "We also used the normalized versions of these data sets. ",
+              "char_start": 218,
+              "char_length": 57,
+              "byte_start": 218,
+              "byte_length": 57,
+              "paragraph_sha256": "bccb389d89f01aeeb4dcebcef1cae710aaf3a6f9219e097e1ca469c489e3dfe3"
+            },
+            {
+              "text": "As shown in Table TABREF23 , turning off the capitalization feature is better when text normalization is not applied (bold entries), but the best results are achieved when normalization is applied and the capitalization feature is used (underlined bold entries). ",
+              "char_start": 275,
+              "char_length": 263,
+              "byte_start": 275,
+              "byte_length": 263,
+              "paragraph_sha256": "bccb389d89f01aeeb4dcebcef1cae710aaf3a6f9219e097e1ca469c489e3dfe3"
+            },
+            {
+              "text": "To observe the effects of the type of the source text used to learn the word embeddings, we have three models as Web, Twt, and Web+Twt where we used the Turkish web corpus, tweet corpus, and their combination respectively to learn the word embeddings. ",
+              "char_start": 538,
+              "char_length": 252,
+              "byte_start": 538,
+              "byte_length": 252,
+              "paragraph_sha256": "bccb389d89f01aeeb4dcebcef1cae710aaf3a6f9219e097e1ca469c489e3dfe3"
+            },
+            {
+              "text": "Including in-domain data from a relatively smaller tweet corpus together with a larger web corpus yields in better Twitter NER performance.",
+              "char_start": 790,
+              "char_length": 139,
+              "byte_start": 790,
+              "byte_length": 139,
+              "paragraph_sha256": "bccb389d89f01aeeb4dcebcef1cae710aaf3a6f9219e097e1ca469c489e3dfe3"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 20,
+          "fragments": [
+            {
+              "text": "Word type information: Type information of tokens in the current window, i.e. all-capitalized, is-capitalized, all-digits, contains-apostrophe, and is-alphanumeric.",
+              "char_start": 0,
+              "char_length": 164,
+              "byte_start": 0,
+              "byte_length": 164,
+              "paragraph_sha256": "28b340475bb7da28201fdda59f27d81867285a66b91e40ab025dd49116899420"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 14,
+          "fragments": [
+            {
+              "text": "In the Skip-gram model architecture we used, we have chosen 200 as the dimension of the obtained word vectors. ",
+              "char_start": 332,
+              "char_length": 111,
+              "byte_start": 332,
+              "byte_length": 111,
+              "paragraph_sha256": "8e009ac64c9f5eee81ab4832c15dcf3da1eabe5a8d99089e53eff31b9d4b246e"
+            },
+            {
+              "text": "Our vector size and range decisions are aligned with the choices made in the previous study for Turkish NER by Demir-2014. ",
+              "char_start": 618,
+              "char_length": 123,
+              "byte_start": 618,
+              "byte_length": 123,
+              "paragraph_sha256": "8e009ac64c9f5eee81ab4832c15dcf3da1eabe5a8d99089e53eff31b9d4b246e"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 17,
+          "fragments": [
+            {
+              "text": "Context: All tokens in the current window of size two.",
+              "char_start": 0,
+              "char_length": 54,
+              "byte_start": 0,
+              "byte_length": 54,
+              "paragraph_sha256": "605d3ff4d37c8eca0e8f4d89d1299efb4872c41ed1f57abbb6b682fb76ba7770"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 29,
+          "fragments": [
+            {
+              "text": "The second type of labeled data is annotated Turkish tweets, where we used two different sets. ",
+              "char_start": 0,
+              "char_length": 95,
+              "byte_start": 0,
+              "byte_length": 95,
+              "paragraph_sha256": "bab485386e5b4082bded7c9fd974531ba022dccadbeb14e69de35babcf8154db"
+            },
+            {
+              "text": "The counts for each of the ENAMEX-type named entities for these Turkish Twitter data sets are provided in Table TABREF21 .",
+              "char_start": 324,
+              "char_length": 122,
+              "byte_start": 324,
+              "byte_length": 122,
+              "paragraph_sha256": "bab485386e5b4082bded7c9fd974531ba022dccadbeb14e69de35babcf8154db"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 27,
+          "fragments": [
+            {
+              "text": "We have also applied lower-casing on both corpora in order to limit the number of unique words. ",
+              "char_start": 148,
+              "char_length": 96,
+              "byte_start": 148,
+              "byte_length": 96,
+              "paragraph_sha256": "bc66fe50f835245057f977880668a6744f79c2f375cd1a2432c9308618f55721"
+            },
+            {
+              "text": "Since our combined tweets corpus is composed of Twitter-specific texts, we applied what we call Twitter processing where we replaced mentions, hashtags, smileys and URLs with certain keywords.",
+              "char_start": 244,
+              "char_length": 192,
+              "byte_start": 244,
+              "byte_length": 192,
+              "paragraph_sha256": "bc66fe50f835245057f977880668a6744f79c2f375cd1a2432c9308618f55721"
+            }
+          ]
+        },
+        {
+          "paragraph_id": 24,
+          "fragments": [
+            {
+              "text": "In addition to tailoring the features used by Ratinov-2009 for tweets, there are other Twitter-specific aspects of our NER system such as using word embeddings trained on an unlabeled tweet corpus, applying normalization on labeled tweets, and extracting Twitter-specific keywords like hashtags, mentions, smileys, and URLs from both labeled and unlabeled Turkish tweets. ",
+              "char_start": 0,
+              "char_length": 372,
+              "byte_start": 0,
+              "byte_length": 372,
+              "paragraph_sha256": "f424ca32f4540331fc235ea6217046b92e270d0a4aa71b97c5c556ad327ecb9c"
+            },
+            {
+              "text": "For text normalization as a pre-processing step of our system, we used the Turkish normalization interface developed for social media text with ill formed word detection and candidate word generation BIBREF8 .",
+              "char_start": 372,
+              "char_length": 209,
+              "byte_start": 372,
+              "byte_length": 209,
+              "paragraph_sha256": "f424ca32f4540331fc235ea6217046b92e270d0a4aa71b97c5c556ad327ecb9c"
+            }
+          ]
+        }
+      ],
+      "selected": [
+        30,
+        32,
+        20,
+        14,
+        17,
+        29,
+        27,
+        24
+      ]
+    }
+  ],
+  "prep_sec": 2.8736084001138806
+}

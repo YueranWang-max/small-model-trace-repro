@@ -1,0 +1,22 @@
+{
+  "hashes": {
+    "logs\\qasper_relation_ledger\\ledger.json": "f268a354e9465aa95fa5ebd2e548d322093d8a62a70fce6ef7796c1de26db98e",
+    "data\\qasper_official\\qasper-train-v0.3.json": "9458bfe76074a8fa8d1685af02bcc73537aa6d338ad20591dfaff1946bc88bf4",
+    "run_qasper_typed_contract.py": "61f82d751844c81a0a777bf902a36b073f122b4f872ddd0350f32e9146447d3b",
+    "build_qasper_relation_ledger.py": "eb3b5bdfbc8aa7af222383d8e8109bc005aaecd6c1468e3871021147ca86126b",
+    "protocol_qasper_typed_contract_20261002.md": "704a69daffa85c92020758e3ffdddd2bd5b948a832282200cafeffbf0f3f2fac"
+  },
+  "fact_ids": [
+    "svm_author",
+    "crf_prior",
+    "tarc_direction",
+    "tarc_sequence",
+    "tarc_initial",
+    "tarc_later",
+    "sent2vec_train",
+    "fastsent_train",
+    "sent2vec_eval",
+    "mdl_class"
+  ],
+  "no_model_calls": true
+}

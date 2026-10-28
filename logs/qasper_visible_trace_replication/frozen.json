@@ -1,0 +1,79 @@
+{
+  "dataset_sha256": "2ae7ee62a65b1c4225791c70de80c2aad4e8998cf1fd4f09a53103db4f21af93",
+  "selection": "Qasper dev ranks 141-146, all questions",
+  "model": "qwen3.5:4b",
+  "arms": [
+    "reread",
+    "trace_pre",
+    "trace_post",
+    "quote_pre"
+  ],
+  "papers": [
+    {
+      "paper_id": "1610.08815",
+      "title": "A Deeper Look into Sarcastic Tweets Using Deep Convolutional Neural Networks",
+      "source_sha256": "147a81149cf6eee599983f8f3a8d62d8343c5a3387c2dbbbf42d8e8daa931f9c",
+      "source_chars": 38573,
+      "question_ids": [
+        "3a6e843c6c81244c14730295cfb8b865cd7ede46",
+        "fabf6fdcfb4c4c7affaa1e4336658c1e6635b1bf",
+        "1beb4a590fa6127a138f4ed1dd13d5d51cc96809"
+      ]
+    },
+    {
+      "paper_id": "1610.09225",
+      "title": "Sentiment Analysis of Twitter Data for Predicting Stock Market Movements",
+      "source_sha256": "fd2fed0ccf29c3c7de7a4b7b1ff4511c8df459f4d31fc1245a1a35915621948a",
+      "source_chars": 20312,
+      "question_ids": [
+        "3611a72f754de1e256fbd25b012197e1c24e8470",
+        "4c07c33dfaf4f3e6db55e377da6fa69825d0ba15",
+        "b1ce129678e37070e69f01332f1a8587e18e06b0"
+      ]
+    },
+    {
+      "paper_id": "1611.01576",
+      "title": "Quasi-Recurrent Neural Networks",
+      "source_sha256": "d4dd2d970e01fb90bbbe8ace9cc050fa2e7ae1352f480668331aee2a2e7c1dd7",
+      "source_chars": 27653,
+      "question_ids": [
+        "2f901dab6b757e12763b23ae8b37ae2e517a2271",
+        "b591853e938984e6069d738371500ebdec50d256",
+        "a130306c6662ff489df13fb3f8faa7cba8c52a21"
+      ]
+    },
+    {
+      "paper_id": "1611.02988",
+      "title": "Distant supervision for emotion detection using Facebook reactions",
+      "source_sha256": "58c22eb11af727cd358c9555a4319506250ee5eaaf6b96d1812e6c08a7cb2065",
+      "source_chars": 26100,
+      "question_ids": [
+        "fa30a938b58fc05131c3854f12efe376cbad887f",
+        "f875337f2ecd686cd7789e111174d0f14972638d",
+        "de53af4eddbc30c808d90b8a11a29217d377569e"
+      ]
+    },
+    {
+      "paper_id": "1612.06685",
+      "title": "Stateology: State-Level Interactive Charting of Language, Feelings, and Values",
+      "source_sha256": "fb34609a7f7e3731242b5eeb408a0811905ccba31b0919528150f4101a551b7b",
+      "source_chars": 11537,
+      "question_ids": [
+        "8d4ac4afbf5b14f412171729ceb5e822afcfa3f4",
+        "3c93894c4baf49deacc6ed2a14ef5e0f13b7d96f",
+        "07d15501a599bae7eb4a9ead63e9df3d55b3dc35"
+      ]
+    },
+    {
+      "paper_id": "1702.03856",
+      "title": "Towards speech-to-text translation without speech recognition",
+      "source_sha256": "26398d77414ad4cbcf563ebc41f06a9a9d6a720aa4207414980dc13de27ede94",
+      "source_chars": 11633,
+      "question_ids": [
+        "8acab64ba72831633e8cc174d5469afecccf3ae9",
+        "53aa07cc4cc4e7107789ae637dbda8c9f6c1e6aa",
+        "72755c2d79210857cfff60bfbcb55f83c71ada51"
+      ]
+    }
+  ]
+}

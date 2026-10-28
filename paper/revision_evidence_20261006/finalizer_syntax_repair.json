@@ -1,0 +1,11 @@
+{
+  "file": "paper/insert_complete_diagnostics_20261006.py",
+  "repair": "Aligned backup conditional with one-space function-body indentation; no experiment runner or frozen protocol changed",
+  "syntax_checked": [
+    "insert_complete_diagnostics_20261006.py",
+    "build_final_results_20261006.py",
+    "build_submission_bundle_20261006.py",
+    "build_reproducibility_release_20261006.py"
+  ],
+  "experiments_affected": false
+}

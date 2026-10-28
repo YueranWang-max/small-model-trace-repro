@@ -1,0 +1,6 @@
+arm,input_tokens,context_limit,maximum_input_with_output_reserve
+fresh,11246,131072,98240
+question_first,11410,131072,98240
+re2,22423,131072,98240
+prefix,144677,131072,98240
+append,144677,131072,98240
